@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom'
 import { regions } from '../lib/data'
-import { useUi } from '../App'
 import TopBar from '../components/TopBar'
 import Sidebar from '../components/Sidebar'
 import RegionView from '../components/RegionView'
@@ -8,8 +7,8 @@ import MapPanel from '../components/MapPanel'
 
 export default function GuidePage() {
   const { regionId, legId } = useParams()
-  const { mapSrc } = useUi()
   const region = regions.find((r) => r.id === regionId)
+  const dlc = region?.dlc ?? false
   return (
     <div className="flex h-screen flex-col">
       <TopBar />
@@ -21,11 +20,11 @@ export default function GuidePage() {
           {region ? <RegionView region={region} legId={legId} /> : <p className="p-8">Region not found.</p>}
         </main>
         <aside className="hidden w-[38%] shrink-0 border-l border-edge lg:block">
-          <MapPanel src={mapSrc} />
+          <MapPanel dlc={dlc} />
         </aside>
       </div>
       <div className="h-72 border-t border-edge lg:hidden">
-        <MapPanel src={mapSrc} />
+        <MapPanel dlc={dlc} />
       </div>
     </div>
   )

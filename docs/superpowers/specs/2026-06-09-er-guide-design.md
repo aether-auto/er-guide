@@ -105,6 +105,8 @@ Single-page app, dark Elden Ring–styled theme (gold accents, serif display hea
 - **Dashboard route (`/progress`):** totals per category (e.g. Talismans 61/91) and per region; list of unchecked missables you've routed past (the "you are about to lose these" warning).
 - **Coverage route (`/coverage`):** generated data-quality report — items missing map markers, items not placed in any leg (auto-derived; this is the contributor to-do list).
 
+> **Map embedding revision (2026-06-10).** In-browser verification found that Fextralife serves `X-Frame-Options: sameorigin` on its map pages, so the original embedded-Fextralife-iframe design above cannot work (wiki.gg's map was also ruled out: its DataMaps extension stalls at "Loading scripts" inside a cross-site iframe). The shipped design is a hybrid: the right panel embeds **Map Genie** as the browsing map (`mapgenie.io/elden-ring/maps/the-lands-between`, switching to `…/the-shadow-realm` while a DLC region is active), embedded as-is with attribution and no scraping or deep-linking of their ToS-protected marker data; per-item "show on map" opens the item's Fextralife deep link (`mapUrl(ref)`) in a single reusable named companion window (`window.open(…, 'er-guide-map')`) that re-navigates pin-to-pin on each click.
+
 ## 6. Progress persistence
 
 - `localStorage`, single key, value `{ schemaVersion, profile, checked: { [id]: timestamp } }`.

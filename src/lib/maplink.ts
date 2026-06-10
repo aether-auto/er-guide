@@ -45,4 +45,19 @@ export function mapUrl(ref: MapRef): string {
   return url.toString()
 }
 
-export const DEFAULT_MAP_URL = MAP_PAGE.overworld
+// VERIFIED 2026-06-10 (in-browser, not just headers): Fextralife serves
+// X-Frame-Options: sameorigin on every map page, so deep links CANNOT be iframed —
+// they open in a reusable named companion window instead (window.open target
+// 'er-guide-map'). FEXTRALIFE_MAP_URL is the idle page for that window.
+export const FEXTRALIFE_MAP_URL = MAP_PAGE.overworld
+
+// VERIFIED 2026-06-10: mapgenie.io sends no x-frame-options / frame-ancestors and
+// its Mapbox canvas renders and pans inside a cross-origin iframe (headed Chrome
+// test). It is the embedded browsing map only — embedded as-is with attribution;
+// we do not scrape or deep-link their ToS-protected marker dataset.
+const MAPGENIE_BASE_URL = 'https://mapgenie.io/elden-ring/maps/the-lands-between'
+const MAPGENIE_DLC_URL = 'https://mapgenie.io/elden-ring/maps/the-shadow-realm'
+
+export function embedMapUrl(dlc: boolean): string {
+  return dlc ? MAPGENIE_DLC_URL : MAPGENIE_BASE_URL
+}

@@ -1,7 +1,7 @@
 import { createContext, useContext, useMemo, useState } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import type { Category, MapRef } from './lib/types'
-import { mapUrl, DEFAULT_MAP_URL } from './lib/maplink'
+import { mapUrl } from './lib/maplink'
 import type { UiFilters } from './lib/search'
 import { regions } from './lib/data'
 import GuidePage from './pages/GuidePage'
@@ -12,8 +12,14 @@ interface UiState {
   filters: UiFilters
   setHideCompleted: (v: boolean) => void
   setCategories: (v: Set<Category> | null) => void
-  mapSrc: string
   showOnMap: (ref: MapRef) => void
+}
+
+// One persistent companion window, re-navigated pin-to-pin on every "map" click.
+// Fextralife blocks embedding (X-Frame-Options: sameorigin), so item deep links
+// cannot load in the in-app iframe panel.
+function showOnMap(ref: MapRef) {
+  window.open(mapUrl(ref), 'er-guide-map')
 }
 
 const UiContext = createContext<UiState | null>(null)
@@ -26,17 +32,15 @@ export function useUi(): UiState {
 export default function App() {
   const [hideCompleted, setHideCompleted] = useState(false)
   const [categories, setCategories] = useState<Set<Category> | null>(null)
-  const [mapSrc, setMapSrc] = useState(DEFAULT_MAP_URL)
 
   const ui = useMemo<UiState>(
     () => ({
       filters: { hideCompleted, categories },
       setHideCompleted,
       setCategories,
-      mapSrc,
-      showOnMap: (ref) => setMapSrc(mapUrl(ref)),
+      showOnMap,
     }),
-    [hideCompleted, categories, mapSrc],
+    [hideCompleted, categories],
   )
 
   const firstRegion = regions[0]?.id ?? 'limgrave'
