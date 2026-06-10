@@ -7,7 +7,6 @@ describe('mapUrl', () => {
     expect(url.searchParams.get('id')).toBe('4605')
     expect(url.searchParams.get('lat')).toBe('-95.5')
     expect(url.searchParams.get('lng')).toBe('110.5')
-    expect(url.searchParams.get('zoom')).toBeTruthy()
     expect(url.searchParams.get('code')).toBeTruthy()
   })
 

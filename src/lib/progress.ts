@@ -54,13 +54,17 @@ export function createProgressStore(storage: StorageLike) {
     return {
       activeProfile: data.activeProfile,
       profiles: Object.keys(data.profiles),
-      checked: data.profiles[data.activeProfile].checked,
+      checked: { ...data.profiles[data.activeProfile].checked },
       hasBackup: storage.getItem(BACKUP_KEY) != null,
     }
   }
 
   function persist() {
-    storage.setItem(KEY, JSON.stringify(data))
+    try {
+      storage.setItem(KEY, JSON.stringify(data))
+    } catch {
+      // quota exceeded / private mode: keep in-memory state consistent, don't crash
+    }
     snapshot = makeSnapshot()
     listeners.forEach((fn) => fn())
   }

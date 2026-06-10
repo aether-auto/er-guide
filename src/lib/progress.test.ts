@@ -67,6 +67,13 @@ describe('progress store', () => {
     expect(store.isChecked('x')).toBe(true)
   })
 
+  it('snapshots are immutable: toggling does not mutate a previously captured snapshot', () => {
+    const store = createProgressStore(fakeStorage())
+    const snap = store.getSnapshot()
+    store.toggle('x')
+    expect(snap.checked['x']).toBeUndefined()
+  })
+
   it('notifies subscribers with a fresh snapshot reference', () => {
     const store = createProgressStore(fakeStorage())
     const before = store.getSnapshot()

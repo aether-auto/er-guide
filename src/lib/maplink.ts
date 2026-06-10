@@ -16,7 +16,6 @@ import type { MapCode, MapRef } from './types'
 //   Interactive+Map page with code=mapD.
 
 const BASE_MAP = 'https://eldenring.wiki.fextralife.com/Interactive+Map'
-const DLC_MAP_PAGE = 'https://eldenring.wiki.fextralife.com/Shadow+of+the+Erdtree+Map'
 
 const MAP_PAGE: Record<MapCode, string> = {
   overworld: BASE_MAP,
@@ -35,7 +34,6 @@ export function mapUrl(ref: MapRef): string {
   if (ref.markerId != null) url.searchParams.set('id', String(ref.markerId))
   url.searchParams.set('lat', String(ref.lat))
   url.searchParams.set('lng', String(ref.lng))
-  url.searchParams.set('zoom', '8')
   url.searchParams.set('code', MAP_CODE[ref.code])
   return url.toString()
 }
