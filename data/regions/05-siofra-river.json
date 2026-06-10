@@ -1,0 +1,32 @@
+{
+  "id": "siofra-river",
+  "name": "Siofra River",
+  "order": 5,
+  "legs": [],
+  "cleanup": [
+    "ammo-dwelling-arrow",
+    "ash-of-war-ash-of-war-square-off",
+    "cookbook-armorer-s-cookbook-6",
+    "cookbook-missionary-s-cookbook-5",
+    "golden-seed-35",
+    "incantation-order-healing",
+    "map-fragment-map-siofra-river",
+    "remembrance-remembrance-of-the-regal-ancestor",
+    "shield-crucible-hornshield",
+    "shield-inverted-hawk-heater-shield",
+    "shield-spiked-palisade-shield",
+    "sorcery-great-oracular-bubble",
+    "sorcery-oracle-bubbles",
+    "spirit-ash-ancestral-follower-ashes",
+    "stonesword-key-13",
+    "stonesword-key-48",
+    "stonesword-key-51",
+    "talisman-clarifying-horn-charm",
+    "talisman-great-jar-s-arsenal",
+    "talisman-marika-s-scarseal",
+    "weapon-dragon-halberd",
+    "weapon-gargoyle-s-twinblade",
+    "weapon-greathorn-hammer",
+    "weapon-horn-bow"
+  ]
+}

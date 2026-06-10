@@ -1,0 +1,17 @@
+{
+  "id": "mohgwyn",
+  "name": "Mohgwyn Palace",
+  "order": 16,
+  "legs": [],
+  "cleanup": [
+    "armor-lord-of-blood-s-robe",
+    "great-rune-mohg-s-great-rune",
+    "incantation-bloodboon",
+    "map-fragment-map-mohgwyn-palace",
+    "remembrance-remembrance-of-the-blood-lord",
+    "talisman-erdtree-s-favor-1",
+    "tool-mohg-s-shackle",
+    "tool-pureblood-knight-s-medal",
+    "weapon-mohgwyn-s-sacred-spear"
+  ]
+}

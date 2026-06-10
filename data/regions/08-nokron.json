@@ -1,0 +1,33 @@
+{
+  "id": "nokron",
+  "name": "Nokron, Eternal City",
+  "order": 8,
+  "legs": [],
+  "cleanup": [
+    "armor-silver-tear-mask",
+    "ash-of-war-ash-of-war-enchanted-shot",
+    "bell-bearing-ghost-glovewort-picker-s-bell-bearing-1",
+    "cookbook-frenzied-s-cookbook-2",
+    "key-item-fingerslayer-blade",
+    "larval-tear-09",
+    "larval-tear-10",
+    "larval-tear-11",
+    "larval-tear-12",
+    "spirit-ash-blackflame-monk-amon",
+    "spirit-ash-greatshield-soldier-ashes",
+    "spirit-ash-mimic-tear-ashes",
+    "stonesword-key-32",
+    "stonesword-key-50",
+    "talisman-clarifying-horn-charm-1",
+    "talisman-mottled-necklace-1",
+    "talisman-ritual-shield-talisman",
+    "talisman-silver-scarab",
+    "talisman-spelldrake-talisman-2",
+    "tool-ancestral-infant-s-head",
+    "weapon-gargoyle-s-greatsword",
+    "weapon-ghostflame-torch",
+    "weapon-nox-flowing-hammer",
+    "weapon-staff-of-the-avatar",
+    "whetblade-black-whetblade"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "deeproot",
+  "name": "Deeproot Depths",
+  "order": 13,
+  "legs": [],
+  "cleanup": [
+    "ammo-lightning-greatbolt",
+    "armor-crucible-tree-armor",
+    "armor-crucible-tree-armor-altered",
+    "armor-crucible-tree-helm",
+    "ash-of-war-ash-of-war-golden-land",
+    "ash-of-war-ash-of-war-vacuum-slice",
+    "incantation-elden-stars",
+    "key-item-mending-rune-of-the-death-prince",
+    "map-fragment-map-deeproot-depths",
+    "remembrance-remembrance-of-the-lichdragon",
+    "stonesword-key-54",
+    "talisman-prince-of-death-s-absesses",
+    "talisman-prince-of-death-s-cyst",
+    "talisman-prince-of-death-s-pustule",
+    "weapon-inseparable-sword",
+    "weapon-prince-of-death-s-staff",
+    "weapon-siluria-s-tree"
+  ]
+}

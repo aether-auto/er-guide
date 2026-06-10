@@ -1,0 +1,25 @@
+{
+  "id": "dragonbarrow",
+  "name": "Dragonbarrow",
+  "order": 7,
+  "legs": [],
+  "cleanup": [
+    "ash-of-war-ash-of-war-beast-s-roar",
+    "crystal-tear-opaline-hardtear",
+    "crystal-tear-stonebarb-cracked-tear",
+    "golden-seed-10",
+    "incantation-beast-claw-spell",
+    "incantation-bestial-constitution",
+    "incantation-bestial-vitality",
+    "incantation-greyoll-s-roar",
+    "incantation-gurranq-s-beast-claw",
+    "map-fragment-map-dragonbarrow",
+    "talisman-bull-goat-s-talisman",
+    "talisman-dragoncrest-shield-talisman",
+    "talisman-flamedrake-talisman-2",
+    "weapon-beastclaw-greathammer",
+    "weapon-cinquedea",
+    "weapon-gargoyle-s-black-halberd",
+    "weapon-gargoyle-s-blackblade"
+  ]
+}

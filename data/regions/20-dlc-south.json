@@ -1,0 +1,22 @@
+{
+  "id": "dlc-south",
+  "name": "DLC: Cerulean Coast & Southern Shore",
+  "order": 20,
+  "dlc": true,
+  "legs": [],
+  "cleanup": [
+    "ammo-st-trina-s-arrow",
+    "cookbook-finger-weaver-s-cookbook-1",
+    "cookbook-grave-keeper-s-cookbook-2",
+    "cookbook-greater-potentate-s-cookbook-14",
+    "cookbook-st-trina-disciple-s-cookbook-2",
+    "crystal-tear-glovewort-crystal-tear",
+    "incantation-multilayered-ring-of-light",
+    "scadutree-fragment-04",
+    "sorcery-rings-of-spectral-light",
+    "talisman-cerulean-amber-medallion-3",
+    "talisman-cerulean-seed-talisman-1",
+    "weapon-spirit-sword",
+    "weapon-star-lined-sword"
+  ]
+}

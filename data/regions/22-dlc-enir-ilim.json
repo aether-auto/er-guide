@@ -1,0 +1,27 @@
+{
+  "id": "dlc-enir-ilim",
+  "name": "DLC: Enir-Ilim",
+  "order": 22,
+  "dlc": true,
+  "legs": [],
+  "cleanup": [
+    "armor-circlet-of-light",
+    "armor-freyja-s-armor",
+    "armor-freyja-s-armor-altered",
+    "armor-freyja-s-gauntlets",
+    "armor-freyja-s-greaves",
+    "armor-freyja-s-helm",
+    "armor-verdigris-armor",
+    "armor-verdigris-gauntlets",
+    "armor-verdigris-greaves",
+    "armor-verdigris-helm",
+    "bell-bearing-moore-s-bell-bearing",
+    "scadutree-fragment-15",
+    "scadutree-fragment-26",
+    "shield-verdigris-greatshield",
+    "spirit-ash-inquisitor-ashes",
+    "weapon-euporia",
+    "weapon-freyja-s-greatsword",
+    "weapon-horned-warrior-s-greatsword"
+  ]
+}
