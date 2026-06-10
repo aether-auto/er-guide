@@ -15492,6 +15492,54 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Rykard's_Great_Rune"
   },
   {
+    "id": "imbued-sword-key-01",
+    "name": "Imbued Sword Key #1",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Item used to activate a Waygate at The Four Belfries . Found in a chest in the northeast section of town. This location is initially sealed by a barrier that can be dispelled by lighting a brazier atop a tower in the southwest of town.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 3212,
+      "lat": -176.117187,
+      "lng": 148.691962
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Imbued_Sword_Key"
+  },
+  {
+    "id": "imbued-sword-key-02",
+    "name": "Imbued Sword Key #2",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Item used to activate a Waygate. It can be looted off a corpse found on the east side of the Raya Lucaria Academy rooftops.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 2273,
+      "lat": -137.265625,
+      "lng": 54.566587
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Imbued_Sword_Key"
+  },
+  {
+    "id": "imbued-sword-key-03",
+    "name": "Imbued Sword Key #3",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Item used to activate a Waygate at The Four Belfries . Found in a chest at the very top of the hill, at the fourth belfry tower.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 1975,
+      "lat": -126.96875,
+      "lng": 47.082921
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Imbued_Sword_Key"
+  },
+  {
     "id": "incantation-agheel-s-flame",
     "name": "Agheel's Flame",
     "category": "incantation",
@@ -17290,6 +17338,22 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Amber_Draught"
   },
   {
+    "id": "key-item-amber-starlight",
+    "name": "Amber Starlight",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key item requested by Seluvis to progress his quest further.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 5766,
+      "lat": -95.45,
+      "lng": 87.133
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Amber_Starlight"
+  },
+  {
     "id": "key-item-ancient-dragon-prayerbook",
     "name": "Ancient Dragon Prayerbook",
     "category": "key-item",
@@ -17494,6 +17558,22 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Dancer's_Castanets"
   },
   {
+    "id": "key-item-dark-moon-ring",
+    "name": "Dark Moon Ring",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Quest Item. Found in a locked chest next to the Raya Lucaria Grand Library Site of Grace. Unlocked using the Discarded Palace Key .",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 2973,
+      "lat": -133.5625,
+      "lng": 55.636995
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dark_Moon_Ring"
+  },
+  {
     "id": "key-item-deathroot",
     "name": "Deathroot",
     "category": "key-item",
@@ -17508,6 +17588,22 @@
       "lng": 105.965618
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Deathroot"
+  },
+  {
+    "id": "key-item-dectus-medallion-left",
+    "name": "Dectus Medallion (Left)",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Quest Item. Found in a chest that can be reached by climbing the ladder in the tallest tower of Fort Haight .",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 774,
+      "lat": -195,
+      "lng": 125.874136
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dectus_Medallion_(Left)"
   },
   {
     "id": "key-item-dectus-medallion-right",
@@ -17567,6 +17663,22 @@
       "lng": 130.8476948055657
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragon_Heart"
+  },
+  {
+    "id": "key-item-drawing-room-key",
+    "name": "Drawing-Room Key",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Item. Given by Tanith after pledging your allegiance to the Volcano Manor .",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 3210,
+      "lat": -85.875,
+      "lng": 65.105329
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawing-Room_Key"
   },
   {
     "id": "key-item-fingerprint-grape",
@@ -17740,6 +17852,38 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Tailoring_Tools"
   },
   {
+    "id": "key-item-haligtree-secret-medallion-left",
+    "name": "Haligtree Secret Medallion (Left)",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Item. Found in the castle's northeast tower after defeating Commander Niall .",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 3826,
+      "lat": -57.320312,
+      "lng": 158.778357
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Haligtree_Secret_Medallion_(Left)"
+  },
+  {
+    "id": "key-item-haligtree-secret-medallion-right",
+    "name": "Haligtree Secret Medallion (Right)",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Item. Hit Albus , who is disguised as a pot past the Perfumer guarding the path up from the Village of the Albinaurics Site of Grace. This medallion opens the path to a secret location past Lyndell.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 2817,
+      "lat": -160.078125,
+      "lng": 53.285875
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Haligtree_Secret_Medallion_(Right)"
+  },
+  {
     "id": "key-item-heart-of-bayle",
     "name": "Heart of Bayle",
     "category": "key-item",
@@ -17804,20 +17948,15 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Igon's_Furled_Finger"
   },
   {
-    "id": "key-item-imbued-sword-key",
-    "name": "Imbued Sword Key",
+    "id": "key-item-irina-s-letter",
+    "name": "Irina's Letter",
     "category": "key-item",
-    "dlc": true,
-    "acquisition": "The Imbued Sword Key item can be found inside a treasure chest. The chest is located inside a tower's armor room.",
+    "dlc": false,
+    "acquisition": "Letter given by Irina, addressed to her father, the commander of Castle Morne. Gorgeous silken handkerchief, lightly stained with blood. Words can be made out within",
     "missable": null,
     "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655150,
-      "lat": -139.1015625,
-      "lng": 121.16045327065436
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Imbued_Sword_Key"
+    "map": null,
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Irina's_Letter"
   },
   {
     "id": "key-item-keep-wall-key",
@@ -17829,6 +17968,17 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Keep_Wall_Key"
+  },
+  {
+    "id": "key-item-knifeprint-clue",
+    "name": "Knifeprint Clue",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "",
+    "missable": null,
+    "quest": null,
+    "map": null,
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Knifeprint_Clue"
   },
   {
     "id": "key-item-letter-for-freyja",
@@ -17963,6 +18113,17 @@
       "lng": 75.94235
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Miniature_Ranni"
+  },
+  {
+    "id": "key-item-miquella-s-needle",
+    "name": "Miquella's Needle",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "",
+    "missable": null,
+    "quest": null,
+    "map": null,
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Miquella's_Needle"
   },
   {
     "id": "key-item-monk-s-missive",
@@ -18109,6 +18270,22 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Ruins_Map_(3rd)"
   },
   {
+    "id": "key-item-rusty-key",
+    "name": "Rusty Key",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Item. Found on a corpse inside the room with the Banished Knight.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 916,
+      "lat": -180.59375,
+      "lng": 86.317599
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rusty_Key"
+  },
+  {
     "id": "key-item-rya-s-necklace",
     "name": "Rya's Necklace",
     "category": "key-item",
@@ -18150,6 +18327,17 @@
       "lng": 118.73
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Seedbed_Curse"
+  },
+  {
+    "id": "key-item-sellen-s-primal-glintstone",
+    "name": "Sellen's Primal Glintstone",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "",
+    "missable": null,
+    "quest": null,
+    "map": null,
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sellen's_Primal_Glintstone"
   },
   {
     "id": "key-item-sellian-sealbreaker",
@@ -21126,6 +21314,54 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Scadutree_Fragment"
+  },
+  {
+    "id": "shabriri-grape-01",
+    "name": "Shabriri Grape #1",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Item. Found next to a ghostly NPC in the underground section of Godrick's throne room.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 954,
+      "lat": -172.03125,
+      "lng": 84.246352
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shabriri_Grape"
+  },
+  {
+    "id": "shabriri-grape-02",
+    "name": "Shabriri Grape #2",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Can be found in a hidden cellar. The path is blocked by debris and barrels that you can roll onto or attack to destroy. Once downstairs, you can find it on your left.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 751,
+      "lat": -161.40625,
+      "lng": 80.496338
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shabriri_Grape"
+  },
+  {
+    "id": "shabriri-grape-03",
+    "name": "Shabriri Grape #3",
+    "category": "key-item",
+    "dlc": false,
+    "acquisition": "Key Item. Dropped by Edgar the Revenger upon defeat.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 5922,
+      "lat": -143.023437,
+      "lng": 46.098154
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shabriri_Grape"
   },
   {
     "id": "shield-albinauric-shield",
@@ -24157,6 +24393,22 @@
       "lng": 75.863918
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Land_Squirt_Ashes"
+  },
+  {
+    "id": "spirit-ash-latenna-the-albinauric-spirit-ash",
+    "name": "Latenna the Albinauric (Spirit Ash)",
+    "category": "spirit-ash",
+    "dlc": false,
+    "acquisition": "In order for Latenna to be friendly and become a spirit, one has to have the Haligtree Secret Medallion (Right) , give to the player by Albus at the Village of the Albinaurics .",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 5950,
+      "lat": -163.914062,
+      "lng": 67.925466
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Latenna_the_Albinauric_(Spirit_Ash)"
   },
   {
     "id": "spirit-ash-leyndell-soldier-ashes",
@@ -28727,17 +28979,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Phantom_Finger"
-  },
-  {
-    "id": "tool-phantom-great-rune",
-    "name": "Phantom Great Rune",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Phantom_Great_Rune"
   },
   {
     "id": "tool-prattling-pate-apologies",

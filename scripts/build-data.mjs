@@ -59,6 +59,12 @@ const CATEGORY_FROM_WIKI = {
 //   via merchants/Twin Maiden Husks).
 // - Scadutree Fragment: "a total of 50 ... within the Land of Shadow" (wiki page).
 // - Revered Spirit Ash: "a total of 25 ... within the Land of Shadow" (wiki page).
+// - Imbued Sword Key: 3 instances, one wiki page (Four Belfries chest, Raya Lucaria
+//   rooftops, Sellia chest; 3 located markers exist).
+// - Shabriri Grape: 3 instances, one wiki page (Stormveil chapel, Purified Ruins,
+//   Revenger's Shack; the 4th grape is the distinct "Fingerprint Grape" item).
+// `idBase` is the instance-id prefix when the instances belong to a shared category
+// (key-item) instead of a dedicated per-series category.
 const SINGLETON_SERIES = [
   { category: 'golden-seed', name: 'Golden Seed', baseCount: 41, dlcCount: 0 },
   { category: 'sacred-tear', name: 'Sacred Tear', baseCount: 12, dlcCount: 0 },
@@ -67,12 +73,32 @@ const SINGLETON_SERIES = [
   { category: 'stonesword-key', name: 'Stonesword Key', baseCount: 54, dlcCount: 0 },
   { category: 'scadutree-fragment', name: 'Scadutree Fragment', baseCount: 0, dlcCount: 50 },
   { category: 'revered-spirit-ash', name: 'Revered Spirit Ash', baseCount: 0, dlcCount: 25 },
+  { category: 'key-item', idBase: 'imbued-sword-key', name: 'Imbued Sword Key', baseCount: 3, dlcCount: 0 },
+  { category: 'key-item', idBase: 'shabriri-grape', name: 'Shabriri Grape', baseCount: 3, dlcCount: 0 },
 ]
 
-// Pages that exist on wiki.gg but are missing from every usable category (verified via
-// the API: Messmer's Kindling is only in the giant Category:Items catch-all).
+// Pages that exist on wiki.gg but are missing from every usable category — they are
+// filed ONLY in the 482-page Category:Items catch-all (each verified via the API on
+// 2026-06-10; fetching all of Category:Items would pull in hundreds of out-of-scope
+// consumables/materials/info-notes, so they are supplemented here instead). Marker
+// matching attaches maps where a marker exists.
 const SUPPLEMENTAL = [
   { name: "Messmer's Kindling", category: 'key-item', dlc: true },
+  // route-critical keys/medallions (base game)
+  { name: 'Dark Moon Ring', category: 'key-item', dlc: false },
+  { name: 'Dectus Medallion (Left)', category: 'key-item', dlc: false },
+  { name: 'Haligtree Secret Medallion (Left)', category: 'key-item', dlc: false },
+  { name: 'Haligtree Secret Medallion (Right)', category: 'key-item', dlc: false },
+  { name: 'Rusty Key', category: 'key-item', dlc: false },
+  { name: 'Drawing-Room Key', category: 'key-item', dlc: false },
+  // quest key items found by probing Category:Items for key-shaped titles
+  { name: "Miquella's Needle", category: 'key-item', dlc: false }, // Placidusax arena, undoes Frenzied Flame
+  { name: 'Amber Starlight', category: 'key-item', dlc: false }, // Seluvis quest
+  { name: "Irina's Letter", category: 'key-item', dlc: false }, // Irina/Edgar quest
+  { name: 'Knifeprint Clue', category: 'key-item', dlc: false }, // Fia quest (distinct from Black Knifeprint)
+  { name: "Sellen's Primal Glintstone", category: 'key-item', dlc: false }, // Sellen quest
+  // (Fingerprint Grape already comes from Category:Key Items — verified present)
+  { name: 'Latenna the Albinauric (Spirit Ash)', category: 'spirit-ash', dlc: false }, // not in Category:Ashes
 ]
 
 // Title noise from wiki listings that must not become items. ^Nightreign: pages are
@@ -135,6 +161,7 @@ const FARMABLE_TOOL_NAMES = new Set([
   'Ruin Fragment', // farmable world pickup / crafting material
   'Dragon Communion Harpoon', // craftable throwable
   'Call of Tibia', // crafted with Tibia's Cookbook (verified on wiki.gg)
+  'Phantom Great Rune', // temporary auto-granted multiplayer consumable; no world location, can never be checked off a route
 ])
 // all bone-type ammo is craftable (incl. compound names: Bloodbone, Coldbone,
 // Firebone, Haligbone, Lightningbone, Magicbone, Piquebone, Poisonbone, Rotbone,
@@ -372,17 +399,17 @@ for (const s of SINGLETON_SERIES) {
     .filter((m) => re.test(m.title))
     .sort((a, b) =>
       CODE_ORDER[a.code] - CODE_ORDER[b.code] || a.lat - b.lat || a.lng - b.lng)
-  seriesMarkerPools.set(s.category, {
+  seriesMarkerPools.set(s.idBase ?? s.category, {
     base: pool.filter((m) => m.code !== 'dlc'),
     dlc: pool.filter((m) => m.code === 'dlc'),
   })
 }
 for (const s of SINGLETON_SERIES) {
   const total = s.baseCount + s.dlcCount
-  const pools = seriesMarkerPools.get(s.category)
+  const pools = seriesMarkerPools.get(s.idBase ?? s.category)
   for (let i = 1; i <= total; i++) {
     const isDlc = i > s.baseCount
-    const id = `${s.category}-${String(i).padStart(2, '0')}`
+    const id = `${s.idBase ?? s.category}-${String(i).padStart(2, '0')}`
     const marker = isDlc ? pools.dlc[i - s.baseCount - 1] : pools.base[i - 1]
     items.set(id, {
       id, name: `${s.name} #${i}`, category: s.category, dlc: isDlc,
