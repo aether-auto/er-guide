@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { mapUrl, embedMapUrl, FEXTRALIFE_MAP_URL } from './maplink'
+import { mapUrl, FEXTRALIFE_MAP_URL } from './maplink'
 
 describe('mapUrl', () => {
   it('builds a deep link with marker id and coordinates', () => {
@@ -16,7 +16,7 @@ describe('mapUrl', () => {
     expect(url.searchParams.get('lat')).toBe('10')
   })
 
-  it('uses a different page or code per map layer', () => {
+  it('uses a different code per map layer', () => {
     const a = mapUrl({ code: 'overworld', markerId: null, lat: 0, lng: 0 })
     const b = mapUrl({ code: 'underground', markerId: null, lat: 0, lng: 0 })
     const c = mapUrl({ code: 'ashen', markerId: null, lat: 0, lng: 0 })
@@ -26,15 +26,5 @@ describe('mapUrl', () => {
 
   it('exports the overworld map page as the companion-window idle url', () => {
     expect(FEXTRALIFE_MAP_URL).toBe('https://eldenring.wiki.fextralife.com/Interactive+Map')
-  })
-})
-
-describe('embedMapUrl', () => {
-  it('embeds the mapgenie base-game map for non-dlc regions', () => {
-    expect(embedMapUrl(false)).toBe('https://mapgenie.io/elden-ring/maps/the-lands-between')
-  })
-
-  it('embeds the mapgenie shadow-realm map for dlc regions', () => {
-    expect(embedMapUrl(true)).toBe('https://mapgenie.io/elden-ring/maps/the-shadow-realm')
   })
 })
