@@ -1,7 +1,7 @@
 import type { Category, Item, Step } from './types'
 
 const fold = (s: string) =>
-  s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[''']/g, '').replace(/[^a-z0-9]+/g, ' ').trim()
+  s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['‘’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim()
 
 export function searchItems(pool: Item[], query: string, limit = 20): Item[] {
   const q = fold(query)

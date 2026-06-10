@@ -12,10 +12,21 @@ describe('searchItems', () => {
     expect(searchItems(pool, 'moonv').map((i) => i.id)).toEqual(['weapon-moonveil'])
   })
   it('ignores punctuation in the query', () => {
-    expect(searchItems(pool, "radagons sore").map((i) => i.id)).toEqual(['talisman-radagons-soreseal'])
+    expect(searchItems(pool, 'radagon’s sore').map((i) => i.id)).toEqual(['talisman-radagons-soreseal'])
   })
   it('returns empty for blank queries', () => {
     expect(searchItems(pool, '  ')).toEqual([])
+  })
+  it('ranks starts-with matches before contains matches', () => {
+    const ranked = [mk('a', 'Sword of Moonveil', 'weapon'), mk('b', 'Moonveil', 'weapon')]
+    expect(searchItems(ranked, 'moon').map((i) => i.id)).toEqual(['b', 'a'])
+  })
+  it('respects the limit parameter', () => {
+    const many = [1, 2, 3, 4, 5].map((n) => mk(`m${n}`, `Moon${n}`, 'weapon'))
+    expect(searchItems(many, 'moon', 2)).toHaveLength(2)
+  })
+  it('returns contains matches when nothing starts with the query', () => {
+    expect(searchItems(pool, 'oresea').map((i) => i.id)).toEqual(['talisman-radagons-soreseal'])
   })
 })
 
