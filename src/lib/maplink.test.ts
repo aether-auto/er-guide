@@ -19,8 +19,9 @@ describe('mapUrl', () => {
   it('uses a different page or code per map layer', () => {
     const a = mapUrl({ code: 'overworld', markerId: null, lat: 0, lng: 0 })
     const b = mapUrl({ code: 'underground', markerId: null, lat: 0, lng: 0 })
-    const c = mapUrl({ code: 'dlc', markerId: null, lat: 0, lng: 0 })
-    expect(new Set([a, b, c]).size).toBe(3)
+    const c = mapUrl({ code: 'ashen', markerId: null, lat: 0, lng: 0 })
+    const d = mapUrl({ code: 'dlc', markerId: null, lat: 0, lng: 0 })
+    expect(new Set([a, b, c, d]).size).toBe(4)
   })
 
   it('exports the overworld map page as the default idle iframe url', () => {

@@ -6,6 +6,8 @@ import type { MapCode, MapRef } from './types'
 //    and Moonveil: ?id=2909&lat=-174.156251&lng=126.82006&code=mapA)
 // Underground deep links use: Interactive+Map?id=<id>&lat=<lat>&lng=<lng>&code=mapB
 //   (confirmed from Mimic Tear: ?id=1565&lat=-188.132812&lng=128.731198&code=mapB)
+// Ashen Capital (post-burn Leyndell overlay) uses code=mapC on the same base page
+//   (mapC discovered in the marker cache — see scripts/cache/map/README.md).
 // DLC deep links use: Interactive+Map?id=<id>&code=mapD (no lat/lng in wiki links)
 //   (confirmed from Scadutree Fragment: ?id=654882&code=mapD and others)
 // The DLC has its own dedicated page: /Shadow+of+the+Erdtree+Map (HTTP 200 confirmed)
@@ -20,12 +22,14 @@ const BASE_MAP = 'https://eldenring.wiki.fextralife.com/Interactive+Map'
 const MAP_PAGE: Record<MapCode, string> = {
   overworld: BASE_MAP,
   underground: BASE_MAP,
+  ashen: BASE_MAP,
   dlc: BASE_MAP,
 }
 
 const MAP_CODE: Record<MapCode, string> = {
   overworld: 'mapA',
   underground: 'mapB',
+  ashen: 'mapC',
   dlc: 'mapD',
 }
 

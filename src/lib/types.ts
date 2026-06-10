@@ -34,7 +34,9 @@ export const CATEGORY_META: Record<Category, { label: string; plural: string }> 
   tool: { label: 'Tool', plural: 'Tools' },
 }
 
-export type MapCode = 'overworld' | 'underground' | 'dlc'
+// 'ashen' is the Leyndell, Ashen Capital post-burn overlay (Fextralife mapC) —
+// physically in the overworld but a distinct map layer with its own markers.
+export type MapCode = 'overworld' | 'underground' | 'ashen' | 'dlc'
 
 export interface MapRef {
   code: MapCode
