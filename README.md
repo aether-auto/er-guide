@@ -22,26 +22,30 @@ a persistent checkable step with an interactive map companion.
 
 ## Map
 
-The guide uses two map sources:
+The map IS the guide: each region page is a full-viewport, self-hosted
+[Leaflet](https://leafletjs.com/) map with the route list overlaid as a panel
+(bottom sheet on mobile).
 
-- **Embedded panel (Map Genie):** The in-app map panel embeds
-  [Map Genie's](https://mapgenie.io/) Elden Ring interactive maps — the base game
-  map (`mapgenie.io/elden-ring/maps/the-lands-between`) and the Shadow of the
-  Erdtree map (`mapgenie.io/elden-ring/maps/the-shadow-realm`) — loaded as-is in
-  an iframe with attribution. We do not scrape or reproduce their marker dataset.
-
-- **Per-item pin jumps (Fextralife):** Every item with a known marker carries a
-  deep link that opens
+- **Self-hosted tiles:** four layers (Overworld, Underground, Leyndell Ashen
+  Capital, Realm of Shadow) served from `public/tiles/{code}/{z}/{x}/{y}.webp`,
+  zoom 0–6 (zoom 7 is client-side upscaled). The pyramids were mirrored once
+  from the Fextralife map app and recompressed to webp; no runtime requests
+  leave the site. Map imagery is © FromSoftware / Bandai Namco, assembled by
+  the Fextralife community — this is a non-commercial fan project and imagery
+  will be removed on request.
+- **Markers:** our own divIcon styling — category-glyph pins that desaturate
+  when checked and pulse for the current "next up" step, plus gold-glow Site
+  of Grace dots (`data/map-extras.json`). Pin popups carry the wiki layer:
+  acquisition/how-to-find text, quest context, missable warnings, a
+  check/uncheck button synced with your progress, and external wiki +
+  Fextralife links.
+- **Route paths:** per-leg gold polylines drawn from the routed item markers;
+  the active leg renders wider and brighter, and a dashed segment points from
+  the next-up pin to the following step.
+- **Per-item Fextralife links:** every popup links the item's pin on
   [Fextralife's interactive map](https://eldenring.wiki.fextralife.com/Interactive+Map)
-  in a persistent companion window (`er-guide-map`) and jumps directly to the
-  item's pin. The marker ids and coordinates in our dataset were extracted from
-  their public map application, used here with attribution under fair-use /
-  non-commercial fan-project grounds.
-
-  **Why a companion window instead of another iframe?** Fextralife sets
-  `X-Frame-Options: sameorigin` on all map pages, which prevents cross-origin
-  embedding. The companion-window approach gives the same one-click pin-jump
-  experience without violating that constraint.
+  (opens in a reusable companion window). Marker ids and coordinates in our
+  dataset were extracted from their public map application, with attribution.
 
 ## Contributing
 
@@ -63,13 +67,11 @@ npm run validate   # data gate
 This is a fan-made, non-commercial project. Elden Ring is © FromSoftware /
 Bandai Namco. Item and location data compiled from:
 
-- [Map Genie](https://mapgenie.io/) — embedded interactive map panel for the base
-  game (The Lands Between) and the DLC (The Shadow Realm), embedded as-is with
-  attribution; no marker data scraped.
-- [Fextralife Elden Ring Wiki](https://eldenring.wiki.fextralife.com/) — per-item
-  map deep links open their interactive map in a companion window; marker
-  coordinates and ids in our dataset were extracted from their public map
-  application, with attribution.
+- [Fextralife Elden Ring Wiki](https://eldenring.wiki.fextralife.com/) — map
+  tile pyramids (mirrored once, self-hosted as webp) and marker coordinates/ids
+  were extracted from their public map application, with attribution; per-item
+  popup links open their interactive map in a companion window. Underlying map
+  imagery © FromSoftware / Bandai Namco; removed on request.
 - [eldenring.wiki.gg](https://eldenring.wiki.gg/) — item listings
   (CC BY-NC-SA 3.0).
 - [Elden Ring Fan API](https://eldenring.fanapis.com/) — item descriptions (MIT).

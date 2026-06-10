@@ -96,16 +96,18 @@ Step types: `item` (checkable, joined with the database record at build time), `
 
 ## 5. UI
 
-Single-page app, dark Elden Ring–styled theme (gold accents, serif display headings).
+Single-page app, dark Elden Ring–styled theme (gold accents, serif display headings). **Map-first layout (revised 2026-06-10):** the map IS the page — earlier iframe-embed designs (Fextralife direct, then a Map Genie panel) are superseded.
 
-- **Left sidebar:** region/leg tree with per-node progress bars; click to jump. Collapsible.
-- **Center:** current leg — summary paragraph, then ordered steps. Item steps show a category icon, name, acquisition note, missable badge (loud, amber), checkbox, "show on map" button, wiki link. Boss/quest steps are also checkable.
-- **Right panel** (collapsible; bottom sheet on mobile): the Fextralife interactive map in an `iframe`. "Show on map" sets the iframe `src` to the item's deep link (`https://eldenring.wiki.fextralife.com/Interactive+Map?id=<markerId>&lat=<lat>&lng=<lng>&zoom=8&code=<mapcode>`), jumping the map to the pin. Every item also gets an "open map in new tab" fallback link in case embedding is blocked.
-- **Top bar:** global item search (jumps to the item's route position), category filter chips, "hide completed" toggle, overall progress.
+- **Full-viewport map (self-hosted Leaflet):** plain Leaflet, `CRS.Simple`, tiles served from our own `public/tiles/{code}/{z}/{x}/{y}.webp` (codes `overworld`/`underground`/`ashen`/`dlc`, zoom 0–6 mirrored from the Fextralife map app, zoom 7 client-upscaled via `maxNativeZoom`). Layer tabs (top-right) switch between the four maps; a graces toggle shows/hides the gold-glow Site of Grace dots from `data/map-extras.json`. No runtime third-party requests — tiles are committed.
+- **Markers:** our own `divIcon` styling (`src/lib/markers.ts`) — 28px circular category-glyph pins with category-colored rings; checked items desaturate with a ✓ overlay; the current "next up" step pulses with a gold halo. Pin popups are the wiki layer: item name, category, acquisition/how-to-find text, routed step note, missable warning, quest context, check/uncheck button (two-way synced with the progress store), wiki link, and a Fextralife deep link (`mapUrl(ref)`, opens in a reusable named companion window).
+- **Route paths:** per-leg gold polylines (`src/lib/route-path.ts`, tested) connecting routed, same-layer item markers; the active leg renders wider and full-opacity; a dashed segment points from the next-up pin to the following mapped step. Where pathing is meaningless, the explanation text in the popup/panel carries the load.
+- **RoutePanel** (overlaid left, ~380px; bottom sheet on mobile): region title, prev/next leg navigation, a "Next up" callout (first unchecked checkable — name, how-to-find note, big check button; checking advances and pans the map), the running step list (checkbox, name, category chip, missable badge, locate-on-map button; checked rows collapse to thin strikethrough), compact leg+region progress bars, and a region-tree drawer.
+- **Focus plumbing:** `UiContext.focus(ref, itemId?)` switches layer → `flyTo` → opens the item popup; called from RoutePanel rows, the "Next up" callout, and StepRow's map button.
+- **Top bar:** global item search (jumps to the item's route position), category filter chips, "hide completed" toggle.
 - **Dashboard route (`/progress`):** totals per category (e.g. Talismans 61/91) and per region; list of unchecked missables you've routed past (the "you are about to lose these" warning).
 - **Coverage route (`/coverage`):** generated data-quality report — items missing map markers, items not placed in any leg (auto-derived; this is the contributor to-do list).
 
-> **Map embedding revision (2026-06-10).** In-browser verification found that Fextralife serves `X-Frame-Options: sameorigin` on its map pages, so the original embedded-Fextralife-iframe design above cannot work (wiki.gg's map was also ruled out: its DataMaps extension stalls at "Loading scripts" inside a cross-site iframe). The shipped design is a hybrid: the right panel embeds **Map Genie** as the browsing map (`mapgenie.io/elden-ring/maps/the-lands-between`, switching to `…/the-shadow-realm` while a DLC region is active), embedded as-is with attribution and no scraping or deep-linking of their ToS-protected marker data; per-item "show on map" opens the item's Fextralife deep link (`mapUrl(ref)`) in a single reusable named companion window (`window.open(…, 'er-guide-map')`) that re-navigates pin-to-pin on each click.
+> **Map imagery provenance.** Tile pyramids were mirrored once from the Fextralife map app (see `public/tiles/README.md`) and recompressed to webp. Map imagery © FromSoftware / Bandai Namco, assembled by the Fextralife community; this is an open-source, non-commercial fan project and imagery will be removed on request. Marker styling is our own (no Map Genie assets or data are used; the earlier Map Genie iframe embed is removed).
 
 ## 6. Progress persistence
 
@@ -126,13 +128,13 @@ Single-page app, dark Elden Ring–styled theme (gold accents, serif display hea
 
 - Vite + React + TypeScript + Tailwind. React Router with hash routing (no 404 config needed on Pages).
 - GitHub Actions workflow: on push to `main` → `npm ci`, `npm run validate`, `npm run build` (with `base` set for project pages), deploy `dist/` via `actions/deploy-pages`.
-- No backend, no runtime third-party fetches except the map iframe.
+- No backend, no runtime third-party fetches — map tiles are self-hosted; the only external links (wiki, Fextralife pins) are explicit user clicks.
 
 ## 9. Error handling
 
 - localStorage read wrapped with schema-version check; unknown version → offer export of raw blob, then re-init (never silently wipe).
 - Import validates shape before applying; bad file → error toast, no state change.
-- Iframe load failure is not detectable cross-origin — the persistent "open in new tab" link is the mitigation.
+- Items without a map marker render with their explanation text in the panel and a wiki link instead of a locate button (no broken map actions).
 - Items with no map marker render the button disabled with a tooltip ("no marker yet — see wiki link").
 
 ## 10. Testing
