@@ -1,0 +1,3612 @@
+[
+  {
+    "pageid": 7089,
+    "ns": 0,
+    "title": "Armor"
+  },
+  {
+    "pageid": 4288,
+    "ns": 0,
+    "title": "Arms"
+  },
+  {
+    "pageid": 3999,
+    "ns": 0,
+    "title": "Crimson Hood"
+  },
+  {
+    "pageid": 16183,
+    "ns": 0,
+    "title": "Divine Beast Head"
+  },
+  {
+    "pageid": 11994,
+    "ns": 0,
+    "title": "Head"
+  },
+  {
+    "pageid": 5618,
+    "ns": 0,
+    "title": "Jar"
+  },
+  {
+    "pageid": 1524,
+    "ns": 0,
+    "title": "Legs"
+  },
+  {
+    "pageid": 3941,
+    "ns": 0,
+    "title": "Navy Hood"
+  },
+  {
+    "pageid": 14576,
+    "ns": 0,
+    "title": "Alberich's Pointed Hat"
+  },
+  {
+    "pageid": 1150,
+    "ns": 0,
+    "title": "Alberich's Robe"
+  },
+  {
+    "pageid": 3919,
+    "ns": 0,
+    "title": "All-Knowing Armor"
+  },
+  {
+    "pageid": 13055,
+    "ns": 0,
+    "title": "All-Knowing Armor (Altered)"
+  },
+  {
+    "pageid": 16335,
+    "ns": 0,
+    "title": "Ansbach's Attire"
+  },
+  {
+    "pageid": 16336,
+    "ns": 0,
+    "title": "Ansbach's Attire (Altered)"
+  },
+  {
+    "pageid": 8929,
+    "ns": 0,
+    "title": "Aristocrat Garb"
+  },
+  {
+    "pageid": 14648,
+    "ns": 0,
+    "title": "Aristocrat Garb (Altered)"
+  },
+  {
+    "pageid": 8161,
+    "ns": 0,
+    "title": "Armor of Solitude"
+  },
+  {
+    "pageid": 16547,
+    "ns": 0,
+    "title": "Armor of Solitude (Altered)"
+  },
+  {
+    "pageid": 8585,
+    "ns": 0,
+    "title": "Astrologer Robe"
+  },
+  {
+    "pageid": 12367,
+    "ns": 0,
+    "title": "Astrologer Robe (Altered)"
+  },
+  {
+    "pageid": 9634,
+    "ns": 0,
+    "title": "Banished Knight Armor"
+  },
+  {
+    "pageid": 2332,
+    "ns": 0,
+    "title": "Banished Knight Armor (Altered)"
+  },
+  {
+    "pageid": 5433,
+    "ns": 0,
+    "title": "Banished Knight Helm"
+  },
+  {
+    "pageid": 6884,
+    "ns": 0,
+    "title": "Banished Knight Helm (Altered)"
+  },
+  {
+    "pageid": 12130,
+    "ns": 0,
+    "title": "Beast Champion Armor"
+  },
+  {
+    "pageid": 4878,
+    "ns": 0,
+    "title": "Beast Champion Armor (Altered)"
+  },
+  {
+    "pageid": 980,
+    "ns": 0,
+    "title": "Black Knife Armor"
+  },
+  {
+    "pageid": 8482,
+    "ns": 0,
+    "title": "Black Knife Armor (Altered)"
+  },
+  {
+    "pageid": 5555,
+    "ns": 0,
+    "title": "Blaidd's Armor"
+  },
+  {
+    "pageid": 12363,
+    "ns": 0,
+    "title": "Blaidd's Armor (Altered)"
+  },
+  {
+    "pageid": 12188,
+    "ns": 0,
+    "title": "Bloodhound Knight Armor"
+  },
+  {
+    "pageid": 14248,
+    "ns": 0,
+    "title": "Bloodhound Knight Armor (Altered)"
+  },
+  {
+    "pageid": 845,
+    "ns": 0,
+    "title": "Blue Silver Mail Armor"
+  },
+  {
+    "pageid": 242,
+    "ns": 0,
+    "title": "Blue Silver Mail Armor (Altered)"
+  },
+  {
+    "pageid": 9389,
+    "ns": 0,
+    "title": "Briar Armor"
+  },
+  {
+    "pageid": 794,
+    "ns": 0,
+    "title": "Briar Armor (Altered)"
+  },
+  {
+    "pageid": 13849,
+    "ns": 0,
+    "title": "Carian Knight Armor"
+  },
+  {
+    "pageid": 4914,
+    "ns": 0,
+    "title": "Carian Knight Armor (Altered)"
+  },
+  {
+    "pageid": 9064,
+    "ns": 0,
+    "title": "Cleanrot Armor"
+  },
+  {
+    "pageid": 12042,
+    "ns": 0,
+    "title": "Cleanrot Armor (Altered)"
+  },
+  {
+    "pageid": 9804,
+    "ns": 0,
+    "title": "Cleanrot Helm"
+  },
+  {
+    "pageid": 1169,
+    "ns": 0,
+    "title": "Cleanrot Helm (Altered)"
+  },
+  {
+    "pageid": 13756,
+    "ns": 0,
+    "title": "Commoner's Garb"
+  },
+  {
+    "pageid": 8538,
+    "ns": 0,
+    "title": "Commoner's Garb (Altered)"
+  },
+  {
+    "pageid": 8305,
+    "ns": 0,
+    "title": "Commoner's Headband"
+  },
+  {
+    "pageid": 12756,
+    "ns": 0,
+    "title": "Commoner's Headband (Altered)"
+  },
+  {
+    "pageid": 9285,
+    "ns": 0,
+    "title": "Commoner's Simple Garb"
+  },
+  {
+    "pageid": 6752,
+    "ns": 0,
+    "title": "Commoner's Simple Garb (Altered)"
+  },
+  {
+    "pageid": 294,
+    "ns": 0,
+    "title": "Confessor Armor"
+  },
+  {
+    "pageid": 11927,
+    "ns": 0,
+    "title": "Confessor Armor (Altered)"
+  },
+  {
+    "pageid": 11635,
+    "ns": 0,
+    "title": "Confessor Hood"
+  },
+  {
+    "pageid": 11334,
+    "ns": 0,
+    "title": "Confessor Hood (Altered)"
+  },
+  {
+    "pageid": 5358,
+    "ns": 0,
+    "title": "Crucible Axe Armor"
+  },
+  {
+    "pageid": 8901,
+    "ns": 0,
+    "title": "Crucible Axe Armor (Altered)"
+  },
+  {
+    "pageid": 2443,
+    "ns": 0,
+    "title": "Crucible Tree Armor"
+  },
+  {
+    "pageid": 3690,
+    "ns": 0,
+    "title": "Crucible Tree Armor (Altered)"
+  },
+  {
+    "pageid": 14479,
+    "ns": 0,
+    "title": "Cuckoo Knight Armor"
+  },
+  {
+    "pageid": 11113,
+    "ns": 0,
+    "title": "Cuckoo Knight Armor (Altered)"
+  },
+  {
+    "pageid": 16342,
+    "ns": 0,
+    "title": "Dancer's Dress"
+  },
+  {
+    "pageid": 16343,
+    "ns": 0,
+    "title": "Dancer's Dress (Altered)"
+  },
+  {
+    "pageid": 14281,
+    "ns": 0,
+    "title": "Depraved Perfumer Robe"
+  },
+  {
+    "pageid": 3961,
+    "ns": 0,
+    "title": "Depraved Perfumer Robe (Altered)"
+  },
+  {
+    "pageid": 14516,
+    "ns": 0,
+    "title": "Drake Knight Armor"
+  },
+  {
+    "pageid": 7191,
+    "ns": 0,
+    "title": "Drake Knight Armor (Altered)"
+  },
+  {
+    "pageid": 5974,
+    "ns": 0,
+    "title": "Drake Knight Helm"
+  },
+  {
+    "pageid": 2852,
+    "ns": 0,
+    "title": "Drake Knight Helm (Altered)"
+  },
+  {
+    "pageid": 16237,
+    "ns": 0,
+    "title": "Dryleaf Robe"
+  },
+  {
+    "pageid": 16238,
+    "ns": 0,
+    "title": "Dryleaf Robe (Altered)"
+  },
+  {
+    "pageid": 11391,
+    "ns": 0,
+    "title": "Eccentric's Hood"
+  },
+  {
+    "pageid": 7782,
+    "ns": 0,
+    "title": "Eccentric's Hood (Altered)"
+  },
+  {
+    "pageid": 3761,
+    "ns": 0,
+    "title": "Elden Lord Armor"
+  },
+  {
+    "pageid": 9246,
+    "ns": 0,
+    "title": "Elden Lord Armor (Altered)"
+  },
+  {
+    "pageid": 11506,
+    "ns": 0,
+    "title": "Errant Sorcerer Robe"
+  },
+  {
+    "pageid": 2130,
+    "ns": 0,
+    "title": "Errant Sorcerer Robe (Altered)"
+  },
+  {
+    "pageid": 827,
+    "ns": 0,
+    "title": "Festive Garb"
+  },
+  {
+    "pageid": 6072,
+    "ns": 0,
+    "title": "Festive Garb (Altered)"
+  },
+  {
+    "pageid": 11620,
+    "ns": 0,
+    "title": "Festive Hood"
+  },
+  {
+    "pageid": 8959,
+    "ns": 0,
+    "title": "Festive Hood (Altered)"
+  },
+  {
+    "pageid": 237,
+    "ns": 0,
+    "title": "Fia's Robe"
+  },
+  {
+    "pageid": 12191,
+    "ns": 0,
+    "title": "Fia's Robe (Altered)"
+  },
+  {
+    "pageid": 3373,
+    "ns": 0,
+    "title": "Finger Maiden Robe"
+  },
+  {
+    "pageid": 3532,
+    "ns": 0,
+    "title": "Finger Maiden Robe (Altered)"
+  },
+  {
+    "pageid": 376,
+    "ns": 0,
+    "title": "Fingerprint Armor"
+  },
+  {
+    "pageid": 13017,
+    "ns": 0,
+    "title": "Fingerprint Armor (Altered)"
+  },
+  {
+    "pageid": 16564,
+    "ns": 0,
+    "title": "Fire Knight Armor"
+  },
+  {
+    "pageid": 16565,
+    "ns": 0,
+    "title": "Fire Knight Armor (Altered)"
+  },
+  {
+    "pageid": 11184,
+    "ns": 0,
+    "title": "Fire Prelate Armor"
+  },
+  {
+    "pageid": 4115,
+    "ns": 0,
+    "title": "Fire Prelate Armor (Altered)"
+  },
+  {
+    "pageid": 421,
+    "ns": 0,
+    "title": "Gelmir Knight Armor"
+  },
+  {
+    "pageid": 6287,
+    "ns": 0,
+    "title": "Gelmir Knight Armor (Altered)"
+  },
+  {
+    "pageid": 8581,
+    "ns": 0,
+    "title": "Godrick Knight Armor"
+  },
+  {
+    "pageid": 14225,
+    "ns": 0,
+    "title": "Godrick Knight Armor (Altered)"
+  },
+  {
+    "pageid": 2088,
+    "ns": 0,
+    "title": "Gravekeeper Cloak"
+  },
+  {
+    "pageid": 1995,
+    "ns": 0,
+    "title": "Gravekeeper Cloak (Altered)"
+  },
+  {
+    "pageid": 8295,
+    "ns": 0,
+    "title": "Haligtree Knight Armor"
+  },
+  {
+    "pageid": 12680,
+    "ns": 0,
+    "title": "Haligtree Knight Armor (Altered)"
+  },
+  {
+    "pageid": 12587,
+    "ns": 0,
+    "title": "High Page Clothes"
+  },
+  {
+    "pageid": 2507,
+    "ns": 0,
+    "title": "High Page Clothes (Altered)"
+  },
+  {
+    "pageid": 12052,
+    "ns": 0,
+    "title": "Hoslow's Armor"
+  },
+  {
+    "pageid": 1840,
+    "ns": 0,
+    "title": "Hoslow's Armor (Altered)"
+  },
+  {
+    "pageid": 16656,
+    "ns": 0,
+    "title": "Igon's Armor"
+  },
+  {
+    "pageid": 16657,
+    "ns": 0,
+    "title": "Igon's Armor (Altered)"
+  },
+  {
+    "pageid": 16654,
+    "ns": 0,
+    "title": "Igon's Helm"
+  },
+  {
+    "pageid": 16655,
+    "ns": 0,
+    "title": "Igon's Helm (Altered)"
+  },
+  {
+    "pageid": 2593,
+    "ns": 0,
+    "title": "Land of Reeds Armor"
+  },
+  {
+    "pageid": 5893,
+    "ns": 0,
+    "title": "Land of Reeds Armor (Altered)"
+  },
+  {
+    "pageid": 1243,
+    "ns": 0,
+    "title": "Leyndell Knight Armor"
+  },
+  {
+    "pageid": 5302,
+    "ns": 0,
+    "title": "Leyndell Knight Armor (Altered)"
+  },
+  {
+    "pageid": 12563,
+    "ns": 0,
+    "title": "Lionel's Armor"
+  },
+  {
+    "pageid": 14031,
+    "ns": 0,
+    "title": "Lionel's Armor (Altered)"
+  },
+  {
+    "pageid": 8782,
+    "ns": 0,
+    "title": "Lord of Blood's Robe"
+  },
+  {
+    "pageid": 12132,
+    "ns": 0,
+    "title": "Lord of Blood's Robe (Altered)"
+  },
+  {
+    "pageid": 11816,
+    "ns": 0,
+    "title": "Malenia's Armor"
+  },
+  {
+    "pageid": 8173,
+    "ns": 0,
+    "title": "Malenia's Armor (Altered)"
+  },
+  {
+    "pageid": 4200,
+    "ns": 0,
+    "title": "Maliketh's Armor"
+  },
+  {
+    "pageid": 8965,
+    "ns": 0,
+    "title": "Maliketh's Armor (Altered)"
+  },
+  {
+    "pageid": 8497,
+    "ns": 0,
+    "title": "Mausoleum Knight Armor"
+  },
+  {
+    "pageid": 5775,
+    "ns": 0,
+    "title": "Mausoleum Knight Armor (Altered)"
+  },
+  {
+    "pageid": 16203,
+    "ns": 0,
+    "title": "Messmer Soldier Armor"
+  },
+  {
+    "pageid": 16204,
+    "ns": 0,
+    "title": "Messmer Soldier Armor (Altered)"
+  },
+  {
+    "pageid": 4733,
+    "ns": 0,
+    "title": "Messmer's Helm"
+  },
+  {
+    "pageid": 16346,
+    "ns": 0,
+    "title": "Messmer's Helm (Altered)"
+  },
+  {
+    "pageid": 3269,
+    "ns": 0,
+    "title": "Night's Cavalry Armor"
+  },
+  {
+    "pageid": 3699,
+    "ns": 0,
+    "title": "Night's Cavalry Armor (Altered)"
+  },
+  {
+    "pageid": 932,
+    "ns": 0,
+    "title": "Night's Cavalry Helm"
+  },
+  {
+    "pageid": 1804,
+    "ns": 0,
+    "title": "Night's Cavalry Helm (Altered)"
+  },
+  {
+    "pageid": 9802,
+    "ns": 0,
+    "title": "Nomadic Merchant's Finery"
+  },
+  {
+    "pageid": 6780,
+    "ns": 0,
+    "title": "Nomadic Merchant's Finery (Altered)"
+  },
+  {
+    "pageid": 6498,
+    "ns": 0,
+    "title": "Nox Monk Armor"
+  },
+  {
+    "pageid": 10378,
+    "ns": 0,
+    "title": "Nox Monk Armor (Altered)"
+  },
+  {
+    "pageid": 6130,
+    "ns": 0,
+    "title": "Nox Monk Hood"
+  },
+  {
+    "pageid": 12948,
+    "ns": 0,
+    "title": "Nox Monk Hood (Altered)"
+  },
+  {
+    "pageid": 13150,
+    "ns": 0,
+    "title": "Nox Swordstress Armor"
+  },
+  {
+    "pageid": 2104,
+    "ns": 0,
+    "title": "Nox Swordstress Armor (Altered)"
+  },
+  {
+    "pageid": 7846,
+    "ns": 0,
+    "title": "Nox Swordstress Crown"
+  },
+  {
+    "pageid": 9615,
+    "ns": 0,
+    "title": "Nox Swordstress Crown (Altered)"
+  },
+  {
+    "pageid": 2669,
+    "ns": 0,
+    "title": "Page Garb"
+  },
+  {
+    "pageid": 5437,
+    "ns": 0,
+    "title": "Page Garb (Altered)"
+  },
+  {
+    "pageid": 10869,
+    "ns": 0,
+    "title": "Perfumer Robe"
+  },
+  {
+    "pageid": 11803,
+    "ns": 0,
+    "title": "Perfumer Robe (Altered)"
+  },
+  {
+    "pageid": 4438,
+    "ns": 0,
+    "title": "Perfumer's Traveling Garb"
+  },
+  {
+    "pageid": 14090,
+    "ns": 0,
+    "title": "Perfumer's Traveling Garb (Altered)"
+  },
+  {
+    "pageid": 13246,
+    "ns": 0,
+    "title": "Preceptor's Long Gown"
+  },
+  {
+    "pageid": 9488,
+    "ns": 0,
+    "title": "Preceptor's Long Gown (Altered)"
+  },
+  {
+    "pageid": 6503,
+    "ns": 0,
+    "title": "Prophet Robe"
+  },
+  {
+    "pageid": 136,
+    "ns": 0,
+    "title": "Prophet Robe (Altered)"
+  },
+  {
+    "pageid": 11568,
+    "ns": 0,
+    "title": "Radahn's Lion Armor"
+  },
+  {
+    "pageid": 9991,
+    "ns": 0,
+    "title": "Radahn's Lion Armor (Altered)"
+  },
+  {
+    "pageid": 1015,
+    "ns": 0,
+    "title": "Ragged Armor"
+  },
+  {
+    "pageid": 6399,
+    "ns": 0,
+    "title": "Ragged Hat"
+  },
+  {
+    "pageid": 1740,
+    "ns": 0,
+    "title": "Raging Wolf Armor"
+  },
+  {
+    "pageid": 11991,
+    "ns": 0,
+    "title": "Raging Wolf Armor (Altered)"
+  },
+  {
+    "pageid": 2304,
+    "ns": 0,
+    "title": "Redmane Knight Armor"
+  },
+  {
+    "pageid": 2232,
+    "ns": 0,
+    "title": "Redmane Knight Armor (Altered)"
+  },
+  {
+    "pageid": 385,
+    "ns": 0,
+    "title": "Ronin's Armor"
+  },
+  {
+    "pageid": 11317,
+    "ns": 0,
+    "title": "Ronin's Armor (Altered)"
+  },
+  {
+    "pageid": 10690,
+    "ns": 0,
+    "title": "Rotten Gravekeeper Cloak"
+  },
+  {
+    "pageid": 3602,
+    "ns": 0,
+    "title": "Rotten Gravekeeper Cloak (Altered)"
+  },
+  {
+    "pageid": 1649,
+    "ns": 0,
+    "title": "Royal Knight Armor"
+  },
+  {
+    "pageid": 2357,
+    "ns": 0,
+    "title": "Royal Knight Armor (Altered)"
+  },
+  {
+    "pageid": 5758,
+    "ns": 0,
+    "title": "Scaled Armor"
+  },
+  {
+    "pageid": 6586,
+    "ns": 0,
+    "title": "Scaled Armor (Altered)"
+  },
+  {
+    "pageid": 14370,
+    "ns": 0,
+    "title": "Snow Witch Robe"
+  },
+  {
+    "pageid": 14763,
+    "ns": 0,
+    "title": "Snow Witch Robe (Altered)"
+  },
+  {
+    "pageid": 3124,
+    "ns": 0,
+    "title": "Spellblade's Traveling Attire"
+  },
+  {
+    "pageid": 9611,
+    "ns": 0,
+    "title": "Spellblade's Traveling Attire (Altered)"
+  },
+  {
+    "pageid": 16661,
+    "ns": 0,
+    "title": "Thiollier's Garb"
+  },
+  {
+    "pageid": 16662,
+    "ns": 0,
+    "title": "Thiollier's Garb (Altered)"
+  },
+  {
+    "pageid": 1952,
+    "ns": 0,
+    "title": "Traveling Maiden Robe"
+  },
+  {
+    "pageid": 9644,
+    "ns": 0,
+    "title": "Traveling Maiden Robe (Altered)"
+  },
+  {
+    "pageid": 10658,
+    "ns": 0,
+    "title": "Tree Sentinel Armor"
+  },
+  {
+    "pageid": 1983,
+    "ns": 0,
+    "title": "Tree Sentinel Armor (Altered)"
+  },
+  {
+    "pageid": 10228,
+    "ns": 0,
+    "title": "Twinned Armor"
+  },
+  {
+    "pageid": 9043,
+    "ns": 0,
+    "title": "Twinned Armor (Altered)"
+  },
+  {
+    "pageid": 2369,
+    "ns": 0,
+    "title": "Vagabond Knight Armor"
+  },
+  {
+    "pageid": 487,
+    "ns": 0,
+    "title": "Vagabond Knight Armor (Altered)"
+  },
+  {
+    "pageid": 12803,
+    "ns": 0,
+    "title": "Veteran's Armor"
+  },
+  {
+    "pageid": 3793,
+    "ns": 0,
+    "title": "Veteran's Armor (Altered)"
+  },
+  {
+    "pageid": 3434,
+    "ns": 0,
+    "title": "War Surgeon Gown"
+  },
+  {
+    "pageid": 12488,
+    "ns": 0,
+    "title": "War Surgeon Gown (Altered)"
+  },
+  {
+    "pageid": 16351,
+    "ns": 0,
+    "title": "Young Lion's Armor"
+  },
+  {
+    "pageid": 16352,
+    "ns": 0,
+    "title": "Young Lion's Armor (Altered)"
+  },
+  {
+    "pageid": 14689,
+    "ns": 0,
+    "title": "Alberich's Bracers"
+  },
+  {
+    "pageid": 1807,
+    "ns": 0,
+    "title": "All-Knowing Gauntlets"
+  },
+  {
+    "pageid": 16337,
+    "ns": 0,
+    "title": "Ansbach's Manchettes"
+  },
+  {
+    "pageid": 16606,
+    "ns": 0,
+    "title": "Ascetic's Wrist Guards"
+  },
+  {
+    "pageid": 12229,
+    "ns": 0,
+    "title": "Astrologer Gloves"
+  },
+  {
+    "pageid": 10685,
+    "ns": 0,
+    "title": "Azur's Manchettes"
+  },
+  {
+    "pageid": 12185,
+    "ns": 0,
+    "title": "Bandit Manchettes"
+  },
+  {
+    "pageid": 8474,
+    "ns": 0,
+    "title": "Banished Knight Gauntlets"
+  },
+  {
+    "pageid": 1199,
+    "ns": 0,
+    "title": "Battlemage Manchettes"
+  },
+  {
+    "pageid": 3963,
+    "ns": 0,
+    "title": "Beast Champion Gauntlets"
+  },
+  {
+    "pageid": 11243,
+    "ns": 0,
+    "title": "Black Knife Gauntlets"
+  },
+  {
+    "pageid": 16209,
+    "ns": 0,
+    "title": "Black Knight Gauntlets"
+  },
+  {
+    "pageid": 138,
+    "ns": 0,
+    "title": "Blackflame Monk Gauntlets"
+  },
+  {
+    "pageid": 4176,
+    "ns": 0,
+    "title": "Blaidd's Gauntlets"
+  },
+  {
+    "pageid": 14187,
+    "ns": 0,
+    "title": "Bloodhound Knight Gauntlets"
+  },
+  {
+    "pageid": 4292,
+    "ns": 0,
+    "title": "Bloodsoaked Manchettes"
+  },
+  {
+    "pageid": 6597,
+    "ns": 0,
+    "title": "Blue Silver Bracelets"
+  },
+  {
+    "pageid": 16200,
+    "ns": 0,
+    "title": "Braided Arm Wraps"
+  },
+  {
+    "pageid": 4059,
+    "ns": 0,
+    "title": "Brave's Bracer"
+  },
+  {
+    "pageid": 246,
+    "ns": 0,
+    "title": "Briar Gauntlets"
+  },
+  {
+    "pageid": 6457,
+    "ns": 0,
+    "title": "Bull-Goat Gauntlets"
+  },
+  {
+    "pageid": 5492,
+    "ns": 0,
+    "title": "Carian Knight Gauntlets"
+  },
+  {
+    "pageid": 14045,
+    "ns": 0,
+    "title": "Champion Bracers"
+  },
+  {
+    "pageid": 499,
+    "ns": 0,
+    "title": "Cleanrot Gauntlets"
+  },
+  {
+    "pageid": 16229,
+    "ns": 0,
+    "title": "Common Soldier Gauntlets"
+  },
+  {
+    "pageid": 3700,
+    "ns": 0,
+    "title": "Confessor Gloves"
+  },
+  {
+    "pageid": 6511,
+    "ns": 0,
+    "title": "Crucible Gauntlets"
+  },
+  {
+    "pageid": 8410,
+    "ns": 0,
+    "title": "Cuckoo Knight Gauntlets"
+  },
+  {
+    "pageid": 16344,
+    "ns": 0,
+    "title": "Dancer's Bracer"
+  },
+  {
+    "pageid": 16424,
+    "ns": 0,
+    "title": "Death Knight Gauntlets"
+  },
+  {
+    "pageid": 4037,
+    "ns": 0,
+    "title": "Depraved Perfumer Gloves"
+  },
+  {
+    "pageid": 16219,
+    "ns": 0,
+    "title": "Divine Bird Warrior Gauntlets"
+  },
+  {
+    "pageid": 12478,
+    "ns": 0,
+    "title": "Drake Knight Gauntlets"
+  },
+  {
+    "pageid": 16239,
+    "ns": 0,
+    "title": "Dryleaf Arm Wraps"
+  },
+  {
+    "pageid": 602,
+    "ns": 0,
+    "title": "Eccentric's Manchettes"
+  },
+  {
+    "pageid": 8010,
+    "ns": 0,
+    "title": "Elden Lord Bracers"
+  },
+  {
+    "pageid": 9828,
+    "ns": 0,
+    "title": "Errant Sorcerer Manchettes"
+  },
+  {
+    "pageid": 3331,
+    "ns": 0,
+    "title": "Exile Gauntlets"
+  },
+  {
+    "pageid": 946,
+    "ns": 0,
+    "title": "Fingerprint Gauntlets"
+  },
+  {
+    "pageid": 16566,
+    "ns": 0,
+    "title": "Fire Knight Gauntlets"
+  },
+  {
+    "pageid": 9771,
+    "ns": 0,
+    "title": "Fire Monk Gauntlets"
+  },
+  {
+    "pageid": 14232,
+    "ns": 0,
+    "title": "Fire Prelate Gauntlets"
+  },
+  {
+    "pageid": 1890,
+    "ns": 0,
+    "title": "Foot Soldier Gauntlets"
+  },
+  {
+    "pageid": 16615,
+    "ns": 0,
+    "title": "Freyja's Gauntlets"
+  },
+  {
+    "pageid": 16361,
+    "ns": 0,
+    "title": "Gaius's Gauntlets"
+  },
+  {
+    "pageid": 7701,
+    "ns": 0,
+    "title": "Gauntlets"
+  },
+  {
+    "pageid": 16557,
+    "ns": 0,
+    "title": "Gauntlets of Night"
+  },
+  {
+    "pageid": 16548,
+    "ns": 0,
+    "title": "Gauntlets of Solitude"
+  },
+  {
+    "pageid": 2604,
+    "ns": 0,
+    "title": "Gelmir Knight Gauntlets"
+  },
+  {
+    "pageid": 4986,
+    "ns": 0,
+    "title": "Godrick Knight Gauntlets"
+  },
+  {
+    "pageid": 13711,
+    "ns": 0,
+    "title": "Godrick Soldier Gauntlets"
+  },
+  {
+    "pageid": 14322,
+    "ns": 0,
+    "title": "Godskin Apostle Bracelets"
+  },
+  {
+    "pageid": 4357,
+    "ns": 0,
+    "title": "Godskin Noble Bracelets"
+  },
+  {
+    "pageid": 4863,
+    "ns": 0,
+    "title": "Gold Bracelets"
+  },
+  {
+    "pageid": 10081,
+    "ns": 0,
+    "title": "Golden Prosthetic"
+  },
+  {
+    "pageid": 16624,
+    "ns": 0,
+    "title": "Gravebird Bracelets"
+  },
+  {
+    "pageid": 3847,
+    "ns": 0,
+    "title": "Guardian Bracers"
+  },
+  {
+    "pageid": 8592,
+    "ns": 0,
+    "title": "Haligtree Gauntlets"
+  },
+  {
+    "pageid": 2948,
+    "ns": 0,
+    "title": "Haligtree Knight Gauntlets"
+  },
+  {
+    "pageid": 16197,
+    "ns": 0,
+    "title": "High Priest Gloves"
+  },
+  {
+    "pageid": 11834,
+    "ns": 0,
+    "title": "Highwayman Gauntlets"
+  },
+  {
+    "pageid": 16215,
+    "ns": 0,
+    "title": "Horned Warrior Gauntlets"
+  },
+  {
+    "pageid": 13008,
+    "ns": 0,
+    "title": "Hoslow's Gauntlets"
+  },
+  {
+    "pageid": 16658,
+    "ns": 0,
+    "title": "Igon's Gauntlets"
+  },
+  {
+    "pageid": 3247,
+    "ns": 0,
+    "title": "Iron Gauntlets"
+  },
+  {
+    "pageid": 16571,
+    "ns": 0,
+    "title": "Iron Rivet Gauntlets"
+  },
+  {
+    "pageid": 3413,
+    "ns": 0,
+    "title": "Kaiden Gauntlets"
+  },
+  {
+    "pageid": 5748,
+    "ns": 0,
+    "title": "Knight Gauntlets"
+  },
+  {
+    "pageid": 1372,
+    "ns": 0,
+    "title": "Land of Reeds Gauntlets"
+  },
+  {
+    "pageid": 16578,
+    "ns": 0,
+    "title": "Leather Arm Wraps"
+  },
+  {
+    "pageid": 4468,
+    "ns": 0,
+    "title": "Leather Gloves"
+  },
+  {
+    "pageid": 1889,
+    "ns": 0,
+    "title": "Leyndell Knight Gauntlets"
+  },
+  {
+    "pageid": 14670,
+    "ns": 0,
+    "title": "Leyndell Soldier Gauntlets"
+  },
+  {
+    "pageid": 2675,
+    "ns": 0,
+    "title": "Lionel's Gauntlets"
+  },
+  {
+    "pageid": 9183,
+    "ns": 0,
+    "title": "Lusat's Manchettes"
+  },
+  {
+    "pageid": 13875,
+    "ns": 0,
+    "title": "Malenia's Gauntlet"
+  },
+  {
+    "pageid": 8894,
+    "ns": 0,
+    "title": "Malformed Dragon Gauntlets"
+  },
+  {
+    "pageid": 14668,
+    "ns": 0,
+    "title": "Maliketh's Gauntlets"
+  },
+  {
+    "pageid": 6082,
+    "ns": 0,
+    "title": "Mausoleum Gauntlets"
+  },
+  {
+    "pageid": 2488,
+    "ns": 0,
+    "title": "Mausoleum Knight Gauntlets"
+  },
+  {
+    "pageid": 16205,
+    "ns": 0,
+    "title": "Messmer Soldier Gauntlets"
+  },
+  {
+    "pageid": 16348,
+    "ns": 0,
+    "title": "Messmer's Gauntlets"
+  },
+  {
+    "pageid": 5013,
+    "ns": 0,
+    "title": "Millicent's Gloves"
+  },
+  {
+    "pageid": 13434,
+    "ns": 0,
+    "title": "Mushroom Arms"
+  },
+  {
+    "pageid": 6851,
+    "ns": 0,
+    "title": "Night's Cavalry Gauntlets"
+  },
+  {
+    "pageid": 10811,
+    "ns": 0,
+    "title": "Noble's Gloves"
+  },
+  {
+    "pageid": 7710,
+    "ns": 0,
+    "title": "Nox Bracelets"
+  },
+  {
+    "pageid": 16553,
+    "ns": 0,
+    "title": "Oathseeker Knight Gauntlets"
+  },
+  {
+    "pageid": 16550,
+    "ns": 0,
+    "title": "Oathseeker Knight Helm"
+  },
+  {
+    "pageid": 10020,
+    "ns": 0,
+    "title": "Omen Gauntlets"
+  },
+  {
+    "pageid": 3296,
+    "ns": 0,
+    "title": "Omenkiller Long Gloves"
+  },
+  {
+    "pageid": 8857,
+    "ns": 0,
+    "title": "Perfumer Gloves"
+  },
+  {
+    "pageid": 11431,
+    "ns": 0,
+    "title": "Preceptor's Gloves"
+  },
+  {
+    "pageid": 1177,
+    "ns": 0,
+    "title": "Queen's Bracelets"
+  },
+  {
+    "pageid": 4270,
+    "ns": 0,
+    "title": "Radahn Soldier Gauntlets"
+  },
+  {
+    "pageid": 11621,
+    "ns": 0,
+    "title": "Radahn's Gauntlets"
+  },
+  {
+    "pageid": 481,
+    "ns": 0,
+    "title": "Ragged Gloves"
+  },
+  {
+    "pageid": 1724,
+    "ns": 0,
+    "title": "Raging Wolf Gauntlets"
+  },
+  {
+    "pageid": 16419,
+    "ns": 0,
+    "title": "Rakshasa Gauntlets"
+  },
+  {
+    "pageid": 9232,
+    "ns": 0,
+    "title": "Raya Lucarian Gauntlets"
+  },
+  {
+    "pageid": 5672,
+    "ns": 0,
+    "title": "Redmane Knight Gauntlets"
+  },
+  {
+    "pageid": 16357,
+    "ns": 0,
+    "title": "Rellana's Gloves"
+  },
+  {
+    "pageid": 7832,
+    "ns": 0,
+    "title": "Ronin's Gauntlets"
+  },
+  {
+    "pageid": 7428,
+    "ns": 0,
+    "title": "Royal Knight Gauntlets"
+  },
+  {
+    "pageid": 11857,
+    "ns": 0,
+    "title": "Royal Remains Gauntlets"
+  },
+  {
+    "pageid": 3153,
+    "ns": 0,
+    "title": "Scaled Gauntlets"
+  },
+  {
+    "pageid": 16233,
+    "ns": 0,
+    "title": "Shadow Militiaman Gauntlets"
+  },
+  {
+    "pageid": 11752,
+    "ns": 0,
+    "title": "Sorcerer Manchettes"
+  },
+  {
+    "pageid": 4535,
+    "ns": 0,
+    "title": "Spellblade's Gloves"
+  },
+  {
+    "pageid": 16663,
+    "ns": 0,
+    "title": "Thiollier's Gloves"
+  },
+  {
+    "pageid": 2600,
+    "ns": 0,
+    "title": "Traveler's Gloves"
+  },
+  {
+    "pageid": 11384,
+    "ns": 0,
+    "title": "Traveler's Manchettes"
+  },
+  {
+    "pageid": 1815,
+    "ns": 0,
+    "title": "Traveling Maiden Gloves"
+  },
+  {
+    "pageid": 14749,
+    "ns": 0,
+    "title": "Tree Sentinel Gauntlets"
+  },
+  {
+    "pageid": 8485,
+    "ns": 0,
+    "title": "Twinned Gauntlets"
+  },
+  {
+    "pageid": 5949,
+    "ns": 0,
+    "title": "Vagabond Knight Gauntlets"
+  },
+  {
+    "pageid": 16652,
+    "ns": 0,
+    "title": "Verdigris Gauntlets"
+  },
+  {
+    "pageid": 5621,
+    "ns": 0,
+    "title": "Veteran's Gauntlets"
+  },
+  {
+    "pageid": 5678,
+    "ns": 0,
+    "title": "Vulgar Militia Gauntlets"
+  },
+  {
+    "pageid": 9406,
+    "ns": 0,
+    "title": "War Surgeon Gloves"
+  },
+  {
+    "pageid": 8294,
+    "ns": 0,
+    "title": "Warrior Gauntlets"
+  },
+  {
+    "pageid": 6292,
+    "ns": 0,
+    "title": "White Reed Gauntlets"
+  },
+  {
+    "pageid": 16353,
+    "ns": 0,
+    "title": "Young Lion's Gauntlets"
+  },
+  {
+    "pageid": 6561,
+    "ns": 0,
+    "title": "Zamor Bracelets"
+  },
+  {
+    "pageid": 11047,
+    "ns": 0,
+    "title": "Alberich's Robe (Altered)"
+  },
+  {
+    "pageid": 12692,
+    "ns": 0,
+    "title": "Aristocrat Coat"
+  },
+  {
+    "pageid": 16556,
+    "ns": 0,
+    "title": "Armor of Night"
+  },
+  {
+    "pageid": 16605,
+    "ns": 0,
+    "title": "Ascetic's Loincloth"
+  },
+  {
+    "pageid": 6730,
+    "ns": 0,
+    "title": "Azur's Glintstone Robe"
+  },
+  {
+    "pageid": 11733,
+    "ns": 0,
+    "title": "Bandit Garb"
+  },
+  {
+    "pageid": 46,
+    "ns": 0,
+    "title": "Battlemage Robe"
+  },
+  {
+    "pageid": 16208,
+    "ns": 0,
+    "title": "Black Knight Armor"
+  },
+  {
+    "pageid": 13043,
+    "ns": 0,
+    "title": "Blackflame Monk Armor"
+  },
+  {
+    "pageid": 7413,
+    "ns": 0,
+    "title": "Bloodsoaked Tabard"
+  },
+  {
+    "pageid": 12302,
+    "ns": 0,
+    "title": "Blue Cloth Vest"
+  },
+  {
+    "pageid": 3261,
+    "ns": 0,
+    "title": "Blue Festive Garb"
+  },
+  {
+    "pageid": 16199,
+    "ns": 0,
+    "title": "Braided Cord Robe"
+  },
+  {
+    "pageid": 6606,
+    "ns": 0,
+    "title": "Bull-Goat Armor"
+  },
+  {
+    "pageid": 12626,
+    "ns": 0,
+    "title": "Chain Armor"
+  },
+  {
+    "pageid": 12053,
+    "ns": 0,
+    "title": "Chain-Draped Tabard"
+  },
+  {
+    "pageid": 13800,
+    "ns": 0,
+    "title": "Champion Pauldron"
+  },
+  {
+    "pageid": 3986,
+    "ns": 0,
+    "title": "Chest"
+  },
+  {
+    "pageid": 7237,
+    "ns": 0,
+    "title": "Cloth Garb"
+  },
+  {
+    "pageid": 16228,
+    "ns": 0,
+    "title": "Common Soldier Cloth Armor"
+  },
+  {
+    "pageid": 4847,
+    "ns": 0,
+    "title": "Consort's Robe"
+  },
+  {
+    "pageid": 60,
+    "ns": 0,
+    "title": "Corhyn's Robe"
+  },
+  {
+    "pageid": 9284,
+    "ns": 0,
+    "title": "Cuckoo Surcoat"
+  },
+  {
+    "pageid": 16423,
+    "ns": 0,
+    "title": "Death Knight Armor"
+  },
+  {
+    "pageid": 13517,
+    "ns": 0,
+    "title": "Deathbed Dress"
+  },
+  {
+    "pageid": 7088,
+    "ns": 0,
+    "title": "Dirty Chainmail"
+  },
+  {
+    "pageid": 16212,
+    "ns": 0,
+    "title": "Divine Beast Warrior Armor"
+  },
+  {
+    "pageid": 16218,
+    "ns": 0,
+    "title": "Divine Bird Warrior Armor"
+  },
+  {
+    "pageid": 1739,
+    "ns": 0,
+    "title": "Eccentric's Armor"
+  },
+  {
+    "pageid": 8401,
+    "ns": 0,
+    "title": "Erdtree Surcoat"
+  },
+  {
+    "pageid": 2820,
+    "ns": 0,
+    "title": "Exile Armor"
+  },
+  {
+    "pageid": 1884,
+    "ns": 0,
+    "title": "Eye Surcoat"
+  },
+  {
+    "pageid": 14022,
+    "ns": 0,
+    "title": "Fell Omen Cloak"
+  },
+  {
+    "pageid": 16196,
+    "ns": 0,
+    "title": "Finger Robe"
+  },
+  {
+    "pageid": 7550,
+    "ns": 0,
+    "title": "Fire Monk Armor"
+  },
+  {
+    "pageid": 273,
+    "ns": 0,
+    "title": "Foot Soldier Tabard"
+  },
+  {
+    "pageid": 16613,
+    "ns": 0,
+    "title": "Freyja's Armor"
+  },
+  {
+    "pageid": 16614,
+    "ns": 0,
+    "title": "Freyja's Armor (Altered)"
+  },
+  {
+    "pageid": 6800,
+    "ns": 0,
+    "title": "Fur Raiment"
+  },
+  {
+    "pageid": 16359,
+    "ns": 0,
+    "title": "Gaius's Armor"
+  },
+  {
+    "pageid": 16577,
+    "ns": 0,
+    "title": "Gloried Attire"
+  },
+  {
+    "pageid": 6187,
+    "ns": 0,
+    "title": "Godskin Apostle Robe"
+  },
+  {
+    "pageid": 3225,
+    "ns": 0,
+    "title": "Godskin Noble Robe"
+  },
+  {
+    "pageid": 3894,
+    "ns": 0,
+    "title": "Goldmask's Rags"
+  },
+  {
+    "pageid": 16622,
+    "ns": 0,
+    "title": "Gravebird Armor"
+  },
+  {
+    "pageid": 16623,
+    "ns": 0,
+    "title": "Gravebird's Blackquill Armor"
+  },
+  {
+    "pageid": 9670,
+    "ns": 0,
+    "title": "Guardian Garb"
+  },
+  {
+    "pageid": 2300,
+    "ns": 0,
+    "title": "Guardian Garb (Full Bloom)"
+  },
+  {
+    "pageid": 628,
+    "ns": 0,
+    "title": "Haligtree Crest Surcoat"
+  },
+  {
+    "pageid": 16195,
+    "ns": 0,
+    "title": "High Priest Robe"
+  },
+  {
+    "pageid": 16576,
+    "ns": 0,
+    "title": "Highland Attire"
+  },
+  {
+    "pageid": 10701,
+    "ns": 0,
+    "title": "Highwayman Cloth Armor"
+  },
+  {
+    "pageid": 16214,
+    "ns": 0,
+    "title": "Horned Warrior Armor"
+  },
+  {
+    "pageid": 16570,
+    "ns": 0,
+    "title": "Iron Rivet Armor"
+  },
+  {
+    "pageid": 9308,
+    "ns": 0,
+    "title": "Ivory-Draped Tabard"
+  },
+  {
+    "pageid": 2752,
+    "ns": 0,
+    "title": "Juvenile Scholar Robe"
+  },
+  {
+    "pageid": 3197,
+    "ns": 0,
+    "title": "Kaiden Armor"
+  },
+  {
+    "pageid": 3871,
+    "ns": 0,
+    "title": "Knight Armor"
+  },
+  {
+    "pageid": 9511,
+    "ns": 0,
+    "title": "Lazuli Robe"
+  },
+  {
+    "pageid": 5151,
+    "ns": 0,
+    "title": "Leather Armor"
+  },
+  {
+    "pageid": 14860,
+    "ns": 0,
+    "title": "Leather-Draped Tabard"
+  },
+  {
+    "pageid": 16552,
+    "ns": 0,
+    "title": "Leda's Armor"
+  },
+  {
+    "pageid": 9923,
+    "ns": 0,
+    "title": "Lusat's Robe"
+  },
+  {
+    "pageid": 5164,
+    "ns": 0,
+    "title": "Malformed Dragon Armor"
+  },
+  {
+    "pageid": 6017,
+    "ns": 0,
+    "title": "Marais Robe"
+  },
+  {
+    "pageid": 8643,
+    "ns": 0,
+    "title": "Marionette Soldier Armor"
+  },
+  {
+    "pageid": 1719,
+    "ns": 0,
+    "title": "Mausoleum Surcoat"
+  },
+  {
+    "pageid": 16347,
+    "ns": 0,
+    "title": "Messmer's Armor"
+  },
+  {
+    "pageid": 7116,
+    "ns": 0,
+    "title": "Millicent's Robe"
+  },
+  {
+    "pageid": 14437,
+    "ns": 0,
+    "title": "Mushroom Body"
+  },
+  {
+    "pageid": 13035,
+    "ns": 0,
+    "title": "Night Maiden Armor"
+  },
+  {
+    "pageid": 3901,
+    "ns": 0,
+    "title": "Noble's Traveling Garb"
+  },
+  {
+    "pageid": 16551,
+    "ns": 0,
+    "title": "Oathseeker Knight Armor"
+  },
+  {
+    "pageid": 8537,
+    "ns": 0,
+    "title": "Official's Attire"
+  },
+  {
+    "pageid": 11221,
+    "ns": 0,
+    "title": "Old Aristocrat Gown"
+  },
+  {
+    "pageid": 2987,
+    "ns": 0,
+    "title": "Omen Armor"
+  },
+  {
+    "pageid": 13463,
+    "ns": 0,
+    "title": "Omenkiller Robe"
+  },
+  {
+    "pageid": 3908,
+    "ns": 0,
+    "title": "Prisoner Clothing"
+  },
+  {
+    "pageid": 12340,
+    "ns": 0,
+    "title": "Queen's Robe"
+  },
+  {
+    "pageid": 16420,
+    "ns": 0,
+    "title": "Rakshasa Armor"
+  },
+  {
+    "pageid": 11110,
+    "ns": 0,
+    "title": "Raptor's Black Feathers"
+  },
+  {
+    "pageid": 556,
+    "ns": 0,
+    "title": "Raya Lucarian Robe"
+  },
+  {
+    "pageid": 12668,
+    "ns": 0,
+    "title": "Redmane Surcoat"
+  },
+  {
+    "pageid": 16356,
+    "ns": 0,
+    "title": "Rellana's Armor"
+  },
+  {
+    "pageid": 9992,
+    "ns": 0,
+    "title": "Royal Remains Armor"
+  },
+  {
+    "pageid": 6902,
+    "ns": 0,
+    "title": "Ruler's Robe"
+  },
+  {
+    "pageid": 2228,
+    "ns": 0,
+    "title": "Sage Robe"
+  },
+  {
+    "pageid": 11680,
+    "ns": 0,
+    "title": "Sanguine Noble Robe"
+  },
+  {
+    "pageid": 6861,
+    "ns": 0,
+    "title": "Scale Armor"
+  },
+  {
+    "pageid": 5944,
+    "ns": 0,
+    "title": "Scarlet Tabard"
+  },
+  {
+    "pageid": 16232,
+    "ns": 0,
+    "title": "Shadow Militiaman Armor"
+  },
+  {
+    "pageid": 4693,
+    "ns": 0,
+    "title": "Shaman Furs"
+  },
+  {
+    "pageid": 173,
+    "ns": 0,
+    "title": "Traveler's Clothes"
+  },
+  {
+    "pageid": 10262,
+    "ns": 0,
+    "title": "Tree Surcoat"
+  },
+  {
+    "pageid": 6473,
+    "ns": 0,
+    "title": "Tree-and-Beast Surcoat"
+  },
+  {
+    "pageid": 9933,
+    "ns": 0,
+    "title": "Upper-Class Robe"
+  },
+  {
+    "pageid": 16651,
+    "ns": 0,
+    "title": "Verdigris Armor"
+  },
+  {
+    "pageid": 3061,
+    "ns": 0,
+    "title": "Vulgar Militia Armor"
+  },
+  {
+    "pageid": 12547,
+    "ns": 0,
+    "title": "White Reed Armor"
+  },
+  {
+    "pageid": 2017,
+    "ns": 0,
+    "title": "Zamor Armor"
+  },
+  {
+    "pageid": 8743,
+    "ns": 0,
+    "title": "Alberich's Pointed Hat (Altered)"
+  },
+  {
+    "pageid": 9174,
+    "ns": 0,
+    "title": "Albinauric Mask"
+  },
+  {
+    "pageid": 7878,
+    "ns": 0,
+    "title": "All-Knowing Helm"
+  },
+  {
+    "pageid": 4337,
+    "ns": 0,
+    "title": "Aristocrat Hat"
+  },
+  {
+    "pageid": 8479,
+    "ns": 0,
+    "title": "Aristocrat Headband"
+  },
+  {
+    "pageid": 8144,
+    "ns": 0,
+    "title": "Ash-of-War Scarab"
+  },
+  {
+    "pageid": 4336,
+    "ns": 0,
+    "title": "Astrologer Hood"
+  },
+  {
+    "pageid": 6194,
+    "ns": 0,
+    "title": "Azur's Glintstone Crown"
+  },
+  {
+    "pageid": 13042,
+    "ns": 0,
+    "title": "Bandit Mask"
+  },
+  {
+    "pageid": 11211,
+    "ns": 0,
+    "title": "Beast Champion Helm"
+  },
+  {
+    "pageid": 5356,
+    "ns": 0,
+    "title": "Black Dumpling"
+  },
+  {
+    "pageid": 8114,
+    "ns": 0,
+    "title": "Black Hood"
+  },
+  {
+    "pageid": 2700,
+    "ns": 0,
+    "title": "Black Knife Hood"
+  },
+  {
+    "pageid": 16207,
+    "ns": 0,
+    "title": "Black Knight Helm"
+  },
+  {
+    "pageid": 7390,
+    "ns": 0,
+    "title": "Black Wolf Mask"
+  },
+  {
+    "pageid": 13384,
+    "ns": 0,
+    "title": "Blackflame Monk Hood"
+  },
+  {
+    "pageid": 8547,
+    "ns": 0,
+    "title": "Blackguard's Iron Mask"
+  },
+  {
+    "pageid": 9906,
+    "ns": 0,
+    "title": "Bloodhound Knight Helm"
+  },
+  {
+    "pageid": 651,
+    "ns": 0,
+    "title": "Bloodsoaked Mask"
+  },
+  {
+    "pageid": 14732,
+    "ns": 0,
+    "title": "Blue Cloth Cowl"
+  },
+  {
+    "pageid": 13359,
+    "ns": 0,
+    "title": "Blue Festive Hood"
+  },
+  {
+    "pageid": 11576,
+    "ns": 0,
+    "title": "Blue Silver Mail Hood"
+  },
+  {
+    "pageid": 3095,
+    "ns": 0,
+    "title": "Brave's Cord Circlet"
+  },
+  {
+    "pageid": 7825,
+    "ns": 0,
+    "title": "Brave's Leather Helm"
+  },
+  {
+    "pageid": 6984,
+    "ns": 0,
+    "title": "Briar Helm"
+  },
+  {
+    "pageid": 11886,
+    "ns": 0,
+    "title": "Bull-Goat Helm"
+  },
+  {
+    "pageid": 12453,
+    "ns": 0,
+    "title": "Carian Knight Helm"
+  },
+  {
+    "pageid": 16188,
+    "ns": 0,
+    "title": "Caterpillar Mask"
+  },
+  {
+    "pageid": 7755,
+    "ns": 0,
+    "title": "Cerulean Tear Scarab"
+  },
+  {
+    "pageid": 161,
+    "ns": 0,
+    "title": "Chain Coif"
+  },
+  {
+    "pageid": 7207,
+    "ns": 0,
+    "title": "Champion Headband"
+  },
+  {
+    "pageid": 16191,
+    "ns": 0,
+    "title": "Circlet of Light"
+  },
+  {
+    "pageid": 16227,
+    "ns": 0,
+    "title": "Common Soldier Helm"
+  },
+  {
+    "pageid": 1419,
+    "ns": 0,
+    "title": "Consort's Mask"
+  },
+  {
+    "pageid": 7418,
+    "ns": 0,
+    "title": "Crimson Tear Scarab"
+  },
+  {
+    "pageid": 4455,
+    "ns": 0,
+    "title": "Crucible Axe Helm"
+  },
+  {
+    "pageid": 13180,
+    "ns": 0,
+    "title": "Crucible Hammer-Helm"
+  },
+  {
+    "pageid": 2882,
+    "ns": 0,
+    "title": "Crucible Tree Helm"
+  },
+  {
+    "pageid": 3546,
+    "ns": 0,
+    "title": "Cuckoo Knight Helm"
+  },
+  {
+    "pageid": 14474,
+    "ns": 0,
+    "title": "Curseblade Mask"
+  },
+  {
+    "pageid": 16341,
+    "ns": 0,
+    "title": "Dancer's Hood"
+  },
+  {
+    "pageid": 16236,
+    "ns": 0,
+    "title": "Dane's Hat"
+  },
+  {
+    "pageid": 16422,
+    "ns": 0,
+    "title": "Death Knight Helm"
+  },
+  {
+    "pageid": 16562,
+    "ns": 0,
+    "title": "Death Mask Helm"
+  },
+  {
+    "pageid": 467,
+    "ns": 0,
+    "title": "Depraved Perfumer Headscarf"
+  },
+  {
+    "pageid": 12830,
+    "ns": 0,
+    "title": "Diallos's Mask"
+  },
+  {
+    "pageid": 16211,
+    "ns": 0,
+    "title": "Divine Beast Helm"
+  },
+  {
+    "pageid": 16217,
+    "ns": 0,
+    "title": "Divine Bird Helm"
+  },
+  {
+    "pageid": 5141,
+    "ns": 0,
+    "title": "Duelist Helm"
+  },
+  {
+    "pageid": 1031,
+    "ns": 0,
+    "title": "Elden Lord Crown"
+  },
+  {
+    "pageid": 10115,
+    "ns": 0,
+    "title": "Envoy Crown"
+  },
+  {
+    "pageid": 13444,
+    "ns": 0,
+    "title": "Exile Hood"
+  },
+  {
+    "pageid": 16568,
+    "ns": 0,
+    "title": "Fang Helm"
+  },
+  {
+    "pageid": 14755,
+    "ns": 0,
+    "title": "Fia's Hood"
+  },
+  {
+    "pageid": 13084,
+    "ns": 0,
+    "title": "Finger Maiden Fillet"
+  },
+  {
+    "pageid": 14535,
+    "ns": 0,
+    "title": "Fingerprint Helm"
+  },
+  {
+    "pageid": 16560,
+    "ns": 0,
+    "title": "Fire Knight Helm"
+  },
+  {
+    "pageid": 10252,
+    "ns": 0,
+    "title": "Fire Monk Hood"
+  },
+  {
+    "pageid": 14263,
+    "ns": 0,
+    "title": "Fire Prelate Helm"
+  },
+  {
+    "pageid": 1727,
+    "ns": 0,
+    "title": "Foot Soldier Cap"
+  },
+  {
+    "pageid": 5796,
+    "ns": 0,
+    "title": "Foot Soldier Helm"
+  },
+  {
+    "pageid": 13000,
+    "ns": 0,
+    "title": "Foot Soldier Helmet"
+  },
+  {
+    "pageid": 16612,
+    "ns": 0,
+    "title": "Freyja's Helm"
+  },
+  {
+    "pageid": 16360,
+    "ns": 0,
+    "title": "Gaius's Helm"
+  },
+  {
+    "pageid": 2063,
+    "ns": 0,
+    "title": "Gelmir Knight Helm"
+  },
+  {
+    "pageid": 3183,
+    "ns": 0,
+    "title": "Gilded Foot Soldier Cap"
+  },
+  {
+    "pageid": 12959,
+    "ns": 0,
+    "title": "Glintstone Scarab"
+  },
+  {
+    "pageid": 11006,
+    "ns": 0,
+    "title": "Godrick Knight Helm"
+  },
+  {
+    "pageid": 8858,
+    "ns": 0,
+    "title": "Godrick Soldier Helm"
+  },
+  {
+    "pageid": 7939,
+    "ns": 0,
+    "title": "Godskin Apostle Hood"
+  },
+  {
+    "pageid": 2398,
+    "ns": 0,
+    "title": "Godskin Noble Hood"
+  },
+  {
+    "pageid": 16621,
+    "ns": 0,
+    "title": "Gravebird Helm"
+  },
+  {
+    "pageid": 969,
+    "ns": 0,
+    "title": "Great Horned Headband"
+  },
+  {
+    "pageid": 10139,
+    "ns": 0,
+    "title": "Greathelm"
+  },
+  {
+    "pageid": 265,
+    "ns": 0,
+    "title": "Greathood"
+  },
+  {
+    "pageid": 16666,
+    "ns": 0,
+    "title": "Greatjar"
+  },
+  {
+    "pageid": 10412,
+    "ns": 0,
+    "title": "Guardian Mask"
+  },
+  {
+    "pageid": 7080,
+    "ns": 0,
+    "title": "Guilty Hood"
+  },
+  {
+    "pageid": 3738,
+    "ns": 0,
+    "title": "Haima Glintstone Crown"
+  },
+  {
+    "pageid": 14557,
+    "ns": 0,
+    "title": "Haligtree Helm"
+  },
+  {
+    "pageid": 697,
+    "ns": 0,
+    "title": "Haligtree Knight Helm"
+  },
+  {
+    "pageid": 16555,
+    "ns": 0,
+    "title": "Helm of Night"
+  },
+  {
+    "pageid": 3406,
+    "ns": 0,
+    "title": "Helm of Solitude"
+  },
+  {
+    "pageid": 4246,
+    "ns": 0,
+    "title": "Hierodas Glintstone Crown"
+  },
+  {
+    "pageid": 6969,
+    "ns": 0,
+    "title": "High Page Hood"
+  },
+  {
+    "pageid": 16192,
+    "ns": 0,
+    "title": "High Priest Hat"
+  },
+  {
+    "pageid": 13071,
+    "ns": 0,
+    "title": "Highwayman Hood"
+  },
+  {
+    "pageid": 16213,
+    "ns": 0,
+    "title": "Horned Warrior Helm"
+  },
+  {
+    "pageid": 10993,
+    "ns": 0,
+    "title": "Hoslow's Helm"
+  },
+  {
+    "pageid": 5471,
+    "ns": 0,
+    "title": "Iji's Mirrorhelm"
+  },
+  {
+    "pageid": 5683,
+    "ns": 0,
+    "title": "Imp Head (Cat)"
+  },
+  {
+    "pageid": 6976,
+    "ns": 0,
+    "title": "Imp Head (Corpse)"
+  },
+  {
+    "pageid": 2430,
+    "ns": 0,
+    "title": "Imp Head (Elder)"
+  },
+  {
+    "pageid": 9767,
+    "ns": 0,
+    "title": "Imp Head (Fanged)"
+  },
+  {
+    "pageid": 16665,
+    "ns": 0,
+    "title": "Imp Head (Lion)"
+  },
+  {
+    "pageid": 1038,
+    "ns": 0,
+    "title": "Imp Head (Long-Tongued)"
+  },
+  {
+    "pageid": 1001,
+    "ns": 0,
+    "title": "Imp Head (Wolf)"
+  },
+  {
+    "pageid": 6535,
+    "ns": 0,
+    "title": "Incantation Scarab"
+  },
+  {
+    "pageid": 564,
+    "ns": 0,
+    "title": "Iron Helmet"
+  },
+  {
+    "pageid": 7310,
+    "ns": 0,
+    "title": "Iron Kasa"
+  },
+  {
+    "pageid": 2100,
+    "ns": 0,
+    "title": "Juvenile Scholar Cap"
+  },
+  {
+    "pageid": 7462,
+    "ns": 0,
+    "title": "Kaiden Helm"
+  },
+  {
+    "pageid": 674,
+    "ns": 0,
+    "title": "Karolos Glintstone Crown"
+  },
+  {
+    "pageid": 13125,
+    "ns": 0,
+    "title": "Knight Helm"
+  },
+  {
+    "pageid": 6963,
+    "ns": 0,
+    "title": "Land of Reeds Helm"
+  },
+  {
+    "pageid": 6400,
+    "ns": 0,
+    "title": "Lazuli Glintstone Crown"
+  },
+  {
+    "pageid": 16575,
+    "ns": 0,
+    "title": "Leather Crown"
+  },
+  {
+    "pageid": 16574,
+    "ns": 0,
+    "title": "Leather Headband"
+  },
+  {
+    "pageid": 3916,
+    "ns": 0,
+    "title": "Leyndell Knight Helm"
+  },
+  {
+    "pageid": 7320,
+    "ns": 0,
+    "title": "Leyndell Soldier Helm"
+  },
+  {
+    "pageid": 10047,
+    "ns": 0,
+    "title": "Lionel's Helm"
+  },
+  {
+    "pageid": 9483,
+    "ns": 0,
+    "title": "Lusat's Glintstone Crown"
+  },
+  {
+    "pageid": 2500,
+    "ns": 0,
+    "title": "Malenia's Winged Helm"
+  },
+  {
+    "pageid": 7148,
+    "ns": 0,
+    "title": "Malformed Dragon Helm"
+  },
+  {
+    "pageid": 5695,
+    "ns": 0,
+    "title": "Maliketh's Helm"
+  },
+  {
+    "pageid": 8916,
+    "ns": 0,
+    "title": "Marais Mask"
+  },
+  {
+    "pageid": 6975,
+    "ns": 0,
+    "title": "Marionette Soldier Birdhelm"
+  },
+  {
+    "pageid": 7586,
+    "ns": 0,
+    "title": "Marionette Soldier Helm"
+  },
+  {
+    "pageid": 11628,
+    "ns": 0,
+    "title": "Mask of Confidence"
+  },
+  {
+    "pageid": 16202,
+    "ns": 0,
+    "title": "Messmer Soldier Helm"
+  },
+  {
+    "pageid": 3126,
+    "ns": 0,
+    "title": "Mushroom Crown"
+  },
+  {
+    "pageid": 11700,
+    "ns": 0,
+    "title": "Mushroom Head"
+  },
+  {
+    "pageid": 5222,
+    "ns": 0,
+    "title": "Night Maiden Twin Crown"
+  },
+  {
+    "pageid": 6245,
+    "ns": 0,
+    "title": "Nomadic Merchant's Chapeau"
+  },
+  {
+    "pageid": 5168,
+    "ns": 0,
+    "title": "Nox Mirrorhelm"
+  },
+  {
+    "pageid": 7729,
+    "ns": 0,
+    "title": "Octopus Head"
+  },
+  {
+    "pageid": 5907,
+    "ns": 0,
+    "title": "Okina Mask"
+  },
+  {
+    "pageid": 5951,
+    "ns": 0,
+    "title": "Old Aristocrat Cowl"
+  },
+  {
+    "pageid": 1231,
+    "ns": 0,
+    "title": "Olivinus Glintstone Crown"
+  },
+  {
+    "pageid": 2418,
+    "ns": 0,
+    "title": "Omen Helm"
+  },
+  {
+    "pageid": 10759,
+    "ns": 0,
+    "title": "Omensmirk Mask"
+  },
+  {
+    "pageid": 5602,
+    "ns": 0,
+    "title": "Page Hood"
+  },
+  {
+    "pageid": 16569,
+    "ns": 0,
+    "title": "Pelt of Ralva"
+  },
+  {
+    "pageid": 3906,
+    "ns": 0,
+    "title": "Perfumer Hood"
+  },
+  {
+    "pageid": 9754,
+    "ns": 0,
+    "title": "Preceptor's Big Hat"
+  },
+  {
+    "pageid": 11954,
+    "ns": 0,
+    "title": "Prisoner Iron Mask"
+  },
+  {
+    "pageid": 13669,
+    "ns": 0,
+    "title": "Prophet Blindfold"
+  },
+  {
+    "pageid": 14657,
+    "ns": 0,
+    "title": "Pumpkin Helm"
+  },
+  {
+    "pageid": 5063,
+    "ns": 0,
+    "title": "Queen's Crescent Crown"
+  },
+  {
+    "pageid": 3651,
+    "ns": 0,
+    "title": "Radahn Soldier Helm"
+  },
+  {
+    "pageid": 6842,
+    "ns": 0,
+    "title": "Radahn's Redmane Helm"
+  },
+  {
+    "pageid": 3163,
+    "ns": 0,
+    "title": "Radiant Gold Mask"
+  },
+  {
+    "pageid": 2783,
+    "ns": 0,
+    "title": "Raging Wolf Helm"
+  },
+  {
+    "pageid": 16421,
+    "ns": 0,
+    "title": "Rakshasa Helm"
+  },
+  {
+    "pageid": 10761,
+    "ns": 0,
+    "title": "Raya Lucarian Helm"
+  },
+  {
+    "pageid": 9033,
+    "ns": 0,
+    "title": "Redmane Knight Helm"
+  },
+  {
+    "pageid": 16355,
+    "ns": 0,
+    "title": "Rellana's Helm"
+  },
+  {
+    "pageid": 10855,
+    "ns": 0,
+    "title": "Rotten Duelist Helm"
+  },
+  {
+    "pageid": 8488,
+    "ns": 0,
+    "title": "Royal Knight Helm"
+  },
+  {
+    "pageid": 8427,
+    "ns": 0,
+    "title": "Royal Remains Helm"
+  },
+  {
+    "pageid": 2964,
+    "ns": 0,
+    "title": "Ruler's Mask"
+  },
+  {
+    "pageid": 9194,
+    "ns": 0,
+    "title": "Sacred Crown Helm"
+  },
+  {
+    "pageid": 10325,
+    "ns": 0,
+    "title": "Sage Hood"
+  },
+  {
+    "pageid": 16563,
+    "ns": 0,
+    "title": "Salza's Hood"
+  },
+  {
+    "pageid": 3337,
+    "ns": 0,
+    "title": "Sanguine Noble Hood"
+  },
+  {
+    "pageid": 13131,
+    "ns": 0,
+    "title": "Scaled Helm"
+  },
+  {
+    "pageid": 16231,
+    "ns": 0,
+    "title": "Shadow Militiaman Helm"
+  },
+  {
+    "pageid": 3955,
+    "ns": 0,
+    "title": "Shining Horned Headband"
+  },
+  {
+    "pageid": 3052,
+    "ns": 0,
+    "title": "Silver Tear Mask"
+  },
+  {
+    "pageid": 11746,
+    "ns": 0,
+    "title": "Skeletal Mask"
+  },
+  {
+    "pageid": 13863,
+    "ns": 0,
+    "title": "Snow Witch Hat"
+  },
+  {
+    "pageid": 1730,
+    "ns": 0,
+    "title": "Spellblade's Pointed Hat"
+  },
+  {
+    "pageid": 16189,
+    "ns": 0,
+    "title": "St. Trina's Blossom"
+  },
+  {
+    "pageid": 16660,
+    "ns": 0,
+    "title": "Thiollier's Mask"
+  },
+  {
+    "pageid": 7129,
+    "ns": 0,
+    "title": "Traveler's Hat"
+  },
+  {
+    "pageid": 4095,
+    "ns": 0,
+    "title": "Traveling Maiden Hood"
+  },
+  {
+    "pageid": 2382,
+    "ns": 0,
+    "title": "Tree Sentinel Helm"
+  },
+  {
+    "pageid": 11713,
+    "ns": 0,
+    "title": "Twinned Helm"
+  },
+  {
+    "pageid": 4273,
+    "ns": 0,
+    "title": "Twinsage Glintstone Crown"
+  },
+  {
+    "pageid": 13703,
+    "ns": 0,
+    "title": "Vagabond Knight Helm"
+  },
+  {
+    "pageid": 16650,
+    "ns": 0,
+    "title": "Verdigris Helm"
+  },
+  {
+    "pageid": 12038,
+    "ns": 0,
+    "title": "Veteran's Helm"
+  },
+  {
+    "pageid": 14201,
+    "ns": 0,
+    "title": "Vulgar Militia Helm"
+  },
+  {
+    "pageid": 11619,
+    "ns": 0,
+    "title": "White Mask"
+  },
+  {
+    "pageid": 16561,
+    "ns": 0,
+    "title": "Winged Serpent Helm"
+  },
+  {
+    "pageid": 16334,
+    "ns": 0,
+    "title": "Wise Man's Mask"
+  },
+  {
+    "pageid": 6162,
+    "ns": 0,
+    "title": "Witch's Glintstone Crown"
+  },
+  {
+    "pageid": 16350,
+    "ns": 0,
+    "title": "Young Lion's Helm"
+  },
+  {
+    "pageid": 13965,
+    "ns": 0,
+    "title": "Zamor Mask"
+  },
+  {
+    "pageid": 11508,
+    "ns": 0,
+    "title": "Alberich's Trousers"
+  },
+  {
+    "pageid": 13028,
+    "ns": 0,
+    "title": "All-Knowing Greaves"
+  },
+  {
+    "pageid": 16338,
+    "ns": 0,
+    "title": "Ansbach's Boots"
+  },
+  {
+    "pageid": 2386,
+    "ns": 0,
+    "title": "Aristocrat Boots"
+  },
+  {
+    "pageid": 16607,
+    "ns": 0,
+    "title": "Ascetic's Ankle Guards"
+  },
+  {
+    "pageid": 10642,
+    "ns": 0,
+    "title": "Astrologer Trousers"
+  },
+  {
+    "pageid": 490,
+    "ns": 0,
+    "title": "Bandit Boots"
+  },
+  {
+    "pageid": 10640,
+    "ns": 0,
+    "title": "Banished Knight Greaves"
+  },
+  {
+    "pageid": 14468,
+    "ns": 0,
+    "title": "Battlemage Legwraps"
+  },
+  {
+    "pageid": 4103,
+    "ns": 0,
+    "title": "Beast Champion Greaves"
+  },
+  {
+    "pageid": 7429,
+    "ns": 0,
+    "title": "Black Knife Greaves"
+  },
+  {
+    "pageid": 16210,
+    "ns": 0,
+    "title": "Black Knight Greaves"
+  },
+  {
+    "pageid": 3759,
+    "ns": 0,
+    "title": "Blackflame Monk Greaves"
+  },
+  {
+    "pageid": 8391,
+    "ns": 0,
+    "title": "Blaidd's Greaves"
+  },
+  {
+    "pageid": 9892,
+    "ns": 0,
+    "title": "Bloodhound Knight Greaves"
+  },
+  {
+    "pageid": 4152,
+    "ns": 0,
+    "title": "Blue Silver Mail Skirt"
+  },
+  {
+    "pageid": 6483,
+    "ns": 0,
+    "title": "Brave's Legwraps"
+  },
+  {
+    "pageid": 8726,
+    "ns": 0,
+    "title": "Briar Greaves"
+  },
+  {
+    "pageid": 12926,
+    "ns": 0,
+    "title": "Bull-Goat Greaves"
+  },
+  {
+    "pageid": 1429,
+    "ns": 0,
+    "title": "Carian Knight Greaves"
+  },
+  {
+    "pageid": 6319,
+    "ns": 0,
+    "title": "Chain Leggings"
+  },
+  {
+    "pageid": 9698,
+    "ns": 0,
+    "title": "Champion Gaiters"
+  },
+  {
+    "pageid": 3525,
+    "ns": 0,
+    "title": "Cleanrot Greaves"
+  },
+  {
+    "pageid": 9440,
+    "ns": 0,
+    "title": "Cloth Trousers"
+  },
+  {
+    "pageid": 16230,
+    "ns": 0,
+    "title": "Common Soldier Greaves"
+  },
+  {
+    "pageid": 14627,
+    "ns": 0,
+    "title": "Commoner's Shoes"
+  },
+  {
+    "pageid": 3428,
+    "ns": 0,
+    "title": "Confessor Boots"
+  },
+  {
+    "pageid": 13278,
+    "ns": 0,
+    "title": "Consort's Trousers"
+  },
+  {
+    "pageid": 3379,
+    "ns": 0,
+    "title": "Crucible Greaves"
+  },
+  {
+    "pageid": 6499,
+    "ns": 0,
+    "title": "Cuckoo Knight Greaves"
+  },
+  {
+    "pageid": 16345,
+    "ns": 0,
+    "title": "Dancer's Trousers"
+  },
+  {
+    "pageid": 16425,
+    "ns": 0,
+    "title": "Death Knight Greaves"
+  },
+  {
+    "pageid": 13067,
+    "ns": 0,
+    "title": "Deathbed Smalls"
+  },
+  {
+    "pageid": 13701,
+    "ns": 0,
+    "title": "Depraved Perfumer Trousers"
+  },
+  {
+    "pageid": 16220,
+    "ns": 0,
+    "title": "Divine Bird Warrior Greaves"
+  },
+  {
+    "pageid": 1510,
+    "ns": 0,
+    "title": "Drake Knight Greaves"
+  },
+  {
+    "pageid": 16240,
+    "ns": 0,
+    "title": "Dryleaf Cuissardes"
+  },
+  {
+    "pageid": 4902,
+    "ns": 0,
+    "title": "Duelist Greaves"
+  },
+  {
+    "pageid": 2453,
+    "ns": 0,
+    "title": "Eccentric's Breeches"
+  },
+  {
+    "pageid": 1635,
+    "ns": 0,
+    "title": "Elden Lord Greaves"
+  },
+  {
+    "pageid": 11766,
+    "ns": 0,
+    "title": "Errant Sorcerer Boots"
+  },
+  {
+    "pageid": 5534,
+    "ns": 0,
+    "title": "Exile Greaves"
+  },
+  {
+    "pageid": 1207,
+    "ns": 0,
+    "title": "Finger Maiden Shoes"
+  },
+  {
+    "pageid": 8285,
+    "ns": 0,
+    "title": "Fingerprint Greaves"
+  },
+  {
+    "pageid": 16567,
+    "ns": 0,
+    "title": "Fire Knight Greaves"
+  },
+  {
+    "pageid": 12433,
+    "ns": 0,
+    "title": "Fire Monk Greaves"
+  },
+  {
+    "pageid": 5350,
+    "ns": 0,
+    "title": "Fire Prelate Greaves"
+  },
+  {
+    "pageid": 7303,
+    "ns": 0,
+    "title": "Foot Soldier Greaves"
+  },
+  {
+    "pageid": 16616,
+    "ns": 0,
+    "title": "Freyja's Greaves"
+  },
+  {
+    "pageid": 4239,
+    "ns": 0,
+    "title": "Fur Leggings"
+  },
+  {
+    "pageid": 16362,
+    "ns": 0,
+    "title": "Gaius's Greaves"
+  },
+  {
+    "pageid": 2235,
+    "ns": 0,
+    "title": "Gelmir Knight Greaves"
+  },
+  {
+    "pageid": 9118,
+    "ns": 0,
+    "title": "Godrick Knight Greaves"
+  },
+  {
+    "pageid": 1537,
+    "ns": 0,
+    "title": "Godrick Soldier Greaves"
+  },
+  {
+    "pageid": 3385,
+    "ns": 0,
+    "title": "Godskin Apostle Trousers"
+  },
+  {
+    "pageid": 2024,
+    "ns": 0,
+    "title": "Godskin Noble Trousers"
+  },
+  {
+    "pageid": 10984,
+    "ns": 0,
+    "title": "Gold Waistwrap"
+  },
+  {
+    "pageid": 16625,
+    "ns": 0,
+    "title": "Gravebird Anklets"
+  },
+  {
+    "pageid": 16558,
+    "ns": 0,
+    "title": "Greaves of Night"
+  },
+  {
+    "pageid": 16549,
+    "ns": 0,
+    "title": "Greaves of Solitude"
+  },
+  {
+    "pageid": 1486,
+    "ns": 0,
+    "title": "Guardian Greaves"
+  },
+  {
+    "pageid": 5800,
+    "ns": 0,
+    "title": "Haligtree Greaves"
+  },
+  {
+    "pageid": 10553,
+    "ns": 0,
+    "title": "Haligtree Knight Greaves"
+  },
+  {
+    "pageid": 16198,
+    "ns": 0,
+    "title": "High Priest Undergarments"
+  },
+  {
+    "pageid": 16216,
+    "ns": 0,
+    "title": "Horned Warrior Greaves"
+  },
+  {
+    "pageid": 874,
+    "ns": 0,
+    "title": "Hoslow's Greaves"
+  },
+  {
+    "pageid": 16659,
+    "ns": 0,
+    "title": "Igon's Loincloth"
+  },
+  {
+    "pageid": 16572,
+    "ns": 0,
+    "title": "Iron Rivet Greaves"
+  },
+  {
+    "pageid": 733,
+    "ns": 0,
+    "title": "Kaiden Trousers"
+  },
+  {
+    "pageid": 1655,
+    "ns": 0,
+    "title": "Knight Greaves"
+  },
+  {
+    "pageid": 12804,
+    "ns": 0,
+    "title": "Land of Reeds Greaves"
+  },
+  {
+    "pageid": 11183,
+    "ns": 0,
+    "title": "Leather Boots"
+  },
+  {
+    "pageid": 16579,
+    "ns": 0,
+    "title": "Leather Leg Wraps"
+  },
+  {
+    "pageid": 10245,
+    "ns": 0,
+    "title": "Leather Trousers"
+  },
+  {
+    "pageid": 3801,
+    "ns": 0,
+    "title": "Leyndell Knight Greaves"
+  },
+  {
+    "pageid": 11114,
+    "ns": 0,
+    "title": "Leyndell Soldier Greaves"
+  },
+  {
+    "pageid": 23,
+    "ns": 0,
+    "title": "Lionel's Greaves"
+  },
+  {
+    "pageid": 1923,
+    "ns": 0,
+    "title": "Malenia's Greaves"
+  },
+  {
+    "pageid": 8444,
+    "ns": 0,
+    "title": "Malformed Dragon Greaves"
+  },
+  {
+    "pageid": 5187,
+    "ns": 0,
+    "title": "Maliketh's Greaves"
+  },
+  {
+    "pageid": 8050,
+    "ns": 0,
+    "title": "Mausoleum Greaves"
+  },
+  {
+    "pageid": 6711,
+    "ns": 0,
+    "title": "Mausoleum Knight Greaves"
+  },
+  {
+    "pageid": 16206,
+    "ns": 0,
+    "title": "Messmer Soldier Greaves"
+  },
+  {
+    "pageid": 16349,
+    "ns": 0,
+    "title": "Messmer's Greaves"
+  },
+  {
+    "pageid": 13842,
+    "ns": 0,
+    "title": "Millicent's Boots"
+  },
+  {
+    "pageid": 8907,
+    "ns": 0,
+    "title": "Mushroom Legs"
+  },
+  {
+    "pageid": 8584,
+    "ns": 0,
+    "title": "Night's Cavalry Greaves"
+  },
+  {
+    "pageid": 12764,
+    "ns": 0,
+    "title": "Noble's Trousers"
+  },
+  {
+    "pageid": 9699,
+    "ns": 0,
+    "title": "Nomadic Merchant's Trousers"
+  },
+  {
+    "pageid": 2566,
+    "ns": 0,
+    "title": "Nox Greaves"
+  },
+  {
+    "pageid": 16554,
+    "ns": 0,
+    "title": "Oathseeker Knight Greaves"
+  },
+  {
+    "pageid": 5269,
+    "ns": 0,
+    "title": "Old Aristocrat Shoes"
+  },
+  {
+    "pageid": 6856,
+    "ns": 0,
+    "title": "Old Sorcerer's Legwraps"
+  },
+  {
+    "pageid": 8043,
+    "ns": 0,
+    "title": "Omen Greaves"
+  },
+  {
+    "pageid": 10931,
+    "ns": 0,
+    "title": "Omenkiller Boots"
+  },
+  {
+    "pageid": 7824,
+    "ns": 0,
+    "title": "Page Trousers"
+  },
+  {
+    "pageid": 3725,
+    "ns": 0,
+    "title": "Perfumer Sarong"
+  },
+  {
+    "pageid": 4028,
+    "ns": 0,
+    "title": "Preceptor's Trousers"
+  },
+  {
+    "pageid": 1964,
+    "ns": 0,
+    "title": "Prisoner Trousers"
+  },
+  {
+    "pageid": 12581,
+    "ns": 0,
+    "title": "Prophet Trousers"
+  },
+  {
+    "pageid": 10529,
+    "ns": 0,
+    "title": "Queen's Leggings"
+  },
+  {
+    "pageid": 1342,
+    "ns": 0,
+    "title": "Radahn Soldier Greaves"
+  },
+  {
+    "pageid": 3382,
+    "ns": 0,
+    "title": "Radahn's Greaves"
+  },
+  {
+    "pageid": 5609,
+    "ns": 0,
+    "title": "Ragged Loincloth"
+  },
+  {
+    "pageid": 3668,
+    "ns": 0,
+    "title": "Raging Wolf Greaves"
+  },
+  {
+    "pageid": 16418,
+    "ns": 0,
+    "title": "Rakshasa Greaves"
+  },
+  {
+    "pageid": 13929,
+    "ns": 0,
+    "title": "Raya Lucarian Greaves"
+  },
+  {
+    "pageid": 13936,
+    "ns": 0,
+    "title": "Redmane Knight Greaves"
+  },
+  {
+    "pageid": 16358,
+    "ns": 0,
+    "title": "Rellana's Greaves"
+  },
+  {
+    "pageid": 6070,
+    "ns": 0,
+    "title": "Ronin's Greaves"
+  },
+  {
+    "pageid": 3218,
+    "ns": 0,
+    "title": "Rotten Duelist Greaves"
+  },
+  {
+    "pageid": 7015,
+    "ns": 0,
+    "title": "Royal Knight Greaves"
+  },
+  {
+    "pageid": 10766,
+    "ns": 0,
+    "title": "Royal Remains Greaves"
+  },
+  {
+    "pageid": 3201,
+    "ns": 0,
+    "title": "Sage Trousers"
+  },
+  {
+    "pageid": 12294,
+    "ns": 0,
+    "title": "Sanguine Noble Waistcloth"
+  },
+  {
+    "pageid": 3094,
+    "ns": 0,
+    "title": "Scaled Greaves"
+  },
+  {
+    "pageid": 16234,
+    "ns": 0,
+    "title": "Shadow Militiaman Greaves"
+  },
+  {
+    "pageid": 11503,
+    "ns": 0,
+    "title": "Shaman Leggings"
+  },
+  {
+    "pageid": 4285,
+    "ns": 0,
+    "title": "Snow Witch Skirt"
+  },
+  {
+    "pageid": 16201,
+    "ns": 0,
+    "title": "Soiled Loincloth"
+  },
+  {
+    "pageid": 10403,
+    "ns": 0,
+    "title": "Sorcerer Leggings"
+  },
+  {
+    "pageid": 841,
+    "ns": 0,
+    "title": "Spellblade's Trousers"
+  },
+  {
+    "pageid": 16664,
+    "ns": 0,
+    "title": "Thiollier's Trousers"
+  },
+  {
+    "pageid": 12435,
+    "ns": 0,
+    "title": "Traveler's Boots"
+  },
+  {
+    "pageid": 12653,
+    "ns": 0,
+    "title": "Traveler's Slops"
+  },
+  {
+    "pageid": 2614,
+    "ns": 0,
+    "title": "Traveling Maiden Boots"
+  },
+  {
+    "pageid": 3788,
+    "ns": 0,
+    "title": "Tree Sentinel Greaves"
+  },
+  {
+    "pageid": 6584,
+    "ns": 0,
+    "title": "Twinned Greaves"
+  },
+  {
+    "pageid": 14260,
+    "ns": 0,
+    "title": "Vagabond Knight Greaves"
+  },
+  {
+    "pageid": 16653,
+    "ns": 0,
+    "title": "Verdigris Greaves"
+  },
+  {
+    "pageid": 13496,
+    "ns": 0,
+    "title": "Veteran's Greaves"
+  },
+  {
+    "pageid": 8687,
+    "ns": 0,
+    "title": "Vulgar Militia Greaves"
+  },
+  {
+    "pageid": 13400,
+    "ns": 0,
+    "title": "War Surgeon Trousers"
+  },
+  {
+    "pageid": 7385,
+    "ns": 0,
+    "title": "Warrior Greaves"
+  },
+  {
+    "pageid": 3520,
+    "ns": 0,
+    "title": "White Reed Greaves"
+  },
+  {
+    "pageid": 16354,
+    "ns": 0,
+    "title": "Young Lion's Greaves"
+  },
+  {
+    "pageid": 2273,
+    "ns": 0,
+    "title": "Zamor Legwraps"
+  }
+]

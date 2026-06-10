@@ -1,0 +1,422 @@
+[
+  {
+    "pageid": 9636,
+    "ns": 0,
+    "title": "Greatshields"
+  },
+  {
+    "pageid": 14717,
+    "ns": 0,
+    "title": "Medium Shields"
+  },
+  {
+    "pageid": 12909,
+    "ns": 0,
+    "title": "Shields (Shadow of the Erdtree)"
+  },
+  {
+    "pageid": 8183,
+    "ns": 0,
+    "title": "Small Shields"
+  },
+  {
+    "pageid": 197,
+    "ns": 0,
+    "title": "Ant's Skull Plate"
+  },
+  {
+    "pageid": 16817,
+    "ns": 0,
+    "title": "Black Steel Greatshield"
+  },
+  {
+    "pageid": 5858,
+    "ns": 0,
+    "title": "Briar Greatshield"
+  },
+  {
+    "pageid": 12553,
+    "ns": 0,
+    "title": "Crossed-Tree Towershield"
+  },
+  {
+    "pageid": 10462,
+    "ns": 0,
+    "title": "Crucible Hornshield"
+  },
+  {
+    "pageid": 1766,
+    "ns": 0,
+    "title": "Cuckoo Greatshield"
+  },
+  {
+    "pageid": 11446,
+    "ns": 0,
+    "title": "Distinguished Greatshield"
+  },
+  {
+    "pageid": 1291,
+    "ns": 0,
+    "title": "Dragon Towershield"
+  },
+  {
+    "pageid": 14108,
+    "ns": 0,
+    "title": "Dragonclaw Shield"
+  },
+  {
+    "pageid": 4838,
+    "ns": 0,
+    "title": "Eclipse Crest Greatshield"
+  },
+  {
+    "pageid": 1863,
+    "ns": 0,
+    "title": "Erdtree Greatshield"
+  },
+  {
+    "pageid": 13557,
+    "ns": 0,
+    "title": "Fingerprint Stone Shield"
+  },
+  {
+    "pageid": 7012,
+    "ns": 0,
+    "title": "Gilded Greatshield"
+  },
+  {
+    "pageid": 559,
+    "ns": 0,
+    "title": "Golden Beast Crest Shield"
+  },
+  {
+    "pageid": 13730,
+    "ns": 0,
+    "title": "Golden Greatshield"
+  },
+  {
+    "pageid": 10861,
+    "ns": 0,
+    "title": "Haligtree Crest Greatshield"
+  },
+  {
+    "pageid": 11923,
+    "ns": 0,
+    "title": "Icon Shield"
+  },
+  {
+    "pageid": 11914,
+    "ns": 0,
+    "title": "Inverted Hawk Towershield"
+  },
+  {
+    "pageid": 8637,
+    "ns": 0,
+    "title": "Jellyfish Shield"
+  },
+  {
+    "pageid": 7548,
+    "ns": 0,
+    "title": "Lordsworn's Shield"
+  },
+  {
+    "pageid": 6056,
+    "ns": 0,
+    "title": "Manor Towershield"
+  },
+  {
+    "pageid": 9113,
+    "ns": 0,
+    "title": "One-Eyed Shield"
+  },
+  {
+    "pageid": 1811,
+    "ns": 0,
+    "title": "Redmane Greatshield"
+  },
+  {
+    "pageid": 12156,
+    "ns": 0,
+    "title": "Spiked Palisade Shield"
+  },
+  {
+    "pageid": 16818,
+    "ns": 0,
+    "title": "Verdigris Greatshield"
+  },
+  {
+    "pageid": 3115,
+    "ns": 0,
+    "title": "Visage Shield"
+  },
+  {
+    "pageid": 12286,
+    "ns": 0,
+    "title": "Wooden Greatshield"
+  },
+  {
+    "pageid": 195,
+    "ns": 0,
+    "title": "Albinauric Shield"
+  },
+  {
+    "pageid": 321,
+    "ns": 0,
+    "title": "Banished Knight's Shield"
+  },
+  {
+    "pageid": 12057,
+    "ns": 0,
+    "title": "Beast Crest Heater Shield"
+  },
+  {
+    "pageid": 13913,
+    "ns": 0,
+    "title": "Beastman's Jar-Shield"
+  },
+  {
+    "pageid": 10568,
+    "ns": 0,
+    "title": "Black Leather Shield"
+  },
+  {
+    "pageid": 6980,
+    "ns": 0,
+    "title": "Blue Crest Heater Shield"
+  },
+  {
+    "pageid": 14389,
+    "ns": 0,
+    "title": "Blue-Gold Kite Shield"
+  },
+  {
+    "pageid": 9527,
+    "ns": 0,
+    "title": "Brass Shield"
+  },
+  {
+    "pageid": 3733,
+    "ns": 0,
+    "title": "Candletree Wooden Shield"
+  },
+  {
+    "pageid": 65,
+    "ns": 0,
+    "title": "Carian Knight's Shield"
+  },
+  {
+    "pageid": 14410,
+    "ns": 0,
+    "title": "Eclipse Crest Heater Shield"
+  },
+  {
+    "pageid": 7873,
+    "ns": 0,
+    "title": "Flame Crest Wooden Shield"
+  },
+  {
+    "pageid": 16816,
+    "ns": 0,
+    "title": "Golden Lion Shield"
+  },
+  {
+    "pageid": 2102,
+    "ns": 0,
+    "title": "Great Turtle Shell"
+  },
+  {
+    "pageid": 12264,
+    "ns": 0,
+    "title": "Hawk Crest Wooden Shield"
+  },
+  {
+    "pageid": 1369,
+    "ns": 0,
+    "title": "Heater Shield"
+  },
+  {
+    "pageid": 8153,
+    "ns": 0,
+    "title": "Horse Crest Wooden Shield"
+  },
+  {
+    "pageid": 13247,
+    "ns": 0,
+    "title": "Inverted Hawk Heater Shield"
+  },
+  {
+    "pageid": 10184,
+    "ns": 0,
+    "title": "Kite Shield"
+  },
+  {
+    "pageid": 4555,
+    "ns": 0,
+    "title": "Large Leather Shield"
+  },
+  {
+    "pageid": 2771,
+    "ns": 0,
+    "title": "Marred Leather Shield"
+  },
+  {
+    "pageid": 1922,
+    "ns": 0,
+    "title": "Marred Wooden Shield"
+  },
+  {
+    "pageid": 16813,
+    "ns": 0,
+    "title": "Messmer Soldier Shield"
+  },
+  {
+    "pageid": 8558,
+    "ns": 0,
+    "title": "Red Crest Heater Shield"
+  },
+  {
+    "pageid": 7064,
+    "ns": 0,
+    "title": "Round Shield"
+  },
+  {
+    "pageid": 1538,
+    "ns": 0,
+    "title": "Scorpion Kite Shield"
+  },
+  {
+    "pageid": 16815,
+    "ns": 0,
+    "title": "Serpent Crest Shield"
+  },
+  {
+    "pageid": 317,
+    "ns": 0,
+    "title": "Silver Mirrorshield"
+  },
+  {
+    "pageid": 14635,
+    "ns": 0,
+    "title": "Sun Realm Shield"
+  },
+  {
+    "pageid": 4650,
+    "ns": 0,
+    "title": "Twinbird Kite Shield"
+  },
+  {
+    "pageid": 16814,
+    "ns": 0,
+    "title": "Wolf Crest Shield"
+  },
+  {
+    "pageid": 7822,
+    "ns": 0,
+    "title": "Blue-White Wooden Shield"
+  },
+  {
+    "pageid": 9256,
+    "ns": 0,
+    "title": "Buckler"
+  },
+  {
+    "pageid": 10743,
+    "ns": 0,
+    "title": "Coil Shield"
+  },
+  {
+    "pageid": 10301,
+    "ns": 0,
+    "title": "Gilded Iron Shield"
+  },
+  {
+    "pageid": 3652,
+    "ns": 0,
+    "title": "Ice Crest Shield"
+  },
+  {
+    "pageid": 8770,
+    "ns": 0,
+    "title": "Iron Roundshield"
+  },
+  {
+    "pageid": 10105,
+    "ns": 0,
+    "title": "Man-Serpent's Shield"
+  },
+  {
+    "pageid": 2417,
+    "ns": 0,
+    "title": "Perfumer's Shield"
+  },
+  {
+    "pageid": 10883,
+    "ns": 0,
+    "title": "Pillory Shield"
+  },
+  {
+    "pageid": 4580,
+    "ns": 0,
+    "title": "Red Thorn Roundshield"
+  },
+  {
+    "pageid": 4220,
+    "ns": 0,
+    "title": "Rickety Shield"
+  },
+  {
+    "pageid": 13418,
+    "ns": 0,
+    "title": "Rift Shield"
+  },
+  {
+    "pageid": 7609,
+    "ns": 0,
+    "title": "Riveted Wooden Shield"
+  },
+  {
+    "pageid": 6610,
+    "ns": 0,
+    "title": "Scripture Wooden Shield"
+  },
+  {
+    "pageid": 16812,
+    "ns": 0,
+    "title": "Shield of Night"
+  },
+  {
+    "pageid": 13354,
+    "ns": 0,
+    "title": "Shield of the Guilty"
+  },
+  {
+    "pageid": 3772,
+    "ns": 0,
+    "title": "Smithscript Shield"
+  },
+  {
+    "pageid": 9762,
+    "ns": 0,
+    "title": "Smoldering Shield"
+  },
+  {
+    "pageid": 4962,
+    "ns": 0,
+    "title": "Spiralhorn Shield"
+  },
+  {
+    "pageid": 16819,
+    "ns": 0,
+    "title": "Carian Thrusting Shield"
+  },
+  {
+    "pageid": 15598,
+    "ns": 0,
+    "title": "Dueling Shield"
+  },
+  {
+    "pageid": 6142,
+    "ns": 0,
+    "title": "Thrusting Shields"
+  }
+]

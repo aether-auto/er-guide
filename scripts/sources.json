@@ -1,0 +1,80 @@
+{
+  "_doc": "Endpoint config for scripts/fetch.mjs. Category names verified against the live wiki.gg category list (action=query&list=allcategories) on 2026-06-09 — see scripts/cache/map/README.md and the notes below.",
+  "_notes": {
+    "categories": "wiki.gg has NO flat 'Weapons'/'Shields'/'Armor' item lists — items live in leaf subcategories (e.g. Category:Daggers under Category:Melee Armaments under Category:Weapons), so those three are fetched recursively. Spirit ashes are Category:Ashes. Great runes are Category:Great Rune (singular). Multiplayer items are Category:Multiplayer items (lowercase i). Map fragments have no category — the 'Map <Region>' pages live inside Category:Key Items. Staffs/seals are Category:Glintstone Staves / Category:Sacred Seals (excluded from the Weapons recursion to keep them as their own files).",
+    "dlc": "Most Shadow of the Erdtree items live in the SAME shared categories as base-game items (DLC weapon classes like Backhand Blades / Perfume Bottles are ordinary subcats of Melee Armaments). The only real DLC-specific categories found are listed at the end: 'Shadow of the Erdtree Talismans' (18), 'Ashes-Shadow of the Erdtree' (9, spirit ashes), 'Cookbooks: Shadow of the Erdtree' (55), 'Sorceries-Shadow of the Erdtree' (13), 'Key Items-Shadow of the Erdtree' (1). There are no DLC-specific categories for weapons/armor/incantations/ashes-of-war.",
+    "excludeSubcats": "Recursion skips: Category:Ammunition + Category:Catalysts under Weapons (fetched separately as Arrows/Bolts/Glintstone Staves/Sacred Seals), Category:Armor Set under Armor (sets are index pages; the pieces are in Head/Chest/Arms/Legs), and anything matching /nightreign|^Images/i (different game / file categories)."
+  },
+  "wikigg": {
+    "api": "https://eldenring.wiki.gg/api.php",
+    "categories": [
+      { "name": "Weapons", "recursive": true, "excludeSubcats": ["Category:Ammunition", "Category:Catalysts"] },
+      { "name": "Shields", "recursive": true },
+      { "name": "Armor", "recursive": true, "excludeSubcats": ["Category:Armor Set"] },
+      "Glintstone Staves",
+      "Sacred Seals",
+      "Arrows",
+      "Bolts",
+      "Talismans",
+      "Sorceries",
+      "Incantations",
+      "Ashes of War",
+      "Ashes",
+      "Key Items",
+      "Cookbooks",
+      "Bell Bearings",
+      "Crystal Tears",
+      "Whetblades",
+      "Great Rune",
+      "Remembrances",
+      "Tools",
+      "Multiplayer items",
+      "Flasks",
+      "Shadow of the Erdtree Talismans",
+      "Ashes-Shadow of the Erdtree",
+      "Cookbooks: Shadow of the Erdtree",
+      "Sorceries-Shadow of the Erdtree",
+      "Key Items-Shadow of the Erdtree"
+    ]
+  },
+  "fanapi": {
+    "base": "https://eldenring.fanapis.com/api",
+    "resources": ["items", "weapons", "shields", "armors", "talismans", "sorceries", "incantations", "spirits", "ashes"]
+  },
+  "map": {
+    "_doc": "Fextralife interactive map. The map pages embed per-map iframes whose HTML contains the full marker dataset inline as `var items = [...]` (plus `var categories = [...]`). fetch.mjs downloads each iframe and extracts that JSON. Marker `id` IS the Fextralife `?id=` deep-link param (links like /Interactive+Map?id=4810&code=mapB appear on the page itself).",
+    "fextralife": {
+      "pages": {
+        "base": "https://eldenring.wiki.fextralife.com/Interactive+Map",
+        "dlc": "https://eldenring.wiki.fextralife.com/Shadow+of+the+Erdtree+Map"
+      },
+      "iframes": [
+        {
+          "code": "mapA",
+          "slug": "overworld-mapA",
+          "label": "The Lands Between (overworld)",
+          "url": "https://eldenring.wiki.fextralife.com/file/Elden-Ring/map-50be4728-3907-4f33-8857-7f063e0d24eb.html"
+        },
+        {
+          "code": "mapB",
+          "slug": "underground-mapB",
+          "label": "Underground (Siofra / Ainsel / Deeproot / Mohgwyn)",
+          "url": "https://eldenring.wiki.fextralife.com/file/Elden-Ring/map-c5431314-6159-4599-9668-0ccf4e1f8e9a.html"
+        },
+        {
+          "code": "mapC",
+          "slug": "ashen-capital-mapC",
+          "label": "Leyndell, Ashen Capital (post-burn overlay)",
+          "url": "https://eldenring.wiki.fextralife.com/file/Elden-Ring/map-96747699-d8a3-44b4-b2d6-cf6b45c579c6.html"
+        },
+        {
+          "code": "mapD",
+          "slug": "dlc-mapD",
+          "label": "Realm of Shadow (Shadow of the Erdtree DLC)",
+          "url": "https://eldenring.wiki.fextralife.com/file/Elden-Ring/map-9d02bccc-081b-4a1d-b26e-a363f366fb40.html"
+        }
+      ]
+    },
+    "markerEndpoints": []
+  }
+}

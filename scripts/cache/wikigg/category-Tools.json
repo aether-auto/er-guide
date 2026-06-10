@@ -1,0 +1,1462 @@
+[
+  {
+    "pageid": 709,
+    "ns": 0,
+    "title": "Tools"
+  },
+  {
+    "pageid": 1406,
+    "ns": 0,
+    "title": "Academy Magic Pot"
+  },
+  {
+    "pageid": 14823,
+    "ns": 0,
+    "title": "Acid Spraymist"
+  },
+  {
+    "pageid": 12260,
+    "ns": 0,
+    "title": "Albinauric Pot"
+  },
+  {
+    "pageid": 9048,
+    "ns": 0,
+    "title": "Alluring Pot"
+  },
+  {
+    "pageid": 12745,
+    "ns": 0,
+    "title": "Ancestral Infant's Head"
+  },
+  {
+    "pageid": 3809,
+    "ns": 0,
+    "title": "Ancient Dragon's Blessing"
+  },
+  {
+    "pageid": 2371,
+    "ns": 0,
+    "title": "Ancient Dragonbolt Pot"
+  },
+  {
+    "pageid": 5449,
+    "ns": 0,
+    "title": "Baldachin's Blessing"
+  },
+  {
+    "pageid": 3324,
+    "ns": 0,
+    "title": "Beastlure Pot"
+  },
+  {
+    "pageid": 13903,
+    "ns": 0,
+    "title": "Bewitching Branch"
+  },
+  {
+    "pageid": 968,
+    "ns": 0,
+    "title": "Blasphemous Claw"
+  },
+  {
+    "pageid": 12411,
+    "ns": 0,
+    "title": "Blessing of Marika"
+  },
+  {
+    "pageid": 14771,
+    "ns": 0,
+    "title": "Blood Grease"
+  },
+  {
+    "pageid": 9403,
+    "ns": 0,
+    "title": "Bloodboil Aromatic"
+  },
+  {
+    "pageid": 1976,
+    "ns": 0,
+    "title": "Bloodsucking Cracked Tear"
+  },
+  {
+    "pageid": 11156,
+    "ns": 0,
+    "title": "Bloody Finger"
+  },
+  {
+    "pageid": 4130,
+    "ns": 0,
+    "title": "Blue Cipher Ring"
+  },
+  {
+    "pageid": 6146,
+    "ns": 0,
+    "title": "Boiled Crab"
+  },
+  {
+    "pageid": 12604,
+    "ns": 0,
+    "title": "Boiled Prawn"
+  },
+  {
+    "pageid": 7067,
+    "ns": 0,
+    "title": "Bondstone"
+  },
+  {
+    "pageid": 13218,
+    "ns": 0,
+    "title": "Bone Dart"
+  },
+  {
+    "pageid": 12146,
+    "ns": 0,
+    "title": "Broken Rune"
+  },
+  {
+    "pageid": 3442,
+    "ns": 0,
+    "title": "Call of Tibia"
+  },
+  {
+    "pageid": 4531,
+    "ns": 0,
+    "title": "Cerulean-Sapping Cracked Tear"
+  },
+  {
+    "pageid": 3511,
+    "ns": 0,
+    "title": "Charming Branch"
+  },
+  {
+    "pageid": 6255,
+    "ns": 0,
+    "title": "Clarifying Boluses"
+  },
+  {
+    "pageid": 5327,
+    "ns": 0,
+    "title": "Clarifying Cured Meat"
+  },
+  {
+    "pageid": 7006,
+    "ns": 0,
+    "title": "Clarifying White Cured Meat"
+  },
+  {
+    "pageid": 9791,
+    "ns": 0,
+    "title": "Crimson-Sapping Cracked Tear"
+  },
+  {
+    "pageid": 623,
+    "ns": 0,
+    "title": "Crimsonburst Crystal Tear"
+  },
+  {
+    "pageid": 3619,
+    "ns": 0,
+    "title": "Crimsonburst Dried Tear"
+  },
+  {
+    "pageid": 10431,
+    "ns": 0,
+    "title": "Crystal Dart"
+  },
+  {
+    "pageid": 7083,
+    "ns": 0,
+    "title": "Cuckoo Glintstone"
+  },
+  {
+    "pageid": 3297,
+    "ns": 0,
+    "title": "Cursed-Blood Pot"
+  },
+  {
+    "pageid": 12060,
+    "ns": 0,
+    "title": "Dappled Cured Meat"
+  },
+  {
+    "pageid": 14425,
+    "ns": 0,
+    "title": "Dappled White Cured Meat"
+  },
+  {
+    "pageid": 33778,
+    "ns": 0,
+    "title": "Deathsbane Jerky"
+  },
+  {
+    "pageid": 5936,
+    "ns": 0,
+    "title": "Deflecting Hardtear"
+  },
+  {
+    "pageid": 13019,
+    "ns": 0,
+    "title": "Dragon Communion Flesh"
+  },
+  {
+    "pageid": 16894,
+    "ns": 0,
+    "title": "Dragon Communion Grease"
+  },
+  {
+    "pageid": 7043,
+    "ns": 0,
+    "title": "Dragon Communion Harpoon"
+  },
+  {
+    "pageid": 16890,
+    "ns": 0,
+    "title": "Dragonbolt Grease"
+  },
+  {
+    "pageid": 6655,
+    "ns": 0,
+    "title": "Dragonscale Flesh"
+  },
+  {
+    "pageid": 8761,
+    "ns": 0,
+    "title": "Dragonwound Grease"
+  },
+  {
+    "pageid": 1943,
+    "ns": 0,
+    "title": "Drawstring Blood Grease"
+  },
+  {
+    "pageid": 16898,
+    "ns": 0,
+    "title": "Drawstring Dragonbolt Grease"
+  },
+  {
+    "pageid": 16900,
+    "ns": 0,
+    "title": "Drawstring Eternal Sleep Grease"
+  },
+  {
+    "pageid": 7750,
+    "ns": 0,
+    "title": "Drawstring Fire Grease"
+  },
+  {
+    "pageid": 16899,
+    "ns": 0,
+    "title": "Drawstring Golden Grease"
+  },
+  {
+    "pageid": 10693,
+    "ns": 0,
+    "title": "Drawstring Holy Grease"
+  },
+  {
+    "pageid": 6724,
+    "ns": 0,
+    "title": "Drawstring Lightning Grease"
+  },
+  {
+    "pageid": 4730,
+    "ns": 0,
+    "title": "Drawstring Magic Grease"
+  },
+  {
+    "pageid": 16895,
+    "ns": 0,
+    "title": "Drawstring Messmerfire Grease"
+  },
+  {
+    "pageid": 14506,
+    "ns": 0,
+    "title": "Drawstring Poison Grease"
+  },
+  {
+    "pageid": 4808,
+    "ns": 0,
+    "title": "Drawstring Rot Grease"
+  },
+  {
+    "pageid": 16896,
+    "ns": 0,
+    "title": "Drawstring Royal Magic Grease"
+  },
+  {
+    "pageid": 3149,
+    "ns": 0,
+    "title": "Drawstring Soporific Grease"
+  },
+  {
+    "pageid": 9053,
+    "ns": 0,
+    "title": "Duelist's Furled Finger"
+  },
+  {
+    "pageid": 16893,
+    "ns": 0,
+    "title": "Eternal Sleep Grease"
+  },
+  {
+    "pageid": 3876,
+    "ns": 0,
+    "title": "Eternal Sleep Pot"
+  },
+  {
+    "pageid": 8705,
+    "ns": 0,
+    "title": "Exalted Flesh"
+  },
+  {
+    "pageid": 1914,
+    "ns": 0,
+    "title": "Explosive Stone"
+  },
+  {
+    "pageid": 7461,
+    "ns": 0,
+    "title": "Explosive Stone Clump"
+  },
+  {
+    "pageid": 9165,
+    "ns": 0,
+    "title": "Fan Daggers"
+  },
+  {
+    "pageid": 2458,
+    "ns": 0,
+    "title": "Festering Bloody Finger"
+  },
+  {
+    "pageid": 16892,
+    "ns": 0,
+    "title": "Festive Grease"
+  },
+  {
+    "pageid": 3586,
+    "ns": 0,
+    "title": "Fetid Pot"
+  },
+  {
+    "pageid": 856,
+    "ns": 0,
+    "title": "Finger Severer"
+  },
+  {
+    "pageid": 13597,
+    "ns": 0,
+    "title": "Finger-Weaver's Cookbook (1)"
+  },
+  {
+    "pageid": 2717,
+    "ns": 0,
+    "title": "Finger-Weaver's Cookbook (2)"
+  },
+  {
+    "pageid": 5822,
+    "ns": 0,
+    "title": "Fingerprint Nostrum"
+  },
+  {
+    "pageid": 6404,
+    "ns": 0,
+    "title": "Fire Coil"
+  },
+  {
+    "pageid": 41,
+    "ns": 0,
+    "title": "Fire Grease"
+  },
+  {
+    "pageid": 3516,
+    "ns": 0,
+    "title": "Fire Pot"
+  },
+  {
+    "pageid": 13231,
+    "ns": 0,
+    "title": "Fire Spritestone"
+  },
+  {
+    "pageid": 11724,
+    "ns": 0,
+    "title": "Fireproof Dried Liver"
+  },
+  {
+    "pageid": 3486,
+    "ns": 0,
+    "title": "Fireproof Pickled Liver"
+  },
+  {
+    "pageid": 6701,
+    "ns": 0,
+    "title": "Flask of Cerulean Tears"
+  },
+  {
+    "pageid": 10579,
+    "ns": 0,
+    "title": "Flask of Crimson Tears"
+  },
+  {
+    "pageid": 11361,
+    "ns": 0,
+    "title": "Flask of Wondrous Physick"
+  },
+  {
+    "pageid": 433,
+    "ns": 0,
+    "title": "Freezing Grease"
+  },
+  {
+    "pageid": 606,
+    "ns": 0,
+    "title": "Freezing Pot"
+  },
+  {
+    "pageid": 10738,
+    "ns": 0,
+    "title": "Frenzied Flame Pot"
+  },
+  {
+    "pageid": 155,
+    "ns": 0,
+    "title": "Frenzyflame Stone"
+  },
+  {
+    "pageid": 8358,
+    "ns": 0,
+    "title": "Frozen Raisin"
+  },
+  {
+    "pageid": 3830,
+    "ns": 0,
+    "title": "Furlcalling Finger Remedy"
+  },
+  {
+    "pageid": 7381,
+    "ns": 0,
+    "title": "Giantsflame Fire Pot"
+  },
+  {
+    "pageid": 10042,
+    "ns": 0,
+    "title": "Glass Shard"
+  },
+  {
+    "pageid": 11092,
+    "ns": 0,
+    "title": "Glinting Nail"
+  },
+  {
+    "pageid": 6505,
+    "ns": 0,
+    "title": "Glintstone Scrap"
+  },
+  {
+    "pageid": 13099,
+    "ns": 0,
+    "title": "Glovewort Crystal Tear"
+  },
+  {
+    "pageid": 12623,
+    "ns": 0,
+    "title": "Glowstone"
+  },
+  {
+    "pageid": 4358,
+    "ns": 0,
+    "title": "Gold-Pickled Fowl Foot"
+  },
+  {
+    "pageid": 16891,
+    "ns": 0,
+    "title": "Golden Grease"
+  },
+  {
+    "pageid": 10528,
+    "ns": 0,
+    "title": "Golden Horn Tender"
+  },
+  {
+    "pageid": 7115,
+    "ns": 0,
+    "title": "Golden Rune 1"
+  },
+  {
+    "pageid": 8789,
+    "ns": 0,
+    "title": "Golden Rune 10"
+  },
+  {
+    "pageid": 13719,
+    "ns": 0,
+    "title": "Golden Rune 11"
+  },
+  {
+    "pageid": 13310,
+    "ns": 0,
+    "title": "Golden Rune 12"
+  },
+  {
+    "pageid": 7935,
+    "ns": 0,
+    "title": "Golden Rune 13"
+  },
+  {
+    "pageid": 14591,
+    "ns": 0,
+    "title": "Golden Rune 2"
+  },
+  {
+    "pageid": 13718,
+    "ns": 0,
+    "title": "Golden Rune 3"
+  },
+  {
+    "pageid": 720,
+    "ns": 0,
+    "title": "Golden Rune 4"
+  },
+  {
+    "pageid": 1657,
+    "ns": 0,
+    "title": "Golden Rune 5"
+  },
+  {
+    "pageid": 3783,
+    "ns": 0,
+    "title": "Golden Rune 6"
+  },
+  {
+    "pageid": 13687,
+    "ns": 0,
+    "title": "Golden Rune 7"
+  },
+  {
+    "pageid": 12027,
+    "ns": 0,
+    "title": "Golden Rune 8"
+  },
+  {
+    "pageid": 3701,
+    "ns": 0,
+    "title": "Golden Rune 9"
+  },
+  {
+    "pageid": 4042,
+    "ns": 0,
+    "title": "Golden Runes"
+  },
+  {
+    "pageid": 9775,
+    "ns": 0,
+    "title": "Golden Vow (Consumable)"
+  },
+  {
+    "pageid": 1000,
+    "ns": 0,
+    "title": "Gourmet Scorpion Stew"
+  },
+  {
+    "pageid": 14100,
+    "ns": 0,
+    "title": "Grace Mimic"
+  },
+  {
+    "pageid": 11550,
+    "ns": 0,
+    "title": "Gravity Stone Chunk"
+  },
+  {
+    "pageid": 2221,
+    "ns": 0,
+    "title": "Gravity Stone Fan"
+  },
+  {
+    "pageid": 4058,
+    "ns": 0,
+    "title": "Heavy Meteorite Fragment (Network Test)"
+  },
+  {
+    "pageid": 6172,
+    "ns": 0,
+    "title": "Hefty Fetid Pot"
+  },
+  {
+    "pageid": 13243,
+    "ns": 0,
+    "title": "Hefty Fire Pot"
+  },
+  {
+    "pageid": 12644,
+    "ns": 0,
+    "title": "Hefty Fly Pot"
+  },
+  {
+    "pageid": 3396,
+    "ns": 0,
+    "title": "Hefty Freezing Pot"
+  },
+  {
+    "pageid": 6954,
+    "ns": 0,
+    "title": "Hefty Frenzied Flame Pot"
+  },
+  {
+    "pageid": 13025,
+    "ns": 0,
+    "title": "Hefty Furnace Pot"
+  },
+  {
+    "pageid": 7125,
+    "ns": 0,
+    "title": "Hefty Lightning Pot"
+  },
+  {
+    "pageid": 10168,
+    "ns": 0,
+    "title": "Hefty Magic Pot"
+  },
+  {
+    "pageid": 2647,
+    "ns": 0,
+    "title": "Hefty Oil Pot"
+  },
+  {
+    "pageid": 234,
+    "ns": 0,
+    "title": "Hefty Poison Pot"
+  },
+  {
+    "pageid": 3326,
+    "ns": 0,
+    "title": "Hefty Rancor Pot"
+  },
+  {
+    "pageid": 7242,
+    "ns": 0,
+    "title": "Hefty Red Lightning Pot"
+  },
+  {
+    "pageid": 13152,
+    "ns": 0,
+    "title": "Hefty Rock Pot"
+  },
+  {
+    "pageid": 5036,
+    "ns": 0,
+    "title": "Hefty Rot Pot"
+  },
+  {
+    "pageid": 14461,
+    "ns": 0,
+    "title": "Hefty Volcano Pot"
+  },
+  {
+    "pageid": 10098,
+    "ns": 0,
+    "title": "Hero's Rune 1"
+  },
+  {
+    "pageid": 6662,
+    "ns": 0,
+    "title": "Hero's Rune 2"
+  },
+  {
+    "pageid": 5723,
+    "ns": 0,
+    "title": "Hero's Rune 3"
+  },
+  {
+    "pageid": 11955,
+    "ns": 0,
+    "title": "Hero's Rune 4"
+  },
+  {
+    "pageid": 3043,
+    "ns": 0,
+    "title": "Hero's Rune 5"
+  },
+  {
+    "pageid": 7375,
+    "ns": 0,
+    "title": "Holy Grease"
+  },
+  {
+    "pageid": 14129,
+    "ns": 0,
+    "title": "Holy Water Pot"
+  },
+  {
+    "pageid": 6846,
+    "ns": 0,
+    "title": "Holyproof Dried Liver"
+  },
+  {
+    "pageid": 5927,
+    "ns": 0,
+    "title": "Holyproof Pickled Liver"
+  },
+  {
+    "pageid": 11290,
+    "ns": 0,
+    "title": "Horned Bairn"
+  },
+  {
+    "pageid": 8291,
+    "ns": 0,
+    "title": "Immunizing Cured Meat"
+  },
+  {
+    "pageid": 9210,
+    "ns": 0,
+    "title": "Immunizing White Cured Meat"
+  },
+  {
+    "pageid": 148,
+    "ns": 0,
+    "title": "Innard Meat"
+  },
+  {
+    "pageid": 11340,
+    "ns": 0,
+    "title": "Invigorating Cured Meat"
+  },
+  {
+    "pageid": 152,
+    "ns": 0,
+    "title": "Invigorating White Cured Meat"
+  },
+  {
+    "pageid": 10079,
+    "ns": 0,
+    "title": "Iris of Grace"
+  },
+  {
+    "pageid": 3741,
+    "ns": 0,
+    "title": "Iris of Occultation"
+  },
+  {
+    "pageid": 658,
+    "ns": 0,
+    "title": "Ironjar Aromatic"
+  },
+  {
+    "pageid": 11607,
+    "ns": 0,
+    "title": "Kukri"
+  },
+  {
+    "pageid": 10512,
+    "ns": 0,
+    "title": "Lamenter's Mask"
+  },
+  {
+    "pageid": 8937,
+    "ns": 0,
+    "title": "Lands Between Rune"
+  },
+  {
+    "pageid": 3780,
+    "ns": 0,
+    "title": "Lantern"
+  },
+  {
+    "pageid": 4898,
+    "ns": 0,
+    "title": "Large Glintstone Scrap"
+  },
+  {
+    "pageid": 10189,
+    "ns": 0,
+    "title": "Leda's Rune"
+  },
+  {
+    "pageid": 2913,
+    "ns": 0,
+    "title": "Lightning Grease"
+  },
+  {
+    "pageid": 834,
+    "ns": 0,
+    "title": "Lightning Pot"
+  },
+  {
+    "pageid": 14093,
+    "ns": 0,
+    "title": "Lightningproof Dried Liver"
+  },
+  {
+    "pageid": 13333,
+    "ns": 0,
+    "title": "Lightningproof Pickled Liver"
+  },
+  {
+    "pageid": 11558,
+    "ns": 0,
+    "title": "Lord's Rune"
+  },
+  {
+    "pageid": 12142,
+    "ns": 0,
+    "title": "Lulling Branch"
+  },
+  {
+    "pageid": 11202,
+    "ns": 0,
+    "title": "Magic Grease"
+  },
+  {
+    "pageid": 2952,
+    "ns": 0,
+    "title": "Magic Pot"
+  },
+  {
+    "pageid": 4823,
+    "ns": 0,
+    "title": "Margit's Shackle"
+  },
+  {
+    "pageid": 2243,
+    "ns": 0,
+    "title": "Marika's Rune"
+  },
+  {
+    "pageid": 2346,
+    "ns": 0,
+    "title": "Memory of Grace"
+  },
+  {
+    "pageid": 16177,
+    "ns": 0,
+    "title": "Messmerfire Grease"
+  },
+  {
+    "pageid": 12949,
+    "ns": 0,
+    "title": "Mimic's Veil"
+  },
+  {
+    "pageid": 1345,
+    "ns": 0,
+    "title": "Miranda's Prayer"
+  },
+  {
+    "pageid": 4136,
+    "ns": 0,
+    "title": "Mohg's Shackle"
+  },
+  {
+    "pageid": 7248,
+    "ns": 0,
+    "title": "Neutralizing Boluses"
+  },
+  {
+    "pageid": 8665,
+    "ns": 0,
+    "title": "Numen's Rune"
+  },
+  {
+    "pageid": 3682,
+    "ns": 0,
+    "title": "Oil Pot"
+  },
+  {
+    "pageid": 9534,
+    "ns": 0,
+    "title": "Oil-Soaked Tear"
+  },
+  {
+    "pageid": 14640,
+    "ns": 0,
+    "title": "Omen Bairn"
+  },
+  {
+    "pageid": 3190,
+    "ns": 0,
+    "title": "Opaline Pickled Liver"
+  },
+  {
+    "pageid": 737,
+    "ns": 0,
+    "title": "Pauper's Rune"
+  },
+  {
+    "pageid": 1336,
+    "ns": 0,
+    "title": "Perfumed Oil of Ranah"
+  },
+  {
+    "pageid": 13132,
+    "ns": 0,
+    "title": "Phantom Finger"
+  },
+  {
+    "pageid": 9275,
+    "ns": 0,
+    "title": "Phantom Great Rune"
+  },
+  {
+    "pageid": 11925,
+    "ns": 0,
+    "title": "Pickled Turtle Neck"
+  },
+  {
+    "pageid": 11537,
+    "ns": 0,
+    "title": "Poison Grease"
+  },
+  {
+    "pageid": 1388,
+    "ns": 0,
+    "title": "Poison Pot"
+  },
+  {
+    "pageid": 11487,
+    "ns": 0,
+    "title": "Poison Spraymist"
+  },
+  {
+    "pageid": 14125,
+    "ns": 0,
+    "title": "Poisonbone Dart"
+  },
+  {
+    "pageid": 8956,
+    "ns": 0,
+    "title": "Poisoned Stone"
+  },
+  {
+    "pageid": 4216,
+    "ns": 0,
+    "title": "Poisoned Stone Clump"
+  },
+  {
+    "pageid": 6474,
+    "ns": 0,
+    "title": "Polter Stone"
+  },
+  {
+    "pageid": 1448,
+    "ns": 0,
+    "title": "Prattling Pate \"Apologies\""
+  },
+  {
+    "pageid": 6523,
+    "ns": 0,
+    "title": "Prattling Pate \"Hello\""
+  },
+  {
+    "pageid": 11022,
+    "ns": 0,
+    "title": "Prattling Pate \"Lamentation\""
+  },
+  {
+    "pageid": 6917,
+    "ns": 0,
+    "title": "Prattling Pate \"Let's get to it\""
+  },
+  {
+    "pageid": 2895,
+    "ns": 0,
+    "title": "Prattling Pate \"My beloved\""
+  },
+  {
+    "pageid": 9553,
+    "ns": 0,
+    "title": "Prattling Pate \"Please help\""
+  },
+  {
+    "pageid": 13130,
+    "ns": 0,
+    "title": "Prattling Pate \"Thank you\""
+  },
+  {
+    "pageid": 2397,
+    "ns": 0,
+    "title": "Prattling Pate \"Wonderful\""
+  },
+  {
+    "pageid": 9622,
+    "ns": 0,
+    "title": "Prattling Pate \"You're beautiful\""
+  },
+  {
+    "pageid": 3066,
+    "ns": 0,
+    "title": "Preserving Boluses"
+  },
+  {
+    "pageid": 10010,
+    "ns": 0,
+    "title": "Priestess Heart"
+  },
+  {
+    "pageid": 2808,
+    "ns": 0,
+    "title": "Pureblood Knight's Medal"
+  },
+  {
+    "pageid": 14121,
+    "ns": 0,
+    "title": "Radiant Baldachin's Blessing"
+  },
+  {
+    "pageid": 7715,
+    "ns": 0,
+    "title": "Rainbow Stone"
+  },
+  {
+    "pageid": 13010,
+    "ns": 0,
+    "title": "Rancor Pot"
+  },
+  {
+    "pageid": 2977,
+    "ns": 0,
+    "title": "Raw Meat Dumpling"
+  },
+  {
+    "pageid": 1910,
+    "ns": 0,
+    "title": "Recusant Finger"
+  },
+  {
+    "pageid": 10073,
+    "ns": 0,
+    "title": "Red Lightning Pot"
+  },
+  {
+    "pageid": 5209,
+    "ns": 0,
+    "title": "Redmane Fire Pot"
+  },
+  {
+    "pageid": 7177,
+    "ns": 0,
+    "title": "Regal Omen Bairn"
+  },
+  {
+    "pageid": 10801,
+    "ns": 0,
+    "title": "Rejuvenating Boluses"
+  },
+  {
+    "pageid": 14364,
+    "ns": 0,
+    "title": "Remembrance of a God and a Lord"
+  },
+  {
+    "pageid": 1988,
+    "ns": 0,
+    "title": "Remembrance of Putrescence"
+  },
+  {
+    "pageid": 11970,
+    "ns": 0,
+    "title": "Remembrance of the Blasphemous"
+  },
+  {
+    "pageid": 8933,
+    "ns": 0,
+    "title": "Remembrance of the Dancing Lion"
+  },
+  {
+    "pageid": 10961,
+    "ns": 0,
+    "title": "Remembrance of the Grafted"
+  },
+  {
+    "pageid": 6161,
+    "ns": 0,
+    "title": "Remembrance of the Impaler"
+  },
+  {
+    "pageid": 8798,
+    "ns": 0,
+    "title": "Remembrance of the Lord of Frenzied Flame"
+  },
+  {
+    "pageid": 9396,
+    "ns": 0,
+    "title": "Remembrance of the Mother of Fingers"
+  },
+  {
+    "pageid": 9057,
+    "ns": 0,
+    "title": "Remembrance of the Rot Goddess"
+  },
+  {
+    "pageid": 13075,
+    "ns": 0,
+    "title": "Remembrance of the Saint of the Bud"
+  },
+  {
+    "pageid": 11542,
+    "ns": 0,
+    "title": "Remembrance of the Shadow Sunflower"
+  },
+  {
+    "pageid": 4456,
+    "ns": 0,
+    "title": "Remembrance of the Twin Moon Knight"
+  },
+  {
+    "pageid": 11792,
+    "ns": 0,
+    "title": "Remembrance of the Wild Boar Rider"
+  },
+  {
+    "pageid": 8329,
+    "ns": 0,
+    "title": "Rock Heart"
+  },
+  {
+    "pageid": 5806,
+    "ns": 0,
+    "title": "Roped Fetid Pot"
+  },
+  {
+    "pageid": 12361,
+    "ns": 0,
+    "title": "Roped Fire Pot"
+  },
+  {
+    "pageid": 9520,
+    "ns": 0,
+    "title": "Roped Fly Pot"
+  },
+  {
+    "pageid": 3133,
+    "ns": 0,
+    "title": "Roped Freezing Pot"
+  },
+  {
+    "pageid": 14334,
+    "ns": 0,
+    "title": "Roped Frenzied Flame Pot"
+  },
+  {
+    "pageid": 14321,
+    "ns": 0,
+    "title": "Roped Holy Water Pot"
+  },
+  {
+    "pageid": 12850,
+    "ns": 0,
+    "title": "Roped Lightning Pot"
+  },
+  {
+    "pageid": 2087,
+    "ns": 0,
+    "title": "Roped Magic Pot"
+  },
+  {
+    "pageid": 2411,
+    "ns": 0,
+    "title": "Roped Oil Pot"
+  },
+  {
+    "pageid": 13675,
+    "ns": 0,
+    "title": "Roped Poison Pot"
+  },
+  {
+    "pageid": 14618,
+    "ns": 0,
+    "title": "Roped Volcano Pot"
+  },
+  {
+    "pageid": 9889,
+    "ns": 0,
+    "title": "Rot Grease"
+  },
+  {
+    "pageid": 10326,
+    "ns": 0,
+    "title": "Rot Pot"
+  },
+  {
+    "pageid": 16176,
+    "ns": 0,
+    "title": "Roundrock"
+  },
+  {
+    "pageid": 11832,
+    "ns": 0,
+    "title": "Rowa Raisin"
+  },
+  {
+    "pageid": 16889,
+    "ns": 0,
+    "title": "Royal Magic Grease"
+  },
+  {
+    "pageid": 14807,
+    "ns": 0,
+    "title": "Ruin Fragment"
+  },
+  {
+    "pageid": 2553,
+    "ns": 0,
+    "title": "Rune Arc"
+  },
+  {
+    "pageid": 7845,
+    "ns": 0,
+    "title": "Rune of an Unsung Hero"
+  },
+  {
+    "pageid": 858,
+    "ns": 0,
+    "title": "Sacred Bloody Flesh"
+  },
+  {
+    "pageid": 11055,
+    "ns": 0,
+    "title": "Sacred Order Pot"
+  },
+  {
+    "pageid": 4645,
+    "ns": 0,
+    "title": "Scorpion Stew"
+  },
+  {
+    "pageid": 10851,
+    "ns": 0,
+    "title": "Scriptstone"
+  },
+  {
+    "pageid": 7119,
+    "ns": 0,
+    "title": "Shadow Realm Rune 1"
+  },
+  {
+    "pageid": 9899,
+    "ns": 0,
+    "title": "Shadow Realm Rune 2"
+  },
+  {
+    "pageid": 13978,
+    "ns": 0,
+    "title": "Shadow Realm Rune 3"
+  },
+  {
+    "pageid": 1866,
+    "ns": 0,
+    "title": "Shadow Realm Rune 4"
+  },
+  {
+    "pageid": 12277,
+    "ns": 0,
+    "title": "Shadow Realm Rune 5"
+  },
+  {
+    "pageid": 14803,
+    "ns": 0,
+    "title": "Shadow Realm Rune 6"
+  },
+  {
+    "pageid": 12395,
+    "ns": 0,
+    "title": "Shadow Realm Rune 7"
+  },
+  {
+    "pageid": 4884,
+    "ns": 0,
+    "title": "Shield Grease"
+  },
+  {
+    "pageid": 4188,
+    "ns": 0,
+    "title": "Silver Horn Tender"
+  },
+  {
+    "pageid": 1630,
+    "ns": 0,
+    "title": "Silver-Pickled Fowl Foot"
+  },
+  {
+    "pageid": 8236,
+    "ns": 0,
+    "title": "Sleep Pot"
+  },
+  {
+    "pageid": 10124,
+    "ns": 0,
+    "title": "Small Golden Effigy"
+  },
+  {
+    "pageid": 10254,
+    "ns": 0,
+    "title": "Small Red Effigy"
+  },
+  {
+    "pageid": 2429,
+    "ns": 0,
+    "title": "Soap"
+  },
+  {
+    "pageid": 4780,
+    "ns": 0,
+    "title": "Soft Cotton"
+  },
+  {
+    "pageid": 6484,
+    "ns": 0,
+    "title": "Soporific Grease"
+  },
+  {
+    "pageid": 11911,
+    "ns": 0,
+    "title": "Spark Aromatic"
+  },
+  {
+    "pageid": 7188,
+    "ns": 0,
+    "title": "Spectral Steed Whistle"
+  },
+  {
+    "pageid": 6174,
+    "ns": 0,
+    "title": "Spellproof Dried Liver"
+  },
+  {
+    "pageid": 2538,
+    "ns": 0,
+    "title": "Spellproof Pickled Liver"
+  },
+  {
+    "pageid": 11060,
+    "ns": 0,
+    "title": "Spirit Raisin"
+  },
+  {
+    "pageid": 13428,
+    "ns": 0,
+    "title": "Spritestone"
+  },
+  {
+    "pageid": 5094,
+    "ns": 0,
+    "title": "Stanching Boluses"
+  },
+  {
+    "pageid": 12579,
+    "ns": 0,
+    "title": "Starlight Shards"
+  },
+  {
+    "pageid": 3548,
+    "ns": 0,
+    "title": "Stimulating Boluses"
+  },
+  {
+    "pageid": 4931,
+    "ns": 0,
+    "title": "Sunwarmth Stone"
+  },
+  {
+    "pageid": 10488,
+    "ns": 0,
+    "title": "Surging Frenzied Flame"
+  },
+  {
+    "pageid": 8033,
+    "ns": 0,
+    "title": "Swarm Pot"
+  },
+  {
+    "pageid": 10066,
+    "ns": 0,
+    "title": "Sweet Raisin"
+  },
+  {
+    "pageid": 5032,
+    "ns": 0,
+    "title": "Tarnished's Furled Finger"
+  },
+  {
+    "pageid": 14124,
+    "ns": 0,
+    "title": "Tarnished's Wizened Finger"
+  },
+  {
+    "pageid": 1800,
+    "ns": 0,
+    "title": "Taunter's Tongue"
+  },
+  {
+    "pageid": 3554,
+    "ns": 0,
+    "title": "Telescope"
+  },
+  {
+    "pageid": 9320,
+    "ns": 0,
+    "title": "Thawfrost Boluses"
+  },
+  {
+    "pageid": 1511,
+    "ns": 0,
+    "title": "Thiollier's Concoction"
+  },
+  {
+    "pageid": 7647,
+    "ns": 0,
+    "title": "Throwing Dagger"
+  },
+  {
+    "pageid": 6534,
+    "ns": 0,
+    "title": "Throwing Pots"
+  },
+  {
+    "pageid": 5624,
+    "ns": 0,
+    "title": "Throwing Pots (Shadow of the Erdtree)"
+  },
+  {
+    "pageid": 7299,
+    "ns": 0,
+    "title": "Uplifting Aromatic"
+  },
+  {
+    "pageid": 4432,
+    "ns": 0,
+    "title": "Viridian Hidden Tear"
+  },
+  {
+    "pageid": 14596,
+    "ns": 0,
+    "title": "Vision of Grace"
+  },
+  {
+    "pageid": 5031,
+    "ns": 0,
+    "title": "Volcano Pot"
+  },
+  {
+    "pageid": 12308,
+    "ns": 0,
+    "title": "Warming Stone"
+  },
+  {
+    "pageid": 8977,
+    "ns": 0,
+    "title": "Well-Pickled Turtle Neck"
+  },
+  {
+    "pageid": 6131,
+    "ns": 0,
+    "title": "White Cipher Ring"
+  },
+  {
+    "pageid": 1752,
+    "ns": 0,
+    "title": "Wraith Calling Bell"
+  }
+]

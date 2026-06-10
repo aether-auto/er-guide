@@ -1,0 +1,612 @@
+[
+  {
+    "pageid": 7367,
+    "ns": 0,
+    "title": "Ashes of War"
+  },
+  {
+    "pageid": 6096,
+    "ns": 0,
+    "title": "Ash of War: Aspects of the Crucible: Wings"
+  },
+  {
+    "pageid": 5568,
+    "ns": 0,
+    "title": "Ash of War: Assassin's Gambit"
+  },
+  {
+    "pageid": 6147,
+    "ns": 0,
+    "title": "Ash of War: Barbaric Roar"
+  },
+  {
+    "pageid": 5973,
+    "ns": 0,
+    "title": "Ash of War: Barrage"
+  },
+  {
+    "pageid": 9098,
+    "ns": 0,
+    "title": "Ash of War: Barricade Shield"
+  },
+  {
+    "pageid": 14195,
+    "ns": 0,
+    "title": "Ash of War: Beast's Roar"
+  },
+  {
+    "pageid": 11074,
+    "ns": 0,
+    "title": "Ash of War: Black Flame Tornado"
+  },
+  {
+    "pageid": 1016,
+    "ns": 0,
+    "title": "Ash of War: Blind Spot"
+  },
+  {
+    "pageid": 16035,
+    "ns": 0,
+    "title": "Ash of War: Blinkbolt"
+  },
+  {
+    "pageid": 9221,
+    "ns": 0,
+    "title": "Ash of War: Blood Blade"
+  },
+  {
+    "pageid": 2773,
+    "ns": 0,
+    "title": "Ash of War: Blood Tax"
+  },
+  {
+    "pageid": 133,
+    "ns": 0,
+    "title": "Ash of War: Bloodhound's Step"
+  },
+  {
+    "pageid": 2370,
+    "ns": 0,
+    "title": "Ash of War: Bloody Slash"
+  },
+  {
+    "pageid": 7121,
+    "ns": 0,
+    "title": "Ash of War: Braggart's Roar"
+  },
+  {
+    "pageid": 12420,
+    "ns": 0,
+    "title": "Ash of War: Carian Glintsword"
+  },
+  {
+    "pageid": 13740,
+    "ns": 0,
+    "title": "Ash of War: Carian Grandeur"
+  },
+  {
+    "pageid": 13120,
+    "ns": 0,
+    "title": "Ash of War: Carian Greatsword"
+  },
+  {
+    "pageid": 3068,
+    "ns": 0,
+    "title": "Ash of War: Carian Retaliation"
+  },
+  {
+    "pageid": 16021,
+    "ns": 0,
+    "title": "Ash of War: Carian Sovereignty"
+  },
+  {
+    "pageid": 4806,
+    "ns": 0,
+    "title": "Ash of War: Charge Forth"
+  },
+  {
+    "pageid": 6757,
+    "ns": 0,
+    "title": "Ash of War: Chilling Mist"
+  },
+  {
+    "pageid": 9519,
+    "ns": 0,
+    "title": "Ash of War: Cragblade"
+  },
+  {
+    "pageid": 9890,
+    "ns": 0,
+    "title": "Ash of War: Determination"
+  },
+  {
+    "pageid": 15715,
+    "ns": 0,
+    "title": "Ash of War: Divine Beast Frost Stomp"
+  },
+  {
+    "pageid": 6252,
+    "ns": 0,
+    "title": "Ash of War: Double Slash"
+  },
+  {
+    "pageid": 16194,
+    "ns": 0,
+    "title": "Ash of War: Dryleaf Whirlwind"
+  },
+  {
+    "pageid": 13348,
+    "ns": 0,
+    "title": "Ash of War: Earthshaker"
+  },
+  {
+    "pageid": 10667,
+    "ns": 0,
+    "title": "Ash of War: Enchanted Shot"
+  },
+  {
+    "pageid": 4506,
+    "ns": 0,
+    "title": "Ash of War: Endure"
+  },
+  {
+    "pageid": 5554,
+    "ns": 0,
+    "title": "Ash of War: Eruption"
+  },
+  {
+    "pageid": 11424,
+    "ns": 0,
+    "title": "Ash of War: Flame of the Redmanes"
+  },
+  {
+    "pageid": 16025,
+    "ns": 0,
+    "title": "Ash of War: Flame Skewer"
+  },
+  {
+    "pageid": 16027,
+    "ns": 0,
+    "title": "Ash of War: Flame Spear"
+  },
+  {
+    "pageid": 4073,
+    "ns": 0,
+    "title": "Ash of War: Flaming Strike"
+  },
+  {
+    "pageid": 16187,
+    "ns": 0,
+    "title": "Ash of War: Ghostflame Call"
+  },
+  {
+    "pageid": 11015,
+    "ns": 0,
+    "title": "Ash of War: Giant Hunt"
+  },
+  {
+    "pageid": 9650,
+    "ns": 0,
+    "title": "Ash of War: Glintblade Phalanx"
+  },
+  {
+    "pageid": 14265,
+    "ns": 0,
+    "title": "Ash of War: Glintstone Pebble"
+  },
+  {
+    "pageid": 12353,
+    "ns": 0,
+    "title": "Ash of War: Glintsword Arch"
+  },
+  {
+    "pageid": 13082,
+    "ns": 0,
+    "title": "Ash of War: Golden Land"
+  },
+  {
+    "pageid": 741,
+    "ns": 0,
+    "title": "Ash of War: Golden Parry"
+  },
+  {
+    "pageid": 7069,
+    "ns": 0,
+    "title": "Ash of War: Golden Slam"
+  },
+  {
+    "pageid": 11,
+    "ns": 0,
+    "title": "Ash of War: Golden Vow"
+  },
+  {
+    "pageid": 9649,
+    "ns": 0,
+    "title": "Ash of War: Gravitas"
+  },
+  {
+    "pageid": 2432,
+    "ns": 0,
+    "title": "Ash of War: Ground Slam"
+  },
+  {
+    "pageid": 14795,
+    "ns": 0,
+    "title": "Ash of War: Hoarah Loux's Earthshaker"
+  },
+  {
+    "pageid": 8041,
+    "ns": 0,
+    "title": "Ash of War: Hoarfrost Stomp"
+  },
+  {
+    "pageid": 4658,
+    "ns": 0,
+    "title": "Ash of War: Holy Ground"
+  },
+  {
+    "pageid": 6220,
+    "ns": 0,
+    "title": "Ash of War: Ice Spear"
+  },
+  {
+    "pageid": 16223,
+    "ns": 0,
+    "title": "Ash of War: Igon's Drake Hunt"
+  },
+  {
+    "pageid": 11273,
+    "ns": 0,
+    "title": "Ash of War: Impaling Thrust"
+  },
+  {
+    "pageid": 721,
+    "ns": 0,
+    "title": "Ash of War: Kick"
+  },
+  {
+    "pageid": 13925,
+    "ns": 0,
+    "title": "Ash of War: Lifesteal Fist"
+  },
+  {
+    "pageid": 1927,
+    "ns": 0,
+    "title": "Ash of War: Lightning Ram"
+  },
+  {
+    "pageid": 695,
+    "ns": 0,
+    "title": "Ash of War: Lightning Slash"
+  },
+  {
+    "pageid": 9959,
+    "ns": 0,
+    "title": "Ash of War: Lion's Claw"
+  },
+  {
+    "pageid": 12808,
+    "ns": 0,
+    "title": "Ash of War: Loretta's Slash"
+  },
+  {
+    "pageid": 12603,
+    "ns": 0,
+    "title": "Ash of War: Mighty Shot"
+  },
+  {
+    "pageid": 3264,
+    "ns": 0,
+    "title": "Ash of War: No Skill"
+  },
+  {
+    "pageid": 15378,
+    "ns": 0,
+    "title": "Ash of War: Overhead Stance"
+  },
+  {
+    "pageid": 16193,
+    "ns": 0,
+    "title": "Ash of War: Palm Blast"
+  },
+  {
+    "pageid": 7335,
+    "ns": 0,
+    "title": "Ash of War: Parry"
+  },
+  {
+    "pageid": 3692,
+    "ns": 0,
+    "title": "Ash of War: Phantom Slash"
+  },
+  {
+    "pageid": 2207,
+    "ns": 0,
+    "title": "Ash of War: Piercing Fang"
+  },
+  {
+    "pageid": 15397,
+    "ns": 0,
+    "title": "Ash of War: Piercing Throw"
+  },
+  {
+    "pageid": 6750,
+    "ns": 0,
+    "title": "Ash of War: Poison Moth Flight"
+  },
+  {
+    "pageid": 2667,
+    "ns": 0,
+    "title": "Ash of War: Poisonous Mist"
+  },
+  {
+    "pageid": 9283,
+    "ns": 0,
+    "title": "Ash of War: Prayerful Strike"
+  },
+  {
+    "pageid": 7469,
+    "ns": 0,
+    "title": "Ash of War: Prelate's Charge"
+  },
+  {
+    "pageid": 9630,
+    "ns": 0,
+    "title": "Ash of War: Quickstep"
+  },
+  {
+    "pageid": 15395,
+    "ns": 0,
+    "title": "Ash of War: Raging Beast"
+  },
+  {
+    "pageid": 7117,
+    "ns": 0,
+    "title": "Ash of War: Rain of Arrows"
+  },
+  {
+    "pageid": 2556,
+    "ns": 0,
+    "title": "Ash of War: Raptor of the Mists"
+  },
+  {
+    "pageid": 7079,
+    "ns": 0,
+    "title": "Ash of War: Repeating Thrust"
+  },
+  {
+    "pageid": 16222,
+    "ns": 0,
+    "title": "Ash of War: Rolling Sparks"
+  },
+  {
+    "pageid": 1339,
+    "ns": 0,
+    "title": "Ash of War: Royal Knight's Resolve"
+  },
+  {
+    "pageid": 477,
+    "ns": 0,
+    "title": "Ash of War: Sacred Blade"
+  },
+  {
+    "pageid": 7624,
+    "ns": 0,
+    "title": "Ash of War: Sacred Order"
+  },
+  {
+    "pageid": 13760,
+    "ns": 0,
+    "title": "Ash of War: Sacred Ring of Light"
+  },
+  {
+    "pageid": 15391,
+    "ns": 0,
+    "title": "Ash of War: Savage Claws"
+  },
+  {
+    "pageid": 15103,
+    "ns": 0,
+    "title": "Ash of War: Savage Lion's Claw"
+  },
+  {
+    "pageid": 15394,
+    "ns": 0,
+    "title": "Ash of War: Scattershot Throw"
+  },
+  {
+    "pageid": 12517,
+    "ns": 0,
+    "title": "Ash of War: Seppuku"
+  },
+  {
+    "pageid": 6316,
+    "ns": 0,
+    "title": "Ash of War: Shared Order"
+  },
+  {
+    "pageid": 14634,
+    "ns": 0,
+    "title": "Ash of War: Shield Bash"
+  },
+  {
+    "pageid": 895,
+    "ns": 0,
+    "title": "Ash of War: Shield Crash"
+  },
+  {
+    "pageid": 16235,
+    "ns": 0,
+    "title": "Ash of War: Shield Strike"
+  },
+  {
+    "pageid": 16190,
+    "ns": 0,
+    "title": "Ash of War: Shriek of Sorrow"
+  },
+  {
+    "pageid": 3321,
+    "ns": 0,
+    "title": "Ash of War: Sky Shot"
+  },
+  {
+    "pageid": 12095,
+    "ns": 0,
+    "title": "Ash of War: Spectral Lance"
+  },
+  {
+    "pageid": 1917,
+    "ns": 0,
+    "title": "Ash of War: Spinning Gravity Thrust"
+  },
+  {
+    "pageid": 5857,
+    "ns": 0,
+    "title": "Ash of War: Spinning Slash"
+  },
+  {
+    "pageid": 866,
+    "ns": 0,
+    "title": "Ash of War: Spinning Strikes"
+  },
+  {
+    "pageid": 8039,
+    "ns": 0,
+    "title": "Ash of War: Spinning Weapon"
+  },
+  {
+    "pageid": 857,
+    "ns": 0,
+    "title": "Ash of War: Square Off"
+  },
+  {
+    "pageid": 6188,
+    "ns": 0,
+    "title": "Ash of War: Stamp (Sweep)"
+  },
+  {
+    "pageid": 1948,
+    "ns": 0,
+    "title": "Ash of War: Stamp (Upward Cut)"
+  },
+  {
+    "pageid": 4457,
+    "ns": 0,
+    "title": "Ash of War: Storm Assault"
+  },
+  {
+    "pageid": 9395,
+    "ns": 0,
+    "title": "Ash of War: Storm Blade"
+  },
+  {
+    "pageid": 11535,
+    "ns": 0,
+    "title": "Ash of War: Storm Stomp"
+  },
+  {
+    "pageid": 1026,
+    "ns": 0,
+    "title": "Ash of War: Storm Wall"
+  },
+  {
+    "pageid": 5002,
+    "ns": 0,
+    "title": "Ash of War: Stormcaller"
+  },
+  {
+    "pageid": 15390,
+    "ns": 0,
+    "title": "Ash of War: Swift Slash"
+  },
+  {
+    "pageid": 13350,
+    "ns": 0,
+    "title": "Ash of War: Sword Dance"
+  },
+  {
+    "pageid": 15730,
+    "ns": 0,
+    "title": "Ash of War: The Poison Flower Blooms Twice"
+  },
+  {
+    "pageid": 14695,
+    "ns": 0,
+    "title": "Ash of War: Thops's Barrier"
+  },
+  {
+    "pageid": 10776,
+    "ns": 0,
+    "title": "Ash of War: Through and Through"
+  },
+  {
+    "pageid": 3623,
+    "ns": 0,
+    "title": "Ash of War: Thunderbolt"
+  },
+  {
+    "pageid": 7055,
+    "ns": 0,
+    "title": "Ash of War: Troll's Roar"
+  },
+  {
+    "pageid": 153,
+    "ns": 0,
+    "title": "Ash of War: Unsheathe"
+  },
+  {
+    "pageid": 12829,
+    "ns": 0,
+    "title": "Ash of War: Vacuum Slice"
+  },
+  {
+    "pageid": 8242,
+    "ns": 0,
+    "title": "Ash of War: Vow of the Indomitable"
+  },
+  {
+    "pageid": 16221,
+    "ns": 0,
+    "title": "Ash of War: Wall of Sparks"
+  },
+  {
+    "pageid": 7084,
+    "ns": 0,
+    "title": "Ash of War: War Cry"
+  },
+  {
+    "pageid": 13272,
+    "ns": 0,
+    "title": "Ash of War: Waves of Darkness"
+  },
+  {
+    "pageid": 2426,
+    "ns": 0,
+    "title": "Ash of War: White Shadow's Lure"
+  },
+  {
+    "pageid": 5430,
+    "ns": 0,
+    "title": "Ash of War: Wild Strikes"
+  },
+  {
+    "pageid": 16019,
+    "ns": 0,
+    "title": "Ash of War: Wing Stance"
+  },
+  {
+    "pageid": 8890,
+    "ns": 0,
+    "title": "Ashes of War (Shadow of the Erdtree)"
+  },
+  {
+    "pageid": 6184,
+    "ns": 0,
+    "title": "Skill"
+  },
+  {
+    "pageid": 33779,
+    "ns": 3000,
+    "title": "Nightreign:Skill"
+  }
+]

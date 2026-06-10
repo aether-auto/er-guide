@@ -1,0 +1,952 @@
+[
+  {
+    "pageid": 8406,
+    "ns": 0,
+    "title": "Talismans"
+  },
+  {
+    "pageid": 8641,
+    "ns": 0,
+    "title": "Talismans (Shadow of the Erdtree)"
+  },
+  {
+    "pageid": 5637,
+    "ns": 0,
+    "title": "Aged One's Exultation"
+  },
+  {
+    "pageid": 6647,
+    "ns": 0,
+    "title": "Ailment Talisman"
+  },
+  {
+    "pageid": 14358,
+    "ns": 0,
+    "title": "Ancestral Spirit's Horn"
+  },
+  {
+    "pageid": 5640,
+    "ns": 0,
+    "title": "Arrow's Reach Talisman"
+  },
+  {
+    "pageid": 16779,
+    "ns": 0,
+    "title": "Arrow's Soaring Sting Talisman"
+  },
+  {
+    "pageid": 4669,
+    "ns": 0,
+    "title": "Arrow's Sting Talisman"
+  },
+  {
+    "pageid": 3038,
+    "ns": 0,
+    "title": "Arsenal Charm"
+  },
+  {
+    "pageid": 11505,
+    "ns": 0,
+    "title": "Arsenal Charm +1"
+  },
+  {
+    "pageid": 11651,
+    "ns": 0,
+    "title": "Arsenal Charms"
+  },
+  {
+    "pageid": 2072,
+    "ns": 0,
+    "title": "Assassin's Cerulean Dagger"
+  },
+  {
+    "pageid": 5210,
+    "ns": 0,
+    "title": "Assassin's Crimson Dagger"
+  },
+  {
+    "pageid": 4925,
+    "ns": 0,
+    "title": "Assassin's Stained Daggers"
+  },
+  {
+    "pageid": 7167,
+    "ns": 0,
+    "title": "Axe Talisman"
+  },
+  {
+    "pageid": 16016,
+    "ns": 0,
+    "title": "Beloved Stardust"
+  },
+  {
+    "pageid": 11501,
+    "ns": 0,
+    "title": "Blade of Mercy"
+  },
+  {
+    "pageid": 4318,
+    "ns": 0,
+    "title": "Blessed Blue Dew Talisman"
+  },
+  {
+    "pageid": 5470,
+    "ns": 0,
+    "title": "Blessed Dew Talisman"
+  },
+  {
+    "pageid": 8593,
+    "ns": 0,
+    "title": "Blue Dancer Charm"
+  },
+  {
+    "pageid": 3875,
+    "ns": 0,
+    "title": "Blue-Feathered Branchsword"
+  },
+  {
+    "pageid": 10826,
+    "ns": 0,
+    "title": "Boltdrake Talisman"
+  },
+  {
+    "pageid": 7194,
+    "ns": 0,
+    "title": "Boltdrake Talisman +1"
+  },
+  {
+    "pageid": 4938,
+    "ns": 0,
+    "title": "Boltdrake Talisman +2"
+  },
+  {
+    "pageid": 1525,
+    "ns": 0,
+    "title": "Boltdrake Talisman +3"
+  },
+  {
+    "pageid": 6786,
+    "ns": 0,
+    "title": "Boltdrake Talismans"
+  },
+  {
+    "pageid": 11800,
+    "ns": 0,
+    "title": "Bull-Goat's Talisman"
+  },
+  {
+    "pageid": 2143,
+    "ns": 0,
+    "title": "Carian Filigreed Crest"
+  },
+  {
+    "pageid": 12918,
+    "ns": 0,
+    "title": "Cerulean Amber Medallion"
+  },
+  {
+    "pageid": 3694,
+    "ns": 0,
+    "title": "Cerulean Amber Medallion +1"
+  },
+  {
+    "pageid": 7222,
+    "ns": 0,
+    "title": "Cerulean Amber Medallion +2"
+  },
+  {
+    "pageid": 9654,
+    "ns": 0,
+    "title": "Cerulean Amber Medallion +3"
+  },
+  {
+    "pageid": 13831,
+    "ns": 0,
+    "title": "Cerulean Amber Medallions"
+  },
+  {
+    "pageid": 11961,
+    "ns": 0,
+    "title": "Cerulean Seed Talisman"
+  },
+  {
+    "pageid": 12483,
+    "ns": 0,
+    "title": "Cerulean Seed Talisman +1"
+  },
+  {
+    "pageid": 10451,
+    "ns": 0,
+    "title": "Clarifying Horn Charm"
+  },
+  {
+    "pageid": 13878,
+    "ns": 0,
+    "title": "Clarifying Horn Charm +1"
+  },
+  {
+    "pageid": 4627,
+    "ns": 0,
+    "title": "Clarifying Horn Charm +2"
+  },
+  {
+    "pageid": 10311,
+    "ns": 0,
+    "title": "Clarifying Horn Charms"
+  },
+  {
+    "pageid": 9454,
+    "ns": 0,
+    "title": "Claw Talisman"
+  },
+  {
+    "pageid": 2408,
+    "ns": 0,
+    "title": "Companion Jar"
+  },
+  {
+    "pageid": 11555,
+    "ns": 0,
+    "title": "Concealing Veil"
+  },
+  {
+    "pageid": 8320,
+    "ns": 0,
+    "title": "Crepus's Vial"
+  },
+  {
+    "pageid": 3636,
+    "ns": 0,
+    "title": "Crimson Amber Medallion"
+  },
+  {
+    "pageid": 1977,
+    "ns": 0,
+    "title": "Crimson Amber Medallion +1"
+  },
+  {
+    "pageid": 10157,
+    "ns": 0,
+    "title": "Crimson Amber Medallion +2"
+  },
+  {
+    "pageid": 9049,
+    "ns": 0,
+    "title": "Crimson Amber Medallion +3"
+  },
+  {
+    "pageid": 5819,
+    "ns": 0,
+    "title": "Crimson Amber Medallions"
+  },
+  {
+    "pageid": 7851,
+    "ns": 0,
+    "title": "Crimson Seed Talisman"
+  },
+  {
+    "pageid": 5604,
+    "ns": 0,
+    "title": "Crimson Seed Talisman +1"
+  },
+  {
+    "pageid": 9618,
+    "ns": 0,
+    "title": "Crucible Feather Talisman"
+  },
+  {
+    "pageid": 13761,
+    "ns": 0,
+    "title": "Crucible Knot Talisman"
+  },
+  {
+    "pageid": 6579,
+    "ns": 0,
+    "title": "Crucible Scale Talisman"
+  },
+  {
+    "pageid": 14159,
+    "ns": 0,
+    "title": "Crucible Talismans"
+  },
+  {
+    "pageid": 16781,
+    "ns": 0,
+    "title": "Crusade Insignia"
+  },
+  {
+    "pageid": 2463,
+    "ns": 0,
+    "title": "Curved Sword Talisman"
+  },
+  {
+    "pageid": 11185,
+    "ns": 0,
+    "title": "Daedicar's Woe"
+  },
+  {
+    "pageid": 6395,
+    "ns": 0,
+    "title": "Dagger Talisman"
+  },
+  {
+    "pageid": 14726,
+    "ns": 0,
+    "title": "Dragoncrest Greatshield Talisman"
+  },
+  {
+    "pageid": 6972,
+    "ns": 0,
+    "title": "Dragoncrest Shield Talisman"
+  },
+  {
+    "pageid": 9156,
+    "ns": 0,
+    "title": "Dragoncrest Shield Talisman +1"
+  },
+  {
+    "pageid": 7707,
+    "ns": 0,
+    "title": "Dragoncrest Shield Talisman +2"
+  },
+  {
+    "pageid": 6562,
+    "ns": 0,
+    "title": "Dragoncrest Shield Talismans"
+  },
+  {
+    "pageid": 16782,
+    "ns": 0,
+    "title": "Dried Bouquet"
+  },
+  {
+    "pageid": 5474,
+    "ns": 0,
+    "title": "Elden Ring Talisman Template"
+  },
+  {
+    "pageid": 15745,
+    "ns": 0,
+    "title": "Enraged Divine Beast"
+  },
+  {
+    "pageid": 7311,
+    "ns": 0,
+    "title": "Erdtree's Favor"
+  },
+  {
+    "pageid": 4047,
+    "ns": 0,
+    "title": "Erdtree's Favor +1"
+  },
+  {
+    "pageid": 10017,
+    "ns": 0,
+    "title": "Erdtree's Favor +2"
+  },
+  {
+    "pageid": 1221,
+    "ns": 0,
+    "title": "Erdtree's Favors"
+  },
+  {
+    "pageid": 14798,
+    "ns": 0,
+    "title": "Exultations"
+  },
+  {
+    "pageid": 3823,
+    "ns": 0,
+    "title": "Faithful's Canvas Talisman"
+  },
+  {
+    "pageid": 3954,
+    "ns": 0,
+    "title": "Faithful's Canvas Talismans"
+  },
+  {
+    "pageid": 6782,
+    "ns": 0,
+    "title": "Feathered Branchswords"
+  },
+  {
+    "pageid": 9881,
+    "ns": 0,
+    "title": "Fine Crucible Feather Talisman"
+  },
+  {
+    "pageid": 423,
+    "ns": 0,
+    "title": "Fire Scorpion Charm"
+  },
+  {
+    "pageid": 971,
+    "ns": 0,
+    "title": "Flamedrake Talisman"
+  },
+  {
+    "pageid": 828,
+    "ns": 0,
+    "title": "Flamedrake Talisman +1"
+  },
+  {
+    "pageid": 4172,
+    "ns": 0,
+    "title": "Flamedrake Talisman +2"
+  },
+  {
+    "pageid": 2639,
+    "ns": 0,
+    "title": "Flamedrake Talisman +3"
+  },
+  {
+    "pageid": 2491,
+    "ns": 0,
+    "title": "Flamedrake Talismans"
+  },
+  {
+    "pageid": 9467,
+    "ns": 0,
+    "title": "Flock's Canvas Talisman"
+  },
+  {
+    "pageid": 13478,
+    "ns": 0,
+    "title": "Furled Finger's Trick-Mirror"
+  },
+  {
+    "pageid": 10490,
+    "ns": 0,
+    "title": "Godfrey Icon"
+  },
+  {
+    "pageid": 10380,
+    "ns": 0,
+    "title": "Godskin Swaddling Cloth"
+  },
+  {
+    "pageid": 13599,
+    "ns": 0,
+    "title": "Gold Scarab"
+  },
+  {
+    "pageid": 6186,
+    "ns": 0,
+    "title": "Golden Braid"
+  },
+  {
+    "pageid": 4252,
+    "ns": 0,
+    "title": "Graven-Mass Talisman"
+  },
+  {
+    "pageid": 13237,
+    "ns": 0,
+    "title": "Graven-School Talisman"
+  },
+  {
+    "pageid": 3484,
+    "ns": 0,
+    "title": "Graven-School Talismans"
+  },
+  {
+    "pageid": 1361,
+    "ns": 0,
+    "title": "Great-Jar's Arsenal"
+  },
+  {
+    "pageid": 9130,
+    "ns": 0,
+    "title": "Greatshield Talisman"
+  },
+  {
+    "pageid": 14140,
+    "ns": 0,
+    "title": "Green Turtle Talisman"
+  },
+  {
+    "pageid": 2649,
+    "ns": 0,
+    "title": "Haligdrake Talisman"
+  },
+  {
+    "pageid": 6323,
+    "ns": 0,
+    "title": "Haligdrake Talisman +1"
+  },
+  {
+    "pageid": 5113,
+    "ns": 0,
+    "title": "Haligdrake Talisman +2"
+  },
+  {
+    "pageid": 6052,
+    "ns": 0,
+    "title": "Haligdrake Talismans"
+  },
+  {
+    "pageid": 3858,
+    "ns": 0,
+    "title": "Hammer Talisman"
+  },
+  {
+    "pageid": 12733,
+    "ns": 0,
+    "title": "Heirlooms"
+  },
+  {
+    "pageid": 13447,
+    "ns": 0,
+    "title": "Host's Trick-Mirror"
+  },
+  {
+    "pageid": 296,
+    "ns": 0,
+    "title": "Immunizing Horn Charm"
+  },
+  {
+    "pageid": 2447,
+    "ns": 0,
+    "title": "Immunizing Horn Charm +1"
+  },
+  {
+    "pageid": 10362,
+    "ns": 0,
+    "title": "Immunizing Horn Charm +2"
+  },
+  {
+    "pageid": 10654,
+    "ns": 0,
+    "title": "Immunizing Horn Charms"
+  },
+  {
+    "pageid": 2851,
+    "ns": 0,
+    "title": "Kindred of Rot's Exultation"
+  },
+  {
+    "pageid": 16778,
+    "ns": 0,
+    "title": "Lacerating Crossed-Tree"
+  },
+  {
+    "pageid": 7896,
+    "ns": 0,
+    "title": "Lance Talisman"
+  },
+  {
+    "pageid": 3127,
+    "ns": 0,
+    "title": "Lightning Scorpion Charm"
+  },
+  {
+    "pageid": 3330,
+    "ns": 0,
+    "title": "Longtail Cat Talisman"
+  },
+  {
+    "pageid": 4897,
+    "ns": 0,
+    "title": "Lord of Blood's Exultation"
+  },
+  {
+    "pageid": 12463,
+    "ns": 0,
+    "title": "Magic Scorpion Charm"
+  },
+  {
+    "pageid": 13595,
+    "ns": 0,
+    "title": "Marika's Scarseal"
+  },
+  {
+    "pageid": 13178,
+    "ns": 0,
+    "title": "Marika's Seals"
+  },
+  {
+    "pageid": 10629,
+    "ns": 0,
+    "title": "Marika's Soreseal"
+  },
+  {
+    "pageid": 672,
+    "ns": 0,
+    "title": "Millicent's Prosthesis"
+  },
+  {
+    "pageid": 8553,
+    "ns": 0,
+    "title": "Moon of Nokstella"
+  },
+  {
+    "pageid": 10027,
+    "ns": 0,
+    "title": "Mottled Necklace"
+  },
+  {
+    "pageid": 5652,
+    "ns": 0,
+    "title": "Mottled Necklace +1"
+  },
+  {
+    "pageid": 6982,
+    "ns": 0,
+    "title": "Mottled Necklace +2"
+  },
+  {
+    "pageid": 1547,
+    "ns": 0,
+    "title": "Mottled Necklaces"
+  },
+  {
+    "pageid": 791,
+    "ns": 0,
+    "title": "Old Lord's Talisman"
+  },
+  {
+    "pageid": 10853,
+    "ns": 0,
+    "title": "Outer God Heirloom"
+  },
+  {
+    "pageid": 16017,
+    "ns": 0,
+    "title": "Pearl Shield Talisman"
+  },
+  {
+    "pageid": 4937,
+    "ns": 0,
+    "title": "Pearldrake Talisman"
+  },
+  {
+    "pageid": 13474,
+    "ns": 0,
+    "title": "Pearldrake Talisman +1"
+  },
+  {
+    "pageid": 4677,
+    "ns": 0,
+    "title": "Pearldrake Talisman +2"
+  },
+  {
+    "pageid": 3415,
+    "ns": 0,
+    "title": "Pearldrake Talisman +3"
+  },
+  {
+    "pageid": 11662,
+    "ns": 0,
+    "title": "Pearldrake Talismans"
+  },
+  {
+    "pageid": 11784,
+    "ns": 0,
+    "title": "Perfumer's Talisman"
+  },
+  {
+    "pageid": 12026,
+    "ns": 0,
+    "title": "Primal Glintstone Blade"
+  },
+  {
+    "pageid": 10937,
+    "ns": 0,
+    "title": "Prince of Death's Absesses"
+  },
+  {
+    "pageid": 1578,
+    "ns": 0,
+    "title": "Prince of Death's Cyst"
+  },
+  {
+    "pageid": 5593,
+    "ns": 0,
+    "title": "Prince of Death's Pustule"
+  },
+  {
+    "pageid": 9236,
+    "ns": 0,
+    "title": "Prosthesis-Wearer Heirloom"
+  },
+  {
+    "pageid": 7406,
+    "ns": 0,
+    "title": "Radagon Icon"
+  },
+  {
+    "pageid": 2270,
+    "ns": 0,
+    "title": "Radagon's Scarseal"
+  },
+  {
+    "pageid": 6668,
+    "ns": 0,
+    "title": "Radagon's Seals"
+  },
+  {
+    "pageid": 1969,
+    "ns": 0,
+    "title": "Radagon's Soreseal"
+  },
+  {
+    "pageid": 6793,
+    "ns": 0,
+    "title": "Red-Feathered Branchsword"
+  },
+  {
+    "pageid": 15744,
+    "ns": 0,
+    "title": "Rellana's Cameo"
+  },
+  {
+    "pageid": 16777,
+    "ns": 0,
+    "title": "Retaliatory Crossed-Tree"
+  },
+  {
+    "pageid": 12271,
+    "ns": 0,
+    "title": "Ritual Combat Talismans"
+  },
+  {
+    "pageid": 13301,
+    "ns": 0,
+    "title": "Ritual Shield Talisman"
+  },
+  {
+    "pageid": 4286,
+    "ns": 0,
+    "title": "Ritual Sword Talisman"
+  },
+  {
+    "pageid": 12874,
+    "ns": 0,
+    "title": "Roar Medallion"
+  },
+  {
+    "pageid": 1873,
+    "ns": 0,
+    "title": "Rotten Winged Sword Insignia"
+  },
+  {
+    "pageid": 9681,
+    "ns": 0,
+    "title": "Sacred Scorpion Charm"
+  },
+  {
+    "pageid": 9298,
+    "ns": 0,
+    "title": "Sacrificial Twig"
+  },
+  {
+    "pageid": 7621,
+    "ns": 0,
+    "title": "Scarab Talismans"
+  },
+  {
+    "pageid": 14255,
+    "ns": 0,
+    "title": "Scorpion Charms"
+  },
+  {
+    "pageid": 14667,
+    "ns": 0,
+    "title": "Shabriri's Woe"
+  },
+  {
+    "pageid": 8314,
+    "ns": 0,
+    "title": "Shard of Alexander"
+  },
+  {
+    "pageid": 16780,
+    "ns": 0,
+    "title": "Sharpshot Talisman"
+  },
+  {
+    "pageid": 15733,
+    "ns": 0,
+    "title": "Shattered Stone Talisman"
+  },
+  {
+    "pageid": 2747,
+    "ns": 0,
+    "title": "Silver Scarab"
+  },
+  {
+    "pageid": 15742,
+    "ns": 0,
+    "title": "Smithing Talisman"
+  },
+  {
+    "pageid": 918,
+    "ns": 0,
+    "title": "Spear Talisman"
+  },
+  {
+    "pageid": 14075,
+    "ns": 0,
+    "title": "Spelldrake Talisman"
+  },
+  {
+    "pageid": 6373,
+    "ns": 0,
+    "title": "Spelldrake Talisman +1"
+  },
+  {
+    "pageid": 10447,
+    "ns": 0,
+    "title": "Spelldrake Talisman +2"
+  },
+  {
+    "pageid": 5517,
+    "ns": 0,
+    "title": "Spelldrake Talisman +3"
+  },
+  {
+    "pageid": 52,
+    "ns": 0,
+    "title": "Spelldrake Talismans"
+  },
+  {
+    "pageid": 3603,
+    "ns": 0,
+    "title": "St. Trina's Smile"
+  },
+  {
+    "pageid": 12049,
+    "ns": 0,
+    "title": "Stalwart Horn Charm"
+  },
+  {
+    "pageid": 12417,
+    "ns": 0,
+    "title": "Stalwart Horn Charm +1"
+  },
+  {
+    "pageid": 2439,
+    "ns": 0,
+    "title": "Stalwart Horn Charm +2"
+  },
+  {
+    "pageid": 4854,
+    "ns": 0,
+    "title": "Stalwart Horn Charms"
+  },
+  {
+    "pageid": 12019,
+    "ns": 0,
+    "title": "Stargazer Heirloom"
+  },
+  {
+    "pageid": 6876,
+    "ns": 0,
+    "title": "Starscourge Heirloom"
+  },
+  {
+    "pageid": 4189,
+    "ns": 0,
+    "title": "Taker's Cameo"
+  },
+  {
+    "pageid": 4026,
+    "ns": 0,
+    "title": "Talisman of All Crucibles"
+  },
+  {
+    "pageid": 12843,
+    "ns": 0,
+    "title": "Talisman of Lord's Bestowal"
+  },
+  {
+    "pageid": 9070,
+    "ns": 0,
+    "title": "Talisman of the Dread"
+  },
+  {
+    "pageid": 6558,
+    "ns": 0,
+    "title": "Trick-Mirrors"
+  },
+  {
+    "pageid": 8105,
+    "ns": 0,
+    "title": "Twinblade Talisman"
+  },
+  {
+    "pageid": 11180,
+    "ns": 0,
+    "title": "Two Fingers Heirloom"
+  },
+  {
+    "pageid": 15743,
+    "ns": 0,
+    "title": "Two-Handed Sword Talisman"
+  },
+  {
+    "pageid": 12903,
+    "ns": 0,
+    "title": "Two-Headed Turtle Talisman"
+  },
+  {
+    "pageid": 5968,
+    "ns": 0,
+    "title": "Verdigris Discus"
+  },
+  {
+    "pageid": 10768,
+    "ns": 0,
+    "title": "Viridian Amber Medallion"
+  },
+  {
+    "pageid": 1298,
+    "ns": 0,
+    "title": "Viridian Amber Medallion +1"
+  },
+  {
+    "pageid": 10756,
+    "ns": 0,
+    "title": "Viridian Amber Medallion +2"
+  },
+  {
+    "pageid": 11811,
+    "ns": 0,
+    "title": "Viridian Amber Medallion +3"
+  },
+  {
+    "pageid": 6136,
+    "ns": 0,
+    "title": "Viridian Amber Medallions"
+  },
+  {
+    "pageid": 9023,
+    "ns": 0,
+    "title": "Warrior Jar Shard"
+  },
+  {
+    "pageid": 2462,
+    "ns": 0,
+    "title": "Warrior Jar Shards"
+  },
+  {
+    "pageid": 11365,
+    "ns": 0,
+    "title": "Weapon Talismans"
+  },
+  {
+    "pageid": 14173,
+    "ns": 0,
+    "title": "Winged Sword Insignia"
+  },
+  {
+    "pageid": 12543,
+    "ns": 0,
+    "title": "Winged Sword Insignias"
+  },
+  {
+    "pageid": 1921,
+    "ns": 0,
+    "title": "Woe Talismans"
+  }
+]
