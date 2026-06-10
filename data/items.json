@@ -16,83 +16,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Black-Key_Bolt"
   },
   {
-    "id": "ammo-bloodbone-arrow",
-    "name": "Bloodbone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bloodbone_Arrow"
-  },
-  {
-    "id": "ammo-bloodbone-arrow-fletched",
-    "name": "Bloodbone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bloodbone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-bone-arrow",
-    "name": "Bone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bone_Arrow"
-  },
-  {
-    "id": "ammo-bone-arrow-fletched",
-    "name": "Bone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-bone-ballista-bolt",
-    "name": "Bone Ballista Bolt",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bone_Ballista_Bolt"
-  },
-  {
-    "id": "ammo-bone-great-arrow",
-    "name": "Bone Great Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bone_Great_Arrow"
-  },
-  {
-    "id": "ammo-bone-great-arrow-fletched",
-    "name": "Bone Great Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bone_Great_Arrow_(Fletched)"
-  },
-  {
     "id": "ammo-burred-bolt",
     "name": "Burred Bolt",
     "category": "ammo",
@@ -102,39 +25,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Burred_Bolt"
-  },
-  {
-    "id": "ammo-coldbone-arrow",
-    "name": "Coldbone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Coldbone_Arrow"
-  },
-  {
-    "id": "ammo-coldbone-arrow-fletched",
-    "name": "Coldbone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Coldbone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-coldbone-bolt",
-    "name": "Coldbone Bolt",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Coldbone_Bolt"
   },
   {
     "id": "ammo-dwelling-arrow",
@@ -178,44 +68,6 @@
       "lng": 76.914567
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Explosive_Greatbolt"
-  },
-  {
-    "id": "ammo-fire-arrow",
-    "name": "Fire Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "Consumable Item. One arrow can be looted from a corpse in the road, guarded by two Mercenaries.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 5925,
-      "lat": -179.664062,
-      "lng": 98.611951
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fire_Arrow"
-  },
-  {
-    "id": "ammo-firebone-arrow",
-    "name": "Firebone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Firebone_Arrow"
-  },
-  {
-    "id": "ammo-firebone-arrow-fletched",
-    "name": "Firebone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Firebone_Arrow_(Fletched)"
   },
   {
     "id": "ammo-flaming-bolt",
@@ -315,39 +167,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Great_Arrow"
   },
   {
-    "id": "ammo-haligbone-arrow",
-    "name": "Haligbone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Haligbone_Arrow"
-  },
-  {
-    "id": "ammo-haligbone-arrow-fletched",
-    "name": "Haligbone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Haligbone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-haligbone-bolt",
-    "name": "Haligbone Bolt",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Haligbone_Bolt"
-  },
-  {
     "id": "ammo-igon-s-harpoon",
     "name": "Igon's Harpoon",
     "category": "ammo",
@@ -386,72 +205,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Lightning_Greatbolt"
   },
   {
-    "id": "ammo-lightningbone-arrow",
-    "name": "Lightningbone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lightningbone_Arrow"
-  },
-  {
-    "id": "ammo-lightningbone-arrow-fletched",
-    "name": "Lightningbone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lightningbone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-lightningbone-bolt",
-    "name": "Lightningbone Bolt",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lightningbone_Bolt"
-  },
-  {
-    "id": "ammo-magicbone-arrow",
-    "name": "Magicbone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Magicbone_Arrow"
-  },
-  {
-    "id": "ammo-magicbone-arrow-fletched",
-    "name": "Magicbone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Magicbone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-magicbone-bolt",
-    "name": "Magicbone Bolt",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Magicbone_Bolt"
-  },
-  {
     "id": "ammo-meteor-bolt",
     "name": "Meteor Bolt",
     "category": "ammo",
@@ -479,61 +232,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Perfumer's_Bolt"
   },
   {
-    "id": "ammo-piquebone-arrow",
-    "name": "Piquebone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Piquebone_Arrow"
-  },
-  {
-    "id": "ammo-piquebone-arrow-fletched",
-    "name": "Piquebone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Piquebone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-piquebone-bolt",
-    "name": "Piquebone Bolt",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Piquebone_Bolt"
-  },
-  {
-    "id": "ammo-poisonbone-arrow",
-    "name": "Poisonbone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Poisonbone_Arrow"
-  },
-  {
-    "id": "ammo-poisonbone-arrow-fletched",
-    "name": "Poisonbone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Poisonbone_Arrow_(Fletched)"
-  },
-  {
     "id": "ammo-rabbath-s-greatbolt",
     "name": "Rabbath's Greatbolt",
     "category": "ammo",
@@ -554,61 +252,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Radahn's_Spear"
-  },
-  {
-    "id": "ammo-rainbow-stone-arrow",
-    "name": "Rainbow Stone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rainbow_Stone_Arrow"
-  },
-  {
-    "id": "ammo-rainbow-stone-arrow-fletched",
-    "name": "Rainbow Stone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rainbow_Stone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-rotbone-arrow",
-    "name": "Rotbone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rotbone_Arrow"
-  },
-  {
-    "id": "ammo-rotbone-arrow-fletched",
-    "name": "Rotbone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rotbone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-rotbone-bolt",
-    "name": "Rotbone Bolt",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rotbone_Bolt"
   },
   {
     "id": "ammo-serpent-arrow",
@@ -643,55 +286,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Shattershard_Arrow"
   },
   {
-    "id": "ammo-sleepbone-arrow",
-    "name": "Sleepbone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sleepbone_Arrow"
-  },
-  {
-    "id": "ammo-sleepbone-arrow-fletched",
-    "name": "Sleepbone Arrow (Fletched)",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sleepbone_Arrow_(Fletched)"
-  },
-  {
-    "id": "ammo-sleepbone-bolt",
-    "name": "Sleepbone Bolt",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sleepbone_Bolt"
-  },
-  {
-    "id": "ammo-spiritflame-arrow",
-    "name": "Spiritflame Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "Ammunition. 15x found on a corpse sitting on a chair inside a building in the northeast. This building can be reached by following the eastern walkway all the way to the northeast and walking along a concrete beam connecting to the building.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 4829,
-      "lat": -35.121875,
-      "lng": 148.154407
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Spiritflame_Arrow"
-  },
-  {
     "id": "ammo-st-trina-s-arrow",
     "name": "St. Trina's Arrow",
     "category": "ammo",
@@ -706,17 +300,6 @@
       "lng": 119.86351922886303
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/St._Trina's_Arrow"
-  },
-  {
-    "id": "ammo-stormwing-bone-arrow",
-    "name": "Stormwing Bone Arrow",
-    "category": "ammo",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Stormwing_Bone_Arrow"
   },
   {
     "id": "armor-alberich-s-bracers",
@@ -12082,17 +11665,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Ashes_of_War_(Shadow_of_the_Erdtree)"
   },
   {
-    "id": "ash-of-war-skill",
-    "name": "Skill",
-    "category": "ash-of-war",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Skill"
-  },
-  {
     "id": "bell-bearing-abandoned-merchant-s-bell-bearing",
     "name": "Abandoned Merchant's Bell Bearing",
     "category": "bell-bearing",
@@ -13272,17 +12844,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Battlefield_Priest's_Cookbook_4"
   },
   {
-    "id": "cookbook-beastlure-pot",
-    "name": "Beastlure Pot",
-    "category": "cookbook",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a ritual pot. Enchanted with assassin incantations. Consumes FP. Throw to create a red shadow. The illusion lures in beasts into attacking it. This effect does not change even during combat.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Beastlure_Pot"
-  },
-  {
     "id": "cookbook-deserter-s-cookbook-1",
     "name": "Deserter's Cookbook 1",
     "category": "cookbook",
@@ -13706,22 +13267,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Grave_Keeper's_Cookbook_2"
   },
   {
-    "id": "cookbook-greasemonger-s-bell-bearing",
-    "name": "Greasemonger's Bell Bearing",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "Scadu Altus: Looted by shooting a pot hanging behind a wolf pack south from the Church District Highroad site of Grace, before the Furnace Golem.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659322,
-      "lat": -127.3515625,
-      "lng": 141.98900952179673
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Greasemonger's_Bell_Bearing"
-  },
-  {
     "id": "cookbook-greater-potentate-s-cookbook-1",
     "name": "Greater Potentate's Cookbook 1",
     "category": "cookbook",
@@ -13946,38 +13491,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Greater_Potentate's_Cookbook_9"
   },
   {
-    "id": "cookbook-herbalist-s-bell-bearing",
-    "name": "Herbalist's Bell Bearing",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "Found on the west wall of the ravine between Pillar Path Waypoint and Dragon's Pit Sites of Grace in Gravesite Plain. You must shoot down the pot that holds it to reveal the item.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659319,
-      "lat": -152.703125,
-      "lng": 119.35536736314202
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Herbalist's_Bell_Bearing"
-  },
-  {
-    "id": "cookbook-igon-s-bell-bearing",
-    "name": "Igon's Bell Bearing",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "After defeating Bayle the Dread while Igon is summoned, Igon will drop this item at his last location at the Foot of the Jagged Peak Drake.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659034,
-      "lat": -163.421875,
-      "lng": 145.87118770135532
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Igon's_Bell_Bearing"
-  },
-  {
     "id": "cookbook-igon-s-cookbook-1",
     "name": "Igon's Cookbook 1",
     "category": "cookbook",
@@ -14169,70 +13682,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Missionary's_Cookbook_7"
-  },
-  {
-    "id": "cookbook-moldmonger-s-bell-bearing",
-    "name": "Moldmonger's Bell Bearing",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "Inside a pot hanging from a rock wall right next to the Recluse's River Downstream grace. Shoot it down with a bow and drop down from the graves sticking out from the waterfall to grab it.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659324,
-      "lat": -137.2265625,
-      "lng": 136.3324539332389
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Moldmonger's_Bell_Bearing"
-  },
-  {
-    "id": "cookbook-moore-s-bell-bearing",
-    "name": "Moore's Bell Bearing",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "Can be looted from Moore's body after defeating him in Enir-Ilim .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 658969,
-      "lat": -141.04570317268372,
-      "lng": 96.24629796769065
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Moore's_Bell_Bearing"
-  },
-  {
-    "id": "cookbook-mushroom-seller-s-bell-bearing-1",
-    "name": "Mushroom-Seller's Bell Bearing 1",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "From the Temple Town Ruins Site of Grace in the Rauh Ruins, head south east along the water, which will terminate in a waterfall. To the south west of the waterfall there will be several large gravestones along the cliffside, navigate down the gravestones to the pond at the bottom. Head west following the base of the cliff and look for a black pot hanging by a rope on the side of the cliff wall. Destroy the pot to make it drop the Bell Bearing.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659321,
-      "lat": -135.578125,
-      "lng": 108.13592193497533
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Mushroom-Seller's_Bell_Bearing_1"
-  },
-  {
-    "id": "cookbook-mushroom-seller-s-bell-bearing-2",
-    "name": "Mushroom-Seller's Bell Bearing 2",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "Ellac River Downstream: Obtain this key item by shooting down a pot hanging from the side of the waterfall south from Ellac River Downstream site of grace. You can see the pot when traversing the large rock to descend from above across the river.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659468,
-      "lat": -156.44791662693024,
-      "lng": 119.44921875
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Mushroom-Seller's_Bell_Bearing_2"
   },
   {
     "id": "cookbook-nomadic-warrior-s-cookbook-1",
@@ -14623,22 +14072,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Perfumer's_Cookbook_4"
   },
   {
-    "id": "cookbook-spellmachinist-s-bell-bearing",
-    "name": "Spellmachinist's Bell Bearing",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "Starting at Shaman Village head southeast and follow the path to the lower peak, from here carefully jump down the ledges until you overlook Rabbath's Rise . Carefully jump to the balcony below and enter the room, jump to the lower level and you will see a body containing the bell bearing",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659325,
-      "lat": -122.453125,
-      "lng": 142.51985254638092
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Spellmachinist's_Bell_Bearing"
-  },
-  {
     "id": "cookbook-st-trina-disciple-s-cookbook-1",
     "name": "St. Trina Disciple's Cookbook 1",
     "category": "cookbook",
@@ -14687,22 +14120,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/St._Trina_Disciple's_Cookbook_3"
   },
   {
-    "id": "cookbook-string-seller-s-bell-bearing",
-    "name": "String-Seller's Bell Bearing",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "Hanging from a wall in a ravine in Prospect Town in the Shadow Lands. Shoot and break the hanging pot with a bow.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659326,
-      "lat": -158.1640625,
-      "lng": 102.88793824826357
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/String-Seller's_Bell_Bearing"
-  },
-  {
     "id": "cookbook-tibia-s-cookbook",
     "name": "Tibia's Cookbook",
     "category": "cookbook",
@@ -14717,22 +14134,6 @@
       "lng": 123.54321741014054
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Tibia's_Cookbook"
-  },
-  {
-    "id": "cookbook-ymir-s-bell-bearing",
-    "name": "Ymir's Bell Bearing",
-    "category": "cookbook",
-    "dlc": true,
-    "acquisition": "Dropped by Ymir, Mother of Fingers upon defeat. This boss is only available after completing Ymir's questline",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659493,
-      "lat": -132.15104162693024,
-      "lng": 137.33984375
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Ymir's_Bell_Bearing"
   },
   {
     "id": "crystal-tear-bloodsucking-cracked-tear",
@@ -14797,6 +14198,22 @@
       "lng": 143.24668779130872
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Cerulean-Sapping_Cracked_Tear"
+  },
+  {
+    "id": "crystal-tear-crimson-bubbletear",
+    "name": "Crimson Bubbletear",
+    "category": "crystal-tear",
+    "dlc": false,
+    "acquisition": "Physick Flask material. Dropped by the Erdtree Avatar guarding this tree.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 3419,
+      "lat": -67.734375,
+      "lng": 162.488508
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimson_Bubbletear"
   },
   {
     "id": "crystal-tear-crimson-crystal-tear",
@@ -14943,6 +14360,22 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Faith-knot_Crystal_Tear"
   },
   {
+    "id": "crystal-tear-flame-shrouding-cracked-tear",
+    "name": "Flame-Shrouding Cracked Tear",
+    "category": "crystal-tear",
+    "dlc": false,
+    "acquisition": "Physick Flask material. Dropped by the Erdtree Avatar guarding this tree.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 2929,
+      "lat": -166.945312,
+      "lng": 128.941765
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Flame-Shrouding_Cracked_Tear"
+  },
+  {
     "id": "crystal-tear-glovewort-crystal-tear",
     "name": "Glovewort Crystal Tear",
     "category": "crystal-tear",
@@ -15023,6 +14456,22 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Intelligence-knot_Crystal_Tear"
   },
   {
+    "id": "crystal-tear-leaden-hardtear",
+    "name": "Leaden Hardtear",
+    "category": "crystal-tear",
+    "dlc": false,
+    "acquisition": "Dropped by the Ulcerated Tree Spirit",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 2558,
+      "lat": -82.59375,
+      "lng": 68.152595
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Leaden_Hardtear"
+  },
+  {
     "id": "crystal-tear-lightning-shrouding-cracked-tear",
     "name": "Lightning-Shrouding Cracked Tear",
     "category": "crystal-tear",
@@ -15085,6 +14534,22 @@
       "lng": 104.473097
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Opaline_Bubbletear"
+  },
+  {
+    "id": "crystal-tear-opaline-hardtear",
+    "name": "Opaline Hardtear",
+    "category": "crystal-tear",
+    "dlc": false,
+    "acquisition": "Dropped by Putrid Avatar at the Minor Erdtree in Dragonbarrow .",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 5929,
+      "lat": -167.703125,
+      "lng": 156.090256
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Opaline_Hardtear"
   },
   {
     "id": "crystal-tear-purifying-crystal-tear",
@@ -15151,6 +14616,22 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Spiked_Cracked_Tear"
   },
   {
+    "id": "crystal-tear-stonebarb-cracked-tear",
+    "name": "Stonebarb Cracked Tear",
+    "category": "crystal-tear",
+    "dlc": false,
+    "acquisition": "Obtained by defeating the Putrid Avatar at the Minor Erdtree in Dragonbarrow .",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 5927,
+      "lat": -167.09375,
+      "lng": 155.488582
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Stonebarb_Cracked_Tear"
+  },
+  {
     "id": "crystal-tear-strength-knot-crystal-tear",
     "name": "Strength-knot Crystal Tear",
     "category": "crystal-tear",
@@ -15165,6 +14646,38 @@
       "lng": 98.629159
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Strength-knot_Crystal_Tear"
+  },
+  {
+    "id": "crystal-tear-thorny-cracked-tear",
+    "name": "Thorny Cracked Tear",
+    "category": "crystal-tear",
+    "dlc": false,
+    "acquisition": "Dropped by the Putrid Avatar under the Minor Erdtree in Consecrated Snowfield",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 8901,
+      "lat": -65.085937,
+      "lng": 147.683851
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Thorny_Cracked_Tear"
+  },
+  {
+    "id": "crystal-tear-twiggy-cracked-tear",
+    "name": "Twiggy Cracked Tear",
+    "category": "crystal-tear",
+    "dlc": false,
+    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Found on an altar at the base of the Minor Erdtree in Capital Outskirts . Guarded by enemies.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 1145,
+      "lat": -88.578125,
+      "lng": 114.45734
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Twiggy_Cracked_Tear"
   },
   {
     "id": "crystal-tear-viridian-hidden-tear",
@@ -15197,6 +14710,22 @@
       "lng": 144.941723
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Windy_Crystal_Tear"
+  },
+  {
+    "id": "crystal-tear-winged-crystal-tear",
+    "name": "Winged Crystal Tear",
+    "category": "crystal-tear",
+    "dlc": false,
+    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Found on an altar surrounded by Skull enemies.",
+    "missable": null,
+    "quest": null,
+    "map": {
+      "code": "overworld",
+      "markerId": 1143,
+      "lat": -86.34375,
+      "lng": 112.926944
+    },
+    "wikiUrl": "https://eldenring.wiki.gg/wiki/Winged_Crystal_Tear"
   },
   {
     "id": "golden-seed-01",
@@ -17842,22 +17371,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Black_Syrup"
   },
   {
-    "id": "key-item-black-whetblade",
-    "name": "Black Whetblade",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Key Item. Found on a corpse slumped in front of an altar in Night's Sacred Ground .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "underground",
-      "markerId": 1897,
-      "lat": -183.08594,
-      "lng": 129.02778
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Black_Whetblade"
-  },
-  {
     "id": "key-item-carian-inverted-statue",
     "name": "Carian Inverted Statue",
     "category": "key-item",
@@ -17888,38 +17401,6 @@
       "lng": 70.668407
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Celestial_Dew"
-  },
-  {
-    "id": "key-item-cerulean-crystal-tear",
-    "name": "Cerulean Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Dropped by Erdtree Avatar .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1064,
-      "lat": -149.109375,
-      "lng": 45.238533
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Cerulean_Crystal_Tear"
-  },
-  {
-    "id": "key-item-cerulean-hidden-tear",
-    "name": "Cerulean Hidden Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Flask of Wondrous Physick Upgrade. Dropped by the Ulcerated Tree Spirit .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3404,
-      "lat": -82.773437,
-      "lng": 68.887106
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Cerulean_Hidden_Tear"
   },
   {
     "id": "key-item-chrysalids-memento",
@@ -17979,86 +17460,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Crafting_Kit"
-  },
-  {
-    "id": "key-item-crimson-bubbletear",
-    "name": "Crimson Bubbletear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Physick Flask material. Dropped by the Erdtree Avatar guarding this tree.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3419,
-      "lat": -67.734375,
-      "lng": 162.488508
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimson_Bubbletear"
-  },
-  {
-    "id": "key-item-crimson-crystal-tear",
-    "name": "Crimson Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "A crystal mixed to enhance the effects of the Flask of Wondrous Physick . Located in front of the statue in Third Church of Marika .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 789,
-      "lat": -179.625,
-      "lng": 123.939924
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimson_Crystal_Tear"
-  },
-  {
-    "id": "key-item-crimsonburst-crystal-tear",
-    "name": "Crimsonburst Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Dropped by the Erdtree Avatar boss upon defeat.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 716,
-      "lat": -211.75,
-      "lng": 105.113215
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimsonburst_Crystal_Tear"
-  },
-  {
-    "id": "key-item-crimsonspill-crystal-tear",
-    "name": "Crimsonspill Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Flask Upgrade. Dropped by Wormface upon defeat.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 5781,
-      "lat": -86.101562,
-      "lng": 91.59799
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimsonspill_Crystal_Tear"
-  },
-  {
-    "id": "key-item-crimsonwhorl-bubbletear",
-    "name": "Crimsonwhorl Bubbletear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "On a cliff ledge south of Giants' Gravepost (above the grace point, the ledge is accessed by going north-east from the Foot of the Forge grace point, Just follow the edge of the cliff until you see the path going above Giant's Gravepost).",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3573,
-      "lat": -80.789062,
-      "lng": 163.246436
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimsonwhorl_Bubbletear"
   },
   {
     "id": "key-item-cursemark-of-death",
@@ -18125,22 +17526,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Dectus_Medallion_(Right)"
   },
   {
-    "id": "key-item-dexterity-knot-crystal-tear",
-    "name": "Dexterity-knot Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Physick Flask Material. Found inside a stone receptacle on top of a craggy hill.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1057,
-      "lat": -153.976562,
-      "lng": 63.480735
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dexterity-knot_Crystal_Tear"
-  },
-  {
     "id": "key-item-discarded-palace-key",
     "name": "Discarded Palace Key",
     "category": "key-item",
@@ -18182,22 +17567,6 @@
       "lng": 130.8476948055657
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragon_Heart"
-  },
-  {
-    "id": "key-item-faith-knot-crystal-tear",
-    "name": "Faith-knot Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "North of the Demi-Human Forest Ruins . Directly east of the Church of Pilgrimage , just down the cliff. It's in a bowl under a tree and surrounded by Poison Flowers .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3916,
-      "lat": -205.25,
-      "lng": 107.918179
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Faith-knot_Crystal_Tear"
   },
   {
     "id": "key-item-fingerprint-grape",
@@ -18248,22 +17617,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Fire_Monks'_Prayerbook"
   },
   {
-    "id": "key-item-flame-shrouding-cracked-tear",
-    "name": "Flame-Shrouding Cracked Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Physick Flask material. Dropped by the Erdtree Avatar guarding this tree.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2929,
-      "lat": -166.945312,
-      "lng": 128.941765
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Flame-Shrouding_Cracked_Tear"
-  },
-  {
     "id": "key-item-gaol-lower-level-key",
     "name": "Gaol Lower Level Key",
     "category": "key-item",
@@ -18310,38 +17663,6 @@
       "lng": 161.567083
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Giant's_Prayerbook"
-  },
-  {
-    "id": "key-item-glintstone-whetblade",
-    "name": "Glintstone Whetblade",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Looted off a corpse that is hanging on the fence of an office balcony. From the fountain of the academy's courtyard, go west and head up the slope. The office is in front of the group of kneeling Noble Zombies.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2269,
-      "lat": -136.953125,
-      "lng": 57.606234
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Glintstone_Whetblade"
-  },
-  {
-    "id": "key-item-godrick-s-great-rune",
-    "name": "Godrick's Great Rune",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Dropped as a reward for defeating Godrick the Grafted located at Stormveil Castle .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 8351,
-      "lat": -173.4375,
-      "lng": 86.32521
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Godrick's_Great_Rune"
   },
   {
     "id": "key-item-godskin-prayerbook",
@@ -18419,38 +17740,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Tailoring_Tools"
   },
   {
-    "id": "key-item-greenburst-crystal-tear",
-    "name": "Greenburst Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Physick Flask material. Dropped by the Erdtree Avatar guarding this tree.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2928,
-      "lat": -166.664062,
-      "lng": 128.433858
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Greenburst_Crystal_Tear"
-  },
-  {
-    "id": "key-item-greenspill-crystal-tear",
-    "name": "Greenspill Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Found on an altar next to the Minor Erdtree in Mistwood .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 735,
-      "lat": -189.148437,
-      "lng": 122.394974
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Greenspill_Crystal_Tear"
-  },
-  {
     "id": "key-item-heart-of-bayle",
     "name": "Heart of Bayle",
     "category": "key-item",
@@ -18499,22 +17788,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Hole-Laden_Necklace"
   },
   {
-    "id": "key-item-holy-shrouding-cracked-tear",
-    "name": "Holy-Shrouding Cracked Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Dropped by the Erdtree Avatar.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1864,
-      "lat": -122.632812,
-      "lng": 75.980671
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Holy-Shrouding_Cracked_Tear"
-  },
-  {
     "id": "key-item-igon-s-furled-finger",
     "name": "Igon's Furled Finger",
     "category": "key-item",
@@ -18547,38 +17820,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Imbued_Sword_Key"
   },
   {
-    "id": "key-item-intelligence-knot-crystal-tear",
-    "name": "Intelligence-knot Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "From Road to the Manor Site of Grace, head southeast down the slope and turn back towards north. Loot from a small, half-bowl structure guarded by a few Lesser Spider Hand and one Spider Hand .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 5920,
-      "lat": -112.023437,
-      "lng": 54.559304
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Intelligence-knot_Crystal_Tear"
-  },
-  {
-    "id": "key-item-iron-whetblade",
-    "name": "Iron Whetblade",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Key Item. Found on a corpse inside the Armory. Requires a Stonesword Key in order to dispel the fog gate barring entry.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 923,
-      "lat": -178.914062,
-      "lng": 86.153061
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Iron_Whetblade"
-  },
-  {
     "id": "key-item-keep-wall-key",
     "name": "Keep Wall Key",
     "category": "key-item",
@@ -18588,22 +17829,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Keep_Wall_Key"
-  },
-  {
-    "id": "key-item-leaden-hardtear",
-    "name": "Leaden Hardtear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Dropped by the Ulcerated Tree Spirit",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2558,
-      "lat": -82.59375,
-      "lng": 68.152595
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Leaden_Hardtear"
   },
   {
     "id": "key-item-letter-for-freyja",
@@ -18620,22 +17845,6 @@
       "lng": 129.73077295278364
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Letter_for_Freyja"
-  },
-  {
-    "id": "key-item-lightning-shrouding-cracked-tear",
-    "name": "Lightning-Shrouding Cracked Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Dropped by the Erdtree Avatar.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1863,
-      "lat": -122.28125,
-      "lng": 75.535297
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lightning-Shrouding_Cracked_Tear"
   },
   {
     "id": "key-item-lord-of-blood-s-favor",
@@ -18684,22 +17893,6 @@
       "lng": 113.47256631364333
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Lost_Ashes_of_War"
-  },
-  {
-    "id": "key-item-magic-shrouding-cracked-tear",
-    "name": "Magic-Shrouding Cracked Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Dropped by the Erdtree Avatar.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1862,
-      "lat": -122.53125,
-      "lng": 75.128972
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Magic-Shrouding_Cracked_Tear"
   },
   {
     "id": "key-item-mending-rune-of-perfect-order",
@@ -18788,38 +17981,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Monk's_Missive"
   },
   {
-    "id": "key-item-opaline-bubbletear",
-    "name": "Opaline Bubbletear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Dropped by the Erdtree Avatar boss upon defeat.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 715,
-      "lat": -212.109375,
-      "lng": 104.473097
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Opaline_Bubbletear"
-  },
-  {
-    "id": "key-item-opaline-hardtear",
-    "name": "Opaline Hardtear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Dropped by Putrid Avatar at the Minor Erdtree in Dragonbarrow .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 5929,
-      "lat": -167.703125,
-      "lng": 156.090256
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Opaline_Hardtear"
-  },
-  {
     "id": "key-item-perfume-bottle",
     "name": "Perfume Bottle",
     "category": "key-item",
@@ -18850,38 +18011,6 @@
       "lng": 116.06652620064888
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Prayer_Room_Key"
-  },
-  {
-    "id": "key-item-purifying-crystal-tear",
-    "name": "Purifying Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "It can be found at the Second Church of Marika after defeating the invader Eleonora, Violet Bloody Finger",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 5778,
-      "lat": -93.273437,
-      "lng": 83.434067
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Purifying_Crystal_Tear"
-  },
-  {
-    "id": "key-item-red-hot-whetblade",
-    "name": "Red-Hot Whetblade",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Key Item. Found in Redmane Castle , at the bottom level of the gate house building east of the main gate.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6812,
-      "lat": -194.265625,
-      "lng": 157.027779
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Red-Hot_Whetblade"
   },
   {
     "id": "key-item-ritual-pot",
@@ -18980,22 +18109,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Ruins_Map_(3rd)"
   },
   {
-    "id": "key-item-ruptured-crystal-tear",
-    "name": "Ruptured Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Dropped by Erdtree Avatar .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1065,
-      "lat": -149.109375,
-      "lng": 45.933974
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Ruptured_Crystal_Tear"
-  },
-  {
     "id": "key-item-rya-s-necklace",
     "name": "Rya's Necklace",
     "category": "key-item",
@@ -19005,22 +18118,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Rya's_Necklace"
-  },
-  {
-    "id": "key-item-sanctified-whetblade",
-    "name": "Sanctified Whetblade",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Found inside the fortified manor, you have to access by jumping through the roof and entering the building.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3942,
-      "lat": -105.398437,
-      "lng": 113.129897
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sanctified_Whetblade"
   },
   {
     "id": "key-item-secret-rite-scroll",
@@ -19141,38 +18238,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Sewing_Needle"
   },
   {
-    "id": "key-item-speckled-hardtear",
-    "name": "Speckled Hardtear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Flask Upgrade. Dropped by Wormface upon defeat.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 5780,
-      "lat": -86.96875,
-      "lng": 91.40257
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Speckled_Hardtear"
-  },
-  {
-    "id": "key-item-spiked-cracked-tear",
-    "name": "Spiked Cracked Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Found on an altar next to the Minor Erdtree in Mistwood .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 734,
-      "lat": -189.28125,
-      "lng": 120.543171
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Spiked_Cracked_Tear"
-  },
-  {
     "id": "key-item-spirit-calling-bell",
     "name": "Spirit Calling Bell",
     "category": "key-item",
@@ -19187,22 +18252,6 @@
       "lng": 97.863719
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Spirit_Calling_Bell"
-  },
-  {
-    "id": "key-item-stonebarb-cracked-tear",
-    "name": "Stonebarb Cracked Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Obtained by defeating the Putrid Avatar at the Minor Erdtree in Dragonbarrow .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 5927,
-      "lat": -167.09375,
-      "lng": 155.488582
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Stonebarb_Cracked_Tear"
   },
   {
     "id": "key-item-storehouse-cross-message",
@@ -19237,22 +18286,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Storeroom_Key"
   },
   {
-    "id": "key-item-strength-knot-crystal-tear",
-    "name": "Strength-knot Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Physick Flask Material. Found inside a stone receptacle near the edge of the cliffs.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1350,
-      "lat": -177.34375,
-      "lng": 98.629159
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Strength-knot_Crystal_Tear"
-  },
-  {
     "id": "key-item-tailoring-tools",
     "name": "Tailoring Tools",
     "category": "key-item",
@@ -19285,22 +18318,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Talisman_Pouch"
   },
   {
-    "id": "key-item-thorny-cracked-tear",
-    "name": "Thorny Cracked Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Dropped by the Putrid Avatar under the Minor Erdtree in Consecrated Snowfield",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 8901,
-      "lat": -65.085937,
-      "lng": 147.683851
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Thorny_Cracked_Tear"
-  },
-  {
     "id": "key-item-tonic-of-forgetfulness",
     "name": "Tonic of Forgetfulness",
     "category": "key-item",
@@ -19310,22 +18327,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Tonic_of_Forgetfulness"
-  },
-  {
-    "id": "key-item-twiggy-cracked-tear",
-    "name": "Twiggy Cracked Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Found on an altar at the base of the Minor Erdtree in Capital Outskirts . Guarded by enemies.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1145,
-      "lat": -88.578125,
-      "lng": 114.45734
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Twiggy_Cracked_Tear"
   },
   {
     "id": "key-item-two-fingers-prayerbook",
@@ -19439,38 +18440,6 @@
       "lng": 103.12139
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Whetstone_Knife"
-  },
-  {
-    "id": "key-item-windy-crystal-tear",
-    "name": "Windy Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "The item can be found in Caelid in a pit southeast of the Nomadic Merchant Caelid South . One of the birds watches over it, facing south.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 5933,
-      "lat": -188.890625,
-      "lng": 144.941723
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Windy_Crystal_Tear"
-  },
-  {
-    "id": "key-item-winged-crystal-tear",
-    "name": "Winged Crystal Tear",
-    "category": "key-item",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Found on an altar surrounded by Skull enemies.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1143,
-      "lat": -86.34375,
-      "lng": 112.926944
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Winged_Crystal_Tear"
   },
   {
     "id": "larval-tear-01",
@@ -29415,50 +28384,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Woe_Talismans"
   },
   {
-    "id": "tool-academy-magic-pot",
-    "name": "Academy Magic Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Academy_Magic_Pot"
-  },
-  {
-    "id": "tool-acid-spraymist",
-    "name": "Acid Spraymist",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Acid_Spraymist"
-  },
-  {
-    "id": "tool-albinauric-pot",
-    "name": "Albinauric Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Albinauric_Pot"
-  },
-  {
-    "id": "tool-alluring-pot",
-    "name": "Alluring Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Alluring_Pot"
-  },
-  {
     "id": "tool-ancestral-infant-s-head",
     "name": "Ancestral Infant's Head",
     "category": "tool",
@@ -29491,17 +28416,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Ancient_Dragon's_Blessing"
   },
   {
-    "id": "tool-ancient-dragonbolt-pot",
-    "name": "Ancient Dragonbolt Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Ancient_Dragonbolt_Pot"
-  },
-  {
     "id": "tool-baldachin-s-blessing",
     "name": "Baldachin's Blessing",
     "category": "tool",
@@ -29511,33 +28425,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Baldachin's_Blessing"
-  },
-  {
-    "id": "tool-beastlure-pot",
-    "name": "Beastlure Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a ritual pot. Enchanted with assassin incantations. Consumes FP. Throw to create a red shadow. The illusion lures in beasts into attacking it. This effect does not change even during combat.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Beastlure_Pot"
-  },
-  {
-    "id": "tool-bewitching-branch",
-    "name": "Bewitching Branch",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Can be found on a corpse, surrounded by bats.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6954,
-      "lat": -202.914062,
-      "lng": 102.876789
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bewitching_Branch"
   },
   {
     "id": "tool-blasphemous-claw",
@@ -29572,49 +28459,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Blessing_of_Marika"
   },
   {
-    "id": "tool-blood-grease",
-    "name": "Blood Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. Two can be found by a grave with a wooden pole next to it.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 513,
-      "lat": -204.671875,
-      "lng": 103.35344
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Blood_Grease"
-  },
-  {
-    "id": "tool-bloodboil-aromatic",
-    "name": "Bloodboil Aromatic",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Forbidden art of depraved perfumers. Craftable with a perfume bottle. Uses FP to enter a temporary state of fervor, raising maximum attack power and stamina while also increasing damage received. \"Even upon the battlefield, do you fear being wounded? Take a good look. Your limbs are frozen stiff.\"",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bloodboil_Aromatic"
-  },
-  {
-    "id": "tool-bloodsucking-cracked-tear",
-    "name": "Bloodsucking Cracked Tear",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Defeat the Furnace Golem that requires to be lit by throwing a Hefty Fire Pot on its furnace head. Killing the creature drops this item, along with x1 Furnace Visage.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655693,
-      "lat": -122.703125,
-      "lng": 132.42603971508865
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bloodsucking_Cracked_Tear"
-  },
-  {
     "id": "tool-bloody-finger",
     "name": "Bloody Finger",
     "category": "tool",
@@ -29642,28 +28486,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Blue_Cipher_Ring"
   },
   {
-    "id": "tool-boiled-crab",
-    "name": "Boiled Crab",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Boiled_Crab"
-  },
-  {
-    "id": "tool-boiled-prawn",
-    "name": "Boiled Prawn",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Boiled prawn meat. A prime specimen of plump and moist meat. True connoisseurs know how to keep from over-salting.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Boiled_Prawn"
-  },
-  {
     "id": "tool-bondstone",
     "name": "Bondstone",
     "category": "tool",
@@ -29678,533 +28500,6 @@
       "lng": 110.08203125
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Bondstone"
-  },
-  {
-    "id": "tool-bone-dart",
-    "name": "Bone Dart",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Found on the bridge guarded by a Fire Knight on the way to the elevator",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655532,
-      "lat": -119.3125,
-      "lng": 127.01935703596234
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Bone_Dart"
-  },
-  {
-    "id": "tool-broken-rune",
-    "name": "Broken Rune",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "A Broken Rune can be found inside a house on the left, at the south entrance of the Abandoned Ailing Village.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 654973,
-      "lat": -138.5703125,
-      "lng": 109.86299264188155
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Broken_Rune"
-  },
-  {
-    "id": "tool-call-of-tibia",
-    "name": "Call of Tibia",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Looted from a grave by a skeleton ambush",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655719,
-      "lat": -166.50260412693024,
-      "lng": 123.19921875
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Call_of_Tibia"
-  },
-  {
-    "id": "tool-cerulean-sapping-cracked-tear",
-    "name": "Cerulean-Sapping Cracked Tear",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "The item drops from the Furnace Golem located east of the Cathedral of Manus Metyr within the Scadu Atlus region.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655691,
-      "lat": -129.9140625,
-      "lng": 143.24668779130872
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Cerulean-Sapping_Cracked_Tear"
-  },
-  {
-    "id": "tool-charming-branch",
-    "name": "Charming Branch",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Charming_Branch"
-  },
-  {
-    "id": "tool-clarifying-boluses",
-    "name": "Clarifying Boluses",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found on the upper platform where there are some enemies.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3867,
-      "lat": -100.96875,
-      "lng": 114.208029
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Clarifying_Boluses"
-  },
-  {
-    "id": "tool-clarifying-cured-meat",
-    "name": "Clarifying Cured Meat",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Cured strip of meat, dried out after pickling in a purple medicinal solution. Craftable item. Temporarily boosts focus. Higher focus helps to mitigate the buildup of sleep and madness.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Clarifying_Cured_Meat"
-  },
-  {
-    "id": "tool-clarifying-white-cured-meat",
-    "name": "Clarifying White Cured Meat",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "A white sliced meat, dried out after pickling in a purple medicinal solution. Craftable item.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Clarifying_White_Cured_Meat"
-  },
-  {
-    "id": "tool-crimson-sapping-cracked-tear",
-    "name": "Crimson-Sapping Cracked Tear",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "The item drops from the Furnace Golem located in the west section of Rauh Ancient Ruins.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655746,
-      "lat": -126.625,
-      "lng": 103.59762626233778
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimson-Sapping_Cracked_Tear"
-  },
-  {
-    "id": "tool-crimsonburst-crystal-tear",
-    "name": "Crimsonburst Crystal Tear",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Crystal Tear for the Flask of Wondrous Physick. Dropped by the Erdtree Avatar boss upon defeat.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 716,
-      "lat": -211.75,
-      "lng": 105.113215
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimsonburst_Crystal_Tear"
-  },
-  {
-    "id": "tool-crimsonburst-dried-tear",
-    "name": "Crimsonburst Dried Tear",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "The item drops from the Furnace Golem located around the army campsite, outside of the Shadow Keep.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655567,
-      "lat": -125.953125,
-      "lng": 122.80132388388778
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimsonburst_Dried_Tear"
-  },
-  {
-    "id": "tool-crystal-dart",
-    "name": "Crystal Dart",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Offensive Consumable. Found on a gravestone in the western portion of the upper manor. This area is only accessible by dropping down from a ledge near the entrance to the boss room.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1534,
-      "lat": -106.25,
-      "lng": 56.253357
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crystal_Dart"
-  },
-  {
-    "id": "tool-cuckoo-glintstone",
-    "name": "Cuckoo Glintstone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. Four can be found on a dead body, against a wall within Purified Ruins. Beware of the group of Soldiers.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 750,
-      "lat": -160.65625,
-      "lng": 80.426285
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Cuckoo_Glintstone"
-  },
-  {
-    "id": "tool-cursed-blood-pot",
-    "name": "Cursed-Blood Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a ritual pot. Decorated with the crest of the Lord of Blood. Throw at enemies to douse them in accursed blood, causing summoned spirits to assail them with a rabid fervor. A childhood memory of the Lord of Blood.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Cursed-Blood_Pot"
-  },
-  {
-    "id": "tool-dappled-cured-meat",
-    "name": "Dappled Cured Meat",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. Found in Miquella's Haligtree , looted from a corpse after two patrolling Oracle Envoy enemies.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 12360,
-      "lat": -49.711954,
-      "lng": 148.384412
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dappled_Cured_Meat"
-  },
-  {
-    "id": "tool-dappled-white-cured-meat",
-    "name": "Dappled White Cured Meat",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. Found on a corpse sitting on the ground in Wyndham Ruins , on an enclosed space.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 9542,
-      "lat": -93.068588,
-      "lng": 73.669123
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dappled_White_Cured_Meat"
-  },
-  {
-    "id": "tool-deathsbane-jerky",
-    "name": "Deathsbane Jerky",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Deathsbane_Jerky"
-  },
-  {
-    "id": "tool-deflecting-hardtear",
-    "name": "Deflecting Hardtear",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "The item drops from the Furnace Golem located along the main road near the Scorched Ruins.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655568,
-      "lat": -152.5570043361075,
-      "lng": 112.83184502919555
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Deflecting_Hardtear"
-  },
-  {
-    "id": "tool-dragon-communion-flesh",
-    "name": "Dragon Communion Flesh",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragon_Communion_Flesh"
-  },
-  {
-    "id": "tool-dragon-communion-grease",
-    "name": "Dragon Communion Grease",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Can be found on one of the dragon corpses in the area.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659022,
-      "lat": -173.015625,
-      "lng": 131.66054269862047
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragon_Communion_Grease"
-  },
-  {
-    "id": "tool-dragon-communion-harpoon",
-    "name": "Dragon Communion Harpoon",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Consumable looted atop the wing of the giant dead dragon.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659480,
-      "lat": -169.16666662693024,
-      "lng": 128.27734375
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragon_Communion_Harpoon"
-  },
-  {
-    "id": "tool-dragonbolt-grease",
-    "name": "Dragonbolt Grease",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Keep following the path after the first Lionface warrior. You can pick up x1 Dragonbolt Grease on the ground, but there will be a magic attack which seems to be coming from above.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659397,
-      "lat": -136.40507817268372,
-      "lng": 97.0743712971875
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragonbolt_Grease"
-  },
-  {
-    "id": "tool-dragonscale-flesh",
-    "name": "Dragonscale Flesh",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Dropped by the Jagged Peak Drake .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655571,
-      "lat": -158.421875,
-      "lng": 130.9414619413727
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragonscale_Flesh"
-  },
-  {
-    "id": "tool-dragonwound-grease",
-    "name": "Dragonwound Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found on a body at the stairs.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1601,
-      "lat": -108.867187,
-      "lng": 73.43344
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragonwound_Grease"
-  },
-  {
-    "id": "tool-drawstring-blood-grease",
-    "name": "Drawstring Blood Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "???",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Blood_Grease"
-  },
-  {
-    "id": "tool-drawstring-dragonbolt-grease",
-    "name": "Drawstring Dragonbolt Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Dragonbolt_Grease"
-  },
-  {
-    "id": "tool-drawstring-eternal-sleep-grease",
-    "name": "Drawstring Eternal Sleep Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Eternal_Sleep_Grease"
-  },
-  {
-    "id": "tool-drawstring-fire-grease",
-    "name": "Drawstring Fire Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found on a body in the corner between some rubble and a sunken building.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2832,
-      "lat": -82.960937,
-      "lng": 81.458153
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Fire_Grease"
-  },
-  {
-    "id": "tool-drawstring-golden-grease",
-    "name": "Drawstring Golden Grease",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Found in the big stairs by the door that opens a shortcut to the grace.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655583,
-      "lat": -120.5234375,
-      "lng": 126.52763363073478
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Golden_Grease"
-  },
-  {
-    "id": "tool-drawstring-holy-grease",
-    "name": "Drawstring Holy Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Weapon Coating. Found on a body near a giant rock.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3577,
-      "lat": -85.5,
-      "lng": 153.910631
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Holy_Grease"
-  },
-  {
-    "id": "tool-drawstring-lightning-grease",
-    "name": "Drawstring Lightning Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. Two can be found on a corpse by the side of the road guarded by a Zombie Dog .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1078,
-      "lat": -170.1875,
-      "lng": 125.867003
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Lightning_Grease"
-  },
-  {
-    "id": "tool-drawstring-magic-grease",
-    "name": "Drawstring Magic Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Solidified grease made from a mixture of magically resonant materials. Craftable item. A short string is attached to this lump. Quickly coats armament, inflicting magic damage, but with a brief effect, owing to its small size.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Magic_Grease"
-  },
-  {
-    "id": "tool-drawstring-messmerfire-grease",
-    "name": "Drawstring Messmerfire Grease",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Found on a body, just outside a large tent.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 658995,
-      "lat": -124.7265625,
-      "lng": 122.40222711044953
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Messmerfire_Grease"
-  },
-  {
-    "id": "tool-drawstring-poison-grease",
-    "name": "Drawstring Poison Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Poison_Grease"
-  },
-  {
-    "id": "tool-drawstring-rot-grease",
-    "name": "Drawstring Rot Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Solidified grease made from a mixture of rotten materials. Craftable item. A short string is attached to this lump. Quickly coats armament, inflicting scarlet rot, but with a brief effect, owing to its small size.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Rot_Grease"
-  },
-  {
-    "id": "tool-drawstring-royal-magic-grease",
-    "name": "Drawstring Royal Magic Grease",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "x3 Drawstring Royal Magic Grease can be looted off a corpse. The body is found sitting on a rock formation under the waterfall.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655132,
-      "lat": -136.46875,
-      "lng": 119.62943603203253
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Royal_Magic_Grease"
-  },
-  {
-    "id": "tool-drawstring-soporific-grease",
-    "name": "Drawstring Soporific Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Drawstring_Soporific_Grease"
   },
   {
     "id": "tool-duelist-s-furled-finger",
@@ -30223,125 +28518,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Duelist's_Furled_Finger"
   },
   {
-    "id": "tool-eternal-sleep-grease",
-    "name": "Eternal Sleep Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Eternal_Sleep_Grease"
-  },
-  {
-    "id": "tool-eternal-sleep-pot",
-    "name": "Eternal Sleep Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Eternal_Sleep_Pot"
-  },
-  {
-    "id": "tool-exalted-flesh",
-    "name": "Exalted Flesh",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found hanging over an edge, above the staircase. Near a tree and some graves.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3828,
-      "lat": -100.984375,
-      "lng": 122.27065
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Exalted_Flesh"
-  },
-  {
-    "id": "tool-explosive-stone",
-    "name": "Explosive Stone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "A small stone with a smoldering core.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Explosive_Stone"
-  },
-  {
-    "id": "tool-explosive-stone-clump",
-    "name": "Explosive Stone Clump",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "A clump of small stones with smoldering cores.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Explosive_Stone_Clump"
-  },
-  {
-    "id": "tool-fan-daggers",
-    "name": "Fan Daggers",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found at the end of the alley on your left, beware of the enemy hiding behind the wall.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2880,
-      "lat": -102.773437,
-      "lng": 117.309007
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fan_Daggers"
-  },
-  {
-    "id": "tool-festering-bloody-finger",
-    "name": "Festering Bloody Finger",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Can be found x3 Festering Bloody Finger at Stormveil Castle on a rooftop, in the courtyard",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6904,
-      "lat": -179.10156,
-      "lng": 87.5131
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Festering_Bloody_Finger"
-  },
-  {
-    "id": "tool-festive-grease",
-    "name": "Festive Grease",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Past the Ghost Npc, take the stairs up and find in near the edge, besides a couple of Messmer Soldiers.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655575,
-      "lat": -119.0546875,
-      "lng": 123.9175175070828
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Festive_Grease"
-  },
-  {
-    "id": "tool-fetid-pot",
-    "name": "Fetid Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. A cocktail of effluents is sealed inside. As the mixture ferments, toxins are produced alongside a putrid stench that seeps out once ripe. Throw at enemies to cause buildup of deadly poison. Beware though; those who carry these pots will slowly accumulate poison in their own bodies. Push someone in a privy; expect to get dung on your hands.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fetid_Pot"
-  },
-  {
     "id": "tool-finger-severer",
     "name": "Finger Severer",
     "category": "tool",
@@ -30356,145 +28532,6 @@
       "lng": 100.809578
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Finger_Severer"
-  },
-  {
-    "id": "tool-finger-weaver-s-cookbook-1",
-    "name": "Finger-Weaver's Cookbook (1)",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Can be found at Finger-Weaver's Hovel. Accessible via Finger Ruins of Rhia following the path to the left and heading straight underneath the Grand Altar of Dragon Communion.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659229,
-      "lat": -171.125,
-      "lng": 127.45719552804817
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Finger-Weaver's_Cookbook_(1)"
-  },
-  {
-    "id": "tool-finger-weaver-s-cookbook-2",
-    "name": "Finger-Weaver's Cookbook (2)",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Found on a corpse before the bell in Finger Ruins of Miyr. Only accessible after progressing Ymir's questline and finding the secret path under the Catherdal.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655726,
-      "lat": -128.41250002384186,
-      "lng": 137.6798074312079
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Finger-Weaver's_Cookbook_(2)"
-  },
-  {
-    "id": "tool-fingerprint-nostrum",
-    "name": "Fingerprint Nostrum",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Consumable looted from a corpse guarded by several small fingercreepers and a large one.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659490,
-      "lat": -116.40104162693024,
-      "lng": 141.07421875
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fingerprint_Nostrum"
-  },
-  {
-    "id": "tool-fire-coil",
-    "name": "Fire Coil",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "x2 found Inside one of the right tent in the Messmer Soldiers Camp, near the Church of Consolation.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655017,
-      "lat": -157.0390625,
-      "lng": 122.09017218630049
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fire_Coil"
-  },
-  {
-    "id": "tool-fire-grease",
-    "name": "Fire Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. 2 can be found on a corpse near the the burning pile of corpses in the courtyard.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 761,
-      "lat": -226.632812,
-      "lng": 108.816458
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fire_Grease"
-  },
-  {
-    "id": "tool-fire-pot",
-    "name": "Fire Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. A cocktail of incendiary materials is sealed inside.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fire_Pot"
-  },
-  {
-    "id": "tool-fire-spritestone",
-    "name": "Fire Spritestone",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Past the door opened with the lever, turn to the right at the first forked path and past the shadow enemies, you will find the item on a body hanging on the edge.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655634,
-      "lat": -117.0390625,
-      "lng": 107.85405790189179
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fire_Spritestone"
-  },
-  {
-    "id": "tool-fireproof-dried-liver",
-    "name": "Fireproof Dried Liver",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. Found on a corpse guarded by the Bloodhound Knight in Volcano Manor's secret passageway.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 4519,
-      "lat": -87.867187,
-      "lng": 63.410374
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fireproof_Dried_Liver"
-  },
-  {
-    "id": "tool-fireproof-pickled-liver",
-    "name": "Fireproof Pickled Liver",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Past the soldiers protecting the festive grease. Get past the torture room, and once you see a set of stairs on your right, don't take them, turn right again, to find this item on a corpse.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655059,
-      "lat": -146.21875,
-      "lng": 130.21481804628954
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Fireproof_Pickled_Liver"
   },
   {
     "id": "tool-flask-of-cerulean-tears",
@@ -30535,808 +28572,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Flask_of_Wondrous_Physick"
   },
   {
-    "id": "tool-freezing-grease",
-    "name": "Freezing Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. Found on a corpse in the eastern section of the ruins.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3407,
-      "lat": -68.46875,
-      "lng": 157.783329
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Freezing_Grease"
-  },
-  {
-    "id": "tool-freezing-pot",
-    "name": "Freezing Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a ritual pot. Engraved with the crest of the Carian Royals. Throw at enemies to cause buildup of frost. Originates from the cold, dark moon of Ranni, the Carian princess.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Freezing_Pot"
-  },
-  {
-    "id": "tool-frenzied-flame-pot",
-    "name": "Frenzied Flame Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Frenzied_Flame_Pot"
-  },
-  {
-    "id": "tool-frenzyflame-stone",
-    "name": "Frenzyflame Stone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Frenzyflame Stone is a consumable that uses FP to continuously heal chaos followers",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1591,
-      "lat": -126.117187,
-      "lng": 74.488955
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Frenzyflame_Stone"
-  },
-  {
-    "id": "tool-frozen-raisin",
-    "name": "Frozen Raisin",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Preparation of dried Rimed Rowa.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Frozen_Raisin"
-  },
-  {
-    "id": "tool-furlcalling-finger-remedy",
-    "name": "Furlcalling Finger Remedy",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Dropped by Old Knight Istvan after successfully invading his world.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3414,
-      "lat": -174.65625,
-      "lng": 99.043901
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Furlcalling_Finger_Remedy"
-  },
-  {
-    "id": "tool-giantsflame-fire-pot",
-    "name": "Giantsflame Fire Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a ritual pot. Enchanted by incantations of the Giants' Flame. Consumes FP. Throw at enemies to inflict heavy fire damage. Damage scales with faith.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Giantsflame_Fire_Pot"
-  },
-  {
-    "id": "tool-glass-shard",
-    "name": "Glass Shard",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "On a dead body near the broken cart.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655001,
-      "lat": -161,
-      "lng": 118.77023096211845
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Glass_Shard"
-  },
-  {
-    "id": "tool-glinting-nail",
-    "name": "Glinting Nail",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Cathedral of Manu Metyr. Leave the main room from the opening on the side. Ride Torrent and circle the building, you will find a Marionette Soldier guarding this item.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655112,
-      "lat": -132.390625,
-      "lng": 138.89520240244013
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Glinting_Nail"
-  },
-  {
-    "id": "tool-glintstone-scrap",
-    "name": "Glintstone Scrap",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Offensive Consumable. Found inside the Altus Tunnel . In the second cavern, head through the tunnel in the south to find a wooden balcony overlooking a pit. Drop down onto the overgrown root on the left side to reach a lower balcony below where you can find the item on a corpse.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 7714,
-      "lat": -93.859375,
-      "lng": 93.371519
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Glintstone_Scrap"
-  },
-  {
-    "id": "tool-glovewort-crystal-tear",
-    "name": "Glovewort Crystal Tear",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "The item drops from the Furnace Golem located around Charo's Grave.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655566,
-      "lat": -167.546875,
-      "lng": 108.12107003756392
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Glovewort_Crystal_Tear"
-  },
-  {
-    "id": "tool-glowstone",
-    "name": "Glowstone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Can be found on a corpse. Beware of the two goblins that will spawn near it.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6956,
-      "lat": -205.34375,
-      "lng": 110.89463
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Glowstone"
-  },
-  {
-    "id": "tool-gold-pickled-fowl-foot",
-    "name": "Gold-Pickled Fowl Foot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Near the waterfall, beware of the lurking skeletons",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 452,
-      "lat": -198.023437,
-      "lng": 100.868605
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Gold-Pickled_Fowl_Foot"
-  },
-  {
-    "id": "tool-golden-grease",
-    "name": "Golden Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Grease"
-  },
-  {
-    "id": "tool-golden-horn-tender",
-    "name": "Golden Horn Tender",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "From the entrance to the Ancient Ruins of Rauh location, step outside of the building and head north, and border the building to the east, until you will find the item.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655629,
-      "lat": -117.328125,
-      "lng": 115.4105503735606
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Horn_Tender"
-  },
-  {
-    "id": "tool-golden-rune-1",
-    "name": "Golden Rune 1",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found by the statue.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6431,
-      "lat": -222.617187,
-      "lng": 107.761575
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_1"
-  },
-  {
-    "id": "tool-golden-rune-10",
-    "name": "Golden Rune 10",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "In the platform where you fight the improved Trumpeteer , against the wall.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2859,
-      "lat": -101.50781,
-      "lng": 119.66069
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_10"
-  },
-  {
-    "id": "tool-golden-rune-11",
-    "name": "Golden Rune 11",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found at the end of an alleway, there is a Broken Statue at the end. There is also a Golden Rune (8)",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3670,
-      "lat": -103.960937,
-      "lng": 119.098994
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_11"
-  },
-  {
-    "id": "tool-golden-rune-12",
-    "name": "Golden Rune 12",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found on a body at the edge of the cliffs in the Consecrated Snowfield. There is a jumping path up from here to the Apostate Derelict in the West.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 4648,
-      "lat": -57.742187,
-      "lng": 135.739003
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_12"
-  },
-  {
-    "id": "tool-golden-rune-13",
-    "name": "Golden Rune 13",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Rune Consumable. Found on a corpse behind a Golem .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3515,
-      "lat": -73.460937,
-      "lng": 154.28268
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_13"
-  },
-  {
-    "id": "tool-golden-rune-2",
-    "name": "Golden Rune 2",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Looted off a corpse by the ledge of the wooden fence.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6429,
-      "lat": -226.242187,
-      "lng": 109.113388
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_2"
-  },
-  {
-    "id": "tool-golden-rune-3",
-    "name": "Golden Rune 3",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Located in the cemetery to the right side.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3029,
-      "lat": -99.140625,
-      "lng": 96.62172
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_3"
-  },
-  {
-    "id": "tool-golden-rune-4",
-    "name": "Golden Rune 4",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Climb over to the top.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6430,
-      "lat": -222.820312,
-      "lng": 115.029268
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_4"
-  },
-  {
-    "id": "tool-golden-rune-5",
-    "name": "Golden Rune 5",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found by looting the sarcophagi.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6470,
-      "lat": -177.234375,
-      "lng": 121.069238
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_5"
-  },
-  {
-    "id": "tool-golden-rune-6",
-    "name": "Golden Rune 6",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Rune Consumable. Found among a cluster of sarcophagi high up on a cliff. You can reach this area by using the Spiritspring at Lenne's Rise .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 5655,
-      "lat": -164.09375,
-      "lng": 163.199705
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_6"
-  },
-  {
-    "id": "tool-golden-rune-7",
-    "name": "Golden Rune 7",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Just in front of the Broken Statue . You can kill it from behind if you take an alternate route, allowing you to grab this item without much of a hassle.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2867,
-      "lat": -102.40625,
-      "lng": 119.434394
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_7"
-  },
-  {
-    "id": "tool-golden-rune-8",
-    "name": "Golden Rune 8",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found on between the bushes to the right of a big staircase.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2903,
-      "lat": -104.210937,
-      "lng": 115.293601
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_8"
-  },
-  {
-    "id": "tool-golden-rune-9",
-    "name": "Golden Rune 9",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Can be found near the wheel of a chariot, at the main road.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3674,
-      "lat": -101.585937,
-      "lng": 117.152947
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Rune_9"
-  },
-  {
-    "id": "tool-golden-vow-consumable",
-    "name": "Golden Vow (Consumable)",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "At the end of the room, hanging from a body.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655537,
-      "lat": -118.4453125,
-      "lng": 124.80834528079876
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Golden_Vow_(Consumable)"
-  },
-  {
-    "id": "tool-gourmet-scorpion-stew",
-    "name": "Gourmet Scorpion Stew",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "An upgraded version of the Scorpion Stew can be obtained from Hornsent Grandam if you talk to her after defeating Messmer the Impaler",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659540,
-      "lat": -143.61158859729767,
-      "lng": 100.59030711513718
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Gourmet_Scorpion_Stew"
-  },
-  {
-    "id": "tool-grace-mimic",
-    "name": "Grace Mimic",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. Given as a reward by a non-hostile Commoner NPC sitting on the roof of a building. Use the ladder nearby to reach him.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1119,
-      "lat": -178.125,
-      "lng": 85.083218
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Grace_Mimic"
-  },
-  {
-    "id": "tool-gravity-stone-chunk",
-    "name": "Gravity Stone Chunk",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Offensive Throwable. 6x found inside a chest in the central storage shed in the main cavern. This is the same shed you are teleported to upon using the trap coffer at the Dragon-Burnt Ruins .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2256,
-      "lat": -171.90625,
-      "lng": 143.371406
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Gravity_Stone_Chunk"
-  },
-  {
-    "id": "tool-gravity-stone-fan",
-    "name": "Gravity Stone Fan",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Offensive Consumable Item. Found on a corpse by the cliffs.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1191,
-      "lat": -95.179687,
-      "lng": 118.114418
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Gravity_Stone_Fan"
-  },
-  {
-    "id": "tool-hefty-fetid-pot",
-    "name": "Hefty Fetid Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Fetid_Pot"
-  },
-  {
-    "id": "tool-hefty-fire-pot",
-    "name": "Hefty Fire Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Fire_Pot"
-  },
-  {
-    "id": "tool-hefty-fly-pot",
-    "name": "Hefty Fly Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Fly_Pot"
-  },
-  {
-    "id": "tool-hefty-freezing-pot",
-    "name": "Hefty Freezing Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Freezing_Pot"
-  },
-  {
-    "id": "tool-hefty-frenzied-flame-pot",
-    "name": "Hefty Frenzied Flame Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Frenzied_Flame_Pot"
-  },
-  {
-    "id": "tool-hefty-furnace-pot",
-    "name": "Hefty Furnace Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Furnace_Pot"
-  },
-  {
-    "id": "tool-hefty-lightning-pot",
-    "name": "Hefty Lightning Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Lightning_Pot"
-  },
-  {
-    "id": "tool-hefty-magic-pot",
-    "name": "Hefty Magic Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Magic_Pot"
-  },
-  {
-    "id": "tool-hefty-oil-pot",
-    "name": "Hefty Oil Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Oil_Pot"
-  },
-  {
-    "id": "tool-hefty-poison-pot",
-    "name": "Hefty Poison Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Poison_Pot"
-  },
-  {
-    "id": "tool-hefty-rancor-pot",
-    "name": "Hefty Rancor Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Rancor_Pot"
-  },
-  {
-    "id": "tool-hefty-red-lightning-pot",
-    "name": "Hefty Red Lightning Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Red_Lightning_Pot"
-  },
-  {
-    "id": "tool-hefty-rock-pot",
-    "name": "Hefty Rock Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Rock_Pot"
-  },
-  {
-    "id": "tool-hefty-rot-pot",
-    "name": "Hefty Rot Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Rot_Pot"
-  },
-  {
-    "id": "tool-hefty-volcano-pot",
-    "name": "Hefty Volcano Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hefty_Volcano_Pot"
-  },
-  {
-    "id": "tool-hero-s-rune-1",
-    "name": "Hero's Rune 1",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found inside Fortified Manor, at the second room.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3945,
-      "lat": -105.5625,
-      "lng": 112.534423
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hero's_Rune_1"
-  },
-  {
-    "id": "tool-hero-s-rune-2",
-    "name": "Hero's Rune 2",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "On a body against a wall, beware of the soldier and the lion guarding it.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2915,
-      "lat": -104.976562,
-      "lng": 115.731182
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hero's_Rune_2"
-  },
-  {
-    "id": "tool-hero-s-rune-3",
-    "name": "Hero's Rune 3",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hero's_Rune_3"
-  },
-  {
-    "id": "tool-hero-s-rune-4",
-    "name": "Hero's Rune 4",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. Found on a body at the bottom of a large rock pillar",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "underground",
-      "markerId": 4810,
-      "lat": -180.875,
-      "lng": 153.82497
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hero's_Rune_4"
-  },
-  {
-    "id": "tool-hero-s-rune-5",
-    "name": "Hero's Rune 5",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found inside the big room with the statues and the knight that can perform the same moves as Crucible Knight Ordovis, on a body.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3677,
-      "lat": -100.117187,
-      "lng": 118.4177
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Hero's_Rune_5"
-  },
-  {
-    "id": "tool-holy-grease",
-    "name": "Holy Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Over The main road, at the top of the wrecked chariot.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3673,
-      "lat": -102.070312,
-      "lng": 116.160576
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Holy_Grease"
-  },
-  {
-    "id": "tool-holy-water-pot",
-    "name": "Holy Water Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. Enchanted by incantations of the Golden Order.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Holy_Water_Pot"
-  },
-  {
-    "id": "tool-holyproof-dried-liver",
-    "name": "Holyproof Dried Liver",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "On the sewers, past the Broken Statue , on the room below there are three items to grab, one of those is this one.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3923,
-      "lat": -100.828125,
-      "lng": 113.292857
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Holyproof_Dried_Liver"
-  },
-  {
-    "id": "tool-holyproof-pickled-liver",
-    "name": "Holyproof Pickled Liver",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Head to the western wall ships area, and turn right to find the item on a corpse.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655535,
-      "lat": -117.97135412693024,
-      "lng": 126.02734375
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Holyproof_Pickled_Liver"
-  },
-  {
     "id": "tool-horned-bairn",
     "name": "Horned Bairn",
     "category": "tool",
@@ -31351,86 +28586,6 @@
       "lng": 114.17578125
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Horned_Bairn"
-  },
-  {
-    "id": "tool-immunizing-cured-meat",
-    "name": "Immunizing Cured Meat",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found in the small group of Poison Flowers in the outskirts of the Waypoint Ruins .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 713,
-      "lat": -191.328125,
-      "lng": 112.379074
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Immunizing_Cured_Meat"
-  },
-  {
-    "id": "tool-immunizing-white-cured-meat",
-    "name": "Immunizing White Cured Meat",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Temporarily boosts immunity.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1465,
-      "lat": -131.101562,
-      "lng": 75.762629
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Immunizing_White_Cured_Meat"
-  },
-  {
-    "id": "tool-innard-meat",
-    "name": "Innard Meat",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Bonny Gaol: Continue following the stream of water until you see an opening at the end. Watch out for hiding enemies here and make sure that you are ready for them. They will come out as soon as you step near an item. Take the Innard Meat on the ground here.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659147,
-      "lat": -145.29166662693024,
-      "lng": 133.16796875
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Innard_Meat"
-  },
-  {
-    "id": "tool-invigorating-cured-meat",
-    "name": "Invigorating Cured Meat",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. Found on a corpse on the eastern side of the ruins.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3849,
-      "lat": -89,
-      "lng": 148.194072
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Invigorating_Cured_Meat"
-  },
-  {
-    "id": "tool-invigorating-white-cured-meat",
-    "name": "Invigorating White Cured Meat",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. Found at the bottom of a tree.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3576,
-      "lat": -84.171875,
-      "lng": 156.340768
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Invigorating_White_Cured_Meat"
   },
   {
     "id": "tool-iris-of-grace",
@@ -31465,33 +28620,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Iris_of_Occultation"
   },
   {
-    "id": "tool-ironjar-aromatic",
-    "name": "Ironjar Aromatic",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Ironjar_Aromatic"
-  },
-  {
-    "id": "tool-kukri",
-    "name": "Kukri",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Looted off a corpse behind the Glintstone Dragon Smarag.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2123,
-      "lat": -137.453125,
-      "lng": 49.895632
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Kukri"
-  },
-  {
     "id": "tool-lamenter-s-mask",
     "name": "Lamenter's Mask",
     "category": "tool",
@@ -31508,17 +28636,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Lamenter's_Mask"
   },
   {
-    "id": "tool-lands-between-rune",
-    "name": "Lands Between Rune",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Grace said to have once dwelled in the eyes of the inhabitants of the Lands Between; the lingering residue of gold.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lands_Between_Rune"
-  },
-  {
     "id": "tool-lantern",
     "name": "Lantern",
     "category": "tool",
@@ -31528,151 +28645,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Lantern"
-  },
-  {
-    "id": "tool-large-glintstone-scrap",
-    "name": "Large Glintstone Scrap",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Accessed from Limgrave Tunnels . Underground. It can be found on a body, inside a little hut guarded by dogs.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 461,
-      "lat": -184.273437,
-      "lng": 103.67689
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Large_Glintstone_Scrap"
-  },
-  {
-    "id": "tool-leda-s-rune",
-    "name": "Leda's Rune",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Obtained if you side with Hornsent and successfully defend him against Leda by interacting with the golden sign before the bridge and cooperating with him",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659502,
-      "lat": -120.00260412693024,
-      "lng": 127.33203125
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Leda's_Rune"
-  },
-  {
-    "id": "tool-lightning-grease",
-    "name": "Lightning Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Weapon Coating. A set of 4 can be found inside the Sealed Tunnel . In the chamber with the exploding Abnormal Stone Clusters near the end of the dungeon, dispel the wall opposite the wooden stairs to reveal a deep pit with roots strewn jutting across the walls. Drop down onto the second root and check the corpse on a ledge along the north wall.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 7954,
-      "lat": -106.523437,
-      "lng": 104.83708
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lightning_Grease"
-  },
-  {
-    "id": "tool-lightning-pot",
-    "name": "Lightning Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lightning_Pot"
-  },
-  {
-    "id": "tool-lightningproof-dried-liver",
-    "name": "Lightningproof Dried Liver",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found on the third body on the staircase in the main road.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3887,
-      "lat": -103.617187,
-      "lng": 114.277788
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lightningproof_Dried_Liver"
-  },
-  {
-    "id": "tool-lightningproof-pickled-liver",
-    "name": "Lightningproof Pickled Liver",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Shadow Keep . After you fall from the big hole, take down the next hole down, and find the item next to a crab.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655474,
-      "lat": -119.171875,
-      "lng": 130.06628915531894
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lightningproof_Pickled_Liver"
-  },
-  {
-    "id": "tool-lord-s-rune",
-    "name": "Lord's Rune",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Drops from the Erdtree Avatar that patrols the road.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3672,
-      "lat": -101.265625,
-      "lng": 117.456584
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lord's_Rune"
-  },
-  {
-    "id": "tool-lulling-branch",
-    "name": "Lulling Branch",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Lulling_Branch"
-  },
-  {
-    "id": "tool-magic-grease",
-    "name": "Magic Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. Found in a corpse near the Nokstella, Eternal City Site of Grace.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "underground",
-      "markerId": 9508,
-      "lat": -125.240463,
-      "lng": 68.678382
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Magic_Grease"
-  },
-  {
-    "id": "tool-magic-pot",
-    "name": "Magic Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Magic_Pot"
   },
   {
     "id": "tool-margit-s-shackle",
@@ -31686,22 +28658,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Margit's_Shackle"
   },
   {
-    "id": "tool-marika-s-rune",
-    "name": "Marika's Rune",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "In the lower area, where you fight the Omenkiller.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655073,
-      "lat": -145.5,
-      "lng": 128.62859066555475
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Marika's_Rune"
-  },
-  {
     "id": "tool-memory-of-grace",
     "name": "Memory of Grace",
     "category": "tool",
@@ -31711,22 +28667,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Memory_of_Grace"
-  },
-  {
-    "id": "tool-messmerfire-grease",
-    "name": "Messmerfire Grease",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Can be found on a corpse near one of the ships.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655582,
-      "lat": -119.140625,
-      "lng": 126.3869829270243
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Messmerfire_Grease"
   },
   {
     "id": "tool-mimic-s-veil",
@@ -31767,65 +28707,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Mohg's_Shackle"
   },
   {
-    "id": "tool-neutralizing-boluses",
-    "name": "Neutralizing Boluses",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "2x found on a body on the western ramparts of The Shaded Castle .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2836,
-      "lat": -82.679687,
-      "lng": 79.676634
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Neutralizing_Boluses"
-  },
-  {
-    "id": "tool-numen-s-rune",
-    "name": "Numen's Rune",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Rune Consumable. Found on a corpse sitting by the cliffs on the path leading up to the mausoleum.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "underground",
-      "markerId": 4636,
-      "lat": -182.425,
-      "lng": 149.896306
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Numen's_Rune"
-  },
-  {
-    "id": "tool-oil-pot",
-    "name": "Oil Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. A cocktail of oil-infused materials is sealed inside. Throw at enemies to soak them in oil, making them heavily susceptible to fire damage.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Oil_Pot"
-  },
-  {
-    "id": "tool-oil-soaked-tear",
-    "name": "Oil-Soaked Tear",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "The item drops from the Furnace Golem located at the Ruins of Unte.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655689,
-      "lat": -125.06951192237061,
-      "lng": 132.11485264241406
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Oil-Soaked_Tear"
-  },
-  {
     "id": "tool-omen-bairn",
     "name": "Omen Bairn",
     "category": "tool",
@@ -31835,44 +28716,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Omen_Bairn"
-  },
-  {
-    "id": "tool-opaline-pickled-liver",
-    "name": "Opaline Pickled Liver",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Opaline_Pickled_Liver"
-  },
-  {
-    "id": "tool-pauper-s-rune",
-    "name": "Pauper's Rune",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Grace that dwells within the inhabitants of The Lands Between; the lingering residue of gold. Use to gain a few runes. For all that they may be feeble things, these runes will act as nourishment for the development of any Tarnished. Provided a Finger Maiden can be found...",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Pauper's_Rune"
-  },
-  {
-    "id": "tool-perfumed-oil-of-ranah",
-    "name": "Perfumed Oil of Ranah",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Tool looted from a corpse atop the island where you emerge from the cave connecting to the mainland.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655779,
-      "lat": -174.03750002384186,
-      "lng": 109.07820588248805
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Perfumed_Oil_of_Ranah"
   },
   {
     "id": "tool-phantom-finger",
@@ -31895,109 +28738,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Phantom_Great_Rune"
-  },
-  {
-    "id": "tool-pickled-turtle-neck",
-    "name": "Pickled Turtle Neck",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. Found on a corpse in a small room with a caged ghost. Beware of the Skeletal Slime that drops from the ceiling when you collect this.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 740,
-      "lat": -227.632812,
-      "lng": 106.871349
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Pickled_Turtle_Neck"
-  },
-  {
-    "id": "tool-poison-grease",
-    "name": "Poison Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Weapon Coating. 2x found on a corpse under a dead tree in the eastern section of town.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3193,
-      "lat": -177.054687,
-      "lng": 148.210731
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Poison_Grease"
-  },
-  {
-    "id": "tool-poison-pot",
-    "name": "Poison Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. A cocktail of poisonous materials is sealed inside. Throw at enemies to cause buildup of poison.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Poison_Pot"
-  },
-  {
-    "id": "tool-poison-spraymist",
-    "name": "Poison Spraymist",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Forbidden art of depraved perfumers. Craftable with a perfume bottle. Uses FP to release a poison mist from user's mouth, causing a buildup of poison. Perfumed powder is held in the mouth to dissolve before being expelled. It was once a restorative art, or so it is said.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Poison_Spraymist"
-  },
-  {
-    "id": "tool-poisonbone-dart",
-    "name": "Poisonbone Dart",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "An offensive consumable that can be found on a corpse inside Tombsward Cave.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3524,
-      "lat": -212.484375,
-      "lng": 99.290187
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Poisonbone_Dart"
-  },
-  {
-    "id": "tool-poisoned-stone",
-    "name": "Poisoned Stone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "A small stone with a poisoned core.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Poisoned_Stone"
-  },
-  {
-    "id": "tool-poisoned-stone-clump",
-    "name": "Poisoned Stone Clump",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "A clump of small stones with poison cores.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Poisoned_Stone_Clump"
-  },
-  {
-    "id": "tool-polter-stone",
-    "name": "Polter Stone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Polter_Stone"
   },
   {
     "id": "tool-prattling-pate-apologies",
@@ -32144,22 +28884,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Prattling_Pate_%22You're_beautiful%22"
   },
   {
-    "id": "tool-preserving-boluses",
-    "name": "Preserving Boluses",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Inside the next room, after you get down the lift. Beware of the lurking enemies.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2868,
-      "lat": -102.8125,
-      "lng": 118.215418
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Preserving_Boluses"
-  },
-  {
     "id": "tool-priestess-heart",
     "name": "Priestess Heart",
     "category": "tool",
@@ -32203,49 +28927,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Radiant_Baldachin's_Blessing"
   },
   {
-    "id": "tool-rainbow-stone",
-    "name": "Rainbow Stone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Can be found on a dead body nerby to the campfire.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6702,
-      "lat": -208.476562,
-      "lng": 112.137074
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rainbow_Stone"
-  },
-  {
-    "id": "tool-rancor-pot",
-    "name": "Rancor Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. Enchanted by the ancient death hex. Consumes FP. Throw at enemies to spawn vengeful spirits that chase down foes. In times of old, the dead were burned with ghostflame, and from those cinders arose vengeful spirits.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rancor_Pot"
-  },
-  {
-    "id": "tool-raw-meat-dumpling",
-    "name": "Raw Meat Dumpling",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Fall down from the broken bridge and follow the path all the way south, you will find the item near the edge.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655086,
-      "lat": -139.078125,
-      "lng": 134.33370056319686
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Raw_Meat_Dumpling"
-  },
-  {
     "id": "tool-recusant-finger",
     "name": "Recusant Finger",
     "category": "tool",
@@ -32262,28 +28943,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Recusant_Finger"
   },
   {
-    "id": "tool-red-lightning-pot",
-    "name": "Red Lightning Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Red_Lightning_Pot"
-  },
-  {
-    "id": "tool-redmane-fire-pot",
-    "name": "Redmane Fire Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Redmane_Fire_Pot"
-  },
-  {
     "id": "tool-regal-omen-bairn",
     "name": "Regal Omen Bairn",
     "category": "tool",
@@ -32293,230 +28952,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Regal_Omen_Bairn"
-  },
-  {
-    "id": "tool-rejuvenating-boluses",
-    "name": "Rejuvenating Boluses",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. Found on a corpse by jumping on a trap to access a higher area of the Consecrated Snowfield Catacombs.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3177,
-      "lat": -79.023437,
-      "lng": 147.671005
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rejuvenating_Boluses"
-  },
-  {
-    "id": "tool-remembrance-of-a-god-and-a-lord",
-    "name": "Remembrance of a God and a Lord",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Dropped by Radahn, Consort of Miquella upon defeat.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 248564,
-      "lat": -136.1484375,
-      "lng": 96.53539316073528
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_a_God_and_a_Lord"
-  },
-  {
-    "id": "tool-remembrance-of-putrescence",
-    "name": "Remembrance of Putrescence",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Dropped by Putrescent Knight",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655539,
-      "lat": -186.21354162693024,
-      "lng": 124.80859375
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_Putrescence"
-  },
-  {
-    "id": "tool-remembrance-of-the-blasphemous",
-    "name": "Remembrance of the Blasphemous",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Remembrance Key Item. Dropped by Rykard, Lord of Blasphemy upon defeat.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 4106,
-      "lat": -87.773437,
-      "lng": 67.434013
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Blasphemous"
-  },
-  {
-    "id": "tool-remembrance-of-the-dancing-lion",
-    "name": "Remembrance of the Dancing Lion",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "The Divine Beast Dancing Lion drops this Remembrance upon defeat.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 654966,
-      "lat": -138.03125,
-      "lng": 99.94526934763884
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Dancing_Lion"
-  },
-  {
-    "id": "tool-remembrance-of-the-grafted",
-    "name": "Remembrance of the Grafted",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Obtained as a reward for defeating Godrick the Grafted at Stormveil Castle .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 12451,
-      "lat": -174.04095,
-      "lng": 85.93648
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Grafted"
-  },
-  {
-    "id": "tool-remembrance-of-the-impaler",
-    "name": "Remembrance of the Impaler",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Dropped by Messmer the Impaler . Can be traded to Enia at the Roundtable Hold for: Spear of the Impaler or Messmer's Orb .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655489,
-      "lat": -114.4609375,
-      "lng": 125.65266504282765
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Impaler"
-  },
-  {
-    "id": "tool-remembrance-of-the-lord-of-frenzied-flame",
-    "name": "Remembrance of the Lord of Frenzied Flame",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Dropped by Midra, Lord of Frenzied Flame . Can be consummed for Runes or handed to Enia at the Roundtable Hold , for Greatsword of Damnation or Midra's Flame of Frenzy",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655462,
-      "lat": -160.4765625,
-      "lng": 128.79316079936973
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Lord_of_Frenzied_Flame"
-  },
-  {
-    "id": "tool-remembrance-of-the-mother-of-fingers",
-    "name": "Remembrance of the Mother of Fingers",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Dropped by Metyr, Mother of Fingers, found in the underground ruins accessed from Cathedral of Manus Metyr after progressing Ymir's questline.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655730,
-      "lat": -127.54947912693024,
-      "lng": 138.44921875
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Mother_of_Fingers"
-  },
-  {
-    "id": "tool-remembrance-of-the-rot-goddess",
-    "name": "Remembrance of the Rot Goddess",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Key Item. Dropped by Malenia, Blade of Miquella upon defeat.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6053,
-      "lat": -38.2,
-      "lng": 147.981341
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Rot_Goddess"
-  },
-  {
-    "id": "tool-remembrance-of-the-saint-of-the-bud",
-    "name": "Remembrance of the Saint of the Bud",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Dropped by Romina, Saint of the Bud . Can be consumed for Runes or handed to Enia at te Roundtable Hold , for Poleblade of the Bud or Rotten Butterflies .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655468,
-      "lat": -128.21236991882324,
-      "lng": 97.16854102065919
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Saint_of_the_Bud"
-  },
-  {
-    "id": "tool-remembrance-of-the-shadow-sunflower",
-    "name": "Remembrance of the Shadow Sunflower",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Dropped by the Scadutree Avatar boss.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655391,
-      "lat": -109.921875,
-      "lng": 133.33186654470072
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Shadow_Sunflower"
-  },
-  {
-    "id": "tool-remembrance-of-the-twin-moon-knight",
-    "name": "Remembrance of the Twin Moon Knight",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "This Remembrance Item is acquired upon defeating the boss, Rellana, Twin Moon Knight .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655154,
-      "lat": -136.7890625,
-      "lng": 121.19178609372145
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Twin_Moon_Knight"
-  },
-  {
-    "id": "tool-remembrance-of-the-wild-boar-rider",
-    "name": "Remembrance of the Wild Boar Rider",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Dropped by Commander Gaius .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655413,
-      "lat": -113.2578125,
-      "lng": 130.07413949492084
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Remembrance_of_the_Wild_Boar_Rider"
   },
   {
     "id": "tool-rock-heart",
@@ -32533,460 +28968,6 @@
       "lng": 154.523375769772
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Rock_Heart"
-  },
-  {
-    "id": "tool-roped-fetid-pot",
-    "name": "Roped Fetid Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. A cocktail of effluents is sealed inside, and a short rope that aids throwing has been secured around the pot. Throw at rearward enemies to cause buildup of deadly poison. Beware though; those who carry these pots will slowly accumulate poison in their own bodies. Push someone in a privy; expect to get dung on your hands.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Fetid_Pot"
-  },
-  {
-    "id": "tool-roped-fire-pot",
-    "name": "Roped Fire Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Fire_Pot"
-  },
-  {
-    "id": "tool-roped-fly-pot",
-    "name": "Roped Fly Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Fly_Pot"
-  },
-  {
-    "id": "tool-roped-freezing-pot",
-    "name": "Roped Freezing Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Freezing_Pot"
-  },
-  {
-    "id": "tool-roped-frenzied-flame-pot",
-    "name": "Roped Frenzied Flame Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Frenzied_Flame_Pot"
-  },
-  {
-    "id": "tool-roped-holy-water-pot",
-    "name": "Roped Holy Water Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. Enchanted by incantations of the Golden Order, and a short rope that aids throwing has been secured around the pot.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Holy_Water_Pot"
-  },
-  {
-    "id": "tool-roped-lightning-pot",
-    "name": "Roped Lightning Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Lightning_Pot"
-  },
-  {
-    "id": "tool-roped-magic-pot",
-    "name": "Roped Magic Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Magic_Pot"
-  },
-  {
-    "id": "tool-roped-oil-pot",
-    "name": "Roped Oil Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. A cocktail of oil-infused materials is sealed inside, and a short rope that aids throwing has been secured around the pot. Throw at rearward enemies to soak them in oil, making them heavily susceptible to fire damage.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Oil_Pot"
-  },
-  {
-    "id": "tool-roped-poison-pot",
-    "name": "Roped Poison Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. A cocktail of poisonous materials is sealed inside, and a short rope that aids throwing has been secured around the pot. Throw at rearward enemies to cause buildup of poison.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Poison_Pot"
-  },
-  {
-    "id": "tool-roped-volcano-pot",
-    "name": "Roped Volcano Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roped_Volcano_Pot"
-  },
-  {
-    "id": "tool-rot-grease",
-    "name": "Rot Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Weapon Coating. Found on a body in the middle of the raised garden-like area in the main keep.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 2845,
-      "lat": -80.359375,
-      "lng": 81.940749
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rot_Grease"
-  },
-  {
-    "id": "tool-rot-pot",
-    "name": "Rot Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a ritual pot. Decorated with the crest of scarlet wings. Throw at enemies to cause buildup of scarlet rot.  The rot bubbles up from the Swamp of Aeonia, and eats away at life like a vicious plague.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rot_Pot"
-  },
-  {
-    "id": "tool-roundrock",
-    "name": "Roundrock",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Roundrock"
-  },
-  {
-    "id": "tool-rowa-raisin",
-    "name": "Rowa Raisin",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Preparation of dried Rowa fruit.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rowa_Raisin"
-  },
-  {
-    "id": "tool-royal-magic-grease",
-    "name": "Royal Magic Grease",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "3x Dropped by the nonrespawning troll guarding the main bridge entrance of Castle Ensis",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659348,
-      "lat": -137.48697900772095,
-      "lng": 116.80859375
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Royal_Magic_Grease"
-  },
-  {
-    "id": "tool-ruin-fragment",
-    "name": "Ruin Fragment",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Stone fragment found near places where ruins have fallen from the sky. Can be used for crafting, or simply for throwing at enemies. These shards of stone are believed to have once been part of a temple in the sky. They glow with a faint light from within.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Ruin_Fragment"
-  },
-  {
-    "id": "tool-rune-arc",
-    "name": "Rune Arc",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "x1. In the underground Ruins, the area can be accessed via the Square shaped elevator south of the location and it will go down.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655715,
-      "lat": -120.35890930862503,
-      "lng": 114.90694478987005
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rune_Arc"
-  },
-  {
-    "id": "tool-rune-of-an-unsung-hero",
-    "name": "Rune of an Unsung Hero",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Shadow Keep . After you fall from the big hole in the roof, drop down again through the second broken floor. Continue forward and turn left on the first opening available to find this item.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655475,
-      "lat": -119.2578125,
-      "lng": 129.56619776434837
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Rune_of_an_Unsung_Hero"
-  },
-  {
-    "id": "tool-sacred-bloody-flesh",
-    "name": "Sacred Bloody Flesh",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "x1. In the underground Ruins, the area can be accessed via the Square shaped elevator south of the location and it will go down. It will be close to the Rune arc. It will be close to the Sacred Bloody Flesh.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655716,
-      "lat": -120.5859375,
-      "lng": 114.98428814136005
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sacred_Bloody_Flesh"
-  },
-  {
-    "id": "tool-sacred-order-pot",
-    "name": "Sacred Order Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a ritual pot. Enchanted by incantations of the Golden Order. Consumes FP. Throw at enemies to inflict heavy holy damage. Highly effective against Those Who Live in Death, even preventing them from rising again. The Golden Order has no mercy for those who trespass beyond life's bounds.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sacred_Order_Pot"
-  },
-  {
-    "id": "tool-scorpion-stew",
-    "name": "Scorpion Stew",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Defeat the Divine Beast Dancing Lion to obtain the Divine Beast Head. Then wear the head armor and speak to Hornsent Grandam in the storeroom to first obtain the incantation. Leve the room and rest at the Small Private Altar site of grace, then talk to her again to receive the Scorpion Stew.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655714,
-      "lat": -143.03125,
-      "lng": 100.99506702956498
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Scorpion_Stew"
-  },
-  {
-    "id": "tool-scriptstone",
-    "name": "Scriptstone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Ruin fragment inscribed with letters.  Craftable item. Reveals additional messages from other worlds. Words are gregarious things, drawn to one another much as people are.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Scriptstone"
-  },
-  {
-    "id": "tool-shadow-realm-rune-1",
-    "name": "Shadow Realm Rune 1",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "A Shadow Realm Rune [1] can be looted by an archway near the cliff, southeast of the cave entrance of the Belurat Gaol, near the southern edge.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 654987,
-      "lat": -142.359375,
-      "lng": 103.98065759498647
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shadow_Realm_Rune_1"
-  },
-  {
-    "id": "tool-shadow-realm-rune-2",
-    "name": "Shadow Realm Rune 2",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Before the stairs, between the jars there is a body that contains this item.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655027,
-      "lat": -156.0703125,
-      "lng": 113.90235517387131
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shadow_Realm_Rune_2"
-  },
-  {
-    "id": "tool-shadow-realm-rune-3",
-    "name": "Shadow Realm Rune 3",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Consumable looted from a corpse hanging from a ledge near the small burrow cave in Rauh Base northern area.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655434,
-      "lat": -118.5234375,
-      "lng": 116.67585836113142
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shadow_Realm_Rune_3"
-  },
-  {
-    "id": "tool-shadow-realm-rune-4",
-    "name": "Shadow Realm Rune 4",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "In the hanging area, at the entrance, there is a gap on the ground to the left side. Fall on it, to find this item on the platform you land on.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655070,
-      "lat": -144.4921875,
-      "lng": 129.40216953596234
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shadow_Realm_Rune_4"
-  },
-  {
-    "id": "tool-shadow-realm-rune-5",
-    "name": "Shadow Realm Rune 5",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Shadow Keep . Once you have lowered the water level, take the lift to the left passing the Church District Entrance site of Grace. Head to the entrance of the right building and fight the giant crabs, you wil find the item on a body.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655480,
-      "lat": -117.921875,
-      "lng": 132.41828147847744
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shadow_Realm_Rune_5"
-  },
-  {
-    "id": "tool-shadow-realm-rune-6",
-    "name": "Shadow Realm Rune 6",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Shadow Keep, in the dining room. Cross the bridge and enter the room to find it, Beware of the black knight on the left side.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655536,
-      "lat": -118.53125,
-      "lng": 125.35532023967282
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shadow_Realm_Rune_6"
-  },
-  {
-    "id": "tool-shadow-realm-rune-7",
-    "name": "Shadow Realm Rune 7",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "On top of the branch, guarded by 2 Fly-Man.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655651,
-      "lat": -118.375,
-      "lng": 105.74429734623469
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shadow_Realm_Rune_7"
-  },
-  {
-    "id": "tool-shield-grease",
-    "name": "Shield Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. Looted off a corpse where there are many enemies within the ruins by the riverbank in Uhl Palace Ruins.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "underground",
-      "markerId": 8769,
-      "lat": -129.023437,
-      "lng": 69.457634
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shield_Grease"
-  },
-  {
-    "id": "tool-silver-horn-tender",
-    "name": "Silver Horn Tender",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Temple Town Ruins. From the entrance, take the stairs on the right, and once on top turn back and take the small walkway on the right. You will find a Shadowpothead enemy in the small room at the end. Drops x4 Rauh Burrow and x1 Silver Horn Tender.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655516,
-      "lat": -131.9609375,
-      "lng": 108.39462182723332
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Silver_Horn_Tender"
-  },
-  {
-    "id": "tool-silver-pickled-fowl-foot",
-    "name": "Silver-Pickled Fowl Foot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "One can be found at the northern side of the broken bridge that leads to Raya Lucaria Academy",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 934,
-      "lat": -148.09375,
-      "lng": 76.142684
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Silver-Pickled_Fowl_Foot"
-  },
-  {
-    "id": "tool-sleep-pot",
-    "name": "Sleep Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Craftable item prepared using a cracked pot. Filled with the incantations of St. Trina. Consumes FP. Throw at enemy to release a purple, soporific haze. Like a lullaby, or a quagmire, it irresistibly draws its victims down into sleep. Sweet dreams.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sleep_Pot"
   },
   {
     "id": "tool-small-golden-effigy",
@@ -33021,65 +29002,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Small_Red_Effigy"
   },
   {
-    "id": "tool-soap",
-    "name": "Soap",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. Four can be looted from a corpse guarded by a basilisk in the ant nest near Ainsel River Downstream.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "underground",
-      "markerId": 8776,
-      "lat": -130.617187,
-      "lng": 64.707359
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Soap"
-  },
-  {
-    "id": "tool-soft-cotton",
-    "name": "Soft Cotton",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. Found on a corpse sitting on a chair south of the Ancient Snow Valley Ruins.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3517,
-      "lat": -72.445312,
-      "lng": 157.283236
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Soft_Cotton"
-  },
-  {
-    "id": "tool-soporific-grease",
-    "name": "Soporific Grease",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. 3 are found under a fall structure.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 1605,
-      "lat": -116.4375,
-      "lng": 57.991303
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Soporific_Grease"
-  },
-  {
-    "id": "tool-spark-aromatic",
-    "name": "Spark Aromatic",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Art of the perfumers who fought In the Shattering. Craftable with a perfume bottle. Uses FP to broadly scatter sparks in a wide arc straight ahead. Though fire was prohibited to those who served the Erdtree, this rule was forgotten as the war drew ever on.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Spark_Aromatic"
-  },
-  {
     "id": "tool-spectral-steed-whistle",
     "name": "Spectral Steed Whistle",
     "category": "tool",
@@ -33089,157 +29011,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Spectral_Steed_Whistle"
-  },
-  {
-    "id": "tool-spellproof-dried-liver",
-    "name": "Spellproof Dried Liver",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "One can be found in Liurnia of the Lakes area at the foot of a large tombstone.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 6536,
-      "lat": -135.382812,
-      "lng": 55.005954
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Spellproof_Dried_Liver"
-  },
-  {
-    "id": "tool-spellproof-pickled-liver",
-    "name": "Spellproof Pickled Liver",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Spellproof_Pickled_Liver"
-  },
-  {
-    "id": "tool-spirit-raisin",
-    "name": "Spirit Raisin",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Spirit_Raisin"
-  },
-  {
-    "id": "tool-spritestone",
-    "name": "Spritestone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Spritestone"
-  },
-  {
-    "id": "tool-stanching-boluses",
-    "name": "Stanching Boluses",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "One can be looted off a corpse in Morne Tunnel .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 3904,
-      "lat": -212.09375,
-      "lng": 108.51846
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Stanching_Boluses"
-  },
-  {
-    "id": "tool-starlight-shards",
-    "name": "Starlight Shards",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Southeast of Cathedral of Manu Metyr, besides a basin-like structure.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655114,
-      "lat": -133.2421875,
-      "lng": 140.934637606242
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Starlight_Shards"
-  },
-  {
-    "id": "tool-stimulating-boluses",
-    "name": "Stimulating Boluses",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Found on a corpse in the tunnel leading to Nokstella, Eternal City .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "underground",
-      "markerId": 9505,
-      "lat": -125.399018,
-      "lng": 72.571684
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Stimulating_Boluses"
-  },
-  {
-    "id": "tool-sunwarmth-stone",
-    "name": "Sunwarmth Stone",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "From the Scadutree Fragment, head outside and take the path on the left, you'll find this item in a corner of the rooftops. Be wary of the divine frost lion roaming the area.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 658933,
-      "lat": -134.6640625,
-      "lng": 94.38655831721172
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sunwarmth_Stone"
-  },
-  {
-    "id": "tool-surging-frenzied-flame",
-    "name": "Surging Frenzied Flame",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "After pulling the lever, follow the room on the east, hugging the wall, and you will find a ladder going up. You'll end up in a room with Shadow Undead scattered around. You can pick up x1 Shadow Realm Rune [6] from a dead body hanging by a beam. Head to the next room, the balcony where the Shadow Undead using Flame of Frenzy on you is located. You'll find this material on a corpse in the southwestern section of the balcony.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 659281,
-      "lat": -160.328125,
-      "lng": 128.99654108190234
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Surging_Frenzied_Flame"
-  },
-  {
-    "id": "tool-swarm-pot",
-    "name": "Swarm Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Swarm_Pot"
-  },
-  {
-    "id": "tool-sweet-raisin",
-    "name": "Sweet Raisin",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Sweet_Raisin"
   },
   {
     "id": "tool-tarnished-s-furled-finger",
@@ -33291,22 +29062,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Telescope"
   },
   {
-    "id": "tool-thawfrost-boluses",
-    "name": "Thawfrost Boluses",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable. Found on a corpse at the edge of the cliffs behind and below Heretical Rise .",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 4119,
-      "lat": -64.851562,
-      "lng": 164.1302
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Thawfrost_Boluses"
-  },
-  {
     "id": "tool-thiollier-s-concoction",
     "name": "Thiollier's Concoction",
     "category": "tool",
@@ -33318,60 +29073,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Thiollier's_Concoction"
   },
   {
-    "id": "tool-throwing-dagger",
-    "name": "Throwing Dagger",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "x5 Below a statue. In the Far end of the room with a large opening that overlooks the ruins. It would be inside the underground cavern that is accessible in the far north of this location with a many sided like shaped hole.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655642,
-      "lat": -119.1640625,
-      "lng": 110.29200343287333
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Throwing_Dagger"
-  },
-  {
-    "id": "tool-throwing-pots-shadow-of-the-erdtree",
-    "name": "Throwing Pots (Shadow of the Erdtree)",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Throwing_Pots_(Shadow_of_the_Erdtree)"
-  },
-  {
-    "id": "tool-uplifting-aromatic",
-    "name": "Uplifting Aromatic",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "An of the perfumers who fought in the Shattering. Craftable with a perfume bottle. Uses FP to raise the attack power of the user and nearby allies while also reducing the damage from one incoming attack by half. This aromatic has an extremely potent morale-raising effect that makes those accustomed to it fearless in the face of death. It was this influence that made the perfumers exceptional commanders.",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Uplifting_Aromatic"
-  },
-  {
-    "id": "tool-viridian-hidden-tear",
-    "name": "Viridian Hidden Tear",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "The item drops from the Furnace Golem roaming around Ellac River.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655604,
-      "lat": -163.671875,
-      "lng": 122.37203907535185
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Viridian_Hidden_Tear"
-  },
-  {
     "id": "tool-vision-of-grace",
     "name": "Vision of Grace",
     "category": "tool",
@@ -33381,49 +29082,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Vision_of_Grace"
-  },
-  {
-    "id": "tool-volcano-pot",
-    "name": "Volcano Pot",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Volcano_Pot"
-  },
-  {
-    "id": "tool-warming-stone",
-    "name": "Warming Stone",
-    "category": "tool",
-    "dlc": false,
-    "acquisition": "Consumable Item. 2 can be found on a corpse atop the eastern-most tower of the Castle Morne Ramparts. This area can be reached by using Torrent to jump from the Spiritspring located just east of the Site of Grace nearby.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "overworld",
-      "markerId": 723,
-      "lat": -215.320312,
-      "lng": 116.450998
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Warming_Stone"
-  },
-  {
-    "id": "tool-well-pickled-turtle-neck",
-    "name": "Well-Pickled Turtle Neck",
-    "category": "tool",
-    "dlc": true,
-    "acquisition": "Shadow Keep . From the Sunken Chapel Site of Grace. Take the western exit and explore the empty area by the edge of the water to find the item on a corpse.",
-    "missable": null,
-    "quest": null,
-    "map": {
-      "code": "dlc",
-      "markerId": 655482,
-      "lat": -119.4140625,
-      "lng": 129.80842953184975
-    },
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Well-Pickled_Turtle_Neck"
   },
   {
     "id": "tool-white-cipher-ring",
@@ -38220,17 +33878,6 @@
       "lng": 106.73
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Siluria's_Tree"
-  },
-  {
-    "id": "weapon-skill",
-    "name": "Skill",
-    "category": "weapon",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Skill"
   },
   {
     "id": "weapon-smithscript-axe",

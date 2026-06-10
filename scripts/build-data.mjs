@@ -97,9 +97,56 @@ const EXCLUDE_EXACT = new Set([
   'Sacred Seals', 'Small Shields', 'Spears', 'Staves', 'Straight Swords',
   'Throwing Blades', 'Thrusting Shields', 'Thrusting Swords', 'Torches',
   'Twinblades', 'Whips',
-  // armor slot + tool class index pages
-  'Arms', 'Legs', 'Throwing Pots', 'Golden Runes',
+  // armor slot + tool class index pages, generic "Skill" page (in Weapons + Ashes of War)
+  'Arms', 'Legs', 'Throwing Pots', 'Golden Runes', 'Skill',
 ])
+
+// ---- spec §1 scope-out: farmable/infinite consumables are NOT collectibles ----
+// "Item scope (out): Farmable/infinite consumables, crafting materials, ..." — the wiki
+// Tools/Multiplayer items categories mix unique one-time tools (whistle, lantern,
+// telescope, flasks, shackles, ciphers/fingers, Prattling Pates, bairns, quest tools)
+// with craftable/purchasable/farmable consumables (greases, throwing pots, boluses,
+// cured meats/jerkies/livers, aromatics, raisins, spend-runes, darts/daggers/kukri,
+// throwable stones, branches, remedies). Likewise Arrows/Bolts mix unique ammo with
+// craftable bone-type/rainbow-stone arrows. Excluded by pattern + explicit-name lists;
+// uncertain names were checked against their wiki.gg pages (e.g. Call of Tibia is
+// crafted; Bondstone / Memory of Grace / Vision of Grace are unique tools and stay).
+const FARMABLE_TOOL_PATTERNS = [
+  /Grease$/, / Pot$/, /^Throwing Pots/, /Boluses$/, /Aromatic$/, /Spraymist$/,
+  /(Dried|Pickled) Liver$/, /Pickled Turtle Neck$/, /Cured Meat$/, /Jerky$/,
+  /Raisin$/, /Fowl Foot$/, / Tender$/, / Flesh$/, / Stew$/,
+  /^Boiled (Crab|Prawn)$/, /^Raw Meat Dumpling$/, /^Innard Meat$/,
+  /^(Golden|Hero's|Shadow Realm) Rune [0-9]+$/, /^Rune of an Unsung Hero$/,
+  /^(Lands Between|Lord's|Numen's|Pauper's|Marika's|Leda's) Rune$/,
+  /^Rune Arc$/, /^Broken Rune$/,
+  / Dart$/, /^Throwing Dagger$/, /^Kukri$/, /^Fan Daggers$/, /^Glinting Nail$/,
+  /^Fire Coil$/, /^Gravity Stone (Fan|Chunk)$/,
+  /^(Rainbow|Explosive|Poisoned|Warming|Frenzyflame|Sunwarmth) Stone( Clump)?$/,
+  /Spritestone$/, /^Glowstone$/, /^Polter Stone$/, /^Roundrock$/, /^Scriptstone$/,
+  /^(Large )?Glintstone Scrap$/, /^Glass Shard$/, /^Cuckoo Glintstone$/,
+  /^Furlcalling Finger Remedy$/, /^Festering Bloody Finger$/, /^Grace Mimic$/,
+  /(Bewitching|Lulling|Charming) Branch$/,
+  /^Soap$/, /^Soft Cotton$/, /^Starlight Shards$/, /^Fingerprint Nostrum$/,
+]
+const FARMABLE_TOOL_NAMES = new Set([
+  'Golden Vow (Consumable)', // craftable consumable variant of the incantation
+  'Surging Frenzied Flame', // craftable (Midra's cookbook)
+  'Perfumed Oil of Ranah', // craftable perfume consumable
+  'Ruin Fragment', // farmable world pickup / crafting material
+  'Dragon Communion Harpoon', // craftable throwable
+  'Call of Tibia', // crafted with Tibia's Cookbook (verified on wiki.gg)
+])
+// all bone-type ammo is craftable (incl. compound names: Bloodbone, Coldbone,
+// Firebone, Haligbone, Lightningbone, Magicbone, Piquebone, Poisonbone, Rotbone,
+// Sleepbone, Stormwing Bone, Bone Ballista Bolt)
+const CRAFTABLE_AMMO_PATTERN = /bone.*(arrow|bolt)/i
+const CRAFTABLE_AMMO_NAMES = new Set([
+  'Fire Arrow', // merchant-infinite
+  'Rainbow Stone Arrow', 'Rainbow Stone Arrow (Fletched)', // craftable
+  'Spiritflame Arrow', // craftable (DLC cookbook)
+])
+const isFarmableTool = (t) => FARMABLE_TOOL_NAMES.has(t) || FARMABLE_TOOL_PATTERNS.some((r) => r.test(t))
+const isCraftableAmmo = (t) => CRAFTABLE_AMMO_NAMES.has(t) || CRAFTABLE_AMMO_PATTERN.test(t)
 // Series pages duplicated inside wiki categories (the numbered instances replace them).
 const SERIES_TITLE = new RegExp(
   `^(${SINGLETON_SERIES.map((s) => s.name).join('|')})( \\(.*\\))?$`,
@@ -212,8 +259,32 @@ for (const m of markers) {
 }
 console.log(`markers extracted: ${markers.length}`)
 
+// Re-home pages filed under the generic container categories (Key Items, Tools,
+// Cookbooks) into their specialized category when the title says what they are:
+// map fragments have no wiki category ("Map <Region>" pages); NPC bell bearings,
+// cookbooks, crystal tears, whetblades, great runes and remembrances are dual-listed
+// in Key Items/Tools/Cookbooks. Re-categorizing makes their ids collide with the
+// specialized-category copies, deduping them at insertion.
+const REHOME_SOURCE = new Set(['key-item', 'tool', 'cookbook'])
+function reHome(title, category) {
+  if (!REHOME_SOURCE.has(category)) return category
+  if (category === 'key-item' && /^Map [A-Z]/.test(title)) return 'map-fragment'
+  if (/Bell Bearing/.test(title)) return 'bell-bearing'
+  if (/Cookbook/.test(title)) return 'cookbook'
+  if (/^Remembrance of /.test(title)) return 'remembrance'
+  if (/'s Great Rune$|^Great Rune of/.test(title)) return 'great-rune'
+  if (/Whetblade$/.test(title)) return 'whetblade'
+  if (/((Crystal|Cracked|Hidden|Dried|Soaked) Tear|Hardtear|Bubbletear)$/.test(title)) return 'crystal-tear'
+  // anything left in Cookbooks that is not a cookbook (e.g. Beastlure Pot) is a
+  // miscategorized consumable -> treat as tool so the scope filter applies
+  if (category === 'cookbook') return 'tool'
+  return category
+}
+
 // ---- build items from wiki categories ----
 const items = new Map()
+const excludedTools = new Set()
+const excludedAmmo = new Set()
 for (const { file, data } of wikiCats) {
   const stem = file.replace(/^category-/, '').replace(/\.json$/, '')
   const mapped = CATEGORY_FROM_WIKI[stem]
@@ -223,16 +294,10 @@ for (const { file, data } of wikiCats) {
     const title = member.title
     if (!title || EXCLUDE_TITLE.test(title) || EXCLUDE_EXACT.has(title)) continue
     if (SERIES_TITLE.test(title)) continue // covered by numbered SINGLETON_SERIES instances
-    // Re-home pages filed under Key Items that belong to finer categories:
-    // map fragments have no wiki category ("Map <Region>" pages), and NPC bell
-    // bearings / some cookbooks are dual-listed (re-categorizing makes their ids
-    // collide with the Bell_Bearings/Cookbooks copies, deduping them).
-    let category = defaultCategory
-    if (defaultCategory === 'key-item') {
-      if (/^Map [A-Z]/.test(title)) category = 'map-fragment'
-      else if (/Bell Bearing/.test(title)) category = 'bell-bearing'
-      else if (/Cookbook/.test(title)) category = 'cookbook'
-    }
+    const category = reHome(title, defaultCategory)
+    // spec §1 scope-out (see FARMABLE_TOOL_* / CRAFTABLE_AMMO_* above)
+    if (category === 'tool' && isFarmableTool(title)) { excludedTools.add(title); continue }
+    if (category === 'ammo' && isCraftableAmmo(title)) { excludedAmmo.add(title); continue }
     const id = `${category}-${slug(title)}`
     const existing = items.get(id)
     if (existing) { existing.dlc = existing.dlc || isDlcCat; continue }
@@ -243,6 +308,7 @@ for (const { file, data } of wikiCats) {
     })
   }
 }
+console.log(`scope-excluded: ${excludedTools.size} farmable/infinite tools, ${excludedAmmo.size} craftable ammo`)
 for (const extra of SUPPLEMENTAL) {
   const id = `${extra.category}-${slug(extra.name)}`
   if (!items.has(id)) {
@@ -252,6 +318,46 @@ for (const extra of SUPPLEMENTAL) {
       wikiUrl: `https://eldenring.wiki.gg/wiki/${encodeURIComponent(extra.name.replaceAll(' ', '_'))}`,
     })
   }
+}
+
+// ---- cross-category dedup (safety net behind reHome) ----
+// The wiki dual-files items under generic and specialized categories, sometimes with
+// name variants that produce different slugs ("Finger-Weaver's Cookbook (1)" vs "[1]").
+// When the same normalized name exists under two categories, keep the more specific
+// one (lower priority number) and drop the rest. Same-name items in categories
+// without a priority (e.g. a weapon and a sorcery sharing a name) are both kept and
+// reported for manual review.
+const CAT_PRIORITY = {
+  'crystal-tear': 0, whetblade: 0, 'great-rune': 0, remembrance: 0,
+  'bell-bearing': 0, 'map-fragment': 0, cookbook: 1, 'key-item': 2, tool: 3,
+}
+{
+  const byNormName = new Map()
+  for (const item of items.values()) {
+    const k = norm(item.name)
+    if (!byNormName.has(k)) byNormName.set(k, [])
+    byNormName.get(k).push(item)
+  }
+  let dropped = 0
+  for (const group of byNormName.values()) {
+    if (group.length < 2) continue
+    const ranked = group
+      .filter((i) => CAT_PRIORITY[i.category] !== undefined)
+      .sort((a, b) => CAT_PRIORITY[a.category] - CAT_PRIORITY[b.category])
+    if (ranked.length >= 2) {
+      for (const loser of ranked.slice(1)) {
+        console.log(`dedup: dropped ${loser.id} (kept ${ranked[0].id})`)
+        items.delete(loser.id)
+        ranked[0].dlc = ranked[0].dlc || loser.dlc
+        dropped++
+      }
+    }
+    const remaining = group.filter((i) => items.has(i.id))
+    if (remaining.length > 1) {
+      console.log(`dedup: kept same-name pair ${remaining.map((i) => i.id).join(' + ')} (distinct categories)`)
+    }
+  }
+  console.log(`dedup: dropped ${dropped} cross-category duplicates`)
 }
 
 // ---- singleton series (numbered instances) ----
