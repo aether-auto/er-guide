@@ -2,45 +2,289 @@
   "id": "ainsel",
   "name": "Ainsel River, Nokstella & Lake of Rot",
   "order": 9,
-  "legs": [],
-  "cleanup": [
-    "ammo-black-key-bolt",
-    "ammo-shattershard-arrow",
-    "armor-bloodsoaked-manchettes",
-    "armor-bloodsoaked-mask",
-    "armor-marais-mask",
-    "armor-marais-robe",
-    "armor-mushroom-crown",
-    "armor-nox-monk-armor",
-    "armor-nox-monk-armor-altered",
-    "bell-bearing-ghost-glovewort-picker-s-bell-bearing-2",
-    "cookbook-nomadic-warrior-s-cookbook-22",
-    "cookbook-perfumer-s-cookbook-2",
-    "golden-seed-33",
-    "golden-seed-36",
-    "golden-seed-37",
-    "incantation-frozen-lightning-spear",
-    "key-item-celestial-dew",
-    "larval-tear-13",
-    "larval-tear-14",
-    "larval-tear-15",
-    "map-fragment-map-ainsel-river",
-    "map-fragment-map-lake-of-rot",
-    "remembrance-remembrance-of-the-naturalborn",
-    "shield-ant-s-skull-plate",
-    "sorcery-meteorite-of-astel",
-    "spirit-ash-archer-ashes",
-    "spirit-ash-nightmaiden-swordstress-puppets",
-    "stonesword-key-20",
-    "stonesword-key-52",
-    "stonesword-key-53",
-    "talisman-immunizing-horn-charm",
-    "talisman-immunizing-horn-charm-1",
-    "talisman-moon-of-nokstella",
-    "weapon-alabaster-lord-s-sword",
-    "weapon-antspur-rapier",
-    "weapon-bastard-s-stars",
-    "weapon-scorpion-s-stinger",
-    "weapon-wing-of-astel"
-  ]
+  "legs": [
+    {
+      "id": "ainsel-01",
+      "from": "Renna's Rise (sending gate)",
+      "to": "Ainsel River Main",
+      "summary": "After delivering the Fingerslayer Blade to Ranni, climb to the top of Renna's Rise (the northern tower at Three Sisters in Liurnia) and pass through its sending gate to arrive in upper Ainsel River. Pick up the Miniature Ranni from the tomb near the arrival point — this is required to progress her quest.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Prerequisite: deliver Fingerslayer Blade to Ranni at Ranni's Rise. Then climb to the top of Renna's Rise (the northwest tower of Three Sisters) and use the sending gate."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ranni-miniature-doll",
+          "questline": "Ranni",
+          "text": "Immediately upon arriving, pick up the Miniature Ranni from the tomb/coffin near the arrival point. Then rest at the Ainsel River Main Site of Grace and select 'Talk to miniature Ranni' three times — exhaust all dialogue to receive her full backstory and advance the quest.",
+          "missable": {
+            "lockedBy": "Skipping the doll or not talking three times",
+            "note": "The Miniature Ranni dialogue is the trigger to make the Baleful Shadow appear later. If skipped, the Baleful Shadow boss does not spawn and the Discarded Palace Key cannot be obtained."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-ainsel-river",
+          "note": "Stele near the Ainsel River Main grace — pick up the map immediately."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-20",
+          "note": "Corpse beside a Giant Miranda Flower in Ainsel River Main."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-wing-of-astel",
+          "note": "Chest in the middle of the pillar ruins of Ainsel River Main (guarded by Silver Ants)."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-perfumer-s-cookbook-2",
+          "note": "Corpse in the Uhl Palace Ruins area of Ainsel River Main."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-nox-monk-armor",
+          "note": "Dropped by Nox Monk enemies in Ainsel River Main."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-nox-monk-armor-altered",
+          "note": "Altered version — tailoring tools."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-frozen-lightning-spear",
+          "note": "Corpse in the Ainsel River Main ruins — in the eastern section past the ants."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-shattershard-arrow",
+          "note": "Corpse in Ainsel River Main ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-black-key-bolt",
+          "note": "Corpse in Ainsel River Main."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-archer-ashes",
+          "note": "Chest in Ainsel River Main — deep in the Uhl Palace Ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-13",
+          "note": "Dropped by a Silver Tear (ball enemy) in Ainsel River Main ruins."
+        }
+      ]
+    },
+    {
+      "id": "ainsel-02",
+      "from": "Ainsel River Main",
+      "to": "Nokstella, Eternal City",
+      "summary": "Continue north through Ainsel River Main into Nokstella, Eternal City — a second underground city populated by Silver Tears and Nox enemies. The Moon of Nokstella talisman (adds 2 memory slots) and Ghost-Glovewort Picker's Bell Bearing [2] are the key finds. The Baleful Shadow (Ranni quest boss) appears past Nokstella.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Ainsel River Main, follow the large underground river north through the Uhl Palace Ruins into Nokstella, Eternal City. Nokstella grace is on the east side after descending."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-moon-of-nokstella",
+          "note": "Chest at the end of an upper room in Nokstella — climb to the rafters of the big domed building. Adds 2 spell memory slots."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-ghost-glovewort-picker-s-bell-bearing-2",
+          "note": "Chest in Nokstella — allows purchasing Ghost Glovewort 4-6 from Twin Maiden Husks."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-nightmaiden-swordstress-puppets",
+          "note": "Chest in Nokstella behind a sealed mist door."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-ant-s-skull-plate",
+          "note": "Chest in Nokstella guarded by a Nox Swordstress."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-33",
+          "note": "Near the Nokstella Waterfall Basin grace — small golden tree."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-celestial-dew",
+          "note": "Corpse on the cliffside near Nokstella Waterfall Basin — used to revive hostile NPCs at the Church of Vows."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-52",
+          "note": "Corpse in Nokstella, Eternal City."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-53",
+          "note": "Corpse near the Nokstella Waterfall Basin grace."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-14",
+          "note": "Dropped by a Silver Tear in Nokstella."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-22",
+          "note": "Corpse in the Nokstella area ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bloodsoaked-manchettes",
+          "note": "Corpse in Nokstella area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bloodsoaked-mask",
+          "note": "Corpse in Nokstella area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-marais-mask",
+          "note": "Corpse in Nokstella ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-marais-robe",
+          "note": "Corpse in Nokstella ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-mushroom-crown",
+          "note": "Dropped in the Uhl Palace Ruins / Ainsel underground area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-bastard-s-stars",
+          "note": "Dropped by the Fallingstar Beast boss in the Ainsel River Main area or nearby."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-immunizing-horn-charm",
+          "note": "Corpse in Ainsel River Main or Nokstella — raises immunity stat."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-immunizing-horn-charm-1",
+          "note": "Chest in the Lake of Rot area (Ancestral Follower enemy drop or chest near the Lake of Rot Shoreside grace)."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ranni-baleful-shadow",
+          "questline": "Ranni",
+          "text": "After exhausting Miniature Ranni's dialogue (step from Ainsel-01), the Baleful Shadow invader appears in the passage west of Nokstella Waterfall Basin, past the elevator. Defeat it to obtain the Discarded Palace Key.",
+          "missable": {
+            "lockedBy": "Skipping Miniature Ranni dialogue",
+            "note": "The Baleful Shadow only spawns if the Miniature Ranni has been spoken to at the Ainsel River Main grace. Without the Discarded Palace Key, the Dark Moon Ring (needed for the lift after Astel) cannot be obtained."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-dark-moon-ring",
+          "note": "Use the Discarded Palace Key (from Baleful Shadow) to open a chest in the Raya Lucaria Grand Library (where you fought Rennala). Needed to pass the lift after Astel."
+        }
+      ]
+    },
+    {
+      "id": "ainsel-03",
+      "from": "Nokstella Waterfall Basin",
+      "to": "Lake of Rot Shoreside",
+      "summary": "Descend via elevator from Nokstella Waterfall Basin to reach the Lake of Rot. This is a poisonous lake of Scarlet Rot — equip Preserving Boluses, the Immunizing Cured Meat, or flask Crystal Tears. Activate the four pillars to raise stone platforms across the lake.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Take the elevator at the far west end of Nokstella (past the Baleful Shadow area) down to the Lake of Rot. The lake inflicts rapid Scarlet Rot buildup — cross it via the raised platforms (activated by pressing buttons on islands). Preserving Boluses are essential; craft them or buy from merchants."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-lake-of-rot",
+          "note": "Corpse at the water's edge near the Lake of Rot Shoreside grace."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-scorpion-s-stinger",
+          "note": "Inside a building on the west side of the Lake of Rot (past the rot-prawn enemies)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-antspur-rapier",
+          "note": "Dropped by the Maleigh Marais (mounted knight) invader in the Lake of Rot, or found as a corpse pick-up near the lake."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-alabaster-lord-s-sword",
+          "note": "Dropped by the Alabaster Lord boss on top of the 4th raised platform in Lake of Rot."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-15",
+          "note": "Dropped by a Juvenile Scholarly Beast or Silver Tear enemy in the Lake of Rot area."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-36",
+          "note": "Small golden tree on a stone island in the Lake of Rot."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-37",
+          "note": "Near the Grand Cloister area at the south end of the Lake of Rot — Ulcerated Tree Spirit fight."
+        }
+      ]
+    },
+    {
+      "id": "ainsel-04",
+      "from": "Grand Cloister",
+      "to": "Astel, Naturalborn of the Void",
+      "summary": "Proceed south through the Grand Cloister to the coffin at the waterfall's tip — this transports you to Astel's fog gate. Astel is a mandatory Ranni quest boss. After defeating Astel, use the Dark Moon Ring on the lift north of the arena to ascend to Moonlight Altar on the surface.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the Lake of Rot Shoreside, head south through the rot to the Grand Cloister (a ruined building area). Navigate through Kindred of Rot enemies. At the southern end, find the coffin at the waterfall edge — lie in it to be transported to Astel's arena."
+        },
+        {
+          "type": "boss",
+          "id": "boss-ainsel-astel-naturalborn-of-void",
+          "text": "Astel, Naturalborn of the Void — a large alien boss. Weak to holy damage and bleed. The fight room is dark; use a torch or Starlight. Drops Remembrance of the Naturalborn. After defeat, a lift to the north of the arena opens (requires Dark Moon Ring in inventory to activate)."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-naturalborn",
+          "note": "From Astel. Trade at Enia for Waves of Darkness incantation or Meteorite of Astel sorcery."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-meteorite-of-astel",
+          "note": "Trade Remembrance of the Naturalborn at Enia — one of two choices."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ranni-moonlight-altar",
+          "questline": "Ranni",
+          "text": "With the Dark Moon Ring in inventory, activate the lift north of Astel's arena. This ascends to the Moonlight Altar on the surface (Liurnia). Proceed to the Cathedral of Manus Celes where Ranni awaits — place the Dark Moon Ring on her finger to complete her quest and receive the Dark Moon Greatsword.",
+          "missable": {
+            "lockedBy": "Not having the Dark Moon Ring",
+            "note": "Dark Moon Ring requires the Discarded Palace Key from Baleful Shadow → Raya Lucaria chest. If Baleful Shadow was not spawned (Miniature Ranni dialogue skipped), the lift will not activate and Ranni's ending is locked."
+          }
+        },
+        {
+          "type": "direction",
+          "text": "Note: map-fragment-map-lake-of-rot and golden-seed-36 were collected in the previous leg (ainsel-03). No duplicate step needed here."
+        }
+      ]
+    }
+  ],
+  "cleanup": []
 }

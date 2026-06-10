@@ -2,69 +2,444 @@
   "id": "weeping-peninsula",
   "name": "Weeping Peninsula",
   "order": 2,
-  "legs": [],
+  "legs": [
+    {
+      "id": "weeping-01",
+      "from": "Bridge of Sacrifice",
+      "to": "Tombsward",
+      "summary": "Cross the Bridge of Sacrifice south from Limgrave. Irina sits by the road just south of the bridge — speak to her and receive her letter. Grab the Stonesword Key at the barricade, the Map Fragment from the stele, and sweep the Tombsward area churches for Sacred Tears.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "stonesword-key-03",
+          "note": "On the ground by the wooden barricade at the southern end of the Bridge of Sacrifice."
+        },
+        {
+          "type": "quest",
+          "id": "quest-irina-letter",
+          "questline": "Irina / Edgar",
+          "text": "Speak to Irina sitting beside the road just south of the Bridge of Sacrifice. She gives you her letter and asks you to find her father Edgar at Castle Morne. Accept the letter.",
+          "missable": {
+            "lockedBy": "Defeating Leonine Misbegotten before speaking to Edgar at Castle Morne",
+            "note": "Irina may be found dead if you delay — complete the Edgar conversation at the castle before killing the boss."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-irina-s-letter",
+          "note": "Given by Irina on the road south of Bridge of Sacrifice."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-weeping-peninsula",
+          "note": "At the map stele on the road just south of Bridge of Sacrifice."
+        },
+        {
+          "type": "direction",
+          "text": "Ride southwest toward the Tombsward area. Church of Pilgrimage is on the plateau overlooking the sea."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-03",
+          "note": "In front of the altar at the Church of Pilgrimage, west of Tombsward."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-winged-scythe",
+          "note": "In the underground room at Tombsward Ruins — staircase descends from the center of the ruins into a dark hall; chest at the end."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-eclipse-crest-heater-shield",
+          "note": "On a ledge near the pillar close to the Tombsward Site of Grace, reachable from the Minor Erdtree ledge."
+        }
+      ]
+    },
+    {
+      "id": "weeping-02",
+      "from": "Tombsward",
+      "to": "Fourth Church of Marika",
+      "summary": "Sweep the peninsula's interior — Fourth Church of Marika for another Sacred Tear, Oridys's Rise for a Memory Stone (solve the turtle puzzle), the Minor Erdtree (kill the Erdtree Avatar for two Crystal Tears), and Demi-Human Forest Ruins for the Demi-Human Queen's Staff and sorceries.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "sacred-tear-02",
+          "note": "In front of the altar at the Fourth Church of Marika, southeast of Tombsward."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-lordsworn-s-straight-sword",
+          "note": "Dropped by a headless undead soldier enemy near the Fourth Church of Marika."
+        },
+        {
+          "type": "direction",
+          "text": "From Fourth Church, ride north to Oridys's Rise tower. Interact with the statue at the base ('Seek three wise beasts'). Kill the three ghostly tortoises: one north of the entrance, one in bushes left of the steps, one in the pond to the southwest (invisible until struck — look for water disturbance). Once all three are dead the seal breaks."
+        },
+        {
+          "type": "item",
+          "itemId": "memory-stone-01",
+          "note": "In a chest at the top of Oridys's Rise tower — solve the three tortoises puzzle to unlock the door. Adds one memory slot."
+        },
+        {
+          "type": "direction",
+          "text": "Head west to the Minor Erdtree in the central peninsula. The Erdtree Avatar patrols in front of it."
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-erdtree-avatar",
+          "text": "Erdtree Avatar — guards the Minor Erdtree in Weeping Peninsula. Drops two Crystal Tears."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-crimsonburst-crystal-tear",
+          "note": "Dropped by the Erdtree Avatar guarding the Weeping Peninsula Minor Erdtree."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-opaline-bubbletear",
+          "note": "Dropped alongside the Crimsonburst Crystal Tear by the Erdtree Avatar."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-faith-knot-crystal-tear",
+          "note": "In a bowl under a tree north of Demi-Human Forest Ruins, east of Church of Pilgrimage — surrounded by Poison Flowers."
+        },
+        {
+          "type": "direction",
+          "text": "Ride south to Demi-Human Forest Ruins. The Demi-Human Queen mini-boss is in the main building. Check the cellar first for the Shield of the Guilty (jump the wall to access the staircase)."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-shield-of-the-guilty",
+          "note": "In the cellar of Demi-Human Forest Ruins — jump the wall to find the staircase leading down before entering the main building."
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-demi-human-queen-forest-ruins",
+          "text": "Demi-Human Queen — mini-boss in the main building of Demi-Human Forest Ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-demi-human-queen-s-staff",
+          "note": "Dropped by the Demi-Human Queen in Demi-Human Forest Ruins — excellent early sorcery catalyst."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-crystal-burst",
+          "note": "Dropped by the Demi-Human Queen in Demi-Human Forest Ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-the-flame-of-frenzy",
+          "note": "On a corpse by one of the left pillars at the Callu Baptismal Church (inland east of Demi-Human Forest Ruins)."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-01",
+          "note": "In front of the altar at the Callu Baptismal Church."
+        }
+      ]
+    },
+    {
+      "id": "weeping-03",
+      "from": "Ailing Village Outskirts",
+      "to": "Earthbore Cave",
+      "summary": "Eastern peninsula — Isolated Merchant at his shack sells useful early items. Night's Cavalry patrols near Castle Morne Rampart at night. Tombsward Cave has cookbook and Viridian Amber Medallion. Earthbore Cave has the Spelldrake Talisman. Tombsward Catacombs have a Stonesword Key lock for the cookbook and yield Lhutel the Headless.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "weapon-morning-star",
+          "note": "In a chest inside a broken wagon along the road on the Weeping Peninsula."
+        },
+        {
+          "type": "direction",
+          "text": "The Isolated Merchant's Shack is on the eastern road. He sells a Lantern (1800 runes) and other supplies."
+        },
+        {
+          "type": "direction",
+          "text": "At night (rest at a grace and pass time), a Night's Cavalry spawns near the Castle Morne Rampart Site of Grace on the bridge road."
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-nights-cavalry-castle-morne",
+          "text": "Night's Cavalry — spawns at night near Castle Morne Rampart. Drops the Nightrider Flail."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-nightrider-flail",
+          "note": "Dropped by the Night's Cavalry near Castle Morne Rampart (night only)."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-barricade-shield",
+          "note": "Dropped by the Night's Cavalry near Castle Morne Rampart (night only)."
+        },
+        {
+          "type": "direction",
+          "text": "Tombsward Cave is on the western cliffside forest. The boss drops the Viridian Amber Medallion."
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-miranda-blighted-bloom",
+          "text": "Miranda the Blighted Bloom — Tombsward Cave. Kill the smaller flowers first."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-viridian-amber-medallion",
+          "note": "Dropped by Miranda the Blighted Bloom in Tombsward Cave — boosts maximum stamina."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-8",
+          "note": "On a corpse inside Tombsward Cave."
+        },
+        {
+          "type": "direction",
+          "text": "Tombsward Catacombs are north of Tombsward — one Stonesword Key required for the imp seal blocking a side room."
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-cemetery-shade-tombsward",
+          "text": "Cemetery Shade — Tombsward Catacombs. Fast teleporting humanoid."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-lhutel-the-headless",
+          "note": "Dropped by the Cemetery Shade in Tombsward Catacombs — powerful tanky spirit ash."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-9",
+          "note": "Behind an imp statue seal in Tombsward Catacombs — requires 1 Stonesword Key."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-prattling-pate-thank-you",
+          "note": "In Tombsward Catacombs on a corpse."
+        },
+        {
+          "type": "direction",
+          "text": "Earthbore Cave is in the south-central cliffs. The Runebear boss is the challenge."
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-runebear-earthbore",
+          "text": "Runebear — Earthbore Cave. Aggressive bear; stay behind it."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-spelldrake-talisman",
+          "note": "Dropped by the Runebear in Earthbore Cave — boosts magic damage negation."
+        }
+      ]
+    },
+    {
+      "id": "weeping-04",
+      "from": "Castle Morne Rampart",
+      "to": "Behind the Castle",
+      "summary": "Castle Morne is the dungeon climax of the Weeping Peninsula. Deliver Irina's letter to Edgar atop the ramparts FIRST — then fight your way to the boss. The Leonine Misbegotten drops the Grafted Blade Greatsword (Great Rune of Unalloyed Gold alternative). After the boss speak to Edgar, then check on Irina on your way out.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Enter Castle Morne from the south lift or the main gate. Harpies and Misbegotten enemies patrol throughout."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-01",
+          "note": "On a corpse on a wooden platform in the castle, reachable from the western rampart wall near the Site of Grace."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-02",
+          "note": "On a corpse sitting in a chair at the northern plateau edge of the castle, overlooking the sea."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-great-turtle-shell",
+          "note": "On a corpse atop the easternmost tower of the Castle Morne Ramparts — use the Spiritspring east of the Site of Grace to launch up with Torrent."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-claymore",
+          "note": "In a chest in the main courtyard building — hug the right wall past the burning corpses to the north building; chest is on the left as you enter."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-whip",
+          "note": "On a corpse inside the Rampart Gaol building (western wall, blue roof building) — drop down from the roof to the cliffs and follow them southeast back inside."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-steel-wire-torch",
+          "note": "On a corpse at the top level of Castle Morne, at the end of a narrow path guarded by two harpies."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-longhaft-axe",
+          "note": "Rare drop from a Misbegotten enemy sleeping just past the Beside the Rampart Gaol Site of Grace — cross the bridge, on the left."
+        },
+        {
+          "type": "quest",
+          "id": "quest-edgar-castle-morne",
+          "questline": "Irina / Edgar",
+          "text": "Find Edgar at the top of the ramparts (accessible via Torrent spiritspring or internal climbing). Deliver Irina's letter. He refuses to leave until the boss is dead.",
+          "missable": {
+            "lockedBy": "Killing Leonine Misbegotten before speaking to Edgar",
+            "note": "Speak to Edgar AND give him the letter BEFORE killing the boss — otherwise the quest can break and Irina may be found dead."
+          }
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-leonine-misbegotten",
+          "text": "Leonine Misbegotten — Castle Morne basement. Drops the Grafted Blade Greatsword (legendary armament)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-grafted-blade-greatsword",
+          "note": "Dropped by Leonine Misbegotten at Castle Morne — a legendary armament required for 100% completion."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-twinblade-talisman",
+          "note": "In a chest near the Castle Morne boss area."
+        },
+        {
+          "type": "quest",
+          "id": "quest-edgar-after-boss",
+          "questline": "Irina / Edgar",
+          "text": "Return to Edgar after defeating the Leonine Misbegotten — he speaks of returning to Irina. Ride back to where Irina was sitting near Bridge of Sacrifice to see the outcome. Edgar will later appear at Revenger's Shack in Liurnia as an invader.",
+          "missable": {
+            "lockedBy": "None — Edgar returns to Irina automatically",
+            "note": "The Irina/Edgar quest continues in Liurnia when Edgar invades as 'Edgar, Revenger' at Revenger's Shack."
+          }
+        }
+      ]
+    },
+    {
+      "id": "weeping-05",
+      "from": "Behind the Castle",
+      "to": "Morne Tunnel",
+      "summary": "Final peninsula sweep: Morne Tunnel for the Rusted Anchor, Impaler's Catacombs for Demi-Human Ashes and rare imp armor drops, the Deathbird at night for the Sacrificial Axe, and the Tower of Return for the Weeping Peninsula Teardrop Scarab incantations.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Morne Tunnel is northwest of Castle Morne in the cliffs."
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-scaly-misbegotten-morne-tunnel",
+          "text": "Scaly Misbegotten — Morne Tunnel."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rusted-anchor",
+          "note": "Dropped by the Scaly Misbegotten in Morne Tunnel."
+        },
+        {
+          "type": "direction",
+          "text": "Impaler's Catacombs are south of the Bridge of Sacrifice, in the cliffs. The imp helm armor is a rare drop from imp enemies inside."
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-erdtree-burial-watchdog-impaler",
+          "text": "Erdtree Burial Watchdog — Impaler's Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-demi-human-ashes",
+          "note": "Dropped by the Erdtree Burial Watchdog in Impaler's Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-prattling-pate-please-help",
+          "note": "In Impaler's Catacombs on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-imp-head-cat",
+          "note": "Rare drop from Imp enemies inside Impaler's Catacombs — farm if needed."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-imp-head-fanged",
+          "note": "Rare drop from Imp enemies inside Impaler's Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-imp-head-long-tongued",
+          "note": "Rare drop from Imp enemies inside Impaler's Catacombs."
+        },
+        {
+          "type": "direction",
+          "text": "A Deathbird spawns at night on the eastern road near the peninsula cliffs south of the Minor Erdtree. Drops the Sacrificial Axe."
+        },
+        {
+          "type": "boss",
+          "id": "boss-weeping-deathbird-peninsula",
+          "text": "Deathbird — Weeping Peninsula, night only. Patrols the eastern road."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-sacrificial-axe",
+          "note": "Dropped by the Deathbird that spawns at night on the Weeping Peninsula eastern road."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-01",
+          "note": "Under a Phantom Tree on a ridge southwest of the Weeping Peninsula Map Fragment, along the main road toward Castle Morne."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-ambush-shard",
+          "note": "On a corpse in the underground jail of Witchbane Ruins (center of the peninsula). Sellen is also held here in a later step — note the location for her questline."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-hand-ballista",
+          "note": "At the top of the Forest Lookout Tower west of Bridge of Sacrifice."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-divine-fortification",
+          "note": "Dropped by a Teardrop Scarab atop a collapsed stone structure overgrown with yellow moss in the Weeping Peninsula."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-lightning-strike",
+          "note": "Dropped by a Teardrop Scarab in the lower cleft/crevasse area of the peninsula — descend carefully via stone platforms jutting from the cliffside; the area is struck by lightning."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-poison-mist",
+          "note": "Dropped by a Teardrop Scarab in the forested area of the Weeping Peninsula."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-gilded-iron-shield",
+          "note": "On a corpse sitting on a grave in a graveyard on the peninsula."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-flame-crest-wooden-shield",
+          "note": "Looted from a corpse inside a cabin in the Ailing Village area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-spear-of-the-impaler",
+          "note": "In Impaler's Catacombs."
+        }
+      ]
+    }
+  ],
   "cleanup": [
-    "armor-imp-head-cat",
-    "armor-imp-head-fanged",
-    "armor-imp-head-long-tongued",
-    "armor-witch-s-glintstone-crown",
-    "ash-of-war-ash-of-war-barricade-shield",
     "ash-of-war-ash-of-war-mighty-shot",
     "ash-of-war-ash-of-war-waves-of-darkness",
-    "cookbook-nomadic-warrior-s-cookbook-8",
-    "cookbook-nomadic-warrior-s-cookbook-9",
-    "crystal-tear-crimsonburst-crystal-tear",
-    "crystal-tear-faith-knot-crystal-tear",
-    "crystal-tear-opaline-bubbletear",
-    "golden-seed-01",
-    "incantation-divine-fortification",
-    "incantation-lightning-strike",
-    "incantation-poison-mist",
-    "incantation-the-flame-of-frenzy",
-    "key-item-irina-s-letter",
-    "map-fragment-map-weeping-peninsula",
-    "memory-stone-01",
-    "sacred-tear-01",
-    "sacred-tear-02",
-    "sacred-tear-03",
-    "shield-eclipse-crest-heater-shield",
-    "shield-flame-crest-wooden-shield",
-    "shield-gilded-iron-shield",
-    "shield-great-turtle-shell",
-    "shield-shield-of-the-guilty",
-    "sorcery-ambush-shard",
-    "sorcery-carian-greatsword",
-    "sorcery-crystal-burst",
-    "spirit-ash-demi-human-ashes",
-    "spirit-ash-lhutel-the-headless",
-    "spirit-ash-warhawk-ashes",
-    "stonesword-key-01",
-    "stonesword-key-02",
-    "stonesword-key-03",
-    "talisman-spelldrake-talisman",
-    "talisman-twinblade-talisman",
-    "talisman-viridian-amber-medallion",
-    "tool-prattling-pate-please-help",
-    "tool-prattling-pate-thank-you",
     "weapon-bastard-sword",
     "weapon-bloodstained-dagger",
-    "weapon-claymore",
     "weapon-crescent-moon-axe",
-    "weapon-demi-human-queen-s-staff",
-    "weapon-golem-greatbow",
-    "weapon-grafted-blade-greatsword",
-    "weapon-hand-ballista",
     "weapon-large-club",
-    "weapon-longhaft-axe",
-    "weapon-lordsworn-s-straight-sword",
     "weapon-misbegotten-shortbow",
-    "weapon-morning-star",
-    "weapon-nightrider-flail",
-    "weapon-rusted-anchor",
-    "weapon-sacrificial-axe",
-    "weapon-spear-of-the-impaler",
-    "weapon-steel-wire-torch",
-    "weapon-whip",
-    "weapon-winged-scythe"
+    "spirit-ash-warhawk-ashes",
+    "armor-witch-s-glintstone-crown"
   ]
 }

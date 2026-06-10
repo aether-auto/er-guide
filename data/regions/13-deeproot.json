@@ -2,24 +2,142 @@
   "id": "deeproot",
   "name": "Deeproot Depths",
   "order": 13,
-  "legs": [],
-  "cleanup": [
-    "ammo-lightning-greatbolt",
-    "armor-crucible-tree-armor",
-    "armor-crucible-tree-armor-altered",
-    "armor-crucible-tree-helm",
-    "ash-of-war-ash-of-war-golden-land",
-    "ash-of-war-ash-of-war-vacuum-slice",
-    "incantation-elden-stars",
-    "key-item-mending-rune-of-the-death-prince",
-    "map-fragment-map-deeproot-depths",
-    "remembrance-remembrance-of-the-lichdragon",
-    "stonesword-key-54",
-    "talisman-prince-of-death-s-absesses",
-    "talisman-prince-of-death-s-cyst",
-    "talisman-prince-of-death-s-pustule",
-    "weapon-inseparable-sword",
-    "weapon-prince-of-death-s-staff",
-    "weapon-siluria-s-tree"
-  ]
+  "legs": [
+    {
+      "id": "deeproot-01",
+      "from": "Root-Facing Cliffs",
+      "to": "The Nameless Eternal City",
+      "summary": "Deeproot Depths is accessed via the Valiant Gargoyle duo boss coffin in the Siofra Aqueduct (Nokron, Eternal City). Ride the coffin to arrive at the Root-Facing Cliffs. Navigate the enormous tree root landscape southeast toward the Nameless Eternal City, collecting the map fragment stele and key items along the way.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Access: Defeat the Valiant Gargoyle duo boss in the Siofra Aqueduct (reached from Nokron, Eternal City). After the fight, rest in the coffin at the water's edge to be transported to the Root-Facing Cliffs grace in Deeproot Depths."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-deeproot-depths",
+          "note": "Stele near the center of Deeproot Depths, on the path through the root landscape toward the Nameless Eternal City."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-lightning-greatbolt",
+          "note": "On a corpse on the roots or in the cliffs area of Deeproot Depths."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-54",
+          "note": "On a corpse in the Deeproot Depths root landscape area."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-prince-of-death-s-pustule",
+          "note": "On a corpse in the Deeproot Depths area, among the roots."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-prince-of-death-s-cyst",
+          "note": "On a corpse in the Deeproot Depths area."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-prince-of-death-s-absesses",
+          "note": "On a corpse deeper in the Deeproot Depths."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-prince-of-death-s-staff",
+          "note": "On a corpse in the Nameless Eternal City area of Deeproot Depths. Scales with Intelligence and Faith; scales with Death-related spells."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-vacuum-slice",
+          "note": "Dropped by a Teardrop Scarab in the Deeproot Depths area."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-golden-land",
+          "note": "Dropped by a Teardrop Scarab in Deeproot Depths."
+        }
+      ]
+    },
+    {
+      "id": "deeproot-02",
+      "from": "Across the Roots",
+      "to": "Prince of Death's Throne",
+      "summary": "Traverse the giant roots to reach the Across the Roots grace, then proceed to the Crucible Knight Siluria boss (optional but drops Siluria's Tree). Continue to the Prince of Death's Throne grace and speak with Fia to advance her questline. Fia's Champions invade to protect her — defeat them, then trigger the Lichdragon Fortissax fight via the Deathbed Dream.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the Nameless Eternal City, follow the giant root network northeast/upward to reach Across the Roots grace. The path involves crossing enormous root bridges high above the abyss."
+        },
+        {
+          "type": "boss",
+          "id": "boss-deeproot-crucible-knight-siluria",
+          "text": "Crucible Knight Siluria — optional boss in Deeproot Depths near the root network. Drops Siluria's Tree (a greatspear with Crucible incantation Ash of War)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-siluria-s-tree",
+          "note": "Dropped by Crucible Knight Siluria. One of the Crucible Knight-themed boss weapons."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-elden-stars",
+          "note": "On a corpse near the Prince of Death's Throne area — one of the most powerful Erdtree incantations. Note: Some sources place this near the base of the Erdtree root path in Deeproot. Check the area around the throne site."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-crucible-tree-armor",
+          "note": "On a corpse in the Deeproot Depths area near the throne."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-crucible-tree-helm",
+          "note": "With the Crucible Tree armor set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-crucible-tree-armor-altered",
+          "note": "Altered version; found near the Crucible Tree armor corpse in Deeproot."
+        },
+        {
+          "type": "quest",
+          "id": "quest-fia-questline-deeproot",
+          "questline": "Fia, Deathbed Companion",
+          "text": "Reach the Prince of Death's Throne grace. Fia is here with D's brother (who has killed D after you gave Fia the Weathered Dagger — this is how the questline progresses). Exhaust Fia's dialogue completely. She will give you the Cursemark of Death, asking you to investigate the Death-Prince's secret. She also has the Twinned Armor set from D (retrieved automatically). Proceed to the next step to fight Lichdragon Fortissax.",
+          "missable": {
+            "lockedBy": "Mending Rune of the Death-Prince",
+            "note": "Must exhaust all of Fia's dialogue before triggering the Deathbed Dream or the rune will not be obtainable."
+          }
+        },
+        {
+          "type": "quest",
+          "id": "quest-fia-champions-defeat",
+          "questline": "Fia, Deathbed Companion",
+          "text": "Fia's Champions: After advancing Fia's questline far enough, hostile NPC invaders will appear to protect her — D's Brother (Hewg), Black Knife Assassin Tiche (summon NPC), and potentially others. These must be defeated to progress. Check the area around Prince of Death's Throne for invaders before interacting with Fia again. Note: The exact trigger and invader composition is referenced from wiki sourcing — defeat all hostile invaders in the area."
+        },
+        {
+          "type": "boss",
+          "id": "boss-deeproot-lichdragon-fortissax",
+          "text": "Lichdragon Fortissax — accessed by interacting with the sleeping Fia (Deathbed Dream) at the Prince of Death's Throne after exhausting her dialogue and defeating the champions guarding her. Fight occurs inside a dream-state. Drops Remembrance of the Lichdragon."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-lichdragon",
+          "note": "Dropped by Lichdragon Fortissax. Exchange at Roundtable Hold for either Fortissax's Lightning Spear or the Elden Stars incantation (alternate route if not found as a corpse pickup above)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-inseparable-sword",
+          "note": "Exchanged from the Remembrance of the Lichdragon at Roundtable Hold (Enia)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-mending-rune-of-the-death-prince",
+          "note": "Given by Fia after Lichdragon Fortissax is defeated and you return to talk with her one final time. Required for the Age of Duskborn ending (restore the rune to the Elden Ring). Fia disappears after giving you the rune — this concludes her questline."
+        }
+      ]
+    }
+  ],
+  "cleanup": []
 }

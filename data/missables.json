@@ -1,4 +1,33 @@
 {
   "_doc": "itemId -> { lockedBy, note }. Populated during route authoring (Tasks 17-24).",
-  "_entries": {}
+  "_entries": {
+    "weapon-ruins-greatsword": {
+      "lockedBy": "Radahn Festival activation",
+      "note": "The Misbegotten Warrior + Crucible Knight duo at Redmane Castle is replaced while the Festival is active; defeat them first (reaching Altus or progressing Ranni auto-triggers the Festival)."
+    },
+    "weapon-bolt-of-gransax": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "On the giant spear in the Avenue plaza of the Royal Capital; gone in the Ashen Capital."
+    },
+    "whetblade-sanctified-whetblade": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Royal Capital only; unlocks Holy/Lightning affinities. Collect before Farum Azula."
+    },
+    "key-item-golden-order-principia": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Prayerbook in the Fortified Manor, western Leyndell; Royal Capital only."
+    },
+    "talisman-blessed-dew-talisman": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Chest on the Divine Bridge behind the Golem; Royal Capital only."
+    },
+    "weapon-sword-of-milos": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Dung Eater's moat invasion does not occur in the Ashen Capital."
+    },
+    "key-item-weathered-dagger": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Found in the Royal Capital; give to D to advance Fia's questline."
+    }
+  }
 }

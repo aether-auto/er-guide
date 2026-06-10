@@ -2,123 +2,763 @@
   "id": "mt-gelmir",
   "name": "Mt. Gelmir",
   "order": 11,
-  "legs": [],
-  "cleanup": [
-    "ammo-explosive-greatbolt",
-    "ammo-golden-arrow",
-    "ammo-great-arrow",
-    "armor-azur-s-glintstone-crown",
-    "armor-azur-s-glintstone-robe",
-    "armor-beast-champion-armor",
-    "armor-beast-champion-armor-altered",
-    "armor-beast-champion-gauntlets",
-    "armor-beast-champion-greaves",
-    "armor-beast-champion-helm",
-    "armor-bloodhound-knight-armor",
-    "armor-bloodhound-knight-armor-altered",
-    "armor-bloodhound-knight-gauntlets",
-    "armor-bloodhound-knight-greaves",
-    "armor-bloodhound-knight-helm",
-    "armor-commoner-s-headband",
-    "armor-commoner-s-headband-altered",
-    "armor-consort-s-mask",
-    "armor-consort-s-robe",
-    "armor-consort-s-trousers",
-    "armor-crimson-tear-scarab",
-    "armor-errant-sorcerer-boots",
-    "armor-errant-sorcerer-manchettes",
-    "armor-errant-sorcerer-robe",
-    "armor-errant-sorcerer-robe-altered",
-    "armor-eye-surcoat",
-    "armor-fire-prelate-armor",
-    "armor-fire-prelate-armor-altered",
-    "armor-fire-prelate-gauntlets",
-    "armor-fire-prelate-greaves",
-    "armor-fire-prelate-helm",
-    "armor-gelmir-knight-armor",
-    "armor-gelmir-knight-armor-altered",
-    "armor-gelmir-knight-gauntlets",
-    "armor-gelmir-knight-greaves",
-    "armor-gelmir-knight-helm",
-    "armor-jar",
-    "armor-leather-armor",
-    "armor-leather-boots",
-    "armor-leather-gloves",
-    "armor-leather-trousers",
-    "armor-mushroom-arms",
-    "armor-mushroom-body",
-    "armor-mushroom-head",
-    "armor-mushroom-legs",
-    "armor-raging-wolf-armor",
-    "armor-raging-wolf-armor-altered",
-    "armor-raging-wolf-gauntlets",
-    "armor-raging-wolf-greaves",
-    "armor-raging-wolf-helm",
-    "ash-of-war-ash-of-war-barrage",
-    "ash-of-war-ash-of-war-eruption",
-    "ash-of-war-ash-of-war-royal-knight-s-resolve",
-    "ash-of-war-ash-of-war-through-and-through",
-    "bell-bearing-bernahl-s-bell-bearing",
-    "bell-bearing-patches-bell-bearing",
-    "cookbook-armorer-s-cookbook-7",
-    "cookbook-missionary-s-cookbook-6",
-    "cookbook-nomadic-warrior-s-cookbook-21",
-    "crystal-tear-cerulean-hidden-tear",
-    "crystal-tear-leaden-hardtear",
-    "golden-seed-25",
-    "golden-seed-29",
-    "great-rune-rykard-s-great-rune",
-    "incantation-aspects-of-the-crucible-breath",
-    "incantation-noble-presence",
-    "key-item-drawing-room-key",
-    "key-item-serpent-s-amnion",
-    "key-item-volcano-manor-invitation",
-    "larval-tear-07",
-    "map-fragment-map-mt-gelmir",
-    "remembrance-remembrance-of-the-blasphemous",
-    "shield-coil-shield",
-    "shield-man-serpent-s-shield",
-    "sorcery-comet-azur",
-    "sorcery-gelmir-s-fury",
-    "sorcery-magma-shot",
-    "sorcery-rykard-s-rancor",
-    "spirit-ash-bloodhound-knight-floh",
-    "spirit-ash-depraved-perfumer-carmaan",
-    "spirit-ash-man-serpent-ashes",
-    "stonesword-key-37",
-    "stonesword-key-38",
-    "stonesword-key-39",
-    "stonesword-key-41",
-    "talisman-crimson-amber-medallion-1",
-    "talisman-dagger-talisman",
-    "talisman-fire-scorpion-charm",
-    "talisman-kindred-of-rot-s-exultation",
-    "talisman-old-lord-s-talisman",
-    "talisman-taker-s-cameo",
-    "tool-blasphemous-claw",
-    "tool-prattling-pate-you-re-beautiful",
-    "tool-recusant-finger",
-    "weapon-blasphemous-blade",
-    "weapon-bloodhound-claws",
-    "weapon-butchering-knife",
-    "weapon-devourer-s-scepter",
-    "weapon-erdtree-seal",
-    "weapon-fallingstar-beast-jaw",
-    "weapon-gelmir-glintstone-staff",
-    "weapon-ghiza-s-wheel",
-    "weapon-godskin-stitcher",
-    "weapon-inquisitor-s-girandole",
-    "weapon-jar-cannon",
-    "weapon-magma-blade",
-    "weapon-magma-whip-candlestick",
-    "weapon-mantis-blade",
-    "weapon-prelate-s-inferno-crozier",
-    "weapon-pulley-bow",
-    "weapon-pulley-crossbow",
-    "weapon-reduvia",
-    "weapon-ringed-finger",
-    "weapon-scavenger-s-curved-sword",
-    "weapon-serpent-hunter",
-    "weapon-serpentbone-blade"
-  ]
+  "legs": [
+    {
+      "id": "mtgelmir-01",
+      "from": "Bridge of Iniquity",
+      "to": "Ninth Mt. Gelmir Campsite",
+      "summary": "Ascend the treacherous switchback ladders of Mt. Gelmir from the Bridge of Iniquity. Patches kicks you off a ledge as a warning here — speak to him before continuing. The Primeval Sorcerer Azur and Hermit Village are reached by descending the southeast face.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the Bridge of Iniquity grace (reached from the northwest Altus plateau road), climb the successive ladders up the volcanic cliff face. Patches is positioned on a cliff edge ahead — he kicks you off as a 'warning.' Survive the fall, then speak to him for dialogue."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-mt-gelmir",
+          "note": "Stele at the First Mt. Gelmir Campsite, on the switchback road."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-missionary-s-cookbook-6",
+          "note": "On a corpse in the First Mt. Gelmir Campsite area."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-explosive-greatbolt",
+          "note": "On a corpse along the switchback path."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-golden-arrow",
+          "note": "On a corpse along the Mt. Gelmir approach road."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-great-arrow",
+          "note": "On a corpse at the campsite."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-fallingstar-beast-jaw",
+          "note": "Dropped by the Full-Grown Fallingstar Beast on the crater top above the Ninth Mt. Gelmir Campsite — optional but powerful reward."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-cerulean-hidden-tear",
+          "note": "Dropped by the Full-Grown Fallingstar Beast at the crater summit."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-leaden-hardtear",
+          "note": "Also dropped by the Full-Grown Fallingstar Beast."
+        }
+      ]
+    },
+    {
+      "id": "mtgelmir-02",
+      "from": "Primeval Sorcerer Azur",
+      "to": "Craftsman's Shack",
+      "summary": "The Hermit Village on the southeast Gelmir face is inhabited by exiled sorcerers and demi-humans. Demi-Human Queen Maggie guards the path to Primeval Sorcerer Azur, who gives Comet Azur freely. Loop back via the Seethewater River area for dungeon items.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Descend from the Ninth Mt. Gelmir Campsite southeast toward the Hermit Village. The Demi-Human Queen Maggie guards the courtyard before Primeval Sorcerer Azur."
+        },
+        {
+          "type": "boss",
+          "id": "boss-mtgelmir-demi-human-queen-maggie",
+          "text": "Demi-Human Queen Maggie — in the courtyard before Primeval Sorcerer Azur at the Hermit Village."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-comet-azur",
+          "note": "Given freely by Primeval Sorcerer Azur — speak to him at his throne. One of the most powerful sorceries in the game."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-azur-s-glintstone-crown",
+          "note": "On a corpse near Primeval Sorcerer Azur in the Hermit Village."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-azur-s-glintstone-robe",
+          "note": "On a corpse near Primeval Sorcerer Azur."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-errant-sorcerer-robe",
+          "note": "On a corpse in the Hermit Village sorcerer area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-errant-sorcerer-robe-altered",
+          "note": "Altered version of the Errant Sorcerer Robe, found in the Hermit Village."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-errant-sorcerer-manchettes",
+          "note": "On a corpse in the Hermit Village."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-errant-sorcerer-boots",
+          "note": "On a corpse in the Hermit Village."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-commoner-s-headband",
+          "note": "On the head of one of the large statues in the Hermit Village facing the lava lake."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-commoner-s-headband-altered",
+          "note": "Altered version; also on a statue in the Hermit Village area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-gelmir-glintstone-staff",
+          "note": "On a corpse in the Hermit Village sorcerer area."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-noble-presence",
+          "note": "Dropped by the Noble Presence boss in the Volcano Cave dungeon (southeast Gelmir, near Seethewater)."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-armorer-s-cookbook-7",
+          "note": "On a corpse near the Craftsman's Shack grace."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-magma-blade",
+          "note": "Dropped by Man-Serpent Swordsman enemies in the Seethewater Terminus."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-man-serpent-ashes",
+          "note": "Chest in the Seethewater Cave dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-man-serpent-s-shield",
+          "note": "Dropped by Man-Serpent enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-coil-shield",
+          "note": "On a corpse in the Gelmir area."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-07",
+          "note": "Dropped by a disguised Giant Ant (Larval Tear) in the Seethewater area."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-37",
+          "note": "On a corpse in the Seethewater area."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-38",
+          "note": "On a corpse in the Seethewater Cave dungeon."
+        }
+      ]
+    },
+    {
+      "id": "mtgelmir-03",
+      "from": "Gelmir Hero's Grave",
+      "to": "Wyndham Catacombs",
+      "summary": "Two challenging dungeons with strong loot. The Gelmir Hero's Grave chariot dungeon hides a Bloodhound Knight and Gelmir Knight set. Wyndham Catacombs (north plateau) contains the Pearldrake Talisman +1.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Gelmir Hero's Grave is reached from the Road of Iniquity / northwest Gelmir approach. Dodge the chariot in the first hallway; drop into the pit on the left side to find a hidden passage through a window, down a ladder to a Bloodhound Knight guarding the Gelmir Knight Set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gelmir-knight-armor",
+          "note": "On a corpse behind the Bloodhound Knight in the secret area of Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gelmir-knight-armor-altered",
+          "note": "Altered version; same loot location in Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gelmir-knight-helm",
+          "note": "On the same corpse in Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gelmir-knight-gauntlets",
+          "note": "On the same corpse in Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gelmir-knight-greaves",
+          "note": "On the same corpse in Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bloodhound-knight-armor",
+          "note": "Dropped by the Bloodhound Knight guarding the Gelmir Knight Set corpse in Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bloodhound-knight-armor-altered",
+          "note": "Altered version; also dropped by the same Bloodhound Knight."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bloodhound-knight-helm",
+          "note": "Dropped by the Bloodhound Knight in Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bloodhound-knight-gauntlets",
+          "note": "Dropped by the Bloodhound Knight in Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bloodhound-knight-greaves",
+          "note": "Dropped by the Bloodhound Knight in Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-bloodhound-knight-floh",
+          "note": "Reward chest at the end of Gelmir Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-pearldrake-talisman-1",
+          "note": "Chest at the end of Wyndham Catacombs (north plateau, near Wyndham Ruins)."
+        }
+      ]
+    },
+    {
+      "id": "mtgelmir-04",
+      "from": "Volcano Manor (entrance)",
+      "to": "Prison Town Church",
+      "summary": "CRITICAL QUEST HUB — Volcano Manor holds three assassination contracts that MUST all be completed before fighting Rykard. Killing Rykard first permanently ends Tanith's questline, forfeiting: Taker's Cameo (Contract 3), Serpentbone Blade (Contract 2), Magma Whip Candlestick (Patches contract), Gelmir's Fury (Bernahl co-op), and the Rya questline resolution.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Reach Volcano Manor by: (A) riding north from the Ninth Mt. Gelmir Campsite up the lava-field road, (B) teleporting with Rya at Lux Ruins on Altus Plateau (requires returning her necklace in Liurnia), or (C) Abductor Virgin grab-death from Raya Lucaria basement. Option B is recommended."
+        },
+        {
+          "type": "quest",
+          "id": "quest-rya-volcano-invite",
+          "questline": "Rya/Volcano Manor",
+          "text": "Rya waits at Lux Ruins, Altus Plateau. Accept her offer to be transported to the manor entrance. Requires the Volcano Manor Invitation given when you returned her necklace in Liurnia."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-volcano-manor-invitation",
+          "note": "Given by Rya at Lux Ruins on Altus Plateau — requires having returned her necklace in Liurnia (purchased from Boggart for 1,000 runes)."
+        },
+        {
+          "type": "quest",
+          "id": "quest-tanith-join",
+          "questline": "Volcano Manor",
+          "text": "Speak to Lady Tanith in the main hall and join the Recusants. She gives you the Drawing Room Key."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-drawing-room-key",
+          "note": "Given by Tanith when you join the Recusants. Opens the drawing room for assassination contracts and guest rooms."
+        },
+        {
+          "type": "quest",
+          "id": "quest-volcanomanor-contract-1-istvan",
+          "questline": "Volcano Manor",
+          "text": "CONTRACT 1 — Old Knight Istvan: Take the first letter from the drawing room table. Invade and defeat Old Knight Istvan at the colosseum approach in Stormhill (Limgrave). Return to Tanith. REWARD: Magma Shot. Patches is also available in the manor now — he assigns Great-Horned Tragoth for his own contract (Tragoth is summoned as an NPC for Magma Wyrm Makar at Ruin-Strewn Precipice)."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-magma-shot",
+          "note": "Given by Tanith after completing Contract 1 (Old Knight Istvan)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-scaled-armor",
+          "note": "Dropped by Old Knight Istvan during Contract 1 invasion at Stormhill."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-scaled-armor-altered",
+          "note": "Altered version; also dropped by Old Knight Istvan."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-scaled-helm",
+          "note": "Dropped by Old Knight Istvan."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-scaled-gauntlets",
+          "note": "Dropped by Old Knight Istvan."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-scaled-greaves",
+          "note": "Dropped by Old Knight Istvan."
+        },
+        {
+          "type": "quest",
+          "id": "quest-rya-true-form",
+          "questline": "Rya/Volcano Manor",
+          "text": "After Contract 1, speak with Rya in the drawing room. Enter the locked bedroom across the hall to find her in serpent form (Zorayas). Exhaust her dialogue."
+        },
+        {
+          "type": "quest",
+          "id": "quest-volcanomanor-contract-2-rileigh",
+          "questline": "Volcano Manor",
+          "text": "CONTRACT 2 — Rileigh the Idle: Take the second letter. Invade and defeat Rileigh the Idle in Altus Plateau's eastern gorge. Bernahl afterward gives you a letter inviting co-op at the Fortified Manor (Leyndell). REWARD: Serpentbone Blade."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-serpentbone-blade",
+          "note": "Given by Tanith after completing Contract 2 (Rileigh the Idle)."
+        },
+        {
+          "type": "quest",
+          "id": "quest-volcanomanor-rya-amnion",
+          "questline": "Rya/Volcano Manor",
+          "text": "After Contract 2, find the illusory wall in the corridor and enter Prison Town. Defeat the Godskin Noble and get the Serpent's Amnion from the chest beyond. Give it to Rya. Optionally ask Tanith about the Tonic of Forgetfulness (she gives it if Rya's condition is discussed — use the tonic later at Mountaintops to resolve Rya's arc peacefully)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-serpent-s-amnion",
+          "note": "Chest in the Prison Town area after defeating the Godskin Noble. Give to Rya. This triggers her three-ending branch."
+        },
+        {
+          "type": "boss",
+          "id": "boss-mtgelmir-godskin-noble-prison-town",
+          "text": "Godskin Noble — in the Prison Town Church area of the Volcano Manor interior. Required to access the Serpent's Amnion chest."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-godskin-stitcher",
+          "note": "Dropped by the Godskin Noble in Prison Town."
+        },
+        {
+          "type": "quest",
+          "id": "quest-volcanomanor-bernahl",
+          "questline": "Volcano Manor",
+          "text": "Speak to Bernahl in the drawing room after Contract 2. He invites you to assist him at the Fortified Manor in Leyndell — defeat the phantoms Vargram the Raging Wolf and Errant Sorcerer Wilhelm together. Return for Gelmir's Fury sorcery."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-gelmir-s-fury",
+          "note": "Given by Bernahl after the Fortified Manor co-op invasion (Vargram the Raging Wolf + Errant Sorcerer Wilhelm)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-raging-wolf-armor",
+          "note": "Dropped by Vargram the Raging Wolf at the Fortified Manor in Leyndell."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-raging-wolf-armor-altered",
+          "note": "Altered version of the Raging Wolf Armor; drops with the set from Vargram."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-raging-wolf-helm",
+          "note": "Dropped by Vargram the Raging Wolf."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-raging-wolf-gauntlets",
+          "note": "Dropped by Vargram the Raging Wolf."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-raging-wolf-greaves",
+          "note": "Dropped by Vargram the Raging Wolf."
+        },
+        {
+          "type": "quest",
+          "id": "quest-volcanomanor-contract-3-juno",
+          "questline": "Volcano Manor",
+          "text": "CONTRACT 3 — Juno Hoslow: Take the Red Letter from the drawing room. Invade and defeat Juno Hoslow, Knight of Blood at Mountaintops of the Giants (Zamor Ruins area — requires Grand Lift of Rold). Return to Tanith. REWARD: Taker's Cameo. This is the final contract — DO THIS before speaking to Tanith about fighting Rykard.",
+          "missable": {
+            "lockedBy": "Defeating Rykard, Lord of Blasphemy",
+            "note": "Fighting Rykard before completing all three contracts permanently ends Tanith's questline. Forfeits: Taker's Cameo, and access to future Tanith/Rya quest steps."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-taker-s-cameo",
+          "note": "Given by Tanith after completing Contract 3 (Juno Hoslow)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-magma-whip-candlestick",
+          "note": "Given by Patches after you complete his contract (Great-Horned Tragoth, fought at the Ruin-Strewn Precipice Magma Wyrm Makar arena in leg altus-01). Rest at a grace and speak to Patches in the drawing room.",
+          "missable": {
+            "lockedBy": "Defeating Rykard, Lord of Blasphemy",
+            "note": "Patches leaves the manor after Rykard dies. Complete his contract and collect this reward before fighting Rykard."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bull-goat-armor",
+          "note": "Dropped by Great-Horned Tragoth during the Patches contract invasion (he is summoned as the Ruin-Strewn Precipice NPC and also as the Patches invasion target)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bull-goat-helm",
+          "note": "Dropped by Great-Horned Tragoth — same invasion."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bull-goat-gauntlets",
+          "note": "Dropped by Great-Horned Tragoth."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-bull-goat-greaves",
+          "note": "Dropped by Great-Horned Tragoth."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-beast-champion-armor-altered",
+          "note": "Dropped by Recusant Bernahl during his Crumbling Farum Azula invasion (north of Great Bridge). Placed here as the conclusion of his Volcano Manor questline."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-beast-champion-helm",
+          "note": "Dropped by Recusant Bernahl at Crumbling Farum Azula."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-beast-champion-gauntlets",
+          "note": "Dropped by Recusant Bernahl at Crumbling Farum Azula."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-beast-champion-greaves",
+          "note": "Dropped by Recusant Bernahl at Crumbling Farum Azula."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-beast-champion-armor",
+          "note": "Dropped by Recusant Bernahl at Crumbling Farum Azula (the base version)."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-eruption",
+          "note": "Sold by Bernahl in the Volcano Manor drawing room after joining the Recusants."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-royal-knight-s-resolve",
+          "note": "Sold by Bernahl in the Volcano Manor drawing room."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-recusant-finger",
+          "note": "Available from Bernahl in the Volcano Manor drawing room."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-consort-s-mask",
+          "note": "On a corpse in the Volcano Manor guest rooms."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-consort-s-robe",
+          "note": "On a corpse in the Volcano Manor guest rooms."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-consort-s-trousers",
+          "note": "On a corpse in the Volcano Manor guest rooms."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-eye-surcoat",
+          "note": "On a corpse in the manor dungeon/prison area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-mushroom-head",
+          "note": "On a corpse in the Seethewater or underground manor passages."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-mushroom-body",
+          "note": "On a corpse in the underground passages."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-mushroom-arms",
+          "note": "On a corpse in the underground passages."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-mushroom-legs",
+          "note": "On a corpse in the underground passages."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leather-armor",
+          "note": "On a corpse in the manor area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leather-boots",
+          "note": "On a corpse in the manor area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leather-gloves",
+          "note": "On a corpse in the manor area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leather-trousers",
+          "note": "On a corpse in the manor area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-jar",
+          "note": "On a corpse near the Jar-themed room in the area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-crimson-tear-scarab",
+          "note": "Looted from a Scarab enemy in the Volcano Manor passages."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-fire-prelate-armor",
+          "note": "Dropped by Fire Prelate enemies near the Seethewater Terminus."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-fire-prelate-armor-altered",
+          "note": "Altered version; dropped by Fire Prelate enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-fire-prelate-helm",
+          "note": "Dropped by Fire Prelate enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-fire-prelate-gauntlets",
+          "note": "Dropped by Fire Prelate enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-fire-prelate-greaves",
+          "note": "Dropped by Fire Prelate enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-erdtree-seal",
+          "note": "On a corpse in the Volcano Manor interior or Prison Town area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-mantis-blade",
+          "note": "Dropped by Mantis-Blade enemies in the underground passages."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-ringed-finger",
+          "note": "On a corpse in the manor dungeon area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-butchering-knife",
+          "note": "On a corpse in a guest room or kitchen area of the manor."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-inquisitor-s-girandole",
+          "note": "On a corpse in the Fire Prelate area or Seethewater Terminus."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-prelate-s-inferno-crozier",
+          "note": "Dropped by the Fire Prelate in the Seethewater Terminus area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-ghiza-s-wheel",
+          "note": "Dropped by Inquisitor Ghiza invader in the Volcano Manor upper floor."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-jar-cannon",
+          "note": "Dropped by an enemy or found in the Prison Town area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-pulley-bow",
+          "note": "On a corpse in the Craftsman's Shack area of Mt. Gelmir."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-pulley-crossbow",
+          "note": "On a corpse in the Craftsman's Shack area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-scavenger-s-curved-sword",
+          "note": "On a corpse in the Prison Town area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-bloodhound-claws",
+          "note": "On a corpse in the Volcano Manor dungeon area."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-depraved-perfumer-carmaan",
+          "note": "Chest in the Volcano Manor dungeon area."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crimson-amber-medallion-1",
+          "note": "On a corpse in the Volcano Manor interior."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-fire-scorpion-charm",
+          "note": "On a corpse in the Volcano Cave dungeon south of the manor."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-old-lord-s-talisman",
+          "note": "Chest in the Prison Town area of the manor interior."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-dagger-talisman",
+          "note": "On a corpse in the manor."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-kindred-of-rot-s-exultation",
+          "note": "On a corpse in the Seethewater Cave dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-39",
+          "note": "On a corpse in the Volcano Manor prison area."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-41",
+          "note": "On a corpse in the Seethewater area."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-21",
+          "note": "On a corpse in the Volcano Manor area."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-barrage",
+          "note": "Dropped by a Teardrop Scarab in the Volcano Manor dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-through-and-through",
+          "note": "Dropped by a Teardrop Scarab in the Volcano Manor."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-prattling-pate-you-re-beautiful",
+          "note": "On a corpse in the Volcano Manor guest rooms."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-25",
+          "note": "Under a golden sapling near the entrance to Volcano Manor on Mt. Gelmir."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-29",
+          "note": "Under a golden sapling in the Seethewater area."
+        }
+      ]
+    },
+    {
+      "id": "mtgelmir-05",
+      "from": "Prison Town Church",
+      "to": "Temple of Eiglay (Rykard's chamber)",
+      "summary": "After completing ALL THREE contracts, Tanith transports you to Rykard's chamber. Pick up the Serpent Hunter from just inside the fog gate before engaging. After Rykard's death, Tanith moves to consume his corpse — speak to her there for a final exchange, then return for Bernahl's Farum Azula invasion reward.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "VERIFY before proceeding: (1) Old Knight Istvan dead, (2) Rileigh the Idle dead, (3) Juno Hoslow dead (Mountaintops required), (4) Bernahl's Fortified Manor co-op complete. When all done, speak to Tanith and choose to be teleported to Rykard."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-serpent-hunter",
+          "note": "On a corpse just inside Rykard's fog gate. Pick up BEFORE engaging — it generates ranged light blades and trivializes both phases."
+        },
+        {
+          "type": "boss",
+          "id": "boss-mtgelmir-rykard-lord-of-blasphemy",
+          "text": "Rykard, Lord of Blasphemy — Phase 1: God-Devouring Serpent (30,439 HP), Phase 2: Rykard (59,174 HP). Use the Serpent Hunter for safe ranged damage. Killing him ends the Volcano Manor questline."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-blasphemous",
+          "note": "Dropped by Rykard. Exchange at Roundtable Hold Finger Reader for Blasphemous Blade or Rykard's Rancor."
+        },
+        {
+          "type": "item",
+          "itemId": "great-rune-rykard-s-great-rune",
+          "note": "Dropped by Rykard. Activate at the Divine Tower of West Altus (the sealed gate to the east of the plateau)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-blasphemous-blade",
+          "note": "Exchange Remembrance of the Blasphemous at Roundtable Hold."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-rykard-s-rancor",
+          "note": "Alternative exchange for the Remembrance of the Blasphemous."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-bernahl-s-bell-bearing",
+          "note": "Dropped when Bernahl invades you north of the Great Bridge in Crumbling Farum Azula (after the Volcano Manor storyline). Unlocks his shop at Twin Maiden Husks."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-devourer-s-scepter",
+          "note": "Dropped by Recusant Bernahl during his Crumbling Farum Azula invasion."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-blasphemous-claw",
+          "note": "Also dropped by Bernahl in Crumbling Farum Azula. Allows parrying Maliketh's special attack."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-patches-bell-bearing",
+          "note": "Dropped by Patches if you defeat him in Murkwater Cave (Limgrave) — his questline concludes after Rykard's death and his departure from the manor. Placed here as his arc concludes with the Volcano Manor ending."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-corhyn-s-bell-bearing",
+          "note": "Dropped by Brother Corhyn if his questline ends poorly (he attacks you in Ashen Capital near the Bolt of Gransax), or purchased from Twin Maiden Husks upon his death. Placed in Mt. Gelmir region as the Corhyn/Goldmask questline starts here on Altus/Gelmir and this is the closest associated region for his bell bearing."
+        }
+      ]
+    }
+  ],
+  "cleanup": []
 }

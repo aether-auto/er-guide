@@ -2,143 +2,800 @@
   "id": "caelid",
   "name": "Caelid",
   "order": 6,
-  "legs": [],
+  "legs": [
+    {
+      "id": "caelid-01",
+      "from": "Smoldering Church",
+      "to": "Gowry's Shack",
+      "summary": "Enter Caelid from the northwest at the Smoldering Church, then ride south along the highway toward Sellia and Gowry's Shack. Pick up the map and road items along the way. Note: Caelid is accessible early via a trap chest in Limgrave's Dragon-Burnt Ruins that teleports you to Sellia Crystal Tunnel — but full exploration is recommended at level 50+.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Cross into Caelid via the northwest road from Limgrave (past the Rotview Balcony grace) or from the east Limgrave road. The Smoldering Church is in the northwest corner of Caelid proper."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-caelid",
+          "note": "Stele on the main Caelid highway, just south of the Caelid Highway South grace."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-armorer-s-cookbook-2",
+          "note": "Corpse on the main highway near Smoldering Church."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-armorer-s-cookbook-3",
+          "note": "Corpse in the ruins near the Smoldering Church area."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-smoldering-shield",
+          "note": "Corpse near the Smoldering Church itself."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-flame-grant-me-strength",
+          "note": "Corpse at the Smoldering Church ruins on a body between two warhawks."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-armorer-s-cookbook-4",
+          "note": "Rotview Balcony area — corpse on the cliffs."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-sacred-scorpion-charm",
+          "note": "On a corpse in the ruins south of the Smoldering Church."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-missionary-s-cookbook-3",
+          "note": "Corpse on the road near the Caelid Highway South grace."
+        },
+        {
+          "type": "quest",
+          "id": "quest-gowry-initial",
+          "questline": "Gowry / Millicent",
+          "text": "Speak to Sage Gowry at his shack (north of Sellia). He asks you to retrieve the broken Unalloyed Gold Needle from Commander O'Neil in the Swamp of Aeonia, in exchange for Sellia's secret (how to unlock the town).",
+          "missable": {
+            "lockedBy": "Progressing without visiting Gowry",
+            "note": "Millicent's full questline (Prosthesis-Wearer Heirloom, Millicent's Prosthesis talisman, Rotten Winged Sword Insignia, Flock's Canvas Talisman) requires this first step."
+          }
+        }
+      ]
+    },
+    {
+      "id": "caelid-02",
+      "from": "Gowry's Shack",
+      "to": "Sellia, Town of Sorcery",
+      "summary": "Light Sellia's three beacon towers to lift the seal on its locked buildings, then sweep the entire town. Sellen's questline sends you to find Primeval Sorcerer Lusat in Sellia Hideaway — do so now. Return the Unalloyed Gold Needle to Gowry after defeating Commander O'Neil.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Gowry reveals Sellia's secret: climb the three towers in town and light the beacon fires at the top of each to break the magical seals blocking the northeast gateway and the sealed buildings."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-night-comet",
+          "note": "Chest in Sellia's central sealed building (requires lighting all 3 beacons)."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-night-shard",
+          "note": "Corpse on the rooftops near the second beacon tower."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-night-maiden-s-mist",
+          "note": "Corpse in an alcove off the main street of Sellia."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-spelldrake-talisman-1",
+          "note": "Chest in the northwest sealed building in Sellia (requires all 3 beacons lit)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-staff-of-loss",
+          "note": "Corpse hanging from a balcony on the east rooftops of Sellia — reach via the rooftop run."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-nox-flowing-sword",
+          "note": "Dropped by the Nox Swordstress & Nox Priest boss in Sellia's chair-crypt (sealed building accessible after all 3 beacons)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-lusat-s-glintstone-staff",
+          "note": "Chest in the Sellia chair-crypt boss room."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-11",
+          "note": "Corpse on the connecting arch in Sellia's southern main street."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lusat-s-glintstone-crown",
+          "note": "Found in Sellia Hideaway after progressing Sellen's questline. Sellia Hideaway is northeast of Sellia — illusory wall in the cliffside cemetery."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lusat-s-manchettes",
+          "note": "In Sellia Hideaway with the rest of Lusat's Set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lusat-s-robe",
+          "note": "In Sellia Hideaway — where Lusat sits."
+        },
+        {
+          "type": "quest",
+          "id": "quest-sellen-lusat",
+          "questline": "Sellen",
+          "text": "Use the Sellian Sealbreaker key (from Sellen at Waypoint Ruins, Liurnia) to open the sealed tunnel in Sellia Hideaway. Find Primeval Sorcerer Lusat — he gives Stars of Ruin. Report back to Sellen for Starlight Shards.",
+          "missable": {
+            "lockedBy": "Killing Sellen or not starting her quest at Waypoint Ruins first",
+            "note": "Stars of Ruin is only obtainable after speaking to Sellen and obtaining the Sellian Sealbreaker. Sellen's full questline continues in Liurnia/Altus."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-stars-of-ruin",
+          "note": "Given by Primeval Sorcerer Lusat inside Sellia Hideaway — requires Sellian Sealbreaker from Sellen."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-sellian-sealbreaker",
+          "note": "Given by Sellen at Waypoint Ruins, Liurnia — needed to reach Lusat. Obtain it before coming here."
+        }
+      ]
+    },
+    {
+      "id": "caelid-03",
+      "from": "Southern Aeonia Swamp Bank",
+      "to": "Church of the Plague",
+      "summary": "Fight Commander O'Neil in the swamp's heart. Return the broken needle to Gowry, reload, collect the repaired needle, then deliver it to Millicent at the Church of the Plague northeast of Sellia. Also sweep the Gael Tunnel dungeon (south of Caelid highway) for the Moonveil katana.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "incantation-poison-armament",
+          "note": "Corpse at the Heart of Aeonia grace area, near the rot flowers."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-greenburst-crystal-tear",
+          "note": "From the Erdtree Avatar boss at the Minor Erdtree in the Swamp of Aeonia area."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-flame-shrouding-cracked-tear",
+          "note": "Also from the Erdtree Avatar at the Minor Erdtree in Aeonia Swamp."
+        },
+        {
+          "type": "boss",
+          "id": "boss-caelid-commander-oneil",
+          "text": "Commander O'Neil — in the Heart of Aeonia (center of the Scarlet Rot swamp). Summons spectral soldiers during the fight. Drops the broken Unalloyed Gold Needle."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-unalloyed-gold-needle",
+          "note": "Dropped by Commander O'Neil — give to Gowry."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-commander-s-standard",
+          "note": "Also dropped by Commander O'Neil."
+        },
+        {
+          "type": "quest",
+          "id": "quest-gowry-needle-repair",
+          "questline": "Gowry / Millicent",
+          "text": "Return the broken Unalloyed Gold Needle to Gowry at his shack. He takes it to repair. Reload the area (rest at any grace and return) — pick up the repaired needle."
+        },
+        {
+          "type": "direction",
+          "text": "Side trip: ride south to Gael Tunnel (grace at the south road of Caelid). Boss drops Moonveil and Dragon Heart."
+        },
+        {
+          "type": "boss",
+          "id": "boss-caelid-magma-wyrm-gael",
+          "text": "Magma Wyrm in Gael Tunnel — drops Moonveil and a Dragon Heart."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-moonveil",
+          "note": "Dropped by Magma Wyrm in Gael Tunnel. Powerful Int/Dex katana."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-somberstone-miner-s-bell-bearing-1",
+          "note": "Found in Gael Tunnel on a corpse in the mine — allows purchasing Somberstone [1–4] from the Twin Maiden Husks."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-cross-naginata",
+          "note": "Corpse in Gael Tunnel main passage."
+        },
+        {
+          "type": "quest",
+          "id": "quest-millicent-needle",
+          "questline": "Gowry / Millicent",
+          "text": "Bring the repaired Unalloyed Gold Needle to Millicent at the Church of the Plague, northeastern Caelid (accessed by climbing the hill past Sellia's north gate). Rest at the grace and exhaust her dialogue."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-prosthesis-wearer-heirloom",
+          "note": "Given by Millicent after delivering the needle and exhausting dialogue at the Church of the Plague grace."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-05",
+          "note": "At the Church of the Plague — inside the church building."
+        }
+      ]
+    },
+    {
+      "id": "caelid-04",
+      "from": "Church of the Plague",
+      "to": "Fort Gael / Caelid Wilds sweep",
+      "summary": "Sweep the remaining western Caelid items before riding to Redmane Castle. Fort Gael holds the Flame of the Redmanes ash of war and the Katar weapon. The Caelid Wilds has several corpse pickups along the main road.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-flame-of-the-redmanes",
+          "note": "On a corpse in Fort Gael's courtyard — the fort is along the west road to Redmane Castle."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-katar",
+          "note": "Chest inside Fort Gael."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-flamberge",
+          "note": "Dropped by a Redmane soldier in Fort Gael."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-visage-shield",
+          "note": "Corpse in Fort Gael, near the inner walls."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-whirl-o-flame",
+          "note": "Corpse southwest of the Fort Gael area near the burning columns."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-faithful-s-canvas-talisman",
+          "note": "Corpse on the broken bridge south of the Astray from Caelid Highway North grace."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-serpent-bow",
+          "note": "Corpse in the Minor Erdtree Catacombs area or the road south of Fort Gael."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-armorer-s-cookbook-5",
+          "note": "Corpse near Caelid Catacombs entrance."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-cragblade",
+          "note": "Dropped by a Teardrop Scarab on the road north toward Redmane Castle."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-lion-s-claw",
+          "note": "Dropped by a Teardrop Scarab in western Caelid near Fort Gael."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-lifesteal-fist",
+          "note": "Dropped by a Teardrop Scarab on the road east of Caelid Highway South."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-poisonous-mist",
+          "note": "Dropped by a Teardrop Scarab in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-poison-moth-flight",
+          "note": "Dropped by a Teardrop Scarab in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-sacred-ring-of-light",
+          "note": "Dropped by a Teardrop Scarab in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-double-slash",
+          "note": "Dropped by a Teardrop Scarab in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-flaming-strike",
+          "note": "Dropped by a Teardrop Scarab in Caelid near Fort Gael."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-rain-of-arrows",
+          "note": "Dropped by a Teardrop Scarab in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-bloodhound-s-step",
+          "note": "Dropped by a Night's Cavalry boss (Farum Greatbridge, rides at night)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-arrow-s-sting-talisman",
+          "note": "Corpse in the ruins northeast of the Smoldering Wall grace."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-starscourge-heirloom",
+          "note": "Chest at the end of Lenne's Rise (Dragonbarrow area staircase in mini-tower east of Caelid); reached via the back ramp."
+        },
+        {
+          "type": "item",
+          "itemId": "memory-stone-02",
+          "note": "Chest inside Lenne's Rise — same tower as Starscourge Heirloom."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-halo-scythe",
+          "note": "Dropped by the Cleanrot Knight enemy near the Heart of Aeonia."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-cleanrot-spear",
+          "note": "Dropped by Cleanrot Knights in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-cleanrot-knight-s-sword",
+          "note": "Dropped by Cleanrot Knight enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-cleanrot-knight-finlay",
+          "note": "Chest in the Inner Aeonia area (center of swamp, behind the Commander's boss fog area)."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-kindred-of-rot-ashes",
+          "note": "Corpse in the Swamp of Aeonia."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-rotten-stray-ashes",
+          "note": "Corpse in western Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-miranda-sprout-ashes",
+          "note": "Corpse in Caelid (near rot flower enemies)."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-putrid-corpse-ashes",
+          "note": "Corpse in the Caelid Catacombs dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-radahn-soldier-ashes",
+          "note": "Corpse in Caelid — near a Radahn soldier patrol."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-redmane-greatshield",
+          "note": "Corpse in the Redmane Knight patrol area, western Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-pillory-shield",
+          "note": "Corpse in western Caelid, near the bridge over the rot swamp."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-wakizashi",
+          "note": "Corpse in the Gaol Cave dungeon (south Caelid, requires two Stonesword Keys)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-venomous-fang",
+          "note": "Chest in Gaol Cave dungeon (south Caelid)."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-07",
+          "note": "Corpse on the cliffs east of Caelid, near the rot-covered terrain."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-12",
+          "note": "Corpse in Caelid wilds, near a ruin cluster."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-14",
+          "note": "Corpse in a ruin on the road south of Lenne's Rise."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-14",
+          "note": "Corpse in Caelid, northwest area near the Highway South grace."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-rock-sling",
+          "note": "Chest in the Street of Sages Ruins, southeast Caelid (near the waygate that warps to Caelid Crystal Tunnel)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-meteorite-staff",
+          "note": "Corpse in the Street of Sages Ruins — hangs out of a second-floor window."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-collapsing-stars",
+          "note": "Corpse in the Abandoned Cave dungeon, eastern Caelid (accessible from Lenne's Rise cliff)."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-windy-crystal-tear",
+          "note": "Dropped by the Putrid Avatar in the Abandoned Cave area's nearby Minor Erdtree vicinity."
+        },
+        {
+          "type": "direction",
+          "text": "Battlemage Hugues (field boss, eastern Dragonbarrow) drops his spirit ash — collected in the Dragonbarrow region cleanup."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-greatsword",
+          "note": "Chest in a wagon on the road near Caelid Highway South — accessible early."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-meteoric-ore-blade",
+          "note": "Chest in a small back room of the Caelid Waypoint Ruins underground hall — northwest Caelid, entrance in the ruins near the Caelid Highway South area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-ruins-greatsword",
+          "note": "Dropped by the Misbegotten Warrior + Crucible Knight duo boss at Redmane Castle (this fight only occurs when the Radahn Festival is NOT active — if the festival is active, this fight is skipped and the weapon is missable via this method). Alternatively, it may be obtainable from the arena after the festival."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-death-s-poker",
+          "note": "Chest in the Caelid Catacombs dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-pest-s-glaive",
+          "note": "Dropped by the Kindred of Rot enemies in southern Caelid/Aeonia area."
+        },
+        {
+          "type": "item",
+          "itemId": "whetblade-red-hot-whetblade",
+          "note": "Chest inside Redmane Castle — upper floor of the main hall. Unlocks Fire and Poison Ash of War application."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-regalia-of-eochaid",
+          "note": "Chest in the Gaol Cave dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-crystal-spear",
+          "note": "Chest in Sellia Crystal Tunnel (separate dungeon inside Sellia, Town of Sorcery area — boss is Putrid Crystalians)."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-crystal-torrent",
+          "note": "Dropped by the Putrid Crystalian (trio) boss in Sellia Crystal Tunnel."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-eternal-darkness",
+          "note": "Corpse in Caelid — eastern ruins near the Sellia Crystal Tunnel area."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-rock-blaster",
+          "note": "Corpse in the underground area near Sellia Crystal Tunnel."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-sword-of-st-trina",
+          "note": "Chest in the Gaol Cave dungeon south Caelid (requires Stonesword Keys — 2 keys needed to unlock the fog wall)."
+        },
+        {
+          "type": "direction",
+          "text": "Flamberge was collected in caelid-04 at Fort Gael — no duplicate step needed here."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-eccentric-s-hood",
+          "note": "On a scarecrow enemy atop a tree near Sellia (a death-rite bird area)."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-radahn-s-spear",
+          "note": "Fired by Radahn during the boss fight — crafted after obtaining his remembrance (or looted from the arena post-fight)."
+        }
+      ]
+    },
+    {
+      "id": "caelid-05",
+      "from": "Impassable Greatbridge",
+      "to": "Redmane Castle Plaza",
+      "summary": "The Radahn Festival is triggered by progressing Ranni's questline (meeting her at Ranni's Rise) OR by activating any grace in Altus Plateau. When the festival is active, enemies vanish from the castle and NPCs gather in the plaza. Alexander and Blaidd are present as optional summons. Activate the festival, speak to everyone, then proceed to the Radahn fight.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Cross the Impassable Greatbridge to reach Redmane Castle. If the Radahn Festival is not yet active (enemies still present), fight through the castle normally. You can also enter via a side-path ladder on the western cliff to skip most enemies."
+        },
+        {
+          "type": "quest",
+          "id": "quest-jerren-festival",
+          "questline": "Jerren / Alexander",
+          "text": "Speak to Castellan Jerren at the Redmane Castle Plaza grace. He presides over the festival. Exhaust his dialogue — this is a required step for Jerren's questline and for Sellen's questline conclusion later."
+        },
+        {
+          "type": "quest",
+          "id": "quest-blaidd-festival",
+          "questline": "Blaidd",
+          "text": "Speak to Blaidd in the Redmane Castle plaza. He can be summoned (gold sign) for the Radahn boss fight on the Wailing Dunes beach."
+        },
+        {
+          "type": "quest",
+          "id": "quest-alexander-festival",
+          "questline": "Alexander",
+          "text": "Speak to Alexander (Iron Fist) at the Redmane Castle plaza. He can be summoned during Radahn. After Radahn, find him at Wailing Dunes to hear his post-battle dialogue."
+        },
+        {
+          "type": "boss",
+          "id": "boss-caelid-starscourge-radahn",
+          "text": "Starscourge Radahn — take the sending gate from the plaza to the Wailing Dunes. Multiple legendary summon signs available (Blaidd, Alexander, others). Defeating Radahn causes Nokron, Eternal City to become accessible via a star-fall crater near Fort Haight in Limgrave."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-starscourge",
+          "note": "From Radahn. Trade at Enia for Starscourge Greatsword or Lion Greatbow."
+        },
+        {
+          "type": "item",
+          "itemId": "great-rune-radahn-s-great-rune",
+          "note": "From Radahn. Activate at the Divine Tower of Caelid (Dragonbarrow) to unlock its effect (raises all stat caps by 5)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-starscourge-greatsword",
+          "note": "Trade Remembrance of the Starscourge at Enia — one of two choices."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-lion-greatbow",
+          "note": "Trade Remembrance of the Starscourge at Enia — alternate choice."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-greatsword-of-radahn-light",
+          "note": "Remembrance weapon — Starscourge Greatsword (identical note; both ids required for tracking)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-greatsword-of-radahn-lord",
+          "note": "Second Radahn remembrance weapon variant."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-rotten-winged-sword-insignia",
+          "note": "Given by Millicent after Radahn — find her outside Rampart Gaol or near the Windmill Village (Altus) later in her questline."
+        },
+        {
+          "type": "quest",
+          "id": "quest-millicent-prosthesis",
+          "questline": "Gowry / Millicent",
+          "text": "After Radahn, Millicent moves to Gowry's Shack. Speak to her there, then obtain the Valkyrie's Prosthesis (chest in Shaded Castle, Altus Plateau) and return it to her."
+        }
+      ]
+    },
+    {
+      "id": "caelid-06",
+      "from": "Redmane Castle Plaza",
+      "to": "Caelid cleanup sweep",
+      "summary": "After Radahn, collect remaining Caelid items: Radahn soldier armor drops, armor sets from defeated enemies, remaining cookbooks and key items. The key-item-dectus-medallion-right is in Fort Faroth (Dragonbarrow) — that's handled in the Dragonbarrow region.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "armor-radahn-s-lion-armor",
+          "note": "Sold by Enia at Roundtable Hold after defeating Radahn, or dropped rarely in the Radahn arena."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-radahn-s-lion-armor-altered",
+          "note": "Altered version of Radahn's Lion Armor (use tailoring tools)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-radahn-s-gauntlets",
+          "note": "Part of Radahn's armor set — from Enia."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-radahn-s-greaves",
+          "note": "Part of Radahn's armor set — from Enia."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-radahn-s-redmane-helm",
+          "note": "Part of Radahn's armor set — from Enia after defeating Radahn."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-cleanrot-armor",
+          "note": "Dropped by Cleanrot Knights in Aeonia swamp."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-cleanrot-armor-altered",
+          "note": "Altered version — use tailoring tools."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-cleanrot-gauntlets",
+          "note": "Dropped by Cleanrot Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-cleanrot-greaves",
+          "note": "Dropped by Cleanrot Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-cleanrot-helm",
+          "note": "Dropped by Cleanrot Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-cleanrot-helm-altered",
+          "note": "Altered version — tailoring tools."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-cerulean-tear-scarab",
+          "note": "Dropped by a Cerulean Tear Scarab enemy in eastern Caelid (rooftop of Sellia area)."
+        },
+        {
+          "type": "direction",
+          "text": "Godskin Apostle Set is obtained from the Godskin Apostle boss in the Divine Tower of Caelid (Dragonbarrow region) — collected there."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-redmane-knight-armor",
+          "note": "Dropped by Redmane Knight enemies in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-redmane-knight-armor-altered",
+          "note": "Altered version."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-redmane-knight-gauntlets",
+          "note": "Dropped by Redmane Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-redmane-knight-greaves",
+          "note": "Dropped by Redmane Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-redmane-knight-helm",
+          "note": "Dropped by Redmane Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-redmane-surcoat",
+          "note": "Dropped by Redmane Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-scarlet-tabard",
+          "note": "Dropped by Radahn Foot Soldiers in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-radahn-soldier-gauntlets",
+          "note": "Dropped by Radahn soldiers in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-radahn-soldier-greaves",
+          "note": "Dropped by Radahn soldiers."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-radahn-soldier-helm",
+          "note": "Dropped by Radahn soldiers."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-millicent-s-robe",
+          "note": "Given by Millicent when she moves to the Altus/Haligtree phase — see Altus region."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-millicent-s-gloves",
+          "note": "Given by Millicent — Altus phase."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-millicent-s-boots",
+          "note": "Given by Millicent — Altus phase."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-crystalian-ashes",
+          "note": "Dropped by the Putrid Crystalian (Trio) boss in Sellia Crystal Tunnel."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-redmane-knight-ogha",
+          "note": "Purchased from Finger Reader Enia at Roundtable Hold after defeating Radahn (Remembrance trade)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-millicent-s-prosthesis",
+          "note": "Given by Millicent later in her quest (Altus Plateau phase), after giving her the Valkyrie's Prosthesis."
+        },
+        {
+          "type": "direction",
+          "text": "Obtain Valkyrie's Prosthesis from the Shaded Castle chest (Altus Plateau — handled in the Altus region) and return it to Millicent when she's at the Windmill Village grace."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-02",
+          "note": "Dropped by a Wormface enemy northeast of the Redmane Castle area, or found in Caelid wilds."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-04",
+          "note": "Small golden tree near the Impassable Greatbridge in Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-08",
+          "note": "Small golden tree in the Swamp of Aeonia area."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-09",
+          "note": "Small golden tree in eastern Caelid near Sellia."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-gowry-s-bell-bearing",
+          "note": "Dropped by Gowry when he dies (end of Millicent questline — kill him or he dies naturally). Allows purchasing his wares from Twin Maiden Husks."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-ancient-dragon-apostle-s-cookbook-3",
+          "note": "Corpse in the Farum Greatbridge area or surrounding Dragonbarrow — see Dragonbarrow leg."
+        }
+      ]
+    }
+  ],
   "cleanup": [
-    "ammo-radahn-s-spear",
-    "armor-cerulean-tear-scarab",
-    "armor-cleanrot-armor",
-    "armor-cleanrot-armor-altered",
-    "armor-cleanrot-gauntlets",
-    "armor-cleanrot-greaves",
-    "armor-cleanrot-helm",
-    "armor-cleanrot-helm-altered",
-    "armor-eccentric-s-hood",
-    "armor-godskin-apostle-bracelets",
-    "armor-godskin-apostle-hood",
-    "armor-godskin-apostle-robe",
-    "armor-godskin-apostle-trousers",
-    "armor-lusat-s-glintstone-crown",
-    "armor-lusat-s-manchettes",
-    "armor-lusat-s-robe",
-    "armor-millicent-s-boots",
-    "armor-millicent-s-gloves",
-    "armor-millicent-s-robe",
-    "armor-radahn-s-gauntlets",
-    "armor-radahn-s-greaves",
-    "armor-radahn-s-lion-armor",
-    "armor-radahn-s-lion-armor-altered",
-    "armor-radahn-s-redmane-helm",
-    "armor-radahn-soldier-gauntlets",
-    "armor-radahn-soldier-greaves",
-    "armor-radahn-soldier-helm",
-    "armor-redmane-knight-armor",
-    "armor-redmane-knight-armor-altered",
-    "armor-redmane-knight-gauntlets",
-    "armor-redmane-knight-greaves",
-    "armor-redmane-knight-helm",
-    "armor-redmane-surcoat",
-    "armor-scarlet-tabard",
-    "ash-of-war-ash-of-war-bloodhound-s-step",
-    "ash-of-war-ash-of-war-cragblade",
-    "ash-of-war-ash-of-war-double-slash",
-    "ash-of-war-ash-of-war-flame-of-the-redmanes",
-    "ash-of-war-ash-of-war-flaming-strike",
-    "ash-of-war-ash-of-war-lifesteal-fist",
-    "ash-of-war-ash-of-war-lion-s-claw",
-    "ash-of-war-ash-of-war-poison-moth-flight",
-    "ash-of-war-ash-of-war-poisonous-mist",
-    "ash-of-war-ash-of-war-rain-of-arrows",
-    "ash-of-war-ash-of-war-sacred-ring-of-light",
-    "bell-bearing-gowry-s-bell-bearing",
-    "bell-bearing-somberstone-miner-s-bell-bearing-1",
-    "cookbook-ancient-dragon-apostle-s-cookbook-3",
-    "cookbook-armorer-s-cookbook-2",
-    "cookbook-armorer-s-cookbook-3",
-    "cookbook-armorer-s-cookbook-4",
-    "cookbook-armorer-s-cookbook-5",
-    "cookbook-missionary-s-cookbook-3",
-    "cookbook-nomadic-warrior-s-cookbook-14",
-    "crystal-tear-flame-shrouding-cracked-tear",
-    "crystal-tear-greenburst-crystal-tear",
-    "crystal-tear-windy-crystal-tear",
-    "golden-seed-04",
-    "golden-seed-08",
-    "golden-seed-09",
-    "great-rune-radahn-s-great-rune",
-    "incantation-flame-grant-me-strength",
-    "incantation-poison-armament",
-    "incantation-whirl-o-flame",
-    "key-item-dectus-medallion-right",
-    "key-item-sellian-sealbreaker",
-    "key-item-unalloyed-gold-needle",
-    "key-item-valkyrie-s-prosthesis",
-    "larval-tear-02",
-    "map-fragment-map-caelid",
-    "memory-stone-02",
-    "remembrance-remembrance-of-the-starscourge",
-    "sacred-tear-05",
-    "shield-pillory-shield",
-    "shield-redmane-greatshield",
-    "shield-smoldering-shield",
-    "shield-visage-shield",
-    "sorcery-collapsing-stars",
-    "sorcery-crystal-torrent",
-    "sorcery-eternal-darkness",
-    "sorcery-night-comet",
-    "sorcery-night-maiden-s-mist",
-    "sorcery-night-shard",
-    "sorcery-rock-blaster",
-    "sorcery-rock-sling",
-    "sorcery-stars-of-ruin",
-    "spirit-ash-battlemage-hugues-spirit-ash",
-    "spirit-ash-cleanrot-knight-finlay",
-    "spirit-ash-crystalian-ashes",
-    "spirit-ash-kindred-of-rot-ashes",
-    "spirit-ash-miranda-sprout-ashes",
-    "spirit-ash-putrid-corpse-ashes",
-    "spirit-ash-radahn-soldier-ashes",
-    "spirit-ash-redmane-knight-ogha",
-    "spirit-ash-rotten-stray-ashes",
-    "stonesword-key-07",
-    "stonesword-key-11",
-    "stonesword-key-12",
-    "stonesword-key-14",
-    "talisman-arrow-s-sting-talisman",
-    "talisman-faithful-s-canvas-talisman",
-    "talisman-millicent-s-prosthesis",
-    "talisman-prosthesis-wearer-heirloom",
-    "talisman-rotten-winged-sword-insignia",
-    "talisman-sacred-scorpion-charm",
-    "talisman-spelldrake-talisman-1",
-    "talisman-starscourge-heirloom",
-    "weapon-cleanrot-knight-s-sword",
-    "weapon-cleanrot-spear",
-    "weapon-commander-s-standard",
-    "weapon-cross-naginata",
-    "weapon-crystal-spear",
-    "weapon-death-s-poker",
-    "weapon-flamberge",
-    "weapon-godslayer-s-greatsword",
-    "weapon-greatsword",
-    "weapon-greatsword-of-radahn-light",
-    "weapon-greatsword-of-radahn-lord",
-    "weapon-halo-scythe",
-    "weapon-katar",
-    "weapon-lion-greatbow",
-    "weapon-lusat-s-glintstone-staff",
-    "weapon-meteorite-staff",
-    "weapon-moonveil",
-    "weapon-nox-flowing-sword",
-    "weapon-pest-s-glaive",
-    "weapon-regalia-of-eochaid",
-    "weapon-ruins-greatsword",
-    "weapon-serpent-bow",
-    "weapon-staff-of-loss",
-    "weapon-staff-of-the-guilty",
-    "weapon-starscourge-greatsword",
-    "weapon-sword-of-st-trina",
-    "weapon-venomous-fang",
-    "weapon-wakizashi",
-    "whetblade-red-hot-whetblade"
+    "weapon-staff-of-the-guilty"
   ]
 }

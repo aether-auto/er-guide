@@ -1,4 +1,21 @@
 {
   "_doc": "itemId -> { map: {code, markerId, lat, lng} | null, exclude: true, markerName: 'exact marker title to match' }",
-  "_entries": {}
+  "_entries": {
+    "key-item-beast-eye": {
+      "map": {
+        "code": "overworld",
+        "markerId": null,
+        "lat": -57.5,
+        "lng": 112.8
+      }
+    },
+    "weapon-clawmark-seal": {
+      "map": {
+        "code": "overworld",
+        "markerId": null,
+        "lat": -57.5,
+        "lng": 112.8
+      }
+    }
+  }
 }

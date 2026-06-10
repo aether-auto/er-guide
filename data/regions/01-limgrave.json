@@ -2,120 +2,819 @@
   "id": "limgrave",
   "name": "Limgrave",
   "order": 1,
-  "legs": [],
+  "legs": [
+    {
+      "id": "limgrave-01",
+      "from": "The First Step",
+      "to": "Church of Elleh",
+      "summary": "Step out of the Stranded Graveyard. White-Faced Varré greets you at The First Step — speak to him (starts his questline). Pick up the multiplayer tools at the Summoning Pool, then ride north to the ruined church. The Tree Sentinel patrols the road — dodge around him on the left; you will return after getting Torrent.",
+      "steps": [
+        {
+          "type": "quest",
+          "id": "quest-varre-first-step",
+          "questline": "White-Faced Varré",
+          "text": "Speak to White-Faced Varré at The First Step. He calls you 'maidenless' and points you toward Stormveil. No further action required here — his next step is at Rose Church (Liurnia).",
+          "missable": {
+            "lockedBy": "None at this step",
+            "note": "Simply speak to him; the questline cannot be permanently locked here."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "tool-small-golden-effigy",
+          "note": "On the Summoning Pool a few steps west of The First Step Site of Grace."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-small-red-effigy",
+          "note": "On the Summoning Pool next to the golden effigy."
+        },
+        {
+          "type": "direction",
+          "text": "Ride north past the Tree Sentinel, keeping to the left of the road to avoid him."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-crafting-kit",
+          "note": "Buy from Merchant Kalé at Church of Elleh for 300 runes — unlocks all crafting."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-1",
+          "note": "Buy from Kalé for 300 runes."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-2",
+          "note": "Buy from Kalé for 600 runes."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-3",
+          "note": "Buy from Kalé for 600 runes."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-kale-s-bell-bearing",
+          "note": "Dropped when Kalé dies or is killed. Do NOT kill Kalé — his bell bearing lets you purchase his stock from Twin Maiden Husks only after his natural death in a later event."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-02",
+      "from": "Church of Elleh",
+      "to": "Gatefront",
+      "summary": "Ride northwest to the large Godrick soldier camp at the base of Stormgate. Grab the map stele and the underground cellar. After you have Torrent from Melina, rest at any grace until night and return to Church of Elleh — Renna appears here once and only once.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head northwest from the church toward the large soldier encampment. The map stele is upright in the center of the ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-limgrave-west",
+          "note": "Stele in the center of Gatefront Ruins — interact to reveal west Limgrave on the map."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-whetstone-knife",
+          "note": "Underground cellar chest beneath Gatefront Ruins — drops through a hole in the ruins floor. Unlocks Ash of War swapping at any Site of Grace."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-storm-stomp",
+          "note": "Same underground chest as the Whetstone Knife."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-flail",
+          "note": "In a chest in one of the carts near the ruins, guarded by soldiers."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-lordsworn-s-greatsword",
+          "note": "In a wagon chest near Gatefront Ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-arrow-s-reach-talisman",
+          "note": "In a chest inside the Stormgate Tower, north of Gatefront — climb around the exterior to reach the entrance."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ranni-renna-bell",
+          "questline": "Ranni",
+          "text": "After receiving Torrent from Melina: rest at any Site of Grace and choose to pass time until night, then ride back to Church of Elleh. Speak to Renna (she appears at the ruins). Accept the Spirit Calling Bell.",
+          "missable": {
+            "lockedBy": "No permanent lock — but if you miss Renna here, you must buy Spirit Calling Bell and Lone Wolf Ashes from Twin Maiden Husks at Roundtable Hold later for 1000 + 500 runes each.",
+            "note": "Renna does NOT appear until after Melina's first encounter (3 grace sites rested at). She disappears later in the game; buy from Twin Maiden Husks if missed."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-spirit-calling-bell",
+          "note": "Given by Renna at Church of Elleh at night. Enables Spirit Ash summons."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-lone-wolf-ashes",
+          "note": "Given by Renna alongside the Spirit Calling Bell."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-03",
+      "from": "Gatefront",
+      "to": "Stormhill Shack",
+      "summary": "Head north along the Stormgate road into Stormhill. Boc the Seamster is disguised as a tree just east of the road north of the lake — free him. Roderika sits in the shack brooding; exhaust her dialogue. At night a Deathbird patrols the lower hillside road for the Blue Feathered Branchsword.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Ride north past Stormgate. Just east of the road (south of Agheel Lake North grace) a small tree calls out for help — attack it."
+        },
+        {
+          "type": "quest",
+          "id": "quest-boc-free-tree",
+          "questline": "Boc the Seamster",
+          "text": "Strike the illusory tree east of the path south of Agheel Lake North to free Boc. He rewards you with 10 Mushrooms. Next step: Coastal Cave.",
+          "missable": {
+            "lockedBy": "None at this step",
+            "note": "Freeing Boc here is not required — he also appears at Coastal Cave entrance if you go directly there."
+          }
+        },
+        {
+          "type": "direction",
+          "text": "Continue north along the road past the Stormgate to Stormhill Shack."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-06",
+          "note": "On a corpse next to the Site of Grace at Stormhill Shack."
+        },
+        {
+          "type": "quest",
+          "id": "quest-roderika-stormhill-shack",
+          "questline": "Roderika",
+          "text": "Speak to Roderika at Stormhill Shack multiple times until she gives you the Spirit Jellyfish Ashes. She asks you to deliver her feelings to 'the chrysalids' in Stormveil. After you bring her the Chrysalids' Memento from Stormveil, she relocates to Roundtable Hold. A Golden Seed then appears where she was.",
+          "missable": {
+            "lockedBy": "None permanently — Roderika can still be reached at Roundtable Hold if you skip this",
+            "note": "Speak to her at least once to start the quest. Chrysalids' Memento is found in Stormveil Castle on a pile of grafted bodies."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-spirit-jellyfish-ashes",
+          "note": "Given by Roderika after exhausting her dialogue at Stormhill Shack."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-05",
+          "note": "Appears at Stormhill Shack after Roderika relocates to Roundtable Hold (requires delivering Chrysalids' Memento from Stormveil and then resting at a grace)."
+        },
+        {
+          "type": "direction",
+          "text": "At night (rest at a grace and choose to pass time), a Deathbird spawns on the hillside road west of the Saintsbridge. Kill it for the Blue Feathered Branchsword talisman."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-blue-feathered-branchsword",
+          "note": "Dropped by the Deathbird that spawns on Stormhill at night, west of Saintsbridge. Boss only appears at night."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-04",
+      "from": "Stormhill Shack",
+      "to": "Warmaster's Shack",
+      "summary": "Continue north past Saintsbridge. D, Hunter of the Dead appears at the bridge — speak to him to start his quest. Warmaster's Shack has Knight Bernahl who sells Ashes of War. At night the Bell Bearing Hunter invades the shack. The Stormhill Evergaol is north of the shack.",
+      "steps": [
+        {
+          "type": "quest",
+          "id": "quest-d-saintsbridge",
+          "questline": "D, Hunter of the Dead",
+          "text": "Speak to D at Saintsbridge (the stone bridge north of the shack). He warns about the undead and Deathroot. Give him any Deathroot you find to unlock incantations at Gurranq via his direction.",
+          "missable": {
+            "lockedBy": "None at this step",
+            "note": "D's full questline resolves in late game; initial dialogue here is not missable."
+          }
+        },
+        {
+          "type": "direction",
+          "text": "Head northwest to Warmaster's Shack. Knight Bernahl is inside during the day — purchase desired Ashes of War from him."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-stamp-sweep",
+          "note": "Buy from Knight Bernahl at Warmaster's Shack."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-stamp-upward-cut",
+          "note": "Buy from Knight Bernahl at Warmaster's Shack."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-wild-strikes",
+          "note": "Buy from Knight Bernahl at Warmaster's Shack."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-determination",
+          "note": "Buy from Knight Bernahl at Warmaster's Shack."
+        },
+        {
+          "type": "direction",
+          "text": "At night (rest and pass time), rest at Warmaster's Shack grace twice then enter the shack — the Bell Bearing Hunter invades. Defeating it gives the Bone Peddler's Bell Bearing (unlocks purchasing crafting bones from merchants)."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-bell-bearing-hunter",
+          "text": "Bell Bearing Hunter — invades Warmaster's Shack at night only. Optional but rewards an important Bell Bearing."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-bone-peddler-s-bell-bearing",
+          "note": "Dropped by the Bell Bearing Hunter at Warmaster's Shack (night only)."
+        },
+        {
+          "type": "direction",
+          "text": "From Warmaster's Shack, ride north to the Stormhill Evergaol. The Crucible Knight inside drops an Incantation."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-crucible-knight-stormhill",
+          "text": "Crucible Knight — inside Stormhill Evergaol, north of Warmaster's Shack. Strong but drops a unique incantation."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-aspects-of-the-crucible-tail",
+          "note": "Dropped by the Crucible Knight in Stormhill Evergaol."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-05",
+      "from": "Warmaster's Shack",
+      "to": "Murkwater Coast",
+      "summary": "Head south into the Murkwater ravine. Yura's invasion occurs near the ravine entrance (he protects you from a bloody finger invader). Murkwater Cave has Patches — don't kill him. Murkwater Catacombs are directly south. Deathtouched Catacombs are east along the ravine.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head south and east from Warmaster's Shack into the ravine following the river to Murkwater Coast Site of Grace."
+        },
+        {
+          "type": "quest",
+          "id": "quest-yura-murkwater",
+          "questline": "Bloody Finger Hunter Yura",
+          "text": "Yura invades near the ravine entrance to defend you from the Bloody Finger Nerijus. After the fight, find Yura just north of the Murkwater Coast grace under an arch — exhaust his dialogue. He hints at his mission against the Bloody Fingers.",
+          "missable": {
+            "lockedBy": "None at this step",
+            "note": "Yura's presence here is automatic; speak to him after the invasion."
+          }
+        },
+        {
+          "type": "direction",
+          "text": "Enter Murkwater Cave upstream — Patches is inside. When Patches surrenders, FORGIVE him so he becomes a merchant (he sells unique items including the Magma Whip Candlestick and Stonesword Keys later)."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-patches-murkwater",
+          "text": "Patches — attacks you when you open his chest. Let his HP drop then he surrenders. Forgive him to unlock his merchant services."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-cloth-garb",
+          "note": "In the chest at the end of Murkwater Cave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-cloth-trousers",
+          "note": "In the chest at the end of Murkwater Cave alongside the Cloth Garb."
+        },
+        {
+          "type": "direction",
+          "text": "Murkwater Catacombs are slightly south of the cave — clear them for the spirit ash."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-grave-warden-duelist",
+          "text": "Grave Warden Duelist — boss of Murkwater Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-banished-knight-engvall",
+          "note": "Dropped by Grave Warden Duelist in Murkwater Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-battle-hammer",
+          "note": "Also dropped by Grave Warden Duelist in Murkwater Catacombs."
+        },
+        {
+          "type": "direction",
+          "text": "Deathtouched Catacombs are east along the ravine road under Stormhill. The Uchigatana is on a hanging corpse inside; Deathroot and Assassin's Crimson Dagger come from the boss."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-black-knife-assassin-deathtouched",
+          "text": "Black Knife Assassin — boss of Deathtouched Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-uchigatana",
+          "note": "Hanging on a corpse on the upper platform inside Deathtouched Catacombs — pull the lever to access the room."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-assassin-s-crimson-dagger",
+          "note": "Dropped by the Black Knife Assassin in Deathtouched Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-deathroot",
+          "note": "In a chest behind the Black Knife Assassin in Deathtouched Catacombs. Give Deathroot to D or directly to Gurranq at the Bestial Sanctum to unlock Beast Incantations."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-assassin-s-prayerbook",
+          "note": "Found in Deathtouched Catacombs. Give to a cleric (Corhyn at Roundtable Hold) to unlock Assassin's Approach and Darkness incantations for purchase."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-06",
+      "from": "Murkwater Coast",
+      "to": "Mistwood Outskirts",
+      "summary": "Cross east to Mistwood. Blaidd the Half-Wolf is howling from the ruins tower — first get the Finger Snap gesture from Kalé (Church of Elleh), then use it under Blaidd to summon him down. The Minor Erdtree in Mistwood has two Crystal Tears on its altar. Kenneth Haight is northeast on a ruined arch.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Ride east across the main Limgrave road to reach Mistwood. When you hear wolf howling from the Mistwood Ruins, ride to Church of Elleh first to learn the Finger Snap gesture from Kalé."
+        },
+        {
+          "type": "quest",
+          "id": "quest-blaidd-mistwood",
+          "questline": "Blaidd",
+          "text": "Learn Finger Snap from Kalé at Church of Elleh (free). Return to Mistwood Ruins, stand beneath the tall tower, and use Finger Snap. Blaidd jumps down and introduces himself — he is hunting Darriwil at the Forlorn Hound Evergaol.",
+          "missable": {
+            "lockedBy": "None at this step",
+            "note": "Blaidd's questline continues at Forlorn Hound Evergaol (southeast). His full arc resolves after completing Ranni's quest in Liurnia."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-axe-talisman",
+          "note": "In a cellar underground beneath Mistwood Ruins — drop through a hole in the ground inside the ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-4",
+          "note": "On a corpse on the road south of Mistwood near the Siofra River Well."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-greenspill-crystal-tear",
+          "note": "On the altar next to the Minor Erdtree in Mistwood."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-spiked-cracked-tear",
+          "note": "On the same altar as the Greenspill Crystal Tear at the Mistwood Minor Erdtree."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-incantation-scarab",
+          "note": "Examine the Homecoming Painting inside Artist's Shack (east of Agheel Lake). Then find the ghost sitting at a gravestone southwest of Dragon-Burnt Ruins — interact with it to receive the Incantation Scarab helm."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-01",
+          "note": "Dropped by a Noble enemy near Agheel Lake North that transforms into a Lesser Rune Bear on death. Kill the Bear form to receive the Larval Tear."
+        },
+        {
+          "type": "quest",
+          "id": "quest-kenneth-haight-first",
+          "questline": "Kenneth Haight",
+          "text": "Find Kenneth Haight standing atop a ruined arch northeast of Mistwood Outskirts. He asks you to clear Fort Haight of enemies to the east.",
+          "missable": {
+            "lockedBy": "None at this step",
+            "note": "Kenneth's questline concludes post-Morgott when Nepheli becomes lord at Stormveil throne room."
+          }
+        }
+      ]
+    },
+    {
+      "id": "limgrave-07",
+      "from": "Mistwood Outskirts",
+      "to": "Fort Haight West",
+      "summary": "Head southeast to Fort Haight — Kenneth's fort overrun by Godrick soldiers and a Misbegotten knight. Clear it, grab the essential Dectus Medallion (Left), and return to Kenneth. The Forlorn Hound Evergaol is just west of here — summon Blaidd for the fight.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Ride southeast to Fort Haight. Clear the enemies inside, then loot the tower."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-dectus-medallion-left",
+          "note": "In a chest atop the Fort Haight tower walls — required later for the Grand Lift of Dectus to reach Altus Plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-bloody-slash",
+          "note": "Dropped by the Godrick Knight guarding Fort Haight."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-6",
+          "note": "In a chest at the top of the main stairs in Fort Haight."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-erdsteel-dagger",
+          "note": "Reward from Kenneth Haight after clearing Fort Haight — return to him at the ruined arch northeast of Mistwood."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-03",
+          "note": "Under a Phantom Tree right at the entrance to Fort Haight."
+        },
+        {
+          "type": "direction",
+          "text": "Ride west to the Forlorn Hound Evergaol. If you met Blaidd at Mistwood, he is available as a summon sign outside the evergaol."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-bloodhound-knight-darriwil",
+          "text": "Bloodhound Knight Darriwil — Forlorn Hound Evergaol. Summon Blaidd outside for extra damage. After defeating, speak to Blaidd twice for a Smithing Stone [2] and his next quest hint."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-08",
+      "from": "Fort Haight West",
+      "to": "Third Church of Marika",
+      "summary": "Head northeast along the eastern Limgrave coast to the Third Church of Marika. The Flask of Wondrous Physick and a Sacred Tear are here. The Summonwater Village east of the church has a Tibia Mariner boss and the Green Turtle Talisman behind a Stonesword Key lock.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-limgrave-east",
+          "note": "Stele at the roadside intersection east of Mistwood, on the road toward Third Church."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-royal-house-scroll",
+          "note": "On a corpse southeast of Agheel Lake South, past the cliff with the knight. Give to Sorceress Sellen or Thops to unlock Royal House sorceries for purchase."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-flask-of-wondrous-physick",
+          "note": "On the ground in front of the statue at Third Church of Marika — enables mixing Crystal Tears for one-time buff flasks."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-crimson-crystal-tear",
+          "note": "In front of the altar statue at Third Church of Marika alongside the Flask."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-04",
+          "note": "On the ground in front of the altar at Third Church of Marika — enhances flask potency."
+        },
+        {
+          "type": "direction",
+          "text": "Head east from the church to Summonwater Village — the Tibia Mariner patrols the flooded area. Ignore its skeleton adds and focus the Mariner."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-tibia-mariner-summonwater",
+          "text": "Tibia Mariner — Summonwater Village. Use Torrent to stay mobile and ignore the skeletons."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-skeletal-militiaman-ashes",
+          "note": "Dropped by the Tibia Mariner at Summonwater Village."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-fevor-s-cookbook-1",
+          "note": "On a corpse in the graveyard south of Summonwater Village."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-green-turtle-talisman",
+          "note": "In an underground area southeast of Summonwater Village — requires 1 Stonesword Key at the imp seal entrance. Boosts stamina recovery."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-09",
+      "from": "Agheel Lake South",
+      "to": "Church of Dragon Communion",
+      "summary": "Flying Dragon Agheel patrols Agheel Lake — fight it for a Dragon Heart, then head southwest to Coastal Cave to finish Boc's quest. The cave exits to the Church of Dragon Communion on the coastal cliffs where Dragon Communion Incantations are purchased. Stormfoot Catacombs are northwest of the lake.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Ride onto Agheel Lake to trigger Flying Dragon Agheel. Torrent lets you dodge its fire breath. A Dragon Heart is your reward — used to buy Dragon Communion incantations."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-flying-dragon-agheel",
+          "text": "Flying Dragon Agheel — field boss on Agheel Lake. Use Torrent. Drops a Dragon Heart and the Agheel's Flame incantation source."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-agheel-s-flame",
+          "note": "Trade a Dragon Heart at the Church of Dragon Communion altar."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-twinblade",
+          "note": "In an underground chest at Dragon-Burnt Ruins near Agheel Lake South — take the stairs down into the basement."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-haligdrake-talisman",
+          "note": "Drop down the cliff near the Seaside Ruins Site of Grace onto a lower ledge. Enter the small opening between fallen columns and follow the path to find it on a hanging body."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-strength-knot-crystal-tear",
+          "note": "Inside a stone receptacle near the cliffs south of Agheel Lake."
+        },
+        {
+          "type": "direction",
+          "text": "Ride west to the coast. Coastal Cave entrance is below the cliff near the beach."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-demi-human-chiefs-coastal-cave",
+          "text": "x2 Demi-Human Chiefs — boss of Coastal Cave. Drops Sewing Needle and Tailoring Tools for Boc."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-sewing-needle",
+          "note": "Dropped by the Demi-Human Chiefs in Coastal Cave. Return to Boc at the cave entrance to give it to him."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-tailoring-tools",
+          "note": "Dropped alongside the Sewing Needle from the Demi-Human Chiefs. Enables Boc to alter armor."
+        },
+        {
+          "type": "quest",
+          "id": "quest-boc-coastal-cave",
+          "questline": "Boc the Seamster",
+          "text": "Return to Boc at the Coastal Cave entrance Site of Grace and give him the Sewing Needle. He becomes a wandering tailor NPC who can alter armor for free at several later Sites of Grace (Lake-Facing Cliffs, East Raya Lucaria Gate, Altus Highway Junction).",
+          "missable": {
+            "lockedBy": "Giving Boc a Larval Tear at a later step",
+            "note": "Do NOT give Boc a Larval Tear when he later asks to be reborn as human — this kills him. Instead use the 'You're Beautiful' Prattling Pate."
+          }
+        },
+        {
+          "type": "direction",
+          "text": "Exit Coastal Cave via the back passage to reach the Church of Dragon Communion on the coastal cliffs above."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-dragon-communion-seal",
+          "note": "In Fringefolk Hero's Grave (Stranded Graveyard) — requires 2 Stonesword Keys to enter. Dropped by a knight in an upper side-tunnel of the chariot dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-dragonfire",
+          "note": "Buy at Church of Dragon Communion altar for 1 Dragon Heart."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-dragonclaw",
+          "note": "Buy at Church of Dragon Communion altar for 1 Dragon Heart."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-dragonmaw",
+          "note": "Buy at Church of Dragon Communion altar for 2 Dragon Hearts."
+        },
+        {
+          "type": "direction",
+          "text": "Northwest across the lake mouth: Stormfoot Catacombs are against the cliff."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-erdtree-burial-watchdog-stormfoot",
+          "text": "Erdtree Burial Watchdog — Stormfoot Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-noble-sorcerer-ashes",
+          "note": "Dropped by Erdtree Burial Watchdog in Stormfoot Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-prattling-pate-hello",
+          "note": "On a corpse behind the first fire-pillar in Stormfoot Catacombs."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-10",
+      "from": "Waypoint Ruins Cellar",
+      "to": "Waypoint Ruins Cellar",
+      "summary": "Waypoint Ruins sit on the central road. The cellar below has a Mad Pumpkin Head boss guarding Sorceress Sellen. Clear the boss, meet Sellen, and give her the Royal House Scroll if you found it. The Greataxe is in a chest on the nearby caravan.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Enter the cellar at Waypoint Ruins — the Site of Grace is inside, just past the fog gate with the Mad Pumpkin Head."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-mad-pumpkin-head-waypoint",
+          "text": "Mad Pumpkin Head — guards entrance to Sellen's cellar at Waypoint Ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-pumpkin-helm",
+          "note": "Dropped by the Mad Pumpkin Head at Waypoint Ruins."
+        },
+        {
+          "type": "quest",
+          "id": "quest-sellen-intro",
+          "questline": "Sorceress Sellen",
+          "text": "Speak to Sorceress Sellen in the Waypoint Ruins Cellar — she offers to teach sorcery and becomes a sorcery merchant. Give her the Royal House Scroll (found near Agheel Lake South) to unlock additional sorceries.",
+          "missable": {
+            "lockedBy": "Killing Sellen before completing her quest",
+            "note": "Sellen's questline has a major missable later — her quest requires the Sellian Sealbreaker from Sellia Hideaway in Caelid. Do not attack her."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-greataxe",
+          "note": "In the treasure chest inside the caravan being pulled by large Trolls on the road east of Waypoint Ruins — clear the defending soldiers."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-11",
+      "from": "Waypoint Ruins Cellar",
+      "to": "Limgrave Tower Bridge",
+      "summary": "Two dungeons cluster north: Groveside Cave (Flamedrake Talisman) and Highroad Cave (Blue Dancer Charm + Shamshir). Then head to the Limgrave Tower Bridge — the path to the Divine Tower requires crossing it. The Fringefolk Hero's Grave back in the Stranded Graveyard is here for cleanup if not done.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Ride north from Waypoint Ruins toward the cliffs near Stormveil's approach. Groveside Cave is on the eastern hillside above the main road."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-beastman-groveside",
+          "text": "Beastman of Farum Azula — Groveside Cave."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-flamedrake-talisman",
+          "note": "Dropped by the Beastman of Farum Azula in Groveside Cave."
+        },
+        {
+          "type": "direction",
+          "text": "Highroad Cave is north along the coastal cliffs (Agheel Lake North area). Contains the Blue Dancer Charm and Shamshir."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-guardian-golem-highroad",
+          "text": "Guardian Golem — Highroad Cave. Requires careful positioning in the narrow cave."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-blue-dancer-charm",
+          "note": "Dropped by the Guardian Golem in Highroad Cave."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-shamshir",
+          "note": "On a platform in Highroad Cave, guarded by Giant Bats past the waterfall section."
+        },
+        {
+          "type": "direction",
+          "text": "Return to Stranded Graveyard (grace at the very beginning) — Fringefolk Hero's Grave entrance requires 2 Stonesword Keys at the imp seal."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-ulcerated-tree-spirit-fringefolk",
+          "text": "Ulcerated Tree Spirit — bottom of Fringefolk Hero's Grave. Requires navigating the chariot trap."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-erdtree-s-favor",
+          "note": "In a secret alcove past the chariot trap in Fringefolk Hero's Grave — quickly loot it while avoiding the Grafted Scions above."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-erdtree-greatbow",
+          "note": "Dropped by the chariot enemy (Golem) in Fringefolk Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-02",
+          "note": "Dropped by the Ulcerated Tree Spirit in Fringefolk Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-04",
+          "note": "On a platform above the chariot in Fringefolk Hero's Grave."
+        },
+        {
+          "type": "direction",
+          "text": "Head to the Limgrave Tower Bridge northwest of Stormveil — cross the bridge toward the Divine Tower. The Ash-of-War Scarab and Golem Greatbow are on the broken bridge section."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-ash-of-war-scarab",
+          "note": "On a corpse on the broken bridge section connecting Stormveil Castle to the Divine Tower of Limgrave — after the three golems, continue without using the waygate and drop down."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-golem-greatbow",
+          "note": "Chance drop from Golem Archers on the Tower Bridge (or the Divine Tower area)."
+        },
+        {
+          "type": "direction",
+          "text": "The Divine Tower of Limgrave is only accessible after defeating Godrick the Grafted. Come back here after Stormveil."
+        }
+      ]
+    },
+    {
+      "id": "limgrave-12",
+      "from": "Limgrave Tower Bridge",
+      "to": "Limgrave Tunnels",
+      "summary": "The Limgrave Tunnels are in a ravine just west of Waypoint Ruins. A Stonedigger Troll boss at the bottom drops the Roar Medallion. Also check the Tree Sentinel near the Church of Elleh now that you have better gear — he drops the Golden Halberd.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Enter Limgrave Tunnels in the ravine west of Waypoint Ruins. The Roar Medallion is the main prize."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-stonedigger-troll-tunnels",
+          "text": "Stonedigger Troll — Limgrave Tunnels."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-roar-medallion",
+          "note": "Dropped by Stonedigger Troll in Limgrave Tunnels — boosts roar and breath attacks."
+        },
+        {
+          "type": "direction",
+          "text": "The Tree Sentinel patrols the road north of Church of Elleh — strong but beatable mid-game. He drops the Golden Halberd."
+        },
+        {
+          "type": "boss",
+          "id": "boss-limgrave-tree-sentinel",
+          "text": "Tree Sentinel — patrols the road north of Church of Elleh. Optional early but worth fighting before leaving Limgrave."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-golden-halberd",
+          "note": "Dropped by the Tree Sentinel near Church of Elleh."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-lance",
+          "note": "On top of a large square structure west of Deathtouched Catacombs — jump off the nearby cliff to land on top of it."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-great-epee",
+          "note": "In a chest guarded by soldiers southeast of Agheel Lake South, past the cliff overlook."
+        }
+      ]
+    }
+  ],
   "cleanup": [
-    "armor-ash-of-war-scarab",
-    "armor-cloth-garb",
-    "armor-cloth-trousers",
     "armor-fingerprint-armor",
     "armor-fingerprint-armor-altered",
     "armor-fingerprint-gauntlets",
     "armor-fingerprint-greaves",
     "armor-fingerprint-helm",
-    "armor-incantation-scarab",
-    "armor-pumpkin-helm",
-    "armor-scaled-armor",
-    "armor-scaled-armor-altered",
-    "armor-scaled-gauntlets",
-    "armor-scaled-greaves",
-    "armor-scaled-helm",
-    "armor-twinned-armor",
-    "armor-twinned-armor-altered",
-    "armor-twinned-gauntlets",
-    "armor-twinned-greaves",
-    "armor-twinned-helm",
-    "ash-of-war-ash-of-war-bloody-slash",
-    "ash-of-war-ash-of-war-determination",
     "ash-of-war-ash-of-war-golden-vow",
     "ash-of-war-ash-of-war-gravitas",
     "ash-of-war-ash-of-war-ground-slam",
     "ash-of-war-ash-of-war-repeating-thrust",
     "ash-of-war-ash-of-war-sacred-blade",
-    "ash-of-war-ash-of-war-stamp-sweep",
-    "ash-of-war-ash-of-war-stamp-upward-cut",
-    "ash-of-war-ash-of-war-storm-stomp",
     "ash-of-war-ash-of-war-unsheathe",
-    "ash-of-war-ash-of-war-wild-strikes",
-    "bell-bearing-bone-peddler-s-bell-bearing",
-    "cookbook-fevor-s-cookbook-1",
-    "cookbook-nomadic-warrior-s-cookbook-4",
-    "cookbook-nomadic-warrior-s-cookbook-6",
-    "crystal-tear-crimson-crystal-tear",
-    "crystal-tear-greenspill-crystal-tear",
-    "crystal-tear-spiked-cracked-tear",
-    "crystal-tear-strength-knot-crystal-tear",
-    "golden-seed-02",
-    "golden-seed-03",
-    "golden-seed-05",
-    "incantation-agheel-s-flame",
-    "incantation-aspects-of-the-crucible-tail",
-    "incantation-dragonclaw",
-    "incantation-dragonfire",
-    "incantation-dragonmaw",
     "incantation-vyke-s-dragonbolt",
-    "key-item-assassin-s-prayerbook",
-    "key-item-deathroot",
-    "key-item-dectus-medallion-left",
     "key-item-giant-s-prayerbook",
-    "key-item-royal-house-scroll",
-    "key-item-sewing-needle",
-    "key-item-spirit-calling-bell",
-    "key-item-tailoring-tools",
-    "key-item-whetstone-knife",
-    "larval-tear-01",
-    "map-fragment-map-limgrave-east",
-    "map-fragment-map-limgrave-west",
-    "sacred-tear-04",
     "shield-beast-crest-heater-shield",
     "shield-brass-shield",
-    "shield-one-eyed-shield",
-    "spirit-ash-banished-knight-engvall",
     "spirit-ash-banished-knight-oleg",
-    "spirit-ash-dolores-the-sleeping-arrow-puppet",
     "spirit-ash-godrick-soldier-ashes",
-    "spirit-ash-lone-wolf-ashes",
-    "spirit-ash-noble-sorcerer-ashes",
-    "spirit-ash-skeletal-militiaman-ashes",
-    "spirit-ash-spirit-jellyfish-ashes",
     "spirit-ash-wandering-noble-ashes",
-    "stonesword-key-04",
     "stonesword-key-05",
-    "stonesword-key-06",
     "stonesword-key-42",
-    "talisman-arrow-s-reach-talisman",
-    "talisman-assassin-s-crimson-dagger",
-    "talisman-axe-talisman",
-    "talisman-blue-dancer-charm",
-    "talisman-blue-feathered-branchsword",
-    "talisman-erdtree-s-favor",
-    "talisman-flamedrake-talisman",
-    "talisman-green-turtle-talisman",
-    "talisman-haligdrake-talisman",
     "talisman-hammer-talisman",
     "talisman-lance-talisman",
-    "talisman-roar-medallion",
     "tool-duelist-s-furled-finger",
     "tool-finger-severer",
-    "tool-flask-of-wondrous-physick",
-    "tool-prattling-pate-hello",
-    "tool-small-golden-effigy",
-    "tool-small-red-effigy",
-    "weapon-battle-hammer",
     "weapon-crepus-s-black-key-crossbow",
-    "weapon-dragon-communion-seal",
-    "weapon-erdsteel-dagger",
-    "weapon-erdtree-greatbow",
     "weapon-falchion",
-    "weapon-flail",
-    "weapon-golden-halberd",
-    "weapon-great-epee",
-    "weapon-greataxe",
-    "weapon-lance",
-    "weapon-lordsworn-s-greatsword",
-    "weapon-meteoric-ore-blade",
     "weapon-partisan",
-    "weapon-shamshir",
-    "weapon-twinblade",
-    "weapon-uchigatana"
+    "weapon-reduvia"
   ]
 }

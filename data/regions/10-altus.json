@@ -2,129 +2,719 @@
   "id": "altus",
   "name": "Altus Plateau",
   "order": 10,
-  "legs": [],
-  "cleanup": [
-    "ammo-golden-great-arrow",
-    "armor-battlemage-legwraps",
-    "armor-battlemage-manchettes",
-    "armor-battlemage-robe",
-    "armor-black-hood",
-    "armor-blue-festive-garb",
-    "armor-blue-festive-hood",
-    "armor-briar-armor",
-    "armor-briar-armor-altered",
-    "armor-briar-gauntlets",
-    "armor-briar-greaves",
-    "armor-briar-helm",
-    "armor-bull-goat-armor",
-    "armor-bull-goat-gauntlets",
-    "armor-bull-goat-greaves",
-    "armor-bull-goat-helm",
-    "armor-corhyn-s-robe",
-    "armor-festive-garb",
-    "armor-festive-hood",
-    "armor-gold-bracelets",
-    "armor-gold-waistwrap",
-    "armor-hierodas-glintstone-crown",
-    "armor-imp-head-wolf",
-    "armor-noble-s-gloves",
-    "armor-noble-s-traveling-garb",
-    "armor-noble-s-trousers",
-    "armor-omenkiller-boots",
-    "armor-omenkiller-long-gloves",
-    "armor-omenkiller-robe",
-    "armor-radiant-gold-mask",
-    "armor-raptor-s-black-feathers",
-    "armor-ruler-s-mask",
-    "armor-ruler-s-robe",
-    "armor-skeletal-mask",
-    "ash-of-war-ash-of-war-blood-blade",
-    "ash-of-war-ash-of-war-earthshaker",
-    "ash-of-war-ash-of-war-golden-slam",
-    "ash-of-war-ash-of-war-lightning-ram",
-    "ash-of-war-ash-of-war-sacred-order",
-    "ash-of-war-ash-of-war-shared-order",
-    "ash-of-war-ash-of-war-shield-crash",
-    "bell-bearing-corhyn-s-bell-bearing",
-    "bell-bearing-glovewort-picker-s-bell-bearing-1",
-    "bell-bearing-somberstone-miner-s-bell-bearing-2",
-    "cookbook-ancient-dragon-apostle-s-cookbook-1",
-    "cookbook-ancient-dragon-apostle-s-cookbook-2",
-    "cookbook-nomadic-warrior-s-cookbook-19",
-    "cookbook-perfumer-s-cookbook-1",
-    "crystal-tear-crimsonspill-crystal-tear",
-    "crystal-tear-purifying-crystal-tear",
-    "crystal-tear-speckled-hardtear",
-    "golden-seed-19",
-    "golden-seed-21",
-    "golden-seed-22",
-    "golden-seed-27",
-    "golden-seed-28",
-    "incantation-dragonbolt-blessing",
-    "incantation-protection-of-the-erdtree",
-    "incantation-scouring-black-flame",
-    "incantation-wrath-of-gold",
-    "key-item-dancer-s-castanets",
-    "larval-tear-06",
-    "map-fragment-map-altus-plateau",
-    "memory-stone-07",
-    "sacred-tear-09",
-    "sacred-tear-10",
-    "shield-briar-greatshield",
-    "shield-candletree-wooden-shield",
-    "shield-erdtree-greatshield",
-    "shield-icon-shield",
-    "sorcery-briars-of-punishment",
-    "sorcery-tibia-s-summons",
-    "sorcery-unseen-blade",
-    "sorcery-unseen-form",
-    "spirit-ash-ancient-dragon-knight-kristoff",
-    "spirit-ash-giant-rat-ashes",
-    "spirit-ash-leyndell-soldier-ashes",
-    "spirit-ash-mad-pumpkin-head-ashes",
-    "spirit-ash-perfumer-tricia",
-    "spirit-ash-winged-misbegotten-ashes",
-    "stonesword-key-25",
-    "stonesword-key-35",
-    "stonesword-key-36",
-    "stonesword-key-40",
-    "talisman-arsenal-charm-1",
-    "talisman-boltdrake-talisman-1",
-    "talisman-concealing-veil",
-    "talisman-crepus-s-vial",
-    "talisman-crimson-seed-talisman",
-    "talisman-crucible-scale-talisman",
-    "talisman-dragoncrest-shield-talisman-1",
-    "talisman-greatshield-talisman",
-    "talisman-lightning-scorpion-charm",
-    "talisman-pearldrake-talisman-1",
-    "talisman-perfumer-s-talisman",
-    "talisman-ritual-sword-talisman",
-    "tool-prattling-pate-apologies",
-    "tool-prattling-pate-let-s-get-to-it",
-    "weapon-black-knife",
-    "weapon-bloody-helice",
-    "weapon-celebrant-s-cleaver",
-    "weapon-celebrant-s-rib-rake",
-    "weapon-celebrant-s-sickle",
-    "weapon-celebrant-s-skull",
-    "weapon-eleonora-s-poleblade",
-    "weapon-family-heads",
-    "weapon-godskin-peeler",
-    "weapon-great-club",
-    "weapon-great-omenkiller-cleaver",
-    "weapon-great-stars",
-    "weapon-greatbow",
-    "weapon-harp-bow",
-    "weapon-magma-wyrm-s-scalesword",
-    "weapon-marais-executioner-s-sword",
-    "weapon-nagakiba",
-    "weapon-raptor-talons",
-    "weapon-serpent-god-s-curved-sword",
-    "weapon-stone-club",
-    "weapon-thorned-whip",
-    "weapon-troll-s-golden-sword",
-    "weapon-troll-s-hammer",
-    "weapon-twinned-knight-swords"
-  ]
+  "legs": [
+    {
+      "id": "altus-01",
+      "from": "Ravine-Veiled Village",
+      "to": "Abandoned Coffin",
+      "summary": "Climb the ladder at the Ravine-Veiled Village into the Ruin-Strewn Precipice dungeon. Fight through the magma-infested cliffs to Magma Wyrm Makar and take the lift at the top to emerge on Altus Plateau. This is the foot-approach alternative to the Grand Lift of Dectus (the lift requires both halves of the Dectus Medallion — one from Fort Haight in Limgrave, one from Fort Faroth in Caelid).",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the Liurnia lake shore, follow the ravine northeast to the ladder at Ravine-Veiled Village. Ascend into the Ruin-Strewn Precipice cave."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-serpent-god-s-curved-sword",
+          "note": "Chest in the second large chamber of the Ruin-Strewn Precipice, past the first set of magma slugs."
+        },
+        {
+          "type": "boss",
+          "id": "boss-ruin-strewn-precipice-magma-wyrm-makar",
+          "text": "Magma Wyrm Makar — boss of the Ruin-Strewn Precipice. NPC summon signs for Great Horned Tragoth and Millicent are near the fog gate. Defeating him drops a Dragon Heart and opens the lift to Altus Plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-magma-wyrm-s-scalesword",
+          "note": "Dropped by Magma Wyrm Makar."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-altus-plateau",
+          "note": "Stele on the road just northeast of the Altus Plateau grace, west of the Minor Erdtree."
+        },
+        {
+          "type": "direction",
+          "text": "Ride northeast from the Abandoned Coffin grace. The Altus Plateau grace is near the Minor Erdtree on the road to the east."
+        }
+      ]
+    },
+    {
+      "id": "altus-02",
+      "from": "Altus Plateau",
+      "to": "Altus Highway Junction",
+      "summary": "Sweep the central plateau along the main road, collecting key items near the highway junction and meeting Corhyn who has followed you here. The Forest-Spanning Greatbridge grace is reached by continuing north; Goldmask stands on the broken bridge south of it.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head north along the main road from the Altus Plateau grace toward Leyndell. Avoid the Grace Mimic enemy near the Minor Erdtree — it mimics a Site of Grace and ambushes you."
+        },
+        {
+          "type": "quest",
+          "id": "quest-corhyn-altus-highway",
+          "questline": "Corhyn/Goldmask",
+          "text": "Speak with Brother Corhyn near the Altus Highway Junction grace. He is searching for the prophet Goldmask. Tell him about the figure standing on the bridge to the south (Forest-Spanning Greatbridge — Goldmask is visible on the broken arch). Then ride south to the bridge and speak with Goldmask — he is silent."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crimson-seed-talisman",
+          "note": "On a corpse by a chariot wreck south of Altus Highway Junction on the road."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-wrath-of-gold",
+          "note": "Chest inside the minor dungeon/crypt beneath the Minor Erdtree church in this area."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-19",
+          "note": "Under the Minor Erdtree on the central Altus road — base of the golden tree."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-09",
+          "note": "Inside the Minor Erdtree Church building northwest of the Altus road; check the altar."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-arsenal-charm-1",
+          "note": "Chest in the cellar of the Stormcaller Church ruins west of the highway."
+        }
+      ]
+    },
+    {
+      "id": "altus-03",
+      "from": "Forest-Spanning Greatbridge",
+      "to": "Bower of Bounty",
+      "summary": "Sweep the eastern half of the plateau past the Erdtree-Gazing Hill toward the Bower of Bounty. The Outer Wall Phantom Tree grace marks the Capital Outskirts entrance; hold off on entering Leyndell for now. Pick up items in the windmill area south of Bower of Bounty.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Ride north from the Forest-Spanning Greatbridge. The Erdtree-Gazing Hill grace is on the cliffside overlook. Continue north past the Outer Wall Phantom Tree (Capital Outskirts starts here — come back later for Leyndell) toward the Bower of Bounty."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-boltdrake-talisman-1",
+          "note": "Chest inside the Divine Tower of West Altus: Gate building — take the elevator up and loot the chest before the sealed tower gate."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-greatshield-talisman",
+          "note": "Chest in a gazebo-like structure near the Rampartside Path grace, northeast of the main road."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-crimsonspill-crystal-tear",
+          "note": "Defeated from the Omenkiller boss at the Minor Erdtree east of the Outer Wall Phantom Tree."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-speckled-hardtear",
+          "note": "Also dropped by the Omenkiller at the same Minor Erdtree — both tears drop together."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-21",
+          "note": "Under the Minor Erdtree east of the Outer Wall Phantom Tree."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-protection-of-the-erdtree",
+          "note": "Dropped by a Teardrop Scarab rolling on the road east of the Outer Wall Phantom Tree area."
+        },
+        {
+          "type": "item",
+          "itemId": "memory-stone-07",
+          "note": "Tower chest — in the Memory Tower at the top of the rise east of the Erdtree-Gazing Hill, guarded by a Lone Wolf."
+        }
+      ]
+    },
+    {
+      "id": "altus-04",
+      "from": "Bower of Bounty",
+      "to": "Windmill Heights",
+      "summary": "The Windmill Villages are a celebration of the Godskin Apostle cult. Killing the Godskin Apostle at Dominula triggers a Millicent quest step. Pick up the unique Celebrant's weapons scattered throughout the village buildings and fields.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Ride northwest from Bower of Bounty to the Windmill Village (Dominula). The villagers here dance endlessly in worship of the Godskin Apostle above."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-celebrant-s-cleaver",
+          "note": "On a corpse near the lower windmill section."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-celebrant-s-rib-rake",
+          "note": "On a corpse in the mid windmill area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-celebrant-s-sickle",
+          "note": "Looted from a Celebrant enemy in the village."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-celebrant-s-skull",
+          "note": "Looted from a Celebrant enemy in the village."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-festive-garb",
+          "note": "Dropped by Festive Dancer enemies in the village."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-festive-hood",
+          "note": "Dropped by Festive Dancer enemies in the village."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-blue-festive-garb",
+          "note": "On a corpse in the upper windmill section."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-blue-festive-hood",
+          "note": "On a corpse in the upper windmill section."
+        },
+        {
+          "type": "boss",
+          "id": "boss-altus-godskin-apostle-windmill",
+          "text": "Godskin Apostle — at the top of Dominula, Windmill Village. Defeating him unlocks Windmill Heights grace and triggers Millicent's quest step."
+        },
+        {
+          "type": "quest",
+          "id": "quest-millicent-windmill",
+          "questline": "Millicent",
+          "text": "After defeating the Godskin Apostle, speak to Millicent at the Windmill Heights Site of Grace. Exhaust her dialogue. She reflects on her goal and thanks you. Her questline continues in the Mountaintops of the Giants."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-godskin-peeler",
+          "note": "Dropped by the Godskin Apostle at Dominula."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-22",
+          "note": "Under a small golden sapling near the lower windmill road."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-19",
+          "note": "On a corpse near the village entrance path."
+        }
+      ]
+    },
+    {
+      "id": "altus-05",
+      "from": "Road of Iniquity Side Path",
+      "to": "Shaded Castle Inner Gate",
+      "summary": "The Shaded Castle sits in a poison mire in the northwest corner of the plateau. It holds Valkyrie's Prosthesis (critical for Millicent's questline) and Marais Executioner's Sword from boss Elemer. Patches is also wounded here post-Volcano Manor and gives you Dancer's Castanets for the Tanith quest.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Road of Iniquity Side Path, ride northwest into the poison swamp and up into the Shaded Castle. The rampart entrance is to the south."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-valkyrie-s-prosthesis",
+          "note": "Chest on the top floor of the Shaded Castle's northeast tower — navigate past the rampart enemies and up the ladder. CRITICAL for Millicent's questline: give it to her after this leg."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-unseen-blade",
+          "note": "Chest in a sealed room inside the main keep."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-unseen-form",
+          "note": "On a corpse in the rampart area."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-dragonbolt-blessing",
+          "note": "Dropped by a Teardrop Scarab in the castle's inner courtyard."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-perfumer-s-talisman",
+          "note": "Chest inside the castle's lower-level perfumer area."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-perfumer-tricia",
+          "note": "Chest in the northeast section of the castle near the Valkyrie's Prosthesis tower."
+        },
+        {
+          "type": "boss",
+          "id": "boss-altus-elemer-of-the-briar",
+          "text": "Elemer of the Briar — boss of the Shaded Castle, reached via Castellan's Hall grace. Attacks primarily with melee and his signature spells."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-marais-executioner-s-sword",
+          "note": "Dropped by Elemer of the Briar."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-briar-greatshield",
+          "note": "Dropped by Elemer of the Briar."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-briar-helm",
+          "note": "Found in the Shaded Castle courtyard or on enemies inside."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-briar-armor",
+          "note": "Found in the Shaded Castle courtyard."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-briar-armor-altered",
+          "note": "Altered version of the Briar Armor; looted in the Shaded Castle."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-briar-gauntlets",
+          "note": "Found in the Shaded Castle courtyard."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-briar-greaves",
+          "note": "Found in the Shaded Castle courtyard."
+        },
+        {
+          "type": "quest",
+          "id": "quest-patches-shaded-castle",
+          "questline": "Patches",
+          "text": "After completing all Volcano Manor contracts (and thus after Rykard is dead), find Patches wounded in the Shaded Castle ramparts. Speak to him and exhaust his dialogue; he gives you Dancer's Castanets to return to Tanith at Volcano Manor."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-dancer-s-castanets",
+          "note": "Given by Patches at the Shaded Castle after Rykard is defeated and all contracts are done."
+        }
+      ]
+    },
+    {
+      "id": "altus-06",
+      "from": "Altus Highway Junction",
+      "to": "Capital Rampart",
+      "summary": "Sweep the Capital Outskirts: the Outer Wall Battleground area (Dung Eater meets Boggart here), Hermit Merchant's Shack, the three dungeon graces (Auriza Side Tomb, Auriza Hero's Grave, Sealed Tunnel), and the Divine Tower of West Altus. Wrap up with the Capital Rampart grace before entering Leyndell proper.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Altus Highway Junction, ride northeast past the Outer Wall Phantom Tree toward Capital Rampart. The Outer Wall Battleground grace is on the east approach road."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-purifying-crystal-tear",
+          "note": "Dropped by Eleonora, Violet Bloody Finger who invades at the Second Church of Marika (southeast of the Outer Wall Phantom Tree on the road toward the capital). MISSABLE: this crystal tear is needed for a specific Mohg, Lord of Blood survival mechanic; don't skip Eleonora."
+        },
+        {
+          "type": "quest",
+          "id": "quest-dung-eater-boggart-moat",
+          "questline": "Dung Eater",
+          "text": "After freeing Dung Eater from the Subterranean Shunning-Grounds jail (done during Leyndell section) and receiving his message, return to the Outer Wall Battleground moat area. Find Boggart dying by the moat — loot a Seedbed Curse from his body. The Dung Eater then invades and can be defeated here for the Sword of Milos. Sword of Milos is in the Leyndell region file (it is in Leyndell cleanup).",
+          "missable": {
+            "lockedBy": "Defeating Maliketh (entering the Ashen Capital)",
+            "note": "Boggart's death event and this Dung Eater invasion do not occur in the Ashen Capital — complete before burning the Erdtree."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-eleonora-s-poleblade",
+          "note": "Dropped by Eleonora at the Second Church of Marika (southwest approach road to Capital). She invades when you enter the church interior."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-dragoncrest-shield-talisman-1",
+          "note": "Chest in the Auriza Side Tomb dungeon, reached from the Outer Wall area."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-ritual-sword-talisman",
+          "note": "Chest at the end of Auriza Hero's Grave (boss: Crucible Knight + Ordovis). The Ordovis Greatsword drops from this boss and is in the Leyndell region file."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-aspects-of-the-crucible-breath",
+          "note": "Dropped by Crucible Knight Ordovis in Auriza Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-lightning-scorpion-charm",
+          "note": "Chest in the Sealed Tunnel dungeon (south of Capital, near the underground shortcut to Altus). The Onyx Lord's Greatsword from this dungeon is in the Leyndell region file."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-concealing-veil",
+          "note": "Chest at the end of the Sainted Hero's Grave dungeon (northwest plateau, accessible from the Road of Iniquity)."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-ancient-dragon-knight-kristoff",
+          "note": "Reward for completing Sainted Hero's Grave dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-27",
+          "note": "Under the Minor Erdtree at the Outer Wall Phantom Tree grace area."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-28",
+          "note": "Under a golden sapling in a graveyard east of the Outer Wall Battleground."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-10",
+          "note": "In the Church of the Plague north of the Outer Wall Battleground (proceed east toward the road to Leyndell)."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-glovewort-picker-s-bell-bearing-1",
+          "note": "Chest at the end of Unsightly Catacombs, west Altus Plateau (reachable from Road of Iniquity)."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-mad-pumpkin-head-ashes",
+          "note": "Chest in Unsightly Catacombs."
+        }
+      ]
+    },
+    {
+      "id": "altus-07",
+      "from": "Rampartside Path",
+      "to": "Altus Highway Junction",
+      "summary": "Final Altus sweep: the Old Altus Tunnel and Altus Tunnel for somberstone/smithing stones and their bell bearings, plus the scattered field items including the Perfumer's Grotto, Sage's Cave, and remaining plateau collectibles.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "bell-bearing-somberstone-miner-s-bell-bearing-2",
+          "note": "Chest at the end of Old Altus Tunnel (northwest Altus, near the Ruin-Strewn Precipice exit road)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crepus-s-vial",
+          "note": "Chest in the Altus Tunnel dungeon (southeast plateau, near the Altus Highway Junction)."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-scouring-black-flame",
+          "note": "Dropped by a Teardrop Scarab in the Altus Plateau southeast fields."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-winged-misbegotten-ashes",
+          "note": "Chest in Perfumer's Grotto (southwest Altus, below the Road of Iniquity)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crucible-scale-talisman",
+          "note": "Chest in the Perfumer's Grotto dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-tibia-s-summons",
+          "note": "On a corpse in the Sage's Cave dungeon (northwest of the plateau)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-black-knife",
+          "note": "Looted from a Black Knife Assassin in the Black Knife Catacombs on the northern Altus escarpment."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-black-hood",
+          "note": "Also dropped by the Black Knife Assassin in Black Knife Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-blood-blade",
+          "note": "Dropped by a Teardrop Scarab on the plateau near the Perfumer's area."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-earthshaker",
+          "note": "Dropped by a Teardrop Scarab south of the Shaded Castle approach."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-golden-slam",
+          "note": "Dropped by a Teardrop Scarab near the Outer Wall Battleground road."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-lightning-ram",
+          "note": "Dropped by a Teardrop Scarab on the plateau near the main road."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-sacred-order",
+          "note": "Dropped by a Teardrop Scarab in the Minor Erdtree Church area."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-shared-order",
+          "note": "Dropped by a Teardrop Scarab near the Outer Wall Phantom Tree."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-shield-crash",
+          "note": "Dropped by a Teardrop Scarab near the Rampartside Path area."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-06",
+          "note": "Dropped by a Wormface enemy on the plateau (large pale worm-faced enemies near Wyndham Ruins area)."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-25",
+          "note": "Corpse in Wyndham Ruins (north Altus, east of Wyndham Catacombs)."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-35",
+          "note": "Corpse on the Altus road between the highway junction and the Outer Wall."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-36",
+          "note": "Chest in a minor dungeon on the western Altus cliff edge."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-40",
+          "note": "Dropped by a Teardrop Scarab or on a corpse in the plateau fields near Wyndham."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-great-stars",
+          "note": "On a corpse guarded by a Giant in the northwest Altus field near the Bower of Bounty approach."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-troll-s-golden-sword",
+          "note": "Dropped by a Troll Knight enemy on the main Altus road."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-troll-s-hammer",
+          "note": "Dropped by a Troll Knight on the road near the Outer Wall area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-stone-club",
+          "note": "On a corpse in the rocky ruins west of the highway."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-great-club",
+          "note": "On a corpse near the Wyndham Ruins area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-greatbow",
+          "note": "On a corpse or enemy drop near the Outer Wall area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-harp-bow",
+          "note": "On a corpse in the central plateau fields."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-golden-great-arrow",
+          "note": "On a corpse near the Divine Tower Gate area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-thorned-whip",
+          "note": "On a corpse in the west Altus plateau toward the Shaded Castle approach."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-great-omenkiller-cleaver",
+          "note": "Dropped by Omenkiller enemies near the Minor Erdtree northeast of the Outer Wall."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-omenkiller-robe",
+          "note": "Dropped by Omenkiller enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-omenkiller-boots",
+          "note": "Dropped by Omenkiller enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-omenkiller-long-gloves",
+          "note": "Dropped by Omenkiller enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-radiant-gold-mask",
+          "note": "On a corpse in the capital outskirts near the Divine Tower of West Altus."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-imp-head-wolf",
+          "note": "On a corpse on the plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-skeletal-mask",
+          "note": "On a corpse in Wyndham Ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-ruler-s-mask",
+          "note": "On a corpse in the Sainted Hero's Grave area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-ruler-s-robe",
+          "note": "On a corpse in the Sainted Hero's Grave area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gold-bracelets",
+          "note": "On a corpse near a ruined building on the plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gold-waistwrap",
+          "note": "On a corpse near a ruined building on the plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-noble-s-gloves",
+          "note": "Dropped by Noble enemy type on the plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-noble-s-traveling-garb",
+          "note": "Dropped by Noble enemy type."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-noble-s-trousers",
+          "note": "Dropped by Noble enemy type."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-raptor-s-black-feathers",
+          "note": "On a corpse in the Black Knife Catacombs area or sold by a merchant."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-hierodas-glintstone-crown",
+          "note": "On a corpse near the Hermit Village area (northwest plateau near Gelmir approach)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-twinned-knight-swords",
+          "note": "Dropped by Twinned Knight enemies in the Capital Outskirts area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-nagakiba",
+          "note": "Dropped by Bloody Finger Yura at the Second Church of Marika area (or obtained earlier via his questline in Limgrave/Liurnia)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-bloody-helice",
+          "note": "Chest in the Writheblood Ruins north of the Forest-Spanning Greatbridge (Blood-stained Church-like ruin)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-family-heads",
+          "note": "Dropped by an enemy in the Altus Plateau fields."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-raptor-talons",
+          "note": "Chest in the Sage's Cave dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-leyndell-soldier-ashes",
+          "note": "On a corpse near the Capital Rampart area."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-giant-rat-ashes",
+          "note": "Chest in a catacomb or cave dungeon on the plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-ancient-dragon-apostle-s-cookbook-1",
+          "note": "On a corpse near the Wyndham Ruins area."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-ancient-dragon-apostle-s-cookbook-2",
+          "note": "On a corpse in the Capital Outskirts (Outer Wall area)."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-perfumer-s-cookbook-1",
+          "note": "On a corpse in the Perfumer's Grotto dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-prattling-pate-apologies",
+          "note": "On a corpse in the Altus Plateau field near Wyndham Ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-prattling-pate-let-s-get-to-it",
+          "note": "On a corpse in the plateau field northeast section."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-icon-shield",
+          "note": "On a corpse on the plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-candletree-wooden-shield",
+          "note": "On a corpse in the Windmill Village area."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-erdtree-greatshield",
+          "note": "On a corpse in the Capital Outskirts north of the Outer Wall."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-battlemage-robe",
+          "note": "Dropped by Battlemage Hugues or found near the Sage's Cave area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-battlemage-manchettes",
+          "note": "Dropped by Battlemage enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-battlemage-legwraps",
+          "note": "Dropped by Battlemage enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-corhyn-s-robe",
+          "note": "Dropped by Brother Corhyn if he dies or at end of his questline."
+        }
+      ]
+    }
+  ],
+  "cleanup": []
 }

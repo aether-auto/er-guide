@@ -2,162 +2,921 @@
   "id": "leyndell",
   "name": "Leyndell, Royal Capital & Sewers",
   "order": 12,
-  "legs": [],
+  "legs": [
+    {
+      "id": "leyndell-01",
+      "from": "Outer Wall Phantom Tree",
+      "to": "East Capital Rampart",
+      "summary": "Enter the Capital Outskirts and fight through the outer wall approach. The map fragment stele is on the road near the rampart gate. Pick up Seedbed Curses scattered here for the Dung Eater questline. Boggart has moved to the moat near the Outer Wall Battleground — see him before he dies (Dung Eater questline).",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Outer Wall Phantom Tree, ride northeast toward the main gate approach. Two Tree Sentinels (duo boss) guard the main gate — optional but drop the helm. The underground path via the Sealed Tunnel also provides entrance."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-leyndell-royal-capital",
+          "note": "Stele on the road outside the East Capital Rampart, at the base of the main gate approach."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-08",
+          "note": "Inside the Chapel of Anticipation-like church at the Outer Wall area — check the altar inside."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-11",
+          "note": "In a second church in the Capital Outskirts area."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-17",
+          "note": "Under a small golden sapling near the Capital Outskirts outer wall road."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-18",
+          "note": "Under a second golden sapling on the Capital Outskirts approach."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-tree-sentinel-armor",
+          "note": "Dropped by one of the Draconic Tree Sentinel duo boss at the Capital main gate (optional)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-tree-sentinel-helm",
+          "note": "Dropped by the Draconic Tree Sentinel duo."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-tree-sentinel-gauntlets",
+          "note": "Dropped by the Draconic Tree Sentinel duo."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-tree-sentinel-greaves",
+          "note": "Dropped by the Draconic Tree Sentinel duo."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-sewer-gaol-key",
+          "note": "On a corpse in the Capital Outskirts area near the Outer Wall. Required to free the Dung Eater from his Subterranean Shunning-Grounds cell."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-22",
+          "note": "On a corpse in the outer wall approach area."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-24",
+          "note": "On a corpse near the outer wall."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-26",
+          "note": "On a corpse in the Capital Outskirts."
+        }
+      ]
+    },
+    {
+      "id": "leyndell-02",
+      "from": "East Capital Rampart",
+      "to": "West Capital Rampart",
+      "summary": "Enter the Royal Capital from the east and sweep the outer rampart areas, the battlements, and the Avenue area leading toward the Erdtree. Key items are scattered throughout the streets and rooftops. The Lower Capital Church grace is accessible below.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From East Capital Rampart, descend into the city streets. The capital is a vertical environment — many items are on rooftops, ledges, and inside buildings. Follow the golden route toward the giant roots climbing up to the Erdtree."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-bolt-of-gransax",
+          "note": "On the giant spear/bolt stuck through the Avenue plaza area near the Avenue Balcony grace. MISSABLE: Permanently gone after burning the Erdtree at the Forge of the Giants."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-erdtree-bow",
+          "note": "On a corpse in the Avenue area near the central road."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-coded-sword",
+          "note": "On a corpse in the Fortified Manor area (western part of the city, same building as the Volcano Manor co-op invasion point)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-golden-order-seal",
+          "note": "On a corpse near the Erdtree Sanctuary area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-gravel-stone-seal",
+          "note": "On a corpse in the outer Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-black-bow",
+          "note": "On a corpse near the East Capital Rampart area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-star-fist",
+          "note": "On a corpse near the giant roots in the east city area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-hammer",
+          "note": "On a corpse in the lower city streets."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-golden-epitaph",
+          "note": "Dropped by the Crucible Knight Ordovis after defeating him in Auriza Hero's Grave — placed here as it's a Leyndell-area dungeon reward."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-cane-sword",
+          "note": "On a corpse in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-weathered-dagger",
+          "note": "On a corpse near the Erdtree Sanctuary area. IMPORTANT: Give this to D, Hunter of the Dead at Roundtable Hold — this triggers Fia killing D and advancing her questline toward Deeproot Depths.",
+          "missable": {
+            "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+            "note": "The Weathered Dagger is present in Royal Capital but the D questline trigger should be done before progression locks."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-two-fingers-prayerbook",
+          "note": "On a corpse in the Leyndell streets — gives access to Two Fingers incantations when given to a cleric teacher."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-golden-order-principia",
+          "note": "In a chest in the Fortified Manor (western Leyndell, same area as the Volcano Manor co-op phantom invasion). MISSABLE: gone after Ashen Capital transition.",
+          "missable": {
+            "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+            "note": "This prayerbook is only in the Royal Capital — pick up before heading to Farum Azula."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "whetblade-sanctified-whetblade",
+          "note": "On a corpse in the West Capital Rampart area — unlocks Holy and Lightning affinity for Ashes of War. MISSABLE: gone after Ashen Capital.",
+          "missable": {
+            "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+            "note": "The Sanctified Whetblade is only in the Royal Capital. Unlock Holy/Lightning affinities before burning."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "armor-crucible-axe-armor",
+          "note": "Dropped by the Crucible Knight near the Crucible Knight boss fight in the outer city area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-crucible-axe-helm",
+          "note": "Dropped by the Crucible Knight."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leyndell-knight-armor",
+          "note": "Dropped by Leyndell Knight enemies throughout the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leyndell-knight-gauntlets",
+          "note": "Dropped by Leyndell Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leyndell-knight-greaves",
+          "note": "Dropped by Leyndell Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leyndell-knight-helm",
+          "note": "Dropped by Leyndell Knights."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leyndell-soldier-gauntlets",
+          "note": "Dropped by Leyndell Soldiers."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leyndell-soldier-greaves",
+          "note": "Dropped by Leyndell Soldiers."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leyndell-soldier-helm",
+          "note": "Dropped by Leyndell Soldiers."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lionel-s-armor",
+          "note": "On a corpse near the Lower Capital Church or in the streets below."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lionel-s-helm",
+          "note": "With the Lionel armor set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lionel-s-gauntlets",
+          "note": "With the Lionel armor set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lionel-s-greaves",
+          "note": "With the Lionel armor set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-erdtree-surcoat",
+          "note": "On a corpse in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-official-s-attire",
+          "note": "On a corpse in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-alberich-s-robe",
+          "note": "On a corpse in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-alberich-s-pointed-hat",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-alberich-s-bracers",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-alberich-s-trousers",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-guilty-hood",
+          "note": "On a corpse in the capital streets."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gravekeeper-cloak",
+          "note": "On a corpse in the cemetery area of the capital outskirts."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-nomadic-merchant-s-chapeau",
+          "note": "On a corpse near the Hermit Merchant's Shack in the Capital Outskirts."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-nomadic-merchant-s-finery",
+          "note": "With the Nomadic Merchant's set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-nomadic-merchant-s-trousers",
+          "note": "With the Nomadic Merchant's set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-omensmirk-mask",
+          "note": "Dropped by Omenkiller enemies in Leyndell."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-omen-armor",
+          "note": "Dropped by Omen enemies in the capital sewers area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-omen-helm",
+          "note": "Dropped by Omen enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-omen-gauntlets",
+          "note": "Dropped by Omen enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-omen-greaves",
+          "note": "Dropped by Omen enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gilded-foot-soldier-cap",
+          "note": "On a corpse in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leather-draped-tabard",
+          "note": "On a corpse in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-imp-head-corpse",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-duelist-greaves",
+          "note": "Dropped by the Crucible Knight Duo or found in the arena nearby."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-duelist-helm",
+          "note": "Dropped by a Crucible Knight or found near the duo arena."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-zamor-armor",
+          "note": "Dropped by Zamor Knight enemies near the Divine Bridge."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-zamor-mask",
+          "note": "Dropped by Zamor Knight enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-zamor-bracelets",
+          "note": "Dropped by Zamor Knight enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-zamor-legwraps",
+          "note": "Dropped by Zamor Knight enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-ronin-s-armor",
+          "note": "Dropped by Ronin enemies in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-ronin-s-gauntlets",
+          "note": "Dropped by Ronin enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-ronin-s-greaves",
+          "note": "Dropped by Ronin enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-flame-protect-me",
+          "note": "On a corpse in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-blessing-of-the-erdtree",
+          "note": "On a corpse near the Erdtree Sanctuary area."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-golden-parry",
+          "note": "Dropped by a Teardrop Scarab in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-holy-ground",
+          "note": "Dropped by a Teardrop Scarab in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-lightning-slash",
+          "note": "Dropped by a Teardrop Scarab in the capital streets."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-phantom-slash",
+          "note": "Dropped by a Teardrop Scarab in Leyndell."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-prayerful-strike",
+          "note": "Dropped by a Teardrop Scarab in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-troll-s-roar",
+          "note": "Dropped by a Teardrop Scarab in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-27",
+          "note": "On a corpse in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-28",
+          "note": "On a corpse in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-29",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-30",
+          "note": "On a corpse in the capital streets."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-33",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-34",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-blessed-dew-talisman",
+          "note": "Chest on the Divine Bridge, behind the Golem guardian. MISSABLE: gone after Ashen Capital.",
+          "missable": {
+            "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+            "note": "Regenerates HP slowly. Only accessible in Royal Capital — collect before burning."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crucible-feather-talisman",
+          "note": "Dropped by the Crucible Knight in the Leyndell Catacombs/sewers area."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crimson-amber-medallion-2",
+          "note": "Chest in the Leyndell area."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-flamedrake-talisman-1",
+          "note": "On a corpse in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-haligdrake-talisman-1",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-lord-of-blood-s-exultation",
+          "note": "Dropped by a Tibia Mariner or found in the Leyndell sewers area."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-shabriri-s-woe",
+          "note": "On a corpse in the capital streets near the Avenue Balcony."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-magic-shrouding-cracked-tear",
+          "note": "Dropped by the Erdtree Avatar at the Minor Erdtree in the Capital Outskirts area."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-lightning-shrouding-cracked-tear",
+          "note": "Also dropped by the Erdtree Avatar at the Capital Outskirts Minor Erdtree."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-holy-shrouding-cracked-tear",
+          "note": "On a corpse in the capital or from an enemy in the area."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-twiggy-cracked-tear",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-winged-crystal-tear",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-glovewort-picker-s-bell-bearing-2",
+          "note": "Chest in the Auriza Hero's Grave dungeon or found in the capital outskirts dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-medicine-peddler-s-bell-bearing",
+          "note": "Dropped by the Hermit Merchant in the capital area (if killed) or found on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-smithing-stone-miner-s-bell-bearing-2",
+          "note": "Chest in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-missionary-s-cookbook-4",
+          "note": "On a corpse in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-perfumer-s-cookbook-3",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-frenzied-s-cookbook-1",
+          "note": "On a corpse in the Subterranean Shunning-Grounds area."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-fire-monk-ashes",
+          "note": "On a corpse or chest in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-nomad-ashes",
+          "note": "On a corpse in the capital streets."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-omenkiller-rollo",
+          "note": "Chest in the capital (Altus/Leyndell area dungeon)."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-soldjars-of-fortune-ashes",
+          "note": "On a corpse near the Divine Bridge area."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-vulgar-militia-ashes",
+          "note": "On a corpse in the outer capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-vyke-s-war-spear",
+          "note": "Dropped by Festering Fingerprint Vyke who invades in the Church of Inhibition (northeast Altus/Leyndell approach). Note: the Church itself is technically in the outer Leyndell area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rivers-of-blood",
+          "note": "Dropped by Bloody Finger Okina who invades at the Church of Repose in the Mountaintops — placed here per original cleanup bucket."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-sword-of-milos",
+          "note": "Dropped by Dung Eater when he invades at the Outer Wall Battleground moat. Triggers after freeing him from jail and receiving his message at Roundtable Hold. MISSABLE: the moat invasion cannot happen in Ashen Capital.",
+          "missable": {
+            "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+            "note": "Dung Eater's outdoor invasion event does not occur in Ashen Capital."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-ordovis-s-greatsword",
+          "note": "Dropped by Crucible Knight Ordovis in Auriza Hero's Grave (Capital Outskirts dungeon)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-onyx-lord-s-greatsword",
+          "note": "Dropped by the Onyx Lord boss in the Sealed Tunnel (underground path into the capital)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-gargoyle-s-halberd",
+          "note": "Dropped by Gargoyle enemies in Leyndell."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-gargoyle-s-great-axe",
+          "note": "Dropped by Gargoyle enemies in Leyndell."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-giant-crusher",
+          "note": "On a corpse near the east rampart or outer wall area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-great-mace",
+          "note": "On a corpse in the capital streets."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-duelist-greataxe",
+          "note": "Dropped by Crucible Knight or Duelist enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-iron-cleaver",
+          "note": "On a corpse in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-red-branch-shortbow",
+          "note": "On a corpse in the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-cranial-vessel-candlestand",
+          "note": "On a corpse or from an Omen enemy in Leyndell."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-dragon-greatclaw",
+          "note": "Dropped by a Draconic Tree Sentinel or from the Leyndell dragon-themed enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-giant-s-seal",
+          "note": "On a corpse near the Avenue area or underground approach."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-blade-of-calling",
+          "note": "On a corpse in the capital streets."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-zamor-curved-sword",
+          "note": "Dropped by Zamor Knight enemies near the Divine Bridge."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-dragonclaw-shield",
+          "note": "On a corpse in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-fingerprint-stone-shield",
+          "note": "On a corpse in the Subterranean Shunning-Grounds or capital sewers — related to the Fingerprint armor set."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-golden-greatshield",
+          "note": "On a corpse in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-twinbird-kite-shield",
+          "note": "On a corpse in the Leyndell streets."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-20",
+          "note": "Under a golden sapling in the Leyndell streets near a tree."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-24",
+          "note": "Under a second golden sapling in the Leyndell outer area."
+        }
+      ]
+    },
+    {
+      "id": "leyndell-03",
+      "from": "Avenue Balcony",
+      "to": "Erdtree Sanctuary",
+      "summary": "Climb the giant Erdtree root south of West Capital Rampart to reach the Erdtree Sanctuary grace. This requires defeating Godfrey's golden shade — a mandatory boss guarding the inner sanctum. Explore the Fortified Manor for the Volcano Manor co-op invasion (Bernahl) and gather items in the upper city.",
+      "steps": [
+        {
+          "type": "quest",
+          "id": "quest-corhyn-goldmask-leyndell",
+          "questline": "Corhyn/Goldmask",
+          "text": "Find Corhyn and Goldmask near the colosseum north of the capital. To advance the questline: cast Law of Regression (purchased from a cleric) in front of the Radagon statue on the path past the lift near Erdtree Sanctuary. The message reveals Radagon and Marika are one. Speak to Goldmask, then Corhyn. This is required to obtain the Mending Rune of Perfect Order (claimed from 99-unsorted — see below) later in the Ashen Capital.",
+          "missable": {
+            "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+            "note": "Corhyn and Goldmask must advance their dialogue here in the Royal Capital. If you skip this Law of Regression step, the questline cannot conclude properly in the Ashen Capital for the Perfect Order ending."
+          }
+        },
+        {
+          "type": "quest",
+          "id": "quest-volcanomanor-bernahl-fortified-manor",
+          "questline": "Volcano Manor",
+          "text": "Visit the Fortified Manor (mirrored copy of Roundtable Hold, in western Leyndell). Bernahl's invasion event can be triggered here — select 'Complete the contract' inside to initiate the co-op phantom invasion (Vargram the Raging Wolf + Errant Sorcerer Wilhelm). Defeat them for the Raging Wolf Armor set and return to Bernahl for Gelmir's Fury."
+        },
+        {
+          "type": "boss",
+          "id": "boss-leyndell-godfrey-golden-shade",
+          "text": "Godfrey, First Elden Lord (Shade) — mandatory boss at the west side of the Erdtree Sanctuary approach. Climb the large golden root south of West Capital Rampart. Drops a Talisman Pouch."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-deathbed-dress",
+          "note": "On a corpse in the Leyndell area, associated with the Deathbed Companion lore."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-finger-maiden-fillet",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-finger-maiden-robe",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-finger-maiden-shoes",
+          "note": "On a corpse in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-bloodflame-talons",
+          "note": "Dropped by Mohg the Omen in the Subterranean Shunning-Grounds cathedral."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-shadow-bait",
+          "note": "On a corpse in the capital streets near the eastern area."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-frenzied-burst",
+          "note": "On a corpse in the Subterranean Shunning-Grounds area."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-howl-of-shabriri",
+          "note": "On a corpse in the Leyndell area."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-inescapable-frenzy",
+          "note": "On a corpse near the Frenzied Flame Proscription in the Subterranean Shunning-Grounds."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-fia-s-mist",
+          "note": "Dropped by Fia's Champions in Deeproot Depths — placed in this region file as it is part of the Leyndell-area quest arc."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-fia-s-hood",
+          "note": "On a corpse in the Deeproot Depths or given after Fia's questline conclusion."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-fia-s-robe",
+          "note": "On a corpse associated with Fia's questline."
+        }
+      ]
+    },
+    {
+      "id": "leyndell-04",
+      "from": "Erdtree Sanctuary",
+      "to": "Elden Throne",
+      "summary": "From the Erdtree Sanctuary, navigate through the Queen's Bedchamber and the colosseum district toward the Elden Throne. Defeat Morgott the Omen King — the final mandatory boss before the Mountaintops. He drops the Rold Medallion needed for the Grand Lift of Rold.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Erdtree Sanctuary, find the exit path through the golden stairway area. The Queen's Bedchamber grace is up the stairs. The Elden Throne is reached via the inner sanctum path — Morgott awaits."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-crucible-axe-armor-altered",
+          "note": "Altered version of the Crucible Axe Armor, found in the Leyndell area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lionel-s-armor-altered",
+          "note": "Altered version; found with the Lionel set in Leyndell."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-alberich-s-pointed-hat-altered",
+          "note": "Altered version; found in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-alberich-s-robe-altered",
+          "note": "Altered version; found in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-finger-maiden-robe-altered",
+          "note": "Altered version; found in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-nomadic-merchant-s-finery-altered",
+          "note": "Altered version; found in the capital."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-ronin-s-armor-altered",
+          "note": "Altered version; dropped by Ronin enemies."
+        },
+        {
+          "type": "boss",
+          "id": "boss-leyndell-morgott-omen-king",
+          "text": "Morgott, the Omen King — final mandatory boss of the Royal Capital, fought at the Elden Throne. He requires defeating to unlock the Mountaintops of the Giants. Use a spirit ash — Morgott's health pool is substantial."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-omen-king",
+          "note": "Dropped by Morgott. Exchange at Roundtable Hold for Morgott's Cursed Sword or Regal Omen Bairn."
+        },
+        {
+          "type": "item",
+          "itemId": "great-rune-morgott-s-great-rune",
+          "note": "Dropped by Morgott. Activate at the Divine Tower of East Altus (via the Forbidden Lands)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-rold-medallion",
+          "note": "Given by Melina after defeating Morgott, at the Site of Grace before the Elden Throne. Required to use the Grand Lift of Rold and access the Mountaintops of the Giants."
+        }
+      ]
+    },
+    {
+      "id": "leyndell-05",
+      "from": "Underground Roadside",
+      "to": "Cathedral of the Forsaken",
+      "summary": "The Subterranean Shunning-Grounds is a sewer dungeon beneath Leyndell, accessed from a well in the city. Drop through the grate near the Underground Roadside grace to navigate the rat-and-Miranda-flower-infested sewers. Dung Eater's cell is here. Mohg the Omen guards the deepest cathedral.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the main Leyndell streets near the east city area, find the open sewer grate and drop down to the Underground Roadside grace. Navigate the sewers south through Miranda Flowers and Fingercreepers to reach the deeper areas."
+        },
+        {
+          "type": "quest",
+          "id": "quest-dung-eater-free",
+          "questline": "Dung Eater",
+          "text": "Navigate to the jail cell in the northeast section of the sewers (past Fingercreepers). Use the Sewer-Gaol Key (from the capital outskirts) to open the cell and release the Dung Eater. He gives you a Seedbed Curse after exhausting his dialogue. He says to come fight him at the outer moat later.",
+          "missable": {
+            "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+            "note": "Free Dung Eater and obtain the first Seedbed Curse here before proceeding to Farum Azula/Mountaintops. The moat invasion event only occurs in the Royal Capital, not Ashen Capital."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-seedbed-curse",
+          "note": "Given by Dung Eater when you free him from his cell. Collect 5 total for his questline — others are scattered around Leyndell and the capital area."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-fingerprint-grape",
+          "note": "On a corpse in the Subterranean Shunning-Grounds sewers. Related to the Hyetta questline (give to Hyetta)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-frenzied-flame-seal",
+          "note": "On a corpse in the Subterranean Shunning-Grounds."
+        },
+        {
+          "type": "boss",
+          "id": "boss-leyndell-mohg-the-omen",
+          "text": "Mohg, the Omen — boss in the Cathedral of the Forsaken at the bottom of the Subterranean Shunning-Grounds. Use Mohg's Shackle (found on a corpse near the Forsaken Depths grace) to stagger him in Phase 1. Drops Bloodflame Talons incantation."
+        }
+      ]
+    },
+    {
+      "id": "leyndell-06",
+      "from": "Frenzied Flame Proscription",
+      "to": "Frenzied Flame Proscription",
+      "summary": "CRITICAL DECISION POINT — The Three Fingers are at the very bottom of the Subterranean Shunning-Grounds, behind an illusory altar at the back of the Cathedral of the Forsaken. Approaching the Three Fingers LOCKS all endings except Lord of Frenzied Flame. The ONLY reversal is Miquella's Needle (obtained after Millicent's questline conclusion at Haligtree) used at the Dragonlord Placidusax arena in Crumbling Farum Azula.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "MANDATORY DECISION: From the Cathedral of the Forsaken (after Mohg), find the illusory altar at the back and roll through it. Follow the passage down to the Frenzied Flame Proscription grace. Before the door to the Three Fingers is a POINT OF NO RETURN for endings."
+        },
+        {
+          "type": "direction",
+          "text": "WARNING — LORD OF FRENZIED FLAME ENDING LOCK: The door to the Three Fingers room can only be opened if you UNEQUIP ALL ARMOR AND EQUIPMENT (strip naked). Once you step through and receive the Flame of Frenzy from the Three Fingers, the Lord of Frenzied Flame ending is AUTOMATICALLY TRIGGERED when you approach Fractured Marika at the game's end — overriding all other endings (Age of Fracture, Age of Stars, Age of Duskborn, Mending Rune of Perfect Order, Mending Rune of the Fell Curse). The ONLY reversal: obtain Miquella's Needle from Millicent's questline conclusion in the Haligtree, then USE it in the Dragonlord Placidusax boss arena in Crumbling Farum Azula. This removes the Frenzied Flame eye and re-enables other endings."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-tree-sentinel-armor-altered",
+          "note": "Altered version of the Tree Sentinel Armor; found in Leyndell or dropped by a Tree Sentinel variant."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-fia-s-robe-altered",
+          "note": "Altered version of Fia's Robe; associated with Fia's questline, found in Deeproot Depths or Leyndell area after questline progression."
+        }
+      ]
+    }
+  ],
   "cleanup": [
-    "armor-alberich-s-bracers",
-    "armor-alberich-s-pointed-hat",
-    "armor-alberich-s-pointed-hat-altered",
-    "armor-alberich-s-robe",
-    "armor-alberich-s-robe-altered",
-    "armor-alberich-s-trousers",
-    "armor-crucible-axe-armor",
-    "armor-crucible-axe-armor-altered",
-    "armor-crucible-axe-helm",
-    "armor-deathbed-dress",
-    "armor-duelist-greaves",
-    "armor-duelist-helm",
-    "armor-erdtree-surcoat",
-    "armor-fia-s-hood",
-    "armor-fia-s-robe",
-    "armor-fia-s-robe-altered",
-    "armor-finger-maiden-fillet",
-    "armor-finger-maiden-robe",
-    "armor-finger-maiden-robe-altered",
-    "armor-finger-maiden-shoes",
-    "armor-gilded-foot-soldier-cap",
-    "armor-gravekeeper-cloak",
-    "armor-guilty-hood",
-    "armor-imp-head-corpse",
-    "armor-leather-draped-tabard",
-    "armor-leyndell-knight-armor",
-    "armor-leyndell-knight-gauntlets",
-    "armor-leyndell-knight-greaves",
-    "armor-leyndell-knight-helm",
-    "armor-leyndell-soldier-gauntlets",
-    "armor-leyndell-soldier-greaves",
-    "armor-leyndell-soldier-helm",
-    "armor-lionel-s-armor",
-    "armor-lionel-s-armor-altered",
-    "armor-lionel-s-gauntlets",
-    "armor-lionel-s-greaves",
-    "armor-lionel-s-helm",
-    "armor-nomadic-merchant-s-chapeau",
-    "armor-nomadic-merchant-s-finery",
-    "armor-nomadic-merchant-s-finery-altered",
-    "armor-nomadic-merchant-s-trousers",
-    "armor-official-s-attire",
-    "armor-omen-armor",
-    "armor-omen-gauntlets",
-    "armor-omen-greaves",
-    "armor-omen-helm",
-    "armor-omensmirk-mask",
-    "armor-ronin-s-armor",
-    "armor-ronin-s-armor-altered",
-    "armor-ronin-s-gauntlets",
-    "armor-ronin-s-greaves",
-    "armor-tree-sentinel-armor",
-    "armor-tree-sentinel-armor-altered",
-    "armor-tree-sentinel-gauntlets",
-    "armor-tree-sentinel-greaves",
-    "armor-tree-sentinel-helm",
-    "armor-zamor-armor",
-    "armor-zamor-bracelets",
-    "armor-zamor-legwraps",
-    "armor-zamor-mask",
-    "ash-of-war-ash-of-war-golden-parry",
-    "ash-of-war-ash-of-war-holy-ground",
-    "ash-of-war-ash-of-war-lightning-slash",
-    "ash-of-war-ash-of-war-phantom-slash",
-    "ash-of-war-ash-of-war-prayerful-strike",
-    "ash-of-war-ash-of-war-troll-s-roar",
-    "bell-bearing-glovewort-picker-s-bell-bearing-2",
-    "bell-bearing-medicine-peddler-s-bell-bearing",
-    "bell-bearing-smithing-stone-miner-s-bell-bearing-2",
-    "cookbook-frenzied-s-cookbook-1",
-    "cookbook-missionary-s-cookbook-4",
-    "cookbook-perfumer-s-cookbook-3",
-    "crystal-tear-holy-shrouding-cracked-tear",
-    "crystal-tear-lightning-shrouding-cracked-tear",
-    "crystal-tear-magic-shrouding-cracked-tear",
-    "crystal-tear-twiggy-cracked-tear",
-    "crystal-tear-winged-crystal-tear",
-    "golden-seed-17",
-    "golden-seed-18",
-    "golden-seed-20",
-    "golden-seed-24",
-    "great-rune-morgott-s-great-rune",
-    "incantation-blessing-of-the-erdtree",
-    "incantation-bloodflame-talons",
-    "incantation-flame-protect-me",
-    "incantation-frenzied-burst",
-    "incantation-howl-of-shabriri",
-    "incantation-inescapable-frenzy",
-    "incantation-shadow-bait",
-    "key-item-fingerprint-grape",
-    "key-item-golden-order-principia",
-    "key-item-rold-medallion",
-    "key-item-seedbed-curse",
-    "key-item-sewer-gaol-key",
-    "key-item-two-fingers-prayerbook",
-    "key-item-weathered-dagger",
-    "map-fragment-map-leyndell-royal-capital",
-    "remembrance-remembrance-of-the-omen-king",
-    "sacred-tear-08",
-    "sacred-tear-11",
-    "shield-dragonclaw-shield",
-    "shield-fingerprint-stone-shield",
-    "shield-golden-greatshield",
-    "shield-twinbird-kite-shield",
-    "sorcery-fia-s-mist",
-    "spirit-ash-fire-monk-ashes",
-    "spirit-ash-nomad-ashes",
-    "spirit-ash-omenkiller-rollo",
-    "spirit-ash-soldjars-of-fortune-ashes",
-    "spirit-ash-vulgar-militia-ashes",
-    "stonesword-key-22",
-    "stonesword-key-24",
-    "stonesword-key-26",
-    "stonesword-key-27",
-    "stonesword-key-28",
-    "stonesword-key-29",
-    "stonesword-key-30",
-    "stonesword-key-33",
-    "stonesword-key-34",
-    "talisman-blessed-dew-talisman",
-    "talisman-crimson-amber-medallion-2",
-    "talisman-crucible-feather-talisman",
-    "talisman-flamedrake-talisman-1",
-    "talisman-haligdrake-talisman-1",
-    "talisman-lord-of-blood-s-exultation",
-    "talisman-shabriri-s-woe",
-    "weapon-black-bow",
-    "weapon-blade-of-calling",
-    "weapon-bolt-of-gransax",
-    "weapon-cane-sword",
-    "weapon-coded-sword",
-    "weapon-cranial-vessel-candlestand",
-    "weapon-dragon-greatclaw",
-    "weapon-duelist-greataxe",
-    "weapon-erdtree-bow",
-    "weapon-frenzied-flame-seal",
-    "weapon-gargoyle-s-great-axe",
-    "weapon-gargoyle-s-halberd",
-    "weapon-giant-crusher",
-    "weapon-giant-s-seal",
-    "weapon-golden-epitaph",
-    "weapon-golden-order-seal",
-    "weapon-gravel-stone-seal",
-    "weapon-great-mace",
-    "weapon-hammer",
-    "weapon-iron-cleaver",
-    "weapon-onyx-lord-s-greatsword",
-    "weapon-ordovis-s-greatsword",
-    "weapon-red-branch-shortbow",
-    "weapon-rivers-of-blood",
-    "weapon-star-fist",
-    "weapon-sword-of-milos",
-    "weapon-vyke-s-war-spear",
-    "weapon-zamor-curved-sword",
-    "whetblade-sanctified-whetblade"
+    "armor-twinned-armor",
+    "armor-twinned-armor-altered",
+    "armor-twinned-gauntlets",
+    "armor-twinned-greaves",
+    "armor-twinned-helm"
   ]
 }

@@ -17404,7 +17404,12 @@
     "acquisition": "Claw-marked stone eye received from Gurranq, Beast Clergyman.",
     "missable": null,
     "quest": null,
-    "map": null,
+    "map": {
+      "code": "overworld",
+      "markerId": null,
+      "lat": -57.5,
+      "lng": 112.8
+    },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Beast_Eye"
   },
   {
@@ -17814,7 +17819,10 @@
     "category": "key-item",
     "dlc": false,
     "acquisition": "Incantation Tome. From the Erdtree Sanctuary site in Leyndell, Royal Capital, exit the east side of the room. Once outside, climb up the root to the left that circles back into the building's 2nd floor. Once inside, exit the only door and immediately turn left to jump down to a nearby roof. Once on the roof, a broken window can be used to get back inside. After entering the broken window, climb the root crossing the room to reach the Golden Order Principia, which is located in the chair hanging from the ceiling.",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Prayerbook in the Fortified Manor, western Leyndell; Royal Capital only."
+    },
     "quest": null,
     "map": {
       "code": "overworld",
@@ -18581,7 +18589,10 @@
     "category": "key-item",
     "dlc": false,
     "acquisition": "Dagger received from Fia, the Deathbed Companion.",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Found in the Royal Capital; give to D to advance Fia's questline."
+    },
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Weathered_Dagger"
@@ -26103,7 +26114,10 @@
     "category": "talisman",
     "dlc": false,
     "acquisition": "Talisman. Found in a chest west of the Divine Bridge Site of Grace. Guarded by a Golem.",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Chest on the Divine Bridge behind the Golem; Royal Capital only."
+    },
     "quest": null,
     "map": {
       "code": "overworld",
@@ -29933,7 +29947,10 @@
     "category": "weapon",
     "dlc": false,
     "acquisition": "Can be found in Leyndell, Royal Capital after beating Godfrey, First Elden Lord; walk outside of the west door, take the elevator down, and walk up the spear.",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "On the giant spear in the Avenue plaza of the Royal Capital; gone in the Ashen Capital."
+    },
     "quest": null,
     "map": {
       "code": "overworld",
@@ -30242,7 +30259,12 @@
     "acquisition": "A sacred seal given by Gurranq, the Beast Clergyman. A rare trinket which allows incantations to be scaled with strength.  The claw mark represents Gurranq's wrath. Enhances bestial incantations learned from Gurranq.",
     "missable": null,
     "quest": null,
-    "map": null,
+    "map": {
+      "code": "overworld",
+      "markerId": null,
+      "lat": -57.5,
+      "lng": 112.8
+    },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Clawmark_Seal"
   },
   {
@@ -33814,7 +33836,10 @@
     "category": "weapon",
     "dlc": false,
     "acquisition": "Acquired by defeating the Misbegotten Warrior and Crucible Knight duo bosses at Redmane Castle",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Radahn Festival activation",
+      "note": "The Misbegotten Warrior + Crucible Knight duo at Redmane Castle is replaced while the Festival is active; defeat them first (reaching Altus or progressing Ranni auto-triggers the Festival)."
+    },
     "quest": null,
     "map": {
       "code": "overworld",
@@ -34562,7 +34587,10 @@
     "category": "weapon",
     "dlc": false,
     "acquisition": "Greatsword . Dropped by Dung Eater as an NPC invader upon defeat.",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Dung Eater's moat invasion does not occur in the Ashen Capital."
+    },
     "quest": null,
     "map": {
       "code": "overworld",
@@ -35196,7 +35224,10 @@
     "category": "whetblade",
     "dlc": false,
     "acquisition": "Found inside the fortified manor, you have to access by jumping through the roof and entering the building.",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Burning the Erdtree (Forge of the Giants)",
+      "note": "Royal Capital only; unlocks Holy/Lightning affinities. Collect before Farum Azula."
+    },
     "quest": null,
     "map": {
       "code": "overworld",

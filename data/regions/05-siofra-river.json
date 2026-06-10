@@ -2,31 +2,168 @@
   "id": "siofra-river",
   "name": "Siofra River",
   "order": 5,
-  "legs": [],
-  "cleanup": [
-    "ammo-dwelling-arrow",
-    "ash-of-war-ash-of-war-square-off",
-    "cookbook-armorer-s-cookbook-6",
-    "cookbook-missionary-s-cookbook-5",
-    "golden-seed-35",
-    "incantation-order-healing",
-    "map-fragment-map-siofra-river",
-    "remembrance-remembrance-of-the-regal-ancestor",
-    "shield-crucible-hornshield",
-    "shield-inverted-hawk-heater-shield",
-    "shield-spiked-palisade-shield",
-    "sorcery-great-oracular-bubble",
-    "sorcery-oracle-bubbles",
-    "spirit-ash-ancestral-follower-ashes",
-    "stonesword-key-13",
-    "stonesword-key-48",
-    "stonesword-key-51",
-    "talisman-clarifying-horn-charm",
-    "talisman-great-jar-s-arsenal",
-    "talisman-marika-s-scarseal",
-    "weapon-dragon-halberd",
-    "weapon-gargoyle-s-twinblade",
-    "weapon-greathorn-hammer",
-    "weapon-horn-bow"
-  ]
+  "legs": [
+    {
+      "id": "siofra-01",
+      "from": "Siofra River Well Depths",
+      "to": "Siofra River Bank",
+      "summary": "Descend the Mistwood elevator into the underground. Grab the map stele and the nearby chest, then follow the river north to Siofra River Bank grace. Blaidd appears here as part of Ranni's quest — speak to him.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Take the elevator at the bottom of the Siofra River Well in Mistwood, east Limgrave. This is an early optional dip — the Dragonkin Soldier boss (northwest via a waygate) is very difficult until mid-game."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-siofra-river",
+          "note": "Stele just south of the Siofra River Bank grace."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-oracle-bubbles",
+          "note": "Corpse in the upper ruins near the east staircase."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-great-oracular-bubble",
+          "note": "Corpse in the ruins east of the elevator landing."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-clarifying-horn-charm",
+          "note": "Chest on a high platform in the central ruins — climb the staircases."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-48",
+          "note": "Corpse near the stone pillars in the central plaza."
+        },
+        {
+          "type": "quest",
+          "id": "quest-blaidd-siofra",
+          "questline": "Blaidd",
+          "text": "Speak to Blaidd at Siofra River Bank. He says Nokron is his goal and suggests asking Seluvis in Liurnia for clues about reaching it. Requires having met Ranni at Ranni's Rise first.",
+          "missable": {
+            "lockedBy": "Defeating Radahn before meeting Ranni",
+            "note": "If Radahn is dead before Ranni's quest is started, Blaidd skips straight to the Forlorn Hound Evergaol and this dialogue is lost."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-armorer-s-cookbook-6",
+          "note": "Corpse on a ledge in the east ruins, above the main river path."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-inverted-hawk-heater-shield",
+          "note": "Corpse near the shore southeast of the river bank grace."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-13",
+          "note": "Corpse by the large roots near the north section of the ruins."
+        }
+      ]
+    },
+    {
+      "id": "siofra-02",
+      "from": "Siofra River Bank",
+      "to": "Hallowhorn Grounds (Siofra)",
+      "summary": "Light all eight pillars/skull fires scattered through the underground to summon the Ancestor Spirit at Hallowhorn Grounds. The fires are spread across the eastern half of Siofra; each is guarded by ancestral followers. After the boss, loot the surrounding area.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Light all 8 skull-torches distributed around the Siofra River ruins. They glow faintly red; look for the ancestral followers (tall translucent deer-skull enemies) guarding them. Once all 8 are lit, the Hallowhorn Grounds coffin becomes usable."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-order-healing",
+          "note": "Corpse on the upper catwalks of the ruins, northeast section."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-marika-s-scarseal",
+          "note": "Chest in a sealed room above the ruins — accessible via the upper walkways near the east pillar."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-spiked-palisade-shield",
+          "note": "Corpse near the river's edge west of the Hallowhorn Grounds."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-crucible-hornshield",
+          "note": "Corpse guarded by an ancestral follower in the northern ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-51",
+          "note": "Corpse in the lower ruins near the waterfall area."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-missionary-s-cookbook-5",
+          "note": "Corpse in the southern alcove of the ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-dwelling-arrow",
+          "note": "Corpse near the river, dropped by or near an ancestral follower archer."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-square-off",
+          "note": "Dropped by a Teardrop Scarab in Siofra River — runs along the lower eastern path of the ruins."
+        },
+        {
+          "type": "boss",
+          "id": "boss-siofra-ancestor-spirit",
+          "text": "Ancestor Spirit — light all 8 skull-torches, then interact with the coffin at Hallowhorn Grounds to be transported to the boss arena. Graceful death yields Remembrance of the Regal Ancestor."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-regal-ancestor",
+          "note": "From Ancestor Spirit. Trade at Enia for Winged Greathorn or Ancestral Spirit's Horn talisman (claimed from unsorted — see overrides)."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-ancestral-follower-ashes",
+          "note": "Dropped by Ancestor Spirit."
+        }
+      ]
+    },
+    {
+      "id": "siofra-03",
+      "from": "Worshippers' Woods",
+      "to": "Siofra Aqueduct (Dragonkin access)",
+      "summary": "Continue north through Worshippers' Woods to collect remaining loot. The Dragonkin Soldier boss (northwest waygate) requires the Aqueduct-Facing Cliffs grace — this is accessible only from Nokron, so the Dragonkin fight is deferred until after Radahn. Note: Great Jar's Arsenal talisman requires completing the Great Jar's three summon duels on the plateau above.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "weapon-horn-bow",
+          "note": "Corpse in the Worshippers' Woods, on a ledge near the old ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-greathorn-hammer",
+          "note": "Corpse in the Worshippers' Woods near the pillar shrines."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-35",
+          "note": "Small golden tree near the northern ruins of the Worshippers' Woods."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-great-jar-s-arsenal",
+          "note": "Complete all three Great Jar summon duels on the cliff plateau above the Siofra River (accessible via teleporter near the river). Three Tarnished invader spirits must be defeated; each duel is one-at-a-time."
+        },
+        {
+          "type": "direction",
+          "text": "The Dragonkin Soldier of Nokron (northwest via waygate) drops the Dragon Halberd and Gargoyle's Twinblade — return after reaching Nokron (Post-Radahn) when the Aqueduct-Facing Cliffs grace is available."
+        }
+      ]
+    }
+  ],
+  "cleanup": []
 }

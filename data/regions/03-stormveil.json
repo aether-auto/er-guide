@@ -2,12 +2,338 @@
   "id": "stormveil",
   "name": "Stormveil Castle",
   "order": 3,
-  "legs": [],
+  "legs": [
+    {
+      "id": "stormveil-00",
+      "from": "Stormhill Shack",
+      "to": "Castleward Tunnel",
+      "summary": "Margit guards the castle gate. Buy his Shackle from Patches (or bring Lone Wolf ashes) for a safer fight. Exhaust Rogier's summon dialogue at the site outside the fog gate — he moves to Roundtable Hold after you defeat Margit.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head up Stormhill Road. The grace at the Castleward Tunnel is just inside the tunnel mouth before the boss fog gate."
+        },
+        {
+          "type": "direction",
+          "text": "Optional: buy Margit's Shackle from Patches at Murkwater Cave (300 runes) before this fight — it briefly pins Margit to the ground during phase 1."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-margit-s-shackle",
+          "note": "Buy from Patches at Murkwater Cave (Limgrave) for 5000 runes; alternatively purchased from him after he relocates to Volcano Manor. Pinpoints Margit during phase 1 of the boss fight."
+        },
+        {
+          "type": "quest",
+          "id": "quest-rogier-stormveil-margit",
+          "questline": "Rogier",
+          "text": "Sorcerer Rogier's golden summon sign is outside the fog gate — summon him as an ally for the Margit fight. This does NOT advance his quest but is the first interaction."
+        },
+        {
+          "type": "boss",
+          "id": "boss-stormveil-margit",
+          "text": "Margit, the Fell Omen — boss at Castleward Tunnel. Two phases; at ~60% HP he adds a sorcery hammer and longer combos."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-talisman-pouch",
+          "note": "Dropped by Margit — allows equipping a second talisman slot."
+        }
+      ]
+    },
+    {
+      "id": "stormveil-01",
+      "from": "Castleward Tunnel",
+      "to": "Gateside Chamber",
+      "summary": "Enter via Gostoc's side gate (left of the main gate). Navigate the crumbling cliffsides through arrow traps and Warhawk eyries to the Gateside Chamber grace inside the castle walls.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "At the main gate, speak to Gatekeeper Gostoc — he unlocks a small door to the left. Taking this route avoids the heavily guarded main gate. Note: Gostoc will steal 30% of your dropped runes if you die in the dungeon until you report to him at four sequential spots; do NOT kill him before completing Nepheli Loux's questline."
+        },
+        {
+          "type": "quest",
+          "id": "quest-gostoc-side-entrance",
+          "questline": "Gostoc",
+          "text": "Speak to Gostoc at the main gate — accept his offer to use the side entrance. He gives a Grace Mimic as a 'reward'. Track him down at his subsequent four perch spots (Stormveil Cliffside ledge, western wall ground floor, chapel roof, Rampart Tower platform) to stop the rune theft."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-mimic-s-veil",
+          "note": "In a chest in the assembly room near the upper courtyard — disguises you as an object."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-hookclaws",
+          "note": "In the wine cellar (pitch-dark room with a Banished Knight). Light source or careful aggro required."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-misericorde",
+          "note": "Dropped by a Banished Knight in the wine cellar area."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-curved-sword-talisman",
+          "note": "Dropped by the Banished Knight guarding the Rusty Key in the wine cellar."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-rusty-key",
+          "note": "Dropped by the Banished Knight in the wine cellar — needed to unlock the door out of the cellar."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-arbalest",
+          "note": "Found on a corpse in the castle — in the storeroom accessible after using the Rusty Key."
+        }
+      ]
+    },
+    {
+      "id": "stormveil-02",
+      "from": "Gateside Chamber",
+      "to": "Rampart Tower",
+      "summary": "Climb from the cliffside cellars to the rooftops. Two Stonesword Key pickups here — one on the rooftops after the Grafted Scion encounter, one in the Underground Crypt. The Iron Whetblade in the armory is critical for infusion options.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Gateside Chamber head up the stone stairs, past the Exile Soldiers on the wooden platforms, then north along the cliffside to reach the Stormveil Cliffside grace."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-08",
+          "note": "On a corpse inside a roofless building, accessible from the very top of the Rampart Tower via careful platforming along the outer walls."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-09",
+          "note": "Held by a corpse on a wooden platform above the Grafted Scion enemy — approach from the rooftops."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-claw-talisman",
+          "note": "Atop the watchtower after the Grafted Scion area — requires rooftop traversal from Rampart Tower; defeat the Warhawks along the way."
+        },
+        {
+          "type": "item",
+          "itemId": "whetblade-iron-whetblade",
+          "note": "In the armory room (three Exile Soldiers guarding) — unlocks Quality, Heavy, Keen, and Poison infusions."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-manor-towershield",
+          "note": "In the armory chest."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-storm-blade",
+          "note": "Dropped by a Teardrop Scarab on the rooftops near the Rampart Tower."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-stormcaller",
+          "note": "Dropped by a Teardrop Scarab in the upper section near the Liftside Chamber."
+        },
+        {
+          "type": "quest",
+          "id": "quest-rogier-stormveil-chapel",
+          "questline": "Rogier",
+          "text": "Find Sorcerer Rogier in the chapel past the Rampart Tower. Exhaust his dialogue — he mentions the strange corpse below the castle. He sells sorceries (Glintstone Pebble, Carian Greatsword, etc.) here. He will move to Roundtable Hold after Godrick is defeated."
+        }
+      ]
+    },
+    {
+      "id": "stormveil-03",
+      "from": "Rampart Tower",
+      "to": "Liftside Chamber",
+      "summary": "Descend into the castle courtyards, cellars and the Underground Crypt. The Ulcerated Tree Spirit in the crypt drops a Golden Seed and is the source of Rogier's infection. Nepheli Loux is found just before the lift to the upper castle.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Rampart Tower, head down and through the main castle interior past the stable courtyard. Navigate the courtyard gauntlet with Exile Soldiers and the Omen (ogre) enemy."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-omen-cleaver",
+          "note": "Dropped by the Omen (large ogre enemy) in the castle courtyard."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-fell-omen-cloak",
+          "note": "Found in the courtyard area on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-10",
+          "note": "Found in the upper courtyard / festival grounds area on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-7",
+          "note": "On a corpse near the cellars below the main courtyard."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-rancorcall",
+          "note": "Found in the Underground Crypt (accessible via window ledge drop from Secluded Cell area, or through the hidden path above the Living Jar room)."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-aspects-of-the-crucible-horns",
+          "note": "Dropped by the Crucible Knight on a hidden ledge pathway in the Underground Crypt — requires careful platforming."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-10",
+          "note": "In the Underground Crypt."
+        },
+        {
+          "type": "boss",
+          "id": "boss-stormveil-ulcerated-tree-spirit",
+          "text": "Ulcerated Tree Spirit — optional elite in the Underground Crypt beneath Stormveil. This is the source of Rogier's deathroot infection.",
+          "optional": true
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-06",
+          "note": "Dropped by the Ulcerated Tree Spirit in the Underground Crypt. This area is accessed via a hidden path above the door of the Living Jar room, or by dropping from outside the Liftside Chamber grace."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-godskin-prayerbook",
+          "note": "In a locked room in the underground cellars — use the Stonesword Key imp statue to access."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-godslayer-s-seal",
+          "note": "In the same Stonesword Key locked room as the Godskin Prayerbook."
+        },
+        {
+          "type": "quest",
+          "id": "quest-nepheli-stormveil-meet",
+          "questline": "Nepheli Loux",
+          "text": "Find Nepheli Loux in a small room past the first two Stormhawk enemies before the Liftside Chamber. Exhaust her dialogue to unlock her summon sign for the Godrick fight — she gives the Arsenal Charm reward only if you spoke to her here or summoned her for Godrick.",
+          "missable": {
+            "lockedBy": "Not speaking to Nepheli before Godrick",
+            "note": "If you never speak to Nepheli in Stormveil and don't summon her for Godrick, you lose the Arsenal Charm reward at Roundtable Hold."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-07",
+          "note": "Next to a Phantom Tree in the northeastern section of the castle courtyard, outside the cellar near Nepheli Loux."
+        }
+      ]
+    },
+    {
+      "id": "stormveil-04",
+      "from": "Liftside Chamber",
+      "to": "Godrick the Grafted",
+      "summary": "The final push to Godrick. Collect the Chrysalids' Memento from the grafting grounds — give it to Roderika at Stormhill Shack to move her to Roundtable Hold. Restore Godrick's Great Rune at the Divine Tower of Limgrave afterward.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Liftside Chamber take the lift up to the Secluded Cell grace. A Troll guards the main path — lure it away or fight. Optionally drop to the Limgrave Tower Bridge grace below for the Stonesword Key door loot."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-chrysalids-memento",
+          "note": "On a pile of grafted corpses in the grafting grounds just before Godrick's fog gate. Give this to Roderika at Stormhill Shack — she will move to Roundtable Hold and become a Spirit Tuner.",
+          "missable": {
+            "lockedBy": "Progressing to Rennala without giving to Roderika",
+            "note": "Roderika moves to Roundtable Hold automatically after Godrick dies, but she will not upgrade spirits until you give her this and confirm with Hewg."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-stormhawk-deenh",
+          "note": "Found in the Stormveil Castle gatehouse — in a chest near the Gateside Chamber, accessible on the way to Godrick."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-viridian-amber-medallion-1",
+          "note": "Chest in the Stormveil stockroom area (requires navigating back through the upper castle)."
+        },
+        {
+          "type": "quest",
+          "id": "quest-nepheli-godrick-summon",
+          "questline": "Nepheli Loux",
+          "text": "Nepheli's golden summon sign is outside Godrick's fog gate — summon her before entering to ensure the Arsenal Charm reward. She is an excellent ally for this fight."
+        },
+        {
+          "type": "boss",
+          "id": "boss-stormveil-godrick",
+          "text": "Godrick the Grafted — main boss of Stormveil Castle. Two phases: phase 2 begins when he grafts a dragon head onto his arm and gains a fire breath sweep."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-grafted",
+          "note": "Dropped by Godrick. Trade to Enia at Roundtable Hold for Axe of Godrick or Grafted Dragon, or duplicate at a Walking Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "great-rune-godrick-s-great-rune",
+          "note": "Dropped by Godrick. Must be restored at the Divine Tower of Limgrave (cross the Limgrave Tower Bridge) before it can be activated with a Rune Arc."
+        },
+        {
+          "type": "item",
+          "itemId": "shabriri-grape-01",
+          "note": "Found in the underground section of Godrick's throne room — next to a ghostly NPC spirit after the battle. Give to Hyetta at Lake-Facing Cliffs (Liurnia) to progress her questline."
+        },
+        {
+          "type": "quest",
+          "id": "quest-gostoc-post-godrick",
+          "questline": "Gostoc",
+          "text": "After defeating Godrick, Gostoc appears in the boss arena cursing his former master. His shop reopens and he stops stealing runes. Speak to him here."
+        }
+      ]
+    },
+    {
+      "id": "stormveil-05",
+      "from": "Godrick the Grafted",
+      "to": "Roundtable Hold (Post-Stormveil)",
+      "summary": "Collect the Stormveil-tied quest rewards at Roundtable Hold, then restore Godrick's Great Rune. Rogier's Rapier is given here; later collecting his Bell Bearing closes his questline.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Return to Roundtable Hold after defeating Godrick. Speak to Enia to receive lore about Great Runes. Give Chrysalids' Memento to Roderika at Stormhill Shack (if not done) — she will relocate to Roundtable Hold and unlock spirit tuning."
+        },
+        {
+          "type": "quest",
+          "id": "quest-rogier-roundtable-rapier",
+          "questline": "Rogier",
+          "text": "Speak to Rogier at Roundtable Hold (balcony). Tell him you defeated Godrick and ask about the corpse below the castle. He gives you his rapier and discusses the Night of Black Knives and deathroot infection.",
+          "missable": {
+            "lockedBy": "Rogier's death before speaking",
+            "note": "Rogier eventually falls silent and dies if you progress too far without speaking to him. Collect all dialogue here."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rogier-s-rapier",
+          "note": "Given by Rogier at Roundtable Hold after reporting Godrick's defeat and exhausting his dialogue."
+        },
+        {
+          "type": "quest",
+          "id": "quest-nepheli-roundtable-arsenal",
+          "questline": "Nepheli Loux",
+          "text": "Speak to Nepheli outside Gideon's study at Roundtable Hold — she grants the Arsenal Charm if you spoke to her in Stormveil or summoned her for Godrick."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-arsenal-charm",
+          "note": "Given by Nepheli Loux at Roundtable Hold after Godrick — only awarded if you spoke to her in Stormveil Castle before the fight."
+        },
+        {
+          "type": "direction",
+          "text": "Cross the Limgrave Tower Bridge (grace southeast of Stormveil) and climb the Divine Tower of Limgrave to restore Godrick's Great Rune."
+        }
+      ]
+    }
+  ],
   "cleanup": [
     "armor-commoner-s-simple-garb",
     "armor-commoner-s-simple-garb-altered",
     "armor-crimson-hood",
-    "armor-fell-omen-cloak",
     "armor-godrick-knight-armor",
     "armor-godrick-knight-armor-altered",
     "armor-godrick-knight-gauntlets",
@@ -18,55 +344,24 @@
     "armor-godrick-soldier-helm",
     "armor-tree-and-beast-surcoat",
     "ash-of-war-ash-of-war-storm-assault",
-    "ash-of-war-ash-of-war-storm-blade",
     "ash-of-war-ash-of-war-storm-wall",
-    "ash-of-war-ash-of-war-stormcaller",
     "bell-bearing-gostoc-s-bell-bearing",
-    "cookbook-nomadic-warrior-s-cookbook-10",
-    "cookbook-nomadic-warrior-s-cookbook-7",
-    "golden-seed-06",
-    "golden-seed-07",
-    "great-rune-godrick-s-great-rune",
-    "incantation-aspects-of-the-crucible-horns",
-    "key-item-chrysalids-memento",
-    "key-item-godskin-prayerbook",
-    "key-item-rusty-key",
-    "key-item-talisman-pouch",
-    "remembrance-remembrance-of-the-grafted",
-    "shabriri-grape-01",
+    "talisman-boltdrake-talisman",
     "shield-gilded-greatshield",
     "shield-golden-beast-crest-shield",
     "shield-hawk-crest-wooden-shield",
-    "shield-manor-towershield",
     "shield-marred-leather-shield",
     "shield-marred-wooden-shield",
     "shield-wooden-greatshield",
-    "sorcery-rancorcall",
-    "spirit-ash-stormhawk-deenh",
-    "stonesword-key-08",
-    "stonesword-key-09",
-    "stonesword-key-10",
-    "talisman-boltdrake-talisman",
-    "talisman-claw-talisman",
-    "talisman-curved-sword-talisman",
-    "talisman-viridian-amber-medallion-1",
-    "tool-margit-s-shackle",
-    "tool-mimic-s-veil",
-    "tool-tarnished-s-wizened-finger",
-    "weapon-arbalest",
     "weapon-axe-of-godrick",
     "weapon-brick-hammer",
-    "weapon-godslayer-s-seal",
-    "weapon-golem-s-halberd",
     "weapon-grafted-dragon",
     "weapon-highland-axe",
-    "weapon-hookclaws",
-    "weapon-misericorde",
-    "weapon-omen-cleaver",
     "weapon-ornamental-straight-sword",
     "weapon-pike",
     "weapon-treespear",
     "weapon-warhawk-s-talon",
-    "whetblade-iron-whetblade"
+    "weapon-golem-s-halberd",
+    "tool-tarnished-s-wizened-finger"
   ]
 }

@@ -2,7 +2,773 @@
   "id": "liurnia",
   "name": "Liurnia of the Lakes",
   "order": 4,
-  "legs": [],
+  "legs": [
+    {
+      "id": "liurnia-01",
+      "from": "Lake-Facing Cliffs",
+      "to": "Church of Irith",
+      "summary": "Enter Liurnia via the cliffside path south of the academy. The Church of Irith is the first major landmark — pick up the Sacred Tear and meet Thops. Collect the Academy Scroll from the ruins east of the church. Hyetta begins her questline here if Irina is dead.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "The Lake-Facing Cliffs grace is at the top of the path north from Stormveil's back exit. Head west along the cliffs then northwest to the Church of Irith."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-06",
+          "note": "Inside the Church of Irith — on the altar statue. Upgrade Flask potency."
+        },
+        {
+          "type": "quest",
+          "id": "quest-thops-church-irith",
+          "questline": "Thops",
+          "text": "Speak to Thops at the Church of Irith. Donate 10 runes to unlock his sorcery shop. He sells Glintstone Pebble and other basics. Note: he needs a second Academy Glintstone Key (NOT the one used to enter Raya Lucaria) — the second is found inside the Academy on a chandelier in the Church of the Cuckoo."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-academy-scroll",
+          "note": "From Church of Irith head east to the ruins near the lake shore — body on ground in the ruins of the northern shore cluster. Give to Miriel at Church of Vows or Thops to teach Glintstone Pebble and Swift Glintstone Shard."
+        },
+        {
+          "type": "quest",
+          "id": "quest-hyetta-lake-facing-cliffs",
+          "questline": "Hyetta",
+          "text": "If Irina (Weeping Peninsula) is dead, Hyetta appears near the Lake-Facing Cliffs grace. Give her Shabriri Grape #1 (from Stormveil's underground throne room). She moves to Purified Ruins next.",
+          "missable": {
+            "lockedBy": "Completing Irina/Edgar questline then giving grape",
+            "note": "Hyetta does not appear unless Irina is dead. Give Shabriri Grape #1 to advance."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-liurnia-west",
+          "note": "Stele near the south Liurnia lake shore, north of the Liurnia Lake Shore grace — in the middle of the shallow lake road leading north."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-02",
+      "from": "Church of Irith",
+      "to": "Main Academy Gate",
+      "summary": "Sweep the south lake shore heading north. Collect the west map fragment, visit Purified Ruins for Hyetta's second grape, then swing east to pick up the east map fragment and Dragon Cult Prayerbook on the eastern shore before approaching the Academy gate.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head north from Church of Irith along the western lakeshore road toward Academy Gate Town and the Main Academy Gate grace."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-liurnia-east",
+          "note": "On a stele in the ruins at the eastern lakeshore, near the Highway Lookout Tower area."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-fire-monks-prayerbook",
+          "note": "In the ruins of the Fire Monk camp east of the Academy on the lakeshore. Give to Miriel at Church of Vows to learn Fire's Deadly Sin and Flame Fortification."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-dragon-cult-prayerbook",
+          "note": "Dropped by the Leyndell Crucible Knight patrol near the Highway Lookout Tower on the eastern shore. Give to Miriel at Church of Vows."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-dexterity-knot-crystal-tear",
+          "note": "Found on top of a craggy hill in the south Liurnia lake area — follow the raised ridge northeast from Church of Irith."
+        },
+        {
+          "type": "quest",
+          "id": "quest-hyetta-purified-ruins",
+          "questline": "Hyetta",
+          "text": "Hyetta appears at Purified Ruins (south Liurnia, west side of the lake). The Purified Ruins have a hidden cellar — destroy the barrels blocking the entrance to find Shabriri Grape #2 inside. Give it to her."
+        },
+        {
+          "type": "item",
+          "itemId": "shabriri-grape-02",
+          "note": "In a hidden cellar beneath Purified Ruins — destroy the barrels blocking the entrance on the west side of the ruins, then descend."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-ritual-pot",
+          "note": "In the hidden cellar of Purified Ruins alongside the Shabriri Grape."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-intelligence-knot-crystal-tear",
+          "note": "From the Road to the Manor Site of Grace, head southeast down the slope — in a stone bowl structure guarded by Spider Hands."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-03",
+      "from": "Main Academy Gate",
+      "to": "Raya Lucaria Academy (Church of the Cuckoo)",
+      "summary": "Obtain the Academy Glintstone Key from Glintstone Dragon Smarag's island west of the Academy, then enter Raya Lucaria. The Church of the Cuckoo grace is just inside and holds the second Academy Glintstone Key (for Thops) on a chandelier.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "The Academy Glintstone Key (to enter the Academy seal) is on a corpse on a small island west of the Main Academy Gate — guarded by Glintstone Dragon Smarag. You can sneak past or fight the dragon."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-academy-glintstone-key",
+          "note": "On a corpse on an island west of the Main Academy Gate, guarded by Glintstone Dragon Smarag. This key unlocks the glintstone seal at the Main Academy Gate. There are TWO keys in the game — this is the entry key; the second is inside the academy (Church of the Cuckoo chandelier, for Thops)."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-13",
+          "note": "Next to a Phantom Tree north of the Main Academy Gate grace, on the bridge approach."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-azur-s-glintstone-staff",
+          "note": "In the Church of the Cuckoo upper section — in a glintstone-covered room next to a crystal formation. Requires reaching the upper walkway via the ladder inside the church."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-19",
+          "note": "Held by a sitting corpse outside the Academy, beneath the bridge near the Main Academy Gate."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-15",
+          "note": "Inside a chest on one of the small islands near the Raya Lucaria Academy exterior."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-04",
+      "from": "Raya Lucaria Academy (Church of the Cuckoo)",
+      "to": "Raya Lucaria Academy (Schoolhouse Classroom)",
+      "summary": "Navigate the graveyard, waterwheel, and rooftops to the Schoolhouse Classroom grace. Collect the Conspectus Scroll, Graven-School Talisman (illusory wall), second Academy Glintstone Key (chandelier — for Thops), and an Imbued Sword Key on the rooftops.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Church of the Cuckoo, fight through Glintstone Zombies in the graveyard, cross via the waterwheel, and ascend through the classroom corridors to the Schoolhouse Classroom grace."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-karolos-glintstone-crown",
+          "note": "On the rooftops of the academy — drop down from the upper walkways."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-twinsage-glintstone-crown",
+          "note": "Looted from a body in the rooftops section."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-olivinus-glintstone-crown",
+          "note": "In the academy rooftop area on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lazuli-glintstone-crown",
+          "note": "In the academy on a body."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-glintstone-scarab",
+          "note": "On the rooftops of Raya Lucaria — drop from a ledge above the path."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-haima-glintstone-crown",
+          "note": "In the academy interior."
+        },
+        {
+          "type": "item",
+          "itemId": "imbued-sword-key-02",
+          "note": "On a corpse on the east side of the academy rooftops. Use at the Four Belfries (west Liurnia) to access the Precipice of Anticipation waygate — needed for Stormhawk King (Nepheli quest)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-conspectus-scroll",
+          "note": "In a hallway room off the Schoolhouse Classroom — go left from the grace doorway; the body is in front of an illusory wall. Give to Miriel or Sellen to teach Glintstone Cometshard and Shatter Earth."
+        },
+        {
+          "type": "direction",
+          "text": "Behind an illusory wall on the second floor of the Schoolhouse — strike the wall to reveal a chest containing the Graven-School Talisman (boosts sorcery damage)."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-16",
+          "note": "Behind an illusory wall just before the Debate Parlor Site of Grace — strike the wall."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-17",
+          "note": "On a fountain in the center of the academy courtyard."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-05",
+      "from": "Raya Lucaria Academy (Schoolhouse Classroom)",
+      "to": "Raya Lucaria Grand Library",
+      "summary": "Fight through the Debate Parlor and up to Rennala. The Red Wolf of Radagon guards the Debate Parlor. Rennala is the main boss — her Great Rune of the Unborn enables larval-tear rebirth. Give Thops the second Academy Glintstone Key before leaving.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Give Thops the Academy Glintstone Key found on the church chandelier — exhaust his dialogue, hand over the key, and receive the Erudition gesture. His corpse and rewards appear later at a desk outside the Schoolhouse Classroom."
+        },
+        {
+          "type": "quest",
+          "id": "quest-thops-second-key",
+          "questline": "Thops",
+          "text": "Give Thops the second Academy Glintstone Key (found on a chandelier in the Church of the Cuckoo). He gives the Erudition gesture. He then dies — his corpse appears at a desk near the Schoolhouse Classroom grace. Collect his bell bearing and items from the corpse.",
+          "missable": {
+            "lockedBy": "Missing the chandelier key",
+            "note": "The second key is on a chandelier in the Church of the Cuckoo upper section — reach it via the upper walkway ladder. Do NOT give Thops the entry key (Smarag's island); he will refuse it."
+          }
+        },
+        {
+          "type": "direction",
+          "text": "In the upper level of the Debate Parlor (ascend stairs/ladders after Red Wolf): the Radagon Icon talisman and Graven-School talisman are found here — both are in cleanup lists for their eventual placement. Also note Memory Stone #3 (at the Converted Tower in west Liurnia, not inside the academy)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-graven-mass-talisman",
+          "note": "In the Grand Library area before Rennala."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-12",
+          "note": "West of the academy courtyard, next to a glowing sapling — exit the academy's west side."
+        },
+        {
+          "type": "boss",
+          "id": "boss-raya-lucaria-red-wolf",
+          "text": "Red Wolf of Radagon — boss in the Debate Parlor. Drops a Memory Stone."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-comet",
+          "note": "Looted from a body in the Grand Library."
+        },
+        {
+          "type": "boss",
+          "id": "boss-raya-lucaria-rennala",
+          "text": "Rennala, Queen of the Full Moon — main boss of Raya Lucaria Academy. Phase 1: break her shield via lit students. Phase 2: full moon battle."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-full-moon-queen",
+          "note": "Dropped by Rennala. Trade to Enia for Rennala's Full Moon sorcery or Carian Regal Scepter, or duplicate at a Walking Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "great-rune-great-rune-of-the-unborn",
+          "note": "Dropped by Rennala — enables rebirth (respec) using Larval Tears. No tower restoration needed."
+        },
+        {
+          "type": "quest",
+          "id": "quest-thops-corpse-loot",
+          "questline": "Thops",
+          "text": "After Rennala's defeat, find Thops's corpse at a desk near the Schoolhouse Classroom grace (reload the area). Collect his rewards."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-thops-s-bell-bearing",
+          "note": "From Thops's corpse in the academy — submit to Twin Maiden Husks at Roundtable to buy his sorceries."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-thops-s-barrier",
+          "note": "Dropped by a Teardrop Scarab at Church of Irith after Thops leaves."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-discarded-palace-key",
+          "note": "Late Ranni quest reward — obtained from the Baleful Shadow's drop in Ainsel River. Use it here at the Grand Library chest to get the Dark Moon Ring."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-06",
+      "from": "Raya Lucaria Grand Library",
+      "to": "Rose Church (Varré)",
+      "summary": "Head south to the Rose Church on the western lakeshore. This is where Varré relocates after Stormveil. His questline gives the Pureblood Knight's Medal — early access to Mohgwyn Palace, skipping the Haligtree medallion route. Complete his bloody finger invasion tasks here.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the academy, head south-southwest across the lake to Rose Church — a blood-stained church on a large island in southwestern Liurnia."
+        },
+        {
+          "type": "quest",
+          "id": "quest-varre-rose-church-meet",
+          "questline": "Varré",
+          "text": "Find White Mask Varré at Rose Church (he relocated from The First Step after you obtained a Great Rune). Speak to him — he questions your experience with the Two Fingers. Respond negatively to proceed optimally."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-lord-of-blood-s-favor",
+          "note": "Given by Varré at Rose Church — a cloth item to be soaked in a maiden's blood. Best source: the dead Finger Maiden at the Church of Inhibition (north Liurnia, Frenzied Flame Village area). Alternative: kill Irina at Weeping Peninsula, or use the Chapel of Anticipation waygate (Four Belfries)."
+        },
+        {
+          "type": "direction",
+          "text": "Complete Varré's three invasion tasks: use the Festering Bloody Finger he gives you to invade three times (can be offline invasions at Writheblood Ruins against Magnus the Beast Claw)."
+        },
+        {
+          "type": "direction",
+          "text": "Soak the Lord of Blood's Favor in maiden's blood at the Church of Inhibition (northeast Liurnia, requires navigating the Frenzied Flame Village area — beware the madness buildup). Return to Varré with the bloodstained cloth."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-lord-of-blood-s-favor-soaked",
+          "note": "The Lord of Blood's Favor after being soaked in a maiden's blood at the Church of Inhibition. Return to Varré at Rose Church."
+        },
+        {
+          "type": "quest",
+          "id": "quest-varre-rose-church-anoint",
+          "questline": "Varré",
+          "text": "Return to Varré with the bloodstained cloth. He performs a ritual (anointing) and gives the reusable Bloody Finger."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-bloody-finger",
+          "note": "Reusable invasion item given by Varré after the anointing ritual. Speak to him one more time after this."
+        },
+        {
+          "type": "quest",
+          "id": "quest-varre-pureblood-medal",
+          "questline": "Varré",
+          "text": "Speak to Varré one final time at Rose Church. He gives the Pureblood Knight's Medal — using it teleports you directly to Mohgwyn Palace for an early Mohg fight (before the Consecrated Snowfield route). FLAG: this is the earliest possible access to Mohgwyn's rune farm and Mohg, Lord of Blood.",
+          "missable": {
+            "lockedBy": "Killing Varré before completing his quest",
+            "note": "If Varré is killed, his questline ends. Mohgwyn Palace is still reachable via a hidden teleporter in the Consecrated Snowfield (north-northwest of Yelough Anix Tunnel), but the Pureblood Medal route is faster. Varré's Bouquet weapon requires killing him after the quest, OR defeating him in his invasion at Dynasty Mausoleum Midpoint."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-04",
+          "note": "Dropped by a Grafted Scion disguised as a Giant Lobster between Rose Church and Boilprawn Shack — fight it to expose the disguise."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-07",
+      "from": "Rose Church (Varré)",
+      "to": "Village of the Albinaurics",
+      "summary": "Sweep the southwestern lakeshore: Boilprawn Shack (Blackguard Big Boggart for Rya's necklace), Four Belfries (Imbued Sword Keys + Stormhawk King), then the Village of the Albinaurics (Haligtree Medallion right half, Latenna, Nepheli quest). Get Rya's Necklace here to start her questline.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Rose Church head north to Boilprawn Shack. Blackguard Big Boggart is here — purchase Rya's stolen necklace from him for 1000 runes to begin Rya's questline."
+        },
+        {
+          "type": "quest",
+          "id": "quest-rya-necklace-boggart",
+          "questline": "Rya",
+          "text": "Speak to Rya (found at the Laskyar Ruins Site of Grace or nearby gazebo south of Academy Gate Town). She asks you to retrieve her stolen necklace. Buy it from Blackguard Big Boggart at Boilprawn Shack for 1000 runes, then return it to Rya. She gives Volcano Manor Invitation."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-rya-s-necklace",
+          "note": "Buy from Blackguard Big Boggart at Boilprawn Shack for 1000 runes — return to Rya to get Volcano Manor Invitation and advance her questline."
+        },
+        {
+          "type": "direction",
+          "text": "Head west to the Four Belfries. Collect both Imbued Sword Keys here (one in a chest in the northeast of the town after lighting the brazier, one at the top fourth belfry tower). Use Imbued Sword Key #1 at the Precipice of Anticipation belfry gate to reach the Chapel of Anticipation rooftop — collect the Stormhawk King spirit ash for Nepheli's quest."
+        },
+        {
+          "type": "item",
+          "itemId": "imbued-sword-key-01",
+          "note": "In a sealed chest in the Four Belfries town northeast section — light the brazier atop the southwest tower to dispel the barrier first."
+        },
+        {
+          "type": "item",
+          "itemId": "imbued-sword-key-03",
+          "note": "In a chest at the very top fourth belfry tower at the Four Belfries."
+        },
+        {
+          "type": "quest",
+          "id": "quest-nepheli-stormhawk-king",
+          "questline": "Nepheli Loux",
+          "text": "Use Imbued Sword Key #1 at the Four Belfries (Precipice of Anticipation gate) to teleport to the Chapel of Anticipation rooftop. Defeat the Grafted Scion there and loot the Stormhawk King spirit ash. Return this to Nepheli later (at Roundtable Hold after the Omenkiller fight) to continue her questline — do NOT give her Seluvis's Potion."
+        },
+        {
+          "type": "direction",
+          "text": "Head south to the Village of the Albinaurics in the cliffs above the southwest lake."
+        },
+        {
+          "type": "direction",
+          "text": "In the village, strike the large pot near the entrance houses to reveal the hidden NPC Albus. Exhaust his dialogue to receive the Haligtree Secret Medallion (Right)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-haligtree-secret-medallion-right",
+          "note": "Given by Albus the Albinauric — hidden inside a pot near the village entrance. Strike the pot to reveal him. Needed for the Grand Lift of Rold secret medallion route to the Consecrated Snowfield and Haligtree."
+        },
+        {
+          "type": "quest",
+          "id": "quest-nepheli-village-albinaurics",
+          "questline": "Nepheli Loux",
+          "text": "Find Nepheli Loux under the stone bridge at the Village of the Albinaurics. Exhaust her dialogue — she witnesses the Albinauric massacre. This unlocks her summon sign for the Omenkiller boss fight in this area.",
+          "missable": {
+            "lockedBy": "Giving Nepheli Seluvis's Potion",
+            "note": "Nepheli becomes a puppet; full questline including Ancient Dragon Smithing Stone locked"
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-03",
+          "note": "Near the well in the Albinauric village graveyard."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-ivory-sickle",
+          "note": "Behind a coffin near Albus in the Village of the Albinaurics."
+        },
+        {
+          "type": "boss",
+          "id": "boss-liurnia-omenkiller-village",
+          "text": "Omenkiller — boss at the Village of the Albinaurics. Use Nepheli's summon sign for her quest progression."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crucible-knot-talisman",
+          "note": "Dropped by the Omenkiller in the Village of the Albinaurics."
+        },
+        {
+          "type": "quest",
+          "id": "quest-nepheli-roundtable-despair",
+          "questline": "Nepheli Loux",
+          "text": "After the Omenkiller fight, reload Roundtable Hold. Nepheli is near Hewg's stairs in despair. Speak to Gideon about her. CRITICAL FORK: Seluvis will give you his Potion to administer to Nepheli — give it to Gideon instead (he disposes of it), or ignore Seluvis. Do NOT give Nepheli the potion or she becomes a puppet and her questline ends permanently.",
+          "missable": {
+            "lockedBy": "Giving Nepheli Seluvis's Potion",
+            "note": "If Nepheli drinks the potion, she becomes a puppet sold by Pidia. Her full questline (Ancient Dragon Smithing Stone, Stormveil ending) is locked. Show the potion to Gideon or simply don't use it."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-latenna-the-albinauric-spirit-ash",
+          "note": "Given by Latenna the Albinauric at Slumbering Wolf's Shack (east of the Lakeside Crystal Cave, after defeating the Bloodhound Knight there). She joins you to seek the Haligtree — give her the Haligtree Secret Medallion (Right) to confirm. She becomes a stationary archer spirit ash."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-08",
+      "from": "Village of the Albinaurics",
+      "to": "Caria Manor (Royal Moongazing Grounds)",
+      "summary": "Head north through the lake to Caria Manor in northwest Liurnia. Clear the manor gardens and upper level to fight Royal Knight Loretta. Defeat her to unlock the Three Sisters and access to Ranni's Rise.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head north across the lake to the Road to the Manor grace, then follow the manor road northwest to Caria Manor's Main Gate."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-liurnia-north",
+          "note": "On a stele near the north Liurnia lakeshore, east of Caria Manor's approach road."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-16",
+          "note": "Under a Phantom Tree in Caria Manor's upper level garden."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-sword-of-night-and-flame",
+          "note": "In a locked chest in Caria Manor — inside a room accessible via a ladder from the gardens. One of the most powerful combo weapons in the game."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-urumi",
+          "note": "On elevated ramparts in Caria Manor."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-ice-crest-shield",
+          "note": "In the ruins section of Caria Manor."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-carian-grandeur",
+          "note": "On cliff ruins in Caria Manor's garden area."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-carian-piercer",
+          "note": "Dropped by a Teardrop Scarab in the Caria Manor gardens."
+        },
+        {
+          "type": "boss",
+          "id": "boss-caria-manor-loretta",
+          "text": "Royal Knight Loretta — boss in the Royal Moongazing Grounds at the end of Caria Manor. Two-phase fight with glintstone spells and polearm. Defeating her unlocks the Three Sisters area."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-loretta-s-slash",
+          "note": "Dropped by Royal Knight Loretta."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-loretta-s-greatbow",
+          "note": "Dropped by Royal Knight Loretta."
+        },
+        {
+          "type": "direction",
+          "text": "After Loretta, drop down the western cliff from Three Sisters to find Pidia, Carian Servant on a balcony — accessible ONLY from Three Sisters after defeating Loretta. He sells the Ash of War: Barbaric Roar and other items."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-pidia-s-bell-bearing",
+          "note": "Dropped by Pidia the Carian Servant when he dies (or is killed). He is on a balcony on the western side of Caria Manor, reachable only from Three Sisters via cliff drop."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-23",
+          "note": "On the western walls of Caria Manor — dropped from Three Sisters cliffs, guarded by a Giant Crab."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-09",
+      "from": "Caria Manor (Royal Moongazing Grounds)",
+      "to": "Ranni's Rise (Three Sisters)",
+      "summary": "Ranni's questline begins in Three Sisters. Become her vassal, meet Blaidd, Seluvis, and Iji. Collect Seluvis's Introduction for Sellen's questline. The memory stone in Seluvis's Rise and the quest steps here are the highest-priority items in this area.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head through the Three Sisters area north of Caria Manor. Ranni's Rise is the main tower. Visit at night or any time — Ranni is always present at the top."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ranni-become-vassal",
+          "questline": "Ranni",
+          "text": "Ascend Ranni's Rise and speak to Ranni the Witch. Accept her offer of service — become her vassal. Then speak to all three attendants below: Blaidd (half-wolf, seeks Nokron treasure), War Counselor Iji (west road), and Seluvis (Seluvis's Rise). Exhausting all three unlocks further quest steps.",
+          "missable": {
+            "lockedBy": "Giving Ranni the Fingerslayer Blade without completing Seluvis's sub-quests first",
+            "note": "Delivering the Fingerslayer Blade to Ranni ends Seluvis's questline immediately. Complete Seluvis's puppet/scheme steps first if you want the Magic Scorpion Charm."
+          }
+        },
+        {
+          "type": "quest",
+          "id": "quest-seluvis-introduction",
+          "questline": "Seluvis",
+          "text": "Speak to Seluvis at Seluvis's Rise. He gives his Introduction scroll to deliver to Sorceress Sellen (at Waypoint Ruins, Limgrave). He also gives his Potion for Nepheli — show it to Gideon at Roundtable Hold to dispose of it safely. Then return to unlock his sorcery shop."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-seluvis-s-introduction",
+          "note": "Given by Seluvis at Seluvis's Rise. Deliver to Sorceress Sellen at Waypoint Ruins (Limgrave) to unlock her full sorcery questline."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-seluvis-s-potion",
+          "note": "Given by Seluvis — intended for Nepheli Loux. Show to Gideon Ofnir at Roundtable Hold (he will dispose of it). Do NOT give to Nepheli (permanently locks her questline) or to the Dung Eater."
+        },
+        {
+          "type": "item",
+          "itemId": "memory-stone-06",
+          "note": "In a chest at the top floor of Seluvis's Rise — free additional memory slot."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-magic-scorpion-charm",
+          "note": "Given by Seluvis after completing the Amber Starlight sub-quest (the Amber Starlight item is found in a grotto on the Altus Plateau later). Boosts magic attack at cost of damage negation."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-amber-starlight",
+          "note": "Found in a grotto on the Altus Plateau — required for Seluvis's scheme quest. Covered under Altus region (Task 20)."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-10",
+      "from": "Ranni's Rise (Three Sisters)",
+      "to": "Bellum Highway (East Liurnia)",
+      "summary": "Complete the eastern shore sweep before heading north. Jarburg (meet Jar-Bairn), the eastern highway (map fragment, Tibia Mariner, Dragon Cult Prayerbook), Church of Vows (Miriel, sacred tear, Bell Bearing Hunter), and the Minor Erdtree for crystal tears.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Drop down from the Three Sisters cliffs east to the eastern Liurnia lake shore. Head south to Jarburg."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-05",
+          "note": "Found by touching a ghost at a graveyard in east Liurnia — this is the location referenced in the Resurrection Painting. The ghost gives Larval Tear, Juvenile Scholar Cap, and Juvenile Scholar Robe."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-juvenile-scholar-cap",
+          "note": "Given by the ghost at the east Liurnia graveyard (Resurrection Painting location) alongside Larval Tear #5."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-juvenile-scholar-robe",
+          "note": "Given by the ghost at the east Liurnia graveyard alongside Larval Tear #5."
+        },
+        {
+          "type": "direction",
+          "text": "Descend into Jarburg — accessible by dropping carefully from the cliffside road east of Caria Manor. Speak to Jar-Bairn on the steps near the jar village."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-ancient-death-rancor",
+          "note": "In a chest in Jarburg's small chapel/crypt area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rosus-axe",
+          "note": "Found in Jarburg — near the main path through the village."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-07",
+          "note": "Inside Bellum Church on the eastern Liurnia highway — below the large statue."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-flame-of-the-fell-god",
+          "note": "Dropped by the Adan, Thief of Fire boss at the Malefactor's Evergaol in east Liurnia."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-swarm-of-flies",
+          "note": "Found on a corpse in the Writheblood Ruins area (east Liurnia near the rose road)."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-bloodflame-blade",
+          "note": "On a corpse near the Writheblood Ruins in east Liurnia."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-flame-cleanse-me",
+          "note": "In the Fire Monk camp on the eastern lakeshore, on a body."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-cerulean-crystal-tear",
+          "note": "Dropped by the Erdtree Avatar at the Liurnia Minor Erdtree (eastern side of Liurnia). FP restoration physick component."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-ruptured-crystal-tear",
+          "note": "Also dropped by the Erdtree Avatar at the Liurnia Minor Erdtree."
+        },
+        {
+          "type": "direction",
+          "text": "Visit the Church of Vows (eastern Liurnia) — Miriel, Pastor of Vows is here. Give him the Academy Scroll, Conspectus Scroll, Fire Monk's Prayerbook, Dragon Cult Prayerbook, and Royal House Scroll to unlock all associated sorceries and incantations."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-meat-peddler-s-bell-bearing",
+          "note": "Dropped by the Bell Bearing Hunter who invades the Church of Vows at nightfall. Unlocks meat-based crafting materials at Roundtable Hold."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-11",
+      "from": "Bellum Highway (East Liurnia)",
+      "to": "Black Knife Catacombs",
+      "summary": "Head north on the Bellum Highway toward the Grand Lift of Dectus. The Black Knife Catacombs are to the northeast — collect the Black Knifeprint for Rogier's questline. Hyetta's third grape step is at the Gate Town Bridge. The Radagon's Rises puzzle towers give memory stones.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head north along the Bellum Highway. Hyetta's third step is at the Gate Town Bridge (south of the Bellum Highway, near the academy ruins)."
+        },
+        {
+          "type": "quest",
+          "id": "quest-hyetta-gate-town-bridge",
+          "questline": "Hyetta",
+          "text": "Find Hyetta at Gate Town Bridge. Give her Shabriri Grape #3 (dropped by Edgar the Revenger when he invades near Revenger's Shack, east Liurnia — Edgar invades after Irina's death; defeat him to get the grape). Tell her the grapes are human eyes when she asks."
+        },
+        {
+          "type": "item",
+          "itemId": "shabriri-grape-03",
+          "note": "Dropped by Edgar the Revenger when he invades near the Revenger's Shack (east Liurnia). He invades after Irina has died at the Weeping Peninsula."
+        },
+        {
+          "type": "item",
+          "itemId": "memory-stone-05",
+          "note": "In a chest at the top floor of Testu's Rise — solve the puzzle (summon three wise beasts visible through Erudition gesture or simply by walking around the tower) to unlock the door."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-18",
+          "note": "Inside the Academy Crystal Cave (southeast Liurnia off the eastern lakeshore) — in a cage on the left among the sages."
+        },
+        {
+          "type": "direction",
+          "text": "Head northeast up the cliffs to the Black Knife Catacombs (northeast Liurnia, beyond the Frenzied Flame Village cliff road)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-black-knifeprint",
+          "note": "Dropped by the Black Knife Assassin boss in the Black Knife Catacombs (northeast Liurnia). Required for Rogier's questline — bring this back to Rogier at Roundtable Hold."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-black-knife-tiche",
+          "note": "Dropped by the Black Knife Assassin boss in the Black Knife Catacombs — one of the best spirit ashes in the game."
+        },
+        {
+          "type": "quest",
+          "id": "quest-rogier-black-knifeprint",
+          "questline": "Rogier",
+          "text": "Return to Rogier at Roundtable Hold with the Black Knifeprint. He analyzes it and determines Lunar Princess Ranni orchestrated the Night of Black Knives. He asks you to investigate Ranni's Rise — go there and speak to Ranni. Return to Rogier, who asks you to become Ranni's vassal.",
+          "missable": {
+            "lockedBy": "Rogier's deteriorating condition",
+            "note": "Rogier falls silent and eventually dies if you do not return with the Knifeprint promptly. He leaves behind his Bell Bearing and gear when he dies."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-rogier-s-bell-bearing",
+          "note": "Rogier's Bell Bearing left at Roundtable Hold after he dies (following the questline completion). Submit to Twin Maiden Husks to buy his sorceries."
+        }
+      ]
+    },
+    {
+      "id": "liurnia-12",
+      "from": "Black Knife Catacombs",
+      "to": "Grand Lift of Dectus (Liurnia Exit)",
+      "summary": "Final Liurnia sweep before ascending to Altus. Collect the north Liurnia map, Smithing-Stone Bell Bearing from the crystal tunnel, and the Imbued Sword Key from Seluvis's Rise area. Hyetta's fourth step is at Bellum Church. Ensure all quest items are handed in.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head back south and west to complete any remaining dungeon runs: Cliffbottom Catacombs, Raya Lucaria Crystal Tunnel (east shore), Stillwater Cave, and the Academy Crystal Cave."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-smithing-stone-miner-s-bell-bearing-1",
+          "note": "Dropped by the Crystalian boss in the Raya Lucaria Crystal Tunnel — unlocks Smithing Stone 1 and 2 purchases at Roundtable Hold."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-briars-of-sin",
+          "note": "In the Liurnia dungeon area — on a corpse in the academy east cliff area or dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-cursemark-of-death",
+          "note": "At the top of the Divine Tower of Liurnia (northeast, near the Frenzied Flame Village — activate the lift from below). Required for Fia's questline in Deeproot Depths."
+        },
+        {
+          "type": "quest",
+          "id": "quest-hyetta-bellum-church",
+          "questline": "Hyetta",
+          "text": "Hyetta's fourth step is at Bellum Church (northeast Liurnia, on the Bellum Highway). She requests a Fingerprint Grape — defeat Festering Fingerprint Vyke near the Church of Inhibition (north of Frenzied Flame Village) to obtain it. Give her the Fingerprint Grape. She moves to the Frenzied Flame Proscription — but that area requires defeating Morgott first.",
+          "missable": {
+            "lockedBy": "Missing Festering Fingerprint Vyke drop",
+            "note": "The Fingerprint Grape is dropped by Vyke near Church of Inhibition. The Church of Inhibition also holds the dead maiden for Varré's quest — plan these visits together."
+          }
+        },
+        {
+          "type": "direction",
+          "text": "Seluvis's Amber Starlight (needed for his scheme/Magic Scorpion Charm sub-quest) is found in a grotto on the Altus Plateau — return it to him when you reach Altus. Covered in the Altus region."
+        },
+        {
+          "type": "direction",
+          "text": "Ride north up the Bellum Highway past the Erdtree-Gazing Hill to the Grand Lift of Dectus. Use the two Dectus Medallion halves (Left: Fort Haight, Limgrave; Right: Fort Faroth, Dragonbarrow) to ascend to Altus Plateau."
+        }
+      ]
+    }
+  ],
   "cleanup": [
     "ammo-serpent-arrow",
     "armor-albinauric-mask",
@@ -32,21 +798,13 @@
     "armor-eccentric-s-armor",
     "armor-eccentric-s-breeches",
     "armor-eccentric-s-manchettes",
-    "armor-glintstone-scarab",
     "armor-godskin-noble-bracelets",
     "armor-godskin-noble-hood",
     "armor-godskin-noble-robe",
     "armor-godskin-noble-trousers",
-    "armor-haima-glintstone-crown",
     "armor-iji-s-mirrorhelm",
-    "armor-juvenile-scholar-cap",
-    "armor-juvenile-scholar-robe",
-    "armor-karolos-glintstone-crown",
-    "armor-lazuli-glintstone-crown",
-    "armor-lazuli-robe",
     "armor-mask-of-confidence",
     "armor-nox-mirrorhelm",
-    "armor-olivinus-glintstone-crown",
     "armor-preceptor-s-big-hat",
     "armor-preceptor-s-gloves",
     "armor-preceptor-s-long-gown",
@@ -72,10 +830,8 @@
     "armor-snow-witch-skirt",
     "armor-sorcerer-leggings",
     "armor-sorcerer-manchettes",
-    "armor-twinsage-glintstone-crown",
     "ash-of-war-ash-of-war-barbaric-roar",
     "ash-of-war-ash-of-war-carian-glintsword",
-    "ash-of-war-ash-of-war-carian-grandeur",
     "ash-of-war-ash-of-war-carian-greatsword",
     "ash-of-war-ash-of-war-carian-retaliation",
     "ash-of-war-ash-of-war-charge-forth",
@@ -84,19 +840,12 @@
     "ash-of-war-ash-of-war-glintblade-phalanx",
     "ash-of-war-ash-of-war-hoarfrost-stomp",
     "ash-of-war-ash-of-war-ice-spear",
-    "ash-of-war-ash-of-war-loretta-s-slash",
     "ash-of-war-ash-of-war-raptor-of-the-mists",
     "ash-of-war-ash-of-war-shield-bash",
     "ash-of-war-ash-of-war-spectral-lance",
     "ash-of-war-ash-of-war-spinning-weapon",
     "ash-of-war-ash-of-war-sword-dance",
-    "ash-of-war-ash-of-war-thops-s-barrier",
     "ash-of-war-ash-of-war-vow-of-the-indomitable",
-    "bell-bearing-meat-peddler-s-bell-bearing",
-    "bell-bearing-pidia-s-bell-bearing",
-    "bell-bearing-seluvis-s-bell-bearing",
-    "bell-bearing-smithing-stone-miner-s-bell-bearing-1",
-    "bell-bearing-thops-s-bell-bearing",
     "cookbook-glintstone-craftsman-s-cookbook-1",
     "cookbook-glintstone-craftsman-s-cookbook-2",
     "cookbook-glintstone-craftsman-s-cookbook-3",
@@ -106,72 +855,22 @@
     "cookbook-glintstone-craftsman-s-cookbook-7",
     "cookbook-glintstone-craftsman-s-cookbook-8",
     "cookbook-nomadic-warrior-s-cookbook-12",
-    "crystal-tear-cerulean-crystal-tear",
-    "crystal-tear-dexterity-knot-crystal-tear",
-    "crystal-tear-intelligence-knot-crystal-tear",
-    "crystal-tear-ruptured-crystal-tear",
-    "golden-seed-11",
-    "golden-seed-12",
-    "golden-seed-13",
-    "golden-seed-16",
-    "great-rune-great-rune-of-the-unborn",
-    "imbued-sword-key-01",
-    "imbued-sword-key-02",
-    "imbued-sword-key-03",
-    "incantation-bloodflame-blade",
-    "incantation-flame-cleanse-me",
-    "incantation-flame-of-the-fell-god",
-    "incantation-swarm-of-flies",
-    "key-item-academy-glintstone-key",
-    "key-item-academy-scroll",
-    "key-item-amber-starlight",
-    "key-item-black-knifeprint",
-    "key-item-carian-inverted-statue",
-    "key-item-conspectus-scroll",
     "key-item-cracked-pot",
-    "key-item-cursemark-of-death",
-    "key-item-dark-moon-ring",
-    "key-item-discarded-palace-key",
-    "key-item-dragon-cult-prayerbook",
-    "key-item-fire-monks-prayerbook",
     "key-item-gold-sewing-needle",
     "key-item-golden-tailoring-tools",
-    "key-item-haligtree-secret-medallion-right",
     "key-item-miniature-ranni",
-    "key-item-ritual-pot",
-    "key-item-seluvis-s-introduction",
-    "key-item-seluvis-s-potion",
-    "larval-tear-03",
-    "larval-tear-04",
-    "larval-tear-05",
-    "map-fragment-map-liurnia-east",
-    "map-fragment-map-liurnia-north",
-    "map-fragment-map-liurnia-west",
-    "memory-stone-03",
-    "memory-stone-05",
-    "memory-stone-06",
-    "remembrance-remembrance-of-the-full-moon-queen",
-    "sacred-tear-06",
-    "sacred-tear-07",
-    "shabriri-grape-02",
-    "shabriri-grape-03",
     "shield-albinauric-shield",
     "shield-blue-white-wooden-shield",
     "shield-carian-knight-s-shield",
     "shield-cuckoo-greatshield",
     "shield-eclipse-crest-greatshield",
-    "shield-ice-crest-shield",
     "shield-jellyfish-shield",
     "shield-spiralhorn-shield",
     "sorcery-adula-s-moonblade",
-    "sorcery-ancient-death-rancor",
-    "sorcery-briars-of-sin",
     "sorcery-cannon-of-haima",
     "sorcery-carian-phalanx",
-    "sorcery-carian-piercer",
     "sorcery-carian-retaliation",
     "sorcery-carian-slicer",
-    "sorcery-comet",
     "sorcery-crystal-barrage",
     "sorcery-crystal-release",
     "sorcery-frozen-armament",
@@ -183,7 +882,6 @@
     "sorcery-gravity-well",
     "sorcery-great-glintstone-shard",
     "sorcery-greatblade-phalanx",
-    "sorcery-loretta-s-greatbow",
     "sorcery-lucidity",
     "sorcery-magic-downpour",
     "sorcery-magic-glintblade",
@@ -201,7 +899,6 @@
     "sorcery-terra-magica",
     "spirit-ash-albinauric-ashes",
     "spirit-ash-avionette-soldier-ashes",
-    "spirit-ash-black-knife-tiche",
     "spirit-ash-clayman-ashes",
     "spirit-ash-dung-eater-puppet",
     "spirit-ash-finger-maiden-therolina-puppet",
@@ -209,25 +906,16 @@
     "spirit-ash-jarwight-puppet",
     "spirit-ash-kaiden-sellsword-ashes",
     "spirit-ash-land-squirt-ashes",
-    "spirit-ash-latenna-the-albinauric-spirit-ash",
     "spirit-ash-nepheli-loux-puppet",
     "spirit-ash-page-ashes",
     "spirit-ash-raya-lucaria-soldier-ashes",
     "spirit-ash-skeletal-bandit-ashes",
     "spirit-ash-twinsage-sorcerer-ashes",
-    "stonesword-key-15",
-    "stonesword-key-16",
-    "stonesword-key-17",
-    "stonesword-key-18",
-    "stonesword-key-19",
-    "stonesword-key-23",
     "talisman-assassin-s-cerulean-dagger",
     "talisman-carian-filigreed-crest",
     "talisman-cerulean-amber-medallion",
     "talisman-cerulean-amber-medallion-2",
     "talisman-cerulean-seed-talisman",
-    "talisman-crucible-knot-talisman",
-    "talisman-graven-mass-talisman",
     "talisman-longtail-cat-talisman",
     "talisman-mottled-necklace",
     "talisman-red-feathered-branchsword",
@@ -243,7 +931,6 @@
     "weapon-academy-glintstone-staff",
     "weapon-albinauric-bow",
     "weapon-albinauric-staff",
-    "weapon-azur-s-glintstone-staff",
     "weapon-banished-knight-s-halberd",
     "weapon-carian-glintblade-staff",
     "weapon-carian-glintstone-staff",
@@ -260,21 +947,21 @@
     "weapon-glintstone-kris",
     "weapon-icerind-hatchet",
     "weapon-iron-ball",
-    "weapon-ivory-sickle",
     "weapon-lazuli-glintstone-sword",
     "weapon-lucerne",
     "weapon-monk-s-flameblade",
     "weapon-nightrider-glaive",
     "weapon-ripple-blade",
     "weapon-ripple-crescent-halberd",
-    "weapon-rosus-axe",
     "weapon-royal-greatsword",
     "weapon-scythe",
     "weapon-stormhawk-axe",
-    "weapon-sword-of-night-and-flame",
     "weapon-troll-knight-s-sword",
-    "weapon-urumi",
     "weapon-watchdog-s-staff",
-    "whetblade-glintstone-whetblade"
+    "whetblade-glintstone-whetblade",
+    "spirit-ash-dolores-the-sleeping-arrow-puppet",
+    "talisman-graven-school-talisman",
+    "talisman-radagon-icon",
+    "sorcery-carian-greatsword"
   ]
 }

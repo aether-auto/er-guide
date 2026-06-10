@@ -2,24 +2,249 @@
   "id": "dragonbarrow",
   "name": "Dragonbarrow",
   "order": 7,
-  "legs": [],
-  "cleanup": [
-    "ash-of-war-ash-of-war-beast-s-roar",
-    "crystal-tear-opaline-hardtear",
-    "crystal-tear-stonebarb-cracked-tear",
-    "golden-seed-10",
-    "incantation-beast-claw-spell",
-    "incantation-bestial-constitution",
-    "incantation-bestial-vitality",
-    "incantation-greyoll-s-roar",
-    "incantation-gurranq-s-beast-claw",
-    "map-fragment-map-dragonbarrow",
-    "talisman-bull-goat-s-talisman",
-    "talisman-dragoncrest-shield-talisman",
-    "talisman-flamedrake-talisman-2",
-    "weapon-beastclaw-greathammer",
-    "weapon-cinquedea",
-    "weapon-gargoyle-s-black-halberd",
-    "weapon-gargoyle-s-blackblade"
-  ]
+  "legs": [
+    {
+      "id": "dragonbarrow-01",
+      "from": "Third Church of Marika (Limgrave sending gate)",
+      "to": "Bestial Sanctum",
+      "summary": "A sending gate northeast of the Third Church of Marika in Limgrave teleports you directly to the Bestial Sanctum in northeast Dragonbarrow — accessible very early before Caelid is cleared. Gurranq, Beast Clergyman, trades incantations for Deathroot. The Black Blade Kindred field boss guards the front door; avoid it on a first visit unless overleveled.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the Third Church of Marika in east Limgrave, ride north to find the sending gate on the hilltop. This takes you to the Bestial Sanctum grace in northeast Dragonbarrow. The Black Blade Kindred patrols outside — it is a very high-level field boss; avoid on first approach."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-dragonbarrow",
+          "note": "Stele on the main road just south of the Dragonbarrow Fork grace."
+        },
+        {
+          "type": "quest",
+          "id": "quest-gurranq-deathroot-1",
+          "questline": "Gurranq",
+          "text": "Give Gurranq the 1st Deathroot (found in the Limgrave Deathtouched Catacombs or other catacombs). He gives the Clawmark Seal and Beast Eye.",
+          "missable": {
+            "lockedBy": "None — Gurranq waits indefinitely",
+            "note": "Beast Eye is needed to detect nearby Deathroot. Collect all 9 Deathroot across the game to exhaust his shop; he leaves after the 9th."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-clawmark-seal",
+          "note": "Given by Gurranq for 1st Deathroot."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-beast-eye",
+          "note": "Given by Gurranq for 1st Deathroot — pulses to reveal nearby Deathroot."
+        },
+        {
+          "type": "quest",
+          "id": "quest-gurranq-deathroot-2to3",
+          "questline": "Gurranq",
+          "text": "Give 2nd and 3rd Deathroot to Gurranq for Bestial Sling and Bestial Constitution incantations."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-bestial-sling",
+          "note": "Given by Gurranq for 2nd Deathroot."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-bestial-constitution",
+          "note": "Given by Gurranq for 3rd Deathroot."
+        },
+        {
+          "type": "quest",
+          "id": "quest-gurranq-deathroot-4hostile",
+          "questline": "Gurranq",
+          "text": "Give 4th Deathroot — Gurranq becomes hostile. Reduce him to ~70% HP (do NOT kill him) to subdue him. He resumes trading and gives Ash of War: Beast's Roar.",
+          "missable": {
+            "lockedBy": "Killing Gurranq",
+            "note": "Killing Gurranq permanently ends his questline and loses all remaining incantations."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-beast-s-roar",
+          "note": "Given by Gurranq for 4th Deathroot (after subduing him)."
+        },
+        {
+          "type": "quest",
+          "id": "quest-gurranq-deathroot-5to7",
+          "questline": "Gurranq",
+          "text": "Give 5th, 6th, and 7th Deathroot for Beast Claw, Stone of Gurranq, and Beastclaw Greathammer."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-beast-claw-spell",
+          "note": "Given by Gurranq for 5th Deathroot."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-stone-of-gurranq",
+          "note": "Given by Gurranq for 6th Deathroot."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-beastclaw-greathammer",
+          "note": "Given by Gurranq for 7th Deathroot."
+        },
+        {
+          "type": "quest",
+          "id": "quest-gurranq-deathroot-8to9",
+          "questline": "Gurranq",
+          "text": "Give 8th and 9th Deathroot for Gurranq's Beast Claw and Ancient Dragon Smithing Stone. After the 9th, he says farewell and departs."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-gurranq-s-beast-claw",
+          "note": "Given by Gurranq for 8th Deathroot."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-bestial-vitality",
+          "note": "Also from Gurranq's shop — purchased at any point during questline."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-cinquedea",
+          "note": "Corpse on the cliff west side of Bestial Sanctum — drop down carefully from the west ledge of the sanctum."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-dragoncrest-shield-talisman",
+          "note": "Corpse on the cliff west of Bestial Sanctum, same area as Cinquedea — drop down west ledge."
+        }
+      ]
+    },
+    {
+      "id": "dragonbarrow-02",
+      "from": "Dragonbarrow West",
+      "to": "Fort Faroth / Elder Dragon Greyoll",
+      "summary": "Ride south through Dragonbarrow to Elder Dragon Greyoll sleeping on the plateau east of Fort Faroth. Greyoll herself can be bled out without a true fight (stab her tail repeatedly while her whelps aggro). Fort Faroth holds the Dectus Medallion (Right) needed for the Grand Lift of Dectus, and Radagon's Soreseal (one of the best mid-game talismans).",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Dragonbarrow West grace, ride east then south toward Fort Faroth. Elder Dragon Greyoll lies on the plateau east of the fort — her whelps will aggro but she barely moves. Bleed buildup is very effective."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dragonbarrow-elder-dragon-greyoll",
+          "text": "Elder Dragon Greyoll — bleed her to death at the tail. Grants 50,000 runes and the Greyoll's Roar incantation."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-greyoll-s-roar",
+          "note": "Dropped by Elder Dragon Greyoll. Powerful AOE roar that debuffs enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-opaline-hardtear",
+          "note": "Dropped by the Putrid Avatar east of the Minor Erdtree in Dragonbarrow (near Greyoll's area)."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-stonebarb-cracked-tear",
+          "note": "Also dropped by the Putrid Avatar near the Minor Erdtree in Dragonbarrow."
+        },
+        {
+          "type": "direction",
+          "text": "Head into Fort Faroth. The fort is infested with bats and giant rats. The key items are: Dectus Medallion (Right) on the top floor, and Radagon's Soreseal in a chest accessed by dropping through the roof opening."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-dectus-medallion-right",
+          "note": "Top floor of Fort Faroth — chest near the ladder. Combines with Dectus Medallion (Left) from Fort Haight (Limgrave) to activate the Grand Lift of Dectus to Altus Plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-radagon-s-soreseal",
+          "note": "Fort Faroth — drop through the opening in the roof and find the corpse on the wooden walkways below. Raises Vig/End/Str/Dex by 5 each but also raises damage taken. CLAIMED from 24-ashen-capital.json."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-bull-goat-s-talisman",
+          "note": "Dropped by the Great Wyrm Theodorix boss or a Crucible Knight in Dragonbarrow area (Dragonbarrow Cave dungeon)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-flamedrake-talisman-2",
+          "note": "Chest in the Dragonbarrow Cave dungeon (eastern Dragonbarrow)."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-10",
+          "note": "Small golden tree near the Minor Erdtree in Dragonbarrow."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-battlemage-hugues-spirit-ash",
+          "note": "Dropped by Battlemage Hugues (field boss) in eastern Dragonbarrow — near the Lenne's Rise area."
+        }
+      ]
+    },
+    {
+      "id": "dragonbarrow-03",
+      "from": "Farum Greatbridge",
+      "to": "Divine Tower of Caelid",
+      "summary": "Climb the outside of the Divine Tower of Caelid to activate Radahn's Great Rune. A Godskin Apostle guards the top. The Godslayer's Greatsword is inside the tower. Afterward, the Great Rune is fully powered — equip it and use a Rune Arc to receive the rune's effect.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "The Divine Tower of Caelid is in northern Dragonbarrow. There is no conventional entrance — scale the outside using the narrow ledges and ladders on the tower's exterior. Two Sites of Grace are inside (Center and Basement)."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dragonbarrow-godskin-apostle",
+          "text": "Godskin Apostle — inside the Divine Tower of Caelid. Drops the Godskin Apostle Set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-godskin-apostle-hood",
+          "note": "Dropped by Godskin Apostle — Divine Tower of Caelid."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-godskin-apostle-robe",
+          "note": "Godskin Apostle Set — Divine Tower."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-godskin-apostle-bracelets",
+          "note": "Godskin Apostle Set — Divine Tower."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-godskin-apostle-trousers",
+          "note": "Godskin Apostle Set — Divine Tower."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-godslayer-s-greatsword",
+          "note": "Chest inside the Divine Tower of Caelid (lower level, near the Basement grace)."
+        },
+        {
+          "type": "direction",
+          "text": "At the top of the tower, interact with the glowing rune in front of the Two Fingers corpse to activate Radahn's Great Rune. Equip it at any Site of Grace — use a Rune Arc to enable its effect (raises all attribute caps by 5 for the rest of the session)."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-ancient-dragons-lightning-spear",
+          "note": "Dropped by Ancient Dragon Lansseax in Dragonbarrow/Altus — a dragon that crashes from the sky on the road near Farum Greatbridge. Very powerful ancient dragon incantation."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-gargoyle-s-blackblade",
+          "note": "Dropped by the Black Blade Kindred boss in front of Bestial Sanctum or Farum Greatbridge."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-gargoyle-s-black-halberd",
+          "note": "Also dropped by Black Blade Kindred — two variants from the two separate Black Blade Kindred encounters."
+        }
+      ]
+    }
+  ],
+  "cleanup": []
 }
