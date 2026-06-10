@@ -43,3 +43,25 @@ export function regionCheckables(region: Region): string[] {
 export function countChecked(ids: string[], checked: Record<string, number>): number {
   return ids.reduce((n, id) => (checked[id] != null ? n + 1 : n), 0)
 }
+
+/**
+ * The ordered steps shown for a region view: the selected leg's steps, or —
+ * with no leg selected — every leg's steps followed by the cleanup sweep.
+ */
+export function displaySteps(region: Region, legId?: string): Step[] {
+  const leg = legId ? region.legs.find((l) => l.id === legId) : undefined
+  if (leg) return leg.steps
+  return [
+    ...region.legs.flatMap((l) => l.steps),
+    ...region.cleanup.map((id): Step => ({ type: 'item', itemId: id })),
+  ]
+}
+
+/** First unchecked checkable step's id — the "next up" target. */
+export function firstUncheckedId(steps: Step[], checked: Record<string, number>): string | null {
+  for (const step of steps) {
+    const id = checkableId(step)
+    if (id != null && checked[id] == null) return id
+  }
+  return null
+}
