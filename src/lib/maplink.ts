@@ -8,8 +8,11 @@ import type { MapCode, MapRef } from './types'
 //   (confirmed from Mimic Tear: ?id=1565&lat=-188.132812&lng=128.731198&code=mapB)
 // Ashen Capital (post-burn Leyndell overlay) uses code=mapC on the same base page
 //   (mapC discovered in the marker cache — see scripts/cache/map/README.md).
-// DLC deep links use: Interactive+Map?id=<id>&code=mapD (no lat/lng in wiki links)
-//   (confirmed from Scadutree Fragment: ?id=654882&code=mapD and others)
+// DLC deep links observed on the wiki omit lat/lng: Interactive+Map?id=<id>&code=mapD
+//   (confirmed from Scadutree Fragment: ?id=654882&code=mapD and others). mapUrl()
+//   nevertheless appends lat/lng for ALL layers for consistency — the map accepts or
+//   ignores the extra params, and the coordinates-only fallback matters for refs
+//   without a markerId.
 // The DLC has its own dedicated page: /Shadow+of+the+Erdtree+Map (HTTP 200 confirmed)
 //   but item deep links go through the base Interactive+Map with code=mapD.
 // zoom param is NOT used in actual wiki item deep links (absent from all observed URLs).

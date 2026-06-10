@@ -256,6 +256,8 @@ const LOCATION_LAYERS = new Set([
 const wikiCats = await loadCacheDir('wikigg')
 const fanapi = await loadCacheDir('fanapi')
 const markerFiles = await loadCacheDir('map')
+if (wikiCats.length === 0) throw new Error('wikigg cache is empty — run scripts/fetch.mjs first')
+if (markerFiles.length === 0) console.warn('WARNING: map cache is empty — all items will be unmatched')
 const overrides = JSON.parse(await readFile(path.join(DATA, 'overrides.json'), 'utf8'))._entries ?? {}
 const missables = JSON.parse(await readFile(path.join(DATA, 'missables.json'), 'utf8'))._entries ?? {}
 
@@ -409,6 +411,9 @@ for (const s of SINGLETON_SERIES) {
   const pools = seriesMarkerPools.get(s.idBase ?? s.category)
   for (let i = 1; i <= total; i++) {
     const isDlc = i > s.baseCount
+    // NOTE: when idBase is set, the id does NOT begin with the category string
+    // ('imbued-sword-key-01' has category 'key-item') — use item.category, never
+    // parse the id to recover a category.
     const id = `${s.idBase ?? s.category}-${String(i).padStart(2, '0')}`
     const marker = isDlc ? pools.dlc[i - s.baseCount - 1] : pools.base[i - 1]
     items.set(id, {
