@@ -76,11 +76,14 @@ export interface Leg {
   steps: Step[]
 }
 
+/** Opaque alias for string ids that correspond to entries in data/items.json. */
+export type ItemId = string
+
 export interface Region {
   id: string
   name: string
   order: number
   dlc?: boolean
   legs: Leg[]
-  cleanup: string[]
+  cleanup: ItemId[]
 }
