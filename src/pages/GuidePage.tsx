@@ -1,35 +1,29 @@
-import { useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
-import { regions } from '../lib/data'
+import { displaySteps, firstUncheckedId, regions } from '../lib/data'
+import type { MapCode } from '../lib/types'
+import { useProgress } from '../lib/useProgress'
 import TopBar from '../components/TopBar'
-import Sidebar from '../components/Sidebar'
-import RegionView from '../components/RegionView'
-import MapPanel from '../components/MapPanel'
+import MapView from '../components/MapView'
+import RoutePanel from '../components/RoutePanel'
 
 export default function GuidePage() {
   const { regionId, legId } = useParams()
+  const { snapshot } = useProgress()
   const region = regions.find((r) => r.id === regionId)
-  const dlc = region?.dlc ?? false
-  const mainRef = useRef<HTMLElement>(null)
-  useEffect(() => {
-    mainRef.current?.scrollTo(0, 0)
-  }, [regionId])
+
+  // DLC regions auto-show the DLC layer.
+  const initialLayer: MapCode = region?.dlc ? 'dlc' : 'overworld'
+  // Route emphasis for the map: highlighted leg + pulsing next-up pin.
+  const nextUpId = region ? firstUncheckedId(displaySteps(region, legId), snapshot.checked) : null
+
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex h-screen flex-col overflow-hidden">
       <TopBar />
-      <div className="flex min-h-0 flex-1">
-        <aside className="hidden w-64 shrink-0 md:block">
-          <Sidebar />
-        </aside>
-        <main ref={mainRef} className="min-w-0 flex-1 overflow-y-auto">
-          {region ? <RegionView region={region} legId={legId} /> : <p className="p-8">Region not found.</p>}
-        </main>
-        <aside className="hidden w-[38%] shrink-0 border-l border-edge lg:block">
-          <MapPanel dlc={dlc} />
-        </aside>
-      </div>
-      <div className="h-72 border-t border-edge lg:hidden">
-        <MapPanel dlc={dlc} />
+      <div className="relative flex-1 overflow-hidden">
+        {/* The map IS the page — full-viewport canvas */}
+        <MapView initialLayer={initialLayer} activeLegId={legId ?? null} nextUpId={nextUpId} />
+        {/* The running guide list, overlaid left (bottom sheet on mobile) */}
+        <RoutePanel />
       </div>
     </div>
   )
