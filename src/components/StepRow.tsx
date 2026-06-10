@@ -5,7 +5,7 @@ import { useUi } from '../App'
 
 export default function StepRow({ step, item }: { step: Step; item?: Item }) {
   const { snapshot, store } = useProgress()
-  const { showOnMap } = useUi()
+  const { focus } = useUi()
 
   if (step.type === 'direction') {
     return <li className="py-1.5 pl-7 text-sm text-ink-dim italic">{step.text}</li>
@@ -56,7 +56,7 @@ export default function StepRow({ step, item }: { step: Step; item?: Item }) {
       <div className="flex shrink-0 gap-2 text-xs">
         {item?.map ? (
           <button
-            onClick={() => showOnMap(item.map!)}
+            onClick={() => focus(item.map!, item.id)}
             aria-label={`Show ${item.name} on map`}
             className="text-gold hover:underline"
           >
