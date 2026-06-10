@@ -40,4 +40,4 @@ export function mapUrl(ref: MapRef): string {
   return url.toString()
 }
 
-export const DEFAULT_MAP_URL = DLC_MAP_PAGE
+export const DEFAULT_MAP_URL = MAP_PAGE.overworld

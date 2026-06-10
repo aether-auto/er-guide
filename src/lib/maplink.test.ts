@@ -24,7 +24,7 @@ describe('mapUrl', () => {
     expect(new Set([a, b, c]).size).toBe(3)
   })
 
-  it('exports a default map url for the idle iframe', () => {
-    expect(DEFAULT_MAP_URL).toMatch(/^https:\/\//)
+  it('exports the overworld map page as the default idle iframe url', () => {
+    expect(DEFAULT_MAP_URL).toBe('https://eldenring.wiki.fextralife.com/Interactive+Map')
   })
 })
