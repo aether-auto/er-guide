@@ -1,0 +1,4 @@
+{
+  "_doc": "itemId -> { lockedBy, note }. Populated during route authoring (Tasks 17-24).",
+  "_entries": {}
+}

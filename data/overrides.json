@@ -1,0 +1,4 @@
+{
+  "_doc": "itemId -> { map: {code, markerId, lat, lng} | null, exclude: true, markerName: 'exact marker title to match' }",
+  "_entries": {}
+}
