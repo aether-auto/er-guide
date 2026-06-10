@@ -30,6 +30,7 @@ export default function ProgressPage() {
   }
 
   async function doImport(file: File) {
+    if (fileRef.current) fileRef.current.value = ''
     try {
       store.importJson(await file.text())
       setImportError('')
@@ -114,6 +115,7 @@ export default function ProgressPage() {
           <div>
             <h2 className="font-display mb-2 text-lg text-gold-dim">By category</h2>
             <table className="w-full text-sm">
+              <thead className="sr-only"><tr><th scope="col">Category</th><th scope="col">Progress</th></tr></thead>
               <tbody>
                 {[...byCategory.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([cat, row]) => (
                   <tr key={cat} className="border-b border-edge/50">
@@ -129,6 +131,7 @@ export default function ProgressPage() {
           <div>
             <h2 className="font-display mb-2 text-lg text-gold-dim">By region</h2>
             <table className="w-full text-sm">
+              <thead className="sr-only"><tr><th scope="col">Region</th><th scope="col">Progress</th></tr></thead>
               <tbody>
                 {regions.map((region) => {
                   const ids = regionCheckables(region)
