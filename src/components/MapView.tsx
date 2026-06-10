@@ -140,9 +140,12 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
       maxZoom: 7,
       maxBounds: MAP_BOUNDS,
       maxBoundsViscosity: 0.8,
-      zoomControl: true,
+      // Default zoom control sits top-left, underneath the RoutePanel overlay —
+      // place it bottom-right instead.
+      zoomControl: false,
       attributionControl: true,
     })
+    L.control.zoom({ position: 'bottomright' }).addTo(map)
     mapRef.current = map
 
     tileLayerRef.current = L.tileLayer(tileUrl(layerRef.current), {
