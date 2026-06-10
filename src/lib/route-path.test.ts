@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { Item, Leg, MapRef } from './types'
-import { routePathForLayer } from './route-path'
+import { nextUpSegment, routePathForLayer } from './route-path'
 
 function makeItem(id: string, code: 'overworld' | 'underground' | 'ashen' | 'dlc', lat: number, lng: number): Item {
   const ref: MapRef = { code, markerId: null, lat, lng }
@@ -72,5 +72,40 @@ describe('routePathForLayer', () => {
       steps: [{ type: 'item', itemId: 'item-nomap' }],
     }
     expect(routePathForLayer(legSingleNoMap, ITEMS, 'overworld')).toEqual([])
+  })
+})
+
+describe('nextUpSegment', () => {
+  it('returns segment from next-up item to the following mapped step on the same layer', () => {
+    // From item-ow1, the next mapped overworld step is item-ow2 (item-ug1 is
+    // underground and skipped on the overworld layer).
+    expect(nextUpSegment(LEG_MIXED, ITEMS, 'overworld', 'item-ow1')).toEqual([
+      [-100, 100],
+      [-105, 102],
+    ])
+  })
+
+  it('skips unmapped items when finding the following step', () => {
+    // From item-ow2, item-nomap has no marker → segment goes to item-ow3.
+    expect(nextUpSegment(LEG_MIXED, ITEMS, 'overworld', 'item-ow2')).toEqual([
+      [-105, 102],
+      [-110, 104],
+    ])
+  })
+
+  it('returns null when the next-up item is the last mapped step', () => {
+    expect(nextUpSegment(LEG_MIXED, ITEMS, 'overworld', 'item-ow3')).toBeNull()
+  })
+
+  it('returns null when the next-up item is not in the leg', () => {
+    expect(nextUpSegment(LEG_MIXED, ITEMS, 'overworld', 'item-elsewhere')).toBeNull()
+  })
+
+  it('returns null when the next-up item is on a different layer', () => {
+    expect(nextUpSegment(LEG_MIXED, ITEMS, 'overworld', 'item-ug1')).toBeNull()
+  })
+
+  it('returns null for an empty leg', () => {
+    expect(nextUpSegment(LEG_EMPTY, ITEMS, 'overworld', 'item-ow1')).toBeNull()
   })
 })
