@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0e0c09;
+  --color-panel: #17140f;
+  --color-panel2: #1e1a13;
+  --color-edge: #2c261b;
+  --color-gold: #c8a55a;
+  --color-gold-dim: #8a7444;
+  --color-ink: #d8d2c4;
+  --color-ink-dim: #8f887a;
+  --color-missable: #e0a13c;
+  --color-done: #5f7a4e;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+body {
+  @apply bg-bg text-ink antialiased;
+}
