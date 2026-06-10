@@ -10,6 +10,8 @@
     "typecheck": "tsc --noEmit && tsc -p tsconfig.node.json --noEmit",
     "test": "vitest run",
     "fetch": "node scripts/fetch.mjs",
+    "fetch-tiles": "node scripts/fetch-tiles.mjs",
+    "build-map-extras": "node scripts/build-map-extras.mjs",
     "build-data": "node scripts/build-data.mjs",
     "scaffold-regions": "node scripts/scaffold-regions.mjs",
     "validate": "node scripts/validate.mjs"
@@ -25,6 +27,8 @@
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "@vitejs/plugin-react": "^4.5.0",
+    "playwright": "^1.60.0",
+    "sharp": "^0.35.0",
     "tailwindcss": "^4.1.8",
     "typescript": "~5.8.3",
     "vitest": "^3.2.0"
