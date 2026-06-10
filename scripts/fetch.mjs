@@ -122,7 +122,7 @@ for (const resource of sources.fanapi.resources) {
 // Marker `id` is the Fextralife `?id=` deep-link param. x = Leaflet lat, y = lng
 // (the iframe code does `new L.latLng([this.x, this.y])`).
 function extractJsArrayLiteral(html, varName) {
-  const m = html.match(new RegExp(`var ${varName} = (\\[.*?\\]);\\n`, 's'))
+  const m = html.match(new RegExp(`var ${varName} = (\\[.*?\\]);`, 's'))
   if (!m) throw new Error(`could not find "var ${varName} = [...]" in iframe HTML`)
   return JSON.parse(m[1])
 }
