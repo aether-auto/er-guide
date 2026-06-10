@@ -17,3 +17,204 @@
 body {
   @apply bg-bg text-ink antialiased;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   MAP — pins, graces, popups, panel, bottom sheet
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Category pins ──────────────────────────────────────── */
+.er-pin {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #1e1a13;
+  border: 2px solid var(--pin-color, #c8a55a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.er-pin:hover {
+  transform: scale(1.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* Checked: desaturate + dim + checkmark */
+.er-pin--checked {
+  filter: saturate(0.2) opacity(0.55);
+}
+.er-pin--checked::after {
+  content: '✓';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 9px;
+  color: #fff;
+  background: #5f7a4e;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Next-up: gold pulsing halo */
+.er-pin--nextup {
+  border-color: #c8a55a;
+  box-shadow: 0 0 0 0 rgba(200, 165, 90, 0.7);
+  animation: er-pin-pulse 1.6s ease-out infinite;
+}
+
+@keyframes er-pin-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(200, 165, 90, 0.7); }
+  70%  { box-shadow: 0 0 0 10px rgba(200, 165, 90, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(200, 165, 90, 0); }
+}
+
+/* ── Grace glow ─────────────────────────────────────────── */
+.er-grace {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f5d77a 0%, #c8a55a 45%, transparent 70%);
+  box-shadow: 0 0 6px 2px rgba(200, 165, 90, 0.5);
+  transition: transform 0.15s ease;
+}
+
+.er-grace:hover {
+  transform: scale(1.4);
+}
+
+/* ── Leaflet popup overrides ─────────────────────────────── */
+.leaflet-popup-content-wrapper {
+  background: #17140f;
+  border: 1px solid #2c261b;
+  border-radius: 6px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.8);
+  color: #d8d2c4;
+  padding: 0;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  width: 280px !important;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+.leaflet-popup-close-button {
+  color: #8f887a !important;
+  font-size: 18px !important;
+  top: 6px !important;
+  right: 8px !important;
+}
+.leaflet-popup-close-button:hover {
+  color: #c8a55a !important;
+}
+
+/* ── Leaflet zoom control ───────────────────────────────── */
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  background: #17140f;
+  border-color: #2c261b;
+  color: #d8d2c4;
+}
+.leaflet-bar a:hover {
+  background: #1e1a13;
+}
+
+/* ── Leaflet attribution ────────────────────────────────── */
+.leaflet-control-attribution {
+  background: rgba(14, 12, 9, 0.75) !important;
+  color: #8f887a !important;
+  font-size: 9px !important;
+}
+.leaflet-control-attribution a {
+  color: #8a7444 !important;
+}
+
+/* ── Leaflet tooltip (grace names) ──────────────────────── */
+.leaflet-tooltip {
+  background: #17140f;
+  border: 1px solid #2c261b;
+  color: #d8d2c4;
+  font-size: 11px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+.leaflet-tooltip-top::before {
+  border-top-color: #2c261b;
+}
+
+/* ── Route panel (floating left overlay) ───────────────── */
+.er-route-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 380px;
+  background: rgba(23, 20, 15, 0.93);
+  backdrop-filter: blur(4px);
+  border-right: 1px solid #2c261b;
+  z-index: 1000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Mobile bottom sheet ─────────────────────────────────── */
+@media (max-width: 640px) {
+  .er-route-panel {
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    height: 45vh;
+    min-height: 120px;
+    max-height: 85vh;
+    border-right: none;
+    border-top: 1px solid #2c261b;
+    border-radius: 12px 12px 0 0;
+    transition: height 0.25s ease;
+  }
+  .er-route-panel.er-route-panel--expanded {
+    height: 85vh;
+  }
+}
+
+/* ── Layer tabs ─────────────────────────────────────────── */
+.er-layer-tab {
+  padding: 2px 8px;
+  font-size: 11px;
+  border: 1px solid #2c261b;
+  border-radius: 4px;
+  background: rgba(23, 20, 15, 0.85);
+  color: #8f887a;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+.er-layer-tab.active,
+.er-layer-tab:hover {
+  background: #17140f;
+  color: #c8a55a;
+  border-color: #8a7444;
+}
+
+/* ── Drag handle (mobile) ───────────────────────────────── */
+.er-drag-handle {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: #2c261b;
+  margin: 8px auto 4px;
+  cursor: row-resize;
+  flex-shrink: 0;
+}
