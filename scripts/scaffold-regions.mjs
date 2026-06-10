@@ -228,6 +228,7 @@ for (const item of items) {
   // (base game only — ashen map code is never DLC)
   if (item.map?.code === 'ashen' && !item.dlc) {
     buckets.get('ashen-capital').push(item.id)
+    labeled.push({ lat: item.map.lat, lng: item.map.lng, code: item.map.code, dlc: item.dlc, regionId: 'ashen-capital' })
     continue
   }
 
@@ -259,8 +260,12 @@ for (const item of pending) {
       .slice(0, K)
     const votes = new Map()
     for (const n of nearest) votes.set(n.regionId, (votes.get(n.regionId) ?? 0) + 1)
-    const [topRegion, topVotes] = [...votes.entries()].sort((a, b) => b[1] - a[1])[0] ?? [null, 0]
-    if (topVotes >= MAJORITY) {
+    const sorted = [...votes.entries()].sort((a, b) => b[1] - a[1])
+    const [topRegion, topVotes] = sorted[0] ?? [null, 0]
+    // Require an unambiguous winner: a tie at the top means no clear majority —
+    // defer to human triage rather than depend on Map insertion order.
+    const unambiguous = sorted.length === 1 || sorted[1][1] < topVotes
+    if (topVotes >= MAJORITY && unambiguous) {
       placedId = topRegion
       knnPlaced++
     }

@@ -52,6 +52,7 @@ if (regionFiles.length === 0) warnings.push('no region files yet')
 
 const placed = new Map() // checkableId -> location string
 const stepIds = new Set()
+const legIds = new Set()
 const orders = new Set()
 function place(id, where) {
   if (placed.has(id)) errors.push(`${id} placed twice: ${placed.get(id)} AND ${where}`)
@@ -59,8 +60,14 @@ function place(id, where) {
 }
 
 for (const file of regionFiles) {
-  const region = JSON.parse(await readFile(path.join(regionDir, file), 'utf8'))
   const rw = `region ${file}`
+  let region
+  try {
+    region = JSON.parse(await readFile(path.join(regionDir, file), 'utf8'))
+  } catch (err) {
+    errors.push(`${rw}: invalid JSON — ${err.message}`)
+    continue
+  }
   if (!region.id || !region.name) errors.push(`${rw}: missing id/name`)
   if (typeof region.order !== 'number' || orders.has(region.order))
     errors.push(`${rw}: order missing or duplicated`)
@@ -72,7 +79,11 @@ for (const file of regionFiles) {
     const lw = `${rw} leg ${leg.id}`
     if (!leg.id || !leg.from || !leg.to || typeof leg.summary !== 'string')
       errors.push(`${lw}: missing id/from/to/summary`)
-    for (const [i, step] of (leg.steps ?? []).entries()) {
+    if (leg.id && legIds.has(leg.id)) errors.push(`${lw}: duplicate leg id`)
+    else if (leg.id) legIds.add(leg.id)
+    if (leg.steps != null && !Array.isArray(leg.steps))
+      errors.push(`${lw}: steps must be an array`)
+    for (const [i, step] of (Array.isArray(leg.steps) ? leg.steps : []).entries()) {
       const sw = `${lw} step ${i}`
       if (step.type === 'item') {
         if (!itemIds.has(step.itemId)) errors.push(`${sw}: unknown itemId "${step.itemId}"`)
@@ -118,7 +129,8 @@ for (const [cat, n] of Object.entries(expected)) {
 if (noMap > 0) warnings.push(`${noMap}/${items.length} items have no map marker`)
 
 // ---- report ----
-console.table(byCategory)
+// The per-category table is for local auditing; in CI the summary line + ERROR/WARN lines are the signal.
+if (!process.env.CI) console.table(byCategory)
 for (const w of warnings) console.warn('WARN:', w)
 for (const e of errors) console.error('ERROR:', e)
 console.log(`${items.length} items, ${regionFiles.length} regions, ${placed.size} placed, ${errors.length} errors, ${warnings.length} warnings`)
