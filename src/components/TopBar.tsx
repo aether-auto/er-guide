@@ -36,6 +36,8 @@ export default function TopBar() {
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          onBlur={() => setTimeout(() => setQuery(''), 150)}
+          onKeyDown={(e) => e.key === 'Escape' && setQuery('')}
           placeholder="Search items…"
           className="w-full rounded border border-edge bg-bg px-3 py-1 text-sm outline-none focus:border-gold-dim"
         />

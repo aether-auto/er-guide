@@ -55,7 +55,11 @@ export default function StepRow({ step, item }: { step: Step; item?: Item }) {
       </div>
       <div className="flex shrink-0 gap-2 text-xs">
         {item?.map ? (
-          <button onClick={() => showOnMap(item.map!)} className="text-gold hover:underline">
+          <button
+            onClick={() => showOnMap(item.map!)}
+            aria-label={`Show ${item.name} on map`}
+            className="text-gold hover:underline"
+          >
             map
           </button>
         ) : step.type === 'item' ? (

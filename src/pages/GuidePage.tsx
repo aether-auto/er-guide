@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import { regions } from '../lib/data'
 import TopBar from '../components/TopBar'
@@ -9,6 +10,10 @@ export default function GuidePage() {
   const { regionId, legId } = useParams()
   const region = regions.find((r) => r.id === regionId)
   const dlc = region?.dlc ?? false
+  const mainRef = useRef<HTMLElement>(null)
+  useEffect(() => {
+    mainRef.current?.scrollTo(0, 0)
+  }, [regionId])
   return (
     <div className="flex h-screen flex-col">
       <TopBar />
@@ -16,7 +21,7 @@ export default function GuidePage() {
         <aside className="hidden w-64 shrink-0 md:block">
           <Sidebar />
         </aside>
-        <main className="min-w-0 flex-1 overflow-y-auto">
+        <main ref={mainRef} className="min-w-0 flex-1 overflow-y-auto">
           {region ? <RegionView region={region} legId={legId} /> : <p className="p-8">Region not found.</p>}
         </main>
         <aside className="hidden w-[38%] shrink-0 border-l border-edge lg:block">
