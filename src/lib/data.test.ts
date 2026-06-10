@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { checkableId, countChecked, legCheckables } from './data'
-import type { Leg } from './types'
+import { checkableId, countChecked, legCheckables, regionCheckables } from './data'
+import type { Leg, Region } from './types'
 
 const leg: Leg = {
   id: 'l1', from: 'A', to: 'B', summary: '',
@@ -21,5 +21,13 @@ describe('data helpers', () => {
   })
   it('countChecked counts only checked ids', () => {
     expect(countChecked(['a', 'b', 'c'], { a: 1, c: 2, d: 3 })).toBe(2)
+  })
+  it('regionCheckables appends cleanup ids after leg checkables', () => {
+    const region: Region = {
+      id: 'r1', name: 'R1', order: 1,
+      legs: [leg],
+      cleanup: ['weapon-a', 'armor-b'],
+    }
+    expect(regionCheckables(region)).toEqual(['talisman-x', 'boss-y', 'quest-z', 'weapon-a', 'armor-b'])
   })
 })
