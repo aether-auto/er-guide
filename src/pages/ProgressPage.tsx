@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { items, regions, regionCheckables, countChecked, itemPosition } from '../lib/data'
+import { items, regions, regionCheckables, countChecked, countIgnored, itemPosition } from '../lib/data'
 import { CATEGORY_META, type Category } from '../lib/types'
 import { useProgress } from '../lib/useProgress'
 import { gistSync, type SyncStatus } from '../lib/gistSync'
@@ -37,14 +37,19 @@ export default function ProgressPage() {
     if (result.type === 'idle') setTokenInput('')
   }
 
+  // Ignored items are excluded from all totals (category, region, missables).
   const byCategory = new Map<Category, { total: number; done: number }>()
   for (const item of items) {
+    if (snapshot.ignored[item.id] != null) continue
     const row = byCategory.get(item.category) ?? { total: 0, done: 0 }
     row.total++
     if (snapshot.checked[item.id] != null) row.done++
     byCategory.set(item.category, row)
   }
-  const missablesPending = items.filter((i) => i.missable && snapshot.checked[i.id] == null)
+  const totalIgnored = Object.keys(snapshot.ignored).length
+  const missablesPending = items.filter(
+    (i) => i.missable && snapshot.checked[i.id] == null && snapshot.ignored[i.id] == null,
+  )
 
   function doExport() {
     const blob = new Blob([store.exportJson()], { type: 'application/json' })
@@ -239,8 +244,10 @@ export default function ProgressPage() {
               <thead className="sr-only"><tr><th scope="col">Region</th><th scope="col">Progress</th></tr></thead>
               <tbody>
                 {regions.map((region) => {
-                  const ids = regionCheckables(region)
+                  const allIds = regionCheckables(region)
+                  const ids = allIds.filter((id) => snapshot.ignored[id] == null)
                   const done = countChecked(ids, snapshot.checked)
+                  const ignoredCount = countIgnored(allIds, snapshot.ignored)
                   return (
                     <tr key={region.id} className="border-b border-edge/50">
                       <td className="py-1">
@@ -248,6 +255,7 @@ export default function ProgressPage() {
                       </td>
                       <td className={`py-1 text-right ${done === ids.length && ids.length > 0 ? 'text-done' : 'text-ink-dim'}`}>
                         {done}/{ids.length}
+                        {ignoredCount > 0 && <span className="ml-1 text-[10px] opacity-60">({ignoredCount}⊘)</span>}
                       </td>
                     </tr>
                   )
@@ -256,6 +264,13 @@ export default function ProgressPage() {
             </table>
           </div>
         </section>
+
+        {totalIgnored > 0 && (
+          <p className="mb-6 text-xs text-ink-dim">
+            ⊘ {totalIgnored} item{totalIgnored !== 1 ? 's' : ''} ignored — excluded from all totals.
+            Restore them from the route panel or map popups.
+          </p>
+        )}
       </main>
     </div>
   )
