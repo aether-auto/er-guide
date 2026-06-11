@@ -28,6 +28,22 @@
     "key-item-weathered-dagger": {
       "lockedBy": "Burning the Erdtree (Forge of the Giants)",
       "note": "Found in the Royal Capital; give to D to advance Fia's questline."
+    },
+    "talisman-rotten-winged-sword-insignia": {
+      "lockedBy": "Betray path at Elphael (red summon sign) or incomplete Millicent questline",
+      "note": "From Millicent's corpse on the assist path (gold sign vs her four sisters at Elphael). Mutually exclusive with Millicent's Prosthesis."
+    },
+    "key-item-miquella-s-needle": {
+      "lockedBy": "Betray path or incomplete Millicent questline",
+      "note": "Use the Unalloyed Gold Needle on Millicent's Scarlet Aeonia after assisting her and defeating Malenia; used in Placidusax's arena to undo the Frenzied Flame."
+    },
+    "talisman-millicent-s-prosthesis": {
+      "lockedBy": "Assist path at Elphael (gold summon sign) or incomplete Millicent questline",
+      "note": "From Millicent's corpse on the betray path (red sign). Mutually exclusive with Rotten Winged Sword Insignia."
+    },
+    "talisman-flock-s-canvas-talisman": {
+      "lockedBy": "Not completing Millicent's questline to either conclusion",
+      "note": "From Gowry's corpse after Millicent's questline concludes (either path)."
     }
   }
 }

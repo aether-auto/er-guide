@@ -596,11 +596,6 @@
           "note": "Second Radahn remembrance weapon variant."
         },
         {
-          "type": "item",
-          "itemId": "talisman-rotten-winged-sword-insignia",
-          "note": "Given by Millicent after Radahn — find her outside Rampart Gaol or near the Windmill Village (Altus) later in her questline."
-        },
-        {
           "type": "quest",
           "id": "quest-millicent-prosthesis",
           "questline": "Gowry / Millicent",
@@ -754,11 +749,6 @@
           "note": "Purchased from Finger Reader Enia at Roundtable Hold after defeating Radahn (Remembrance trade)."
         },
         {
-          "type": "item",
-          "itemId": "talisman-millicent-s-prosthesis",
-          "note": "Given by Millicent later in her quest (Altus Plateau phase), after giving her the Valkyrie's Prosthesis."
-        },
-        {
           "type": "direction",
           "text": "Obtain Valkyrie's Prosthesis from the Shaded Castle chest (Altus Plateau — handled in the Altus region) and return it to Millicent when she's at the Windmill Village grace."
         },
@@ -796,6 +786,30 @@
     }
   ],
   "cleanup": [
-    "weapon-staff-of-the-guilty"
+    "weapon-staff-of-the-guilty",
+    "bell-bearing-nomadic-merchant-s-bell-bearing-6",
+    "bell-bearing-nomadic-merchant-s-bell-bearing-7",
+    "bell-bearing-somberstone-miner-s-bell-bearing",
+    "cookbook-deserter-s-cookbook-2",
+    "cookbook-nomadic-warrior-s-cookbook-11",
+    "golden-seed-11",
+    "key-item-golden-sewing-needle",
+    "incantation-borealis-s-mist",
+    "incantation-dragonice",
+    "incantation-ekzykes-s-decay",
+    "incantation-glintstone-breath",
+    "incantation-magma-breath",
+    "incantation-pest-threads",
+    "incantation-rotten-breath",
+    "incantation-smarag-s-glintstone-breath",
+    "talisman-exultations",
+    "talisman-gold-scarab",
+    "talisman-woe-talismans",
+    "armor-scale-armor",
+    "weapon-beast-repellent-torch",
+    "weapon-iron-greatsword",
+    "weapon-rotten-crystal-spear",
+    "weapon-rotten-crystal-staff",
+    "weapon-warped-axe"
   ]
 }

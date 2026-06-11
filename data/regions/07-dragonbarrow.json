@@ -246,5 +246,8 @@
       ]
     }
   ],
-  "cleanup": []
+  "cleanup": [
+    "incantation-death-lightning",
+    "sorcery-blades-of-stone"
+  ]
 }

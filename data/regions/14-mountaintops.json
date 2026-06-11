@@ -60,7 +60,11 @@
           "type": "quest",
           "id": "quest-millicent-mountaintops",
           "questline": "Millicent",
-          "text": "Find Millicent sitting by the Ancient Snow Valley Ruins grace (northeast). Exhaust her dialogue — she reflects on the Haligtree and her rot."
+          "text": "Find Millicent sitting by the Ancient Snow Valley Ruins grace (northeast). Exhaust her dialogue — she reflects on the Haligtree and her rot.",
+          "missable": {
+            "lockedBy": "Incomplete prior Millicent questline steps",
+            "note": "Millicent only appears here if all earlier steps were completed: needle given at Church of the Plague, moved to Gowry's Shack post-Radahn, given Valkyrie's Prosthesis, spoken to at Altus Plateau, and met at Dominula Windmill Village after the Godskin Apostle. If any prior step was skipped, she will not appear in the Mountaintops and the questline concludes without the Haligtree ending."
+          }
         }
       ]
     },
@@ -169,7 +173,11 @@
           "type": "quest",
           "id": "quest-corhyn-goldmask-gravepost",
           "questline": "Corhyn/Goldmask",
-          "text": "Brother Corhyn and Goldmask stand on a bridge just south of Stargazers' Ruins (northwest of Giants' Gravepost). Exhaust Goldmask's puzzle dialogue — Corhyn will later reveal the solution. Skipping this delays the Erdtree Mending ending."
+          "text": "Brother Corhyn and Goldmask stand on a bridge just south of Stargazers' Ruins (northwest of Giants' Gravepost). Exhaust Goldmask's puzzle dialogue — Corhyn will later reveal the solution. Skipping this delays the Erdtree Mending ending.",
+          "missable": {
+            "lockedBy": "Burning the Erdtree (Forge of the Giants) before exhausting this dialogue",
+            "note": "Corhyn and Goldmask only advance here after you have used the Law of Regression sorcery before the Radagon statue in Leyndell and exhausted their dialogue there. Once you accept Melina's offer at the Forge of the Giants and the Erdtree burns, Leyndell becomes the Ashen Capital and Corhyn's state changes — this bridge encounter is no longer accessible. Complete this step before triggering Farum Azula."
+          }
         },
         {
           "type": "boss",
@@ -300,6 +308,28 @@
     "bell-bearing-isolated-merchant-s-bell-bearing-3",
     "cookbook-armorer-s-cookbook-1",
     "golden-seed-31",
-    "tool-radiant-baldachin-s-blessing"
+    "tool-radiant-baldachin-s-blessing",
+    "bell-bearing-gravity-stone-peddler-s-bell-bearing",
+    "bell-bearing-imprisoned-merchant-s-bell-bearing",
+    "cookbook-missionary-s-cookbook-7",
+    "cookbook-nomadic-warrior-s-cookbook-17",
+    "golden-seed-23",
+    "stonesword-key-31",
+    "incantation-fire-s-deadly-sin",
+    "incantation-flame-fall-upon-them",
+    "incantation-ghostflame-breath",
+    "incantation-giantsflame-take-thee",
+    "sorcery-briars-of-punishment",
+    "armor-black-knight-armor",
+    "armor-black-knight-gauntlets",
+    "armor-black-knight-greaves",
+    "armor-black-knight-helm",
+    "armor-brave-s-legwraps",
+    "weapon-death-ritual-spear",
+    "weapon-gargoyle-s-black-axe",
+    "weapon-gargoyle-s-black-blades",
+    "armor-brave-s-bracer",
+    "armor-brave-s-cord-circlet",
+    "armor-brave-s-leather-helm"
   ]
 }

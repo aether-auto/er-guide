@@ -716,5 +716,39 @@
       ]
     }
   ],
-  "cleanup": []
+  "cleanup": [
+    "ammo-golem-s-great-arrow",
+    "ammo-golem-s-magic-arrow",
+    "ammo-perfumer-s-bolt",
+    "bell-bearing-hermit-merchant-s-bell-bearing-2",
+    "bell-bearing-nomadic-merchant-s-bell-bearing-8",
+    "cookbook-nomadic-warrior-s-cookbook-13",
+    "cookbook-nomadic-warrior-s-cookbook-15",
+    "key-item-perfume-bottle",
+    "incantation-black-flame",
+    "incantation-black-flame-blade",
+    "incantation-black-flame-s-protection",
+    "incantation-lansseax-s-glaive",
+    "incantation-law-of-causality",
+    "incantation-litany-of-proper-death",
+    "incantation-order-s-blade",
+    "shield-distinguished-greatshield",
+    "shield-inverted-hawk-towershield",
+    "talisman-scorpion-charms",
+    "armor-blackflame-monk-armor",
+    "armor-blackflame-monk-gauntlets",
+    "armor-blackflame-monk-greaves",
+    "armor-blackflame-monk-hood",
+    "armor-greathood",
+    "armor-upper-class-robe",
+    "weapon-composite-bow",
+    "weapon-golem-fist",
+    "armor-depraved-perfumer-gloves",
+    "armor-depraved-perfumer-headscarf",
+    "armor-depraved-perfumer-robe",
+    "armor-depraved-perfumer-robe-altered",
+    "armor-depraved-perfumer-trousers",
+    "armor-perfumer-s-traveling-garb",
+    "armor-perfumer-s-traveling-garb-altered"
+  ]
 }

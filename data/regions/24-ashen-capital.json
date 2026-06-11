@@ -24,9 +24,8 @@
           "note": "Crimson Amber Medallion +2. On a corpse hanging over one of the wooden beams on the way down from the starting area, southwest of the Capital of Ash grace."
         },
         {
-          "type": "item",
-          "itemId": "memory-stone-04",
-          "note": "NOTE: acquisition text says 'Red Wolf of Radagon' — this item is actually a pickup in the ashen-capital or nearby area. Placed here based on acquisition text referencing ashen/endgame area. Mark as unverified if location conflicts with region 04-liurnia. (unverified)"
+          "type": "direction",
+          "text": "Memory Stone #4 is obtained from Red Wolf of Radagon in Raya Lucaria Academy (Liurnia, region 04) — not from this region. Ensure you collected it before proceeding past the point of no return."
         },
         {
           "type": "item",
@@ -175,6 +174,7 @@
     }
   ],
   "cleanup": [
+    "memory-stone-04",
     "armor-champion-bracers",
     "armor-champion-headband",
     "armor-champion-pauldron",
@@ -185,6 +185,9 @@
     "armor-elden-lord-crown",
     "armor-elden-lord-greaves",
     "talisman-godfrey-icon",
-    "talisman-radagon-s-seals"
+    "talisman-radagon-s-seals",
+    "armor-champion-gaiters",
+    "incantation-lord-s-divine-fortification",
+    "armor-elden-lord-armor-altered"
   ]
 }

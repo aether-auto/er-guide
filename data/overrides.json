@@ -16,6 +16,96 @@
         "lat": -57.5,
         "lng": 112.8
       }
+    },
+    "weapon-unarmed": {
+      "exclude": true
+    },
+    "armor-chest": {
+      "exclude": true
+    },
+    "talisman-elden-ring-talisman-template": {
+      "exclude": true
+    },
+    "weapon-unique-skill-blindfold-of-happiness": {
+      "exclude": true
+    },
+    "weapon-weapons-shadow-of-the-erdtree": {
+      "exclude": true
+    },
+    "weapon-melee-armaments-shadow-of-the-erdtree": {
+      "exclude": true
+    },
+    "shield-shields-shadow-of-the-erdtree": {
+      "exclude": true
+    },
+    "ash-of-war-ashes-of-war-shadow-of-the-erdtree": {
+      "exclude": true
+    },
+    "spirit-ash-ashes-shadow-of-the-erdtree": {
+      "exclude": true
+    },
+    "talisman-talismans-shadow-of-the-erdtree": {
+      "exclude": true
+    },
+    "talisman-arsenal-charms": {
+      "exclude": true
+    },
+    "talisman-boltdrake-talismans": {
+      "exclude": true
+    },
+    "talisman-cerulean-amber-medallions": {
+      "exclude": true
+    },
+    "talisman-clarifying-horn-charms": {
+      "exclude": true
+    },
+    "talisman-crimson-amber-medallions": {
+      "exclude": true
+    },
+    "talisman-dragoncrest-shield-talismans": {
+      "exclude": true
+    },
+    "talisman-erdtree-s-favors": {
+      "exclude": true
+    },
+    "talisman-faithful-s-canvas-talismans": {
+      "exclude": true
+    },
+    "talisman-flamedrake-talismans": {
+      "exclude": true
+    },
+    "talisman-graven-school-talismans": {
+      "exclude": true
+    },
+    "talisman-haligdrake-talismans": {
+      "exclude": true
+    },
+    "talisman-immunizing-horn-charms": {
+      "exclude": true
+    },
+    "talisman-mottled-necklaces": {
+      "exclude": true
+    },
+    "talisman-pearldrake-talismans": {
+      "exclude": true
+    },
+    "talisman-spelldrake-talismans": {
+      "exclude": true
+    },
+    "talisman-stalwart-horn-charms": {
+      "exclude": true
+    },
+    "talisman-viridian-amber-medallions": {
+      "exclude": true
+    },
+    "talisman-warrior-jar-shards": {
+      "exclude": true
+    },
+    "talisman-winged-sword-insignias": {
+      "exclude": true
+    },
+    "armor-head": {
+      "exclude": true
     }
   }
 }

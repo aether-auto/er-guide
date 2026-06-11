@@ -139,5 +139,10 @@
       ]
     }
   ],
-  "cleanup": []
+  "cleanup": [
+    "tool-baldachin-s-blessing",
+    "incantation-fortissax-s-lightning-spear",
+    "armor-deathbed-smalls",
+    "armor-gravekeeper-cloak-altered"
+  ]
 }

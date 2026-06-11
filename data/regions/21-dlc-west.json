@@ -290,6 +290,21 @@
     }
   ],
   "cleanup": [
-    "weapon-great-katana"
+    "weapon-great-katana",
+    "spirit-ash-black-knight-captain-huw",
+    "weapon-falx",
+    "weapon-death-knight-s-longhaft-axe",
+    "armor-imp-head-lion",
+    "incantation-knight-s-lightning-spear",
+    "ammo-igon-s-harpoon",
+    "ammo-rabbath-s-greatbolt",
+    "golden-seed-41",
+    "revered-spirit-ash-18",
+    "incantation-bayle-s-flame-lightning",
+    "incantation-bayle-s-tyranny",
+    "incantation-dragonbolt-of-florissax",
+    "incantation-rotten-butterflies",
+    "ash-of-war-ash-of-war-igon-s-drake-hunt",
+    "weapon-shadow-sunflower-blossom"
   ]
 }

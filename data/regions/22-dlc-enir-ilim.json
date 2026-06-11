@@ -130,5 +130,42 @@
       ]
     }
   ],
-  "cleanup": []
+  "cleanup": [
+    "incantation-furious-blade-of-ansbach",
+    "armor-ansbach-s-attire",
+    "armor-ansbach-s-attire-altered",
+    "armor-ansbach-s-boots",
+    "armor-ansbach-s-manchettes",
+    "armor-wise-man-s-mask",
+    "weapon-obsidian-lamina",
+    "armor-leda-s-armor",
+    "weapon-leda-s-sword",
+    "armor-thiollier-s-garb",
+    "armor-thiollier-s-garb-altered",
+    "armor-thiollier-s-gloves",
+    "armor-thiollier-s-mask",
+    "armor-thiollier-s-trousers",
+    "weapon-thiollier-s-hidden-needle",
+    "remembrance-remembrance-of-a-god-and-a-lord",
+    "scadutree-fragment-47",
+    "scadutree-fragment-48",
+    "scadutree-fragment-49",
+    "scadutree-fragment-50",
+    "revered-spirit-ash-24",
+    "revered-spirit-ash-25",
+    "incantation-light-of-miquella",
+    "incantation-spira",
+    "sorcery-fleeting-microcosm",
+    "sorcery-glintstone-nail",
+    "sorcery-miriam-s-vanishing",
+    "talisman-blessed-blue-dew-talisman",
+    "talisman-talisman-of-all-crucibles",
+    "weapon-abundance-and-decay-twinblade",
+    "weapon-ansbach-s-longbow",
+    "weapon-gazing-finger",
+    "weapon-staff-of-the-great-beyond",
+    "weapon-sword-of-darkness",
+    "weapon-sword-of-light",
+    "sorcery-glintstone-nails"
+  ]
 }

@@ -2,43 +2,280 @@
   "id": "haligtree",
   "name": "Miquella's Haligtree & Elphael",
   "order": 17,
-  "legs": [],
+  "legs": [
+    {
+      "id": "haligtree-01",
+      "from": "Ordina, Liturgical Town (Consecrated Snowfield)",
+      "to": "Haligtree Canopy",
+      "summary": "Use the teleporter in Ordina after lighting all four spectral candles to travel to the Haligtree canopy. Collect the two Stonesword Keys and the Oracle Envoy Ashes near the landing point, and grab the Prattling Pate and Envoy Crown before descending.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "At Ordina, Liturgical Town (north end of Consecrated Snowfield), enter the Evergaol on the north side of town. While in spectral form, light all four stationary candles scattered across the rooftops and alleyways — the two Black Knife Assassins are invisible, so move carefully. Candles stay lit even if you die. Once all four are lit, the magical barrier dissipates and the teleporter activates at the north end of town. Use it to travel to Miquella's Haligtree."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-46",
+          "note": "On a corpse at the tip of a branch directly behind you when you land at the Haligtree canopy entry point — turn around immediately after the teleport."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-47",
+          "note": "On a corpse at the tip of a nearby branch in the Haligtree canopy — look for a body on one of the larger horizontal limbs near the entry area."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-prattling-pate-my-beloved",
+          "note": "On the canopy branches two levels below the teleport landing point — descend via the branches and look for the corpse holding it before reaching the first grace."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-oracle-envoy-ashes",
+          "note": "Near the Haligtree Canopy site of grace, guarded by several Oracle Envoy enemies — the large round-bodied trumpet-blowing creatures. Clear them and collect from the corpse on the branch."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-envoy-crown",
+          "note": "On a corpse behind a Giant Oracle Envoy enemy near the Haligtree Canopy site of grace — the Giant Envoys are larger versions that drop dangerous bubbles."
+        }
+      ]
+    },
+    {
+      "id": "haligtree-02",
+      "from": "Haligtree Canopy",
+      "to": "Haligtree Promenade (Loretta)",
+      "summary": "Navigate the Haligtree Town canopy section — descend through branches and rooftops collecting the Pearldrake Talisman +2, Viridian Amber Medallion +2, and Boltdrake Talisman +2 before reaching Loretta's boss arena at the Haligtree Promenade. Defeat Loretta for her two drops.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the Haligtree Canopy grace, descend through the canopy branches toward Haligtree Town. The canopy section features extensive branch-jumping and rooftop traversal guarded by Spiritcalling Snails, Misbegotten Warriors, and Oracle Envoys."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-pearldrake-talisman-2",
+          "note": "Central Haligtree canopy area. From Haligtree Town, head northwest to a ladder, climb it, then jump backwards across a gap to a platform leading to a corpse at the base of a statue, guarded by a Misbegotten Warrior."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-viridian-amber-medallion-2",
+          "note": "From Haligtree Town Plaza, head southeast and drop down to the rooftops guarded by Spiritcalling Snails. Continue southeast and perform a running jump to a lower rooftop. Turn around and jump back into the building — the chest is in a room inside."
+        },
+        {
+          "type": "boss",
+          "id": "boss-haligtree-loretta",
+          "text": "Loretta, Knight of the Haligtree — Haligtree Promenade. A mounted knight with both melee and powerful Carian sorcery ranged attacks. Defeating her unlocks passage down to Elphael, Brace of the Haligtree."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-loretta-s-mastery",
+          "note": "Guaranteed drop from Loretta, Knight of the Haligtree at the Haligtree Promenade."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-loretta-s-war-sickle",
+          "note": "Guaranteed drop from Loretta, Knight of the Haligtree at the Haligtree Promenade."
+        }
+      ]
+    },
+    {
+      "id": "haligtree-03",
+      "from": "Elphael Inner Wall",
+      "to": "Prayer Room",
+      "summary": "Enter Elphael via the elevator after defeating Loretta. Collect the Rotten Crystal Sword immediately past the Elphael Inner Wall grace, then fight through the rot-infected streets. Grab the Miquellan Knight's Sword near the Prayer Room, the Rotten Staff from the Erdtree Avatar, and the Ghost Glovewort Bell Bearing from the graveyard northeast of the city.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "After defeating Loretta, take the elevator down into Elphael, Brace of the Haligtree. The Elphael Inner Wall grace is your first checkpoint here. The city is flooded with Scarlet Rot pools — wear rot-resistant armor or bring Preserving Boluses."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rotten-crystal-sword",
+          "note": "In a treasure chest guarded by three Crystalians in Elphael, behind large tree roots right after the Elphael Inner Wall grace."
+        },
+        {
+          "type": "boss",
+          "id": "boss-haligtree-putrid-avatar",
+          "text": "Putrid Avatar (Erdtree Avatar) — patrolling a ring walkway bridge in Elphael's east section. This rot-infected Avatar uses heavy slamming attacks and sprays Scarlet Rot. Optional but drops the Rotten Staff.",
+          "optional": true
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rotten-staff",
+          "note": "Dropped by the Putrid Avatar (rot-infested Erdtree Avatar) patrolling the ring walkway bridge in Elphael's east section."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-miquellan-knight-s-sword",
+          "note": "Near the Prayer Room grace. From the grace, head forward to a parapet on the right leading to a tower with a ladder — climb the ladder to find the sword."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-ghost-glovewort-picker-s-bell-bearing-3",
+          "note": "On a corpse in the western section of the graveyard in the northeast of Elphael city — allows purchasing Ghost Glovewort 7, 8, and 9 from the Twin Maiden Husks at Roundtable Hold."
+        }
+      ]
+    },
+    {
+      "id": "haligtree-04",
+      "from": "Drainage Channel",
+      "to": "Drainage Channel (Millicent conclusion)",
+      "summary": "The Drainage Channel grace is the site of Millicent's questline conclusion. A gold summon sign (assist path) or red summon sign (betray path) appears on the ground here. Choose your path — both are mutually exclusive and give different talismans. Also collect the Dragoncrest Greatshield Talisman in the nearby church area via the tree-root traverse.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Reach the Drainage Channel grace (south of Prayer Room). The Millicent questline concludes here if all prior steps were completed: Unalloyed Gold Needle given at Church of the Plague, prosthesis given at Shaded Castle, Millicent met at Mountaintops. Two summon signs appear near the grace — only one can be used."
+        },
+        {
+          "type": "quest",
+          "id": "quest-millicent-elphael-assist",
+          "questline": "Millicent",
+          "text": "ASSIST PATH (gold summon sign): Use the gold sign to be summoned as Millicent's ally. Help her defeat her four sisters (all armed and hostile). After winning, reload the area and speak to the dying Millicent — she returns the Unalloyed Gold Needle to you and chooses to let the rot take her on her own terms. This path rewards the Rotten Winged Sword Insignia talisman. MUTUALLY EXCLUSIVE with the betray path — choose only one.",
+          "missable": {
+            "lockedBy": "Choosing the betray path (red sign) or skipping the quest",
+            "note": "Using the red summon sign to betray Millicent permanently locks out the assist reward. If Millicent never appeared at Mountaintops of the Giants (prior step skipped), neither sign will be present here."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-rotten-winged-sword-insignia",
+          "note": "ASSIST PATH REWARD — given by Millicent (dying) after helping her defeat her four sisters via the gold summon sign at Drainage Channel. Greatly raises attack power with successive hits (6%/8%/13%). Mutually exclusive with Millicent's Prosthesis; you receive this only on the assist path. [CLAIM: moved from caelid-05 where the acquisition note was factually wrong]"
+        },
+        {
+          "type": "quest",
+          "id": "quest-millicent-elphael-betray",
+          "questline": "Millicent",
+          "text": "BETRAY PATH (red summon sign): Use the red sign to invade and kill Millicent alongside her four sisters. Upon killing her, she drops the Millicent's Prosthesis talisman immediately. She then transforms into a Scarlet Aeonia flower. MUTUALLY EXCLUSIVE with the assist path — choose only one.",
+          "missable": {
+            "lockedBy": "Choosing the assist path (gold sign) or skipping the quest",
+            "note": "Using the gold summon sign to assist Millicent permanently locks out the betray reward. If you already assisted her, killing her afterward does not yield the prosthesis."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-millicent-s-prosthesis",
+          "note": "BETRAY PATH REWARD — dropped by Millicent when you kill her via the red summon sign at Drainage Channel. Raises dexterity by 5 and boosts successive attack damage (4%/6%/11%). Mutually exclusive with Rotten Winged Sword Insignia; you receive this only on the betray path. [CLAIM: moved from caelid-06 where the acquisition note was factually wrong]"
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-dragoncrest-greatshield-talisman",
+          "note": "From the Drainage Channel grace, head east along tree roots, branches, and buttresses to reach the roof of a nearby church full of Pest enemies. Drop through a hole in the roof, head southwest along the rafters, and climb to an upper platform with a chest containing this talisman."
+        }
+      ]
+    },
+    {
+      "id": "haligtree-05",
+      "from": "Haligtree Roots",
+      "to": "Malenia (Haligtree Roots arena)",
+      "summary": "Descend to the Haligtree Roots grace and collect the Traveler's set in the adjacent side room. Defeat Malenia, Blade of Miquella — one of the most difficult bosses in the game. Collect her remembrance and great rune. If on the assist path, use the Unalloyed Gold Needle on the Scarlet Aeonia bloom to obtain Miquella's Needle. Then purchase Malenia's armor set and the Royal Knight Helm from Enia.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Drainage Channel, continue descending through Elphael's lower sections to reach the Haligtree Roots grace. Take the lift from the large building in the northern rot-lake section to reach a side room with an orange flower — the Traveler's set is here."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-traveler-s-hat",
+          "note": "In the side room adjacent to the Haligtree Roots grace, accessible via a lift from the large northern building. The room contains a large orange flower. All three Traveler's pieces are here."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-traveler-s-clothes",
+          "note": "Same room as the Traveler's Hat — side chamber near Haligtree Roots grace."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-traveler-s-manchettes",
+          "note": "Same room as the Traveler's Hat — side chamber near Haligtree Roots grace."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-traveler-s-gloves",
+          "note": "Same room as the Traveler's Hat — side chamber near Haligtree Roots grace."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-traveler-s-boots",
+          "note": "Same room as the Traveler's Hat — side chamber near Haligtree Roots grace."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-traveler-s-slops",
+          "note": "Same room as the Traveler's Hat — side chamber near Haligtree Roots grace."
+        },
+        {
+          "type": "direction",
+          "text": "MALENIA WARNING: Malenia, Blade of Miquella is one of the hardest bosses in the game. Phase 1 she uses swift katana combos and heals HP on every hit that connects — she cannot be stunlocked out of healing. Phase 2 (Goddess of Rot) she opens with a Scarlet Aeonia dive — run sideways to avoid it, then leave the rot cloud radius. Spirit Ashes are allowed; the Mimic Tear or Black Knife Tiche are recommended. She has no weaknesses to exploit besides Frost (extends proc windows). Defeating her is required to complete the Millicent questline's final step."
+        },
+        {
+          "type": "boss",
+          "id": "boss-haligtree-malenia",
+          "text": "Malenia, Blade of Miquella / Malenia, Goddess of Rot — two-phase fight at Haligtree Roots arena. Phase 1: swift katana combos, Waterfowl Dance (dodge into the first flurry then away), and HP restoration on hit. Phase 2: Scarlet Aeonia dive opener — run perpendicular; adds rot-explosion and dive-bomb attacks. She awards 480,000 runes."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-rot-goddess",
+          "note": "Dropped by Malenia upon defeat. Trade to Enia at Roundtable Hold for either the Hand of Malenia (katana) OR Scarlet Aeonia (incantation) — only one per playthrough unless you duplicate at a Wandering Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "great-rune-malenia-s-great-rune",
+          "note": "Dropped by Malenia upon defeat. Activate at the Isolated Divine Tower — reach it via the portal at the Divine Bridge site of grace in Leyndell (or Ashen Capital). When active and equipped, restores HP for a brief window after taking damage."
+        },
+        {
+          "type": "direction",
+          "text": "ASSIST PATH ONLY — If you helped Millicent defeat her sisters and received the Unalloyed Gold Needle: after defeating Malenia, reload the area (rest at a grace and return). A large Scarlet Aeonia flower now blooms in Malenia's arena. Interact with it and use the Unalloyed Gold Needle on it to receive Miquella's Needle and a Somber Ancient Dragon Smithing Stone. Miquella's Needle is placed as an item step in Crumbling Farum Azula (region 23), where it is used inside Dragonlord Placidusax's arena to undo the Frenzied Flame."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-hand-of-malenia",
+          "note": "Trade the Remembrance of the Rot Goddess to Finger Reader Enia at Roundtable Hold. Mutually exclusive with Scarlet Aeonia per playthrough unless the remembrance is duplicated."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-scarlet-aeonia",
+          "note": "Trade the Remembrance of the Rot Goddess to Finger Reader Enia at Roundtable Hold. Mutually exclusive with Hand of Malenia per playthrough unless the remembrance is duplicated."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-malenia-s-winged-helm",
+          "note": "Purchase from Finger Reader Enia at Roundtable Hold (20,000 runes) after defeating Malenia."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-malenia-s-armor",
+          "note": "Purchase from Finger Reader Enia at Roundtable Hold after defeating Malenia."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-malenia-s-armor-altered",
+          "note": "Altered version of Malenia's Armor — obtainable from Enia or by altering the armor at any Site of Grace with Tailoring Tools."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-malenia-s-gauntlet",
+          "note": "Purchase from Finger Reader Enia at Roundtable Hold after defeating Malenia."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-malenia-s-greaves",
+          "note": "Purchase from Finger Reader Enia at Roundtable Hold after defeating Malenia."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-royal-knight-helm",
+          "note": "Purchase from Finger Reader Enia at Roundtable Hold after defeating Loretta, Knight of the Haligtree."
+        }
+      ]
+    }
+  ],
   "cleanup": [
-    "armor-envoy-crown",
     "armor-haligtree-knight-armor",
     "armor-haligtree-knight-armor-altered",
     "armor-haligtree-knight-gauntlets",
     "armor-haligtree-knight-greaves",
     "armor-haligtree-knight-helm",
-    "armor-malenia-s-armor",
-    "armor-malenia-s-armor-altered",
-    "armor-malenia-s-gauntlet",
-    "armor-malenia-s-greaves",
-    "armor-malenia-s-winged-helm",
-    "armor-royal-knight-helm",
-    "armor-traveler-s-boots",
-    "armor-traveler-s-clothes",
-    "armor-traveler-s-gloves",
-    "armor-traveler-s-hat",
-    "armor-traveler-s-manchettes",
-    "armor-traveler-s-slops",
-    "bell-bearing-ghost-glovewort-picker-s-bell-bearing-3",
-    "great-rune-malenia-s-great-rune",
-    "incantation-scarlet-aeonia",
-    "remembrance-remembrance-of-the-rot-goddess",
     "shield-haligtree-crest-greatshield",
-    "sorcery-loretta-s-mastery",
-    "spirit-ash-oracle-envoy-ashes",
-    "stonesword-key-46",
-    "stonesword-key-47",
-    "talisman-dragoncrest-greatshield-talisman",
-    "talisman-pearldrake-talisman-2",
-    "talisman-viridian-amber-medallion-2",
-    "weapon-hand-of-malenia",
-    "weapon-loretta-s-war-sickle",
-    "weapon-miquellan-knight-s-sword",
-    "weapon-rotten-crystal-sword",
-    "weapon-rotten-staff",
-    "tool-prattling-pate-my-beloved"
+    "larval-tear-18",
+    "talisman-flock-s-canvas-talisman"
   ]
 }

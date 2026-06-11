@@ -3,124 +3,1046 @@
   "name": "DLC: Scadu Altus & Shadow Keep",
   "order": 19,
   "dlc": true,
-  "legs": [],
+  "legs": [
+    {
+      "id": "dlc-scadu-altus-01",
+      "from": "Highroad Cross",
+      "to": "Moorth Ruins & Bonny Village",
+      "summary": "Cross into Scadu Altus from Castle Ensis. Grab the map fragment at the first stele. Leda and Hornsent meet you at Highroad Cross with new cross-map dialogue — exhaust both before advancing. Collect the Monk's Missive (launches Dryleaf Dane's quest) and complete the Dane duel at Moorth Ruins. Descend through Moorth Ruins into Bonny Village and Bonny Gaol.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Exit Castle Ensis through Ensis Moongazing Grounds and cross into Scadu Altus. The map stele is just past the Highroad Cross Site of Grace — interact with it to reveal the plateau."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-scadu-altus",
+          "note": "Map stele beside the road east of Highroad Cross Site of Grace. Interact with it immediately to reveal the Scadu Altus map."
+        },
+        {
+          "type": "quest",
+          "id": "quest-leda-scadu-altus-highroad",
+          "questline": "Needle Knight Leda",
+          "text": "Speak with Leda at Highroad Cross. She now knows Miquella's Great Rune has not yet broken. Exhaust all dialogue — she will comment on the followers' purpose and foreshadow the coming conflict. Return to her after each key event.",
+          "missable": {
+            "lockedBy": "Miquella's Great Rune breaking (entering Shadow Keep main gate or crossing Bonny Village's eastern bridge)",
+            "note": "All Scadu Altus cross-related dialogue with Leda must happen before the Great Rune breaks. Once the rune breaks Leda's dialogue shifts to targeting Hornsent — do not proceed to Shadow Keep until all NPC dialogue is exhausted here."
+          }
+        },
+        {
+          "type": "quest",
+          "id": "quest-hornsent-scadu-altus-highroad",
+          "questline": "Hornsent",
+          "text": "Speak with Hornsent at Highroad Cross. He provides the New Cross Map showing four additional Miquella's Crosses in Scadu Altus. Exhaust all dialogue — he speaks of his hatred for Messmer and plans to enter Shadow Keep. Loot the Monk's Missive from the ground behind him and pick up the May the Best Win gesture.",
+          "missable": {
+            "lockedBy": "Miquella's Great Rune breaking",
+            "note": "The New Cross Map and Monk's Missive are tied to Hornsent's Highroad Cross presence. Pick up both before proceeding to Shadow Keep or Bonny Village's eastern bridge."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-monk-s-missive",
+          "note": "Looted from the ground directly behind where Hornsent stands at Highroad Cross. You also receive the May the Best Win gesture. Both are needed for the Dryleaf Dane questline."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-fire-knight-s-cookbook-1",
+          "note": "East of Highroad Cross, in a Messmer soldier encampment. Look on top of one of the tents."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-swift-spear",
+          "note": "On a corpse guarded by three Messmer Soldiers along the road east of Highroad Cross, in the encampment area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-black-steel-twinblade",
+          "note": "Dropped by a Black Knight at the top of the hill encampment east of Highroad Cross, guarded by many Messmer Soldiers."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-repeating-crossbow",
+          "note": "On a corpse along the road next to the Ghostflame Dragon north of the Moorth Highway South Site of Grace."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-11",
+          "note": "Near a Miquella's Cross in the Scadu Altus open plateau — check the cross-marked sites on the New Cross Map given by Hornsent. (unverified exact coordinates — see wiki for pin)"
+        },
+        {
+          "type": "direction",
+          "text": "Ride northwest to Moorth Ruins. Drop into the first rooftop visible from the gap, then navigate the tilted houses. Dryleaf Dane is at the easternmost cross in Moorth Ruins — use the May the Best Win gesture on him to trigger the duel."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-shattered-stone-talisman",
+          "note": "Moorth Ruins — fall on the first rooftop visible from the gap on the ground, turn left, and walk the ledge to find this talisman."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-golden-arcs",
+          "note": "Southeast of Moorth Ruins — from the Shattered Stone Talisman chest, drop to the nearest platform and continue descending until you find this incantation."
+        },
+        {
+          "type": "quest",
+          "id": "quest-dane-moorth-ruins",
+          "questline": "Dryleaf Dane",
+          "text": "Use the May the Best Win gesture in front of Dryleaf Dane at Moorth Ruins to trigger the fight. Defeat him to receive Ash of War: Palm Blast and Dane's Hat. The Dryleaf armor set (Robe, Arm Wraps, Cuissardes) is found separately under a waterfall in the Ruins of Unte, accessible later via Shadow Keep coffin transport."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-palm-blast",
+          "note": "Reward for defeating Dryleaf Dane at Moorth Ruins using the May the Best Win gesture. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-dane-s-hat",
+          "note": "Dropped by Dryleaf Dane upon defeat at Moorth Ruins."
+        },
+        {
+          "type": "direction",
+          "text": "Descend through Moorth Ruins into Bonny Village via the underground tunnel passages. Navigate the tilted houses carefully — there are gap jumps and a ladder at the end. Avoid the two giant scorpions on the southern path when proceeding to Bonny Gaol."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-bonny-butchering-knife",
+          "note": "Bonny Village — on a corpse to the right of the broken bridge near the village entrance."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-07",
+          "note": "Bonny Village — small altar in the northwest of the village. Source: region cleanup (unverified exact coordinates)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-tooth-whip",
+          "note": "Found inside the Whipping Hut in Bonny Village."
+        },
+        {
+          "type": "direction",
+          "text": "WARNING — Bonny Village eastern bridge: Crossing the eastern bridge out of Bonny Village triggers a story event equivalent to entering Shadow Keep (breaks Miquella's Great Rune). Do NOT cross this bridge until you have exhausted all pre-rune-break NPC dialogue."
+        },
+        {
+          "type": "direction",
+          "text": "Enter Bonny Gaol from south of the village — continue past the spiked barricades and broken cages south, avoid the two giant scorpions, and look for an opening in the right wall into the cave. The dungeon is a multi-floor gaol with Curseblade enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-curseblade-meera",
+          "note": "Reward for defeating Curseblade Labirith, the main boss of Bonny Gaol. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-shield-of-night",
+          "note": "Found in Bonny Gaol — accessible from the top level of the dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-night-maiden-armor",
+          "note": "Bonny Gaol — obtained from the top level of the dungeon after progressing through most of it."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-night-maiden-twin-crown",
+          "note": "Bonny Gaol — top level, same location as Night Maiden Armor."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-stalwart-horn-charm-2",
+          "note": "Bonny Gaol — after jumping down the hole, head east past the rats, climb the ladder, and defeat the Inner Jar monster to find this talisman."
+        }
+      ]
+    },
+    {
+      "id": "dlc-scadu-altus-02",
+      "from": "Fort of Reprimand",
+      "to": "Ruined Forge of Starfall Past & Recluses' River",
+      "summary": "Sweep the Fort of Reprimand for its dungeon loot — Black Knight Edreed drops the Crucible Wings ash of war. Continue south to Recluses' River Upstream and Downstream for the Moldmonger bell bearing and downstream items. Then head to the Ruined Forge of Starfall Past for the Ancient Meteoric Ore Greatsword and Smithscript weapons.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Highroad Cross, ride south to the Fort of Reprimand. The fort has multiple levels — courtyard, underground basement, and upper barracks. The Black Knight Edreed boss is in the upper fort area."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-flamedrake-talisman-3",
+          "note": "Fort of Reprimand — found in a chest behind cages in the Soldiers' Barracks area."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-iris-of-occultation",
+          "note": "Fort of Reprimand basement — dropped by the Omenkiller enemy in the underground section. CRITICAL: Give this OR the Iris of Grace to Fire Knight Queelign in Shadow Keep's Prayer Room — choose only one per playthrough."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-messmer-soldier-ashes",
+          "note": "Fort of Reprimand — from the area where you fight the Omenkiller, cross the whole room to the other side; it leads outside where the ashes are found."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-battlefield-priest-s-cookbook-2",
+          "note": "Fort of Reprimand — take the stairs up after defeating Black Knight Edreed, inside the chest at the top."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-black-knight-edreed",
+          "text": "Black Knight Edreed — boss of Fort of Reprimand, uses a twinblade with flying attacks. Drops Ash of War: Aspects of the Crucible: Wings."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-aspects-of-the-crucible-wings",
+          "note": "Dropped by Black Knight Edreed upon defeat at Fort of Reprimand. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-blessing-of-marika",
+          "note": "Fort of Reprimand southern cliff — dropped by the Tree Sentinel patrolling near the fort."
+        },
+        {
+          "type": "direction",
+          "text": "From Behind the Fort of Reprimand grace, ride south to Recluses' River Downstream. Look for a pot hanging from a rock wall right next to the Recluses' River Downstream grace — shoot it down with a bow to loot it."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-moldmonger-s-bell-bearing",
+          "note": "Recluses' River — inside a pot hanging from a rock wall next to the Recluses' River Downstream grace. Shoot it down with a ranged attack and drop down from the grace area to collect it."
+        },
+        {
+          "type": "direction",
+          "text": "Ride southwest of Moorth Ruins to reach the Ruined Forge of Starfall Past. Descend via the entrance tunnel and ladder. The forge is filled with Golem Smiths and Fire Blobs — there is no boss."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-smithscript-spear",
+          "note": "Ruined Forge of Starfall Past — looted from a body on the main forge floor."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-smithscript-cirque",
+          "note": "Ruined Forge of Starfall Past — looted from a body near the edge of the sewage waterfall."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-smithing-talisman",
+          "note": "Ruined Forge of Starfall Past — inside a room on the uppermost level filled with Fire Blob enemies."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-ancient-meteoric-ore-greatsword",
+          "note": "Ruined Forge of Starfall Past — obtained from an altar in a hidden room. This is the unique greatsword of the forge."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-piercing-throw",
+          "note": "Dropped by a teardrop scarab found among a group of Misbegotten enemies just east of Ruined Forge of Starfall Past."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-scattershot-throw",
+          "note": "Dropped by a flying scarab south of Taylew's Ruined Forge entrance near a bridge — it hangs high on a pillar and is tough to see."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-pearl-shield-talisman",
+          "note": "Found inside a small camp of Messmer soldiers in the woods, southwest of Taylew's Ruined Forge Site of Grace."
+        }
+      ]
+    },
+    {
+      "id": "dlc-scadu-altus-03",
+      "from": "Castle Watering Hole",
+      "to": "Shadow Keep Main Gate Plaza",
+      "summary": "Enter Shadow Keep — the central legacy dungeon of Scadu Altus. The Golden Hippopotamus guards the Main Gate Plaza. Hornsent and Freyja can both be summoned. After the boss, Ansbach is in the Storehouse First Floor reading scripture — exhaust his dialogue now and get the quest chain started before proceeding upward. Collect Iris of Grace from the basement and the Secret Rite Scroll from Floor 4.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Approach Shadow Keep from the Castle Watering Hole grace to the south. The main gate is guarded by a Furnace Golem on the road — you can bypass it on Torrent. Take the elevator inside to reach the Main Gate Plaza. Redmane Freyja's and Hornsent's summon signs are near the fog gate."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-14",
+          "note": "Near the Shadow Keep entrance area / Castle Watering Hole — beside a Miquella's Cross. (unverified exact coordinates — see wiki for pin)"
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-crimsonburst-dried-tear",
+          "note": "Dropped by the Furnace Golem located around the army campsite outside Shadow Keep. To kill a Furnace Golem, throw a Hefty Furnace Pot crafted from Furnace Visage + Ember of Messmer into the furnace on its head, then attack while it kneels."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-golden-hippopotamus",
+          "text": "Golden Hippopotamus — guards the Shadow Keep Main Gate Plaza, bristling with Crucible thorns. Redmane Freyja and Hornsent can be summoned. Drops x2 Scadutree Fragment and Aspects of the Crucible: Thorns incantation. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-19",
+          "note": "x2 fragments dropped by the Golden Hippopotamus at Shadow Keep Main Gate Plaza. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-20",
+          "note": "Second of two fragments dropped by the Golden Hippopotamus at Shadow Keep Main Gate Plaza."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-aspects-of-the-crucible-thorns",
+          "note": "Dropped by the Golden Hippopotamus at Shadow Keep Main Gate Plaza. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-fire-knight-s-seal",
+          "note": "Shadow Keep Main Gate Plaza — behind the giant Queen Marika statue. Use the lever to lower the water level to access it."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-talisman-of-lord-s-bestowal",
+          "note": "Shadow Keep Main Gate Plaza — found beside the big golden tree in the plaza."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-battlefield-priest-s-cookbook-1",
+          "note": "Shadow Keep — facing the Queen Marika statue from the front, take the right room and continue toward the stairs to reach the upper area where this cookbook is found."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-battlefield-priest-s-cookbook-3",
+          "note": "Shadow Keep — looted from a corpse inside an army tent in the keep."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ansbach-storehouse-scripture",
+          "questline": "Ansbach",
+          "text": "Find Sir Ansbach reading scripture in the northwest room on Storehouse First Floor. Exhaust ALL dialogue. He asks you to speak with Redmane Freyja — she is on Storehouse Seventh Floor. Report her decision back to Ansbach, then find the Secret Rite Scroll on a table behind tall bookshelves on Fourth Floor. Deliver the scroll to Ansbach, rest at a grace, and accept the Letter for Freyja in the next dialogue cycle.",
+          "missable": {
+            "lockedBy": "Not delivering the Secret Rite Scroll before entering Messmer's arena (Dark Chamber Entrance)",
+            "note": "If you enter Messmer's arena without giving Ansbach the Secret Rite Scroll, his questline is permanently locked. He will not move and cannot be summoned for Enir-Ilim. Loot the scroll from Fourth Floor before proceeding to the Dark Chamber Entrance."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-secret-rite-scroll",
+          "note": "Shadow Keep Specimen Storehouse Fourth Floor — on a table inside the room down the stairs after going outside from the fourth floor. Near the edge of this area."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-storehouse-cross-message",
+          "note": "Shadow Keep — climb the feet of the Marika statue and move toward the head; jump to the next area to find this message on a table next to a Miquella's Cross."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-iris-of-grace",
+          "note": "Shadow Keep Specimen Storehouse — take the left lift down from the First Floor grace; it is in the basement area below the Storehouse. CRITICAL: Give this OR the Iris of Occultation (Fort of Reprimand) to Queelign in the Prayer Room — iris choice is permanent."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-boltdrake-talisman-3",
+          "note": "Shadow Keep Specimen Storehouse — from the First Floor Site of Grace, take the small stairs up and turn right on the wooden platform to find it dropped behind the railing."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-pearldrake-talisman-3",
+          "note": "Shadow Keep Specimen Storehouse — after using the lever to move the statues, head to the second floor where a Fire Knight is; the talisman is behind him in the chest."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-fire-serpent",
+          "note": "Shadow Keep — from the Storehouse Site of Grace, find the ladder and climb up, pass the enemies; find this incantation on a noble corpse in the Back Section."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-wrath-from-afar",
+          "note": "Shadow Keep Church District side — take the elevator at the Storehouse Loft grace. Once on the upper level, find this incantation on a platform below a pillar."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-impenetrable-thorns-spell",
+          "note": "Shadow Keep — from Storehouse Seventh Floor, cross the center of the storeroom after pulling the lever to rotate the central platform; this sorcery is in a chest."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-fire-knight-hilde",
+          "note": "Shadow Keep — accessed from the Church District side; at the gear mechanism where Wrath from Afar is found, jump toward the lift mechanism on the Loft section. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-wall-of-sparks",
+          "note": "Shadow Keep Specimen Storehouse — take the left lift down from the First Floor grace, take the first exit to the right, then the first one to the left to find it against a railing."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-flame-spear",
+          "note": "Shadow Keep Sixth Floor — climb the statues once you have used the lever to move them, head outside, turn right and head up the stairs, turn left to find this ash of war."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-winged-serpent-helm",
+          "note": "Shadow Keep Sixth Floor — after climbing the statues via the lever, head outside and follow the path upstairs to find this helm."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-21",
+          "note": "Shadow Keep Specimen Storehouse area — near a Miquella's Cross inside the storehouse. (unverified exact floor — see wiki for pin)"
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-main-gauche",
+          "note": "Shadow Keep — midway through the stairs, turn right, enter the room on the right, and defeat the enemies to find this dagger on a body."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-carian-thrusting-shield",
+          "note": "Shadow Keep — accessed from the Church District side. Past the Storehouse grace, continue forward to a room where this shield is found."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-dueling-shield",
+          "note": "Shadow Keep Specimen Storehouse — from the middle area, take the stairs to the next floor, move to the eastern side, climb the wooden platform, and defeat the Fire Knight to find it."
+        }
+      ]
+    },
+    {
+      "id": "dlc-scadu-altus-04",
+      "from": "Shadow Keep Main Gate Plaza",
+      "to": "Church District & Messmer the Impaler",
+      "summary": "The Church District is the flooding sub-dungeon of Shadow Keep. Pull the drainage lever (via the northern ladder past the Giant Bats) to flood the area and access the Sunken Chapel and deeper zones. Use the Iris of Grace or Iris of Occultation on Fire Knight Queelign in the Prayer Room (requires Prayer Room Key). Resolve the Leda vs. Hornsent conflict on the Storehouse battlements — this is the single most missable choice in the DLC. Then defeat Messmer the Impaler.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Enter the Church District from the Church District Entrance grace. The district is flooded — find the drainage lever by climbing a ladder in the northern section past the Giant Bats. Pulling the lever floods the lower church, opening the Sunken Chapel path and the underground area with the Ulcerated Tree Spirit."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-23",
+          "note": "Church District area — near a Miquella's Cross in the Church District. (unverified exact location — see wiki for pin)"
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-mantle-of-thorns",
+          "note": "Shadow Keep Church District — drops from the Lesser Ulcerated Tree Spirit that emerges beneath the ground near the large tree in the flooded area."
+        },
+        {
+          "type": "direction",
+          "text": "NOTE on Iris of Occultation: Also drops from a second Lesser Ulcerated Spirit in the Shadow Keep Sunken Chapel area. You already collected one at Fort of Reprimand — give either iris to Queelign in the Prayer Room."
+        },
+        {
+          "type": "direction",
+          "text": "FIRE KNIGHT QUEELIGN SEQUENCE: (1) Defeat Fire Knight Queelign as a boss at the Church of the Crusade (southwest of Shadow Keep) to get the Crusade Insignia talisman on the first encounter. (2) Defeat him again as an invader at Church of the Crusade for the Prayer Room Key and Ash of War: Flame Skewer. (3) Use the Prayer Room Key on the locked door in Shadow Keep's Church District to find NPC Queelign. Give him Iris of Grace (receive Fire Knight Queelign spirit ash) OR Iris of Occultation (receive Queelign's Greatsword) — one per playthrough."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-fire-knight-queelign-church",
+          "text": "Fire Knight Queelign (1st encounter) — NPC invader at the Church of the Crusade, southwest of Shadow Keep. Walk down the aisle to trigger the invasion. Drops Crusade Insignia talisman.",
+          "optional": true
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crusade-insignia",
+          "note": "Dropped by Fire Knight Queelign on the first NPC invader encounter at the Church of the Crusade. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-24",
+          "note": "Church of the Crusade — two Scadutree Fragments are found inside the church building. (unverified exact location — see wiki for pin)"
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-25",
+          "note": "Church of the Crusade — second fragment also inside the church. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-fire-knight-queelign-church-2nd",
+          "text": "Fire Knight Queelign (2nd encounter) — invades again at Church of the Crusade. Drops Ash of War: Flame Skewer and Prayer Room Key on this second defeat.",
+          "optional": true
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-flame-skewer",
+          "note": "Dropped by Fire Knight Queelign on the second encounter at Church of the Crusade. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-prayer-room-key",
+          "note": "Dropped by Fire Knight Queelign on the second encounter at Church of the Crusade. Required to unlock the Prayer Room in Shadow Keep's Church District where NPC Queelign waits."
+        },
+        {
+          "type": "quest",
+          "id": "quest-queelign-prayer-room",
+          "questline": "Fire Knight Queelign",
+          "text": "Use the Prayer Room Key to unlock the door in Shadow Keep's Church District. Find NPC Queelign inside. Give him the Iris of Grace to receive Fire Knight Queelign Spirit Ash, OR give him the Iris of Occultation to receive Queelign's Greatsword. WARNING: disable multiplayer before this dialogue — being summoned mid-conversation causes him to vanish.",
+          "missable": {
+            "lockedBy": "Choosing one Iris item (permanent choice: spirit ash OR weapon, not both)",
+            "note": "The iris choice is permanent. Iris of Grace → spirit ash. Iris of Occultation → Queelign's Greatsword. You can only give one. Disable multiplayer before interacting to prevent the dialogue glitch."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-fire-knight-queelign",
+          "note": "Given by NPC Queelign in Shadow Keep's Prayer Room when you give him the Iris of Grace. Mutually exclusive with Queelign's Greatsword. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-queelign-s-greatsword",
+          "note": "Given by NPC Queelign in Shadow Keep's Prayer Room when you give him the Iris of Occultation. Mutually exclusive with Fire Knight Queelign Spirit Ash. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-death-mask-helm",
+          "note": "Shadow Keep Church District — dropped by unique enemy Wego, Fire Knight Elder, found inside the chapel after draining/flooding the water in the Church District."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-salza-s-hood",
+          "note": "Shadow Keep — from West Rampart Site of Grace, take the bridge all the way. Use Torrent to avoid the Rain of Fire. Defeat the Fire Knight at the end to find this hood."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-rain-of-fire",
+          "note": "Shadow Keep West Rampart — from the West Rampart Site of Grace, take the bridge all the way, using Torrent to avoid being trapped in the Rain of Fire, then defeat the Fire Knight at the end to claim it."
+        },
+        {
+          "type": "direction",
+          "text": "CRITICAL CHOICE — LEDA vs. HORNSENT: Near Storehouse First Floor grace, on the battlements with burning boats, two summon signs appear: (A) RED sign = help Leda kill Hornsent (rewards: Falx + Hornsent Set + Lacerating Crossed-Tree talisman; locks out Swift Slash). (B) GOLD sign = help Hornsent survive (rewards: Ash of War: Swift Slash + Leda's Rune; Leda then targets Ansbach next). (C) Skip both = both questlines continue. ENTERING MESSMER'S ARENA (Dark Chamber Entrance) REMOVES BOTH SIGNS PERMANENTLY — resolve this before fighting Messmer."
+        },
+        {
+          "type": "quest",
+          "id": "quest-leda-hornsent-conflict",
+          "questline": "Needle Knight Leda / Hornsent",
+          "text": "On the Shadow Keep Storehouse battlements, choose to assist Leda (kill Hornsent) or Hornsent (survive against Leda), or ignore both. See direction note above for full consequences. This choice shapes the final Enir-Ilim battle composition and available items.",
+          "missable": {
+            "lockedBy": "Entering Messmer's boss arena from Dark Chamber Entrance Site of Grace",
+            "note": "Both summon signs vanish permanently once you approach the Dark Chamber Entrance fog gate. Defeat all storehouse floors, collect the Secret Rite Scroll, give it to Ansbach, and resolve this conflict BEFORE entering Messmer's arena. Source: Fextralife/Needle Knight Leda wiki (fetched this session)."
+          }
+        },
+        {
+          "type": "quest",
+          "id": "quest-freyja-letter-deliver",
+          "questline": "Redmane Freyja",
+          "text": "Speak with Redmane Freyja at the Storehouse Seventh Floor. Exhaust all dialogue — she explains her decision. Return to Ansbach to report. After receiving the Letter for Freyja from Ansbach, come back to Freyja and deliver it. She gives the Golden Lion Shield as thanks.",
+          "missable": {
+            "lockedBy": "Entering Messmer's arena before delivering the Letter for Freyja",
+            "note": "Freyja must receive the Letter for Freyja from Ansbach's quest chain before Messmer is defeated. After the Leda confrontation in Enir-Ilim, Freyja's set is looted from her corpse — this is last-chance progression."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "shield-golden-lion-shield",
+          "note": "Given by Redmane Freyja after you hand her the Letter for Freyja. The letter is obtained from Ansbach after delivering him the Secret Rite Scroll."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-27",
+          "note": "Shadow Keep Specimen Storehouse area — near a Miquella's Cross on one of the upper storehouse floors. (unverified exact floor — see wiki for pin)"
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-messmer-impaler",
+          "text": "Messmer the Impaler — main boss of Shadow Keep, located at the Dark Chamber Entrance grace. Two NPC summon options: (A) Hornsent's sign (right side) — available only if he survived the Leda conflict; (B) Jolan's sign (left side) — available only if you rang one of the Finger Ruins bells for Ymir's quest. Choose before entering. Drops Remembrance of the Impaler and Messmer's Kindling."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-impaler",
+          "note": "Dropped by Messmer the Impaler. Trade at a Walking Mausoleum for Messmer's Spear (weapon) or Rotten Butterfly (incantation)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-messmer-s-kindling",
+          "note": "Dropped by Messmer the Impaler. REQUIRED: Use this at the Sealing Tree in the Ancient Ruins of Rauh to burn it and unlock access to Enir-Ilim. Do not discard."
+        }
+      ]
+    },
+    {
+      "id": "dlc-scadu-altus-05",
+      "from": "Shadow Keep Back Gate",
+      "to": "Scaduview & Commander Gaius",
+      "summary": "From the Shadow Keep Back Gate, perform the O Mother gesture at the statue to access the Scaduview Hinterlands. Sweep the Hinterlands for the Scadutree fragments at Miquella's Crosses, Sharpshot Talisman, Golden Braid, and Minor Erdtree Spell in Shaman Village. Defeat Commander Gaius at the Back Gate for the Wild Boar Rider remembrance. Scadutree Avatar is optional — fight it at Scadutree Base for Miquella's Great Rune.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Shadow Keep Back Gate, enter the small room with a Summoning Pool. Perform the O Mother gesture (obtained earlier in the DLC) in front of the Marika statue to reveal the hidden passage leading to the Scaduview Hinterlands."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-commander-gaius",
+          "text": "Commander Gaius — boss at the Shadow Keep Back Gate area, a cavalry commander on a giant boar. Closest grace is Shadow Keep, Back Gate. No NPC summons documented. Drops Remembrance of the Wild Boar Rider. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-wild-boar-rider",
+          "note": "Dropped by Commander Gaius at Shadow Keep Back Gate. Trade at a Walking Mausoleum for Gaius's Ripple-Curved Sword or Blades of the Guilty."
+        },
+        {
+          "type": "direction",
+          "text": "Navigate through Scaduview toward the Hinterlands. Pass the Tree Sentinels on horseback and cross the Hinterlands Bridge. Northeast of Fingerstone Hill lies Finger Ruins of Dheo — ring its bell for Ymir's quest (requires Hole-Laden Necklace from Ymir at Cathedral of Manus Metyr)."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-29",
+          "note": "Scaduview / Hinterlands area — near a Miquella's Cross. (unverified exact coordinates — see wiki for pin)"
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-31",
+          "note": "Scaduview / Hinterlands area — near a Miquella's Cross. (unverified exact coordinates — see wiki for pin)"
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-sharpshot-talisman",
+          "note": "Found inside Albinauric's Shack in the Scaduview region. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-golden-braid",
+          "note": "Scaduview — looted near a statue of Marika inside a tree trunk near Shaman Village."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-minor-erdtree-spell",
+          "note": "Shaman Village in Scaduview — found in the field of flowers. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-spellmachinist-s-bell-bearing",
+          "note": "Scaduview — from Shaman Village, head southeast and follow the path to the lower peak; carefully jump down the ledges until you can loot this bell bearing."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-gravitational-missile",
+          "note": "Scaduview — dropped by the Fallingstar Beast in the Hinterlands area."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-raging-beast",
+          "note": "Scaduview — from Bridge Leading to the Village grace, follow the path north. Once at the trees, look east for a teardrop scarab to loot this ash of war."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-fingercreeper-ashes",
+          "note": "Finger Ruins of Dheo (Hinterlands/Scaduview) — found by dropping into a hole in the upper area of the ruins. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-scadutree-avatar",
+          "text": "Scadutree Avatar — optional legend boss at Scadutree Base, northeast of Shadow Keep in Scaduview. Three health bars across three phases. Closest grace is Tree-Worship Sanctum. Drops Remembrance of the Shadow Sunflower and Miquella's Great Rune.",
+          "optional": true
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-shadow-sunflower",
+          "note": "Dropped by Scadutree Avatar at Scadutree Base. Trade at a Walking Mausoleum for St. Trina's Torch or Shadow Sunflower Blossom."
+        },
+        {
+          "type": "item",
+          "itemId": "great-rune-miquella-s-great-rune",
+          "note": "Dropped by Scadutree Avatar at Scadutree Base. Miquella's Great Rune — equip at a Stake of Marika to use. Source: Fextralife wiki (fetched this session)."
+        }
+      ]
+    },
+    {
+      "id": "dlc-scadu-altus-06",
+      "from": "Cathedral of Manus Metyr",
+      "to": "Finger Ruins of Miyr (Metyr Boss)",
+      "summary": "Count Ymir's questline is headquartered at the Cathedral of Manus Metyr. Begin here: speak with Ymir for the Ruins Map and Hole-Laden Necklace, then ring the bells at Finger Ruins of Rhia (Southern Shore, region 20) and Finger Ruins of Dheo (Scaduview). Return after each bell for the next map. After both bells, access the throne ladder for Anna's fight and the Metyr boss. Complete with Jolan's choice (Iris of Grace = spirit ash / Iris of Occultation = Sword of Night). Rabbath's Rise holds the Cannon and the Jolan+Anna combined summon.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Church District Highroad grace, ride to the Cathedral of Manus Metyr. Count Ymir sits on the throne inside — he sells sorceries and initiates his quest. Swordhand of Night Jolan is also present nearby."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ymir-initial-meeting",
+          "questline": "Count Ymir",
+          "text": "Speak with Count Ymir at Cathedral of Manus Metyr. Exhaust all dialogue. He gives you the Ruins Map and Hole-Laden Necklace. The map directs you to two Finger Ruins: Rhia (Southern Shore, region 20-dlc-south) and Dheo (Scaduview/Hinterlands, this region). You must ring both bells using the necklace before returning."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-ruins-map",
+          "note": "Given by Count Ymir at Cathedral of Manus Metyr on your first meeting."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-hole-laden-necklace",
+          "note": "Given by Count Ymir at Cathedral of Manus Metyr on your first meeting. Required to ring the Finger Ruins bells."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-4",
+          "note": "East of Cathedral of Manus Metyr — on a corpse sitting on the ground surrounded by multiple Marionette Soldiers."
+        },
+        {
+          "type": "direction",
+          "text": "BELL 1: Travel to Finger Ruins of Rhia in the Southern Shore (handled in region 20-dlc-south). Ring the bell with the Hole-Laden Necklace to receive Crimson Seed Talisman +1 and trigger Ymir's next step."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crimson-seed-talisman-1",
+          "note": "Granted upon ringing the bell at Finger Ruins of Rhia (Southern Shore region). Requires Hole-Laden Necklace from Ymir. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ymir-rhia-bell-return",
+          "questline": "Count Ymir",
+          "text": "Return to Ymir after ringing the Finger Ruins of Rhia bell. He gives Ruins Map (2nd) and the Beloved Stardust talisman. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-ruins-map-2nd",
+          "note": "Given by Count Ymir after you return from ringing the Finger Ruins of Rhia bell."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-beloved-stardust",
+          "note": "Given by Count Ymir after ringing the Finger Ruins of Rhia bell. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "direction",
+          "text": "BELL 2: Travel to Finger Ruins of Dheo in the Hinterlands (northeast of Fingerstone Hill, Scaduview). Ring the bell with the Hole-Laden Necklace to receive Cerulean Seed Talisman +1."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-st-trina-s-smile",
+          "note": "NOTE: This talisman is obtained by defeating Thiollier if his questline is taken to hostile conclusion. Thiollier's hostile drop only occurs in Enir-Ilim under specific quest conditions — placed here for routing purposes but verify at Enir-Ilim if unavailable. (unverified exact acquisition sequence)"
+        },
+        {
+          "type": "quest",
+          "id": "quest-ymir-dheo-bell-return",
+          "questline": "Count Ymir",
+          "text": "Return to Ymir after ringing the Finger Ruins of Dheo bell. He gives Ruins Map (3rd). Exhaust further dialogue about the world's nature. Then interact with the throne at night to reveal a hidden ladder descending to Finger Ruins of Miyr. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-ruins-map-3rd",
+          "note": "Given by Count Ymir after you return from ringing the Finger Ruins of Dheo bell."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-finger-weaver-s-cookbook-2",
+          "note": "Found on a corpse before the bell in Finger Ruins of Miyr — only accessible after progressing Ymir's questline and finding the secret ladder beneath the throne."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-anna-npc",
+          "text": "Swordhand of Night Anna — NPC invader in the Finger Ruins of Miyr underground, beneath the Cathedral. She blocks progress to the Metyr boss. Defeat her to receive Claws of Night weapon and advance Ymir's quest.",
+          "optional": false
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-claws-of-night",
+          "note": "Dropped by NPC invader Swordhand of Night Anna in the Finger Ruins of Miyr underground. Only accessible after descending via the throne ladder at Cathedral of Manus Metyr. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-metyr-mother-of-fingers",
+          "text": "Metyr, Mother of Fingers — legend boss at the end of Finger Ruins of Miyr. Ring the finger-shaped bell to enter the arena. Requires both prior bells rung (Rhia + Dheo). Drops Remembrance of the Mother of Fingers. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-mother-of-fingers",
+          "note": "Dropped by Metyr, Mother of Fingers in Finger Ruins of Miyr. Trade at a Walking Mausoleum for Gazing Finger or Needle of Eternal Darkness."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-count-ymir",
+          "text": "Count Ymir, Mother of Fingers — final stage of the Ymir questline. Return to the throne in Cathedral of Manus Metyr after defeating Metyr, interact again to face Jolan in combat first, then Count Ymir. Drops High Priest Set, Maternal Staff, and Ymir's Bell Bearing."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-high-priest-hat",
+          "note": "Dropped by Count Ymir, Mother of Fingers after the final confrontation at Cathedral of Manus Metyr."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-high-priest-robe",
+          "note": "Dropped by Count Ymir, Mother of Fingers."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-high-priest-gloves",
+          "note": "Dropped by Count Ymir, Mother of Fingers."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-high-priest-undergarments",
+          "note": "Dropped by Count Ymir, Mother of Fingers."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-maternal-staff",
+          "note": "Dropped by Count Ymir, Mother of Fingers."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-ymir-s-bell-bearing",
+          "note": "Dropped by Count Ymir, Mother of Fingers. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "quest",
+          "id": "quest-jolan-iris-choice",
+          "questline": "Swordhand of Night Jolan",
+          "text": "After defeating Count Ymir, rest at the Cathedral grace and return to Jolan. She offers a choice: Iris of Grace (receive Swordhand of Night Jolan spirit summon) OR Iris of Occultation (receive Sword of Night weapon, ending her questline). Permanent choice — decide based on your build.",
+          "missable": {
+            "lockedBy": "Choosing one iris (permanent: spirit summon OR weapon)",
+            "note": "The iris choice is permanent. Iris of Grace = Jolan spirit ash (she continues to Rabbath's Rise for Jolan and Anna combined summon). Iris of Occultation = Sword of Night weapon (questline ends here). Source: Fextralife wiki (fetched this session)."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-swordhand-of-night-jolan",
+          "note": "Given by Jolan at Cathedral of Manus Metyr when you give her the Iris of Grace after defeating Count Ymir. Mutually exclusive with Sword of Night."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-sword-of-night",
+          "note": "Given by Jolan at Cathedral of Manus Metyr when you give her the Iris of Occultation. Mutually exclusive with Swordhand of Night Jolan spirit ash."
+        },
+        {
+          "type": "direction",
+          "text": "RABBATH'S RISE: If you received the Swordhand of Night Jolan spirit ash (Iris of Grace path), proceed to Rabbath's Rise east of Church District Highroad. Solve the secret wall puzzle (strike the wall with two arches in the bookshelf study) to reveal a Spiritspring. Use it mounted on Torrent to reach the tower top and collect Rabbath's Cannon. For the combined Jolan and Anna summon: from Hinterlands, drop carefully down the cliffside to the balcony and interact with Anna's puppet body while holding Jolan's summon."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rabbath-s-cannon",
+          "note": "Rabbath's Rise — in a chest at the tower top. Solve the secret wall puzzle (strike the two-arch wall in the bookshelf study) to reveal the Spiritspring, then use it mounted on Torrent to reach the top. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "direction",
+          "text": "NOTE: Spellmachinist's Bell Bearing is located below Rabbath's Rise (collected in leg dlc-scadu-altus-05 during the Scaduview sweep)."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-jolan-and-anna",
+          "note": "At the very top of Rabbath's Rise — accessible only by dropping down from the Hinterlands area above. You must hold the Swordhand of Night Jolan spirit ash and interact with Anna's puppet body on the balcony. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-carian-sovereignty",
+          "note": "Acquired from a teardrop scarab inside a cave southwest of Cathedral of Manus Metyr filled with Glintslab Fireflies."
+        }
+      ]
+    },
+    {
+      "id": "dlc-scadu-altus-07",
+      "from": "Darklight Catacombs",
+      "to": "Ruins of Unte & Nameless Mausoleums",
+      "summary": "Darklight Catacombs are accessible from the Recluses' River area and lead to Abyssal Woods. The Death Knight set, Bigmouth Imp Ashes, Viridian Amber Medallion +3, and Barbed Staff-Spear are inside. Then sweep the Eastern and Northern Nameless Mausoleums (Rakshasa, Dancer of Ranah, Red Bear drops), and reach the Ruins of Unte via the Shadow Keep coffin transport for the Giant Golden Arc incantation and Dryleaf armor.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Darklight Catacombs: Access from the southern Recluses' River area, descending into the underground catacombs. The boss is Jori, Elder Inquisitor. Defeating Jori unlocks the Forsaken Graveyard grace and the path south to Abyssal Woods."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-bigmouth-imp-ashes",
+          "note": "Found inside a treasure chest in Darklight Catacombs. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-viridian-amber-medallion-3",
+          "note": "Darklight Catacombs — in a chest found by dropping down a ledge in the main area and going to the archway in the wall. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-death-knight-armor",
+          "note": "Darklight Catacombs — looted from a dead body hanging by a ledge. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-death-knight-helm",
+          "note": "Darklight Catacombs — same location as Death Knight Armor, on the hanging body by the ledge."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-death-knight-gauntlets",
+          "note": "Darklight Catacombs — same body as Death Knight Armor set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-death-knight-greaves",
+          "note": "Darklight Catacombs — same body as Death Knight Armor set."
+        },
+        {
+          "type": "direction",
+          "text": "Eastern Nameless Mausoleum: Accessible from the Hinterlands. Contains Rakshasa boss (drops Rakshasa's Great Katana and the full Rakshasa armor set) and Dancer of Ranah (drops Dancing Blade of Ranah and Dancer's armor set)."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-rakshasa",
+          "text": "Rakshasa — boss at Eastern Nameless Mausoleum. Drops Rakshasa's Great Katana and the Rakshasa armor set.",
+          "optional": true
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rakshasa-s-great-katana",
+          "note": "Dropped by Rakshasa at Eastern Nameless Mausoleum. Source: Fextralife wiki acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-rakshasa-armor",
+          "note": "Dropped by Rakshasa at Eastern Nameless Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-rakshasa-helm",
+          "note": "Dropped by Rakshasa at Eastern Nameless Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-rakshasa-gauntlets",
+          "note": "Dropped by Rakshasa at Eastern Nameless Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-rakshasa-greaves",
+          "note": "Dropped by Rakshasa at Eastern Nameless Mausoleum."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-dancer-of-ranah",
+          "text": "Dancer of Ranah — boss at Southern Nameless Mausoleum. Drops Dancing Blade of Ranah weapon and the Dancer's armor set.",
+          "optional": true
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-dancing-blade-of-ranah",
+          "note": "Dropped by Dancer of Ranah at Southern Nameless Mausoleum. Source: Fextralife acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-dancer-s-dress",
+          "note": "Dropped by Dancer of Ranah at Southern Nameless Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-dancer-s-hood",
+          "note": "Dropped by Dancer of Ranah at Southern Nameless Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-dancer-s-bracer",
+          "note": "Dropped by Dancer of Ranah at Southern Nameless Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-dancer-s-trousers",
+          "note": "Dropped by Dancer of Ranah at Southern Nameless Mausoleum."
+        },
+        {
+          "type": "direction",
+          "text": "Northern Nameless Mausoleum: Contains the Red Bear (Ralva) boss. Drops Pelt of Ralva helm and Iron Rivet armor set."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-ralva-red-bear",
+          "text": "Ralva the Great Red Bear — boss at Northern Nameless Mausoleum. Drops Pelt of Ralva helm, Iron Rivet armor set, and Red Bear's Claw weapon.",
+          "optional": true
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-red-bear-s-claw",
+          "note": "Dropped by Ralva the Great Red Bear at Northern Nameless Mausoleum. Source: Fextralife acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-pelt-of-ralva",
+          "note": "Dropped by Ralva the Great Red Bear at Northern Nameless Mausoleum. Enhances incantations."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-iron-rivet-armor",
+          "note": "Dropped by the Red Bear at Northern Nameless Mausoleum — the Iron Rivet Set drops from this bear."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-iron-rivet-gauntlets",
+          "note": "Dropped by the Red Bear at Northern Nameless Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-iron-rivet-greaves",
+          "note": "Dropped by the Red Bear at Northern Nameless Mausoleum."
+        },
+        {
+          "type": "direction",
+          "text": "Ruins of Unte: Access via the Shadow Keep main plaza — descend two ladders near the burning boats (the ladder is next to a corpse with Silver-Pickled Fowl Foot). An illusory wall hides a coffin that teleports you to Ruins of Unte via the Castle Watering Hole grace. Use a Hefty Furnace Pot (crafted from Furnace Visage + Ember of Messmer) to awaken the Furnace Golem guarding Giant Golden Arc. A waterfall nearby hides the Dryleaf armor set."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-giant-golden-arc",
+          "note": "Ruins of Unte — inside a chest in a chapel. Requires crafting a Hefty Furnace Pot (Furnace Visage + Ember of Messmer) and using it on the dormant Furnace Golem blocking the entrance. Standard fire pots do not work. Source: Fextralife wiki (fetched this session)."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-oil-soaked-tear",
+          "note": "Ruins of Unte — dropped by the Furnace Golem in the area. Must activate it with a Hefty Furnace Pot to fight it."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-ancient-ruins-cross-message",
+          "note": "Ruins of Unte — found in the area near Devonia the Crucible Knight. Source: items.json acquisition text."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-scadu-altus-devonia",
+          "text": "Devonia, Crucible Knight — field boss at Ruins of Unte. Drops Devonia's Hammer and Crucible Hammer-Helm.",
+          "optional": true
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-devonia-s-hammer",
+          "note": "Dropped by Devonia the Crucible Knight at Ruins of Unte."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-crucible-hammer-helm",
+          "note": "Dropped by Devonia the Crucible Knight at Ruins of Unte."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-dryleaf-robe",
+          "note": "Ruins of Unte — under the waterfall. Part of the Dryleaf armor set linked to Dryleaf Dane's questline."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-dryleaf-arm-wraps",
+          "note": "Ruins of Unte — under the waterfall, same location as Dryleaf Robe."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-dryleaf-cuissardes",
+          "note": "Ruins of Unte — under the waterfall, same location as Dryleaf Robe."
+        }
+      ]
+    }
+  ],
   "cleanup": [
     "ammo-golden-bolt",
-    "armor-ansbach-s-attire",
-    "armor-ansbach-s-attire-altered",
-    "armor-ansbach-s-boots",
-    "armor-ansbach-s-manchettes",
-    "armor-crucible-hammer-helm",
-    "armor-dancer-s-bracer",
-    "armor-dancer-s-dress",
     "armor-dancer-s-dress-altered",
-    "armor-dancer-s-hood",
-    "armor-dancer-s-trousers",
-    "armor-dane-s-hat",
-    "armor-death-knight-armor",
-    "armor-death-knight-gauntlets",
-    "armor-death-knight-greaves",
-    "armor-death-knight-helm",
-    "armor-death-mask-helm",
-    "armor-dryleaf-arm-wraps",
-    "armor-dryleaf-cuissardes",
-    "armor-dryleaf-robe",
     "armor-dryleaf-robe-altered",
     "armor-fang-helm",
     "armor-gaius-s-greaves",
     "armor-gravebird-anklets",
     "armor-gravebird-helm",
-    "armor-high-priest-gloves",
-    "armor-high-priest-hat",
-    "armor-high-priest-robe",
-    "armor-high-priest-undergarments",
     "armor-highland-attire",
-    "armor-imp-head-lion",
-    "armor-iron-rivet-armor",
-    "armor-iron-rivet-gauntlets",
-    "armor-iron-rivet-greaves",
     "armor-leather-crown",
-    "armor-leda-s-armor",
-    "armor-night-maiden-armor",
-    "armor-night-maiden-twin-crown",
-    "armor-pelt-of-ralva",
-    "armor-rakshasa-armor",
-    "armor-rakshasa-gauntlets",
-    "armor-rakshasa-greaves",
-    "armor-rakshasa-helm",
-    "armor-salza-s-hood",
-    "armor-thiollier-s-garb",
-    "armor-thiollier-s-garb-altered",
-    "armor-thiollier-s-gloves",
-    "armor-thiollier-s-mask",
-    "armor-thiollier-s-trousers",
-    "armor-winged-serpent-helm",
-    "armor-wise-man-s-mask",
-    "ash-of-war-ash-of-war-aspects-of-the-crucible-wings",
-    "ash-of-war-ash-of-war-carian-sovereignty",
     "ash-of-war-ash-of-war-dryleaf-whirlwind",
-    "ash-of-war-ash-of-war-flame-skewer",
-    "ash-of-war-ash-of-war-flame-spear",
-    "ash-of-war-ash-of-war-palm-blast",
-    "ash-of-war-ash-of-war-piercing-throw",
-    "ash-of-war-ash-of-war-raging-beast",
     "ash-of-war-ash-of-war-rolling-sparks",
-    "ash-of-war-ash-of-war-scattershot-throw",
     "ash-of-war-ash-of-war-swift-slash",
-    "ash-of-war-ash-of-war-wall-of-sparks",
     "bell-bearing-greasemonger-s-bell-bearing",
-    "bell-bearing-moldmonger-s-bell-bearing",
-    "bell-bearing-spellmachinist-s-bell-bearing",
-    "bell-bearing-ymir-s-bell-bearing",
     "cookbook-ancient-dragon-knight-s-cookbook-2",
-    "cookbook-battlefield-priest-s-cookbook-1",
-    "cookbook-battlefield-priest-s-cookbook-2",
-    "cookbook-battlefield-priest-s-cookbook-3",
     "cookbook-battlefield-priest-s-cookbook-4",
-    "cookbook-finger-weaver-s-cookbook-2",
-    "cookbook-fire-knight-s-cookbook-1",
     "cookbook-forager-brood-cookbook-5",
     "cookbook-forager-brood-cookbook-6",
-    "cookbook-grave-keeper-s-cookbook-1",
     "cookbook-greater-potentate-s-cookbook-3",
-    "cookbook-greater-potentate-s-cookbook-4",
     "cookbook-greater-potentate-s-cookbook-7",
+    "cookbook-grave-keeper-s-cookbook-1",
     "crystal-tear-bloodsucking-cracked-tear",
     "crystal-tear-cerulean-sapping-cracked-tear",
-    "crystal-tear-crimsonburst-dried-tear",
-    "crystal-tear-oil-soaked-tear",
-    "great-rune-miquella-s-great-rune",
-    "incantation-aspects-of-the-crucible-thorns",
-    "incantation-fire-serpent",
-    "incantation-furious-blade-of-ansbach",
-    "incantation-giant-golden-arc",
-    "incantation-golden-arcs",
     "incantation-golden-vow",
     "incantation-heal-from-afar",
-    "incantation-knight-s-lightning-spear",
-    "incantation-minor-erdtree-spell",
-    "incantation-rain-of-fire",
     "incantation-roar-of-rugalea",
-    "incantation-wrath-from-afar",
-    "key-item-ancient-ruins-cross-message",
-    "key-item-hole-laden-necklace",
     "key-item-letter-for-freyja",
-    "key-item-messmer-s-kindling",
-    "key-item-monk-s-missive",
-    "key-item-prayer-room-key",
-    "key-item-ruins-map",
-    "key-item-ruins-map-2nd",
-    "key-item-ruins-map-3rd",
-    "key-item-secret-rite-scroll",
-    "key-item-storehouse-cross-message",
     "larval-tear-25",
     "larval-tear-26",
-    "remembrance-remembrance-of-a-god-and-a-lord",
-    "remembrance-remembrance-of-the-impaler",
-    "remembrance-remembrance-of-the-mother-of-fingers",
-    "remembrance-remembrance-of-the-shadow-sunflower",
-    "remembrance-remembrance-of-the-wild-boar-rider",
-    "revered-spirit-ash-07",
     "revered-spirit-ash-08",
     "revered-spirit-ash-12",
     "revered-spirit-ash-13",
@@ -131,18 +1053,8 @@
     "revered-spirit-ash-21",
     "revered-spirit-ash-22",
     "revered-spirit-ash-23",
-    "scadutree-fragment-11",
-    "scadutree-fragment-14",
     "scadutree-fragment-16",
-    "scadutree-fragment-19",
-    "scadutree-fragment-20",
-    "scadutree-fragment-21",
-    "scadutree-fragment-23",
-    "scadutree-fragment-24",
-    "scadutree-fragment-25",
-    "scadutree-fragment-27",
-    "scadutree-fragment-29",
-    "scadutree-fragment-31",
+    "scadutree-fragment-22",
     "scadutree-fragment-32",
     "scadutree-fragment-34",
     "scadutree-fragment-36",
@@ -156,87 +1068,96 @@
     "scadutree-fragment-44",
     "scadutree-fragment-45",
     "scadutree-fragment-46",
-    "shield-carian-thrusting-shield",
-    "shield-dueling-shield",
-    "shield-golden-lion-shield",
-    "shield-shield-of-night",
+    "shield-one-eyed-shield",
     "shield-smithscript-shield",
     "sorcery-cherishing-fingers",
-    "sorcery-gravitational-missile",
-    "sorcery-impenetrable-thorns-spell",
-    "sorcery-mantle-of-thorns",
-    "spirit-ash-bigmouth-imp-ashes",
-    "spirit-ash-black-knight-captain-huw",
     "spirit-ash-bloodfiend-hexer-s-ashes",
-    "spirit-ash-curseblade-meera",
-    "spirit-ash-fingercreeper-ashes",
-    "spirit-ash-fire-knight-hilde",
-    "spirit-ash-fire-knight-queelign",
     "spirit-ash-gravebird-ashes",
     "spirit-ash-horned-warrior-ashes",
-    "spirit-ash-jolan-and-anna",
     "spirit-ash-man-fly-ashes",
-    "spirit-ash-messmer-soldier-ashes",
     "spirit-ash-spider-scorpion-ashes",
-    "spirit-ash-swordhand-of-night-jolan",
     "spirit-ash-taylew-the-golem-smith",
-    "talisman-beloved-stardust",
-    "talisman-boltdrake-talisman-3",
-    "talisman-crimson-seed-talisman-1",
-    "talisman-crusade-insignia",
     "talisman-fine-crucible-feather-talisman",
-    "talisman-flamedrake-talisman-3",
-    "talisman-golden-braid",
-    "talisman-pearl-shield-talisman",
-    "talisman-pearldrake-talisman-3",
-    "talisman-sharpshot-talisman",
-    "talisman-shattered-stone-talisman",
-    "talisman-smithing-talisman",
-    "talisman-st-trina-s-smile",
-    "talisman-stalwart-horn-charm-2",
-    "talisman-talisman-of-lord-s-bestowal",
     "talisman-talisman-of-the-dread",
-    "talisman-viridian-amber-medallion-3",
-    "tool-blessing-of-marika",
     "tool-bondstone",
-    "tool-iris-of-grace",
-    "tool-iris-of-occultation",
-    "weapon-ancient-meteoric-ore-greatsword",
-    "weapon-black-steel-twinblade",
     "weapon-bloodfiend-s-sacred-spear",
-    "weapon-bonny-butchering-knife",
-    "weapon-claws-of-night",
-    "weapon-dancing-blade-of-ranah",
     "weapon-deadly-poison-perfume-bottle",
-    "weapon-death-knight-s-longhaft-axe",
-    "weapon-devonia-s-hammer",
     "weapon-dryleaf-seal",
-    "weapon-falx",
-    "weapon-fire-knight-s-seal",
     "weapon-firespark-perfume-bottle",
-    "weapon-leda-s-sword",
-    "weapon-main-gauche",
-    "weapon-maternal-staff",
-    "weapon-obsidian-lamina",
     "weapon-poisoned-hand",
-    "weapon-queelign-s-greatsword",
-    "weapon-rabbath-s-cannon",
-    "weapon-rakshasa-s-great-katana",
-    "weapon-red-bear-s-claw",
-    "weapon-repeating-crossbow",
     "weapon-serpent-flail",
     "weapon-smithscript-axe",
-    "weapon-smithscript-cirque",
     "weapon-smithscript-greathammer",
-    "weapon-smithscript-spear",
     "weapon-spiraltree-seal",
     "weapon-stone-sheathed-sword",
-    "weapon-swift-spear",
-    "weapon-sword-of-night",
-    "weapon-thiollier-s-hidden-needle",
-    "weapon-tooth-whip",
-    "shield-one-eyed-shield",
-    "map-fragment-map-scadu-altus",
-    "scadutree-fragment-22"
+    "golden-seed-40",
+    "memory-stone-08",
+    "stonesword-key-45",
+    "key-item-keep-wall-key",
+    "key-item-weathered-map",
+    "scadutree-fragment-01",
+    "revered-spirit-ash-06",
+    "incantation-land-of-shadow-spell",
+    "incantation-messmer-s-orb",
+    "incantation-midra-s-flame-of-frenzy",
+    "ash-of-war-ash-of-war-blind-spot",
+    "ash-of-war-ash-of-war-divine-beast-frost-stomp",
+    "ash-of-war-ash-of-war-glintsword-arch",
+    "ash-of-war-ash-of-war-overhead-stance",
+    "ash-of-war-ash-of-war-savage-claws",
+    "shield-sun-realm-shield",
+    "talisman-daedicar-s-woe",
+    "talisman-lacerating-crossed-tree",
+    "talisman-retaliatory-crossed-tree",
+    "armor-armor-of-night",
+    "armor-braided-arm-wraps",
+    "armor-braided-cord-robe",
+    "armor-curseblade-mask",
+    "armor-fire-knight-armor",
+    "armor-fire-knight-gauntlets",
+    "armor-fire-knight-greaves",
+    "armor-fire-knight-helm",
+    "armor-gaius-s-armor",
+    "armor-gaius-s-gauntlets",
+    "armor-gaius-s-helm",
+    "armor-gauntlets-of-night",
+    "armor-golden-prosthetic",
+    "armor-helm-of-night",
+    "armor-messmer-s-armor",
+    "armor-messmer-s-gauntlets",
+    "armor-messmer-s-greaves",
+    "armor-messmer-s-helm",
+    "armor-rellana-s-armor",
+    "armor-rellana-s-gloves",
+    "armor-rellana-s-greaves",
+    "armor-rellana-s-helm",
+    "armor-shadow-militiaman-armor",
+    "armor-shadow-militiaman-gauntlets",
+    "armor-shadow-militiaman-greaves",
+    "armor-shadow-militiaman-helm",
+    "armor-young-lion-s-armor",
+    "armor-young-lion-s-gauntlets",
+    "armor-young-lion-s-greaves",
+    "armor-young-lion-s-helm",
+    "armor-greaves-of-night",
+    "weapon-buckshot-crossbow",
+    "weapon-curseblade-s-cirque",
+    "weapon-fire-knight-s-greatsword",
+    "weapon-fire-knight-s-shortsword",
+    "weapon-forked-tongue-hatchet",
+    "weapon-greatsword-of-damnation",
+    "weapon-hand-to-hand",
+    "weapon-lizard-greatsword",
+    "weapon-rellana-s-twin-blades",
+    "weapon-sword-lance",
+    "armor-fire-knight-armor-altered",
+    "armor-messmer-s-helm-altered",
+    "armor-young-lion-s-armor-altered",
+    "armor-divine-beast-helm",
+    "armor-divine-beast-warrior-armor",
+    "armor-divine-bird-helm",
+    "armor-divine-bird-warrior-armor",
+    "armor-divine-bird-warrior-gauntlets",
+    "armor-divine-bird-warrior-greaves"
   ]
 }

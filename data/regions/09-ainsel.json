@@ -286,5 +286,18 @@
       ]
     }
   ],
-  "cleanup": []
+  "cleanup": [
+    "bell-bearing-abandoned-merchant-s-bell-bearing",
+    "bell-bearing-ghost-glovewort-picker-s-bell-bearing",
+    "golden-seed-34",
+    "armor-navy-hood",
+    "armor-nox-monk-hood",
+    "armor-nox-swordstress-crown",
+    "armor-nox-monk-hood-altered",
+    "armor-nox-swordstress-armor",
+    "armor-nox-swordstress-armor-altered",
+    "armor-nox-swordstress-crown-altered",
+    "armor-nox-bracelets",
+    "armor-nox-greaves"
+  ]
 }

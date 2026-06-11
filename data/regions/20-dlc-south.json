@@ -144,5 +144,19 @@
       ]
     }
   ],
-  "cleanup": []
+  "cleanup": [
+    "tool-ancient-dragon-s-blessing",
+    "tool-thiollier-s-concoction",
+    "cookbook-st-trina-disciple-s-cookbook-3",
+    "key-item-amber-draught",
+    "key-item-black-syrup",
+    "sorcery-mass-of-putrescence",
+    "sorcery-vortex-of-putrescence",
+    "ash-of-war-ash-of-war-the-poison-flower-blooms-twice",
+    "talisman-aged-one-s-exultation",
+    "armor-st-trina-s-blossom",
+    "weapon-poleblade-of-the-bud",
+    "weapon-putrescence-cleaver",
+    "weapon-velvet-sword-of-st-trina"
+  ]
 }

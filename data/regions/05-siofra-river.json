@@ -165,5 +165,16 @@
       ]
     }
   ],
-  "cleanup": []
+  "cleanup": [
+    "armor-fur-leggings",
+    "armor-fur-raiment",
+    "armor-horned-warrior-armor",
+    "armor-horned-warrior-greaves",
+    "armor-shaman-furs",
+    "armor-shaman-leggings",
+    "armor-shining-horned-headband",
+    "weapon-jawbone-axe",
+    "armor-horned-warrior-gauntlets",
+    "armor-horned-warrior-helm"
+  ]
 }

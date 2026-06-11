@@ -848,5 +848,10 @@
       ]
     }
   ],
-  "cleanup": []
+  "cleanup": [
+    "golden-seed-38",
+    "golden-seed-39",
+    "armor-festive-garb-altered",
+    "armor-festive-hood-altered"
+  ]
 }

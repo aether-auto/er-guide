@@ -760,5 +760,25 @@
       ]
     }
   ],
-  "cleanup": []
+  "cleanup": [
+    "ammo-explosive-bolt",
+    "bell-bearing-hermit-merchant-s-bell-bearing-1",
+    "bell-bearing-nomadic-merchant-s-bell-bearing-9",
+    "key-item-tonic-of-forgetfulness",
+    "incantation-burn-o-flame",
+    "incantation-o-flame",
+    "incantation-surge-o-flame",
+    "sorcery-roiling-magma",
+    "armor-azur-s-manchettes",
+    "armor-eccentric-s-hood-altered",
+    "armor-fire-monk-armor",
+    "armor-fire-monk-gauntlets",
+    "armor-fire-monk-greaves",
+    "armor-fire-monk-hood",
+    "armor-commoner-s-garb-altered",
+    "armor-commoner-s-shoes",
+    "armor-prisoner-clothing",
+    "armor-prisoner-iron-mask",
+    "armor-prisoner-trousers"
+  ]
 }

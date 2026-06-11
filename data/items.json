@@ -1935,17 +1935,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Champion_Pauldron"
   },
   {
-    "id": "armor-chest",
-    "name": "Chest",
-    "category": "armor",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Chest"
-  },
-  {
     "id": "armor-circlet-of-light",
     "name": "Circlet of Light",
     "category": "armor",
@@ -4817,17 +4806,6 @@
       "lng": 146.721478
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Haligtree_Knight_Helm"
-  },
-  {
-    "id": "armor-head",
-    "name": "Head",
-    "category": "armor",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Head"
   },
   {
     "id": "armor-helm-of-night",
@@ -11654,17 +11632,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Ash_of_War%3A_Wing_Stance"
   },
   {
-    "id": "ash-of-war-ashes-of-war-shadow-of-the-erdtree",
-    "name": "Ashes of War (Shadow of the Erdtree)",
-    "category": "ash-of-war",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Ashes_of_War_(Shadow_of_the_Erdtree)"
-  },
-  {
     "id": "bell-bearing-abandoned-merchant-s-bell-bearing",
     "name": "Abandoned Merchant's Bell Bearing",
     "category": "bell-bearing",
@@ -18128,7 +18095,10 @@
     "category": "key-item",
     "dlc": false,
     "acquisition": "",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Betray path or incomplete Millicent questline",
+      "note": "Use the Unalloyed Gold Needle on Millicent's Scarlet Aeonia after assisting her and defeating Malenia; used in Placidusax's arena to undo the Frenzied Flame."
+    },
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Miquella's_Needle"
@@ -22308,17 +22278,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Shield_of_the_Guilty"
   },
   {
-    "id": "shield-shields-shadow-of-the-erdtree",
-    "name": "Shields (Shadow of the Erdtree)",
-    "category": "shield",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Shields_(Shadow_of_the_Erdtree)"
-  },
-  {
     "id": "shield-silver-mirrorshield",
     "name": "Silver Mirrorshield",
     "category": "shield",
@@ -23752,17 +23711,6 @@
       "lng": 66.25388
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Archer_Ashes"
-  },
-  {
-    "id": "spirit-ash-ashes-shadow-of-the-erdtree",
-    "name": "Ashes (Shadow of the Erdtree)",
-    "category": "spirit-ash",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Ashes_(Shadow_of_the_Erdtree)"
   },
   {
     "id": "spirit-ash-avionette-soldier-ashes",
@@ -25991,17 +25939,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Arsenal_Charm_%2B1"
   },
   {
-    "id": "talisman-arsenal-charms",
-    "name": "Arsenal Charms",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Arsenal_Charms"
-  },
-  {
     "id": "talisman-assassin-s-cerulean-dagger",
     "name": "Assassin's Cerulean Dagger",
     "category": "talisman",
@@ -26224,17 +26161,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Boltdrake_Talisman_%2B3"
   },
   {
-    "id": "talisman-boltdrake-talismans",
-    "name": "Boltdrake Talismans",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Boltdrake_Talismans"
-  },
-  {
     "id": "talisman-bull-goat-s-talisman",
     "name": "Bull-Goat's Talisman",
     "category": "talisman",
@@ -26326,17 +26252,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Cerulean_Amber_Medallion_%2B3"
   },
   {
-    "id": "talisman-cerulean-amber-medallions",
-    "name": "Cerulean Amber Medallions",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Cerulean_Amber_Medallions"
-  },
-  {
     "id": "talisman-cerulean-seed-talisman",
     "name": "Cerulean Seed Talisman",
     "category": "talisman",
@@ -26415,17 +26330,6 @@
       "lng": 113.01157327100024
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Clarifying_Horn_Charm_%2B2"
-  },
-  {
-    "id": "talisman-clarifying-horn-charms",
-    "name": "Clarifying Horn Charms",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Clarifying_Horn_Charms"
   },
   {
     "id": "talisman-claw-talisman",
@@ -26549,17 +26453,6 @@
       "lng": 114.91048325831657
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimson_Amber_Medallion_%2B3"
-  },
-  {
-    "id": "talisman-crimson-amber-medallions",
-    "name": "Crimson Amber Medallions",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Crimson_Amber_Medallions"
   },
   {
     "id": "talisman-crimson-seed-talisman",
@@ -26776,17 +26669,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragoncrest_Shield_Talisman_%2B2"
   },
   {
-    "id": "talisman-dragoncrest-shield-talismans",
-    "name": "Dragoncrest Shield Talismans",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Dragoncrest_Shield_Talismans"
-  },
-  {
     "id": "talisman-dried-bouquet",
     "name": "Dried Bouquet",
     "category": "talisman",
@@ -26801,17 +26683,6 @@
       "lng": 100.97289472331384
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Dried_Bouquet"
-  },
-  {
-    "id": "talisman-elden-ring-talisman-template",
-    "name": "Elden Ring Talisman Template",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Elden_Ring_Talisman_Template"
   },
   {
     "id": "talisman-enraged-divine-beast",
@@ -26873,17 +26744,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Erdtree's_Favor_%2B2"
   },
   {
-    "id": "talisman-erdtree-s-favors",
-    "name": "Erdtree's Favors",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Erdtree's_Favors"
-  },
-  {
     "id": "talisman-exultations",
     "name": "Exultations",
     "category": "talisman",
@@ -26909,17 +26769,6 @@
       "lng": 144.246568
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Faithful's_Canvas_Talisman"
-  },
-  {
-    "id": "talisman-faithful-s-canvas-talismans",
-    "name": "Faithful's Canvas Talismans",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Faithful's_Canvas_Talismans"
   },
   {
     "id": "talisman-feathered-branchswords",
@@ -27029,23 +26878,15 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Flamedrake_Talisman_%2B3"
   },
   {
-    "id": "talisman-flamedrake-talismans",
-    "name": "Flamedrake Talismans",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Flamedrake_Talismans"
-  },
-  {
     "id": "talisman-flock-s-canvas-talisman",
     "name": "Flock's Canvas Talisman",
     "category": "talisman",
     "dlc": false,
     "acquisition": "A talisman bearing an icon that depicts a mass of masked figures. Greatly raises potency of incantations.",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Not completing Millicent's questline to either conclusion",
+      "note": "From Gowry's corpse after Millicent's questline concludes (either path)."
+    },
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Flock's_Canvas_Talisman"
@@ -27153,17 +26994,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Graven-School_Talisman"
   },
   {
-    "id": "talisman-graven-school-talismans",
-    "name": "Graven-School Talismans",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Graven-School_Talismans"
-  },
-  {
     "id": "talisman-great-jar-s-arsenal",
     "name": "Great-Jar's Arsenal",
     "category": "talisman",
@@ -27260,17 +27090,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Haligdrake_Talisman_%2B2"
   },
   {
-    "id": "talisman-haligdrake-talismans",
-    "name": "Haligdrake Talismans",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Haligdrake_Talismans"
-  },
-  {
     "id": "talisman-hammer-talisman",
     "name": "Hammer Talisman",
     "category": "talisman",
@@ -27355,17 +27174,6 @@
       "lng": 99.04296875
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Immunizing_Horn_Charm_%2B2"
-  },
-  {
-    "id": "talisman-immunizing-horn-charms",
-    "name": "Immunizing Horn Charms",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Immunizing_Horn_Charms"
   },
   {
     "id": "talisman-kindred-of-rot-s-exultation",
@@ -27518,7 +27326,10 @@
     "category": "talisman",
     "dlc": false,
     "acquisition": "When you are given the choice between assisting Millicent and challenging her, choose to challenge her. When you kill her, you will automatically receive this talisman.",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Assist path at Elphael (gold summon sign) or incomplete Millicent questline",
+      "note": "From Millicent's corpse on the betray path (red sign). Mutually exclusive with Rotten Winged Sword Insignia."
+    },
     "quest": null,
     "map": {
       "code": "overworld",
@@ -27591,17 +27402,6 @@
       "lng": 102.98913233419239
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Mottled_Necklace_%2B2"
-  },
-  {
-    "id": "talisman-mottled-necklaces",
-    "name": "Mottled Necklaces",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Mottled_Necklaces"
   },
   {
     "id": "talisman-old-lord-s-talisman",
@@ -27709,17 +27509,6 @@
       "lng": 128.4177531244288
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Pearldrake_Talisman_%2B3"
-  },
-  {
-    "id": "talisman-pearldrake-talismans",
-    "name": "Pearldrake Talismans",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Pearldrake_Talismans"
   },
   {
     "id": "talisman-perfumer-s-talisman",
@@ -27979,7 +27768,10 @@
     "category": "talisman",
     "dlc": false,
     "acquisition": "Earned after choosing to assist Millicent and successfully defeat her sisters.",
-    "missable": null,
+    "missable": {
+      "lockedBy": "Betray path at Elphael (red summon sign) or incomplete Millicent questline",
+      "note": "From Millicent's corpse on the assist path (gold sign vs her four sisters at Elphael). Mutually exclusive with Millicent's Prosthesis."
+    },
     "quest": null,
     "map": {
       "code": "overworld",
@@ -28220,17 +28012,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Spelldrake_Talisman_%2B3"
   },
   {
-    "id": "talisman-spelldrake-talismans",
-    "name": "Spelldrake Talismans",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Spelldrake_Talismans"
-  },
-  {
     "id": "talisman-st-trina-s-smile",
     "name": "St. Trina's Smile",
     "category": "talisman",
@@ -28293,17 +28074,6 @@
       "lng": 133.23889671106744
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Stalwart_Horn_Charm_%2B2"
-  },
-  {
-    "id": "talisman-stalwart-horn-charms",
-    "name": "Stalwart Horn Charms",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Stalwart_Horn_Charms"
   },
   {
     "id": "talisman-stargazer-heirloom",
@@ -28400,17 +28170,6 @@
       "lng": 130.99620889417162
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Talisman_of_the_Dread"
-  },
-  {
-    "id": "talisman-talismans-shadow-of-the-erdtree",
-    "name": "Talismans (Shadow of the Erdtree)",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Talismans_(Shadow_of_the_Erdtree)"
   },
   {
     "id": "talisman-trick-mirrors",
@@ -28568,17 +28327,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Viridian_Amber_Medallion_%2B3"
   },
   {
-    "id": "talisman-viridian-amber-medallions",
-    "name": "Viridian Amber Medallions",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Viridian_Amber_Medallions"
-  },
-  {
     "id": "talisman-warrior-jar-shard",
     "name": "Warrior Jar Shard",
     "category": "talisman",
@@ -28588,17 +28336,6 @@
     "quest": null,
     "map": null,
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Warrior_Jar_Shard"
-  },
-  {
-    "id": "talisman-warrior-jar-shards",
-    "name": "Warrior Jar Shards",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Warrior_Jar_Shards"
   },
   {
     "id": "talisman-weapon-talismans",
@@ -28626,17 +28363,6 @@
       "lng": 82.512248
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Winged_Sword_Insignia"
-  },
-  {
-    "id": "talisman-winged-sword-insignias",
-    "name": "Winged Sword Insignias",
-    "category": "talisman",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Winged_Sword_Insignias"
   },
   {
     "id": "talisman-woe-talismans",
@@ -32880,17 +32606,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Maternal_Staff"
   },
   {
-    "id": "weapon-melee-armaments-shadow-of-the-erdtree",
-    "name": "Melee Armaments (Shadow of the Erdtree)",
-    "category": "weapon",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Melee_Armaments_(Shadow_of_the_Erdtree)"
-  },
-  {
     "id": "weapon-messmer-soldier-s-axe",
     "name": "Messmer Soldier's Axe",
     "category": "weapon",
@@ -34826,28 +34541,6 @@
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Uchigatana"
   },
   {
-    "id": "weapon-unarmed",
-    "name": "Unarmed",
-    "category": "weapon",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Unarmed"
-  },
-  {
-    "id": "weapon-unique-skill-blindfold-of-happiness",
-    "name": "Unique Skill: Blindfold of Happiness",
-    "category": "weapon",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Unique_Skill%3A_Blindfold_of_Happiness"
-  },
-  {
     "id": "weapon-urumi",
     "name": "Urumi",
     "category": "weapon",
@@ -35045,17 +34738,6 @@
       "lng": 45.582438
     },
     "wikiUrl": "https://eldenring.wiki.gg/wiki/Watchdog's_Staff"
-  },
-  {
-    "id": "weapon-weapons-shadow-of-the-erdtree",
-    "name": "Weapons (Shadow of the Erdtree)",
-    "category": "weapon",
-    "dlc": false,
-    "acquisition": "",
-    "missable": null,
-    "quest": null,
-    "map": null,
-    "wikiUrl": "https://eldenring.wiki.gg/wiki/Weapons_(Shadow_of_the_Erdtree)"
   },
   {
     "id": "weapon-weathered-straight-sword",

@@ -21,16 +21,6 @@
           "type": "item",
           "itemId": "map-fragment-map-mohgwyn-palace",
           "note": "Found in the ruins north of the blood lake — follow the main path from the Palace Approach Ledge-Road grace north past the blood-soaked cliffs."
-        },
-        {
-          "type": "item",
-          "itemId": "talisman-erdtree-s-favor-1",
-          "note": "Found inside a chest in the room where you fight Mohg the Omen (Leyndell sewers boss room, not Mohg Lord of Blood) — this talisman is actually placed here if it wasn't collected in the Leyndell sewers. Acquisition: found in Leyndell sewers chest."
-        },
-        {
-          "type": "item",
-          "itemId": "tool-mohg-s-shackle",
-          "note": "Found in Mohgwyn Palace — can be used in the Mohg, Lord of Blood fight to interrupt his phase transition Nihil attack. Search the palace ruins near the blood lake."
         }
       ]
     },
@@ -74,6 +64,17 @@
     }
   ],
   "cleanup": [
-    "tool-pureblood-knight-s-medal"
+    "tool-pureblood-knight-s-medal",
+    "cookbook-nomadic-warrior-s-cookbook-20",
+    "cookbook-nomadic-warrior-s-cookbook-24",
+    "ash-of-war-ash-of-war-blood-tax",
+    "talisman-haligdrake-talisman-2",
+    "armor-lord-of-blood-s-robe-altered",
+    "armor-war-surgeon-gown",
+    "armor-war-surgeon-gown-altered",
+    "armor-war-surgeon-trousers",
+    "armor-white-mask",
+    "weapon-bloodfiend-s-fork",
+    "armor-war-surgeon-gloves"
   ]
 }
