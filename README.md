@@ -8,7 +8,7 @@ a persistent checkable step with an interactive map companion.
 
 ## How it works
 
-- `data/items.json` — generated item database (~2,500 unique items, 25 categories).
+- `data/items.json` — generated item database (2,437 unique items, 25 categories).
   Built by `npm run fetch` + `npm run build-data` from cached source data (committed
   under `scripts/cache/`). Never hand-edit; fix `data/overrides.json` and regenerate.
 - `data/regions/*.json` — hand-authored route: regions → legs (grace → grace) →
@@ -34,18 +34,13 @@ The map IS the guide: each region page is a full-viewport, self-hosted
   the Fextralife community — this is a non-commercial fan project and imagery
   will be removed on request.
 - **Markers:** our own divIcon styling — category-glyph pins that desaturate
-  when checked and pulse for the current "next up" step, plus gold-glow Site
-  of Grace dots (`data/map-extras.json`). Pin popups carry the wiki layer:
-  acquisition/how-to-find text, quest context, missable warnings, a
-  check/uncheck button synced with your progress, and external wiki +
-  Fextralife links.
-- **Route paths:** per-leg gold polylines drawn from the routed item markers;
-  the active leg renders wider and brighter, and a dashed segment points from
-  the next-up pin to the following step.
-- **Per-item Fextralife links:** every popup links the item's pin on
-  [Fextralife's interactive map](https://eldenring.wiki.fextralife.com/Interactive+Map)
-  (opens in a reusable companion window). Marker ids and coordinates in our
-  dataset were extracted from their public map application, with attribution.
+  when checked and pulse for the current "next up" step, soft gold Site of
+  Grace dots with name labels, and quiet landmark diamonds for named locations
+  (`data/map-extras.json`). Pin popups are self-contained info cards: full
+  acquisition/how-to-find text, quest context, missable warnings, and a
+  check/uncheck button synced with your progress — no external links.
+- **Guidance:** the pulsing next-up pin plus auto-pan to the current step lead
+  you through the route; no polylines are drawn on the map.
 
 ## Contributing
 
@@ -86,9 +81,8 @@ Bandai Namco. Item and location data compiled from:
 
 - [Fextralife Elden Ring Wiki](https://eldenring.wiki.fextralife.com/) — map
   tile pyramids (mirrored once, self-hosted as webp) and marker coordinates/ids
-  were extracted from their public map application, with attribution; per-item
-  popup links open their interactive map in a companion window. Underlying map
-  imagery © FromSoftware / Bandai Namco; removed on request.
+  were extracted from their public map application, with attribution.
+  Underlying map imagery © FromSoftware / Bandai Namco; removed on request.
 - [eldenring.wiki.gg](https://eldenring.wiki.gg/) — item listings
   (CC BY-NC-SA 3.0).
 - [Elden Ring Fan API](https://eldenring.fanapis.com/) — item descriptions (MIT).
