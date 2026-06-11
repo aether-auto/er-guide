@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { checkableId, countChecked, legCheckables, regionCheckables } from './data'
+import {
+  checkableId,
+  countChecked,
+  countIgnored,
+  firstUncheckedId,
+  legCheckables,
+  regionCheckables,
+} from './data'
 import type { Leg, Region } from './types'
 
 const leg: Leg = {
@@ -29,5 +36,18 @@ describe('data helpers', () => {
       cleanup: ['weapon-a', 'armor-b'],
     }
     expect(regionCheckables(region)).toEqual(['talisman-x', 'boss-y', 'quest-z', 'weapon-a', 'armor-b'])
+  })
+  it('countIgnored counts only ignored ids', () => {
+    expect(countIgnored(['a', 'b', 'c'], { a: 1, d: 99 })).toBe(1)
+  })
+  it('firstUncheckedId returns first unchecked id', () => {
+    expect(firstUncheckedId(leg.steps, {}, {})).toBe('talisman-x')
+    expect(firstUncheckedId(leg.steps, { 'talisman-x': 1 }, {})).toBe('boss-y')
+    expect(firstUncheckedId(leg.steps, {})).toBe('talisman-x') // ignored param optional
+  })
+  it('firstUncheckedId skips ignored ids', () => {
+    expect(firstUncheckedId(leg.steps, {}, { 'talisman-x': 1 })).toBe('boss-y')
+    expect(firstUncheckedId(leg.steps, { 'boss-y': 1 }, { 'talisman-x': 1 })).toBe('quest-z')
+    expect(firstUncheckedId(leg.steps, {}, { 'talisman-x': 1, 'boss-y': 1, 'quest-z': 1 })).toBe(null)
   })
 })

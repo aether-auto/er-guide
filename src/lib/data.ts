@@ -49,6 +49,10 @@ export function countChecked(ids: string[], checked: Record<string, number>): nu
   return ids.reduce((n, id) => (checked[id] != null ? n + 1 : n), 0)
 }
 
+export function countIgnored(ids: string[], ignored: Record<string, number>): number {
+  return ids.reduce((n, id) => (ignored[id] != null ? n + 1 : n), 0)
+}
+
 /**
  * The ordered steps shown for a region view: the selected leg's steps, or —
  * with no leg selected — every leg's steps followed by the cleanup sweep.
@@ -62,11 +66,15 @@ export function displaySteps(region: Region, legId?: string): Step[] {
   ]
 }
 
-/** First unchecked checkable step's id — the "next up" target. */
-export function firstUncheckedId(steps: Step[], checked: Record<string, number>): string | null {
+/** First unchecked, non-ignored checkable step's id — the "next up" target. */
+export function firstUncheckedId(
+  steps: Step[],
+  checked: Record<string, number>,
+  ignored: Record<string, number> = {},
+): string | null {
   for (const step of steps) {
     const id = checkableId(step)
-    if (id != null && checked[id] == null) return id
+    if (id != null && checked[id] == null && ignored[id] == null) return id
   }
   return null
 }
