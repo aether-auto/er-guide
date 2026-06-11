@@ -33,8 +33,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* force text/monochrome rendering — prevent OS emoji substitution */
   font-size: 13px;
+  font-family: "Segoe UI Symbol", "Noto Sans Symbols", "Apple Symbols", sans-serif;
+  font-variant-emoji: text;
   line-height: 1;
+  color: var(--pin-color, #c8a55a);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);

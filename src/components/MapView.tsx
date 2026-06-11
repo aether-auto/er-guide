@@ -88,6 +88,10 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
   })
   routeStateRef.current = { activeLegId: activeLegId ?? null, nextUpId: nextUpId ?? null }
 
+  // Auto-pan guard: resets when activeLegId changes so we fly once per
+  // region/leg mount but not on every item check within the same leg.
+  const autoPanFiredRef = useRef<string | null>(null)
+
   // ── Imperative re-draw helpers (use refs only) ───────────────────────────
 
   function redrawOverlays() {
@@ -231,6 +235,15 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
       })
     })
 
+    // Expose map center via a DOM data attribute for acceptance tests
+    // (avoids leaking the Leaflet instance into window; readable with page.evaluate).
+    const updateCenterAttr = () => {
+      const c = map.getCenter()
+      containerRef.current?.setAttribute('data-map-center', `${c.lat},${c.lng}`)
+    }
+    map.on('moveend', updateCenterAttr)
+    updateCenterAttr()
+
     // Keep tiles crisp when the layout settles after mount.
     const invalidate = () => map.invalidateSize()
     const t = setTimeout(invalidate, 100)
@@ -239,6 +252,7 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
     return () => {
       clearTimeout(t)
       window.removeEventListener('resize', invalidate)
+      map.off('moveend', updateCenterAttr)
       unsubscribe()
       map.remove()
       mapRef.current = null
@@ -257,6 +271,25 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
   // Route props changed (leg navigation / next-up advanced): redraw overlays.
   useEffect(() => {
     if (mapRef.current) redrawOverlays()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeLegId, nextUpId])
+
+  // Auto-pan to next-up pin on region/leg mount.
+  // The guard key encodes the active leg so changing legs always triggers a
+  // fresh pan, while checking items within the same leg does NOT re-fly
+  // (handleCheck→focus() already covers that advance).
+  useEffect(() => {
+    const legKey = activeLegId ?? '__region__'
+    if (autoPanFiredRef.current === legKey) return // already panned for this leg
+    if (!mapRef.current) return
+    if (!nextUpId) return
+    const item = itemsById.get(nextUpId)
+    if (!item?.map) return
+    autoPanFiredRef.current = legKey
+    if (item.map.code !== layerRef.current) {
+      switchLayer(item.map.code)
+    }
+    mapRef.current.flyTo([item.map.lat, item.map.lng], 5, { duration: 0.6 })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeLegId, nextUpId])
 

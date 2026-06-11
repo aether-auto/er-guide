@@ -99,6 +99,47 @@ check('DLC region auto-shows DLC layer', dlcActive)
 const dlcTiles = await page.locator('img.leaflet-tile[src*="/tiles/dlc/"]').count()
 check('DLC tiles loaded', dlcTiles > 0, `${dlcTiles} tiles`)
 
+// 9 ── Auto-pan: navigating to a leg moves map center near the next-up pin
+// Use weeping-01 (Weeping Peninsula) whose very first step is a mappable item,
+// so even with empty progress state the auto-pan fires reliably.
+{
+  const freshCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const freshPage = await freshCtx.newPage()
+  await freshPage.goto(`${BASE}#/region/weeping-peninsula/weeping-01`)
+  await freshPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  // Wait for flyTo to settle (0.6s duration + redraw buffer)
+  await freshPage.waitForTimeout(2500)
+  // Read the Leaflet map center via the data-map-center attribute set by MapView
+  // on every moveend event (exposed for test purposes, avoids Leaflet internals).
+  const mapCenter = await freshPage.evaluate(() => {
+    const container = document.querySelector('.leaflet-container[data-map-center]')
+    if (!container) return null
+    const raw = container.getAttribute('data-map-center')
+    if (!raw) return null
+    const [lat, lng] = raw.split(',').map(Number)
+    if (isNaN(lat) || isNaN(lng)) return null
+    return { lat, lng }
+  })
+  // The expected next-up pin for a fresh weeping-01 run: stonesword-key-03
+  // at lat=-205.789062, lng=116.57444 (Bridge of Sacrifice)
+  const expectedLat = -205.789062
+  const expectedLng = 116.57444
+  const tolerance = 15 // CRS.Simple units — flyTo doesn't need to be pixel-perfect
+  if (mapCenter) {
+    const latDiff = Math.abs(mapCenter.lat - expectedLat)
+    const lngDiff = Math.abs(mapCenter.lng - expectedLng)
+    const near = latDiff <= tolerance && lngDiff <= tolerance
+    check(
+      'Auto-pan: map center moves near next-up pin on leg mount',
+      near,
+      `center=(${mapCenter.lat.toFixed(3)}, ${mapCenter.lng.toFixed(3)}) pin=(${expectedLat}, ${expectedLng}) Δlat=${latDiff.toFixed(2)} Δlng=${lngDiff.toFixed(2)}`,
+    )
+  } else {
+    check('Auto-pan: map center moves near next-up pin on leg mount', false, 'could not read map center')
+  }
+  await freshCtx.close()
+}
+
 // 7 ── Zoom 7 upscales (maxNativeZoom 6)
 await page.goto(`${BASE}#/region/limgrave`)
 await page.waitForTimeout(1500)

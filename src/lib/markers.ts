@@ -6,31 +6,31 @@ import type { Category } from './types'
 // the marker border ring. Checked markers are desaturated via CSS filter.
 
 export const CATEGORY_GLYPH: Record<Category, string> = {
-  weapon: '⚔',
-  shield: '🛡',
-  ammo: '🏹',
-  armor: '🦺',
-  talisman: '◉',
-  sorcery: '✦',
-  incantation: '🔥',
-  'ash-of-war': '🌀',
-  'spirit-ash': '👻',
-  'key-item': '🗝',
-  'golden-seed': '🌱',
-  'sacred-tear': '💧',
-  'crystal-tear': '⚗',
-  'memory-stone': '🧠',
-  'larval-tear': '🫧',
-  whetblade: '🔧',
-  'stonesword-key': '🗡',
-  'bell-bearing': '🔔',
-  cookbook: '📖',
-  'map-fragment': '🗺',
-  'great-rune': '#',
-  remembrance: '☽',
-  'scadutree-fragment': '🌳',
-  'revered-spirit-ash': '✨',
-  tool: '🛠',
+  weapon: '⚔',      // sword — existing monochrome, keep
+  shield: '⛨',      // heraldic shield (text/mono, replaces 🛡)
+  ammo: '▷',        // arrow head — monochrome triangle
+  armor: '▣',       // filled square-in-square (replaces 🦺)
+  talisman: '◉',    // already monochrome, keep
+  sorcery: '✦',     // already monochrome, keep
+  incantation: '✹', // eight-spoked asterisk (replaces 🔥)
+  'ash-of-war': '◈', // diamond with dot (replaces 🌀)
+  'spirit-ash': '◇', // open diamond (replaces 👻)
+  'key-item': '⚿',  // key-like (replaces 🗝)
+  'golden-seed': '✿', // flower — monochrome (replaces 🌱)
+  'sacred-tear': '▾', // downward triangle (replaces 💧)
+  'crystal-tear': '⚗', // already monochrome, keep
+  'memory-stone': '▪', // small square (replaces 🧠)
+  'larval-tear': '○', // open circle (replaces 🫧)
+  whetblade: '▬',   // rectangle / blade shape (replaces 🔧)
+  'stonesword-key': '†', // dagger / sword (replaces 🗡)
+  'bell-bearing': '◎', // bullseye / bell shape (replaces 🔔)
+  cookbook: '≡',    // triple bar / pages (replaces 📖)
+  'map-fragment': '⊞', // grid (replaces 🗺)
+  'great-rune': '#', // already text, keep
+  remembrance: '☽',  // already monochrome, keep
+  'scadutree-fragment': '✤', // four-petalled (replaces 🌳)
+  'revered-spirit-ash': '✦', // monochrome (replaces ✨)
+  tool: '⚙',        // gear — monochrome (replaces 🛠)
 }
 
 export const CATEGORY_COLOR: Record<Category, string> = {
