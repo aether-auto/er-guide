@@ -1,8 +1,9 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { items, regions, regionCheckables, countChecked, itemPosition } from '../lib/data'
 import { CATEGORY_META, type Category } from '../lib/types'
 import { useProgress } from '../lib/useProgress'
+import { gistSync, type SyncStatus } from '../lib/gistSync'
 import TopBar from '../components/TopBar'
 
 export default function ProgressPage() {
@@ -10,6 +11,31 @@ export default function ProgressPage() {
   const fileRef = useRef<HTMLInputElement>(null)
   const [importError, setImportError] = useState('')
   const [newProfile, setNewProfile] = useState('')
+  const [syncStatus, setSyncStatus] = useState<SyncStatus>(gistSync.getStatus())
+  const [tokenInput, setTokenInput] = useState('')
+
+  // Keep React state in sync with the gistSync module's status.
+  useEffect(() => gistSync.subscribe(() => setSyncStatus(gistSync.getStatus())), [])
+
+  // While connected: auto-push (debounced 3s) on store changes, and check once
+  // whether the cloud copy is newer than our last sync (never auto-imports).
+  const connected =
+    syncStatus.type === 'idle' ||
+    syncStatus.type === 'syncing' ||
+    syncStatus.type === 'cloud-newer' ||
+    (syncStatus.type === 'error' && syncStatus.gistId != null)
+  useEffect(() => {
+    if (!connected) return
+    const stopAuto = gistSync.startAutoSync(store)
+    void gistSync.checkCloudNewer()
+    return stopAuto
+  }, [connected, store])
+
+  async function doConnect() {
+    if (!tokenInput.trim()) return
+    const result = await gistSync.connect(tokenInput.trim())
+    if (result.type === 'idle') setTokenInput('')
+  }
 
   const byCategory = new Map<Category, { total: number; done: number }>()
   for (const item of items) {
@@ -87,6 +113,85 @@ export default function ProgressPage() {
             onChange={(e) => e.target.files?.[0] && doImport(e.target.files[0])}
           />
           {importError && <span className="text-missable">{importError}</span>}
+        </section>
+
+        <section className="mb-6 rounded border border-edge bg-panel p-3 text-sm">
+          <h2 className="font-display mb-3 text-lg text-gold-dim">Cloud sync (GitHub)</h2>
+
+          {syncStatus.type === 'cloud-newer' && (
+            <div className="mb-3 flex flex-wrap items-center gap-2 rounded border border-gold-dim/60 bg-panel2 p-2">
+              <span className="text-gold">Your cloud copy is newer than this browser's data.</span>
+              <button
+                onClick={() => void gistSync.pullNow((json) => store.importJson(json))}
+                className="rounded border border-gold-dim px-2 py-0.5 text-gold hover:bg-panel"
+              >
+                Load cloud copy
+              </button>
+              <button
+                onClick={() => void gistSync.pushNow(store.exportJson())}
+                className="rounded border border-edge px-2 py-0.5 text-ink-dim hover:bg-panel"
+              >
+                Overwrite cloud
+              </button>
+            </div>
+          )}
+
+          {syncStatus.type === 'error' && (
+            <p className="mb-3 text-missable">Sync error: {syncStatus.message}</p>
+          )}
+
+          {!connected ? (
+            <div className="flex flex-wrap items-center gap-2">
+              <input
+                type="password"
+                value={tokenInput}
+                onChange={(e) => setTokenInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && void doConnect()}
+                placeholder="GitHub fine-grained token"
+                className="w-72 rounded border border-edge bg-bg px-2 py-1 font-mono text-xs"
+              />
+              <button
+                onClick={() => void doConnect()}
+                disabled={syncStatus.type === 'connecting' || !tokenInput.trim()}
+                className="rounded border border-gold-dim px-2 py-1 text-gold hover:bg-panel2 disabled:opacity-50"
+              >
+                {syncStatus.type === 'connecting' ? 'Connecting…' : 'Connect'}
+              </button>
+            </div>
+          ) : (
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="text-ink-dim">
+                Gist: <code>{(syncStatus.gistId ?? '').slice(0, 8)}…</code>
+              </span>
+              <span className="text-ink-dim">
+                Last synced: {syncStatus.lastSyncedAt ? new Date(syncStatus.lastSyncedAt).toLocaleString() : 'never'}
+              </span>
+              <button
+                onClick={() => void gistSync.pushNow(store.exportJson())}
+                disabled={syncStatus.type === 'syncing'}
+                className="rounded border border-gold-dim px-2 py-1 text-gold hover:bg-panel2 disabled:opacity-50"
+              >
+                {syncStatus.type === 'syncing' ? 'Syncing…' : 'Sync now'}
+              </button>
+              <button
+                onClick={() => void gistSync.pullNow((json) => store.importJson(json))}
+                disabled={syncStatus.type === 'syncing'}
+                className="rounded border border-edge px-2 py-1 hover:bg-panel2 disabled:opacity-50"
+              >
+                Load from cloud
+              </button>
+              <button
+                onClick={() => gistSync.disconnect()}
+                className="rounded border border-edge px-2 py-1 text-ink-dim hover:bg-panel2"
+              >
+                Disconnect
+              </button>
+            </div>
+          )}
+
+          <p className="mt-3 text-xs text-ink-dim">
+            Use a fine-grained token with only the gist permission. The token is stored in your browser.
+          </p>
         </section>
 
         {missablesPending.length > 0 && (

@@ -53,6 +53,23 @@ The [/coverage](https://aether-auto.github.io/er-guide/#/coverage) page is the
 to-do list: items missing map markers, items not yet routed into a leg. Edit the
 relevant `data/regions/*.json`, run `npm run validate`, open a PR.
 
+## Cloud sync (optional)
+
+Progress can be backed up to a **secret GitHub Gist** and synced across browsers.
+No server involved — your browser talks directly to `api.github.com`.
+
+1. Create a [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new)
+   with **no repository access** and a single account permission: **Gists → Read and write**.
+2. On the Progress page, paste the token into the "Cloud sync (GitHub)" section and Connect.
+   A secret gist (`er-guide-progress.json`) is found or created automatically; changes
+   auto-push a few seconds after you check items, and a banner offers to load the cloud
+   copy if it's newer than the local one (nothing is ever auto-imported).
+
+What's stored where: your progress lives in localStorage (`er-guide-progress-v1`); the
+token + gist id live in localStorage (`er-guide-gist-sync`) and are sent only to
+`api.github.com`; the cloud copy lives in a secret gist in your GitHub account.
+Disconnecting clears the token from your browser but never deletes the gist.
+
 ## Development
 
 ```bash
