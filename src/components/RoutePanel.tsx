@@ -6,6 +6,7 @@ import {
   legCheckables,
   regionCheckables,
   countChecked,
+  countIgnored,
   checkableId,
   displaySteps,
   firstUncheckedId,
@@ -17,7 +18,17 @@ import { useUi } from '../App'
 
 // ── Progress bar ──────────────────────────────────────────────────────────
 
-function ProgressBar({ done, total, label }: { done: number; total: number; label: string }) {
+function ProgressBar({
+  done,
+  total,
+  label,
+  ignoredCount = 0,
+}: {
+  done: number
+  total: number
+  label: string
+  ignoredCount?: number
+}) {
   const pct = total === 0 ? 0 : Math.round((done / total) * 100)
   return (
     <div className="flex items-center gap-2">
@@ -27,6 +38,7 @@ function ProgressBar({ done, total, label }: { done: number; total: number; labe
       </span>
       <span className="text-[10px] whitespace-nowrap text-ink-dim">
         {done}/{total}
+        {ignoredCount > 0 && <span className="ml-1 opacity-60">({ignoredCount} ignored)</span>}
       </span>
     </div>
   )
@@ -38,11 +50,13 @@ function PanelStepRow({
   step,
   isNextUp,
   onCheck,
+  onIgnore,
   onLocate,
 }: {
   step: Step
   isNextUp: boolean
   onCheck: (id: string) => void
+  onIgnore: (id: string) => void
   onLocate?: () => void
 }) {
   const { snapshot } = useProgress()
@@ -53,6 +67,7 @@ function PanelStepRow({
 
   const id = checkableId(step)
   const checked = id != null && snapshot.checked[id] != null
+  const ignored = id != null && snapshot.ignored[id] != null
   const item = step.type === 'item' ? itemsById.get(step.itemId) : undefined
   const missable = step.type === 'quest' ? step.missable : item?.missable
   const name = step.type === 'item' ? (item?.name ?? step.itemId) : step.text
@@ -60,7 +75,7 @@ function PanelStepRow({
   return (
     <li
       className={`flex items-start gap-2 rounded px-2 py-1.5 transition-colors hover:bg-panel2 ${
-        checked ? 'opacity-40' : isNextUp ? 'border border-edge bg-panel2' : ''
+        checked ? 'opacity-40' : ignored ? 'opacity-30' : isNextUp ? 'border border-edge bg-panel2' : ''
       }`}
     >
       {id != null && (
@@ -74,7 +89,7 @@ function PanelStepRow({
       )}
       <div className="min-w-0 flex-1 text-xs">
         <span
-          className={`${checked ? 'text-ink-dim line-through' : ''} ${isNextUp ? 'font-medium text-gold' : ''}`}
+          className={`${checked ? 'text-ink-dim line-through' : ignored ? 'text-ink-dim' : ''} ${isNextUp ? 'font-medium text-gold' : ''}`}
         >
           {step.type === 'boss' && '⚔ '}
           {step.type === 'quest' && (
@@ -89,7 +104,7 @@ function PanelStepRow({
           </span>
         )}
         {item?.dlc && <span className="ml-1 text-[9px] text-gold-dim">DLC</span>}
-        {step.type === 'item' && !checked && (
+        {step.type === 'item' && !checked && !ignored && (
           <>
             {step.note && (
               <p className="mt-0.5 text-[11px] leading-relaxed text-ink-dim">{step.note}</p>
@@ -104,12 +119,24 @@ function PanelStepRow({
             )}
           </>
         )}
-        {missable && !checked && (
+        {missable && !checked && !ignored && (
           <p className="mt-0.5 text-[11px] font-semibold leading-relaxed text-missable">
             ⚠ MISSABLE — {missable.lockedBy}
           </p>
         )}
       </div>
+      {id != null && (
+        <button
+          onClick={() => onIgnore(id)}
+          className={`shrink-0 text-sm leading-none transition-colors ${
+            ignored ? 'text-ink hover:text-gold' : 'text-ink-dim/40 hover:text-ink-dim'
+          }`}
+          aria-label={ignored ? 'Restore' : 'Ignore for now'}
+          title={ignored ? 'Restore' : 'Ignore for now'}
+        >
+          ⊘
+        </button>
+      )}
       {item?.map && onLocate && (
         <button
           onClick={onLocate}
@@ -194,7 +221,7 @@ function RegionTree({ activeRegionId, onClose }: { activeRegionId: string; onClo
         </button>
       </div>
       {regions.map((region) => {
-        const ids = regionCheckables(region)
+        const ids = regionCheckables(region).filter((id) => snapshot.ignored[id] == null)
         const done = countChecked(ids, snapshot.checked)
         const pct = ids.length === 0 ? 0 : Math.round((done / ids.length) * 100)
         return (
@@ -216,7 +243,7 @@ function RegionTree({ activeRegionId, onClose }: { activeRegionId: string; onClo
             </NavLink>
             {region.id === activeRegionId &&
               region.legs.map((leg) => {
-                const legIds = legCheckables(leg)
+                const legIds = legCheckables(leg).filter((id) => snapshot.ignored[id] == null)
                 const legDone = countChecked(legIds, snapshot.checked)
                 return (
                   <NavLink
@@ -269,18 +296,24 @@ export default function RoutePanel() {
       ? region.legs[currentLegIndex + 1]
       : null
 
-  // Steps + next up (same derivation GuidePage uses for the map props)
+  // Steps + next up (same derivation GuidePage uses for the map props).
+  // Ignored items are skipped — the "Next up" callout never shows one.
   const steps = displaySteps(region, legId)
-  const nextUpId = firstUncheckedId(steps, snapshot.checked)
+  const nextUpId = firstUncheckedId(steps, snapshot.checked, snapshot.ignored)
   const nextUpStep = nextUpId != null ? (steps.find((s) => checkableId(s) === nextUpId) ?? null) : null
 
   // Checking advances to the new next-up and pans the map to it.
   function handleCheck(id: string) {
     store.toggle(id)
-    const newNextUpId = firstUncheckedId(steps, store.getSnapshot().checked)
+    const snap = store.getSnapshot()
+    const newNextUpId = firstUncheckedId(steps, snap.checked, snap.ignored)
     if (newNextUpId == null) return
     const item = itemsById.get(newNextUpId)
     if (item?.map) focus(item.map, item.id)
+  }
+
+  function handleIgnore(id: string) {
+    store.toggleIgnore(id)
   }
 
   function locateStep(step: Step) {
@@ -289,11 +322,15 @@ export default function RoutePanel() {
     if (item?.map) focus(item.map, item.id)
   }
 
-  // Progress
+  // Progress — ignored items are excluded from totals
   const regionIds = regionCheckables(region)
-  const regionDone = countChecked(regionIds, snapshot.checked)
+  const regionIgnoredCount = countIgnored(regionIds, snapshot.ignored)
+  const regionActiveIds = regionIds.filter((id) => snapshot.ignored[id] == null)
+  const regionDone = countChecked(regionActiveIds, snapshot.checked)
   const legIds = currentLeg ? legCheckables(currentLeg) : []
-  const legDone = currentLeg ? countChecked(legIds, snapshot.checked) : 0
+  const legIgnoredCount = currentLeg ? countIgnored(legIds, snapshot.ignored) : 0
+  const legActiveIds = legIds.filter((id) => snapshot.ignored[id] == null)
+  const legDone = currentLeg ? countChecked(legActiveIds, snapshot.checked) : 0
 
   return (
     <div className={`er-route-panel ${mobileExpanded ? 'er-route-panel--expanded' : ''}`}>
@@ -348,8 +385,15 @@ export default function RoutePanel() {
           </div>
         )}
         <div className="mt-1.5 space-y-0.5">
-          {currentLeg && <ProgressBar done={legDone} total={legIds.length} label="Leg" />}
-          <ProgressBar done={regionDone} total={regionIds.length} label="Region" />
+          {currentLeg && (
+            <ProgressBar done={legDone} total={legActiveIds.length} label="Leg" ignoredCount={legIgnoredCount} />
+          )}
+          <ProgressBar
+            done={regionDone}
+            total={regionActiveIds.length}
+            label="Region"
+            ignoredCount={regionIgnoredCount}
+          />
         </div>
       </div>
 
@@ -380,6 +424,7 @@ export default function RoutePanel() {
                 step={step}
                 isNextUp={id != null && id === nextUpId}
                 onCheck={handleCheck}
+                onIgnore={handleIgnore}
                 onLocate={item?.map ? () => locateStep(step) : undefined}
               />
             )
