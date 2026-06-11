@@ -63,7 +63,7 @@ export const CATEGORY_COLOR: Record<Category, string> = {
 
 // ─── divIcon builders ────────────────────────────────────────────────────────
 
-export type MarkerVariant = 'normal' | 'checked' | 'nextup'
+export type MarkerVariant = 'normal' | 'checked' | 'nextup' | 'ignored'
 
 /**
  * Circular 28px category pin, Map-Genie style.
