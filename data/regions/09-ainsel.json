@@ -152,16 +152,6 @@
         },
         {
           "type": "item",
-          "itemId": "armor-marais-mask",
-          "note": "Corpse in Nokstella ruins."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-marais-robe",
-          "note": "Corpse in Nokstella ruins."
-        },
-        {
-          "type": "item",
           "itemId": "armor-mushroom-crown",
           "note": "Dropped in the Uhl Palace Ruins / Ainsel underground area."
         },
@@ -219,11 +209,6 @@
         },
         {
           "type": "item",
-          "itemId": "weapon-antspur-rapier",
-          "note": "Dropped by the Maleigh Marais (mounted knight) invader in the Lake of Rot, or found as a corpse pick-up near the lake."
-        },
-        {
-          "type": "item",
           "itemId": "weapon-alabaster-lord-s-sword",
           "note": "Dropped by the Alabaster Lord boss on top of the 4th raised platform in Lake of Rot."
         },
@@ -263,11 +248,6 @@
           "type": "item",
           "itemId": "remembrance-remembrance-of-the-naturalborn",
           "note": "From Astel. Trade at Enia for Waves of Darkness incantation or Meteorite of Astel sorcery."
-        },
-        {
-          "type": "item",
-          "itemId": "sorcery-meteorite-of-astel",
-          "note": "Trade Remembrance of the Naturalborn at Enia — one of two choices."
         },
         {
           "type": "quest",

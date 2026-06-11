@@ -439,11 +439,6 @@
             "lockedBy": "Giving Nepheli Seluvis's Potion",
             "note": "If Nepheli drinks the potion, she becomes a puppet sold by Pidia. Her full questline (Ancient Dragon Smithing Stone, Stormveil ending) is locked. Show the potion to Gideon or simply don't use it."
           }
-        },
-        {
-          "type": "item",
-          "itemId": "spirit-ash-latenna-the-albinauric-spirit-ash",
-          "note": "Given by Latenna the Albinauric at Slumbering Wolf's Shack (east of the Lakeside Crystal Cave, after defeating the Bloodhound Knight there). She joins you to seek the Haligtree — give her the Haligtree Secret Medallion (Right) to confirm. She becomes a stationary archer spirit ash."
         }
       ]
     },
@@ -771,7 +766,6 @@
   ],
   "cleanup": [
     "ammo-serpent-arrow",
-    "armor-albinauric-mask",
     "armor-black-wolf-mask",
     "armor-blackguard-s-iron-mask",
     "armor-blaidd-s-armor",
@@ -818,9 +812,6 @@
     "armor-raya-lucarian-greaves",
     "armor-raya-lucarian-helm",
     "armor-raya-lucarian-robe",
-    "armor-royal-knight-armor",
-    "armor-royal-knight-gauntlets",
-    "armor-royal-knight-greaves",
     "armor-sage-hood",
     "armor-sage-robe",
     "armor-sage-trousers",
@@ -853,7 +844,6 @@
     "cookbook-glintstone-craftsman-s-cookbook-5",
     "cookbook-glintstone-craftsman-s-cookbook-6",
     "cookbook-glintstone-craftsman-s-cookbook-7",
-    "cookbook-glintstone-craftsman-s-cookbook-8",
     "cookbook-nomadic-warrior-s-cookbook-12",
     "key-item-cracked-pot",
     "key-item-gold-sewing-needle",
@@ -930,7 +920,6 @@
     "tool-wraith-calling-bell",
     "weapon-academy-glintstone-staff",
     "weapon-albinauric-bow",
-    "weapon-albinauric-staff",
     "weapon-banished-knight-s-halberd",
     "weapon-carian-glintblade-staff",
     "weapon-carian-glintstone-staff",

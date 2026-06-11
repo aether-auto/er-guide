@@ -30,11 +30,6 @@
         },
         {
           "type": "item",
-          "itemId": "shield-smoldering-shield",
-          "note": "Corpse near the Smoldering Church itself."
-        },
-        {
-          "type": "item",
           "itemId": "incantation-flame-grant-me-strength",
           "note": "Corpse at the Smoldering Church ruins on a body between two warhawks."
         },
@@ -361,11 +356,6 @@
           "type": "item",
           "itemId": "weapon-cleanrot-knight-s-sword",
           "note": "Dropped by Cleanrot Knight enemies."
-        },
-        {
-          "type": "item",
-          "itemId": "spirit-ash-cleanrot-knight-finlay",
-          "note": "Chest in the Inner Aeonia area (center of swamp, behind the Commander's boss fog area)."
         },
         {
           "type": "item",
@@ -810,6 +800,7 @@
     "weapon-iron-greatsword",
     "weapon-rotten-crystal-spear",
     "weapon-rotten-crystal-staff",
-    "weapon-warped-axe"
+    "weapon-warped-axe",
+    "spirit-ash-battlemage-hugues-spirit-ash"
   ]
 }

@@ -1024,7 +1024,6 @@
     "armor-gravebird-helm",
     "armor-highland-attire",
     "armor-leather-crown",
-    "ash-of-war-ash-of-war-dryleaf-whirlwind",
     "ash-of-war-ash-of-war-rolling-sparks",
     "ash-of-war-ash-of-war-swift-slash",
     "bell-bearing-greasemonger-s-bell-bearing",
@@ -1054,7 +1053,6 @@
     "revered-spirit-ash-22",
     "revered-spirit-ash-23",
     "scadutree-fragment-16",
-    "scadutree-fragment-22",
     "scadutree-fragment-32",
     "scadutree-fragment-34",
     "scadutree-fragment-36",
@@ -1158,6 +1156,7 @@
     "armor-divine-bird-helm",
     "armor-divine-bird-warrior-armor",
     "armor-divine-bird-warrior-gauntlets",
-    "armor-divine-bird-warrior-greaves"
+    "armor-divine-bird-warrior-greaves",
+    "talisman-verdigris-discus"
   ]
 }

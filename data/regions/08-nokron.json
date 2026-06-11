@@ -17,16 +17,6 @@
           "type": "item",
           "itemId": "weapon-ghostflame-torch",
           "note": "Corpse near the first descent into the underground ruins of Nokron — in the initial collapsed building area."
-        },
-        {
-          "type": "item",
-          "itemId": "cookbook-frenzied-s-cookbook-2",
-          "note": "Corpse in the ruins above the Nokron grace, before descending fully."
-        },
-        {
-          "type": "item",
-          "itemId": "stonesword-key-32",
-          "note": "Corpse in the underground ruins near the entrance descents — first section."
         }
       ]
     },
@@ -89,16 +79,6 @@
         },
         {
           "type": "item",
-          "itemId": "talisman-silver-scarab",
-          "note": "Chest in a hidden room off the Ancestral Woods — look for an illusory wall in the building east of the Ancestral Woods grace."
-        },
-        {
-          "type": "item",
-          "itemId": "talisman-ritual-shield-talisman",
-          "note": "Chest at the top of a tower in Night's Sacred Ground, accessible via the cathedral rooftops."
-        },
-        {
-          "type": "item",
           "itemId": "whetblade-black-whetblade",
           "note": "Chest in Night's Sacred Ground's main building — unlocks Blood and Occult Ash of War infusions."
         },
@@ -133,11 +113,6 @@
         },
         {
           "type": "item",
-          "itemId": "talisman-spelldrake-talisman-2",
-          "note": "Corpse in Night's Sacred Ground, upper accessible area."
-        },
-        {
-          "type": "item",
           "itemId": "stonesword-key-50",
           "note": "Corpse on the outskirts of Night's Sacred Ground."
         },
@@ -145,11 +120,6 @@
           "type": "item",
           "itemId": "larval-tear-12",
           "note": "Dropped by a Silver Tear (large sphere) in Night's Sacred Ground or nearby rooftops."
-        },
-        {
-          "type": "item",
-          "itemId": "spirit-ash-blackflame-monk-amon",
-          "note": "Dropped by the Blackflame Monk Amon (named enemy) in the rooftop area near Night's Sacred Ground."
         },
         {
           "type": "item",
@@ -187,11 +157,6 @@
           "type": "boss",
           "id": "boss-nokron-dragonkin-soldier",
           "text": "Dragonkin Soldier of Nokron — accessed via the western waygate on the Siofra River aqueduct. Drops Dragon Halberd and Gargoyle's Twinblade. This is the same dungeon area as Siofra River."
-        },
-        {
-          "type": "item",
-          "itemId": "weapon-dragon-halberd",
-          "note": "Dropped by Dragonkin Soldier of Nokron."
         },
         {
           "type": "item",

@@ -344,26 +344,6 @@
         },
         {
           "type": "item",
-          "itemId": "armor-zamor-armor",
-          "note": "Dropped by Zamor Knight enemies near the Divine Bridge."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-zamor-mask",
-          "note": "Dropped by Zamor Knight enemies."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-zamor-bracelets",
-          "note": "Dropped by Zamor Knight enemies."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-zamor-legwraps",
-          "note": "Dropped by Zamor Knight enemies."
-        },
-        {
-          "type": "item",
           "itemId": "armor-ronin-s-armor",
           "note": "Dropped by Ronin enemies in the capital area."
         },
@@ -652,11 +632,6 @@
         },
         {
           "type": "item",
-          "itemId": "weapon-zamor-curved-sword",
-          "note": "Dropped by Zamor Knight enemies near the Divine Bridge."
-        },
-        {
-          "type": "item",
           "itemId": "shield-dragonclaw-shield",
           "note": "On a corpse in the Leyndell streets."
         },
@@ -758,11 +733,6 @@
           "type": "item",
           "itemId": "incantation-inescapable-frenzy",
           "note": "On a corpse near the Frenzied Flame Proscription in the Subterranean Shunning-Grounds."
-        },
-        {
-          "type": "item",
-          "itemId": "sorcery-fia-s-mist",
-          "note": "Dropped by Fia's Champions in Deeproot Depths — placed in this region file as it is part of the Leyndell-area quest arc."
         },
         {
           "type": "item",
@@ -998,6 +968,9 @@
     "armor-perfumer-robe-altered",
     "armor-perfumer-sarong",
     "armor-spellblade-s-traveling-attire",
-    "armor-spellblade-s-traveling-attire-altered"
+    "armor-spellblade-s-traveling-attire-altered",
+    "cookbook-frenzied-s-cookbook-2",
+    "stonesword-key-32",
+    "talisman-ritual-shield-talisman"
   ]
 }

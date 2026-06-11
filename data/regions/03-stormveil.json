@@ -249,11 +249,6 @@
           "note": "Found in the Stormveil Castle gatehouse — in a chest near the Gateside Chamber, accessible on the way to Godrick."
         },
         {
-          "type": "item",
-          "itemId": "talisman-viridian-amber-medallion-1",
-          "note": "Chest in the Stormveil stockroom area (requires navigating back through the upper castle)."
-        },
-        {
           "type": "quest",
           "id": "quest-nepheli-godrick-summon",
           "questline": "Nepheli Loux",

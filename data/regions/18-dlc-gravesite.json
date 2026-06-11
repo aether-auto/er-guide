@@ -85,11 +85,6 @@
         },
         {
           "type": "item",
-          "itemId": "scadutree-fragment-02",
-          "note": "Church of Consolation — first of two fragments beside the Marika statue."
-        },
-        {
-          "type": "item",
           "itemId": "scadutree-fragment-03",
           "note": "Church of Consolation — second fragment also beside the Marika statue (x2 at this location)."
         },
@@ -130,11 +125,6 @@
           "type": "item",
           "itemId": "cookbook-forager-brood-cookbook-2",
           "note": "Interact with a second Forager Brood pest creature in the Gravesite Plain open area."
-        },
-        {
-          "type": "item",
-          "itemId": "cookbook-forager-brood-cookbook-3",
-          "note": "Interact with a third Forager Brood pest creature in the Scorched Ruins vicinity."
         },
         {
           "type": "item",
@@ -567,46 +557,6 @@
         },
         {
           "type": "item",
-          "itemId": "weapon-igon-s-greatbow",
-          "note": "Obtained from Igon after defeating Bayle the Dread at Jagged Peak (Task 23 west region). Items appear at Igon's starting location — Pillar Path Waypoint grace in Gravesite Plain — after Bayle is defeated."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-igon-s-armor",
-          "note": "Obtained from Igon after defeating Bayle the Dread — appears at Pillar Path Waypoint grace."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-igon-s-armor-altered",
-          "note": "Altered version of Igon's Armor — same acquisition as the base version."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-igon-s-gauntlets",
-          "note": "Obtained from Igon after defeating Bayle — appears at Pillar Path Waypoint."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-igon-s-helm",
-          "note": "Obtained from Igon after defeating Bayle — appears at Pillar Path Waypoint."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-igon-s-helm-altered",
-          "note": "Altered version of Igon's Helm — same acquisition."
-        },
-        {
-          "type": "item",
-          "itemId": "armor-igon-s-loincloth",
-          "note": "Obtained from Igon after defeating Bayle — appears at Pillar Path Waypoint."
-        },
-        {
-          "type": "item",
-          "itemId": "bell-bearing-igon-s-bell-bearing",
-          "note": "Obtained from Igon after defeating Bayle the Dread (Jagged Peak). Enables purchasing Igon's Harpoons. Items appear at Pillar Path Waypoint."
-        },
-        {
-          "type": "item",
           "itemId": "key-item-heart-of-bayle",
           "note": "Dropped by Bayle the Dread at Jagged Peak summit (Task 23 west region). Needed for the Dragon Communion Priestess questline. Collect from Igon's location or Bayle's arena after the fight."
         },
@@ -712,18 +662,8 @@
         },
         {
           "type": "item",
-          "itemId": "talisman-verdigris-discus",
-          "note": "Found in the Gravesite Plain area, on a corpse."
-        },
-        {
-          "type": "item",
           "itemId": "bell-bearing-herbalist-s-bell-bearing",
           "note": "Dropped by an NPC invader in the Gravesite Plain area."
-        },
-        {
-          "type": "item",
-          "itemId": "bell-bearing-mushroom-seller-s-bell-bearing-1",
-          "note": "Dropped by an NPC merchant/invader in the Gravesite Plain."
         },
         {
           "type": "item",
@@ -839,11 +779,6 @@
           "type": "item",
           "itemId": "map-fragment-map-abyss",
           "note": "Found in Abyssal Woods (Task 23 west region). Placed here because it was in this region's cleanup; the 21-dlc-west agent should claim it if they route Abyssal Woods. (unverified exact location — see wiki)"
-        },
-        {
-          "type": "item",
-          "itemId": "map-fragment-map-southern-shore",
-          "note": "Found on the Cerulean/Southern Shore (Task 23 south region). Placed here from cleanup; the 20-dlc-south agent should claim it if they route that area. (unverified)"
         }
       ]
     }
@@ -852,6 +787,7 @@
     "golden-seed-38",
     "golden-seed-39",
     "armor-festive-garb-altered",
-    "armor-festive-hood-altered"
+    "armor-festive-hood-altered",
+    "scadutree-fragment-22"
   ]
 }
