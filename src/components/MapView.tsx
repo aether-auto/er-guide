@@ -271,7 +271,13 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
         const item = itemsById.get(itemId)
         if (!item) return
         const variant: MarkerVariant =
-          itemId === nextUpId ? 'nextup' : snapshot.checked[itemId] != null ? 'checked' : 'normal'
+          itemId === nextUpId
+            ? 'nextup'
+            : snapshot.checked[itemId] != null
+              ? 'checked'
+              : snapshot.ignored[itemId] != null
+                ? 'ignored'
+                : 'normal'
         if (variantMapRef.current.get(itemId) === variant) return
         variantMapRef.current.set(itemId, variant)
         marker.setIcon(categoryIcon(item.category, variant))
@@ -392,12 +398,19 @@ function renderItems(
       if (!item?.map || item.map.code !== code) continue
 
       const isChecked = snapshot.checked[item.id] != null
+      const isIgnored = snapshot.ignored[item.id] != null
       const isNextUp = item.id === nextUpId
-      const variant: MarkerVariant = isNextUp ? 'nextup' : isChecked ? 'checked' : 'normal'
+      const variant: MarkerVariant = isNextUp
+        ? 'nextup'
+        : isChecked
+          ? 'checked'
+          : isIgnored
+            ? 'ignored'
+            : 'normal'
 
       const marker = L.marker([item.map.lat, item.map.lng], {
         icon: categoryIcon(item.category, variant),
-        zIndexOffset: isNextUp ? 200 : isChecked ? -50 : 0,
+        zIndexOffset: isNextUp ? 200 : isChecked || isIgnored ? -50 : 0,
       })
       marker.bindPopup(() => buildPopup(item.id, map), {
         maxWidth: 290,
@@ -426,6 +439,7 @@ function buildPopup(itemId: string, map: L.Map): HTMLElement {
 
   const snapshot = progressStore.getSnapshot()
   const isChecked = snapshot.checked[itemId] != null
+  const isIgnored = snapshot.ignored[itemId] != null
   const stepNote = stepNoteByItemId.get(itemId)
 
   el.className = 'er-popup-card'
@@ -445,9 +459,15 @@ function buildPopup(itemId: string, map: L.Map): HTMLElement {
         ? `<div class="er-popup-card__missable">⚠ MISSABLE — ${escapeText(item.missable.lockedBy)}<br><span>${escapeText(item.missable.note)}</span></div>`
         : ''
     }
-    <button class="er-popup-check ${isChecked ? 'er-popup-check--done' : ''}">
-      ${isChecked ? '✓ Checked — tap to undo' : '✓ Mark done'}
-    </button>
+    <div class="er-popup-actions">
+      <button class="er-popup-check ${isChecked ? 'er-popup-check--done' : ''}">
+        ${isChecked ? '✓ Checked — tap to undo' : '✓ Mark done'}
+      </button>
+      <button class="er-popup-ignore ${isIgnored ? 'er-popup-ignore--active' : ''}"
+        aria-label="${isIgnored ? 'Restore' : 'Ignore for now'}">
+        ${isIgnored ? '↩ Restore' : '⊘ Ignore'}
+      </button>
+    </div>
   `
 
   // Two-way sync: toggling from the popup updates the store, which restyles
@@ -455,6 +475,10 @@ function buildPopup(itemId: string, map: L.Map): HTMLElement {
   // popup itself closes — its content is a render-time snapshot.
   el.querySelector('.er-popup-check')?.addEventListener('click', () => {
     progressStore.toggle(itemId)
+    map.closePopup()
+  })
+  el.querySelector('.er-popup-ignore')?.addEventListener('click', () => {
+    progressStore.toggleIgnore(itemId)
     map.closePopup()
   })
 

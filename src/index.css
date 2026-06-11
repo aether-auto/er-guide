@@ -307,6 +307,35 @@ body {
   color: #d8d2c4;
 }
 
+/* Popup action row: Mark done + Ignore/Restore side by side */
+.er-popup-actions {
+  display: flex;
+  gap: 6px;
+}
+.er-popup-actions .er-popup-check {
+  flex: 1;
+  width: auto;
+}
+.er-popup-ignore {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: transparent;
+  color: #8f887a;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.1s, color 0.1s;
+}
+.er-popup-ignore:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #d8d2c4;
+}
+.er-popup-ignore--active {
+  border-color: #666;
+  color: #d8d2c4;
+}
+
 /* ── Leaflet zoom control ───────────────────────────────── */
 .leaflet-bar a,
 .leaflet-bar a:hover {
