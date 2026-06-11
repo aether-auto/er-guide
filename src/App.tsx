@@ -13,8 +13,12 @@ interface UiState {
   setCategories: (v: Set<Category> | null) => void
   /** Pan map to ref, switch layer, and open popup for itemId (if provided). */
   focus: (ref: MapRef, itemId?: string) => void
-  /** Called by MapView on mount to register its focus handler. */
-  registerFocus: (fn: (ref: MapRef, itemId?: string) => void) => void
+  /**
+   * Called by MapView on mount to register its focus handler.
+   * Returns an unregister fn — MapView calls it on unmount so focus() can
+   * never reach a removed Leaflet map.
+   */
+  registerFocus: (fn: (ref: MapRef, itemId?: string) => void) => () => void
 }
 
 const UiContext = createContext<UiState | null>(null)
@@ -41,6 +45,9 @@ export default function App() {
       focus: (ref, itemId) => focusFnRef.current?.(ref, itemId),
       registerFocus: (fn) => {
         focusFnRef.current = fn
+        return () => {
+          if (focusFnRef.current === fn) focusFnRef.current = null
+        }
       },
     }),
     [hideCompleted, categories],
@@ -53,8 +60,9 @@ export default function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Navigate to={`/region/${firstRegion}`} replace />} />
-          <Route path="/region/:regionId" element={<GuidePage />} />
-          <Route path="/region/:regionId/:legId" element={<GuidePage />} />
+          {/* Optional :legId? keeps ONE route match for region and leg views, so
+              GuidePage/MapView survive leg navigation (no Leaflet remount). */}
+          <Route path="/region/:regionId/:legId?" element={<GuidePage />} />
           <Route path="/progress" element={<ProgressPage />} />
           <Route path="/coverage" element={<CoveragePage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

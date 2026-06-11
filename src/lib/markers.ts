@@ -29,7 +29,7 @@ export const CATEGORY_GLYPH: Record<Category, string> = {
   'great-rune': '#', // already text, keep
   remembrance: '☽',  // already monochrome, keep
   'scadutree-fragment': '✤', // four-petalled (replaces 🌳)
-  'revered-spirit-ash': '✦', // monochrome (replaces ✨)
+  'revered-spirit-ash': '❋', // heavy florette — distinct from sorcery's ✦ (replaces ✨)
   tool: '⚙',        // gear — monochrome (replaces 🛠)
 }
 
@@ -82,15 +82,36 @@ export function categoryIcon(category: Category, variant: MarkerVariant = 'norma
   })
 }
 
+/** Escape a marker name for safe interpolation into divIcon HTML. */
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+}
+
 /**
- * Gold radial-glow grace marker, styled to look like the Fextralife/MapGenie
- * Site of Grace dot.
+ * Site of Grace marker — soft muted-gold dot with a faint glow. Prominence
+ * comes from its pane (above item pins) and its permanent name label, which
+ * CSS reveals at zoom ≥5 (MapView toggles an `er-zoom-ge5` class on the map
+ * container from its zoomend handler) — not from brightness.
  */
-export function graceIcon(): L.DivIcon {
+export function graceIcon(name: string): L.DivIcon {
   return L.divIcon({
-    html: `<div class="er-grace"></div>`,
+    html: `<div class="er-grace"><span class="er-grace-label">${escapeHtml(name)}</span></div>`,
     className: '',
-    iconSize: [16, 16],
-    iconAnchor: [8, 8],
+    iconSize: [20, 20],
+    iconAnchor: [10, 10],
+  })
+}
+
+/**
+ * Quiet landmark marker (towns, caves, catacombs, forts, churches…) — a small
+ * muted diamond with a name label that CSS reveals at zoom ≥4. Deliberately
+ * subdued so item pins dominate.
+ */
+export function locationIcon(name: string): L.DivIcon {
+  return L.divIcon({
+    html: `<div class="er-loc"><span class="er-loc-label">${escapeHtml(name)}</span></div>`,
+    className: '',
+    iconSize: [10, 10],
+    iconAnchor: [5, 5],
   })
 }

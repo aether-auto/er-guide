@@ -19,10 +19,15 @@ export interface ItemPosition {
 }
 
 export const itemPosition = new Map<string, ItemPosition>()
+/** Routed step note for an item (first authored note wins) — popup info cards. */
+export const stepNoteByItemId = new Map<string, string>()
 for (const region of regions) {
   for (const leg of region.legs)
     for (const step of leg.steps)
-      if (step.type === 'item') itemPosition.set(step.itemId, { regionId: region.id, legId: leg.id })
+      if (step.type === 'item') {
+        itemPosition.set(step.itemId, { regionId: region.id, legId: leg.id })
+        if (step.note && !stepNoteByItemId.has(step.itemId)) stepNoteByItemId.set(step.itemId, step.note)
+      }
   for (const id of region.cleanup) itemPosition.set(id, { regionId: region.id, legId: null })
 }
 

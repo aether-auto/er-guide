@@ -3,15 +3,13 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import type { MapCode, MapRef } from '../lib/types'
 import { CATEGORY_META } from '../lib/types'
-import { categoryIcon, graceIcon, type MarkerVariant } from '../lib/markers'
-import { nextUpSegment, routePathForLayer } from '../lib/route-path'
-import { mapUrl } from '../lib/maplink'
-import { itemsById, regions } from '../lib/data'
+import { categoryIcon, graceIcon, locationIcon, type MarkerVariant } from '../lib/markers'
+import { itemsById, regions, stepNoteByItemId } from '../lib/data'
 import { progressStore } from '../lib/useProgress'
 import { useUi } from '../App'
 import mapExtras from '../../data/map-extras.json'
 
-// ── Graces (map-display data; never part of the checklist) ────────────────
+// ── Graces + locations (map-display data; never part of the checklist) ─────
 
 interface GraceEntry {
   code: string
@@ -20,7 +18,10 @@ interface GraceEntry {
   lat: number
   lng: number
 }
-const graces = (mapExtras as { graces: GraceEntry[] }).graces
+interface LocationEntry extends GraceEntry {
+  kind: string
+}
+const { graces, locations } = mapExtras as { graces: GraceEntry[]; locations: LocationEntry[] }
 
 // ── Constants ──────────────────────────────────────────────────────────────
 
@@ -61,9 +62,9 @@ function storedLayer(): MapCode | null {
 export interface MapViewProps {
   /** Layer the current region wants shown ('dlc' for DLC regions). */
   initialLayer?: MapCode
-  /** Currently routed leg (URL param) — its polyline is highlighted. */
+  /** Currently routed leg (URL param) — keys the once-per-leg auto-pan. */
   activeLegId?: string | null
-  /** First unchecked checkable item — gets the pulsing pin + dashed segment. */
+  /** First unchecked checkable item — gets the pulsing pin + auto-pan. */
   nextUpId?: string | null
 }
 
@@ -76,10 +77,12 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
   const layerRef = useRef<MapCode>(initialLayer ?? storedLayer() ?? 'overworld')
   const tileLayerRef = useRef<L.TileLayer | null>(null)
   const gracesGroupRef = useRef<L.LayerGroup | null>(null)
+  const locationsGroupRef = useRef<L.LayerGroup | null>(null)
   const itemGroupRef = useRef<L.LayerGroup | null>(null)
-  const polyGroupRef = useRef<L.LayerGroup | null>(null)
   const markerMapRef = useRef<Map<string, L.Marker>>(new Map()) // itemId → marker
+  const variantMapRef = useRef<Map<string, MarkerVariant>>(new Map()) // itemId → current icon variant
   const showGracesRef = useRef(true)
+  const showLocationsRef = useRef(true)
   const tabContainerRef = useRef<HTMLDivElement | null>(null)
   // Latest route props, readable from imperative callbacks (switchLayer).
   const routeStateRef = useRef<{ activeLegId: string | null; nextUpId: string | null }>({
@@ -97,21 +100,22 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
   function redrawOverlays() {
     const map = mapRef.current
     const itemGroup = itemGroupRef.current
-    const polyGroup = polyGroupRef.current
     const gracesGroup = gracesGroupRef.current
-    if (!map || !itemGroup || !polyGroup || !gracesGroup) return
+    const locationsGroup = locationsGroupRef.current
+    if (!map || !itemGroup || !gracesGroup || !locationsGroup) return
     const code = layerRef.current
-    const { activeLegId, nextUpId } = routeStateRef.current
+    const { nextUpId } = routeStateRef.current
 
     gracesGroup.clearLayers()
     renderGraces(gracesGroup, code)
 
+    locationsGroup.clearLayers()
+    renderLocations(locationsGroup, code)
+
     itemGroup.clearLayers()
     markerMapRef.current.clear()
-    renderItems(itemGroup, markerMapRef.current, code, nextUpId, map)
-
-    polyGroup.clearLayers()
-    renderPolylines(polyGroup, code, activeLegId, nextUpId)
+    variantMapRef.current.clear()
+    renderItems(itemGroup, markerMapRef.current, variantMapRef.current, code, nextUpId, map)
   }
 
   function switchLayer(code: MapCode) {
@@ -161,9 +165,25 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
       attribution: '© FromSoftware / Bandai Namco — fan project, tiles via fextralife.com',
     }).addTo(map)
 
+    // Stacking: locations sit UNDER item pins (item pins dominate), graces
+    // sit ABOVE them (markerPane is 600; tooltips 650, popups 700).
+    map.createPane('er-locations').style.zIndex = '580'
+    map.createPane('er-graces').style.zIndex = '620'
+
+    // Zoom-band classes on the container — CSS reveals grace labels at z≥5
+    // and location labels at z≥4 without re-rendering any markers.
+    const updateZoomClasses = () => {
+      const z = map.getZoom()
+      const el = map.getContainer()
+      el.classList.toggle('er-zoom-ge4', z >= 4)
+      el.classList.toggle('er-zoom-ge5', z >= 5)
+    }
+    map.on('zoomend', updateZoomClasses)
+    updateZoomClasses()
+
     gracesGroupRef.current = L.layerGroup().addTo(map)
+    locationsGroupRef.current = L.layerGroup().addTo(map)
     itemGroupRef.current = L.layerGroup().addTo(map)
-    polyGroupRef.current = L.layerGroup().addTo(map)
     redrawOverlays()
 
     // Layer tabs + graces toggle (top-right)
@@ -189,6 +209,7 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
 
         const sep = L.DomUtil.create('div', '', div)
         sep.style.cssText = 'border-top:1px solid #2c261b;margin:2px 0;'
+
         const graceBtn = L.DomUtil.create('button', 'er-layer-tab', div) as HTMLButtonElement
         graceBtn.id = 'er-grace-toggle'
         graceBtn.textContent = '✦ Graces'
@@ -206,14 +227,32 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
             graceBtn.classList.remove('active')
           }
         })
+
+        const locBtn = L.DomUtil.create('button', 'er-layer-tab', div) as HTMLButtonElement
+        locBtn.id = 'er-location-toggle'
+        locBtn.textContent = '◆ Locations'
+        locBtn.classList.add('active')
+        L.DomEvent.on(locBtn, 'click', (e) => {
+          L.DomEvent.stopPropagation(e)
+          showLocationsRef.current = !showLocationsRef.current
+          const locationsGroup = locationsGroupRef.current
+          if (!locationsGroup) return
+          if (showLocationsRef.current) {
+            locationsGroup.addTo(map)
+            locBtn.classList.add('active')
+          } else {
+            locationsGroup.remove()
+            locBtn.classList.remove('active')
+          }
+        })
         return div
       },
     })
     new LayerControl({ position: 'topright' }).addTo(map)
 
     // focus(): layer switch → flyTo → open popup. Registered with UiContext so
-    // StepRow / RoutePanel locate buttons drive the map.
-    registerFocus((ref: MapRef, itemId?: string) => {
+    // RoutePanel locate buttons drive the map; unregistered on unmount.
+    const unregisterFocus = registerFocus((ref: MapRef, itemId?: string) => {
       if (ref.code !== layerRef.current) switchLayer(ref.code)
       map.flyTo([ref.lat, ref.lng], 6, { duration: 0.6 })
       if (itemId) {
@@ -223,6 +262,8 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
     })
 
     // Live pin re-style on progress changes (no React re-render needed).
+    // Diffed against variantMapRef so a toggle re-styles only the 1–2 markers
+    // whose variant actually changed — not all ~1k markers on the layer.
     const unsubscribe = progressStore.subscribe(() => {
       const snapshot = progressStore.getSnapshot()
       const { nextUpId } = routeStateRef.current
@@ -231,6 +272,8 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
         if (!item) return
         const variant: MarkerVariant =
           itemId === nextUpId ? 'nextup' : snapshot.checked[itemId] != null ? 'checked' : 'normal'
+        if (variantMapRef.current.get(itemId) === variant) return
+        variantMapRef.current.set(itemId, variant)
         marker.setIcon(categoryIcon(item.category, variant))
       })
     })
@@ -253,6 +296,8 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
       clearTimeout(t)
       window.removeEventListener('resize', invalidate)
       map.off('moveend', updateCenterAttr)
+      map.off('zoomend', updateZoomClasses)
+      unregisterFocus()
       unsubscribe()
       map.remove()
       mapRef.current = null
@@ -301,15 +346,34 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
 function renderGraces(group: L.LayerGroup, code: MapCode) {
   for (const grace of graces) {
     if (grace.code !== code) continue
-    L.marker([grace.lat, grace.lng], { icon: graceIcon(), zIndexOffset: -100 })
-      .bindTooltip(grace.name, { direction: 'top', offset: [0, -10] })
+    // Pane 'er-graces' (z 620) renders graces ABOVE item pins. The icon carries
+    // a permanent name label shown at zoom ≥5; the hover tooltip covers lower
+    // zooms (CSS hides .er-grace-tip when the permanent label is visible).
+    L.marker([grace.lat, grace.lng], { icon: graceIcon(grace.name), pane: 'er-graces' })
+      .bindTooltip(grace.name, { direction: 'top', offset: [0, -12], className: 'er-grace-tip' })
       .addTo(group)
+  }
+}
+
+function renderLocations(group: L.LayerGroup, code: MapCode) {
+  for (const loc of locations) {
+    if (loc.code !== code) continue
+    // Pane 'er-locations' (z 580) keeps landmarks UNDER item pins; the markers
+    // are non-interactive so they never steal clicks from pins. Name labels
+    // appear at zoom ≥4 via CSS.
+    L.marker([loc.lat, loc.lng], {
+      icon: locationIcon(loc.name),
+      pane: 'er-locations',
+      interactive: false,
+      keyboard: false,
+    }).addTo(group)
   }
 }
 
 function renderItems(
   group: L.LayerGroup,
   markerMap: Map<string, L.Marker>,
+  variantMap: Map<string, MarkerVariant>,
   code: MapCode,
   nextUpId: string | null,
   map: L.Map,
@@ -342,48 +406,16 @@ function renderItems(
       })
       marker.addTo(group)
       markerMap.set(item.id, marker)
+      variantMap.set(item.id, variant)
     }
   }
 }
 
-function renderPolylines(
-  group: L.LayerGroup,
-  code: MapCode,
-  activeLegId: string | null,
-  nextUpId: string | null,
-) {
-  for (const region of regions) {
-    for (const leg of region.legs) {
-      const coords = routePathForLayer(leg, itemsById, code)
-      if (coords.length >= 2) {
-        const active = leg.id === activeLegId
-        L.polyline(coords, {
-          color: '#c8a55a',
-          weight: active ? 3.5 : 2,
-          opacity: active ? 0.9 : 0.45,
-          className: active ? 'er-route er-route--active' : 'er-route',
-        }).addTo(group)
-      }
-
-      // Dashed immediate-direction cue: next-up pin → following mapped step.
-      // Drawn for the leg that actually contains the next-up item (the active
-      // leg when routed, or whichever leg holds it in region-sweep mode).
-      if (nextUpId && leg.steps.some((s) => s.type === 'item' && s.itemId === nextUpId)) {
-        const segment = nextUpSegment(leg, itemsById, code, nextUpId)
-        if (segment) {
-          L.polyline(segment, {
-            color: '#f5d77a',
-            weight: 2.5,
-            opacity: 0.9,
-            dashArray: '6 6',
-            className: 'er-route er-route--nextup',
-          }).addTo(group)
-        }
-      }
-    }
-  }
+function escapeText(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
+// Rich in-app info card — the popup must stand alone, no external links.
 function buildPopup(itemId: string, map: L.Map): HTMLElement {
   const item = itemsById.get(itemId)
   const el = document.createElement('div')
@@ -394,23 +426,28 @@ function buildPopup(itemId: string, map: L.Map): HTMLElement {
 
   const snapshot = progressStore.getSnapshot()
   const isChecked = snapshot.checked[itemId] != null
+  const stepNote = stepNoteByItemId.get(itemId)
 
-  el.style.cssText = 'padding:10px 12px;font-size:13px;color:#d8d2c4;'
+  el.className = 'er-popup-card'
   el.innerHTML = `
-    <div style="font-weight:600;font-size:14px;color:#c8a55a;margin-bottom:4px;padding-right:20px;">${item.name}</div>
-    <div style="font-size:11px;color:#8f887a;margin-bottom:6px;">
-      ${CATEGORY_META[item.category].label}${item.dlc ? ' · <span style="color:#c8a55a;">DLC</span>' : ''}
+    <div class="er-popup-card__name">${escapeText(item.name)}</div>
+    <div class="er-popup-card__meta">
+      <span class="er-popup-card__chip">${CATEGORY_META[item.category].label}</span>
+      ${item.dlc ? '<span class="er-popup-card__chip er-popup-card__chip--dlc">DLC</span>' : ''}
     </div>
-    ${item.acquisition ? `<div style="margin-bottom:6px;font-size:12px;line-height:1.5;">${item.acquisition}</div>` : ''}
-    ${item.quest ? `<div style="margin-bottom:4px;font-size:12px;color:#8a7444;">❖ Quest: ${item.quest}</div>` : ''}
-    ${item.missable ? `<div style="margin-bottom:4px;font-size:11px;color:#e0a13c;font-weight:600;">⚠ MISSABLE — ${item.missable.lockedBy}: ${item.missable.note}</div>` : ''}
-    <div style="display:flex;gap:8px;margin-top:8px;align-items:center;flex-wrap:wrap;">
-      <button class="er-popup-check" style="padding:4px 10px;border-radius:4px;border:1px solid #2c261b;background:${isChecked ? '#5f7a4e' : '#17140f'};color:${isChecked ? '#d8d2c4' : '#c8a55a'};cursor:pointer;font-size:12px;">
-        ${isChecked ? '✓ Checked' : 'Mark done'}
-      </button>
-      ${item.wikiUrl ? `<a href="${item.wikiUrl}" target="_blank" rel="noreferrer" style="font-size:11px;color:#8f887a;">wiki ↗</a>` : ''}
-      ${item.map ? `<a href="${mapUrl(item.map)}" target="er-guide-map" style="font-size:11px;color:#8f887a;">Fextralife ↗</a>` : ''}
+    <div class="er-popup-card__body">
+      ${item.acquisition ? `<p class="er-popup-card__acq">${escapeText(item.acquisition)}</p>` : ''}
+      ${stepNote && stepNote !== item.acquisition ? `<p class="er-popup-card__note">⌖ Route note: ${escapeText(stepNote)}</p>` : ''}
+      ${item.quest ? `<p class="er-popup-card__quest">❖ Quest: ${escapeText(item.quest)}</p>` : ''}
     </div>
+    ${
+      item.missable
+        ? `<div class="er-popup-card__missable">⚠ MISSABLE — ${escapeText(item.missable.lockedBy)}<br><span>${escapeText(item.missable.note)}</span></div>`
+        : ''
+    }
+    <button class="er-popup-check ${isChecked ? 'er-popup-check--done' : ''}">
+      ${isChecked ? '✓ Checked — tap to undo' : '✓ Mark done'}
+    </button>
   `
 
   // Two-way sync: toggling from the popup updates the store, which restyles

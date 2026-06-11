@@ -3003,5 +3003,2511 @@
       "lat": -137.375,
       "lng": 96.0669888674374
     }
+  ],
+  "locations": [
+    {
+      "code": "overworld",
+      "markerId": 29,
+      "name": "Stormhill Shack",
+      "lat": -181.203125,
+      "lng": 95.551225,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 30,
+      "name": "Stormhill Evergaol",
+      "lat": -186.46875,
+      "lng": 99.324322,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 34,
+      "name": "Church of Dragon Communion",
+      "lat": -201.304687,
+      "lng": 92.98074,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 36,
+      "name": "Dragon-Burnt Ruins",
+      "lat": -194.453125,
+      "lng": 106.465098,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 38,
+      "name": "Coastal Cave",
+      "lat": -195.234375,
+      "lng": 95.886569,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 39,
+      "name": "Church of Elleh",
+      "lat": -192.125,
+      "lng": 99.215479,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 42,
+      "name": "Stormgate",
+      "lat": -185.078125,
+      "lng": 100.917942,
+      "kind": "stormgate"
+    },
+    {
+      "code": "overworld",
+      "markerId": 401,
+      "name": "Groveside Cave",
+      "lat": -189.023437,
+      "lng": 98.973186,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 402,
+      "name": "Gatefront Ruins",
+      "lat": -186.640625,
+      "lng": 102.918408,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 459,
+      "name": "Limgrave Tunnels",
+      "lat": -188.359375,
+      "lng": 104.316613,
+      "kind": "tunnel"
+    },
+    {
+      "code": "overworld",
+      "markerId": 463,
+      "name": "Minor Erdtree (Weeping Peninsula)",
+      "lat": -213.804687,
+      "lng": 105.715298,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 464,
+      "name": "Minor Erdtree (Mistwood)",
+      "lat": -189.273437,
+      "lng": 121.707792,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 476,
+      "name": "Castle Morne",
+      "lat": -224.820312,
+      "lng": 110.551353,
+      "kind": "castlemourne"
+    },
+    {
+      "code": "overworld",
+      "markerId": 480,
+      "name": "Ailing Village",
+      "lat": -212.640625,
+      "lng": 110.785542,
+      "kind": "town"
+    },
+    {
+      "code": "overworld",
+      "markerId": 482,
+      "name": "Callu Baptismal Church",
+      "lat": -214.265625,
+      "lng": 111.090317,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 485,
+      "name": "Bridge of Sacrifice",
+      "lat": -204.710937,
+      "lng": 116.254273,
+      "kind": "cityruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 494,
+      "name": "Earthbore Cave",
+      "lat": -206.929687,
+      "lng": 110.770101,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 495,
+      "name": "Impaler's Catacombs",
+      "lat": -207.6875,
+      "lng": 118.582382,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 509,
+      "name": "Church of Pilgrimage",
+      "lat": -203.414062,
+      "lng": 104.44871,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 514,
+      "name": "Tombsward Catacombs",
+      "lat": -209.953125,
+      "lng": 104.777627,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 601,
+      "name": "Waypoint Ruins",
+      "lat": -192.085937,
+      "lng": 113.79403,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 718,
+      "name": "Forest Lookout Tower",
+      "lat": -207.851562,
+      "lng": 113.433932,
+      "kind": "tower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 725,
+      "name": "Oridys's Rise",
+      "lat": -214.125,
+      "lng": 118.012187,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 727,
+      "name": "Demi-human Forest Ruins",
+      "lat": -207.726562,
+      "lng": 108.027759,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 733,
+      "name": "Third Church of Marika",
+      "lat": -180.171875,
+      "lng": 123.31673,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 744,
+      "name": "Stillwater Cave",
+      "lat": -169.882812,
+      "lng": 82.637205,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 762,
+      "name": "Mistwood Ruins",
+      "lat": -190.554687,
+      "lng": 118.558975,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 766,
+      "name": "Forlorn Hound Evergaol",
+      "lat": -202.789062,
+      "lng": 112.996519,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 770,
+      "name": "Fort Haight",
+      "lat": -194.390625,
+      "lng": 125.223231,
+      "kind": "forthaight"
+    },
+    {
+      "code": "overworld",
+      "markerId": 776,
+      "name": "Stormfoot Catacombs",
+      "lat": -188.132812,
+      "lng": 95.980666,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 782,
+      "name": "Tombsward Ruins",
+      "lat": -208.875,
+      "lng": 100.699534,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 799,
+      "name": "Church of Irith",
+      "lat": -173.164062,
+      "lng": 81.543959,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 801,
+      "name": "Church of Vows",
+      "lat": -131.421875,
+      "lng": 68.707539,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 809,
+      "name": "Siofra River Well",
+      "lat": -187.5625,
+      "lng": 122.027931,
+      "kind": "well"
+    },
+    {
+      "code": "overworld",
+      "markerId": 815,
+      "name": "Weeping Evergaol",
+      "lat": -209.914062,
+      "lng": 98.261963,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 816,
+      "name": "Fourth Church of Marika",
+      "lat": -210.601562,
+      "lng": 96.527633,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 820,
+      "name": "Tower of Return",
+      "lat": -219.882812,
+      "lng": 99.809193,
+      "kind": "tower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 823,
+      "name": "Isolated Merchant's Shack (Weeping Peninsula)",
+      "lat": -216.242187,
+      "lng": 94.792864,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 826,
+      "name": "Witchbane Ruins",
+      "lat": -212.773437,
+      "lng": 96.090159,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 835,
+      "name": "Deathtouched Catacombs",
+      "lat": -174.671875,
+      "lng": 104.957372,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 903,
+      "name": "Stormveil Castle",
+      "lat": -181.296875,
+      "lng": 88.558922,
+      "kind": "stormveilcastle"
+    },
+    {
+      "code": "overworld",
+      "markerId": 904,
+      "name": "Divine Tower of Limgrave",
+      "lat": -167.78125,
+      "lng": 113.738701,
+      "kind": "divinetower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 930,
+      "name": "Academy Gate Town",
+      "lat": -143.234375,
+      "lng": 67.519811,
+      "kind": "sunkentown"
+    },
+    {
+      "code": "overworld",
+      "markerId": 940,
+      "name": "Temple Quarter",
+      "lat": -141.726562,
+      "lng": 52.434103,
+      "kind": "sunkentown"
+    },
+    {
+      "code": "overworld",
+      "markerId": 942,
+      "name": "Academy Crystal Cave",
+      "lat": -134.789062,
+      "lng": 51.902631,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 965,
+      "name": "Summonwater Village",
+      "lat": -174.140625,
+      "lng": 118.121472,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 983,
+      "name": "Smoldering Church",
+      "lat": -169.265625,
+      "lng": 124.246512,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1062,
+      "name": "Village of the Albinaurics",
+      "lat": -159.023437,
+      "lng": 52.410499,
+      "kind": "location"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1068,
+      "name": "Converted Tower",
+      "lat": -152.359375,
+      "lng": 48.965286,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1070,
+      "name": "Road's End Catacombs",
+      "lat": -151.296875,
+      "lng": 44.957354,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1074,
+      "name": "Bellum Church",
+      "lat": -115.132812,
+      "lng": 63.910471,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1105,
+      "name": "Shack of the Rotting",
+      "lat": -171.132812,
+      "lng": 127.622092,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1144,
+      "name": "Minor Erdtree (Capital Outskirts)",
+      "lat": -86.703125,
+      "lng": 114.949386,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1159,
+      "name": "Auriza Hero's Grave",
+      "lat": -97.625,
+      "lng": 121.168384,
+      "kind": "herosgrave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1174,
+      "name": "Deep Siofra Well",
+      "lat": -169.085937,
+      "lng": 141.722837,
+      "kind": "well"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1177,
+      "name": "Sellia Crystal Tunnel",
+      "lat": -172.421875,
+      "lng": 144.597883,
+      "kind": "tunnel"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1195,
+      "name": "The Shaded Castle",
+      "lat": -81.84375,
+      "lng": 81.793327,
+      "kind": "shadedcastle"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1196,
+      "name": "Old Altus Tunnel",
+      "lat": -91.148437,
+      "lng": 78.559078,
+      "kind": "tunnel"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1212,
+      "name": "Murkwater Catacombs",
+      "lat": -179.820312,
+      "lng": 109.488847,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1216,
+      "name": "Warmaster's Shack",
+      "lat": -179.734375,
+      "lng": 101.3638,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1218,
+      "name": "Murkwater Cave",
+      "lat": -186.382812,
+      "lng": 109.168178,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1221,
+      "name": "Chapel of Anticipation",
+      "lat": -179.9375,
+      "lng": 78.770161,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1231,
+      "name": "Leyndell, Royal Capital",
+      "lat": -102.742187,
+      "lng": 114.277977,
+      "kind": "leyndell"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1325,
+      "name": "Rose Church",
+      "lat": -146.945312,
+      "lng": 55.410574,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1329,
+      "name": "Fort Laiedd",
+      "lat": -85.179687,
+      "lng": 56.941892,
+      "kind": "forthaight"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1345,
+      "name": "Minor Erdtree (Liurnia Southwest)",
+      "lat": -148,
+      "lng": 45.76206,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1358,
+      "name": "Cuckoo's Evergaol",
+      "lat": -138.984375,
+      "lng": 44.285526,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1360,
+      "name": "Artist's Shack (Liurnia of the Lakes)",
+      "lat": -140.664062,
+      "lng": 78.22287,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1417,
+      "name": "Cathedral of Manus Celes",
+      "lat": -157.078125,
+      "lng": 55.059043,
+      "kind": "cathedral"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1421,
+      "name": "Malefactor's Evergaol",
+      "lat": -165.28125,
+      "lng": 75.886809,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1456,
+      "name": "Ainsel River Well",
+      "lat": -129.960937,
+      "lng": 78.285649,
+      "kind": "well"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1502,
+      "name": "Laskyar Ruins",
+      "lat": -159.375,
+      "lng": 72.168597,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1518,
+      "name": "Caria Manor",
+      "lat": -107.0625,
+      "lng": 57.68409,
+      "kind": "cariamanor"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1533,
+      "name": "Cliffbottom Catacombs",
+      "lat": -161.726562,
+      "lng": 84.426206,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1559,
+      "name": "Highroad Cave",
+      "lat": -172.976562,
+      "lng": 108.754402,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1584,
+      "name": "Raya Lucaria Academy",
+      "lat": -137.25,
+      "lng": 55.395027,
+      "kind": "rayalucaria"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1589,
+      "name": "Testu's Rise",
+      "lat": -123.703125,
+      "lng": 55.308855,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1599,
+      "name": "Black Knife Catacombs",
+      "lat": -117.015625,
+      "lng": 80.652806,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1652,
+      "name": "Ruin-Strewn Precipice",
+      "lat": -104.15625,
+      "lng": 74.699796,
+      "kind": "precipice"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1766,
+      "name": "Renna's Rise",
+      "lat": -102.179687,
+      "lng": 53.496572,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1801,
+      "name": "Seluvis's Rise",
+      "lat": -108.976562,
+      "lng": 52.934103,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1802,
+      "name": "Ranni's Rise",
+      "lat": -106.296875,
+      "lng": 49.871428,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1806,
+      "name": "Street of Sages Ruins",
+      "lat": -178.882812,
+      "lng": 139.761906,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1811,
+      "name": "Frenzied Flame Village",
+      "lat": -119.851562,
+      "lng": 74.769933,
+      "kind": "frenziedflamevillage"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1813,
+      "name": "Converted Fringe Tower",
+      "lat": -118.476562,
+      "lng": 81.785741,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1816,
+      "name": "Church of Inhibition",
+      "lat": -114.242187,
+      "lng": 71.386624,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1861,
+      "name": "Minor Erdtree (Liurnia Northeast)",
+      "lat": -121.3125,
+      "lng": 76.418502,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1875,
+      "name": "Royal Grave Evergaol",
+      "lat": -106.398437,
+      "lng": 66.074841,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1953,
+      "name": "Perfumer's Ruins",
+      "lat": -96.960937,
+      "lng": 62.660868,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1955,
+      "name": "Unsightly Catacombs",
+      "lat": -97.59375,
+      "lng": 61.347871,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 1974,
+      "name": "The Four Belfries",
+      "lat": -127.726562,
+      "lng": 46.808959,
+      "kind": "fourbelfries"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2060,
+      "name": "Kingsrealm Ruins",
+      "lat": -116.953125,
+      "lng": 52.668543,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2101,
+      "name": "Ringleader's Evergaol",
+      "lat": -154.898437,
+      "lng": 44.199405,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2111,
+      "name": "Bestial Sanctum",
+      "lat": -150.46875,
+      "lng": 156.261989,
+      "kind": "location"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2115,
+      "name": "Carian Study Hall",
+      "lat": -143.1875,
+      "lng": 81.715237,
+      "kind": "studyhall"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2120,
+      "name": "Divine Tower of Liurnia",
+      "lat": -141.476562,
+      "lng": 92.106044,
+      "kind": "divinetower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2251,
+      "name": "Wyndham Ruins",
+      "lat": -93.789062,
+      "lng": 75.145006,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2253,
+      "name": "Wyndham Catacombs",
+      "lat": -92.476562,
+      "lng": 73.637118,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2280,
+      "name": "Hermit's Shack",
+      "lat": -93.820312,
+      "lng": 60.785494,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2291,
+      "name": "Craftsman's Shack",
+      "lat": -95.664062,
+      "lng": 66.145064,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2293,
+      "name": "Hermit Village",
+      "lat": -92.671875,
+      "lng": 69.660454,
+      "kind": "town"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2311,
+      "name": "Gelmir Hero's Grave",
+      "lat": -87.671875,
+      "lng": 71.965079,
+      "kind": "herosgrave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2318,
+      "name": "Morne Tunnel",
+      "lat": -213.914062,
+      "lng": 108.785618,
+      "kind": "tunnel"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2322,
+      "name": "Lenne's Rise",
+      "lat": -163.53125,
+      "lng": 165.098419,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2351,
+      "name": "Isolated Merchant's Shack (Dragonbarrow)",
+      "lat": -165.046875,
+      "lng": 136.027764,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2360,
+      "name": "Fort Faroth",
+      "lat": -172.757812,
+      "lng": 155.332503,
+      "kind": "forthaight"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2361,
+      "name": "Grand Lift of Dectus",
+      "lat": -107.523437,
+      "lng": 77.160788,
+      "kind": "guardians"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2775,
+      "name": "First Church of Marika",
+      "lat": -74.1875,
+      "lng": 174.856446,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2784,
+      "name": "Woodfolk Ruins",
+      "lat": -87.671875,
+      "lng": 95.191901,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2785,
+      "name": "Writheblood Ruins",
+      "lat": -85.90625,
+      "lng": 87.059728,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2786,
+      "name": "Minor Erdtree (Altus Plateau)",
+      "lat": -88.203125,
+      "lng": 92.933742,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2787,
+      "name": "Second Church of Marika",
+      "lat": -93.117187,
+      "lng": 83.08229,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2801,
+      "name": "Spiritcaller Cave",
+      "lat": -66.585937,
+      "lng": 168.613325,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2804,
+      "name": "Heretical Rise",
+      "lat": -65.367187,
+      "lng": 165.363987,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2808,
+      "name": "Guardians' Garrison",
+      "lat": -74.414062,
+      "lng": 161.82418,
+      "kind": "forthaight"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2819,
+      "name": "Grand Lift of Rold",
+      "lat": -89.070312,
+      "lng": 143.980727,
+      "kind": "guardians"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2821,
+      "name": "Mirage Rise",
+      "lat": -90.429687,
+      "lng": 84.559129,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2822,
+      "name": "West Windmill Pasture",
+      "lat": -77.804687,
+      "lng": 86.730889,
+      "kind": "windmill"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2849,
+      "name": "Minor Erdtree Church",
+      "lat": -108.382812,
+      "lng": 104.458002,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2858,
+      "name": "Sealed Tunnel",
+      "lat": -105.664062,
+      "lng": 105.59046,
+      "kind": "tunnel"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2906,
+      "name": "Gael Tunnel",
+      "lat": -174.453125,
+      "lng": 128.051248,
+      "kind": "tunnel"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2926,
+      "name": "Minor Erdtree (Caelid)",
+      "lat": -165.828125,
+      "lng": 129.92607,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2930,
+      "name": "Minor Erdtree Catacombs",
+      "lat": -166.617187,
+      "lng": 130.777578,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2931,
+      "name": "Cathedral of Dragon Communion",
+      "lat": -191.765625,
+      "lng": 138.90275,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2936,
+      "name": "Fort Gael",
+      "lat": -181.929687,
+      "lng": 129.058922,
+      "kind": "forthaight"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2956,
+      "name": "Deep Ainsel Well",
+      "lat": -162.171875,
+      "lng": 50.754259,
+      "kind": "well"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2962,
+      "name": "Dragonbarrow Cave",
+      "lat": -166.007812,
+      "lng": 157.262219,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2967,
+      "name": "Hidden Path to the Haligtree",
+      "lat": -84.882812,
+      "lng": 142.019813,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2978,
+      "name": "Ordina, Liturgical Town",
+      "lat": -63.484375,
+      "lng": 139.660661,
+      "kind": "ordina"
+    },
+    {
+      "code": "overworld",
+      "markerId": 2990,
+      "name": "Apostate Derelict",
+      "lat": -58.257812,
+      "lng": 133.355984,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3008,
+      "name": "Forsaken Ruins",
+      "lat": -171.570312,
+      "lng": 129.801612,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3010,
+      "name": "Caelem Ruins",
+      "lat": -171.476562,
+      "lng": 135.043565,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3038,
+      "name": "Divine Tower of Caelid",
+      "lat": -163.78125,
+      "lng": 146.473213,
+      "kind": "divinetower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3102,
+      "name": "Divine Tower of West Altus",
+      "lat": -114.234375,
+      "lng": 106.106373,
+      "kind": "divinetower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3161,
+      "name": "Caelid Waypoint Ruins",
+      "lat": -183.375,
+      "lng": 133.113608,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3164,
+      "name": "Volcano Cave",
+      "lat": -77.351562,
+      "lng": 68.582135,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3184,
+      "name": "Highway Lookout Tower (Liurnia)",
+      "lat": -153.429687,
+      "lng": 78.894771,
+      "kind": "tower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3186,
+      "name": "Sellia Gateway",
+      "lat": -182.835937,
+      "lng": 147.488688,
+      "kind": "stormgate"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3187,
+      "name": "Gowry's Shack",
+      "lat": -180.351562,
+      "lng": 148.488989,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3189,
+      "name": "Sellia, Town of Sorcery",
+      "lat": -176.65625,
+      "lng": 147.878942,
+      "kind": "sellia"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3194,
+      "name": "Stormcaller Church",
+      "lat": -98.351562,
+      "lng": 89.121501,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3201,
+      "name": "Tombsward Cave",
+      "lat": -212.148437,
+      "lng": 98.371316,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3207,
+      "name": "Volcano Manor",
+      "lat": -85.648437,
+      "lng": 64.152712,
+      "kind": "volcanomanor"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3218,
+      "name": "Church of the Plague",
+      "lat": -178.296875,
+      "lng": 150.50445,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3242,
+      "name": "Corpse-Stench Shack",
+      "lat": -82.046875,
+      "lng": 73.691985,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3352,
+      "name": "Golden Lineage Evergaol",
+      "lat": -109.015625,
+      "lng": 80.660605,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3405,
+      "name": "Stargazer's Ruins",
+      "lat": -68.5625,
+      "lng": 155.418385,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3406,
+      "name": "Minor Erdtree (Mt. Gelmir)",
+      "lat": -83.734375,
+      "lng": 69.894933,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3412,
+      "name": "Minor Erdtree (Mountaintops East)",
+      "lat": -68.273437,
+      "lng": 162.020003,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3538,
+      "name": "Church of Repose",
+      "lat": -90.265625,
+      "lng": 155.793455,
+      "kind": "church"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3567,
+      "name": "Seethewater Cave",
+      "lat": -84.625,
+      "lng": 69.509963,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3601,
+      "name": "Giant-Conquering Hero's Grave",
+      "lat": -85.390625,
+      "lng": 148.691786,
+      "kind": "herosgrave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3657,
+      "name": "Zamor Ruins",
+      "lat": -90.201401,
+      "lng": 146.205167,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3680,
+      "name": "Forge of the Giants",
+      "lat": -89.234375,
+      "lng": 173.480646,
+      "kind": "giantforge"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3686,
+      "name": "Crumbling Farum Azula",
+      "lat": -126.859375,
+      "lng": 218.48069,
+      "kind": "crumbling-faromazula"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3754,
+      "name": "Castle Sol",
+      "lat": -61.625,
+      "lng": 158.149029,
+      "kind": "castlesol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3850,
+      "name": "Fringefolk Hero's Grave",
+      "lat": -196.960937,
+      "lng": 101.582301,
+      "kind": "herosgrave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 3873,
+      "name": "Lord Contender's Evergaol",
+      "lat": -72.148437,
+      "lng": 168.214779,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4001,
+      "name": "Shack of the Lofty",
+      "lat": -67.507812,
+      "lng": 151.739106,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4115,
+      "name": "Moonfolk Ruins",
+      "lat": -157.46875,
+      "lng": 51.347913,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4139,
+      "name": "Lunar Estate Ruins",
+      "lat": -161.007812,
+      "lng": 57.574513,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4144,
+      "name": "Walking Mausoleum (Weeping Peninsula)",
+      "lat": -214.445312,
+      "lng": 98.183791,
+      "kind": "walking-mausoleum"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4145,
+      "name": "Walking Mausoleum (Liurnia of the Lakes)",
+      "lat": -123.515625,
+      "lng": 72.285279,
+      "kind": "walking-mausoleum"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4150,
+      "name": "Abandoned Cave",
+      "lat": -174.140625,
+      "lng": 141.074456,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4203,
+      "name": "Gaol Cave",
+      "lat": -180.742187,
+      "lng": 131.559414,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4259,
+      "name": "Chelona's Rise",
+      "lat": -168.445312,
+      "lng": 44.973141,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4265,
+      "name": "Jarburg",
+      "lat": -144.789062,
+      "lng": 83.598637,
+      "kind": "location"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4268,
+      "name": "Lakeside Crystal Cave",
+      "lat": -162.570312,
+      "lng": 66.637071,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4273,
+      "name": "Slumbering Wolf's Shack",
+      "lat": -164.414062,
+      "lng": 66.582374,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4404,
+      "name": "War-Dead Catacombs",
+      "lat": -167.296875,
+      "lng": 163.191843,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4407,
+      "name": "Enemy Caravan 1 (Consecrated Snowfield)",
+      "lat": -79.019813,
+      "lng": 144.651789,
+      "kind": "wagon"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4408,
+      "name": "Enemy Caravan 2 (Consecrated Snowfield)",
+      "lat": -76.734375,
+      "lng": 139.972968,
+      "kind": "wagon"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4410,
+      "name": "Enemy Caravan (Limgrave)",
+      "lat": -192.742187,
+      "lng": 112.379705,
+      "kind": "wagon"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4451,
+      "name": "Miquella's Haligtree",
+      "lat": -48.148437,
+      "lng": 148.449755,
+      "kind": "location"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4459,
+      "name": "Elphael, Brace of the Haligtree",
+      "lat": -37.757812,
+      "lng": 147.136721,
+      "kind": "location"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4462,
+      "name": "Artist's Shack (Limgrave)",
+      "lat": -181.71875,
+      "lng": 113.840068,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4465,
+      "name": "Caelid Catacombs",
+      "lat": -192.09375,
+      "lng": 141.067321,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4476,
+      "name": "Sellia Hideaway",
+      "lat": -174.5,
+      "lng": 153.957259,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4484,
+      "name": "Sage's Cave",
+      "lat": -95.789062,
+      "lng": 72.168372,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4491,
+      "name": "Yelough Anix Tunnel",
+      "lat": -77.640625,
+      "lng": 133.168258,
+      "kind": "tunnel"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4497,
+      "name": "Minor Erdtree (Dragonbarrow)",
+      "lat": -167.648437,
+      "lng": 157.59014,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4534,
+      "name": "Auriza Side Tomb",
+      "lat": -94.507812,
+      "lng": 122.450112,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4547,
+      "name": "Boilprawn Shack",
+      "lat": -151.5625,
+      "lng": 66.668524,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4566,
+      "name": "Lux Ruins",
+      "lat": -100.617187,
+      "lng": 75.230814,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4588,
+      "name": "Perfumer's Grotto",
+      "lat": -100.507812,
+      "lng": 95.613989,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4594,
+      "name": "Walking Mausoleum (Liurnia of the Lakes East)",
+      "lat": -121.132812,
+      "lng": 70.722489,
+      "kind": "walking-mausoleum"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4595,
+      "name": "Walking Mausoleum (Liurnia of the Lakes Central)",
+      "lat": -126.359375,
+      "lng": 64.714659,
+      "kind": "walking-mausoleum"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4596,
+      "name": "Walking Mausoleum (Mountaintops of the Giants)",
+      "lat": -61.6875,
+      "lng": 156.129307,
+      "kind": "walking-mausoleum"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4611,
+      "name": "Subterranean Shunning-Grounds",
+      "lat": -101.445312,
+      "lng": 115.707524,
+      "kind": "subterranean-shunning-grounds"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4641,
+      "name": "Minor Erdtree (Consecrated Snowfield)",
+      "lat": -67.070312,
+      "lng": 148.613705,
+      "kind": "tree"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4652,
+      "name": "Cave of the Forlorn",
+      "lat": -69.171875,
+      "lng": 149.582456,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4664,
+      "name": "Enemy Caravan (Caelid)",
+      "lat": -168.851562,
+      "lng": 132.816827,
+      "kind": "wagon"
+    },
+    {
+      "code": "overworld",
+      "markerId": 4803,
+      "name": "Yelough Anix Ruins",
+      "lat": -74.882812,
+      "lng": 133.152841,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5220,
+      "name": "Stranded Graveyard",
+      "lat": -195.828125,
+      "lng": 102.832385,
+      "kind": "cave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5411,
+      "name": "Swamp Lookout Tower",
+      "lat": -180.476562,
+      "lng": 145.879123,
+      "kind": "tower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5422,
+      "name": "Hermit Merchant's Shack",
+      "lat": -88.46875,
+      "lng": 106.793613,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5427,
+      "name": "Divine Tower of East Altus",
+      "lat": -109.570312,
+      "lng": 134.769869,
+      "kind": "divinetower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5430,
+      "name": "Isolated Divine Tower",
+      "lat": -133.65625,
+      "lng": 156.449545,
+      "kind": "divinetower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5706,
+      "name": "Frenzy-Flaming Tower",
+      "lat": -115.429687,
+      "lng": 75.933822,
+      "kind": "tower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5719,
+      "name": "Purified Ruins",
+      "lat": -160.609375,
+      "lng": 79.871402,
+      "kind": "ruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5732,
+      "name": "Highway Lookout Tower (Altus Plateau)",
+      "lat": -83.1875,
+      "lng": 101.754509,
+      "kind": "tower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5733,
+      "name": "East Windmill Pasture",
+      "lat": -75.101562,
+      "lng": 92.23876,
+      "kind": "windmill"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5735,
+      "name": "Sainted Hero's Grave",
+      "lat": -94.335937,
+      "lng": 89.262196,
+      "kind": "herosgrave"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5755,
+      "name": "Consecrated Snowfield Catacombs",
+      "lat": -77.828125,
+      "lng": 148.80128,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5758,
+      "name": "Albinauric Rise",
+      "lat": -71.625,
+      "lng": 148.113785,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5837,
+      "name": "Altus Tunnel",
+      "lat": -93.03125,
+      "lng": 93.566899,
+      "kind": "tunnel"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5845,
+      "name": "Dominula, Windmill Village",
+      "lat": -79.773437,
+      "lng": 98.957542,
+      "kind": "dominula"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5848,
+      "name": "Village Windmill Pasture",
+      "lat": -78.117187,
+      "lng": 95.903167,
+      "kind": "windmill"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5901,
+      "name": "Enemy Caravan (Altus Plateau)",
+      "lat": -81.921875,
+      "lng": 88.074913,
+      "kind": "wagon"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5905,
+      "name": "Raya Lucaria Crystal Tunnel",
+      "lat": -125.273437,
+      "lng": 66.809067,
+      "kind": "tunnel"
+    },
+    {
+      "code": "overworld",
+      "markerId": 5919,
+      "name": "Revenger's Shack",
+      "lat": -143.203125,
+      "lng": 45.590167,
+      "kind": "shack"
+    },
+    {
+      "code": "overworld",
+      "markerId": 6257,
+      "name": "Enemy Caravan (West Liurnia of the Lakes)",
+      "lat": -123.882812,
+      "lng": 48.1291,
+      "kind": "wagon"
+    },
+    {
+      "code": "overworld",
+      "markerId": 6363,
+      "name": "Walking Mausoleum (Consecrated Snowfield)",
+      "lat": -59.757812,
+      "lng": 133.371542,
+      "kind": "walking-mausoleum"
+    },
+    {
+      "code": "overworld",
+      "markerId": 6513,
+      "name": "Giants' Mountaintop Catacombs",
+      "lat": -85.421875,
+      "lng": 151.004382,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 6525,
+      "name": "Flame Peak",
+      "lat": -90.953125,
+      "lng": 163.894971,
+      "kind": "location"
+    },
+    {
+      "code": "overworld",
+      "markerId": 6528,
+      "name": "Redmane Castle",
+      "lat": -195.828125,
+      "lng": 157.629404,
+      "kind": "redmanecastle"
+    },
+    {
+      "code": "overworld",
+      "markerId": 6660,
+      "name": "Sellia Evergaol",
+      "lat": -175.140625,
+      "lng": 142.332904,
+      "kind": "evergaol"
+    },
+    {
+      "code": "overworld",
+      "markerId": 6694,
+      "name": "Leyndell Catacombs",
+      "lat": -102.476562,
+      "lng": 115.488757,
+      "kind": "catacomb"
+    },
+    {
+      "code": "overworld",
+      "markerId": 8808,
+      "name": "1st Turtle Testu's Rise",
+      "lat": -122.992187,
+      "lng": 54.972876,
+      "kind": "spirit-turtle"
+    },
+    {
+      "code": "overworld",
+      "markerId": 8809,
+      "name": "2nd Turtle Testu's Rise",
+      "lat": -123.859375,
+      "lng": 55.996507,
+      "kind": "spirit-turtle"
+    },
+    {
+      "code": "overworld",
+      "markerId": 8810,
+      "name": "3rd Turtle Testu's Rise",
+      "lat": -124.742187,
+      "lng": 55.504372,
+      "kind": "spirit-turtle"
+    },
+    {
+      "code": "overworld",
+      "markerId": 8839,
+      "name": "Seluvis' Secret Room",
+      "lat": -104.484375,
+      "lng": 51.433958,
+      "kind": "cityruins"
+    },
+    {
+      "code": "overworld",
+      "markerId": 14151,
+      "name": "Leyndell Colosseum",
+      "lat": -108.46875,
+      "lng": 110.618084,
+      "kind": "location"
+    },
+    {
+      "code": "overworld",
+      "markerId": 14152,
+      "name": "Caelid Colosseum",
+      "lat": -157.875,
+      "lng": 131.769811,
+      "kind": "location"
+    },
+    {
+      "code": "overworld",
+      "markerId": 14153,
+      "name": "Limgrave Colosseum",
+      "lat": -171.18,
+      "lng": 100.368,
+      "kind": "location"
+    },
+    {
+      "code": "underground",
+      "markerId": 1179,
+      "name": "Hallowhorn Grounds",
+      "lat": -186.828125,
+      "lng": 133.840227,
+      "kind": "underground-temple"
+    },
+    {
+      "code": "underground",
+      "markerId": 1409,
+      "name": "Uhl Palace Ruins",
+      "lat": -130.78125,
+      "lng": 71.566877,
+      "kind": "underground-temple"
+    },
+    {
+      "code": "underground",
+      "markerId": 1541,
+      "name": "Nokron, Eternal City",
+      "lat": -184.1875,
+      "lng": 122.235959,
+      "kind": "nokrin"
+    },
+    {
+      "code": "underground",
+      "markerId": 1596,
+      "name": "Siofra Aqueduct",
+      "lat": -172.03125,
+      "lng": 135.544211,
+      "kind": "nokrin"
+    },
+    {
+      "code": "underground",
+      "markerId": 1891,
+      "name": "Hallowhorn Grounds",
+      "lat": -177.53438,
+      "lng": 132.07928,
+      "kind": "underground-temple"
+    },
+    {
+      "code": "underground",
+      "markerId": 1896,
+      "name": "Night's Sacred Ground",
+      "lat": -181.867187,
+      "lng": 128.731253,
+      "kind": "nokrin"
+    },
+    {
+      "code": "underground",
+      "markerId": 1964,
+      "name": "Uhl Palace Ruins",
+      "lat": -124.015625,
+      "lng": 74.660638,
+      "kind": "underground-temple"
+    },
+    {
+      "code": "underground",
+      "markerId": 2751,
+      "name": "Nokstella, Eternal City",
+      "lat": -121.59531,
+      "lng": 65.43712,
+      "kind": "nokrin"
+    },
+    {
+      "code": "underground",
+      "markerId": 3003,
+      "name": "Grand Cloister",
+      "lat": -140.234375,
+      "lng": 54.65953,
+      "kind": "underground-temple"
+    },
+    {
+      "code": "underground",
+      "markerId": 3810,
+      "name": "Hallowhorn Grounds Altar (1)",
+      "lat": -185.109375,
+      "lng": 131.824941,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3812,
+      "name": "Hallowhorn Grounds Altar (2)",
+      "lat": -181.807812,
+      "lng": 129.941307,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3813,
+      "name": "Hallowhorn Grounds Altar (3)",
+      "lat": -181.896875,
+      "lng": 135.342489,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3814,
+      "name": "Hallowhorn Grounds Altar (4)",
+      "lat": -183.67,
+      "lng": 140.23,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3815,
+      "name": "Hallowhorn Grounds Altar (5)",
+      "lat": -179.95,
+      "lng": 139.5,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3816,
+      "name": "Hallowhorn Grounds Altar (6)",
+      "lat": -178.31,
+      "lng": 136.91,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3817,
+      "name": "Hallowhorn Grounds Altar (7)",
+      "lat": -173.86735,
+      "lng": 140.415459,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3818,
+      "name": "Hallowhorn Grounds Altar (8)",
+      "lat": -175.31,
+      "lng": 138.17,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3852,
+      "name": "Hallowhorn Grounds Altar (b)",
+      "lat": -180.359375,
+      "lng": 131.067153,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3853,
+      "name": "Hallowhorn Grounds Altar (a)",
+      "lat": -179.625,
+      "lng": 132.781009,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3855,
+      "name": "Hallowhorn Grounds Altar (f)",
+      "lat": -176.625,
+      "lng": 130.524048,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3856,
+      "name": "Hallowhorn Grounds Altar (e)",
+      "lat": -174.132812,
+      "lng": 127.906287,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3857,
+      "name": "Hallowhorn Grounds Altar (d)",
+      "lat": -177.523437,
+      "lng": 127.398852,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 3858,
+      "name": "Hallowhorn Grounds Altar (c)",
+      "lat": -178.9375,
+      "lng": 129.445743,
+      "kind": "altar-map"
+    },
+    {
+      "code": "underground",
+      "markerId": 4148,
+      "name": "Walking Mausoleum (Deeproot Depths)",
+      "lat": -93.04,
+      "lng": 112.44,
+      "kind": "walking-mausoleum"
+    },
+    {
+      "code": "underground",
+      "markerId": 4613,
+      "name": "Mohgwyn Dynasty Mausoleum",
+      "lat": -182.68125,
+      "lng": 147.74513,
+      "kind": "location"
+    },
+    {
+      "code": "ashen",
+      "markerId": 7203,
+      "name": "Leyndell, Ashen Capital",
+      "lat": -99.125,
+      "lng": 111.574037,
+      "kind": "leyndell"
+    },
+    {
+      "code": "ashen",
+      "markerId": 7254,
+      "name": "Auriza Hero's Grave",
+      "lat": -97.578125,
+      "lng": 121.926501,
+      "kind": "herosgrave"
+    },
+    {
+      "code": "ashen",
+      "markerId": 7663,
+      "name": "Divine Tower of East Altus",
+      "lat": -110.4375,
+      "lng": 135.793948,
+      "kind": "divinetower"
+    },
+    {
+      "code": "ashen",
+      "markerId": 7667,
+      "name": "Hermit Merchant's Shack",
+      "lat": -88.367187,
+      "lng": 106.434799,
+      "kind": "shack"
+    },
+    {
+      "code": "ashen",
+      "markerId": 7669,
+      "name": "Minor Erdtree",
+      "lat": -90.015625,
+      "lng": 115.62895,
+      "kind": "tree"
+    },
+    {
+      "code": "ashen",
+      "markerId": 7670,
+      "name": "Auriza Side Tomb",
+      "lat": -93.960937,
+      "lng": 122.481104,
+      "kind": "catacomb"
+    },
+    {
+      "code": "ashen",
+      "markerId": 7674,
+      "name": "Subterranean Shunning-Grounds",
+      "lat": -101,
+      "lng": 115,
+      "kind": "subterranean-shunning-grounds"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654763,
+      "name": "Church of Consolation",
+      "lat": -157.45785375625806,
+      "lng": 120.70072420802593,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654778,
+      "name": "Scorched Ruins",
+      "lat": -155.578125,
+      "lng": 114.88155587415463,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654810,
+      "name": "Prospect Town",
+      "lat": -157.75,
+      "lng": 104.10482044530251,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654823,
+      "name": "Western Nameless Mausoleum",
+      "lat": -154.265625,
+      "lng": 107.58959385281484,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654829,
+      "name": "Artist's Shack (Gravesite Plain)",
+      "lat": -161.546875,
+      "lng": 111.42567129523853,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654830,
+      "name": "Church of Benediction",
+      "lat": -163.34375,
+      "lng": 110.7537848713672,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654888,
+      "name": "Belurat Tower Settlement",
+      "lat": -144.64732243012725,
+      "lng": 100.30876279182405,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654903,
+      "name": "Run-Down Traveler's Rest",
+      "lat": -143.4765625,
+      "lng": 111.1900810809267,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654930,
+      "name": "Abandoned Ailing Village",
+      "lat": -138.8046875,
+      "lng": 110.22877516107658,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654937,
+      "name": "Belurat Gaol",
+      "lat": -139.8046875,
+      "lng": 103.66817723565161,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654990,
+      "name": "Ellac Greatbridge",
+      "lat": -142.765625,
+      "lng": 112.9419503118717,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654994,
+      "name": "Ruined Forge Lava Intake",
+      "lat": -147.8359375,
+      "lng": 119.76211001759276,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 654996,
+      "name": "Castle Ensis",
+      "lat": -136.81456230882867,
+      "lng": 119.80161440195708,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655051,
+      "name": "Fort of Reprimand",
+      "lat": -145.3828125,
+      "lng": 130.0036806285414,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655076,
+      "name": "Moorth Ruins",
+      "lat": -135.8984375,
+      "lng": 129.61424371115885,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655099,
+      "name": "Whipping Hut",
+      "lat": -137.3359375,
+      "lng": 137.41097734075123,
+      "kind": "shack"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655100,
+      "name": "Bonny Village",
+      "lat": -137.8671875,
+      "lng": 133.55877938790897,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655103,
+      "name": "Rabbath's Rise",
+      "lat": -122.29166662693024,
+      "lng": 143.42578125,
+      "kind": "fieldtower"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655107,
+      "name": "Cathedral of Manus Metyr",
+      "lat": -130.28125,
+      "lng": 138.54360277485836,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655138,
+      "name": "Church of the Crusade",
+      "lat": -127.3828125,
+      "lng": 117.12922040646134,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655139,
+      "name": "Fog Rift Catacombs",
+      "lat": -127.7890625,
+      "lng": 114.284516513206,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655199,
+      "name": "Fog Rift Fort",
+      "lat": -133.86197912693024,
+      "lng": 115.65234375,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655210,
+      "name": "Temple Town Ruins",
+      "lat": -131.453125,
+      "lng": 107.86729888274539,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655211,
+      "name": "Taylew's Ruined Forge",
+      "lat": -116.31932093620364,
+      "lng": 121.81211360515383,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655213,
+      "name": "Northern Nameless Mausoleum",
+      "lat": -132.5331584478784,
+      "lng": 112.75255709294758,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655267,
+      "name": "Scorpion River Catacombs",
+      "lat": -124.0546875,
+      "lng": 97.31621299468827,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655284,
+      "name": "Scadutree Chalice",
+      "lat": -105.17774693915602,
+      "lng": 128.86061641011185,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655285,
+      "name": "Albinauric's Shack",
+      "lat": -109.875,
+      "lng": 125.81661759161945,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655286,
+      "name": "Shadow Keep",
+      "lat": -118.84231368702888,
+      "lng": 127.52128310203618,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655288,
+      "name": "Enir-Ilim",
+      "lat": -133.7109375,
+      "lng": 98.89464263274539,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655290,
+      "name": "Dragon's Pit",
+      "lat": -155.6171875,
+      "lng": 120.57428586524401,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655293,
+      "name": "Suppressing Pillar",
+      "lat": -155.8359375,
+      "lng": 122.82469712461159,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655294,
+      "name": "Ruins of Unte",
+      "lat": -122.83208802696073,
+      "lng": 133.68053011522085,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655295,
+      "name": "Shaman Village",
+      "lat": -118.80289666756386,
+      "lng": 141.2385163482255,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655297,
+      "name": "Finger Ruins of Dheo",
+      "lat": -125.93517534267096,
+      "lng": 154.22091560276036,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655298,
+      "name": "Finger Ruins of Miyr",
+      "lat": -127.88621826572229,
+      "lng": 138.16648879123898,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655299,
+      "name": "Eastern Nameless Mausoleum",
+      "lat": -135.6796875,
+      "lng": 140.05911210816123,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655301,
+      "name": "Darklight Catacombs",
+      "lat": -141.015625,
+      "lng": 139.58248392090113,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655302,
+      "name": "Bonny Gaol",
+      "lat": -144.484375,
+      "lng": 133.79236328481997,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655303,
+      "name": "Elder's Hovel",
+      "lat": -147.90625,
+      "lng": 131.51851024150065,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655304,
+      "name": "Abandoned Church",
+      "lat": -156.3984375,
+      "lng": 150.10564867597333,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655305,
+      "name": "Finger Ruins of Rhia",
+      "lat": -161.8984375,
+      "lng": 136.70723259573205,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655306,
+      "name": "Midra's Manse",
+      "lat": -159.88856995660083,
+      "lng": 127.96805735410194,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655307,
+      "name": "Grand Altar of Dragon Communion",
+      "lat": -168.3828125,
+      "lng": 130.77806202590935,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655308,
+      "name": "Finger-Weaver's Hovel",
+      "lat": -171.1328125,
+      "lng": 127.05877938790897,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655309,
+      "name": "Lamenter's Gaol",
+      "lat": -161.518481986893,
+      "lng": 112.70067386922388,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655311,
+      "name": "Southern Nameless Mausoleum",
+      "lat": -175.09216632297876,
+      "lng": 110.45215425605276,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655312,
+      "name": "Stone Coffin Fissure",
+      "lat": -188.48932772793128,
+      "lng": 118.91627163838359,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655376,
+      "name": "Rivermouth Cave",
+      "lat": -134.48260148175302,
+      "lng": 108.75256595502395,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655458,
+      "name": "Remembrance Duplication Coffin (Manus Metyr)",
+      "lat": -132.484375,
+      "lng": 137.027564638819,
+      "kind": "coffin"
+    },
+    {
+      "code": "dlc",
+      "markerId": 655777,
+      "name": "Waygate",
+      "lat": -135.2265625,
+      "lng": 119.10923262567664,
+      "kind": "waygate"
+    },
+    {
+      "code": "dlc",
+      "markerId": 658858,
+      "name": "Ruined Forge of Starfall Past",
+      "lat": -140.234375,
+      "lng": 124.09777477266496,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 659166,
+      "name": "Village of Flies",
+      "lat": -140.0703125,
+      "lng": 134.27772502170535,
+      "kind": "location"
+    },
+    {
+      "code": "dlc",
+      "markerId": 659211,
+      "name": "Remembrance Duplication Coffin (Finger Ruins of Rhia)",
+      "lat": -168.7421875,
+      "lng": 140.94145051750138,
+      "kind": "coffin"
+    },
+    {
+      "code": "dlc",
+      "markerId": 659212,
+      "name": "Remembrance Duplication Coffin (Finger Ruins of Dheo)",
+      "lat": -112.546875,
+      "lng": 151.66065890033815,
+      "kind": "coffin"
+    },
+    {
+      "code": "dlc",
+      "markerId": 659504,
+      "name": "Teleportation Coffin",
+      "lat": -121.10416662693024,
+      "lng": 127.94921875,
+      "kind": "waygate"
+    }
   ]
 }

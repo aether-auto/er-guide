@@ -63,15 +63,10 @@ export default function StepRow({ step, item }: { step: Step; item?: Item }) {
             map
           </button>
         ) : step.type === 'item' ? (
-          <span className="cursor-help text-ink-dim/50" title="No marker yet — see wiki link">
+          <span className="cursor-help text-ink-dim/50" title="No map marker for this item yet">
             map
           </span>
         ) : null}
-        {item?.wikiUrl && (
-          <a href={item.wikiUrl} target="_blank" rel="noreferrer" className="text-ink-dim hover:text-gold">
-            wiki
-          </a>
-        )}
       </div>
     </li>
   )

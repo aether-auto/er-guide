@@ -89,10 +89,20 @@ function PanelStepRow({
           </span>
         )}
         {item?.dlc && <span className="ml-1 text-[9px] text-gold-dim">DLC</span>}
-        {step.type === 'item' && !checked && (step.note ?? item?.acquisition) && (
-          <p className="mt-0.5 text-[11px] leading-relaxed text-ink-dim">
-            {step.note ?? item?.acquisition}
-          </p>
+        {step.type === 'item' && !checked && (
+          <>
+            {step.note && (
+              <p className="mt-0.5 text-[11px] leading-relaxed text-ink-dim">{step.note}</p>
+            )}
+            {item?.acquisition && item.acquisition !== step.note && (
+              <p className="mt-0.5 text-[11px] leading-relaxed text-ink-dim/80">
+                {item.acquisition}
+              </p>
+            )}
+            {item?.quest && (
+              <p className="mt-0.5 text-[11px] leading-relaxed text-gold-dim">❖ {item.quest}</p>
+            )}
+          </>
         )}
         {missable && !checked && (
           <p className="mt-0.5 text-[11px] font-semibold leading-relaxed text-missable">
