@@ -66,7 +66,6 @@
     "ash-of-war-ash-of-war-raging-beast",
     "ash-of-war-ash-of-war-rolling-sparks",
     "ash-of-war-ash-of-war-scattershot-throw",
-    "ash-of-war-ash-of-war-shriek-of-sorrow",
     "ash-of-war-ash-of-war-swift-slash",
     "ash-of-war-ash-of-war-wall-of-sparks",
     "bell-bearing-greasemonger-s-bell-bearing",
@@ -114,7 +113,6 @@
     "key-item-ruins-map-3rd",
     "key-item-secret-rite-scroll",
     "key-item-storehouse-cross-message",
-    "key-item-well-depths-key",
     "larval-tear-25",
     "larval-tear-26",
     "remembrance-remembrance-of-a-god-and-a-lord",
@@ -206,7 +204,6 @@
     "weapon-ancient-meteoric-ore-greatsword",
     "weapon-black-steel-twinblade",
     "weapon-bloodfiend-s-sacred-spear",
-    "weapon-bone-bow",
     "weapon-bonny-butchering-knife",
     "weapon-claws-of-night",
     "weapon-dancing-blade-of-ranah",
@@ -238,6 +235,8 @@
     "weapon-sword-of-night",
     "weapon-thiollier-s-hidden-needle",
     "weapon-tooth-whip",
-    "shield-one-eyed-shield"
+    "shield-one-eyed-shield",
+    "map-fragment-map-scadu-altus",
+    "scadutree-fragment-22"
   ]
 }

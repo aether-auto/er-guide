@@ -2,7 +2,224 @@
   "id": "mountaintops",
   "name": "Mountaintops of the Giants",
   "order": 14,
-  "legs": [],
+  "legs": [
+    {
+      "id": "mountaintops-01",
+      "from": "Grand Lift of Rold",
+      "to": "Zamor Ruins",
+      "summary": "Ascend via the Rold Medallion gifted by Melina after defeating Morgott. Collect the west map fragment immediately on exit, then ride north to the Zamor Ruins. Pick up the sorcery and smithing bell bearing in the ruins before pushing toward the Whiteridge Road grace.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "At the Grand Lift of Rold, select 'Hoist Medallion' (the standard Rold Medallion from Melina post-Morgott). The hidden path using BOTH Haligtree Secret Medallion halves is used later for Consecrated Snowfield — do NOT use it yet."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-mountaintops-of-the-giants-west",
+          "note": "Stone stele on your right immediately after exiting the Grand Lift of Rold — can't miss it."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-zamor-ice-storm",
+          "note": "On a corpse in the southern section of Zamor Ruins, by a stone archway."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-smithing-stone-miner-s-bell-bearing-3",
+          "note": "Found in an underground area beneath Zamor Ruins — entrance in the southwest section of the ruins."
+        }
+      ]
+    },
+    {
+      "id": "mountaintops-02",
+      "from": "Zamor Ruins",
+      "to": "Whiteridge Road",
+      "summary": "Ride northwest from Zamor toward Whiteridge Road, collecting the Prelate's Charge ash of war from the Fire Monk camp. Pick up the Somberstone bell bearing outside the First Church of Marika to the east. Latenna will mention the medallion location if you have spoken to her at Slumbering Wolf's Shack in Liurnia.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-prelate-s-charge",
+          "note": "South of Whiteridge Road grace, inside a Fire Monk campsite — look for the invisible Teardrop Scarab hanging from the ceiling near the fire."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-somberstone-miner-s-bell-bearing-3",
+          "note": "On a corpse just outside the First Church of Marika, northeast of Whiteridge Road."
+        },
+        {
+          "type": "item",
+          "itemId": "sacred-tear-12",
+          "note": "Inside the First Church of Marika — check the altar."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-26",
+          "note": "Under a Phantom Tree just before a frozen giant, in the valley northeast of the First Church."
+        },
+        {
+          "type": "quest",
+          "id": "quest-millicent-mountaintops",
+          "questline": "Millicent",
+          "text": "Find Millicent sitting by the Ancient Snow Valley Ruins grace (northeast). Exhaust her dialogue — she reflects on the Haligtree and her rot."
+        }
+      ]
+    },
+    {
+      "id": "mountaintops-03",
+      "from": "Whiteridge Road",
+      "to": "Castle Sol Rooftop",
+      "summary": "Head northeast to Castle Sol for Commander Niall and the left half of the Haligtree Secret Medallion. This is the key item that unlocks the Consecrated Snowfield. Pick up the East map fragment on the way back via the Freezing Lake chain path.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-mountaintops-of-the-giants-east",
+          "note": "Found at an altar on the eastern chain-bridge path; cross the chain from the enemy encampment east of Freezing Lake."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-seppuku",
+          "note": "On the frozen Freezing Lake, dropped by an invisible Teardrop Scarab near the Freezing Lake grace. The Scarab can be spotted by footprints in the snow."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-cerulean-amber-medallion-1",
+          "note": "On a corpse hanging from a wooden ledge above the southern walls of Castle Sol — accessible from the rampart path."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-eclipse-shotel",
+          "note": "Found at the altar of the church in the southeast section of Castle Sol (Church of the Eclipse)."
+        },
+        {
+          "type": "boss",
+          "id": "boss-mountaintops-commander-niall",
+          "text": "Commander Niall — Castle Sol Rooftop. He summons spirit soldiers and uses heavy lightning sweep attacks. Defeat the spectral summons first to break his poise windows."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-veteran-s-prosthesis",
+          "note": "Dropped by Commander Niall upon defeat."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-haligtree-secret-medallion-left",
+          "note": "Found in the castle's northeast tower after defeating Commander Niall — climb the stairs from the rooftop."
+        }
+      ]
+    },
+    {
+      "id": "mountaintops-04",
+      "from": "Castle Sol Rooftop",
+      "to": "Spiritcaller Cave",
+      "summary": "Southwest sweep: Spiritcaller Cave on the western bank of Freezing Lake (2 Stonesword Keys required), then south to the Giants' Mountaintop Catacombs and Giant-Conquering Hero's Grave. The Hero's Grave houses the Zamor armor set and the Fire Prelate's Giant's Seal.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Spiritcaller Cave is on the western bank of Freezing Lake — entrance sealed by an imp statue requiring 2 Stonesword Keys."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-49",
+          "note": "On a corpse by the cliffs east of the mausoleum near Freezing Lake, behind some praying corpses."
+        },
+        {
+          "type": "boss",
+          "id": "boss-mountaintops-spiritcaller-godskins",
+          "text": "Spiritcaller Cave — Godskin Apostle and Godskin Noble (spirit forms, fought sequentially). A Spirit-Caller Snail is hidden and must be found after both Godskins fall — it is the actual host. Kill the snail to end the fight."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-godskin-swaddling-cloth",
+          "note": "Dropped by the Godskin duo in Spiritcaller Cave."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-black-flame-ritual",
+          "note": "Also dropped by the Godskin duo in Spiritcaller Cave."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-white-reed-armor",
+          "note": "On a corpse inside Spiritcaller Cave, in the long cavern before the boss."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-white-reed-gauntlets",
+          "note": "Same cavern as the White Reed Armor."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-white-reed-greaves",
+          "note": "Same cavern as the White Reed Armor."
+        }
+      ]
+    },
+    {
+      "id": "mountaintops-05",
+      "from": "Giants' Gravepost",
+      "to": "Foot of the Forge",
+      "summary": "Southeast from Giants' Gravepost to the two Flame Peak catacombs, then to Church of Repose before ascending the chain bridges to Fire Giant. Collect the crimsonwhorl tear on the cliff ledge south of the Gravepost. The Corhyn/Goldmask quest bridge is just north of the Gravepost.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "crystal-tear-crimsonwhorl-bubbletear",
+          "note": "On a cliff ledge south of Giants' Gravepost — go northeast from the Foot of the Forge grace, the ledge is accessed from above."
+        },
+        {
+          "type": "quest",
+          "id": "quest-corhyn-goldmask-gravepost",
+          "questline": "Corhyn/Goldmask",
+          "text": "Brother Corhyn and Goldmask stand on a bridge just south of Stargazers' Ruins (northwest of Giants' Gravepost). Exhaust Goldmask's puzzle dialogue — Corhyn will later reveal the solution. Skipping this delays the Erdtree Mending ending."
+        },
+        {
+          "type": "boss",
+          "id": "boss-mountaintops-ancient-hero-zamor",
+          "text": "Ancient Hero of Zamor — Giant-Conquering Hero's Grave, southwest of Giants' Gravepost. Susceptible to bleed. Drops Radagon's Scarseal and the Zamor Curved Sword (the full Zamor armor set and Zamor Curved Sword are also placed via leyndell region from the Zamor Ruins encounter there)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-radagon-s-scarseal",
+          "note": "Dropped by Ancient Hero of Zamor in Giant-Conquering Hero's Grave."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-crimson-bubbletear",
+          "note": "Dropped by the Erdtree Avatar guarding the Minor Erdtree in Flame Peak."
+        }
+      ]
+    },
+    {
+      "id": "mountaintops-06",
+      "from": "Foot of the Forge",
+      "to": "Forge of the Giants",
+      "summary": "Cross the chain bridges to confront the Fire Giant — mandatory boss to reach the Forge of the Giants. After defeating him, speak to Melina at the Forge of the Giants grace. CRITICAL WARNING: Accepting Melina's offer to burn the Erdtree here triggers the Leyndell lock — any Leyndell items not yet collected become permanently missable (Erdtree transforms to Ashen Capital). If you have unfinished Leyndell items, backtrack NOW before resting at this grace.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "MISSABLE WARNING — before defeating Fire Giant, ensure ALL Leyndell items are collected. After the scene at Forge of the Giants, Leyndell transforms to the Ashen Capital and many items/NPCs in Leyndell are permanently locked."
+        },
+        {
+          "type": "boss",
+          "id": "boss-mountaintops-fire-giant",
+          "text": "Fire Giant — Flame Peak chain bridge arena. Two-phase fight: phase 1 target the ankle wound; phase 2 he rolls and throws fire. Mandatory story boss."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-fire-giant",
+          "note": "Dropped by Fire Giant upon defeat."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-giant-s-red-braid",
+          "note": "From the Remembrance of the Fire Giant — trade to Enia at Roundtable Hold or consume for runes."
+        },
+        {
+          "type": "direction",
+          "text": "At the Forge of the Giants grace, Melina offers to burn the Erdtree. Accept to proceed. If you have inherited the Frenzied Flame, Melina is not present — select 'Listen to the sounds of flame' instead. You are teleported to Crumbling Farum Azula."
+        }
+      ]
+    }
+  ],
   "cleanup": [
     "ammo-meteor-bolt",
     "armor-armor-of-solitude",
@@ -58,48 +275,16 @@
     "armor-veteran-s-gauntlets",
     "armor-veteran-s-greaves",
     "armor-veteran-s-helm",
-    "armor-white-reed-armor",
-    "armor-white-reed-gauntlets",
-    "armor-white-reed-greaves",
-    "ash-of-war-ash-of-war-prelate-s-charge",
-    "ash-of-war-ash-of-war-seppuku",
-    "ash-of-war-ash-of-war-sky-shot",
-    "bell-bearing-isolated-merchant-s-bell-bearing-1",
-    "bell-bearing-isolated-merchant-s-bell-bearing-2",
-    "bell-bearing-isolated-merchant-s-bell-bearing-3",
-    "bell-bearing-smithing-stone-miner-s-bell-bearing-3",
-    "bell-bearing-somberstone-miner-s-bell-bearing-3",
-    "cookbook-armorer-s-cookbook-1",
-    "crystal-tear-crimson-bubbletear",
-    "crystal-tear-crimsonwhorl-bubbletear",
-    "golden-seed-26",
-    "golden-seed-31",
-    "incantation-black-flame-ritual",
-    "map-fragment-map-consecrated-snowfield",
-    "map-fragment-map-mountaintops-of-the-giants-east",
-    "map-fragment-map-mountaintops-of-the-giants-west",
-    "remembrance-remembrance-of-the-fire-giant",
-    "sacred-tear-12",
     "shield-blue-gold-kite-shield",
     "shield-messmer-soldier-shield",
     "shield-scorpion-kite-shield",
-    "sorcery-explosive-ghostflame",
-    "sorcery-founding-rain-of-stars",
-    "sorcery-zamor-ice-storm",
     "spirit-ash-haligtree-soldier-ashes",
     "spirit-ash-marionette-soldier-ashes",
     "spirit-ash-mausoleum-soldier-ashes",
-    "stonesword-key-49",
-    "talisman-cerulean-amber-medallion-1",
-    "talisman-godskin-swaddling-cloth",
-    "talisman-radagon-s-scarseal",
-    "tool-radiant-baldachin-s-blessing",
     "weapon-club",
     "weapon-dagger",
     "weapon-dragonscale-blade",
-    "weapon-eclipse-shotel",
     "weapon-frozen-needle",
-    "weapon-giant-s-red-braid",
     "weapon-helphen-s-steeple",
     "weapon-messmer-soldier-s-axe",
     "weapon-messmer-soldier-s-spear",
@@ -107,7 +292,14 @@
     "weapon-soldier-s-crossbow",
     "weapon-spiked-spear",
     "weapon-torchpole",
-    "weapon-veteran-s-prosthesis",
-    "weapon-warpick"
+    "weapon-warpick",
+    "sorcery-founding-rain-of-stars",
+    "ash-of-war-ash-of-war-sky-shot",
+    "bell-bearing-isolated-merchant-s-bell-bearing-1",
+    "bell-bearing-isolated-merchant-s-bell-bearing-2",
+    "bell-bearing-isolated-merchant-s-bell-bearing-3",
+    "cookbook-armorer-s-cookbook-1",
+    "golden-seed-31",
+    "tool-radiant-baldachin-s-blessing"
   ]
 }

@@ -2,53 +2,313 @@
   "id": "consecrated-snowfield",
   "name": "Consecrated Snowfield",
   "order": 15,
-  "legs": [],
+  "legs": [
+    {
+      "id": "snowfield-01",
+      "from": "Consecrated Snowfield",
+      "to": "Inner Consecrated Snowfield",
+      "summary": "Access requires BOTH halves of the Haligtree Secret Medallion — right half from Village of the Albinaurics (Liurnia), left half from Castle Sol. At the Grand Lift of Rold, select 'Hoist secret medallion' to reach the hidden path. Collect the map fragment on the road through the blizzard, then push north to Inner Consecrated Snowfield.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "PREREQUISITE: You need BOTH Haligtree Secret Medallion halves. Right half from Old Albus at Village of the Albinaurics (Liurnia). Left half from the northeast tower of Castle Sol after defeating Commander Niall. At the Grand Lift of Rold, select 'Hoist secret medallion' (not the standard Rold Medallion)."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-consecrated-snowfield",
+          "note": "Follow the road north past the initial blizzard zone until you descend and cross a frozen river — the stele is on the road."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-30",
+          "note": "By a pillar within the snowstorm, near a cookbook north from the first Consecrated Snowfield grace."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-nomadic-warrior-s-cookbook-23",
+          "note": "On a corpse lying by the road soon after the first Site of Grace of the Consecrated Snowfield."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-08",
+          "note": "Dropped by a Runebear disguised as a pilgrim in the Consecrated Snowfield — the disguised pilgrim is half-buried in snow."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-white-shadow-s-lure",
+          "note": "Dropped by an invisible Teardrop Scarab northwest of Inner Consecrated Snowfield grace."
+        }
+      ]
+    },
+    {
+      "id": "snowfield-02",
+      "from": "Inner Consecrated Snowfield",
+      "to": "Ordina, Liturgical Town",
+      "summary": "West sweep before Ordina: the Night's Cavalry caravan at night drops the full armor set, the enemy caravan contains the Flowing Curved Sword and St. Trina's Torch. The Sanguine Noble invader near Yelough Anix Ruins activates the Mohgwyn teleporter and drops the Sanguine Noble armor set. Rotten Duelists near Ordina drop the Rotten Greataxe.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "weapon-flowing-curved-sword",
+          "note": "Found in a chest of the enemy caravan traveling the southwestern Consecrated Snowfield."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-st-trina-s-torch",
+          "note": "Looted from a treasure chest in the caravan wagon in the southern portion of the Consecrated Snowfield."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-night-s-cavalry-armor",
+          "note": "Dropped by one of the Night's Cavalry mini-bosses guarding the caravan at night."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-night-s-cavalry-armor-altered",
+          "note": "Part of the Night's Cavalry set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-night-s-cavalry-gauntlets",
+          "note": "Part of the Night's Cavalry set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-night-s-cavalry-greaves",
+          "note": "Part of the Night's Cavalry set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-night-s-cavalry-helm",
+          "note": "Part of the Night's Cavalry set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-night-s-cavalry-helm-altered",
+          "note": "Part of the Night's Cavalry set."
+        },
+        {
+          "type": "direction",
+          "text": "ALTERNATE Mohgwyn Access (non-Varré route): Near Yelough Anix Ruins in the far west, defeat the Sanguine Noble NPC invader to activate the waygate on the western cliffs. This is the only way to reach Mohgwyn Palace if you did not complete Varré's questline."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-sanguine-noble-hood",
+          "note": "Dropped by the Sanguine Noble NPC invader near Yelough Anix Ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-sanguine-noble-robe",
+          "note": "Dropped by the Sanguine Noble NPC invader."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-sanguine-noble-waistcloth",
+          "note": "Dropped by the Sanguine Noble NPC invader."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rotten-greataxe",
+          "note": "Dropped by the Rotten Duelist guarding the rear of Ordina, Liturgical Town."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-rotten-battle-hammer",
+          "note": "Guaranteed drop from the Rotten Duelist enemy in the area near Ordina."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-stalwart-horn-charm-1",
+          "note": "Found to the east of Yelough Anix Tunnel."
+        }
+      ]
+    },
+    {
+      "id": "snowfield-03",
+      "from": "Ordina, Liturgical Town",
+      "to": "Apostate Derelict",
+      "summary": "Ordina's evergaol puzzle unlocks the portal to Miquella's Haligtree. Then ride northeast to the Apostate Derelict to conclude Latenna's questline and collect dungeon rewards from Cave of the Forlorn and Yelough Anix Tunnel.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "ORDINA PUZZLE: Interact with the Sending Gate in Ordina to enter the evergaol. Activate four torch statues scattered across the rooftops and ground level. Invisible Black Knife Assassins guard the area — the Sentry's Torch (bought from a merchant) makes them visible. Once all four flames are lit, the waygate at the town's center activates and opens passage to Miquella's Haligtree."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-black-knife-armor",
+          "note": "Found under an arch in Ordina, Liturgical Town."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-black-knife-armor-altered",
+          "note": "Part of the Black Knife set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-black-knife-gauntlets",
+          "note": "Part of the Black Knife set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-black-knife-greaves",
+          "note": "Part of the Black Knife set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-black-knife-hood",
+          "note": "Part of the Black Knife set."
+        },
+        {
+          "type": "boss",
+          "id": "boss-snowfield-putrid-avatar",
+          "text": "Putrid Avatar — guards the Minor Erdtree in the Consecrated Snowfield. Large erdtree guardian with scarlet rot spit."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-thorny-cracked-tear",
+          "note": "Dropped by the Putrid Avatar under the Minor Erdtree in Consecrated Snowfield."
+        },
+        {
+          "type": "boss",
+          "id": "boss-snowfield-misbegotten-crusader",
+          "text": "Misbegotten Crusader — boss of Cave of the Forlorn (requires 2 Stonesword Keys to enter). South of the Minor Erdtree in the frozen ravine."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-golden-order-greatsword",
+          "note": "Dropped by Misbegotten Crusader, boss of Cave of the Forlorn."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-44",
+          "note": "Held by a corpse sitting on a chair near the edge of a cliff in the Consecrated Snowfield."
+        },
+        {
+          "type": "boss",
+          "id": "boss-snowfield-astel-stars-of-darkness",
+          "text": "Astel, Stars of Darkness — boss of Yelough Anix Tunnel (western Consecrated Snowfield, south of Yelough Anix Ruins)."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-unendurable-frenzy",
+          "note": "Found in a chest in an underground treasure room in the central section of Yelough Anix Ruins (above the tunnel)."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-perfumer-s-cookbook-4",
+          "note": "Found in the Consecrated Snowfield area."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-32",
+          "note": "In the Consecrated Snowfield, northeast area near the Minor Erdtree valley."
+        },
+        {
+          "type": "boss",
+          "id": "boss-snowfield-putrid-grave-warden-duelist",
+          "text": "Putrid Grave Warden Duelist — boss of Consecrated Snowfield Catacombs, eastern cliffs of the Snowfield."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-rotten-gravekeeper-cloak",
+          "note": "Dropped by Putrid Grave Warden Duelist, boss of Consecrated Snowfield Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-rotten-gravekeeper-cloak-altered",
+          "note": "Part of the Rotten Gravekeeper set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-imp-head-elder",
+          "note": "Found inside Consecrated Snowfield Catacombs."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-rotten-duelist-greaves",
+          "note": "Dropped by Rotten Duelist enemies in the Consecrated Snowfield."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-rotten-duelist-helm",
+          "note": "Dropped by Rotten Duelist enemies in the Consecrated Snowfield."
+        },
+        {
+          "type": "quest",
+          "id": "quest-latenna-apostate-derelict",
+          "questline": "Latenna",
+          "text": "Travel to Apostate Derelict in the far north of the Consecrated Snowfield. Summon Latenna using her Spirit Ash — she delivers the birthing droplet to the giant Albinauric woman Phillia, completing her quest.",
+          "missable": {
+            "lockedBy": "Missing Latenna's Spirit Ash in Liurnia",
+            "note": "Latenna must have been met at Slumbering Wolf's Shack (after Lakeside Crystal Cave) and shown the Haligtree Medallion Right half. If she was not spoken to, she is dead and her quest cannot be completed (though her ashes can still be collected)."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-explosive-ghostflame",
+          "note": "Dropped by a Death Rite Bird southeast of Apostate Derelict — a clearing in the frozen river at night."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-silver-mirrorshield",
+          "note": "Found inside the Apostate Derelict church."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-hoslow-s-petal-whip",
+          "note": "Dropped by Juno Hoslow, Knight of Blood — NPC invader in the Mountaintops/Snowfield area (Volcano Manor assassination contract target, also spawns independently)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-hoslow-s-armor",
+          "note": "Dropped by Juno Hoslow alongside the petal whip."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-hoslow-s-armor-altered",
+          "note": "Part of the Hoslow set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-hoslow-s-gauntlets",
+          "note": "Part of the Hoslow set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-hoslow-s-greaves",
+          "note": "Part of the Hoslow set."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-hoslow-s-helm",
+          "note": "Part of the Hoslow set."
+        }
+      ]
+    },
+    {
+      "id": "snowfield-04",
+      "from": "Apostate Derelict",
+      "to": "Ordina, Liturgical Town",
+      "summary": "Return to Ordina and pass through the now-activated portal to Miquella's Haligtree.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "weapon-zweihander",
+          "note": "Found in the Consecrated Snowfield area."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-iron-roundshield",
+          "note": "Found in the Consecrated Snowfield area."
+        },
+        {
+          "type": "direction",
+          "text": "Activate the Sending Gate at Ordina, Liturgical Town (now unlocked by the evergaol puzzle) to travel to Miquella's Haligtree."
+        }
+      ]
+    }
+  ],
   "cleanup": [
-    "armor-black-knife-armor",
-    "armor-black-knife-armor-altered",
-    "armor-black-knife-gauntlets",
-    "armor-black-knife-greaves",
-    "armor-black-knife-hood",
-    "armor-hoslow-s-armor",
-    "armor-hoslow-s-armor-altered",
-    "armor-hoslow-s-gauntlets",
-    "armor-hoslow-s-greaves",
-    "armor-hoslow-s-helm",
-    "armor-imp-head-elder",
     "armor-iron-gauntlets",
-    "armor-night-s-cavalry-armor",
-    "armor-night-s-cavalry-armor-altered",
-    "armor-night-s-cavalry-gauntlets",
-    "armor-night-s-cavalry-greaves",
-    "armor-night-s-cavalry-helm",
-    "armor-night-s-cavalry-helm-altered",
-    "armor-rotten-duelist-greaves",
-    "armor-rotten-duelist-helm",
-    "armor-rotten-gravekeeper-cloak",
-    "armor-rotten-gravekeeper-cloak-altered",
-    "armor-sanguine-noble-hood",
-    "armor-sanguine-noble-robe",
-    "armor-sanguine-noble-waistcloth",
-    "ash-of-war-ash-of-war-white-shadow-s-lure",
-    "cookbook-nomadic-warrior-s-cookbook-23",
-    "cookbook-perfumer-s-cookbook-4",
-    "crystal-tear-thorny-cracked-tear",
-    "golden-seed-30",
-    "golden-seed-32",
-    "incantation-unendurable-frenzy",
-    "larval-tear-08",
-    "shield-iron-roundshield",
-    "shield-silver-mirrorshield",
-    "stonesword-key-43",
-    "stonesword-key-44",
-    "talisman-stalwart-horn-charm-1",
-    "tool-prattling-pate-my-beloved",
-    "weapon-flowing-curved-sword",
-    "weapon-golden-order-greatsword",
-    "weapon-hoslow-s-petal-whip",
-    "weapon-rotten-battle-hammer",
-    "weapon-rotten-greataxe",
-    "weapon-st-trina-s-torch",
-    "weapon-zweihander"
+    "stonesword-key-43"
   ]
 }

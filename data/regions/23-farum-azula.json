@@ -2,7 +2,241 @@
   "id": "farum-azula",
   "name": "Crumbling Farum Azula",
   "order": 23,
-  "legs": [],
+  "legs": [
+    {
+      "id": "farum-01",
+      "from": "Forge of the Giants",
+      "to": "Crumbling Beast Grave Depths",
+      "summary": "POINT OF NO RETURN: Burning the Erdtree at the Forge of the Giants sends you here automatically and permanently transforms Leyndell into the Ashen Capital. All Royal Capital-exclusive items (specifically flagged missable in region 12-leyndell) are now locked out forever. You wake on a bridge in Farum Azula and must push forward. Explore the Beast Grave section for early loot before descending.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "WARNING — POINT OF NO RETURN: Speaking to Melina at the Forge of the Giants and burning the Erdtree is IRREVERSIBLE. All items in Leyndell, Royal Capital that were flagged as missable 'lockedBy: Burning the Erdtree' are now permanently inaccessible. Ensure you have collected everything in Leyndell, completed the Subterranean Shunning-Grounds (Frenzied Flame Proscription), and completed Dung Eater's questline before proceeding."
+        },
+        {
+          "type": "direction",
+          "text": "You awaken on the Crumbling Beast Grave bridge. Activate the Site of Grace, then descend into the Crumbling Beast Grave Depths. The region is a maze of floating ruins in a tempestuous sky — stay methodical."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-ancient-dragon-prayerbook",
+          "note": "At ground level inside the large crumbling building next to the Crumbling Beast Grave Depths Site of Grace — hard to miss on the central floor."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-beastman-s-cleaver",
+          "note": "Dropped by Beastmen enemies patrolling the Beast Grave exterior and interior areas. Farm the large curved greatsword variant."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-beastman-s-curved-sword",
+          "note": "Dropped by smaller Beastmen throughout the region. Both weapons drop relatively quickly from the common enemies here."
+        }
+      ]
+    },
+    {
+      "id": "farum-02",
+      "from": "Crumbling Beast Grave Depths",
+      "to": "Dragon Temple Altar (Godskin Duo)",
+      "summary": "Ascend through the Dragon Temple complex. The main hall holds the Godskin Duo boss fight — a mandatory encounter on the critical path. Recusant Bernahl's cooperative summon sign appears near the Dragon Temple grace if you completed his questline through Rykard's defeat. The Godskin Duo drops excellent bell bearings for upgrading.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Beast Grave Depths, navigate west and north through the flooded lower areas, ascending into the Dragon Temple proper. Activate the Dragon Temple Site of Grace."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-azula-beastman-ashes",
+          "note": "Drop down from the Dragon Temple Site of Grace, turn west — these ashes are at the bottom level of the temple on a body."
+        },
+        {
+          "type": "item",
+          "itemId": "stonesword-key-21",
+          "note": "From Dragon Temple grace, head inside and east into a semi-open back area — corpse holds the key."
+        },
+        {
+          "type": "quest",
+          "id": "quest-bernahl-summon-godskin",
+          "questline": "Volcano Manor",
+          "text": "Recusant Bernahl's gold summon sign appears near the Dragon Temple Site of Grace. You may summon him for the Godskin Duo fight if you have completed the Volcano Manor questline up through defeating Rykard. His invasion (which drops Blasphemous Claw, Devourer's Scepter, and Beast Champion set) triggers separately at the Great Bridge — see farum-04 leg."
+        },
+        {
+          "type": "boss",
+          "id": "boss-godskin-duo",
+          "text": "Godskin Duo — fought in the main hall of the Dragon Temple interior. Two Godskin enemies simultaneously: the Godskin Noble and Godskin Apostle. Bernahl can be summoned as an ally. Dropped bell bearings are highly valuable for upgrading."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-smithing-stone-miner-s-bell-bearing-4",
+          "note": "Dropped by the Godskin Duo upon defeat — unlocks Smithing Stone [4] at Twin Maiden Husks."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-somberstone-miner-s-bell-bearing-4",
+          "note": "Also dropped by the Godskin Duo — unlocks Somber Smithing Stone [4]."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-black-flame-tornado",
+          "note": "Dropped by the Godskin Duo on defeat. Excellent for Strength/Faith builds."
+        }
+      ]
+    },
+    {
+      "id": "farum-03",
+      "from": "Dragon Temple Altar",
+      "to": "Dragonlord Placidusax",
+      "summary": "Explore the elevated Dragon Temple sections and the surrounding cliffs for high-value loot — two upgraded talismans, the Dragon Tower Shield, two Golden Seeds, and the Somberstone Bell Bearing [5]. Then reach the hidden Placidusax boss by descending the platforms below Beside the Great Bridge and lying down at the marked archway. Miquella's Needle can be used in this arena to undo the Frenzied Flame.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Dragon Temple Altar, take the lift up to Dragon Temple Lift, then Dragon Temple Rooftop. Explore all side paths before the main route — significant loot is hidden in the elevated and cliff sections."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-boltdrake-talisman-2",
+          "note": "On a corpse dangling off an opening in a tall tower south of Dragon Temple Rooftop. Requires careful platforming down the east side cliff."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-dragoncrest-shield-talisman-2",
+          "note": "On a chunk of floating debris to the north. From Dragon Temple Lift grace, take the lift up and navigate the floating rocks north."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-dragon-towershield",
+          "note": "In a chest in the terrace section of a building far below the Dragon Temple Rooftop grace, in the southeast plaza area."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-ancient-dragon-apostle-s-cookbook-4",
+          "note": "In a gazebo-like structure high up in the heavily-crumbled northwest section. Ascend the Dragon Temple stairs then navigate the crumbled upper paths."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-golden-lightning-fortification",
+          "note": "Dropped by a Teardrop Scarab by the cliffs south of the fountain plaza in the upper area after ascending Dragon Temple stairs."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-14",
+          "note": "Under a Phantom Tree by some pillars south of the fountain plaza in the upper area — the same elevated section accessed after Dragon Temple stairs."
+        },
+        {
+          "type": "item",
+          "itemId": "golden-seed-15",
+          "note": "Under a Phantom Tree among pillar structures on a hill in the plaza southeast from the Dragon Temple Rooftop grace."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-somberstone-miner-s-bell-bearing-5",
+          "note": "On a corpse sitting in front of an altar right at the entrance to the building with the Beside the Great Bridge Site of Grace."
+        },
+        {
+          "type": "direction",
+          "text": "Activate the Beside the Great Bridge Site of Grace. To reach Dragonlord Placidusax: from this grace, do NOT cross the bridge. Instead, drop down on the left (south) side onto the descending platforms. Look for a windswept archway on the ground with no bones — when you stand near it, a prompt to 'lie down' appears. This is Placidusax's hidden fog gate."
+        },
+        {
+          "type": "quest",
+          "id": "quest-miquella-needle-use",
+          "questline": "Frenzied Flame (reversal)",
+          "text": "If you inherited the Frenzied Flame from the Three Fingers (locked out of all non-Frenzied Flame endings), use Miquella's Needle as a consumable INSIDE Dragonlord Placidusax's arena BEFORE or AFTER the fight. This is the only way to reverse the Frenzied Flame and restore access to other endings. The needle is consumed permanently. Source: Millicent questline reward from Unalloyed Gold Needle (obtained in Caelid)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-miquella-s-needle",
+          "note": "Claimed here: Miquella's Needle is obtained by completing Millicent's questline (in Caelid/Haligtree — see regions 06/17). Use it inside Placidusax's arena to undo the Frenzied Flame if needed. Consumed on use."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dragonlord-placidusax",
+          "text": "Dragonlord Placidusax — one of the oldest entities in the game, a two-headed dragon frozen in time. Optional but highly recommended for the remembrance. Fight occurs in a temporal void arena accessed only by the lying-down prompt."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-dragonlord",
+          "note": "Dropped by Dragonlord Placidusax. Trade with Enia for Placidusax's Ruin incantation or Dragon King's Cragblade weapon."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-placidusax-s-ruin",
+          "note": "Obtained by trading Remembrance of the Dragonlord with Finger Reader Enia at the Roundtable Hold (alternative: Dragon King's Cragblade weapon)."
+        }
+      ]
+    },
+    {
+      "id": "farum-04",
+      "from": "Beside the Great Bridge",
+      "to": "Maliketh, the Black Blade",
+      "summary": "Cross the Great Bridge, trigger Recusant Bernahl's invasion north of the bridge, and duel Iron Fist Alexander for his questline conclusion. Then face Maliketh. Defeating Maliketh as Beast Clergyman teleports you directly to Leyndell, Ashen Capital — the game's final stretch begins. Note: Gurranq at the Bestial Sanctum IS Maliketh; however, Gurranq remains accessible for Deathroot exchanges even after Maliketh is defeated.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Cross the Great Bridge heading north. Before reaching the tower at the far end, WATCH for Recusant Bernahl's invasion (red phantom) — he invades on the path north of the bridge if you completed his questline through Rykard."
+        },
+        {
+          "type": "quest",
+          "id": "quest-bernahl-invasion-farum",
+          "questline": "Volcano Manor",
+          "text": "Recusant Bernahl invades on the path north of the Great Bridge. His bell bearing and weapons were placed in the 11-mt-gelmir region (his quest concludes there conceptually), but the physical invasion happens here. Defeat him for the Blasphemous Claw — it lets you parry Maliketh's special yellow-flash attack and is highly recommended for that fight."
+        },
+        {
+          "type": "direction",
+          "text": "Find Iron Fist Alexander's location: from Dragon Temple Lift Site of Grace, head west to the large open area with collapsed archways. He stands in the clearing for his final duel. Exhaust his dialogue first — he requests one last battle."
+        },
+        {
+          "type": "quest",
+          "id": "quest-alexander-final-duel",
+          "questline": "Iron Fist Alexander",
+          "text": "Iron Fist Alexander's final encounter — he challenges you to a duel in the large clearing west of Dragon Temple Lift. Completing his full questline (freed him in Limgrave, Gael Tunnel, Radahn festival, Liurnia, Mt. Gelmir lava, optional Fire Giant summon) leads here. After defeating him, he shatters and bequeaths everything inside him."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-shard-of-alexander",
+          "note": "Dropped by Iron Fist Alexander after the final duel in Farum Azula. Greatly boosts the potency of skills — one of the best talisman slots for many builds."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-alexander-s-innards",
+          "note": "Also dropped by Iron Fist Alexander. Give to Jar-Bairn in Jarburg (Liurnia) to complete his side of the questline — Jar-Bairn vows to grow strong like his uncle."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-glovewort-picker-s-bell-bearing-3",
+          "note": "In a gazebo by the shallow wormface-infested pond. Take the lift in the terrace southwest of Tempest-Facing Balcony to reach this lower area."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-beastman-s-jar-shield",
+          "note": "In the room next to the Tempest-Facing Balcony Site of Grace."
+        },
+        {
+          "type": "direction",
+          "text": "Head to the fog gate beyond the Great Bridge tower. Maliketh reveals his true form as Beast Clergyman transforms. Note: Gurranq, Beast Clergyman at the Bestial Sanctum in Dragonbarrow IS Maliketh in his suppressed form. Defeating Maliketh here does NOT lock out remaining Deathroot rewards — Gurranq's questline runs independently."
+        },
+        {
+          "type": "boss",
+          "id": "boss-maliketh-the-black-blade",
+          "text": "Maliketh, the Black Blade — two-phase fight: Beast Clergyman transforms into Maliketh. The Blasphemous Claw (from Bernahl) can parry his yellow Destined Death attacks. Defeating him teleports you directly to Leyndell, Ashen Capital."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-black-blade",
+          "note": "Dropped by Maliketh. Trade with Enia for the Black Blade incantation or Maliketh's Black Blade weapon."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-black-blade",
+          "note": "Trade Remembrance of the Black Blade with Enia (alternative: Maliketh's Black Blade weapon)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-maliketh-s-black-blade",
+          "note": "Alternative trade of Remembrance of the Black Blade with Enia."
+        }
+      ]
+    }
+  ],
   "cleanup": [
     "armor-drake-knight-armor",
     "armor-drake-knight-armor-altered",
@@ -18,30 +252,6 @@
     "armor-maliketh-s-armor-altered",
     "armor-maliketh-s-gauntlets",
     "armor-maliketh-s-greaves",
-    "armor-maliketh-s-helm",
-    "ash-of-war-ash-of-war-black-flame-tornado",
-    "bell-bearing-glovewort-picker-s-bell-bearing-3",
-    "bell-bearing-smithing-stone-miner-s-bell-bearing-4",
-    "bell-bearing-somberstone-miner-s-bell-bearing-4",
-    "bell-bearing-somberstone-miner-s-bell-bearing-5",
-    "cookbook-ancient-dragon-apostle-s-cookbook-4",
-    "golden-seed-14",
-    "golden-seed-15",
-    "incantation-black-blade",
-    "incantation-golden-lightning-fortification",
-    "incantation-placidusax-s-ruin",
-    "key-item-ancient-dragon-prayerbook",
-    "remembrance-remembrance-of-the-black-blade",
-    "remembrance-remembrance-of-the-dragonlord",
-    "shield-beastman-s-jar-shield",
-    "shield-dragon-towershield",
-    "spirit-ash-azula-beastman-ashes",
-    "stonesword-key-21",
-    "talisman-boltdrake-talisman-2",
-    "talisman-dragoncrest-shield-talisman-2",
-    "talisman-shard-of-alexander",
-    "weapon-beastman-s-cleaver",
-    "weapon-beastman-s-curved-sword",
-    "weapon-maliketh-s-black-blade"
+    "armor-maliketh-s-helm"
   ]
 }

@@ -3,42 +3,293 @@
   "name": "DLC: Rauh, Abyssal Woods & Jagged Peak",
   "order": 21,
   "dlc": true,
-  "legs": [],
+  "legs": [
+    {
+      "id": "dlc-west-01",
+      "from": "Ancient Ruins Base",
+      "to": "Rauh Ancient Ruins, East",
+      "summary": "Enter the Ancient Ruins of Rauh via the Moorth Ruins tunnel from Scadu Altus, descending into the wetland canyon of the Scorpion River (Rauh Base). The ruins are flooded, overgrown, and split by a chasm. Rauh Base connects to Shadow Keep via a great bridge to the east. Work the Taylew's Ruined Forge dungeon and Scorpion River Catacombs before ascending.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Moorth Ruins (Scadu Altus), take the hidden cave tunnel northeast to reach the Ancient Ruins Base grace. Head southeast along the canyon to the Temple Town Ruins. The Rauh Ruins map fragment is at the foot of a monolith near Temple Town Ruins. Rauh Base lies below the main ruins with its own graces."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-rauh-ruins",
+          "note": "At the foot of a monolith just outside the Temple Town Ruins in Rauh Base. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-8",
+          "note": "Looted from a corpse atop a dung pile on the western section of northern Rauh Base, past the bear boss fight. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gloried-attire",
+          "note": "Northwest of Ravine North grace in the runebear forest — corpse hanging from a short cliff before the Rugalea boss fight. Full leather set here. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leather-headband",
+          "note": "Same corpse as the Gloried Attire, northwest of Ravine North grace in bear forest. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leather-arm-wraps",
+          "note": "Same corpse as the Gloried Attire, northwest of Ravine North grace in bear forest. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-leather-leg-wraps",
+          "note": "Same corpse as the Gloried Attire, northwest of Ravine North grace in bear forest. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-24",
+          "note": "Rauh Base — between glowing gravestones, only appears at night. Rest at a grace and wait for nighttime. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-27",
+          "note": "West of the Ravine North Site of Grace — between glowing gravestones, only appears at night. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-antiquity-scholar-s-cookbook-2",
+          "note": "From the Ancient Ruins of Rauh entrance, head north toward the edge then west — jump down to an item below. Source: items.json acquisition text."
+        }
+      ]
+    },
+    {
+      "id": "dlc-west-02",
+      "from": "Rauh Ancient Ruins, East",
+      "to": "Church of the Bud (Romina)",
+      "summary": "Ascend through the Ancient Ruins of Rauh proper — the flooded upper ruins with scarlet rot swamp areas, Furnace Golems, and Divine Bird Warriors. Key items are scattered across the flooded platforms and hidden alcoves. Romina, Saint of the Bud is a MANDATORY boss — must be defeated to burn the Sealing Tree and reach Enir-Ilim. She resides at the Church of the Bud, which was burned during the Crusade. Dryleaf Dane can be summoned. Source: eldenring.wiki.gg/wiki/Ancient_Ruins_of_Rauh + Romina.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the Ancient Ruins Base, ascend the ruins via the viaduct. The Rauh Ancient Ruins East and West graces are mid-level. The Grand Stairway leads up to the Church of the Bud. The upper level has a scarlet rot swamp — use immunity items."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-pest-thread-spears",
+          "note": "Upper level of Ancient Ruins of Rauh — in the scarlet rot swamp area, at the back past the stairs on either side, guarded by Kindred of Rot. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-divine-bird-feathers",
+          "note": "On a corpse in the middle of the lake in the higher area of Ancient Ruins of Rauh. Past the gazebo — wade to the corpse in the middle of the water. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-aspects-of-the-crucible-bloom",
+          "note": "On a corpse near a Giant Miranda Sprout in Ancient Ruins of Rauh. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-9",
+          "note": "Past the scarlet rot swamp area in Ancient Ruins of Rauh — on a corpse near the wall before the invisible bridge leading to a nearby tower. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-mottled-necklace-2",
+          "note": "Upper area of Ancient Ruins of Rauh — use the spiritspring in the area to reach the platform to the east, go up the stairs, chest at the end of the path. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-crimson-sapping-cracked-tear",
+          "note": "Dropped by the Furnace Golem in the west section of Rauh Ancient Ruins. No respawn. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-12",
+          "note": "Ancient Ruins of Rauh — the wiki page lists two Scadutree Fragments here. Source: eldenring.wiki.gg/wiki/Ancient_Ruins_of_Rauh (unverified exact placement — see wiki for precise location)."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-01",
+          "note": "Ancient Ruins of Rauh area — on a corpse or in a chest. Source: region cleanup (unverified exact location — see wiki.gg for precise location)."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-02",
+          "note": "Ancient Ruins of Rauh area — second revered spirit ash here. Source: region cleanup (unverified exact location)."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-west-romina-saint-of-the-bud",
+          "text": "Romina, Saint of the Bud — MANDATORY legend boss at the Church of the Bud, Ancient Ruins of Rauh. Must be defeated to burn the Sealing Tree and access Enir-Ilim. Dryleaf Dane co-op summon available. Source: eldenring.wiki.gg/wiki/Romina%2C_Saint_of_the_Bud."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-saint-of-the-bud",
+          "note": "Dropped by Romina, Saint of the Bud. Trade at Roundtable Hold for Poleblade of the Bud or Rotten Butterflies. Source: items.json acquisition text."
+        }
+      ]
+    },
+    {
+      "id": "dlc-west-03",
+      "from": "Darklight Catacombs",
+      "to": "Abyssal Woods (Midra's Manse)",
+      "summary": "Enter the Abyssal Woods via Darklight Catacombs at the terminus of Recluses' River in Scadu Altus. Jori, Elder Inquisitor guards the catacombs entrance. The woods are a thick forbidden forest at the ravine's depths, untouched by sunlight. CRITICAL: Torrent cannot be summoned here from fear. The woods contain beings that cannot be touched — stealth is required (crouch in undergrowth, avoid being seen). Navigate to Midra's Manse at the heart of the woods. Source: eldenring.wiki.gg/wiki/Abyssal_Woods.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Recluses' River (Scadu Altus), take the Darklight Catacombs path. Jori, Elder Inquisitor is the catacombs boss — defeat him to open the Abyssal Woods exit. In the woods: DO NOT be seen by the Finger Creeper-like invisible stalkers — they kill instantly and cannot be fought. Crouch through undergrowth and use the blind spots between their patrol paths. Torrent is unavailable. Follow the path to Midra's Manse in the southern woods."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-barbed-staff-spear",
+          "note": "Dropped by Jori, Elder Inquisitor in the Darklight Catacombs. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-mad-craftsman-s-cookbook-1",
+          "note": "On a corpse on the higher areas west of the waterfall in Abyssal Woods. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-mad-craftsman-s-cookbook-2",
+          "note": "On a corpse among large roots in the higher area of the middle portion of Abyssal Woods. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-madding-hand-weapon",
+          "note": "Acquired upon defeating the hostile NPC Madding Hand in Abyssal Woods. Source: items.json acquisition text."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-west-midra-lord-of-frenzied-flame",
+          "text": "Midra, Lord of Frenzied Flame — legend boss deep in Midra's Manse, the decaying manor in the southern Abyssal Woods. Navigate four floors of the manse (Manse Hall → upper floors → Midra's Library). Source: eldenring.wiki.gg/wiki/Midra%27s_Manse."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-lord-of-frenzied-flame",
+          "note": "Dropped by Midra, Lord of Frenzied Flame. Trade at Roundtable Hold for Greatsword of Damnation or Midra's Flame of Frenzy. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-nanaya-s-torch",
+          "note": "From Midra's Library grace, move the bookshelf by pulling a lever in the same room — the balcony is directly above the inquisitor below. Torch on a corpse in a chair wearing yellow cloth. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-mad-craftsman-s-cookbook-3",
+          "note": "Midra's Manse upper level — traversing beams, dark room on the right archway guarded by Frenzied Giant Rats. Loot inside, then continue west to Midra's Library. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-20",
+          "note": "Midra's Manse — revered spirit ash found inside the manse. Source: eldenring.wiki.gg/wiki/Midra%27s_Manse (unverified exact sub-location)."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-35",
+          "note": "Abyssal Woods / Midra's Manse area. Source: region cleanup (unverified exact location)."
+        }
+      ]
+    },
+    {
+      "id": "dlc-west-04",
+      "from": "Dragon's Pit",
+      "to": "Jagged Peak Summit (Bayle the Dread)",
+      "summary": "Dragon's Pit is a cave dungeon reached from Gravesite Plain near Pillar Path Waypoint — bear south-southwest. Its dragon-themed architecture was a rite of passage for Dragon Communion practitioners. Defeat the Ancient Dragon-Man to reach Jagged Peak beyond. Ascend Jagged Peak's storm-battered peaks to face Bayle the Dread at the summit. Igon's summon sign is available at the fog gate — summoning Igon is OPTIONAL for Bayle but required for Igon's quest conclusion (his bell bearing and set only drop if you summon him). Source: eldenring.wiki.gg/wiki/Dragon%27s_Pit + Jagged_Peak + Igon.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Pillar Path Waypoint (Gravesite Plain), head south-southwest to Dragon's Pit cave entrance. A Magma Wyrm guards an upper chamber — optional but notable. The main boss is deeper in."
+        },
+        {
+          "type": "quest",
+          "id": "quest-igon-furled-finger",
+          "questline": "Igon",
+          "text": "After defeating the Jagged Peak Drake on the mountainside, Igon screams in the road. Exhaust his dialogue until he gives you his Furled Finger and requests you face Bayle the Dread. Source: eldenring.wiki.gg/wiki/Igon."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-igon-s-furled-finger",
+          "note": "Given by Igon after defeating the Jagged Peak Drake, when you exhaust his dialogue. Source: items.json acquisition text."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-west-ancient-dragon-man",
+          "text": "Ancient Dragon-Man — boss in Dragon's Pit Terminus. Awaits one worthy to face the Dread Dragon. Source: eldenring.wiki.gg/wiki/Dragon%27s_Pit."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-dragon-hunter-s-great-katana",
+          "note": "Found in Dragon's Pit. Source: items.json acquisition text (exact location within pit not specified — check all rooms)."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-dragon-heart",
+          "note": "Dropped by the Jagged Peak Drake on the mountainside. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-igon-s-cookbook-2",
+          "note": "On a corpse at the edge of a cliff near the Jagged Peak Mountainside grace. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-6",
+          "note": "On a cliff edge corpse north of the spiritspring used to launch up toward the Foot of the Jagged Peak grace. Source: items.json acquisition text."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-west-bayle-the-dread",
+          "text": "Bayle the Dread — legend boss at Jagged Peak Summit. Summon Igon's sign at the fog gate (appears once boss spawns, inside to the left). Summoning Igon is optional for defeating Bayle but required for Igon to drop his bell bearing and set. Bayle does NOT drop a Remembrance — drops Heart of Bayle (key item, see gravesite region). Source: eldenring.wiki.gg/wiki/Bayle_the_Dread + Igon.",
+          "optional": false
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-30",
+          "note": "Jagged Peak area — collected during the ascent. Source: region cleanup (unverified exact location)."
+        },
+        {
+          "type": "quest",
+          "id": "quest-igon-post-bayle",
+          "questline": "Igon",
+          "text": "After defeating Bayle the Dread, return to the site of the Jagged Peak Drake fight. Collect Igon's items from his final location. Note: Bell Bearing and full set only drop if Igon was summoned for the Bayle fight. Source: eldenring.wiki.gg/wiki/Igon."
+        }
+      ]
+    },
+    {
+      "id": "dlc-west-05",
+      "from": "Grand Altar of Dragon Communion",
+      "to": "Finger Ruins of Dheo",
+      "summary": "The Grand Altar of Dragon Communion is in the Jagged Peak foothills. The Dragon Communion Priestess here explains the ritual history. After defeating Bayle the Dread, return to the Altar — she drops the Priestess Heart (MISSABLE: confessing you put her to sleep locks this acquisition path). Then head to Finger Ruins of Dheo (Scaduview, northwest of Fingerstone Hill) for Count Ymir's second bell. Source: eldenring.wiki.gg/wiki/Finger_Ruins_of_Dheo + items.json (Florissax/Priestess Heart acquisition).",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "The Grand Altar of Dragon Communion is near the Foot of the Jagged Peak. After clearing Bayle, return here. The Finger Ruins of Dheo are in Scaduview — head north from Fingerstone Hill (accessible from the Scadu Altus/Scaduview connection)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-lightning-perfume-bottle",
+          "note": "On a corpse in the middle of a big puddle of water, guarded by a rolling lightning ram enemy near Jagged Peak foothills. Source: items.json acquisition text."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ymir-dheo-bell",
+          "questline": "Count Ymir",
+          "text": "Ring the hanging bell at the center of Finger Ruins of Dheo. Requires Ruins Map (2nd) from Count Ymir (Cathedral of Manus Metyr) after completing the Rhia bell. Returns the Cerulean Seed Talisman +1 and advances Ymir's quest — return to the cathedral for the final Ruins Map (3rd). Source: eldenring.wiki.gg/wiki/Finger_Ruins_of_Dheo + Count_Ymir."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-cerulean-seed-talisman-1",
+          "note": "Ring the hanging bell at the center of Finger Ruins of Dheo as part of Count Ymir's quest. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-igon-s-cookbook-1",
+          "note": "On a corpse in the broken tower just before the Grand Altar of Dragon Communion. Source: items.json acquisition text."
+        }
+      ]
+    }
+  ],
   "cleanup": [
-    "armor-gloried-attire",
-    "armor-leather-arm-wraps",
-    "armor-leather-headband",
-    "armor-leather-leg-wraps",
-    "cookbook-antiquity-scholar-s-cookbook-2",
-    "cookbook-greater-potentate-s-cookbook-6",
-    "cookbook-greater-potentate-s-cookbook-8",
-    "cookbook-greater-potentate-s-cookbook-9",
-    "cookbook-igon-s-cookbook-2",
-    "cookbook-mad-craftsman-s-cookbook-1",
-    "cookbook-mad-craftsman-s-cookbook-2",
-    "cookbook-mad-craftsman-s-cookbook-3",
-    "crystal-tear-crimson-sapping-cracked-tear",
-    "incantation-aspects-of-the-crucible-bloom",
-    "incantation-divine-bird-feathers",
-    "incantation-pest-thread-spears",
-    "key-item-dragon-heart",
-    "key-item-igon-s-furled-finger",
-    "larval-tear-24",
-    "larval-tear-27",
-    "remembrance-remembrance-of-the-lord-of-frenzied-flame",
-    "remembrance-remembrance-of-the-saint-of-the-bud",
-    "revered-spirit-ash-01",
-    "revered-spirit-ash-02",
-    "revered-spirit-ash-20",
-    "scadutree-fragment-12",
-    "scadutree-fragment-30",
-    "scadutree-fragment-35",
-    "talisman-mottled-necklace-2",
-    "weapon-barbed-staff-spear",
-    "weapon-dragon-hunter-s-great-katana",
-    "weapon-great-katana",
-    "weapon-lightning-perfume-bottle",
-    "weapon-madding-hand-weapon",
-    "weapon-nanaya-s-torch"
+    "weapon-great-katana"
   ]
 }

@@ -3,25 +3,132 @@
   "name": "DLC: Enir-Ilim",
   "order": 22,
   "dlc": true,
-  "legs": [],
-  "cleanup": [
-    "armor-circlet-of-light",
-    "armor-freyja-s-armor",
-    "armor-freyja-s-armor-altered",
-    "armor-freyja-s-gauntlets",
-    "armor-freyja-s-greaves",
-    "armor-freyja-s-helm",
-    "armor-verdigris-armor",
-    "armor-verdigris-gauntlets",
-    "armor-verdigris-greaves",
-    "armor-verdigris-helm",
-    "bell-bearing-moore-s-bell-bearing",
-    "scadutree-fragment-15",
-    "scadutree-fragment-26",
-    "shield-verdigris-greatshield",
-    "spirit-ash-inquisitor-ashes",
-    "weapon-euporia",
-    "weapon-freyja-s-greatsword",
-    "weapon-horned-warrior-s-greatsword"
-  ]
+  "legs": [
+    {
+      "id": "dlc-enir-ilim-01",
+      "from": "Enir-Ilim Outer Wall",
+      "to": "Spiral Rise",
+      "summary": "Enir-Ilim is accessible after using Messmer's Kindling (dropped by Messmer the Impaler, Scadu Altus) to burn the Sealing Tree in Ancient Ruins of Rauh. The tower features a spiral ascent toward the Divine Gate. The first section climbs from the Outer Wall through the First Rise to the Spiral Rise. Spirit Caller enemies patrol the tower. LAST CHANCE: The Leda confrontation at the Divine Gate Front Staircase is BEFORE the final boss — all NPC quest states lock here. Source: eldenring.wiki.gg/wiki/Enir-Ilim.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Enir-Ilim entry requires: (1) Messmer's Kindling from defeating Messmer the Impaler, (2) using it to burn the Sealing Tree in Ancient Ruins of Rauh. The tower entrance is at the base of the structure. Climb the outer wall and enter at the Outer Wall grace."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-inquisitor-ashes",
+          "note": "On a corpse in Enir-Ilim, beneath the second-to-last enemy before the Spiral Rise grace (coming from First Rise). Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-15",
+          "note": "On the altar near the Cleansing Chamber Anteroom Site of Grace. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-26",
+          "note": "Outer tower of Enir-Ilim — after picking up a nearby Revered Spirit Ash, continue up the stairs to a room with an altar. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-euporia",
+          "note": "HIDDEN: In Enir-Ilim, requires dropping down into a hidden secret area after difficult platforming on the spiral ascent. Explore all drop-down points carefully before advancing. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-horned-warrior-s-greatsword",
+          "note": "Guaranteed drop from the Wind-Aspected Horned Warrior toward the end of Enir-Ilim, before the final confrontation area. Source: items.json acquisition text."
+        }
+      ]
+    },
+    {
+      "id": "dlc-enir-ilim-02",
+      "from": "Spiral Rise",
+      "to": "Divine Gate (Promised Consort Radahn)",
+      "summary": "The upper ascent ends at the Divine Gate Front Staircase, where Leda confronts you with any surviving allied NPCs. The NPC allegiances depend on your prior quest choices: Ansbach sides with you if you supported him against Leda earlier (Scadu Altus region); Thiollier sides with you if his questline was completed through Enir-Ilim invitation. NPCs who died earlier in the questline will fight for Leda instead. After the Leda confrontation, loot all bodies for armor sets (Freyja's Set from Freyja, Verdigris Set and Greatshield and Moore's Bell Bearing from Moore). Then face Promised Consort Radahn — Ansbach and Thiollier can be summoned if their quests are complete. Radahn drops a Great Rune and the Remembrance of a God and a Lord. Source: eldenring.wiki.gg/wiki/Enir-Ilim + Needle_Knight_Leda.",
+      "steps": [
+        {
+          "type": "quest",
+          "id": "quest-leda-enir-ilim-confrontation",
+          "questline": "Needle Knight Leda",
+          "text": "Leda confronts you at the Divine Gate Front Staircase, flanked by surviving followers. She sides with Miquella; you side with the Erdtree. Who fights for Leda vs. for you depends on quest states: Ansbach fights with you if you sided with him vs. Leda in Scadu Altus; Thiollier fights with you if he completed his St. Trina quest and was invited; Freyja and Moore fight against you. Defeat all enemies. Source: eldenring.wiki.gg/wiki/Needle_Knight_Leda.",
+          "missable": {
+            "lockedBy": "Reaching Promised Consort Radahn without completing prerequisite quest states",
+            "note": "NPC summon availability for Radahn fight (Ansbach: Furious Blade of Ansbach incantation; Thiollier: his set) depends on quest states resolved here. Items from NPC corpses are final rewards — loot all bodies after the confrontation. Source: eldenring.wiki.gg/wiki/Needle_Knight_Leda."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "armor-freyja-s-helm",
+          "note": "Looted from Freyja's body after defeating her in the Enir-Ilim confrontation. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-freyja-s-armor",
+          "note": "Looted from Freyja's body in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-freyja-s-armor-altered",
+          "note": "Altered version — looted from Freyja's body in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-freyja-s-gauntlets",
+          "note": "Looted from Freyja's body in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-freyja-s-greaves",
+          "note": "Looted from Freyja's body in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-freyja-s-greatsword",
+          "note": "Looted from Freyja's body after defeating her in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-verdigris-helm",
+          "note": "Looted from Moore's body after defeating him in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-verdigris-armor",
+          "note": "Looted from Moore's body in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-verdigris-gauntlets",
+          "note": "Looted from Moore's body in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-verdigris-greaves",
+          "note": "Looted from Moore's body in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-verdigris-greatshield",
+          "note": "Looted from Moore's body after defeating him in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-moore-s-bell-bearing",
+          "note": "Looted from Moore's body after defeating him in Enir-Ilim. Source: items.json acquisition text."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-enir-ilim-promised-consort-radahn",
+          "text": "Promised Consort Radahn (Radahn, Consort of Miquella) — final legend boss of Shadow of the Erdtree, at the Gate of Divinity. Ansbach (if quest complete) and Thiollier (if quest complete) can be summoned as cooperators. Source: eldenring.wiki.gg/wiki/Enir-Ilim."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-circlet-of-light",
+          "note": "After defeating Promised Consort Radahn, go to the center of the boss arena, approach the golden orb, and select 'Touch Memory' to trigger a cutscene. The Circlet of Light is obtained after the cutscene. Source: items.json acquisition text."
+        }
+      ]
+    }
+  ],
+  "cleanup": []
 }

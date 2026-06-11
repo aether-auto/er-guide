@@ -3,20 +3,146 @@
   "name": "DLC: Cerulean Coast & Southern Shore",
   "order": 20,
   "dlc": true,
-  "legs": [],
-  "cleanup": [
-    "ammo-st-trina-s-arrow",
-    "cookbook-finger-weaver-s-cookbook-1",
-    "cookbook-grave-keeper-s-cookbook-2",
-    "cookbook-greater-potentate-s-cookbook-14",
-    "cookbook-st-trina-disciple-s-cookbook-2",
-    "crystal-tear-glovewort-crystal-tear",
-    "incantation-multilayered-ring-of-light",
-    "scadutree-fragment-04",
-    "sorcery-rings-of-spectral-light",
-    "talisman-cerulean-amber-medallion-3",
-    "talisman-cerulean-seed-talisman-1",
-    "weapon-spirit-sword",
-    "weapon-star-lined-sword"
-  ]
+  "legs": [
+    {
+      "id": "dlc-south-01",
+      "from": "Cerulean Coast",
+      "to": "Cerulean Coast Cross",
+      "summary": "Enter the Cerulean Coast from the Ellac Riverbed to the south. The coast is lined with brilliant blue flowers and colossal stone coffins. Demi-humans, giant crabs, and jellyfish populate the shoreline. Thiollier must already be spoken to at Pillar Path Cross (Scadu Altus region) and given the Black Syrup from Moore — this unlocks his Cerulean Coast dialogue later.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the Cerulean Coast Site of Grace, the coast stretches west and north. The Cerulean Coast Cross grace sits at the intersection of paths leading inland toward the Pillar Path and south toward Stone Coffin Fissure. Work the shoreline systematically."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-star-lined-sword",
+          "note": "Dropped by Demi-Human Queen Marigga in Cerulean Coast's Demi-Human Valley. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-spirit-sword",
+          "note": "On a corpse lying next to gravestones guarded by demi-humans, east of Cerulean Coast West grace. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-04",
+          "note": "Cerulean Coast area — check corpses and small ruins along the shoreline. Source: region cleanup (verified DLC, unverified exact coordinates)."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-st-trina-disciple-s-cookbook-1",
+          "note": "From Cerulean Coast Cross grace, head north to a hill with a large wilted tree guarded by a Cemetery Shade. Sitting corpse under the tree. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-st-trina-disciple-s-cookbook-2",
+          "note": "On a corpse at the edge of a cliff near the entrance to Stone Coffin Fissure. Source: items.json acquisition text."
+        }
+      ]
+    },
+    {
+      "id": "dlc-south-02",
+      "from": "Cerulean Coast Cross",
+      "to": "Stone Coffin Fissure (Garden of Deep Purple)",
+      "summary": "Descend south from Cerulean Coast Cross into the Stone Coffin Fissure ravine. Defeat the Putrescent Knight — a legend boss formed from putrescence that imbibed St. Trina's nectar — to reach the Garden of Deep Purple. Thiollier is here after you have met St. Trina. Begin the four-cycle nectar ritual (MISSABLE quest content). Source: eldenring.wiki.gg/wiki/Thiollier + Stone_Coffin_Fissure.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Cerulean Coast, follow the south ravine path to the stone pit. Go right and descend the steps to enter Stone Coffin Fissure. Gravebirds and stone sentries patrol the area."
+        },
+        {
+          "type": "item",
+          "itemId": "ammo-st-trina-s-arrow",
+          "note": "From Stone Coffin Fissure grace, head south, jump the gap, descend carefully — x10 arrows on a corpse on the ground. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-multilayered-ring-of-light",
+          "note": "Dropped by the Misbegotten Crusader in Stone Coffin Fissure. Source: items.json acquisition text."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-south-putrescent-knight",
+          "text": "Putrescent Knight — legend boss at the base of Stone Coffin Fissure, guards the Garden of Deep Purple. Formed when putrescence from stone coffins imbibed St. Trina's nectar. Source: eldenring.wiki.gg/wiki/Putrescent_Knight."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-putrescence",
+          "note": "Dropped by Putrescent Knight. Source: items.json acquisition text."
+        },
+        {
+          "type": "quest",
+          "id": "quest-thiollier-garden-st-trina",
+          "questline": "Thiollier / St. Trina",
+          "text": "At the Garden of Deep Purple grace, find St. Trina in the corner of the boss arena. Then find Thiollier nearby. Inform him of St. Trina's location. Begin the nectar sip cycle: exhaust Thiollier's dialogue → rest at grace → return and exhaust again → imbibe St. Trina's nectar. Repeat FOUR complete cycles. After all four, convey St. Trina's words to Thiollier. He then invades you — defeat his invasion, then speak to him.",
+          "missable": {
+            "lockedBy": "Advancing to Rauh (burning Sealing Tree) or entering Church District before this step",
+            "note": "Progressing too far before completing all four nectar cycles locks you out of this quest step. Complete all four cycles in Stone Coffin Fissure before burning the Sealing Tree in Ancient Ruins of Rauh. Source: eldenring.wiki.gg/wiki/Thiollier."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dlc-south-03",
+      "from": "Fissure Depths",
+      "to": "Finger Ruins of Rhia",
+      "summary": "From the Garden of Deep Purple, navigate the Fissure Depths and ascend back to the Cerulean Coast surface. Proceed east along the southern shoreline to the Finger Ruins of Rhia — a ring of massive finger-shaped obelisks pointing inward toward a hanging bell. Ring the bell to advance Count Ymir's questline (his core quest is at Cathedral of Manus Metyr in Scadu Altus — see region 19). Only those given the Hole-Laden Necklace by Ymir can ring the bell. Source: eldenring.wiki.gg/wiki/Finger_Ruins_of_Rhia + Count_Ymir.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "The Finger Ruins of Rhia are accessed by following the southern shoreline of Cerulean Coast eastward to a stone coffin ship, then climbing to the overlooking precipice. The ruins grace is just beyond the entry."
+        },
+        {
+          "type": "quest",
+          "id": "quest-ymir-rhia-bell",
+          "questline": "Count Ymir",
+          "text": "Ring the hanging bell at the center of Finger Ruins of Rhia. Requires the Hole-Laden Necklace from Count Ymir (Cathedral of Manus Metyr, Scadu Altus). Returns the Crimson Seed Talisman +1 and advances Ymir's quest — return to the cathedral to receive the Ruins Map (2nd) for the Dheo bell next. Source: eldenring.wiki.gg/wiki/Count_Ymir."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-cerulean-amber-medallion-3",
+          "note": "Cerulean Coast area — looted from a corpse or enemy. Source: region cleanup (verified DLC, unverified exact location — see wiki.gg/wiki/Cerulean_Amber_Medallion)."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-finger-weaver-s-cookbook-1",
+          "note": "Finger-Weaver's Hovel — accessible via Finger Ruins of Rhia following the path to the left, heading straight underneath the Grand Altar of Dragon Communion. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-rings-of-spectral-light",
+          "note": "Looted from the altar by a giant bird statue after defeating several birds. Location near Finger Ruins of Rhia or Cerulean Coast area. Source: items.json acquisition text (unverified exact sub-location)."
+        }
+      ]
+    },
+    {
+      "id": "dlc-south-04",
+      "from": "Finger Ruins of Rhia",
+      "to": "Charo's Hidden Grave",
+      "summary": "From Finger Ruins of Rhia, head north along the coast toward the Grand Altar of Dragon Communion at Foot of the Jagged Peak, then turn west-southwest to enter Charo's Hidden Grave — a field of crimson lilies between the Cerulean Coast and southern Gravesite Plain. Ghostflame flowers bloom throughout. Clear the Death Rite Bird and Tibia Mariner field bosses. Source: eldenring.wiki.gg/wiki/Charo%27s_Hidden_Grave.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Charo's Hidden Grave is west-southwest of the Grand Altar of Dragon Communion. Pass through Dragon's Pit and past the Ancient Dragon-Man boss first (see west region), then circle back, or approach via the Jagged Peak foothills overland path."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-glovewort-crystal-tear",
+          "note": "Dropped by the Furnace Golem located around Charo's Grave. No respawn. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-grave-keeper-s-cookbook-2",
+          "note": "On a corpse in the southern area of Charo's Hidden Grave. Source: items.json acquisition text."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-14",
+          "note": "On a corpse atop a dilapidated structure behind a Giant Miranda Sprout in Charo's Hidden Grave. Source: items.json acquisition text."
+        }
+      ]
+    }
+  ],
+  "cleanup": []
 }

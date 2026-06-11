@@ -3,141 +3,850 @@
   "name": "DLC: Gravesite Plain & Belurat",
   "order": 18,
   "dlc": true,
-  "legs": [],
-  "cleanup": [
-    "armor-divine-beast-head",
-    "armor-gravebird-armor",
-    "armor-gravebird-bracelets",
-    "armor-gravebird-s-blackquill-armor",
-    "armor-greatjar",
-    "armor-igon-s-armor",
-    "armor-igon-s-armor-altered",
-    "armor-igon-s-gauntlets",
-    "armor-igon-s-helm",
-    "armor-igon-s-helm-altered",
-    "armor-igon-s-loincloth",
-    "armor-oathseeker-knight-armor",
-    "armor-oathseeker-knight-gauntlets",
-    "armor-oathseeker-knight-greaves",
-    "armor-oathseeker-knight-helm",
-    "ash-of-war-ash-of-war-blinkbolt",
-    "ash-of-war-ash-of-war-ghostflame-call",
-    "ash-of-war-ash-of-war-savage-lion-s-claw",
-    "ash-of-war-ash-of-war-wing-stance",
-    "bell-bearing-herbalist-s-bell-bearing",
-    "bell-bearing-igon-s-bell-bearing",
-    "bell-bearing-mushroom-seller-s-bell-bearing-1",
-    "bell-bearing-mushroom-seller-s-bell-bearing-2",
-    "bell-bearing-string-seller-s-bell-bearing",
-    "cookbook-ancient-dragon-knight-s-cookbook-1",
-    "cookbook-antiquity-scholar-s-cookbook-1",
-    "cookbook-fire-knight-s-cookbook-2",
-    "cookbook-forager-brood-cookbook-1",
-    "cookbook-forager-brood-cookbook-2",
-    "cookbook-forager-brood-cookbook-3",
-    "cookbook-forager-brood-cookbook-4",
-    "cookbook-forager-brood-cookbook-7",
-    "cookbook-greater-potentate-s-cookbook-1",
-    "cookbook-greater-potentate-s-cookbook-10",
-    "cookbook-greater-potentate-s-cookbook-11",
-    "cookbook-greater-potentate-s-cookbook-12",
-    "cookbook-greater-potentate-s-cookbook-13",
-    "cookbook-greater-potentate-s-cookbook-2",
-    "cookbook-greater-potentate-s-cookbook-5",
-    "cookbook-loyal-knight-s-cookbook",
-    "cookbook-st-trina-disciple-s-cookbook-1",
-    "cookbook-tibia-s-cookbook",
-    "crystal-tear-deflecting-hardtear",
-    "crystal-tear-viridian-hidden-tear",
-    "incantation-divine-beast-tornado",
-    "incantation-electrocharge",
-    "incantation-watchful-spirit",
-    "key-item-gaol-lower-level-key",
-    "key-item-gaol-upper-level-key",
-    "key-item-heart-of-bayle",
-    "key-item-hefty-cracked-pot",
-    "key-item-lost-ashes-of-war",
-    "key-item-storeroom-key",
-    "larval-tear-19",
-    "larval-tear-20",
-    "larval-tear-21",
-    "larval-tear-22",
-    "larval-tear-23",
-    "map-fragment-map-abyss",
-    "map-fragment-map-gravesite-plain",
-    "map-fragment-map-rauh-ruins",
-    "map-fragment-map-scadu-altus",
-    "map-fragment-map-southern-shore",
-    "remembrance-remembrance-of-the-dancing-lion",
-    "remembrance-remembrance-of-the-twin-moon-knight",
-    "revered-spirit-ash-03",
-    "revered-spirit-ash-04",
-    "revered-spirit-ash-05",
-    "revered-spirit-ash-09",
-    "revered-spirit-ash-10",
-    "revered-spirit-ash-11",
-    "revered-spirit-ash-17",
-    "scadutree-fragment-02",
-    "scadutree-fragment-03",
-    "scadutree-fragment-05",
-    "scadutree-fragment-06",
-    "scadutree-fragment-07",
-    "scadutree-fragment-08",
-    "scadutree-fragment-09",
-    "scadutree-fragment-10",
-    "scadutree-fragment-13",
-    "scadutree-fragment-17",
-    "scadutree-fragment-18",
-    "scadutree-fragment-22",
-    "scadutree-fragment-28",
-    "scadutree-fragment-33",
-    "shield-black-steel-greatshield",
-    "shield-serpent-crest-shield",
-    "shield-wolf-crest-shield",
-    "sorcery-glintblade-trio",
-    "sorcery-rellana-s-twin-moons",
-    "spirit-ash-ancient-dragon-florissax",
-    "spirit-ash-black-knight-commander-andreas",
-    "spirit-ash-demi-human-swordsman-yosh",
-    "spirit-ash-divine-bird-warrior-ornis",
-    "talisman-ailment-talisman",
-    "talisman-arrow-s-soaring-sting-talisman",
-    "talisman-blade-of-mercy",
-    "talisman-clarifying-horn-charm-2",
-    "talisman-crimson-amber-medallion-3",
-    "talisman-dried-bouquet",
-    "talisman-enraged-divine-beast",
-    "talisman-immunizing-horn-charm-2",
-    "talisman-outer-god-heirloom",
-    "talisman-rellana-s-cameo",
-    "talisman-spelldrake-talisman-3",
-    "talisman-two-handed-sword-talisman",
-    "talisman-two-headed-turtle-talisman",
-    "talisman-verdigris-discus",
-    "tool-horned-bairn",
-    "tool-lamenter-s-mask",
-    "tool-prattling-pate-lamentation",
-    "tool-priestess-heart",
-    "tool-rock-heart",
-    "weapon-anvil-hammer",
-    "weapon-backhand-blade",
-    "weapon-beast-claw-weapon",
-    "weapon-black-steel-greathammer",
-    "weapon-bloodfiend-s-arm",
-    "weapon-carian-sorcery-sword",
-    "weapon-chilling-perfume-bottle",
-    "weapon-death-knight-s-twin-axes",
-    "weapon-flowerstone-gavel",
-    "weapon-frenzyflame-perfume-bottle",
-    "weapon-greatsword-of-solitude",
-    "weapon-horned-warrior-s-sword",
-    "weapon-igon-s-greatbow",
-    "weapon-lamenting-visage",
-    "weapon-milady",
-    "weapon-moonrithyll-s-knight-sword",
-    "weapon-pata",
-    "weapon-smithscript-dagger",
-    "weapon-spirit-glaive",
-    "weapon-spread-crossbow"
-  ]
+  "legs": [
+    {
+      "id": "dlc-gravesite-00",
+      "from": "Mohgwyn Palace",
+      "to": "Gravesite Plain",
+      "summary": "Entering the Shadow Realm requires defeating both Starscourge Radahn (Caelid) and Mohg, Lord of Blood (Mohgwyn Palace). After Mohg falls, interact with the withered arm inside the cocoon to be transported to the Land of Shadow.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "ENTRY REQUIREMENTS: Defeat Starscourge Radahn at Redmane Castle (Caelid) AND Mohg, Lord of Blood at Mohgwyn Dynasty Mausoleum. After Mohg falls, walk to the large cocoon at the back of his arena and interact with the withered arm protruding from it. You will be transported to the Land of Shadow."
+        },
+        {
+          "type": "direction",
+          "text": "You arrive at the Gravesite Plain Site of Grace. Scadutree Fragments (increase your offense and defense in the DLC) and Revered Spirit Ashes (upgrade your spirit summon's DLC scaling) are the primary power currencies here — collect every one you find throughout the DLC."
+        }
+      ]
+    },
+    {
+      "id": "dlc-gravesite-01",
+      "from": "Gravesite Plain",
+      "to": "Three-Path Cross",
+      "summary": "Grab the map stele and the first collectibles from the open plain, then meet Miquella's followers at Three-Path Cross. Leda, Hornsent, and Redmane Freyja all introduce themselves at the crossroads grace — exhaust every character's dialogue before moving on.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From the Gravesite Plain grace, ride northeast along the road to find the map fragment stele. The map reveals the full Gravesite Plain layout."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-gravesite-plain",
+          "note": "Stele on the road northeast of the Gravesite Plain grace, near the foot of the cliff path."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-03",
+          "note": "Northeast of the Gravesite Plain grace, past the white tree filled with hanging bodies."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-04",
+          "note": "East of the Cliffroad Terminus grace, near a pond with small creatures."
+        },
+        {
+          "type": "direction",
+          "text": "Ride to Three-Path Cross — the central crossroads grace where Miquella's followers gather."
+        },
+        {
+          "type": "quest",
+          "id": "quest-leda-three-path-cross",
+          "questline": "Leda",
+          "text": "Speak with Needle Knight Leda at Three-Path Cross. Exhaust all dialogue — she explains the purpose of Miquella's followers and invites you to join the mission."
+        },
+        {
+          "type": "quest",
+          "id": "quest-hornsent-three-path-cross",
+          "questline": "Hornsent",
+          "text": "Speak with Hornsent at Three-Path Cross. He states his people will not forgive the Erdtree. Give him Scorpion Stew (purchased from Moore at Belurat, see next leg) to receive x3 Furnace Visage — only one Stew can be gifted per playthrough.",
+          "missable": {
+            "lockedBy": "Hornsent relocating (he moves after progressing to Scadu Altus)",
+            "note": "The Scorpion Stew gift (and Furnace Visage reward) must happen while Hornsent is at Three-Path Cross. Purchase Stew from Moore before giving it to Hornsent."
+          }
+        },
+        {
+          "type": "quest",
+          "id": "quest-freyja-three-path-cross",
+          "questline": "Freyja",
+          "text": "Speak with Redmane Freyja at Three-Path Cross. She mentions Hornsent. Return to her after completing Belurat Tower Settlement for additional lore dialogue."
+        }
+      ]
+    },
+    {
+      "id": "dlc-gravesite-02",
+      "from": "Three-Path Cross",
+      "to": "Church of Consolation",
+      "summary": "Ride northwest to the Church of Consolation for the first pair of Scadutree Fragments. Detour south to the Abandoned Ailing Village for a Revered Spirit Ash, then sweep the Scorched Ruins. Collect Forager Brood Cookbooks from the friendly pest creatures — never kill them or Moore's questline ends.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "From Three-Path Cross, ride northwest to the Church of Consolation. A Marika statue stands inside."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-02",
+          "note": "Church of Consolation — first of two fragments beside the Marika statue."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-03",
+          "note": "Church of Consolation — second fragment also beside the Marika statue (x2 at this location)."
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-deflecting-hardtear",
+          "note": "Church of Consolation — looted from inside the church."
+        },
+        {
+          "type": "direction",
+          "text": "Ride south to the Abandoned Ailing Village for a Revered Spirit Ash, then northeast to the Scorched Ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-05",
+          "note": "Abandoned Ailing Village — guarded by Man-Fly enemies at the broken revered statue altar."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-05",
+          "note": "Scorched Ruins area, northeast — dropped by a sparkling Shadowpot enemy in the ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-06",
+          "note": "Cliffroad Terminus Site of Grace, southwest — dropped by a Shadowpot in the gravesite nearby."
+        },
+        {
+          "type": "direction",
+          "text": "WARNING — Forager Brood: The small friendly pest creatures throughout Gravesite Plain are Moore's companions. Killing two or more triggers Moore's invasion. If Moore dies, his entire questline (seven cookbooks plus quest items) is permanently locked."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-forager-brood-cookbook-1",
+          "note": "Interact (not attack) with a Forager Brood pest creature in the western Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-forager-brood-cookbook-2",
+          "note": "Interact with a second Forager Brood pest creature in the Gravesite Plain open area."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-forager-brood-cookbook-3",
+          "note": "Interact with a third Forager Brood pest creature in the Scorched Ruins vicinity."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-forager-brood-cookbook-4",
+          "note": "Interact with a fourth Forager Brood pest creature in the northern Gravesite Plain near Belurat."
+        }
+      ]
+    },
+    {
+      "id": "dlc-gravesite-03",
+      "from": "Main Gate Cross",
+      "to": "Theatre of the Divine Beast",
+      "summary": "Belurat Tower Settlement is the first Legacy Dungeon. Meet Moore and Sir Ansbach at the Main Gate. Exhaust Ansbach's cross dialogue now — it locks after the Great Rune breaks. Find the Storeroom Key and Well Depths Key inside, speak to Hornsent Grandam, then defeat the Divine Beast Dancing Lion.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Enter Belurat Tower Settlement from the north. The Main Gate Cross grace is just inside the main gates. Moore and Sir Ansbach are both nearby."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-07",
+          "note": "Main Gate Cross Site of Grace — beside Miquella's Cross at Belurat's entrance."
+        },
+        {
+          "type": "quest",
+          "id": "quest-moore-belurat-meet",
+          "questline": "Moore",
+          "text": "Speak with Moore near the Main Gate Cross. Buy at least one item from his shop to initiate his quest. He will give you Black Syrup after you have met Thiollier (at Pillar Path Cross, south of Castle Ensis). Return to Moore with that meeting confirmed to receive Black Syrup.",
+          "missable": {
+            "lockedBy": "Thiollier leaving Pillar Path Cross (triggered when Miquella's Great Rune breaks)",
+            "note": "Meet Thiollier at Pillar Path Cross and return to Moore BEFORE the Great Rune breaks. If Thiollier has already relocated, Black Syrup is permanently unobtainable, blocking Thiollier's Concoction in the Dragon Communion Priestess quest."
+          }
+        },
+        {
+          "type": "quest",
+          "id": "quest-ansbach-belurat-crosses",
+          "questline": "Ansbach",
+          "text": "Speak with Sir Ansbach near Main Gate Cross. Exhaust ALL dialogue — he requests you find Miquella's six Crosses. Cross-related dialogue closes permanently once Miquella's Great Rune breaks (entering Shadow Keep or crossing the eastern Bonny Village bridge). Do not skip this.",
+          "missable": {
+            "lockedBy": "Miquella's Great Rune breaking (entering Shadow Keep or Bonny Village eastern bridge)",
+            "note": "All cross-discovery dialogue with Ansbach must be done before the Great Rune breaks. The Secret Rite Scroll step (Shadow Keep) is separate and comes later."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-storeroom-key",
+          "note": "Found inside Belurat Tower Settlement — unlocks Hornsent Grandam's locked room."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-well-depths-key",
+          "note": "Found inside Belurat Tower Settlement — unlocks the sewer well access to Belurat Gaol."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-bone-bow",
+          "note": "Found in Belurat Tower Settlement, on a corpse in the upper tower areas."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-horned-warrior-s-sword",
+          "note": "Dropped by the Horned Warrior enemy on the bridge inside Belurat."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-dried-bouquet",
+          "note": "Found in Belurat Tower Settlement, looted from a corpse inside the dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-immunizing-horn-charm-2",
+          "note": "Found in Belurat Tower Settlement, looted from a corpse in the upper areas."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-shriek-of-sorrow",
+          "note": "Found in Belurat Tower Settlement, in a side room near the Small Private Altar area."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-09",
+          "note": "Belurat Tower Settlement — on the altar in the spider-scorpion room (x2 total at this altar)."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-10",
+          "note": "Belurat Tower Settlement — dropped by a Shadow Pothead enemy after the Gravebirds encounter on the Small Private Altar path."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-11",
+          "note": "Belurat Tower Settlement — in the open prayer area left of the bridge where the Horned Warrior is fought."
+        },
+        {
+          "type": "quest",
+          "id": "quest-hornsent-grandam-watchful-spirit",
+          "questline": "Hornsent",
+          "text": "Use the Storeroom Key to access Hornsent Grandam's locked room in Belurat. Speak with her, then equip the Divine Beast Head (dropped by the Divine Beast Dancing Lion boss) and speak to her again to receive the Watchful Spirit incantation.",
+          "missable": {
+            "lockedBy": "Not wearing the Divine Beast Head when speaking to Hornsent Grandam",
+            "note": "Watchful Spirit is only given when you approach Hornsent Grandam while wearing the Divine Beast Head armor. Defeat the boss first, equip the head, then return to her."
+          }
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-gravesite-divine-beast-dancing-lion",
+          "text": "Divine Beast Dancing Lion — boss of Belurat Tower Settlement at the Theatre of the Divine Beast grace. Redmane Freyja can be summoned as an ally. Drops Remembrance of the Dancing Lion and the Divine Beast Head armor."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-dancing-lion",
+          "note": "Dropped by the Divine Beast Dancing Lion. Trade at a Walking Mausoleum for Divine Beast Tornado (incantation) or Blades of Stone (weapon)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-divine-beast-head",
+          "note": "Dropped by the Divine Beast Dancing Lion. Equip this and speak to Hornsent Grandam to receive Watchful Spirit."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-watchful-spirit",
+          "note": "Given by Hornsent Grandam in Belurat after equipping the Divine Beast Head and speaking to her."
+        },
+        {
+          "type": "item",
+          "itemId": "revered-spirit-ash-17",
+          "note": "After defeating the Divine Beast Dancing Lion — found on the right side of the Theatre arena leading to the lift."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-demi-human-swordsman-yosh",
+          "note": "Dropped by Demi-Human Swordmaster Onze inside Belurat Gaol (requires Well Depths Key + Gaol Lower Level Key from Castle Ensis)."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-forager-brood-cookbook-7",
+          "note": "Given by Moore after you help an injured Forager Brood pest creature using a Warming Stone or Sunwarmth Stone. The injured pest is found among the six Forager Brood locations across the DLC."
+        }
+      ]
+    },
+    {
+      "id": "dlc-gravesite-04",
+      "from": "Belurat Tower Settlement",
+      "to": "Pillar Path Cross",
+      "summary": "Exit Belurat and ride southeast toward Castle Ensis. Meet Thiollier at Pillar Path Cross to advance Moore's quest, and collect the Scadutree Fragment at the Pillar Path Miquella's Cross. Give Thiollier the Black Syrup from Moore before the Great Rune breaks.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Exit Belurat and ride southeast across Gravesite Plain toward Castle Ensis. Pillar Path Cross is a grace on the road partway south."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-08",
+          "note": "Castle Front Site of Grace — beside a Marika statue in the Messmer Soldier encampment outside Castle Ensis."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-09",
+          "note": "Pillar Path Cross Site of Grace — beside Miquella's Cross on the road south of Belurat."
+        },
+        {
+          "type": "quest",
+          "id": "quest-thiollier-pillar-path-meet",
+          "questline": "Thiollier",
+          "text": "Meet Thiollier at Pillar Path Cross. Exhaust his dialogue — he is a Tarnished following Miquella who sells poison items. Return to Moore at Belurat to trigger the Black Syrup reward. Then come back to Thiollier and give him the Black Syrup before he relocates.",
+          "missable": {
+            "lockedBy": "Thiollier leaving Pillar Path Cross (triggered when Miquella's Great Rune breaks)",
+            "note": "The entire Black Syrup exchange chain (Moore → Thiollier → Moore → give to Thiollier) must complete before the Great Rune breaks. Black Syrup is needed for the Dragon Communion Priestess questline."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "crystal-tear-viridian-hidden-tear",
+          "note": "Found in the Gravesite Plain area — looted from a chest or corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-10",
+          "note": "Found in the Gravesite Plain area, on a corpse or in a chest."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-11",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-12",
+          "note": "Found in the Gravesite Plain open area, on a corpse."
+        }
+      ]
+    },
+    {
+      "id": "dlc-gravesite-05",
+      "from": "Castle Front",
+      "to": "Ensis Moongazing Grounds",
+      "summary": "Castle Ensis is the second legacy dungeon. Collect keys, the Loyal Knight's Cookbook, and Milady inside. Defeat Rellana, Twin Moon Knight — Leda's summon sign appears at her fog gate. After the boss, meet Hornsent at the exit as he passes through toward Scadu Altus.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Enter Castle Ensis from the Castle Front grace. Fight through the keep to reach the Castle Ensis Checkpoint grace midway."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-10",
+          "note": "Castle Ensis Checkpoint Site of Grace — beside Miquella's Cross inside the castle."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-loyal-knight-s-cookbook",
+          "note": "Found in a chest inside a room on the first ramp level of Castle Ensis."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-milady",
+          "note": "Found in Castle Ensis, on a corpse in the upper areas of the dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-carian-sorcery-sword",
+          "note": "Found in Castle Ensis, on a corpse inside the dungeon."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-spelldrake-talisman-3",
+          "note": "Found in Castle Ensis, on a corpse or in a chest in the upper floors."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-gaol-lower-level-key",
+          "note": "Found in Castle Ensis — used to access the lower level of Belurat Gaol."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-gaol-upper-level-key",
+          "note": "Found in Castle Ensis — used to access the upper level of Belurat Gaol."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-moonrithyll-s-knight-sword",
+          "note": "Found in Castle Ensis, on a corpse in the lower castle area."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-glintblade-trio",
+          "note": "Found in Castle Ensis, on a corpse or in a chest."
+        },
+        {
+          "type": "boss",
+          "id": "boss-dlc-gravesite-rellana",
+          "text": "Rellana, Twin Moon Knight — main boss of Castle Ensis at Ensis Moongazing Grounds. She dual-wields light greatswords with magic and fire. Needle Knight Leda's summon sign is near the fog gate. Drops Remembrance of the Twin Moon Knight."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-twin-moon-knight",
+          "note": "Dropped by Rellana, Twin Moon Knight. Trade at a Walking Mausoleum for Rellana's Twin Moons (sorcery) or Rellana's Cameo (talisman)."
+        },
+        {
+          "type": "item",
+          "itemId": "sorcery-rellana-s-twin-moons",
+          "note": "Trade Remembrance of the Twin Moon Knight at a Walking Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-rellana-s-cameo",
+          "note": "Alternate trade of Remembrance of the Twin Moon Knight at a Walking Mausoleum."
+        },
+        {
+          "type": "quest",
+          "id": "quest-hornsent-castle-ensis-exit",
+          "questline": "Hornsent",
+          "text": "After defeating Rellana, proceed through Ensis Moongazing Grounds. Hornsent passes through this area — speak with him if present. He may provide additional Cross Map information on his way to Scadu Altus."
+        }
+      ]
+    },
+    {
+      "id": "dlc-gravesite-06",
+      "from": "Ensis Moongazing Grounds",
+      "to": "Cliffroad Terminus",
+      "summary": "Sweep the remaining Gravesite Plain zones before ascending to Scadu Altus. Prospect Town (west) holds the Outer God Heirloom talisman. Collect the remaining Scadutree Fragments at Miquella's Crosses and pick up Gravesite Plain weapons, armor, spirit ashes, and cookbooks.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Exit Castle Ensis and sweep westward through the remaining Gravesite Plain zones. Prospect Town is on the western cliff path."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-outer-god-heirloom",
+          "note": "Found in Prospect Town on the western cliffs of Gravesite Plain, inside a building."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-13",
+          "note": "Three-Path Cross Site of Grace — beside Miquella's Cross at Three-Path Cross."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-17",
+          "note": "Belurat Main Gate Cross — beside Miquella's Cross at Belurat's entrance (if not collected in leg 03)."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-18",
+          "note": "Pillar Path Cross — beside Miquella's Cross on the road (if not collected in leg 04)."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-28",
+          "note": "Found in the Gravesite Plain area — unverified exact location; see eldenring.wiki.fextralife.com/Scadutree+Fragment for pin."
+        },
+        {
+          "type": "item",
+          "itemId": "scadutree-fragment-33",
+          "note": "Found in the Gravesite Plain/Belurat area — unverified exact location; see wiki for pin. (unverified)"
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-1",
+          "note": "Found in the Gravesite Plain area, on a corpse near the road or ruins."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-2",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-5",
+          "note": "Found in the Gravesite Plain or Belurat area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-greater-potentate-s-cookbook-13",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-antiquity-scholar-s-cookbook-1",
+          "note": "Found in the Gravesite Plain area, on a corpse or inside a building."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-ancient-dragon-knight-s-cookbook-1",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-fire-knight-s-cookbook-2",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "cookbook-tibia-s-cookbook",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-backhand-blade",
+          "note": "Found in the Gravesite Plain open field, on a corpse near the southern road."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-beast-claw-weapon",
+          "note": "Dropped by Logur the Beast Claw, a field boss/NPC invader in Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-smithscript-dagger",
+          "note": "Found in the Gravesite Plain, on a corpse in the ruins or cliffside area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-pata",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-spread-crossbow",
+          "note": "Found in the Gravesite Plain area, on a corpse or in a chest."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-anvil-hammer",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-bloodfiend-s-arm",
+          "note": "Dropped by the Chief Bloodfiend field boss in the Gravesite Plain area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-flowerstone-gavel",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-black-steel-greathammer",
+          "note": "Found in the Gravesite Plain/Belurat area, on a corpse or in a chest."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-death-knight-s-twin-axes",
+          "note": "Dropped by a Death Knight enemy in the Gravesite Plain area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-frenzyflame-perfume-bottle",
+          "note": "Found in the Gravesite Plain, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-chilling-perfume-bottle",
+          "note": "Found in the Gravesite Plain, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-greatsword-of-solitude",
+          "note": "Dropped by the Blackgaol Knight field boss in the Gravesite Plain area."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-lamenting-visage",
+          "note": "Dropped by the Lamenter enemy in Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-spirit-glaive",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-igon-s-greatbow",
+          "note": "Obtained from Igon after defeating Bayle the Dread at Jagged Peak (Task 23 west region). Items appear at Igon's starting location — Pillar Path Waypoint grace in Gravesite Plain — after Bayle is defeated."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-igon-s-armor",
+          "note": "Obtained from Igon after defeating Bayle the Dread — appears at Pillar Path Waypoint grace."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-igon-s-armor-altered",
+          "note": "Altered version of Igon's Armor — same acquisition as the base version."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-igon-s-gauntlets",
+          "note": "Obtained from Igon after defeating Bayle — appears at Pillar Path Waypoint."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-igon-s-helm",
+          "note": "Obtained from Igon after defeating Bayle — appears at Pillar Path Waypoint."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-igon-s-helm-altered",
+          "note": "Altered version of Igon's Helm — same acquisition."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-igon-s-loincloth",
+          "note": "Obtained from Igon after defeating Bayle — appears at Pillar Path Waypoint."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-igon-s-bell-bearing",
+          "note": "Obtained from Igon after defeating Bayle the Dread (Jagged Peak). Enables purchasing Igon's Harpoons. Items appear at Pillar Path Waypoint."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-heart-of-bayle",
+          "note": "Dropped by Bayle the Dread at Jagged Peak summit (Task 23 west region). Needed for the Dragon Communion Priestess questline. Collect from Igon's location or Bayle's arena after the fight."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-black-steel-greatshield",
+          "note": "Found in the Gravesite Plain area, on a corpse or in a chest."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-serpent-crest-shield",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "shield-wolf-crest-shield",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-divine-bird-warrior-ornis",
+          "note": "Found in the Gravesite Plain area, on a corpse or in a chest."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-ancient-dragon-florissax",
+          "note": "Found in the Gravesite Plain or Belurat area — unverified exact location."
+        },
+        {
+          "type": "item",
+          "itemId": "spirit-ash-black-knight-commander-andreas",
+          "note": "Found in the Gravesite Plain area, dropped by a specific enemy or on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-wing-stance",
+          "note": "Found in the Gravesite Plain area, on a corpse or enemy drop."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-savage-lion-s-claw",
+          "note": "Found in the Gravesite Plain area, on a corpse or enemy drop."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-ghostflame-call",
+          "note": "Dropped by a Ghostflame Dragon or associated enemy in Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-blinkbolt",
+          "note": "Found in the Gravesite Plain area, on a corpse or enemy drop."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-divine-beast-tornado",
+          "note": "Alternate trade of Remembrance of the Dancing Lion at a Walking Mausoleum."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-electrocharge",
+          "note": "Found in the Gravesite Plain or Belurat area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-two-handed-sword-talisman",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-two-headed-turtle-talisman",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-ailment-talisman",
+          "note": "Found in the Gravesite Plain or Belurat area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-arrow-s-soaring-sting-talisman",
+          "note": "Found in the Gravesite Plain area, looted from a chest or corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-blade-of-mercy",
+          "note": "Found in the Gravesite Plain or Belurat area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-clarifying-horn-charm-2",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crimson-amber-medallion-3",
+          "note": "Found in the Gravesite Plain area, on a corpse or in a chest."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-enraged-divine-beast",
+          "note": "Found in Gravesite Plain near the Belurat area — obtained after the Dancing Lion boss fight vicinity."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-verdigris-discus",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-herbalist-s-bell-bearing",
+          "note": "Dropped by an NPC invader in the Gravesite Plain area."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-mushroom-seller-s-bell-bearing-1",
+          "note": "Dropped by an NPC merchant/invader in the Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-mushroom-seller-s-bell-bearing-2",
+          "note": "Dropped by a second NPC merchant/invader in the Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "bell-bearing-string-seller-s-bell-bearing",
+          "note": "Dropped by an NPC merchant/invader in the Gravesite Plain area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gravebird-armor",
+          "note": "Dropped by Gravebird enemies in the Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gravebird-bracelets",
+          "note": "Dropped by Gravebird enemies in the Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-gravebird-s-blackquill-armor",
+          "note": "Dropped by Gravebird enemies in the Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-greatjar",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-oathseeker-knight-armor",
+          "note": "Found on a corpse or dropped by Oathseeker Knight enemies in the Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-oathseeker-knight-gauntlets",
+          "note": "Dropped by Oathseeker Knight enemies in the Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-oathseeker-knight-greaves",
+          "note": "Dropped by Oathseeker Knight enemies in the Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-oathseeker-knight-helm",
+          "note": "Dropped by Oathseeker Knight enemies in the Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-19",
+          "note": "Found in the Gravesite Plain — only available at night from a specific enemy spawn (rest at grace and wait for night)."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-20",
+          "note": "Found in the Gravesite Plain — night-only enemy spawn."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-21",
+          "note": "Found in the Gravesite Plain area."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-22",
+          "note": "Found in the Gravesite Plain area."
+        },
+        {
+          "type": "item",
+          "itemId": "larval-tear-23",
+          "note": "Found in the Gravesite Plain or Belurat area."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-lost-ashes-of-war",
+          "note": "Found in the Gravesite Plain area — used to restore a lost ash of war to its weapon."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-hefty-cracked-pot",
+          "note": "Found in the Gravesite Plain area or given during Moore's questline."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-horned-bairn",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-lamenter-s-mask",
+          "note": "Dropped by the Lamenter enemy or found near its spawn in Gravesite Plain."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-prattling-pate-lamentation",
+          "note": "Found in the Gravesite Plain area, on a corpse or in a chest."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-priestess-heart",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-rock-heart",
+          "note": "Found in the Gravesite Plain area, on a corpse."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-abyss",
+          "note": "Found in Abyssal Woods (Task 23 west region). Placed here because it was in this region's cleanup; the 21-dlc-west agent should claim it if they route Abyssal Woods. (unverified exact location — see wiki)"
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-southern-shore",
+          "note": "Found on the Cerulean/Southern Shore (Task 23 south region). Placed here from cleanup; the 20-dlc-south agent should claim it if they route that area. (unverified)"
+        }
+      ]
+    }
+  ],
+  "cleanup": []
 }

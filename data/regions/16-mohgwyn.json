@@ -2,16 +2,78 @@
   "id": "mohgwyn",
   "name": "Mohgwyn Palace",
   "order": 16,
-  "legs": [],
+  "legs": [
+    {
+      "id": "mohgwyn-01",
+      "from": "Palace Approach Ledge-Road",
+      "to": "Dynasty Mausoleum Midpoint",
+      "summary": "Access Mohgwyn Palace via Varré's Pureblood Knight's Medal (complete his questline including 3 invasions and blood-soaking the Lord of Blood's Favor) OR via the Snowfield teleporter northwest of Yelough Anix Ruins (requires defeating the Sanguine Noble invader there). Collect the map fragment and the Erdtree's Favor +1 talisman on the approach.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "ROUTE A — Varré's Medal: Complete White-Faced Varré's questline (Rose Church, 3 invasions, soak Lord of Blood's Favor in maiden's blood, return to Varré for the Pureblood Knight's Medal). Use the medal from inventory to teleport directly to Mohgwyn Palace."
+        },
+        {
+          "type": "direction",
+          "text": "ROUTE B — Snowfield Teleporter (alternate): In the Consecrated Snowfield, defeat the Sanguine Noble NPC invader near Yelough Anix Ruins to activate the waygate on the western cliffs. No questline needed — available to all players who reach the Consecrated Snowfield."
+        },
+        {
+          "type": "item",
+          "itemId": "map-fragment-map-mohgwyn-palace",
+          "note": "Found in the ruins north of the blood lake — follow the main path from the Palace Approach Ledge-Road grace north past the blood-soaked cliffs."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-erdtree-s-favor-1",
+          "note": "Found inside a chest in the room where you fight Mohg the Omen (Leyndell sewers boss room, not Mohg Lord of Blood) — this talisman is actually placed here if it wasn't collected in the Leyndell sewers. Acquisition: found in Leyndell sewers chest."
+        },
+        {
+          "type": "item",
+          "itemId": "tool-mohg-s-shackle",
+          "note": "Found in Mohgwyn Palace — can be used in the Mohg, Lord of Blood fight to interrupt his phase transition Nihil attack. Search the palace ruins near the blood lake."
+        }
+      ]
+    },
+    {
+      "id": "mohgwyn-02",
+      "from": "Dynasty Mausoleum Midpoint",
+      "to": "Cocoon of the Empyrean",
+      "summary": "Ascend through the Dynasty Mausoleum to Mohg, Lord of Blood. The Nihil ritual in phase 2 drains all flasks — use Mohg's Shackle to interrupt it once, or acquire the Purifying Crystal Tear (from Eleonora's Poleblade drop in Altus Plateau) to negate its damage entirely.",
+      "steps": [
+        {
+          "type": "item",
+          "itemId": "incantation-bloodboon",
+          "note": "Sacred incantation of Mohg, Lord of Blood — found in the Dynasty Mausoleum area."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-lord-of-blood-s-robe",
+          "note": "Attire of Mohg, Lord of Blood — found in Mohgwyn Palace area."
+        },
+        {
+          "type": "boss",
+          "id": "boss-mohgwyn-mohg-lord-of-blood",
+          "text": "Mohg, Lord of Blood — Dynasty Mausoleum apex. Phase 2 opens with the Nihil ritual (drains flasks three times). Mohg's Shackle can interrupt it once before the fight. The Purifying Crystal Tear (from Eleonora's Poleblade drop in Altus) completely negates the damage."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-the-blood-lord",
+          "note": "Dropped by Mohg, Lord of Blood upon defeat. Trade to Enia for Mohgwyn's Sacred Spear or Bloodboon Ritual incantation."
+        },
+        {
+          "type": "item",
+          "itemId": "great-rune-mohg-s-great-rune",
+          "note": "Dropped by Mohg, Lord of Blood. Activate at the Divine Tower of East Altus (Forbidden Lands)."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-mohgwyn-s-sacred-spear",
+          "note": "From the Remembrance of the Blood Lord — trade to Enia at Roundtable Hold."
+        }
+      ]
+    }
+  ],
   "cleanup": [
-    "armor-lord-of-blood-s-robe",
-    "great-rune-mohg-s-great-rune",
-    "incantation-bloodboon",
-    "map-fragment-map-mohgwyn-palace",
-    "remembrance-remembrance-of-the-blood-lord",
-    "talisman-erdtree-s-favor-1",
-    "tool-mohg-s-shackle",
-    "tool-pureblood-knight-s-medal",
-    "weapon-mohgwyn-s-sacred-spear"
+    "tool-pureblood-knight-s-medal"
   ]
 }

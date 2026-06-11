@@ -2,13 +2,179 @@
   "id": "ashen-capital",
   "name": "Leyndell, Ashen Capital & Endings",
   "order": 24,
-  "legs": [],
+  "legs": [
+    {
+      "id": "ashen-01",
+      "from": "Leyndell, Capital of Ash",
+      "to": "Erdtree Sanctuary",
+      "summary": "The city is now blanketed in ash. The layout is recognisable but enemies and some paths have changed. Sweep the changed city for items that only exist in the Ashen Capital form: upgraded talismans, the Erdtree Heal incantation, a new Memory Stone, and Brother Corhyn/Goldmask's questline conclusion which yields the Mending Rune of Perfect Order.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "You arrive at Leyndell, Capital of Ash (the first grace after defeating Maliketh). The ash-blanketed city has different enemy placements. Key loot is distributed throughout the changed streets. Work methodically from the starting grace outward before pushing to the bosses."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-erdtree-s-favor-2",
+          "note": "On a half-buried piece of rubble in the eastern area near the Forbidden Lands elevator route — guarded by three Lesser Ulcerated Tree Spirits. One of the best endgame talismans (raises HP, stamina, and equip load)."
+        },
+        {
+          "type": "item",
+          "itemId": "talisman-crimson-amber-medallion",
+          "note": "Crimson Amber Medallion +2. On a corpse hanging over one of the wooden beams on the way down from the starting area, southwest of the Capital of Ash grace."
+        },
+        {
+          "type": "item",
+          "itemId": "memory-stone-04",
+          "note": "NOTE: acquisition text says 'Red Wolf of Radagon' — this item is actually a pickup in the ashen-capital or nearby area. Placed here based on acquisition text referencing ashen/endgame area. Mark as unverified if location conflicts with region 04-liurnia. (unverified)"
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-erdtree-heal",
+          "note": "Found on the large covered furniture within the Queen's Bedchamber, next to its Site of Grace. Replaces the Blessing spell from the Royal Capital version."
+        },
+        {
+          "type": "direction",
+          "text": "After the Godfrey, First Elden Lord (Golden Shade) fight — which no longer triggers in the Ashen Capital — head down the stairs and take the elevator to reach an incantation chest."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-barrier-of-gold",
+          "note": "Found after heading down the stairs and taking the elevator, right after where the Golden Shade Godfrey fight took place in Royal Capital."
+        },
+        {
+          "type": "quest",
+          "id": "quest-corhyn-goldmask-end",
+          "questline": "Goldmask / Brother Corhyn",
+          "text": "Brother Corhyn waits near the large spear in the southwestern part of the Ashen Capital (near the colosseum direction from Capital of Ash grace). If you completed Goldmask's questline (found him on Altus Plateau, showed him Law of Regression at the Radagon statue in Royal Leyndell, then found him on Mountaintops), loot Goldmask's corpse on a slope near the colosseum to obtain the Mending Rune of Perfect Order. Corhyn's questline ends here.",
+          "missable": {
+            "lockedBy": "Goldmask questline not completed before this point",
+            "note": "Mending Rune of Perfect Order and Age of Order ending require Goldmask's questline completion. If Goldmask was not advanced through Leyndell Royal Capital (Law of Regression reveal) and Mountaintops, the rune is unobtainable this playthrough."
+          }
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-mending-rune-of-perfect-order",
+          "note": "Looted from Goldmask's corpse on the slope near the colosseum in the Ashen Capital (southwest from Capital of Ash grace). Required for the Age of Order ending. From 99-unsorted — claimed here."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-goldmask-s-rags",
+          "note": "After completing Corhyn/Goldmask questline — head south from the Capital of Ash grace down the small path toward the colosseum. Goldmask's body is here."
+        }
+      ]
+    },
+    {
+      "id": "ashen-02",
+      "from": "Erdtree Sanctuary",
+      "to": "Fractured Marika",
+      "summary": "The three mandatory final bosses in sequence. Sir Gideon Ofnir at Erdtree Sanctuary drops the All-Knowing Set. Godfrey/Hoarah Loux at the Elden Throne drops the Remembrance of Hoarah Loux. Radagon of the Golden Order and the Elden Beast together drop the Elden Remembrance and end the game — then it's time to choose your ending.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "Head to Erdtree Sanctuary. Sir Gideon Ofnir awaits — he uses many of the spells he discussed with you throughout the game, reflecting what you reported to him. He uses Lightning Spear, Black Flame, Rennala's Full Moon, etc. He notably DOES NOT use Scarlet Rot Breath (never learned it) and will not use Malenia's Scarlet Aeonia if you defeated her but never told him about it."
+        },
+        {
+          "type": "boss",
+          "id": "boss-sir-gideon-ofnir",
+          "text": "Sir Gideon Ofnir, the All-Knowing — fought at Erdtree Sanctuary. Uses sorceries and incantations reflecting the bosses you've reported to him. The All-Knowing set and Scepter drop on defeat."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-all-knowing-armor",
+          "note": "Dropped together with the Scepter of the All-Knowing upon defeating Sir Gideon Ofnir."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-all-knowing-armor-altered",
+          "note": "Altered version of the All-Knowing Armor (same drop)."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-all-knowing-gauntlets",
+          "note": "Part of All-Knowing Set dropped by Sir Gideon Ofnir."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-all-knowing-greaves",
+          "note": "Part of All-Knowing Set dropped by Sir Gideon Ofnir."
+        },
+        {
+          "type": "item",
+          "itemId": "armor-all-knowing-helm",
+          "note": "Part of All-Knowing Set dropped by Sir Gideon Ofnir."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-scepter-of-the-all-knowing",
+          "note": "Dropped together with the All-Knowing Set by Sir Gideon Ofnir."
+        },
+        {
+          "type": "boss",
+          "id": "boss-godfrey-hoarah-loux",
+          "text": "Godfrey, First Elden Lord / Hoarah Loux, Warrior — two-phase fight at the Elden Throne. Phase 1: Godfrey wields his axe. Phase 2: Hoarah Loux casts aside his weapon for powerful wrestling attacks. Both phases count as one encounter."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-remembrance-of-hoarah-loux",
+          "note": "Dropped by Godfrey / Hoarah Loux. Trade with Enia for Axe of Godfrey or Hoarah Loux's Earthshaker ash of war."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-axe-of-godfrey",
+          "note": "Trade Remembrance of Hoarah Loux with Enia (alternative: Hoarah Loux's Earthshaker AoW)."
+        },
+        {
+          "type": "item",
+          "itemId": "ash-of-war-ash-of-war-hoarah-loux-s-earthshaker",
+          "note": "Alternative trade of Remembrance of Hoarah Loux with Enia."
+        },
+        {
+          "type": "boss",
+          "id": "boss-radagon-elden-beast",
+          "text": "Radagon of the Golden Order / Elden Beast — the final two-phase encounter. Phase 1: Radagon uses Golden Order incantations and hammer strikes. Phase 2: Elden Beast, an enormous cosmic creature. Use Haligdrake and Pearldrake talismans. Black Knife Tiche summon is effective for Elden Beast. Defeat ends the base game."
+        },
+        {
+          "type": "item",
+          "itemId": "remembrance-elden-remembrance",
+          "note": "Dropped by the Elden Beast. Trade with Enia for Marika's Hammer, Sacred Relic Sword, or Radagon's Rings of Light incantation."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-marika-s-hammer",
+          "note": "Trade Elden Remembrance with Enia — the hammer Marika used to shatter the Elden Ring."
+        },
+        {
+          "type": "item",
+          "itemId": "weapon-sacred-relic-sword",
+          "note": "Alternative trade of Elden Remembrance with Enia. Excellent for rune farming via Wave of Gold skill."
+        },
+        {
+          "type": "item",
+          "itemId": "incantation-radagon-s-rings-of-light",
+          "note": "Alternative trade of Elden Remembrance with Enia. Note: only ONE item can be chosen per remembrance trade per playthrough."
+        }
+      ]
+    },
+    {
+      "id": "ashen-03",
+      "from": "Fractured Marika",
+      "to": "Endings",
+      "summary": "At Fractured Marika you choose your ending by interacting with the Elden Ring shards. Six distinct endings are available — default requires no special item. Four endings require quest items obtained earlier in the game. The Frenzied Flame ending requires inheriting from the Three Fingers. Mending Rune of the Fell Curse is claimed here from 99-unsorted as its source (Dung Eater questline) feeds into this ending choice.",
+      "steps": [
+        {
+          "type": "direction",
+          "text": "ENDINGS OVERVIEW — interact with Fractured Marika to trigger your chosen ending. Choose carefully: only one ending per playthrough.\n\n1. AGE OF FRACTURE (default): Simply approach and touch the Elden Ring pieces. No quest items required.\n\n2. AGE OF THE DUSKBORN: Requires Mending Rune of the Death-Prince (obtained from Fia's questline conclusion in Deeproot Depths — region 13). Use the rune after touching the Elden Ring.\n\n3. BLESSING OF DESPAIR: Requires Mending Rune of the Fell Curse (from Dung Eater's questline — give him 5 Seedbed Curses in the Leyndell sewers, region 12). Use the rune at Fractured Marika.\n\n4. AGE OF ORDER: Requires Mending Rune of Perfect Order (from Goldmask's questline — his corpse in this region, ashen-01 leg). Use the rune at Fractured Marika.\n\n5. AGE OF THE STARS: Requires completing Ranni the Witch's questline (Liurnia, region 04). After defeating the final boss, a blue summon sign appears at Fractured Marika — summon Ranni instead of touching the ring.\n\n6. LORD OF FRENZIED FLAME: Requires inheriting the Frenzied Flame from the Three Fingers in the Subterranean Shunning-Grounds basement (region 12). This LOCKS all other endings unless reversed with Miquella's Needle at Placidusax's arena (see region 23). After the final boss, the Frenzied Flame triggers automatically."
+        },
+        {
+          "type": "item",
+          "itemId": "key-item-mending-rune-of-the-fell-curse",
+          "note": "Obtained by completing the Dung Eater questline: give him 5 Seedbed Curses (scattered in Leyndell Sewers and other locations) while he is imprisoned in the Subterranean Shunning-Grounds. His phantom form must be freed via the Sewer-Gaol Key. Required for the Blessing of Despair ending. Claimed from 99-unsorted (questline originates in region 12-leyndell)."
+        }
+      ]
+    }
+  ],
   "cleanup": [
-    "armor-all-knowing-armor",
-    "armor-all-knowing-armor-altered",
-    "armor-all-knowing-gauntlets",
-    "armor-all-knowing-greaves",
-    "armor-all-knowing-helm",
     "armor-champion-bracers",
     "armor-champion-headband",
     "armor-champion-pauldron",
@@ -18,20 +184,7 @@
     "armor-elden-lord-bracers",
     "armor-elden-lord-crown",
     "armor-elden-lord-greaves",
-    "armor-goldmask-s-rags",
-    "ash-of-war-ash-of-war-hoarah-loux-s-earthshaker",
-    "incantation-barrier-of-gold",
-    "incantation-erdtree-heal",
-    "incantation-radagon-s-rings-of-light",
-    "memory-stone-04",
-    "remembrance-elden-remembrance",
-    "remembrance-remembrance-of-hoarah-loux",
-    "talisman-crimson-amber-medallion",
-    "talisman-erdtree-s-favor-2",
     "talisman-godfrey-icon",
-    "talisman-radagon-s-seals",
-    "weapon-axe-of-godfrey",
-    "weapon-marika-s-hammer",
-    "weapon-scepter-of-the-all-knowing"
+    "talisman-radagon-s-seals"
   ]
 }
