@@ -14,7 +14,10 @@ export default function GuidePage() {
   // DLC regions auto-show the DLC layer.
   const initialLayer: MapCode = region?.dlc ? 'dlc' : 'overworld'
   // Route emphasis for the map: highlighted leg + pulsing next-up pin.
-  const nextUpId = region ? firstUncheckedId(displaySteps(region, legId), snapshot.checked) : null
+  // Ignored items are skipped — they never get the pulsing pin.
+  const nextUpId = region
+    ? firstUncheckedId(displaySteps(region, legId), snapshot.checked, snapshot.ignored)
+    : null
 
   return (
     <div className="flex h-screen flex-col overflow-hidden">

@@ -225,6 +225,82 @@ const box2 = await page.locator('.er-route-panel').boundingBox()
 check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > box.height,
   box2 && box ? `${Math.round(box.height)}px → ${Math.round(box2.height)}px` : '')
 
+// 14 ── Ignore feature: panel ⊘ → next-up skips it + row greys + pin greys
+{
+  const ignCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const ignPage = await ignCtx.newPage()
+  await ignPage.goto(`${BASE}#/region/weeping-peninsula/weeping-01`)
+  await ignPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await ignPage.waitForTimeout(2500)
+
+  const nextUpBefore = await ignPage.locator('.er-route-panel .text-gold.font-semibold').first().textContent()
+  const ignoreBtn = ignPage.getByRole('button', { name: 'Ignore for now' }).first()
+  await ignoreBtn.scrollIntoViewIfNeeded()
+  await ignoreBtn.click()
+  await ignPage.waitForTimeout(1000)
+
+  const nextUpAfter = await ignPage.locator('.er-route-panel .text-gold.font-semibold').first().textContent()
+  const nextUpSkips = nextUpBefore !== nextUpAfter
+  const greyedRows = await ignPage.locator('.er-route-panel li.opacity-30').count()
+  const ignoredPins = await ignPage.locator('.er-pin--ignored').count()
+  check('Ignore from panel: next-up skips it + row greys + pin greys',
+    nextUpSkips && greyedRows > 0 && ignoredPins > 0,
+    `nextUp "${(nextUpBefore ?? '').slice(0, 32)}"→"${(nextUpAfter ?? '').slice(0, 32)}", ${greyedRows} grey rows, ${ignoredPins} grey pins`)
+  await ignCtx.close()
+}
+
+// 15 ── Restore: ⊘ again un-greys the row and the pin
+{
+  const restCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const restPage = await restCtx.newPage()
+  await restPage.goto(`${BASE}#/region/weeping-peninsula/weeping-01`)
+  await restPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await restPage.waitForTimeout(2500)
+
+  const ignBtn = restPage.getByRole('button', { name: 'Ignore for now' }).first()
+  await ignBtn.scrollIntoViewIfNeeded()
+  await ignBtn.click()
+  await restPage.waitForTimeout(800)
+  const greyedMid = await restPage.locator('.er-route-panel li.opacity-30').count()
+
+  const restoreBtn = restPage.getByRole('button', { name: 'Restore' }).first()
+  await restoreBtn.scrollIntoViewIfNeeded()
+  await restoreBtn.click()
+  await restPage.waitForTimeout(800)
+
+  const greyedAfter = await restPage.locator('.er-route-panel li.opacity-30').count()
+  const ignoredPinsAfter = await restPage.locator('.er-pin--ignored').count()
+  check('Restore: greyed row and ignored pin revert',
+    greyedMid > 0 && greyedAfter === 0 && ignoredPinsAfter === 0,
+    `grey rows ${greyedMid}→${greyedAfter}, ignored pins after restore=${ignoredPinsAfter}`)
+  await restCtx.close()
+}
+
+// 16 ── Ignored items excluded from leg progress count ("(N ignored)" suffix)
+{
+  const progCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const progPage = await progCtx.newPage()
+  await progPage.goto(`${BASE}#/region/weeping-peninsula/weeping-01`)
+  await progPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await progPage.waitForTimeout(2500)
+
+  const legRow = progPage.locator('.er-route-panel').getByText('Leg', { exact: true }).locator('..')
+  const legBefore = ((await legRow.textContent()) ?? '').trim()
+  const totalBefore = Number(legBefore.match(/\/(\d+)/)?.[1] ?? NaN)
+
+  const ignBtn2 = progPage.getByRole('button', { name: 'Ignore for now' }).first()
+  await ignBtn2.scrollIntoViewIfNeeded()
+  await ignBtn2.click()
+  await progPage.waitForTimeout(800)
+
+  const legAfter = ((await legRow.textContent()) ?? '').trim()
+  const totalAfter = Number(legAfter.match(/\/(\d+)/)?.[1] ?? NaN)
+  check('Ignored excluded from leg progress count + (N ignored) suffix',
+    totalAfter === totalBefore - 1 && legAfter.includes('(1 ignored)'),
+    `"${legBefore}" → "${legAfter}"`)
+  await progCtx.close()
+}
+
 await browser.close()
 
 const failed = results.filter((r) => !r.ok)
