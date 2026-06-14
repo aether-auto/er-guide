@@ -118,12 +118,14 @@ export function locationIcon(name: string): L.DivIcon {
  * Smithing stone marker — a small muted diamond that sits BELOW item pins
  * (in the 'er-smithing' pane). Somber stones get a purple tint vs the grey
  * steel of regular stones. Name label appears at zoom ≥5 (same band as graces).
+ * Pass checked=true to render the dimmed + ✓ badge style.
  */
-export function smithingStoneIcon(name: string, somber: boolean): L.DivIcon {
+export function smithingStoneIcon(name: string, somber: boolean, checked = false): L.DivIcon {
   return L.divIcon({
-    html: smithingStoneHtml(name, somber),
+    html: smithingStoneHtml(name, somber, checked),
     className: '',
     iconSize: [10, 10],
     iconAnchor: [5, 5],
+    popupAnchor: [0, -8],
   })
 }

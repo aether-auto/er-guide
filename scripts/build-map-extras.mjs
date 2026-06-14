@@ -24,7 +24,14 @@
 // Output shape: {
 //   graces:        [{ code, markerId, name, lat, lng }],
 //   locations:     [{ code, markerId, name, lat, lng, kind }],
-//   smithingStones:[{ code, markerId, name, lat, lng, somber: boolean }],
+//   smithingStones:[{
+//     code, markerId, name, lat, lng, somber: boolean,
+//     id: string,          // stable "smith-{code}-{markerId}"
+//     level: number|null,  // 1-9 from "[N]", or null for ancient/unknown
+//     ancient: boolean,    // true for "Ancient Dragon Smithing Stone" variants
+//     kind: 'somber'|'regular',
+//     instructions: string // description with HTML stripped + whitespace collapsed
+//   }],
 // }, where code is the UI layer code (overworld|underground|ashen|dlc),
 // markerId is the Fextralife `?id=` deep-link param, and lat/lng are Leaflet
 // CRS.Simple coords (marker `x` is the latitude, `y` the longitude — see
@@ -48,6 +55,34 @@ const LOCATION_CATEGORY = /^locations$/i
 // "Materials" / "Crafting Material" depending on the layer.
 const UPGRADE_CATEGORY = /^(upgrade material[s]?|materials?|crafting material[s]?)$/i
 const SMITHING_STONE_NAME = /smithing stone/i
+
+// ── Smithing stone attribute parsers ──────────────────────────────────────────
+
+/** Extract upgrade level [1]-[9] from a name, or null if absent/ancient. */
+function parseSmithLevel(name) {
+  const m = /\[(\d+)\]/.exec(name)
+  return m ? parseInt(m[1], 10) : null
+}
+
+/** True for "Ancient Dragon Smithing Stone" (and Somber variant) — level-less top tier. */
+function parseSmithAncient(name) {
+  return /ancient dragon smithing stone/i.test(name)
+}
+
+/** Strip all HTML tags and collapse whitespace from a description string. */
+function stripHtml(html) {
+  if (!html) return ''
+  return html
+    .replace(/<[^>]*>/g, ' ')  // strip tags → spaces
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim()
+}
 
 /** kind from the icon filename stem; numbered generic icons → "location". */
 function locationKind(image) {
@@ -116,14 +151,27 @@ for (const frame of sources.map.fextralife.iframes) {
   const seenSmithingIds = new Set()
   const layerSmithing = items
     .filter((m) => UPGRADE_CATEGORY.test(m.category) && SMITHING_STONE_NAME.test(m.name))
-    .map((m) => ({
-      code,
-      markerId: m.id,
-      name: m.name.trim(),
-      lat: Number(m.x),
-      lng: Number(m.y),
-      somber: /somber/i.test(m.name),
-    }))
+    .map((m) => {
+      const name = m.name.trim()
+      const somber = /somber/i.test(name)
+      const ancient = parseSmithAncient(name)
+      const level = parseSmithLevel(name)
+      const kind = somber ? 'somber' : 'regular'
+      const instructions = stripHtml(m.description ?? '')
+      return {
+        code,
+        markerId: m.id,
+        name,
+        lat: Number(m.x),
+        lng: Number(m.y),
+        somber,
+        id: `smith-${code}-${m.id}`,
+        level,
+        ancient,
+        kind,
+        instructions,
+      }
+    })
     .filter((s) => {
       if (seenSmithingIds.has(s.markerId)) return false
       seenSmithingIds.add(s.markerId)

@@ -29,6 +29,11 @@ interface SmithingStoneEntry {
   lat: number
   lng: number
   somber: boolean
+  id: string
+  level: number | null
+  ancient: boolean
+  kind: 'somber' | 'regular'
+  instructions: string
 }
 const { graces, locations, smithingStones } = mapExtras as {
   graces: GraceEntry[]
@@ -79,6 +84,59 @@ function storedSmithingToggle(): boolean {
   }
 }
 
+// ── Smithing filter helpers ────────────────────────────────────────────────
+
+type SmithKindFilter = 'all' | 'somber' | 'regular'
+
+interface SmithFilter {
+  kind: SmithKindFilter
+  /** Set of active levels — numbers 1-9 plus 'ancient'. All active by default. */
+  levels: Set<number | 'ancient'>
+}
+
+const ALL_SMITH_LEVELS: (number | 'ancient')[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'ancient']
+
+function defaultSmithFilter(): SmithFilter {
+  return { kind: 'all', levels: new Set(ALL_SMITH_LEVELS) }
+}
+
+function storedSmithFilter(): SmithFilter {
+  try {
+    const raw = sessionStorage.getItem('er-smithing-filter')
+    if (!raw) return defaultSmithFilter()
+    const parsed = JSON.parse(raw) as { kind: SmithKindFilter; levels: (number | 'ancient')[] }
+    return {
+      kind: parsed.kind ?? 'all',
+      levels: new Set(parsed.levels ?? ALL_SMITH_LEVELS),
+    }
+  } catch {
+    return defaultSmithFilter()
+  }
+}
+
+function saveSmithFilter(f: SmithFilter) {
+  try {
+    sessionStorage.setItem('er-smithing-filter', JSON.stringify({ kind: f.kind, levels: [...f.levels] }))
+  } catch {
+    /* private mode */
+  }
+}
+
+function stonePassesFilter(stone: SmithingStoneEntry, f: SmithFilter): boolean {
+  // Kind filter
+  if (f.kind === 'somber' && !stone.somber) return false
+  if (f.kind === 'regular' && stone.somber) return false
+  // Level filter
+  if (stone.ancient) {
+    return f.levels.has('ancient')
+  }
+  if (stone.level !== null) {
+    return f.levels.has(stone.level)
+  }
+  // level null + not ancient: treat as level null — always show (15 stones)
+  return true
+}
+
 // ── MapView ────────────────────────────────────────────────────────────────
 
 export interface MapViewProps {
@@ -104,9 +162,13 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
   const itemGroupRef = useRef<L.LayerGroup | null>(null)
   const markerMapRef = useRef<Map<string, L.Marker>>(new Map()) // itemId → marker
   const variantMapRef = useRef<Map<string, MarkerVariant>>(new Map()) // itemId → current icon variant
+  const smithingMarkerMapRef = useRef<Map<string, L.Marker>>(new Map()) // stoneId → marker
   const showGracesRef = useRef(true)
   const showLocationsRef = useRef(true)
   const showSmithingRef = useRef(storedSmithingToggle())
+  const smithFilterRef = useRef<SmithFilter>(storedSmithFilter())
+  const smithFilterPanelRef = useRef<HTMLDivElement | null>(null)
+  const smithCountEl = useRef<HTMLSpanElement | null>(null)
   const tabContainerRef = useRef<HTMLDivElement | null>(null)
   // Latest route props, readable from imperative callbacks (switchLayer).
   const routeStateRef = useRef<{ activeLegId: string | null; nextUpId: string | null }>({
@@ -138,7 +200,9 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
     renderLocations(locationsGroup, code)
 
     smithingGroup.clearLayers()
-    renderSmithingStones(smithingGroup, code)
+    smithingMarkerMapRef.current.clear()
+    renderSmithingStones(smithingGroup, smithingMarkerMapRef.current, code, smithFilterRef.current, map)
+    updateSmithingCounts(smithCountEl.current, code, smithFilterRef.current, progressStore.getSnapshot())
 
     itemGroup.clearLayers()
     markerMapRef.current.clear()
@@ -285,6 +349,81 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
         smithBtn.id = 'er-smithing-toggle'
         smithBtn.textContent = '⛏ Smithing Stones'
         if (showSmithingRef.current) smithBtn.classList.add('active')
+
+        // Filter sub-panel (compact, only visible when layer is ON)
+        const filterPanel = L.DomUtil.create('div', 'er-smith-filter', div) as HTMLDivElement
+        filterPanel.style.display = showSmithingRef.current ? 'flex' : 'none'
+        filterPanel.id = 'er-smithing-filter'
+        smithFilterPanelRef.current = filterPanel
+
+        // Kind segmented control
+        const kindRow = L.DomUtil.create('div', 'er-smith-filter__kind', filterPanel) as HTMLDivElement
+        const kindOptions: { value: SmithKindFilter; label: string }[] = [
+          { value: 'all', label: 'All' },
+          { value: 'somber', label: 'Somber' },
+          { value: 'regular', label: 'Regular' },
+        ]
+        const kindBtns: HTMLButtonElement[] = []
+        for (const { value, label } of kindOptions) {
+          const kb = L.DomUtil.create('button', 'er-smith-filter__kind-btn', kindRow) as HTMLButtonElement
+          kb.dataset.kind = value
+          kb.id = `er-smith-kind-${value}`
+          kb.textContent = label
+          if (value === 'regular') kb.classList.add('regular-active')
+          if (smithFilterRef.current.kind === value) kb.classList.add('active')
+          L.DomEvent.on(kb, 'click', (e) => {
+            L.DomEvent.stopPropagation(e)
+            smithFilterRef.current = { ...smithFilterRef.current, kind: value }
+            saveSmithFilter(smithFilterRef.current)
+            kindBtns.forEach((b) => b.classList.toggle('active', b.dataset.kind === value))
+            rerenderSmithing()
+          })
+          kindBtns.push(kb)
+        }
+
+        // Level checkboxes row (1-9 + Ancient)
+        const levelsRow = L.DomUtil.create('div', 'er-smith-filter__levels', filterPanel) as HTMLDivElement
+        const lvlBtns: HTMLButtonElement[] = []
+        const allLevelEntries: (number | 'ancient')[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'ancient']
+        for (const lvl of allLevelEntries) {
+          const lb = L.DomUtil.create('button', 'er-smith-filter__lvl-btn', levelsRow) as HTMLButtonElement
+          lb.dataset.level = String(lvl)
+          lb.id = `er-smith-lvl-${lvl}`
+          lb.textContent = lvl === 'ancient' ? 'Anc' : `[${lvl}]`
+          if (lvl === 'ancient') lb.classList.add('ancient-btn')
+          if (smithFilterRef.current.levels.has(lvl)) lb.classList.add('active')
+          L.DomEvent.on(lb, 'click', (e) => {
+            L.DomEvent.stopPropagation(e)
+            const newLevels = new Set(smithFilterRef.current.levels)
+            if (newLevels.has(lvl)) {
+              newLevels.delete(lvl)
+            } else {
+              newLevels.add(lvl)
+            }
+            smithFilterRef.current = { ...smithFilterRef.current, levels: newLevels }
+            saveSmithFilter(smithFilterRef.current)
+            lb.classList.toggle('active', newLevels.has(lvl))
+            rerenderSmithing()
+          })
+          lvlBtns.push(lb)
+        }
+
+        // Live count display
+        const countsSpan = L.DomUtil.create('span', 'er-smith-filter__counts', filterPanel) as HTMLSpanElement
+        countsSpan.id = 'er-smithing-counts'
+        smithCountEl.current = countsSpan
+        updateSmithingCounts(countsSpan, layerRef.current, smithFilterRef.current, progressStore.getSnapshot())
+
+        // Helper: re-render smithing stones layer with current filter
+        function rerenderSmithing() {
+          const smithingGroup = smithingGroupRef.current
+          if (!smithingGroup) return
+          smithingGroup.clearLayers()
+          smithingMarkerMapRef.current.clear()
+          renderSmithingStones(smithingGroup, smithingMarkerMapRef.current, layerRef.current, smithFilterRef.current, map)
+          updateSmithingCounts(smithCountEl.current, layerRef.current, smithFilterRef.current, progressStore.getSnapshot())
+        }
+
         L.DomEvent.on(smithBtn, 'click', (e) => {
           L.DomEvent.stopPropagation(e)
           showSmithingRef.current = !showSmithingRef.current
@@ -293,9 +432,11 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
           if (showSmithingRef.current) {
             smithingGroup.addTo(map)
             smithBtn.classList.add('active')
+            filterPanel.style.display = 'flex'
           } else {
             smithingGroup.remove()
             smithBtn.classList.remove('active')
+            filterPanel.style.display = 'none'
           }
           try {
             sessionStorage.setItem('er-smithing-show', showSmithingRef.current ? 'true' : 'false')
@@ -325,6 +466,7 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
     const unsubscribe = progressStore.subscribe(() => {
       const snapshot = progressStore.getSnapshot()
       const { nextUpId } = routeStateRef.current
+      // Item pin re-style
       markerMapRef.current.forEach((marker, itemId) => {
         const item = itemsById.get(itemId)
         if (!item) return
@@ -340,6 +482,19 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
         variantMapRef.current.set(itemId, variant)
         marker.setIcon(categoryIcon(item.category, variant))
       })
+      // Smithing stone re-style (dim + ✓ badge when checked)
+      smithingMarkerMapRef.current.forEach((marker, stoneId) => {
+        // stoneId is like "smith-overworld-1234" — find the stone entry
+        const stone = smithingStones.find((s) => s.id === stoneId)
+        if (!stone) return
+        const isChecked = snapshot.checked[stoneId] != null
+        const prevChecked = variantMapRef.current.get(stoneId) === 'checked'
+        if (isChecked === prevChecked) return
+        variantMapRef.current.set(stoneId, isChecked ? 'checked' : 'normal')
+        marker.setIcon(smithingStoneIcon(stone.name, stone.somber, isChecked))
+      })
+      // Update done-count in filter panel
+      updateSmithingCounts(smithCountEl.current, layerRef.current, smithFilterRef.current, progressStore.getSnapshot())
     })
 
     // Expose map center via a DOM data attribute for acceptance tests
@@ -434,20 +589,90 @@ function renderLocations(group: L.LayerGroup, code: MapCode) {
   }
 }
 
-function renderSmithingStones(group: L.LayerGroup, code: MapCode) {
+function renderSmithingStones(
+  group: L.LayerGroup,
+  stoneMarkerMap: Map<string, L.Marker>,
+  code: MapCode,
+  filter: SmithFilter,
+  map: L.Map,
+) {
+  const snapshot = progressStore.getSnapshot()
   for (const stone of smithingStones) {
     if (stone.code !== code) continue
-    // Pane 'er-smithing' (z 560) sits BELOW locations and item pins so 509
+    if (!stonePassesFilter(stone, filter)) continue
+    // Pane 'er-smithing' (z 560) sits BELOW locations and item pins so 504
     // smithing-stone markers don't clutter the navigation view. Stones are
-    // interactive — clicking opens a tooltip-style popup with the stone name.
-    // Name labels appear at zoom ≥5 via CSS (same band as graces).
-    L.marker([stone.lat, stone.lng], {
-      icon: smithingStoneIcon(stone.name, stone.somber),
+    // interactive — clicking opens a popup with name, badge, instructions, and
+    // a Mark done button wired to the progress store. Name labels appear at
+    // zoom ≥5 via CSS (same band as graces).
+    const isChecked = snapshot.checked[stone.id] != null
+    const marker = L.marker([stone.lat, stone.lng], {
+      icon: smithingStoneIcon(stone.name, stone.somber, isChecked),
       pane: 'er-smithing',
     })
-      .bindTooltip(stone.name, { direction: 'top', offset: [0, -8] })
-      .addTo(group)
+      .bindPopup(() => buildSmithingPopup(stone, map), {
+        maxWidth: 260,
+        minWidth: 220,
+        autoPan: true,
+      })
+    marker.addTo(group)
+    stoneMarkerMap.set(stone.id, marker)
   }
+}
+
+function buildSmithingPopup(stone: SmithingStoneEntry, map: L.Map): HTMLElement {
+  const el = document.createElement('div')
+  el.className = 'er-popup-card'
+
+  const snapshot = progressStore.getSnapshot()
+  const isChecked = snapshot.checked[stone.id] != null
+
+  // Level badge text
+  let levelBadge = ''
+  if (stone.ancient) {
+    levelBadge = 'Ancient'
+  } else if (stone.level !== null) {
+    levelBadge = `[${stone.level}]`
+  }
+  const kindBadge = stone.somber ? 'Somber' : 'Regular'
+  const instructionsHtml = stone.instructions
+    ? `<p class="er-popup-card__acq" style="max-height:120px;overflow-y:auto;">${escapeText(stone.instructions)}</p>`
+    : '<p class="er-popup-card__note">No location notes.</p>'
+
+  el.innerHTML = `
+    <div class="er-popup-card__name">${escapeText(stone.name.replace(/ - .+$/, ''))}</div>
+    <div class="er-popup-card__meta">
+      <span class="er-popup-card__chip" style="${stone.somber ? 'color:#b08ae0;border-color:#7a5ab0' : 'color:#a0b0c8;border-color:#5a7090'}">${kindBadge}</span>
+      ${levelBadge ? `<span class="er-popup-card__chip" style="${stone.ancient ? 'color:#e8b060;border-color:#c08040' : ''}">${levelBadge}</span>` : ''}
+    </div>
+    <div class="er-popup-card__body">${instructionsHtml}</div>
+    <div class="er-popup-actions">
+      <button class="er-smith-popup-check er-popup-check ${isChecked ? 'er-popup-check--done' : ''}">
+        ${isChecked ? '✓ Done — tap to undo' : '✓ Mark done'}
+      </button>
+    </div>
+  `
+
+  el.querySelector('.er-smith-popup-check')?.addEventListener('click', () => {
+    progressStore.toggle(stone.id)
+    map.closePopup()
+  })
+
+  return el
+}
+
+/** Compute and update the live count display in the filter panel. */
+function updateSmithingCounts(
+  el: HTMLSpanElement | null,
+  code: MapCode,
+  filter: SmithFilter,
+  snapshot: { checked: Record<string, number> },
+) {
+  if (!el) return
+  const layer = smithingStones.filter((s) => s.code === code)
+  const showing = layer.filter((s) => stonePassesFilter(s, filter))
+  const done = showing.filter((s) => snapshot.checked[s.id] != null)
+  el.textContent = `showing ${showing.length} / ${layer.length} — ✓ ${done.length} done`
 }
 
 function renderItems(

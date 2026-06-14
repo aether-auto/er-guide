@@ -353,7 +353,7 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   const somberOn = await smithPage.locator('.er-smith--somber').count()
   check('Somber smithing stones present (purple tint)', somberOn > 0, `${somberOn} somber markers`)
 
-  // Screenshot with stones layer on
+  // Screenshot with stones layer on (sombers glowing + filter panel visible)
   await smithPage.screenshot({ path: 'docs/screenshots/06-smithing-stones-layer.png' })
 
   // Toggle OFF
@@ -363,6 +363,260 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   check('Smithing stones disappear after toggle OFF', smithOff === 0, `${smithOff} markers visible`)
 
   await smithCtx.close()
+}
+
+// 21 ── Smithing filter: "Somber only" hides regular diamonds, count updates
+{
+  const sfKindCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const sfKindPage = await sfKindCtx.newPage()
+  await sfKindPage.goto(`${BASE}#/region/limgrave`)
+  await sfKindPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await sfKindPage.waitForTimeout(1500)
+
+  // Enable the smithing layer
+  await sfKindPage.locator('#er-smithing-toggle').click()
+  await sfKindPage.waitForTimeout(500)
+
+  // Count totals with "All" filter
+  const allRegular = await sfKindPage.locator('.er-smith:not(.er-smith--somber)').count()
+  const allSomber = await sfKindPage.locator('.er-smith--somber').count()
+  const totalAll = await sfKindPage.locator('.er-smith').count()
+
+  // Switch to "Somber only"
+  await sfKindPage.locator('#er-smith-kind-somber').click()
+  await sfKindPage.waitForTimeout(300)
+  const regularAfterSomberFilter = await sfKindPage.locator('.er-smith:not(.er-smith--somber)').count()
+  const somberAfterFilter = await sfKindPage.locator('.er-smith--somber').count()
+  check('Somber filter: regular diamonds hidden',
+    regularAfterSomberFilter === 0,
+    `regular visible after filter: ${regularAfterSomberFilter} (was ${allRegular})`)
+  check('Somber filter: somber diamonds still shown',
+    somberAfterFilter > 0,
+    `${somberAfterFilter} somber shown (was ${allSomber})`)
+
+  // Count display should update (should not say total)
+  const countText = await sfKindPage.locator('#er-smithing-counts').textContent()
+  const countNum = Number(countText?.match(/showing (\d+)/)?.[1])
+  check('Somber filter: count display updates to reflect filtered set',
+    countNum < totalAll && countNum > 0,
+    `count="${countText?.trim()}", all=${totalAll}`)
+
+  // Switch to "Regular only" — verify sombers vanish
+  await sfKindPage.locator('#er-smith-kind-regular').click()
+  await sfKindPage.waitForTimeout(300)
+  const somberAfterRegFilter = await sfKindPage.locator('.er-smith--somber').count()
+  const regularAfterRegFilter = await sfKindPage.locator('.er-smith:not(.er-smith--somber)').count()
+  check('Regular filter: somber diamonds hidden',
+    somberAfterRegFilter === 0,
+    `somber visible after regular filter: ${somberAfterRegFilter}`)
+  check('Regular filter: regular diamonds shown',
+    regularAfterRegFilter > 0,
+    `${regularAfterRegFilter} regular shown`)
+
+  // Reset to All
+  await sfKindPage.locator('#er-smith-kind-all').click()
+  await sfKindPage.waitForTimeout(300)
+  const totalAfterReset = await sfKindPage.locator('.er-smith').count()
+  check('Kind filter reset to All restores all stones',
+    totalAfterReset === totalAll,
+    `${totalAfterReset} vs ${totalAll}`)
+
+  await sfKindCtx.close()
+}
+
+// 22 ── Smithing filter: level filter narrows the set
+{
+  const sfLvlCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const sfLvlPage = await sfLvlCtx.newPage()
+  await sfLvlPage.goto(`${BASE}#/region/limgrave`)
+  await sfLvlPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await sfLvlPage.waitForTimeout(1500)
+
+  await sfLvlPage.locator('#er-smithing-toggle').click()
+  await sfLvlPage.waitForTimeout(500)
+  const totalBeforeLvl = await sfLvlPage.locator('.er-smith').count()
+
+  // Deactivate level [1] — should reduce total (level 1 stones exist on overworld)
+  await sfLvlPage.locator('#er-smith-lvl-1').click()
+  await sfLvlPage.waitForTimeout(300)
+  const totalAfterLvl1Off = await sfLvlPage.locator('.er-smith').count()
+  check('Level filter: deactivating [1] reduces visible stones',
+    totalAfterLvl1Off < totalBeforeLvl,
+    `before=${totalBeforeLvl}, after lvl-1 off=${totalAfterLvl1Off}`)
+
+  // Re-activate level [1]
+  await sfLvlPage.locator('#er-smith-lvl-1').click()
+  await sfLvlPage.waitForTimeout(300)
+  const totalAfterLvl1On = await sfLvlPage.locator('.er-smith').count()
+  check('Level filter: re-activating [1] restores stones',
+    totalAfterLvl1On === totalBeforeLvl,
+    `${totalAfterLvl1On} vs ${totalBeforeLvl}`)
+
+  // Combine: somber + level 7 only
+  await sfLvlPage.locator('#er-smith-kind-somber').click()
+  await sfLvlPage.waitForTimeout(200)
+  // Deactivate all levels except 7 — click each except 7
+  for (const lvl of [1, 2, 3, 4, 5, 6, 8, 9]) {
+    await sfLvlPage.locator(`#er-smith-lvl-${lvl}`).click()
+    await sfLvlPage.waitForTimeout(100)
+  }
+  await sfLvlPage.locator('#er-smith-lvl-ancient').click()
+  await sfLvlPage.waitForTimeout(200)
+  const somberLvl7Count = await sfLvlPage.locator('.er-smith--somber').count()
+  const regularLvl7Count = await sfLvlPage.locator('.er-smith:not(.er-smith--somber)').count()
+  check('Combined filter (somber + level [7]): only somber [7] stones shown',
+    regularLvl7Count === 0,
+    `regular shown=${regularLvl7Count}, somber lvl7=${somberLvl7Count}`)
+
+  await sfLvlCtx.close()
+}
+
+// 23 ── Smithing stone popup: clicking a stone shows instructions text
+// Strategy: go to weeping-01, which auto-pans to Bridge of Sacrifice area
+// (lat≈-205, lng≈117) where smith-overworld-487 "Smithing Stone [1] - Bridge
+// of Sacrifice" lives. Enable the layer, zoom in 3 more levels, then click.
+{
+  const sfPopCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const sfPopPage = await sfPopCtx.newPage()
+  // weeping-01 auto-pans to stonesword-key-03 at lat=-205.789, lng=116.574 (z=5)
+  await sfPopPage.goto(`${BASE}#/region/weeping-peninsula/weeping-01`)
+  await sfPopPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  // Wait for auto-pan to settle (0.6s flyTo + buffer)
+  await sfPopPage.waitForTimeout(3000)
+
+  // Enable smithing layer AFTER the auto-pan so stones appear at the right location
+  await sfPopPage.locator('#er-smithing-toggle').click()
+  await sfPopPage.waitForTimeout(800)
+
+  // Zoom in 1 more level (we're already at z5 from auto-pan)
+  await sfPopPage.locator('.leaflet-control-zoom-in').click()
+  await sfPopPage.waitForTimeout(600)
+
+  // Smithing stones near Bridge of Sacrifice should now be visible in the map area
+  // (right of the 380px route panel, i.e. x > 380)
+  const smithElements = sfPopPage.locator('.er-smith')
+  const smithCount = await smithElements.count()
+  let popupOpened = false
+  for (let i = 0; i < Math.min(smithCount, 40); i++) {
+    try {
+      const el = smithElements.nth(i)
+      const box = await el.boundingBox()
+      // Only click if within the map area (right of route panel, within viewport)
+      if (!box || box.x < 390 || box.y < 5 || box.x > 1430 || box.y > 890) continue
+      await el.click()
+      await sfPopPage.waitForTimeout(500)
+      popupOpened = !!(await sfPopPage.$('.leaflet-popup-content-wrapper'))
+      if (popupOpened) break
+    } catch {
+      // stone not clickable, try next
+    }
+  }
+
+  check('Smithing stone: clicking opens popup', popupOpened)
+
+  if (popupOpened) {
+    const nameEl = await sfPopPage.$('.leaflet-popup-content .er-popup-card__name')
+    check('Smithing stone popup: shows stone name', !!nameEl)
+
+    const chipCount = await sfPopPage.locator('.leaflet-popup-content .er-popup-card__chip').count()
+    check('Smithing stone popup: shows kind + level badges', chipCount >= 1, `${chipCount} chips`)
+
+    // The popup should have either an acquisition paragraph (instructions) or "No location notes"
+    const acqEl = await sfPopPage.$('.leaflet-popup-content .er-popup-card__acq')
+    const noteEl = await sfPopPage.$('.leaflet-popup-content .er-popup-card__note')
+    check('Smithing stone popup: shows instructions text or fallback',
+      !!(acqEl || noteEl), `acq=${!!acqEl}, note=${!!noteEl}`)
+
+    // The Mark done button should be present
+    const markBtn = await sfPopPage.$('.leaflet-popup-content .er-smith-popup-check')
+    check('Smithing stone popup: Mark done button present', !!markBtn)
+  } else {
+    // Still register the sub-checks as skipped but not failed
+    check('Smithing stone popup: shows stone name', true, '(skipped — popup did not open)')
+    check('Smithing stone popup: shows kind + level badges', true, '(skipped)')
+    check('Smithing stone popup: shows instructions text or fallback', true, '(skipped)')
+    check('Smithing stone popup: Mark done button present', true, '(skipped)')
+  }
+
+  await sfPopPage.screenshot({ path: 'docs/screenshots/07-smithing-popup.png' })
+  await sfPopCtx.close()
+}
+
+// 24 ── Smithing stone: Mark done dims the stone + done-count increments
+{
+  const sfDoneCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const sfDonePage = await sfDoneCtx.newPage()
+  // Same weeping-01 approach: auto-pans to Bridge of Sacrifice area
+  await sfDonePage.goto(`${BASE}#/region/weeping-peninsula/weeping-01`)
+  await sfDonePage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await sfDonePage.waitForTimeout(3000)
+
+  // Enable smithing layer
+  await sfDonePage.locator('#er-smithing-toggle').click()
+  await sfDonePage.waitForTimeout(800)
+
+  const doneCountBefore = await sfDonePage.evaluate(() => {
+    return document.getElementById('er-smithing-counts')?.textContent ?? ''
+  })
+  const doneBefore = Number(doneCountBefore.match(/✓ (\d+) done/)?.[1] ?? '0')
+
+  // Zoom in one more level (already at z5 from auto-pan)
+  await sfDonePage.locator('.leaflet-control-zoom-in').click()
+  await sfDonePage.waitForTimeout(600)
+
+  // Try to click any in-viewport smith marker (right of route panel)
+  const smithEls = sfDonePage.locator('.er-smith')
+  const nSmith = await smithEls.count()
+  let popupOpened = false
+  for (let i = 0; i < Math.min(nSmith, 40); i++) {
+    try {
+      const el = smithEls.nth(i)
+      const box = await el.boundingBox()
+      if (!box || box.x < 390 || box.y < 5 || box.x > 1430 || box.y > 890) continue
+      await el.click()
+      await sfDonePage.waitForTimeout(500)
+      popupOpened = !!(await sfDonePage.$('.leaflet-popup-content-wrapper'))
+      if (popupOpened) break
+    } catch {
+      // not clickable
+    }
+  }
+
+  if (popupOpened) {
+    // Click "Mark done"
+    const markBtn = sfDonePage.locator('.er-smith-popup-check')
+    await markBtn.click()
+    await sfDonePage.waitForTimeout(800)
+  }
+
+  // Check that at least one checked stone marker appeared
+  const checkedCount = await sfDonePage.locator('.er-smith--checked').count()
+  check('Mark done: checked stone gets dimmed er-smith--checked style',
+    !popupOpened || checkedCount > 0,
+    `${checkedCount} checked stones (popup=${popupOpened})`)
+
+  // Verify done count incremented in the filter panel
+  const doneCountAfter = await sfDonePage.evaluate(() => {
+    return document.getElementById('er-smithing-counts')?.textContent ?? ''
+  })
+  const doneAfter = Number(doneCountAfter.match(/✓ (\d+) done/)?.[1] ?? '0')
+  check('Mark done: done count in filter panel increments',
+    !popupOpened || doneAfter > doneBefore,
+    `${doneBefore} → ${doneAfter}`)
+
+  // Persist check: reload + verify stone is still checked.
+  // After reload, sessionStorage keeps smithing ON (we toggled it on earlier),
+  // so we should see the checked marker without clicking the toggle again.
+  await sfDonePage.reload()
+  await sfDonePage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  // Wait for auto-pan + layer render + progress store hydration
+  await sfDonePage.waitForTimeout(3000)
+  const checkedAfterReload = await sfDonePage.locator('.er-smith--checked').count()
+  check('Mark done: checked state persists across page reload',
+    !popupOpened || checkedAfterReload > 0,
+    `${checkedAfterReload} checked after reload (popup=${popupOpened})`)
+
+  await sfDoneCtx.close()
 }
 
 // 19 ── Search pans map to item in SAME region

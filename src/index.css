@@ -423,11 +423,14 @@ body {
 }
 
 /* ── Smithing stone markers — small muted diamonds, below item pins ── */
-/* Regular smithing stone: grey-steel diamond */
+/* Regular smithing stone: grey-steel diamond with subtle glow */
 .er-smith {
   position: relative;
   width: 10px;
   height: 10px;
+  /* subtle outer halo so the cluster reads as a group */
+  filter: drop-shadow(0 0 2px rgba(113, 128, 150, 0.35));
+  transition: filter 0.15s ease;
 }
 .er-smith::before {
   content: '';
@@ -436,12 +439,47 @@ body {
   transform: rotate(45deg);
   background: #4a5568;
   border: 1px solid #718096;
-  opacity: 0.8;
+  opacity: 0.85;
 }
-/* Somber smithing stone: tinted purple diamond */
+.er-smith:hover {
+  filter: drop-shadow(0 0 4px rgba(113, 128, 150, 0.65));
+}
+/* Somber smithing stone: cooler purple accent with brighter glow so they
+   stand out from the gold-themed graces and the grey regular stones. */
+.er-smith--somber {
+  /* noticeably brighter / cooler than regular */
+  filter: drop-shadow(0 0 3px rgba(155, 127, 212, 0.55));
+}
 .er-smith--somber::before {
   background: #5a4070;
-  border-color: #9b7fd4;
+  border-color: #b08ae0;
+  opacity: 1;
+  /* inner luminance so the diamond reads as lit */
+  box-shadow: 0 0 4px 1px rgba(176, 138, 224, 0.6) inset;
+}
+.er-smith--somber:hover {
+  filter: drop-shadow(0 0 6px rgba(176, 138, 224, 0.9));
+}
+/* Checked smithing stone: dim + green badge (mirrors er-pin--checked behaviour) */
+.er-smith--checked {
+  filter: saturate(0.2) opacity(0.5);
+}
+.er-smith--checked::after {
+  content: '✓';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 7px;
+  color: #fff;
+  background: #5f7a4e;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  z-index: 1;
 }
 /* Name label at zoom ≥5 (same zoom band as graces) */
 .er-smith-label {
@@ -461,6 +499,76 @@ body {
 }
 .er-zoom-ge5 .er-smith-label {
   display: block;
+}
+
+/* ── Smithing filter sub-panel (shown below the toggle when layer is ON) ── */
+.er-smith-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 6px 4px;
+  background: rgba(10, 8, 5, 0.7);
+  border-top: 1px solid #2c261b;
+  border-radius: 0 0 4px 4px;
+  margin-top: 2px;
+}
+.er-smith-filter__kind {
+  display: flex;
+  gap: 3px;
+}
+.er-smith-filter__kind-btn {
+  flex: 1;
+  padding: 2px 4px;
+  font-size: 10px;
+  border: 1px solid #2c261b;
+  border-radius: 3px;
+  background: transparent;
+  color: #8f887a;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+  text-align: center;
+}
+.er-smith-filter__kind-btn.active {
+  background: rgba(23, 20, 15, 0.9);
+  color: #b08ae0;
+  border-color: #7a5ab0;
+}
+.er-smith-filter__kind-btn.active.regular-active {
+  color: #a0b0c8;
+  border-color: #5a7090;
+}
+.er-smith-filter__levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.er-smith-filter__lvl-btn {
+  width: 22px;
+  height: 18px;
+  font-size: 9px;
+  border: 1px solid #2c261b;
+  border-radius: 3px;
+  background: transparent;
+  color: #8f887a;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+  text-align: center;
+  line-height: 16px;
+}
+.er-smith-filter__lvl-btn.active {
+  background: rgba(23, 20, 15, 0.9);
+  color: #c8a55a;
+  border-color: #8a7444;
+}
+.er-smith-filter__lvl-btn.ancient-btn.active {
+  color: #e8b060;
+  border-color: #c08040;
+}
+.er-smith-filter__counts {
+  font-size: 9px;
+  color: #8f887a;
+  text-align: right;
+  padding-top: 1px;
 }
 
 /* ── Leaflet zoom control ───────────────────────────────── */
