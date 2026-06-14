@@ -8,6 +8,7 @@ import { itemsById, regions, stepNoteByItemId } from '../lib/data'
 import { progressStore } from '../lib/useProgress'
 import { useUi } from '../App'
 import mapExtras from '../../data/map-extras.json'
+import { buildDetailsHtml } from '../lib/itemDetails'
 
 // ── Graces + locations (map-display data; never part of the checklist) ─────
 
@@ -442,6 +443,8 @@ function buildPopup(itemId: string, map: L.Map): HTMLElement {
   const isIgnored = snapshot.ignored[itemId] != null
   const stepNote = stepNoteByItemId.get(itemId)
 
+  const detailsHtml = item.details ? buildDetailsHtml(item.details, item.category) : ''
+
   el.className = 'er-popup-card'
   el.innerHTML = `
     <div class="er-popup-card__name">${escapeText(item.name)}</div>
@@ -450,6 +453,7 @@ function buildPopup(itemId: string, map: L.Map): HTMLElement {
       ${item.dlc ? '<span class="er-popup-card__chip er-popup-card__chip--dlc">DLC</span>' : ''}
     </div>
     <div class="er-popup-card__body">
+      ${detailsHtml}
       ${item.acquisition ? `<p class="er-popup-card__acq">${escapeText(item.acquisition)}</p>` : ''}
       ${stepNote && stepNote !== item.acquisition ? `<p class="er-popup-card__note">⌖ Route note: ${escapeText(stepNote)}</p>` : ''}
       ${item.quest ? `<p class="er-popup-card__quest">❖ Quest: ${escapeText(item.quest)}</p>` : ''}

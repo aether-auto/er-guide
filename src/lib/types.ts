@@ -50,6 +50,45 @@ export interface Missable {
   note: string
 }
 
+export interface StatPair {
+  name: string
+  amount: number
+}
+
+export interface ScalingPair {
+  name: string
+  scaling: string
+}
+
+export interface ItemDetails {
+  description?: string
+  weight?: number
+  attack?: StatPair[]
+  defence?: StatPair[]
+  scalesWith?: ScalingPair[]
+  requiredAttributes?: StatPair[]
+  /** Armor damage negation values (from fan-API `dmgNegation`). */
+  dmgNegation?: StatPair[]
+  /** Armor resistance values (from fan-API `resistance`). */
+  resistance?: StatPair[]
+  /** Spirit-ash FP cost (string in fan-API, stored as number). */
+  fpCost?: number
+  /** Spirit-ash HP cost (string in fan-API, stored as number). */
+  hpCost?: number
+  /** Effect text (spirit ashes, talismans, ashes-of-war). */
+  effect?: string
+  /** Spell FP cost. */
+  cost?: number
+  /** Spell memory slots. */
+  slots?: number
+  /** Spell attribute requirements (Int/Fth/Arc). */
+  requires?: StatPair[]
+  /** Ash-of-war affinity granted. */
+  affinity?: string
+  /** Ash-of-war skill name. */
+  skill?: string
+}
+
 export interface Item {
   id: string
   name: string
@@ -60,6 +99,7 @@ export interface Item {
   quest: string | null
   map: MapRef | null
   wikiUrl: string | null
+  details?: ItemDetails
 }
 
 export type Step =

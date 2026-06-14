@@ -261,12 +261,142 @@ if (markerFiles.length === 0) console.warn('WARNING: map cache is empty — all 
 const overrides = JSON.parse(await readFile(path.join(DATA, 'overrides.json'), 'utf8'))._entries ?? {}
 const missables = JSON.parse(await readFile(path.join(DATA, 'missables.json'), 'utf8'))._entries ?? {}
 
-// fan API description lookup by normalized name
+// fan API lookup maps: one flat name→entry map for description fallbacks,
+// and one per-source-file map for category-compatible detail enrichment.
+// Source file names encode type: weapons→weapon/shield, shields→shield/weapon,
+// armors→armor, talismans→talisman, sorceries→sorcery, incantations→incantation,
+// spirits→spirit-ash, ashes→ash-of-war, items→tool/key-item/talisman/etc.
+const FANAPI_COMPAT_CATS = {
+  'weapons.json':      new Set(['weapon', 'shield']),
+  'shields.json':      new Set(['shield', 'weapon']),
+  'armors.json':       new Set(['armor']),
+  'talismans.json':    new Set(['talisman']),
+  'sorceries.json':    new Set(['sorcery']),
+  'incantations.json': new Set(['incantation']),
+  'spirits.json':      new Set(['spirit-ash']),
+  'ashes.json':        new Set(['ash-of-war']),
+  'items.json':        new Set(['tool', 'key-item', 'cookbook', 'bell-bearing', 'crystal-tear',
+                                'whetblade', 'great-rune', 'remembrance', 'map-fragment',
+                                'ammo', 'talisman']),
+}
+
+// fanByName: name→entry for the first source that has the name (description fallback)
 const fanByName = new Map()
-for (const { data } of fanapi) {
+// fanDetailsByName: name→{entry, compatCats} built from all sources, category-scoped
+// When the same normalized name appears in multiple files, the most-specific file wins
+// (earlier in priority order: type-specific before generic 'items.json').
+const FANAPI_DETAIL_PRIORITY = [
+  'weapons.json', 'shields.json', 'armors.json', 'talismans.json',
+  'sorceries.json', 'incantations.json', 'spirits.json', 'ashes.json', 'items.json',
+]
+const fanDetailsByName = new Map()
+for (const { file, data } of fanapi) {
   for (const entry of data) {
-    if (entry?.name && !fanByName.has(norm(entry.name))) fanByName.set(norm(entry.name), entry)
+    if (!entry?.name) continue
+    const key = norm(entry.name)
+    if (!fanByName.has(key)) fanByName.set(key, entry)
+    // Only register details from the first (highest-priority) file that has this name
+    if (!fanDetailsByName.has(key)) {
+      const compatCats = FANAPI_COMPAT_CATS[file] ?? null
+      if (compatCats) fanDetailsByName.set(key, { entry, compatCats })
+    }
   }
+}
+// Re-order detail registration by file priority so the most specific file wins
+// (the above loop hits files in readdir order, not priority order — rebuild cleanly)
+fanDetailsByName.clear()
+for (const priorityFile of FANAPI_DETAIL_PRIORITY) {
+  const found = fanapi.find(({ file }) => file === priorityFile)
+  if (!found) continue
+  for (const entry of found.data) {
+    if (!entry?.name) continue
+    const key = norm(entry.name)
+    if (!fanDetailsByName.has(key)) {
+      const compatCats = FANAPI_COMPAT_CATS[priorityFile] ?? null
+      if (compatCats) fanDetailsByName.set(key, { entry, compatCats })
+    }
+  }
+}
+
+// Helper: strip stat arrays that are entirely zero (carry no information)
+function stripZeroArray(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) return undefined
+  const filtered = arr.filter((s) => typeof s.amount === 'number' && s.amount !== 0)
+  return filtered.length > 0 ? filtered : undefined
+}
+
+// Build ItemDetails from a fan-API entry for a given item category.
+// Returns undefined if there's nothing worth attaching.
+function buildDetails(entry, category) {
+  if (!entry) return undefined
+  const d = {}
+
+  // description — always attach if present
+  if (entry.description && typeof entry.description === 'string' && entry.description.trim()) {
+    d.description = entry.description.trim()
+  }
+
+  // weight — weapons, shields, armors
+  if (typeof entry.weight === 'number' && entry.weight > 0) d.weight = entry.weight
+
+  // attack / defence / scalesWith / requiredAttributes — weapons + shields
+  if (category === 'weapon' || category === 'shield') {
+    const atk = stripZeroArray(entry.attack)
+    if (atk) d.attack = atk
+    const def = stripZeroArray(entry.defence)
+    if (def) d.defence = def
+    if (Array.isArray(entry.scalesWith) && entry.scalesWith.length > 0) {
+      const sw = entry.scalesWith.filter((s) => s.scaling && s.scaling !== '-')
+      if (sw.length) d.scalesWith = sw
+    }
+    if (Array.isArray(entry.requiredAttributes) && entry.requiredAttributes.length > 0) {
+      const ra = entry.requiredAttributes.filter((s) => typeof s.amount === 'number' && s.amount > 0)
+      if (ra.length) d.requiredAttributes = ra
+    }
+  }
+
+  // armor damage negation + resistance + weight
+  if (category === 'armor') {
+    const dmg = stripZeroArray(entry.dmgNegation)
+    if (dmg) d.dmgNegation = dmg
+    const res = stripZeroArray(entry.resistance)
+    if (res) d.resistance = res
+  }
+
+  // spirit-ash FP/HP costs + effect
+  if (category === 'spirit-ash') {
+    const fp = Number(entry.fpCost)
+    if (Number.isFinite(fp) && fp > 0) d.fpCost = fp
+    const hp = Number(entry.hpCost)
+    if (Number.isFinite(hp) && hp > 0) d.hpCost = hp
+    if (entry.effect && typeof entry.effect === 'string') d.effect = entry.effect.trim()
+  }
+
+  // sorcery / incantation — cost, slots, requires
+  if (category === 'sorcery' || category === 'incantation') {
+    if (typeof entry.cost === 'number' && entry.cost > 0) d.cost = entry.cost
+    if (typeof entry.slots === 'number' && entry.slots > 0) d.slots = entry.slots
+    if (Array.isArray(entry.requires) && entry.requires.length > 0) {
+      const req = entry.requires.filter((s) => typeof s.amount === 'number' && s.amount > 0)
+      if (req.length) d.requires = req
+    }
+  }
+
+  // ash-of-war — affinity + skill + description (already handled above)
+  if (category === 'ash-of-war') {
+    if (entry.affinity && typeof entry.affinity === 'string') d.affinity = entry.affinity.trim()
+    if (entry.skill && typeof entry.skill === 'string') d.skill = entry.skill.trim()
+  }
+
+  // talisman — effect
+  if (category === 'talisman') {
+    if (entry.effect && typeof entry.effect === 'string') d.effect = entry.effect.trim()
+  }
+
+  // Return undefined if there's truly nothing beyond description
+  const keys = Object.keys(d)
+  if (keys.length === 0) return undefined
+  return d
 }
 
 const markers = markerFiles.flatMap(({ file, data }) => extractMarkers(data, file))
@@ -507,6 +637,26 @@ for (const item of items.values()) {
     if (fan) item.acquisition = fan.location ?? fan.description ?? ''
   }
 }
+
+// ---- fan-API detail enrichment ----
+// Attach ItemDetails to items whose normalized name matches a fan-API entry AND
+// whose category is compatible with the source file (e.g. don't attach weapon
+// attack arrays to a cookbook even if the names happen to collide).
+let detailsMatched = 0
+const detailsByCategory = {}
+for (const item of items.values()) {
+  const key = norm(item.name)
+  const hit = fanDetailsByName.get(key)
+  if (!hit) continue
+  if (!hit.compatCats.has(item.category)) continue
+  const det = buildDetails(hit.entry, item.category)
+  if (!det) continue
+  item.details = det
+  detailsMatched++
+  detailsByCategory[item.category] = (detailsByCategory[item.category] ?? 0) + 1
+}
+console.log(`fan-API details matched: ${detailsMatched}/${[...items.values()].length} items`)
+console.table(detailsByCategory)
 
 // ---- write output ----
 const sorted = [...items.values()].sort((a, b) => a.id.localeCompare(b.id))

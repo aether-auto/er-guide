@@ -1,5 +1,6 @@
 // Browser acceptance run for the map UI (map-v2 M2 + M3 user-directed changes).
 // Usage: npx vite preview --port 5174 &  then  node scripts/verify-map.mjs
+// (If 5174 is in use, vite will try 5175 — update BASE below to match.)
 import { chromium } from 'playwright'
 import { mkdirSync } from 'node:fs'
 
@@ -299,6 +300,34 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
     totalAfter === totalBefore - 1 && legAfter.includes('(1 ignored)'),
     `"${legBefore}" → "${legAfter}"`)
   await progCtx.close()
+}
+
+// 17 ── Item stat card: Moonveil popup shows attack + scaling details
+// Navigate to caelid-03 (the leg that contains weapon-moonveil after the boss),
+// locate it on the map, open the popup, and assert the stat block is rendered.
+{
+  const detailCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const detailPage = await detailCtx.newPage()
+  await detailPage.goto(`${BASE}#/region/caelid/caelid-03`)
+  await detailPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await detailPage.waitForTimeout(2000)
+
+  // Click the locate button for Moonveil
+  const moonveilLocate = detailPage.getByRole('button', { name: 'Locate Moonveil on map' })
+  await moonveilLocate.scrollIntoViewIfNeeded()
+  await moonveilLocate.click()
+  await detailPage.waitForTimeout(1800) // flyTo + popup
+
+  const popupCard = await detailPage.$('.leaflet-popup-content .er-popup-card')
+  const detailsBlock = await detailPage.$('.leaflet-popup-content .er-item-details')
+  const scalingRow = await detailPage.$('.er-item-details .er-scaling-c, .er-item-details .er-scaling-d, .er-item-details .er-scaling-e')
+  const statCount = await detailPage.locator('.er-item-details__stat').count()
+  check('Moonveil popup shows item stat card', !!popupCard && !!detailsBlock,
+    `card=${!!popupCard}, detailsBlock=${!!detailsBlock}`)
+  check('Moonveil popup stat block has attack/scaling rows', statCount >= 3,
+    `${statCount} stat rows, scalingRow=${!!scalingRow}`)
+  await detailPage.screenshot({ path: 'docs/screenshots/05-moonveil-stats.png' })
+  await detailCtx.close()
 }
 
 await browser.close()

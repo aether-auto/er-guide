@@ -12,9 +12,20 @@ import {
   firstUncheckedId,
 } from '../lib/data'
 import { CATEGORY_META } from '../lib/types'
-import type { Leg, Step } from '../lib/types'
+import type { Item, Leg, Step } from '../lib/types'
 import { useProgress } from '../lib/useProgress'
 import { useUi } from '../App'
+import { buildDetailsPanelHtml } from '../lib/itemDetails'
+
+// ── Item details panel (fan-API stat block, compact) ─────────────────────
+
+function ItemDetailsPanel({ item }: { item: Item }) {
+  if (!item.details) return null
+  const html = buildDetailsPanelHtml(item.details, item.category)
+  if (!html) return null
+  // eslint-disable-next-line react/no-danger
+  return <div dangerouslySetInnerHTML={{ __html: html }} />
+}
 
 // ── Progress bar ──────────────────────────────────────────────────────────
 
@@ -106,6 +117,7 @@ function PanelStepRow({
         {item?.dlc && <span className="ml-1 text-[9px] text-gold-dim">DLC</span>}
         {step.type === 'item' && !checked && !ignored && (
           <>
+            {item && <ItemDetailsPanel item={item} />}
             {step.note && (
               <p className="mt-0.5 text-[11px] leading-relaxed text-ink-dim">{step.note}</p>
             )}

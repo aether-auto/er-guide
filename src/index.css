@@ -285,6 +285,92 @@ body {
 .er-popup-card__missable span {
   font-weight: 400;
 }
+
+/* ── Item details card (fan-API stat block) ──────────── */
+.er-item-details {
+  border-top: 1px solid #2c261b;
+  margin-bottom: 8px;
+  padding-top: 8px;
+}
+.er-item-details__desc {
+  font-size: 11px;
+  line-height: 1.5;
+  font-style: italic;
+  color: #8f887a;
+  margin: 0 0 8px;
+}
+/* Compact stat grid: two columns, label dim / value gold */
+.er-item-details__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 8px;
+  margin-bottom: 6px;
+}
+.er-item-details__section-label {
+  grid-column: 1 / -1;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #8a7444;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+.er-item-details__stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+  gap: 4px;
+}
+.er-item-details__stat-name {
+  color: #8f887a;
+  white-space: nowrap;
+}
+.er-item-details__stat-val {
+  color: #c8a55a;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  white-space: nowrap;
+}
+/* Scaling grade badges */
+.er-scaling-s { color: #e8c766; }
+.er-scaling-a { color: #c8a55a; }
+.er-scaling-b { color: #a88a44; }
+.er-scaling-c { color: #8f887a; }
+.er-scaling-d { color: #6f655a; }
+.er-scaling-e { color: #5a5248; }
+/* Weight / cost row — single-column full-width */
+.er-item-details__meta-row {
+  font-size: 11px;
+  color: #8f887a;
+  margin-bottom: 2px;
+}
+.er-item-details__meta-row span {
+  color: #c8a55a;
+  font-weight: 600;
+}
+/* Panel variant: no separator, tighter spacing, muted tones */
+.er-panel-details {
+  margin-top: 4px;
+}
+.er-panel-details .er-item-details__desc {
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+.er-panel-details .er-item-details__stats {
+  gap: 1px 6px;
+  margin-bottom: 4px;
+}
+.er-panel-details .er-item-details__section-label {
+  font-size: 8px;
+}
+.er-panel-details .er-item-details__stat {
+  font-size: 10px;
+}
+.er-panel-details .er-item-details__meta-row {
+  font-size: 10px;
+}
 .er-popup-check {
   display: block;
   width: 100%;
