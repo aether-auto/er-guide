@@ -5509,5 +5509,4039 @@
       "lng": 127.94921875,
       "kind": "waygate"
     }
+  ],
+  "smithingStones": [
+    {
+      "code": "overworld",
+      "markerId": 377,
+      "name": "Somber Smithing Stone [1] - Church of Dragon Communion",
+      "lat": -202.460937,
+      "lng": 92.160394,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 472,
+      "name": "Smithing Stone [2]",
+      "lat": -211.015625,
+      "lng": 114.809083,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 477,
+      "name": "Smithing Stone [2] A - Castle Morne",
+      "lat": -225.914062,
+      "lng": 109.043617,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 479,
+      "name": "Smithing Stone [1] - 3x Castle Morne",
+      "lat": -227.304687,
+      "lng": 107.527711,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 487,
+      "name": "Smithing Stone [1] - Bridge of Sacrifice",
+      "lat": -204.65625,
+      "lng": 116.871668,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 491,
+      "name": "Somber Smithing Stone [2]",
+      "lat": -227.132812,
+      "lng": 111.949515,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 702,
+      "name": "Somber Smithing Stone [1] A",
+      "lat": -191.523437,
+      "lng": 110.271993,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 704,
+      "name": "Somber Smithing Stone [1]",
+      "lat": -174.679687,
+      "lng": 103.29332,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 737,
+      "name": "Smithing Stone [2] B - Castle Morne",
+      "lat": -226.28125,
+      "lng": 106.933851,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 758,
+      "name": "Smithing Stone [1] A",
+      "lat": -182.96875,
+      "lng": 97.332459,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 764,
+      "name": "Smithing Stone [1] B",
+      "lat": -181.359375,
+      "lng": 103.074521,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 765,
+      "name": "Smithing Stone [2] B",
+      "lat": -181.414062,
+      "lng": 103.543358,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 767,
+      "name": "Smithing Stone [2] - Mistwood Ruins",
+      "lat": -190.0625,
+      "lng": 117.409872,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 773,
+      "name": "Smithing Stone [1] - Fort Haight",
+      "lat": -195.546875,
+      "lng": 124.191778,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 790,
+      "name": "Smithing Stone [2]",
+      "lat": -177.203125,
+      "lng": 119.121446,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 832,
+      "name": "Smithing Stone [1]",
+      "lat": -190.59375,
+      "lng": 109.285305,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 906,
+      "name": "Smithing Stone [2] A - Stormveil Castle",
+      "lat": -182.695312,
+      "lng": 87.316779,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 909,
+      "name": "Smithing Stone [3] A - Stormveil Castle",
+      "lat": -184.03125,
+      "lng": 86.691962,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 936,
+      "name": "Smithing Stone [2] C",
+      "lat": -150.203125,
+      "lng": 61.176241,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 938,
+      "name": "Smithing Stone [2] - 2x South from Folly on the Lake",
+      "lat": -154.425207,
+      "lng": 57.588052,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 939,
+      "name": "Smithing Stone [2] - 3x Liurnia of the Lakes Gazebo",
+      "lat": -147.289062,
+      "lng": 50.551114,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 963,
+      "name": "Smithing Stone [1] - Stormveil Castle (B)",
+      "lat": -177.28125,
+      "lng": 87.457552,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 969,
+      "name": "Smithing Stone [1] - Summonwater Village",
+      "lat": -172.851562,
+      "lng": 119.02784,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 974,
+      "name": "Smithing Stone [2] B - Stormveil Castle",
+      "lat": -180.835937,
+      "lng": 87.23864,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 975,
+      "name": "Smithing Stone [1] - Stormveil Castle (A)",
+      "lat": -181.34375,
+      "lng": 87.465364,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1104,
+      "name": "Smithing Stone [2] E - Stormveil Castle",
+      "lat": -177.335937,
+      "lng": 84.488294,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1209,
+      "name": "Smithing Stone [1] C",
+      "lat": -180.421875,
+      "lng": 106.590669,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1303,
+      "name": "Smithing Stone [2] - 3x Academy Gate Town",
+      "lat": -143.34375,
+      "lng": 61.886918,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1336,
+      "name": "Smithing Stone [2] - 2x Under Village of the Albinaurics",
+      "lat": -158.1875,
+      "lng": 52.121891,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1342,
+      "name": "Somber Smithing Stone [2]",
+      "lat": -152.851562,
+      "lng": 52.70785,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 1343,
+      "name": "Somber Smithing Stone [4]",
+      "lat": -84.617187,
+      "lng": 62.604866,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 1351,
+      "name": "Smithing Stone [1]",
+      "lat": -174.945312,
+      "lng": 109.29341,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1506,
+      "name": "Smithing Stone [3] - Laskyar Ruins",
+      "lat": -160.085937,
+      "lng": 71.504159,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1520,
+      "name": "Somber Smithing Stone [3] - Caria Manor",
+      "lat": -109.15625,
+      "lng": 59.512268,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 1525,
+      "name": "Smithing Stone [4] - Caria Manor",
+      "lat": -107.421875,
+      "lng": 55.090114,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1536,
+      "name": "Smithing Stone [3] - Caria Manor",
+      "lat": -106.901563,
+      "lng": 58.385537,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1598,
+      "name": "Somber Smithing Stone [3] F",
+      "lat": -107.179687,
+      "lng": 73.801513,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 1607,
+      "name": "Somber Smithing Stone [3] B",
+      "lat": -124.132812,
+      "lng": 61.746601,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 1611,
+      "name": "Somber Smithing Stone [2] - 3x Raya Lucaria Crystal Tunnel",
+      "lat": -125.289062,
+      "lng": 65.590065,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 1704,
+      "name": "Smithing Stone [5] - Ravine-Veiled Village",
+      "lat": -105.375,
+      "lng": 72.949705,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1705,
+      "name": "Smithing Stone [4] - 9x Ruin-Strewn Precipice",
+      "lat": -104.273437,
+      "lng": 75.428059,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1706,
+      "name": "Smithing Stone [3] - 3x Ruin-Strewn Precipice",
+      "lat": -102.867187,
+      "lng": 75.090432,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1707,
+      "name": "Smithing Stone [5] - Ruin-Strewn Precipice",
+      "lat": -105.617187,
+      "lng": 75.184481,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 1708,
+      "name": "Somber Smithing Stone [4] - Ruin-Strewn Precipice",
+      "lat": -102.8125,
+      "lng": 74.121682,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 1959,
+      "name": "Somber Smithing Stone [2] - Teardrop Scarab Liurnia",
+      "lat": -138.25,
+      "lng": 47.175489,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 1960,
+      "name": "Somber Smithing Stone [1] - Stormveil Castle",
+      "lat": -179.640625,
+      "lng": 88.09048,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 1969,
+      "name": "Smithing Stone [1] - Church of Elleh",
+      "lat": -191.117187,
+      "lng": 98.833028,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2053,
+      "name": "Smithing Stone [4] - Western Liurnia Enemy Camp",
+      "lat": -128.046875,
+      "lng": 45.480666,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2058,
+      "name": "Somber Smithing Stone [3] - Western Liurnia of the Lakes",
+      "lat": -126.484375,
+      "lng": 47.934391,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 2151,
+      "name": "Somber Smithing Stone [3] A - Raya Lucaria Academy",
+      "lat": -136.59375,
+      "lng": 53.965043,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 2209,
+      "name": "Somber Smithing Stone [3] B - Raya Lucaria Academy",
+      "lat": -138,
+      "lng": 58.051564,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 2260,
+      "name": "Smithing Stone [4] - Raya Lucaria Academy",
+      "lat": -138.359375,
+      "lng": 58.89547,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2272,
+      "name": "Smithing Stone [4] - Raya Lucaria Academy",
+      "lat": -136.46875,
+      "lng": 54.855972,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2274,
+      "name": "Somber Smithing Stone [4] - Raya Lucaria Academy",
+      "lat": -136.890625,
+      "lng": 53.949625,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 2281,
+      "name": "Smithing Stone [5] B - Raya Lucaria Academy",
+      "lat": -136.78125,
+      "lng": 58.879843,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2314,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -85.945312,
+      "lng": 76.06662,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 2317,
+      "name": "Somber Smithing Stone [8] - Dragonbarrow West",
+      "lat": -165.929687,
+      "lng": 143.863964,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 2777,
+      "name": "Smithing Stone [5] - 6x Altus Tunnel",
+      "lat": -93.59375,
+      "lng": 92.715127,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2778,
+      "name": "Somber Smithing Stone [5] - Altus Tunnel",
+      "lat": -93.617187,
+      "lng": 94.033073,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 2800,
+      "name": "Smithing Stone [5] - Wyndham Ruins",
+      "lat": -96.171875,
+      "lng": 73.261637,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2810,
+      "name": "Smithing Stone [7] - Guardians' Garrison",
+      "lat": -73.5625,
+      "lng": 162.077,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2830,
+      "name": "Smithing Stone [4] A - The Shaded Castle",
+      "lat": -82.554687,
+      "lng": 81.473509,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2835,
+      "name": "Smithing Stone [5] B - The Shaded Castle",
+      "lat": -83.625,
+      "lng": 82.020835,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2838,
+      "name": "Somber Smithing Stone [5] - The Shaded Castle",
+      "lat": -81.695312,
+      "lng": 79.981579,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 2839,
+      "name": "Smithing Stone [5] C - The Shaded Castle",
+      "lat": -81.117187,
+      "lng": 80.388134,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2844,
+      "name": "Smithing Stone [5] D - The Shaded Castle",
+      "lat": -81.460937,
+      "lng": 83.052267,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2847,
+      "name": "Smithing Stone [5] E - The Shaded Castle",
+      "lat": -80.382812,
+      "lng": 82.48312,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2863,
+      "name": "Smithing Stone [5] - 5x Sealed Tunnel",
+      "lat": -104.640625,
+      "lng": 106.027657,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2865,
+      "name": "Smithing Stone [4]",
+      "lat": -101.90625,
+      "lng": 119.144988,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2953,
+      "name": "Smithing Stone [5] - 8x Sellia Crystal Tunnel",
+      "lat": -173.054687,
+      "lng": 143.566372,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 2954,
+      "name": "Somber Smithing Stone [4] - 3x Sellia Crystal Tunnel",
+      "lat": -173.34375,
+      "lng": 144.050837,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 2959,
+      "name": "Smithing Stone [7] - 5x Sellia Crystal Tunnel",
+      "lat": -173.320312,
+      "lng": 144.699395,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3051,
+      "name": "Smithing Stone [1]",
+      "lat": -183.328125,
+      "lng": 90.050799,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3156,
+      "name": "Somber Smithing Stone [5] - Sealed Tunnel",
+      "lat": -105.257812,
+      "lng": 106.644959,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3168,
+      "name": "Somber Smithing Stone [5]",
+      "lat": -83.671875,
+      "lng": 64.847469,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3169,
+      "name": "Smithing Stone [6] 5x",
+      "lat": -82.59375,
+      "lng": 66.354266,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3174,
+      "name": "Somber Smithing Stone [8] - Consecrated Snowfield",
+      "lat": -81.015625,
+      "lng": 143.809167,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3179,
+      "name": "Smithing Stone [4] - Forsaken Ruins",
+      "lat": -171.914062,
+      "lng": 130.386961,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3236,
+      "name": "Smithing Stone [6] A - Volcano Manor",
+      "lat": -86.554687,
+      "lng": 63.644121,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3241,
+      "name": "Somber Smithing Stone [4] A",
+      "lat": -182.0625,
+      "lng": 144.223012,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3255,
+      "name": "Smithing Stone [4] - 3x Southern Aeonia Swamp Bank",
+      "lat": -184.429687,
+      "lng": 143.144746,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3410,
+      "name": "Somber Smithing Stone [9] A",
+      "lat": -70.46875,
+      "lng": 157.24798,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3455,
+      "name": "Smithing Stone [1] - 3x Raya Lucaria Crystal Tunnel",
+      "lat": -125.957627,
+      "lng": 67.427873,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3502,
+      "name": "Smithing Stone [3] - 8x Raya Lucaria Crystal Tunnel",
+      "lat": -126.257812,
+      "lng": 66.168455,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3503,
+      "name": "Smithing Stone [2] - 5x Raya Lucaria Crystal Tunnel",
+      "lat": -126.257812,
+      "lng": 66.75458,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3514,
+      "name": "Somber Smithing Stone [8] B",
+      "lat": -72.421875,
+      "lng": 156.294678,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3537,
+      "name": "Smithing Stone [7] x3 - Freezing Lake",
+      "lat": -63.671875,
+      "lng": 165.348203,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3549,
+      "name": "Somber Smithing Stone [8] - East of the Church of Repose",
+      "lat": -88.960937,
+      "lng": 159.137429,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3556,
+      "name": "Smithing Stone [6] E - Volcano Manor",
+      "lat": -90.757812,
+      "lng": 67.738519,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3558,
+      "name": "Smithing Stone [4] B - Volcano Manor",
+      "lat": -90.140625,
+      "lng": 67.972857,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3563,
+      "name": "Somber Smithing Stone [7] - Flame Peak",
+      "lat": -80.117187,
+      "lng": 164.895289,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3667,
+      "name": "Smithing Stone [4] G",
+      "lat": -103.140625,
+      "lng": 115.958055,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3687,
+      "name": "Smithing Stone [8] A - Crumbling Farum Azula",
+      "lat": -130.4375,
+      "lng": 222.13093,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3753,
+      "name": "Smithing Stone [6] A - Crumbling Farum Azula",
+      "lat": -129.851562,
+      "lng": 217.575398,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3755,
+      "name": "Smithing Stone [8] B - Crumbling Farum Azula",
+      "lat": -129.671875,
+      "lng": 216.559585,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3763,
+      "name": "Smithing Stone [5] - 1x Castle Sol",
+      "lat": -61.242187,
+      "lng": 158.043476,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3764,
+      "name": "Smithing Stone [4] - 8x Gael Tunnel",
+      "lat": -174.0625,
+      "lng": 128.590167,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3766,
+      "name": "Somber Smithing Stone [2] - Gael Tunnel",
+      "lat": -174.523437,
+      "lng": 128.8324,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3768,
+      "name": "Somber Smithing Stone [4] - Gael Tunnel",
+      "lat": -173.585937,
+      "lng": 130.230781,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3801,
+      "name": "Smithing Stone [7] - 3x Castle Sol",
+      "lat": -62.171875,
+      "lng": 158.551383,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3805,
+      "name": "Smithing Stone [6] B - Castle Sol",
+      "lat": -60.851562,
+      "lng": 159.473339,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3836,
+      "name": "Smithing Stone [4] I",
+      "lat": -101.617187,
+      "lng": 116.106618,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3870,
+      "name": "Smithing Stone [1] - Highroad Cave",
+      "lat": -172.507812,
+      "lng": 109.652851,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3875,
+      "name": "Smithing Stone [2] - Highroad Cave",
+      "lat": -173.140625,
+      "lng": 109.564775,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3888,
+      "name": "Smithing Stone [1] - 8x Limgrave Tunnels",
+      "lat": -188.828125,
+      "lng": 103.465385,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3889,
+      "name": "Somber Smithing Stone [1] - Limgrave Tunnels",
+      "lat": -188.046875,
+      "lng": 103.527896,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3894,
+      "name": "Smithing Stone [1] - 9x Morne Tunnel",
+      "lat": -213.070312,
+      "lng": 108.185684,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3895,
+      "name": "Somber Smithing Stone [1] - 3x Morne Tunnel",
+      "lat": -213.171875,
+      "lng": 108.723219,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3914,
+      "name": "Smithing Stone [7] A - Crumbling Farum Azula",
+      "lat": -129.101562,
+      "lng": 213.770006,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3937,
+      "name": "Smithing Stone [8] E - Crumbling Farum Azula",
+      "lat": -131.984375,
+      "lng": 215.504702,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3941,
+      "name": "Smithing Stone [8] D - Crumbling Farum Azula",
+      "lat": -130.640625,
+      "lng": 213.668424,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3944,
+      "name": "Somber Smithing Stone [9] A - Crumbling Farum Azula",
+      "lat": -130,
+      "lng": 213.707494,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3948,
+      "name": "Somber Smithing Stone [7] A - Crumbling Farum Azula",
+      "lat": -126.242187,
+      "lng": 213.777877,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3949,
+      "name": "Smithing Stone (5) - 2x Leyndell Royal Capital",
+      "lat": -104.867187,
+      "lng": 112.707396,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3953,
+      "name": "Smithing Stone [2] D - Stormveil Castle",
+      "lat": -176.71875,
+      "lng": 87.504436,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 3955,
+      "name": "Somber Smithing Stone [9] B - Crumbling Farum Azula",
+      "lat": -124.445312,
+      "lng": 213.957135,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 3959,
+      "name": "Smithing Stone [6] C - Crumbling Farum Azula",
+      "lat": -124.9375,
+      "lng": 215.441773,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4102,
+      "name": "Somber Smithing Stone [1] - Raya Lucaria Crystal Tunnel",
+      "lat": -125.867187,
+      "lng": 65.730719,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4111,
+      "name": "Smithing Stone [6] - 7x Leyndell, Royal Capital",
+      "lat": -105.257812,
+      "lng": 113.528341,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4124,
+      "name": "Somber Smithing Stone [5] - 3x Leyndell, Royal Capital",
+      "lat": -106.375,
+      "lng": 115.932487,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4149,
+      "name": "Somber Smithing Stone [8] - 1x Moonfolk Ruins",
+      "lat": -156.523437,
+      "lng": 51.809333,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4202,
+      "name": "Smithing Stone [8] - 3x Moonlight Altar",
+      "lat": -163.226562,
+      "lng": 44.738677,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4205,
+      "name": "Smithing Stone [7] - 3x Moonlight Altar",
+      "lat": -162.148437,
+      "lng": 44.598026,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4207,
+      "name": "Smithing Stone [7] - 3x Moonlight Altar",
+      "lat": -163.507812,
+      "lng": 45.738664,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4253,
+      "name": "Somber Smithing Stone [5] - Gaol Cave",
+      "lat": -179.953125,
+      "lng": 130.8088,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4254,
+      "name": "Smithing Stone [8] - 3x Lunar Estate Ruins",
+      "lat": -160.835937,
+      "lng": 59.637261,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4267,
+      "name": "Smithing Stone [3] - 3x Jarburg",
+      "lat": -144.796875,
+      "lng": 82.668565,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4284,
+      "name": "Smithing Stone [7] B - Crumbling Farum Azula",
+      "lat": -120.867187,
+      "lng": 216.176089,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4285,
+      "name": "Somber Smithing Stone [9] D - Crumbling Farum Azula",
+      "lat": -121.125,
+      "lng": 215.293113,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4301,
+      "name": "Smithing Stone [8] H - Crumbling Farum Azula",
+      "lat": -124.164062,
+      "lng": 218.349037,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4351,
+      "name": "Smithing Stone [8] G - Crumbling Farum Azula",
+      "lat": -125.75,
+      "lng": 215.543355,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4353,
+      "name": "Ancient Dragon Smithing Stone (B) - Crumbling Farum Azula",
+      "lat": -121.796875,
+      "lng": 215.754136,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4356,
+      "name": "Smithing Stone [6] D - Crumbling Farum Azula",
+      "lat": -119.476562,
+      "lng": 219.535691,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4357,
+      "name": "Somber Ancient Dragon Smithing Stone - Crumbling Farum Azula",
+      "lat": -123.554687,
+      "lng": 220.669722,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4413,
+      "name": "Ancient Dragon Smithing Stone (Consecrated Snowfield Boss Drop)",
+      "lat": -77.390625,
+      "lng": 139.255129,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4495,
+      "name": "Somber Smithing Stone [8] - Yelough Anix Tunnel",
+      "lat": -77.257812,
+      "lng": 132.371041,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4496,
+      "name": "Ancient Dragon Smithing Stone - 1x (Yelough Anix Tunnel)",
+      "lat": -78.6875,
+      "lng": 132.55103,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4509,
+      "name": "Somber Smithing Stone [8] B - Crumbling Farum Azula",
+      "lat": -119.960937,
+      "lng": 218.746483,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4521,
+      "name": "Somber Smithing Stone [5] - Deep Siofra Well Ravine",
+      "lat": -172.625,
+      "lng": 140.707603,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4526,
+      "name": "Somber Smithing Stone [6] B - Volcano Manor",
+      "lat": -90.84375,
+      "lng": 61.191656,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4529,
+      "name": "Somber Smithing Stone [5]",
+      "lat": -91.21875,
+      "lng": 64.246514,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4537,
+      "name": "Smithing Stone [6] C - Volcano Manor",
+      "lat": -88.507812,
+      "lng": 61.394814,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4540,
+      "name": "Smithing Stone [7] - Volcano Manor",
+      "lat": -89.671875,
+      "lng": 64.277573,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4550,
+      "name": "Somber Smithing Stone [5] B - Volcano Manor",
+      "lat": -88.984375,
+      "lng": 64.65284,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4555,
+      "name": "Somber Smithing Stone [2] - Volcano Manor",
+      "lat": -89.28125,
+      "lng": 65.426421,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4600,
+      "name": "Smithing Stone [7] - Subterranean Shunning-Grounds",
+      "lat": -98.345313,
+      "lng": 117.268446,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4602,
+      "name": "Smithing Stone [8] - Subterranean Shunning-Grounds",
+      "lat": -101.78125,
+      "lng": 117.818354,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4610,
+      "name": "Smithing Stone [8]",
+      "lat": -42.65625,
+      "lng": 147.8089,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4612,
+      "name": "Somber Smithing Stone [8]",
+      "lat": -42.1875,
+      "lng": 147.418272,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4616,
+      "name": "Somber Smithing Stone [9]",
+      "lat": -43.398437,
+      "lng": 146.879205,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4618,
+      "name": "Ancient Dragon Smithing Stone",
+      "lat": -42.765625,
+      "lng": 147.152638,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4619,
+      "name": "Smithing Stone [6]",
+      "lat": -43.921875,
+      "lng": 147.137019,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4622,
+      "name": "Smithing Stone [6]",
+      "lat": -44.382812,
+      "lng": 147.410461,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4626,
+      "name": "Smithing Stone [7]",
+      "lat": -45.15625,
+      "lng": 149.558899,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4628,
+      "name": "Smithing Stone [8] - 4x Consecrated Snowfield",
+      "lat": -45.148437,
+      "lng": 149.957394,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4638,
+      "name": "Somber Smithing Stone [9] - Yelough Anix Tunnel",
+      "lat": -77.03125,
+      "lng": 133.277847,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4650,
+      "name": "Smithing Stone [8] - Yelough Anix Ruins",
+      "lat": -71.414062,
+      "lng": 131.94923,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4661,
+      "name": "Ancient Dragon Smithing Stone",
+      "lat": -41.3125,
+      "lng": 150.723026,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4667,
+      "name": "Somber Smithing Stone [4] - 1x Caelid Scarab Drop",
+      "lat": -173.679687,
+      "lng": 129.941665,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4669,
+      "name": "Smithing Stone [5] - 1x Caelid Treasure",
+      "lat": -174.4375,
+      "lng": 131.598222,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4819,
+      "name": "Smithing Stone [7] - Elphael, Brace of the Haligtree",
+      "lat": -38.485937,
+      "lng": 149.557586,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4822,
+      "name": "Smithing Stone [7] - Elphael, Brace of the Haligtree",
+      "lat": -36.451563,
+      "lng": 149.205959,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4825,
+      "name": "Smithing Stone [8] - Elphael, Brace of the Haligtree",
+      "lat": -37.7125,
+      "lng": 149.510584,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 4901,
+      "name": "Somber Ancient Dragon Smithing Stone - Elphael, Brace of the Haligtree",
+      "lat": -39.823438,
+      "lng": 149.869885,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 4951,
+      "name": "Somber Smithing Stone [9] - Elphael, Brace of the Haligtree",
+      "lat": -36.871875,
+      "lng": 150.046411,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 5302,
+      "name": "Somber Smithing Stone [9] - Elphael, Brace of the Haligtree",
+      "lat": -36.8625,
+      "lng": 148.605877,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 5306,
+      "name": "Smithing Stone [8] - Elphael, Brace of the Haligtree",
+      "lat": -35.81875,
+      "lng": 147.846784,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 5308,
+      "name": "Smithing Stone [8] - Elphael, Brace of the Haligtree",
+      "lat": -35.034375,
+      "lng": 147.166904,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 5354,
+      "name": "Smithing Stone [6] - Elphael, Brace of the Haligtree",
+      "lat": -35.126563,
+      "lng": 146.143472,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 5413,
+      "name": "Somber Smithing Stone [4] - 1x Southern Caelid",
+      "lat": -193.171875,
+      "lng": 142.324238,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 5601,
+      "name": "Somber Smithing Stone [9] - Farum Greatbridge",
+      "lat": -156.460937,
+      "lng": 158.08234,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6055,
+      "name": "Somber Smithing Stone [1]",
+      "lat": -229.87,
+      "lng": 105.71,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6056,
+      "name": "Smithing Stone [1]",
+      "lat": -215.382812,
+      "lng": 115.840069,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6057,
+      "name": "Smithing Stone [1]",
+      "lat": -195.234375,
+      "lng": 102.699078,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6060,
+      "name": "Smithing Stone [1]",
+      "lat": -180.921875,
+      "lng": 112.809771,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6061,
+      "name": "Smithing Stone [2]",
+      "lat": -202.351562,
+      "lng": 93.543463,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6062,
+      "name": "Smithing Stone [2] C - Stormveil Castle",
+      "lat": -179.46875,
+      "lng": 85.699852,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6063,
+      "name": "Smithing Stone [2] F - Stormveil Castle",
+      "lat": -174.960937,
+      "lng": 86.519878,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6101,
+      "name": "Smithing Stone (5) - 1x Mt. Gelmir",
+      "lat": -86.317463,
+      "lng": 70.239225,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6209,
+      "name": "Smithing Stone [7] - 3x First Church of Marika",
+      "lat": -73.820312,
+      "lng": 175.560351,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6398,
+      "name": "Ancient Dragon Smithing Stone",
+      "lat": -69.328125,
+      "lng": 151.418775,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6399,
+      "name": "Ancient Dragon Smithing Stone - Southeast of the Church of Repose",
+      "lat": -90.71875,
+      "lng": 156.61344975210199,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6400,
+      "name": "Somber Smithing Stone [4]",
+      "lat": -113.859375,
+      "lng": 59.699405,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6402,
+      "name": "Smithing Stone [5] A - Raya Lucaria Academy",
+      "lat": -136.984375,
+      "lng": 56.918455,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6403,
+      "name": "Smithing Stone [2] - Raya Lucaria Academy",
+      "lat": -141.382812,
+      "lng": 56.418429,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6405,
+      "name": "Somber Smithing Stone [1]",
+      "lat": -150.289062,
+      "lng": 55.332872,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6407,
+      "name": "Smithing Stone [2] - 3x (Liurnia South Gazebo)",
+      "lat": -149.796875,
+      "lng": 71.731502,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6408,
+      "name": "Somber Smithing Stone [2] - 2x Eastern Liurnia of the Lakes Cliffs",
+      "lat": -163.757812,
+      "lng": 85.082588,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6409,
+      "name": "Smithing Stone [4]",
+      "lat": -139.554687,
+      "lng": 78.551063,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6413,
+      "name": "Somber Smithing Stone [4] - West Caelid",
+      "lat": -178.359375,
+      "lng": 132.36428,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6414,
+      "name": "Smithing Stone [6] A - Redmane Castle",
+      "lat": -195.453125,
+      "lng": 155.332268,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6415,
+      "name": "Smithing Stone [3] A - Redmane Castle",
+      "lat": -195.25,
+      "lng": 155.847625,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6417,
+      "name": "Smithing Stone [5] A - Redmane Castle",
+      "lat": -197.632812,
+      "lng": 157.379323,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6418,
+      "name": "Smithing Stone [3] B - Redmane Castle",
+      "lat": -197,
+      "lng": 158.730763,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6419,
+      "name": "Smithing Stone [5] B - Redmane Castle",
+      "lat": -196.984375,
+      "lng": 159.520121,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6420,
+      "name": "Smithing Stone [4] B - Redmane Castle",
+      "lat": -195.828125,
+      "lng": 158.176182,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6421,
+      "name": "Smithing Stone [4] A - Redmane Castle",
+      "lat": -194.992187,
+      "lng": 157.386973,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6422,
+      "name": "Smithing Stone [6] B - Redmane Castle",
+      "lat": -194.71875,
+      "lng": 159.168494,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6423,
+      "name": "Smithing Stone [6] C - Redmane Castle",
+      "lat": -190.75,
+      "lng": 157.644916,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6424,
+      "name": "Somber Smithing Stone [5] - Redmane Castle",
+      "lat": -191.585937,
+      "lng": 159.012164,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6426,
+      "name": "Smithing Stone [8]",
+      "lat": -172.453125,
+      "lng": 149.78598,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6427,
+      "name": "Smithing Stone [7] x2",
+      "lat": -172.742187,
+      "lng": 150.355697,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6428,
+      "name": "Somber Smithing Stone [4] - East of the Minor Erdtree (Caelid)",
+      "lat": -166.140625,
+      "lng": 132.043902,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6664,
+      "name": "Somber Smithing Stone [6] - 1x Leyndel Royal Capital",
+      "lat": -99.40625,
+      "lng": 121.483095,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6668,
+      "name": "Smithing Stone [5] - 1x Treasure Leyndell Royal Capital",
+      "lat": -109.390625,
+      "lng": 114.145794,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6862,
+      "name": "Somber Smithing Stone [6] A - Volcano Manor",
+      "lat": -87.445312,
+      "lng": 63.761934,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6863,
+      "name": "Somber Smithing Stone [7] - Volcano Manor",
+      "lat": -88.320312,
+      "lng": 63.47986,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6864,
+      "name": "Smithing Stone [6] D - Volcano Manor",
+      "lat": -90.203125,
+      "lng": 61.472958,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6865,
+      "name": "Smithing Stone [4] A - Volcano Manor",
+      "lat": -90.625,
+      "lng": 60.260513,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6866,
+      "name": "Somber Smithing Stone [5] A - Volcano Manor",
+      "lat": -88.382812,
+      "lng": 61.051001,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 6867,
+      "name": "Smithing Stone [5] - Volcano Manor",
+      "lat": -88.828125,
+      "lng": 61.160396,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6868,
+      "name": "Smithing Stone [6] B - Volcano Manor",
+      "lat": -88.046875,
+      "lng": 61.363556,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6871,
+      "name": "Smithing Stone [3] - 3x Eastern Academy Gate Town",
+      "lat": -141.367187,
+      "lng": 73.402733,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 6900,
+      "name": "Somber Smithing Stone [3] - 4x Raya Lucaria Crystal Tunnel",
+      "lat": -124.757812,
+      "lng": 65.769738,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 7008,
+      "name": "Smithing Stone [2] C - Castle Morne",
+      "lat": -227.945312,
+      "lng": 107.355991,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 7030,
+      "name": "Smithing Stone [3]",
+      "lat": -146.695312,
+      "lng": 80.610287,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 7201,
+      "name": "Smithing Stone [4] - Lakeside Crystal Cave",
+      "lat": -162.820312,
+      "lng": 65.667651,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 7202,
+      "name": "Smithing Stone [2] - Lakeside Crystal Cave",
+      "lat": -162.78125,
+      "lng": 65.895064,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 7351,
+      "name": "Smithing Stone [5] - West from The Shaded Castle",
+      "lat": -80.554687,
+      "lng": 75.690796,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 7401,
+      "name": "Somber Smithing Stone [7] - 1x near Zamor Ruins",
+      "lat": -88.382812,
+      "lng": 149.262551,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 7452,
+      "name": "Smithing Stone [5] - 6x Old Altus Tunnel",
+      "lat": -92.03125,
+      "lng": 77.684117,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 7453,
+      "name": "Somber Smithing Stone [6] - 2x Old Altus Tunnel",
+      "lat": -91.8125,
+      "lng": 79.168767,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 7454,
+      "name": "Somber Smithing Stone [5] - Old Altus Tunnel",
+      "lat": -92.265625,
+      "lng": 78.677196,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 7455,
+      "name": "Somber Smithing Stone [4] - Old Altus Tunnel",
+      "lat": -92.398437,
+      "lng": 78.019754,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 7676,
+      "name": "Smithing Stone [5] A - The Shaded Castle",
+      "lat": -84.140625,
+      "lng": 81.801739,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 7677,
+      "name": "Smithing Stone [4] B - The Shaded Castle",
+      "lat": -81.601562,
+      "lng": 82.575347,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 7713,
+      "name": "Smithing Stone [2] - Altus Tunnel",
+      "lat": -93.09375,
+      "lng": 92.394755,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 7802,
+      "name": "Somber Smithing Stone [9]",
+      "lat": -57.226562,
+      "lng": 135.801515,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 7908,
+      "name": "Somber Smithing Stone [2] - 1x Blaidd Quest Reward",
+      "lat": -203.8125,
+      "lng": 113.355391,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 7909,
+      "name": "Somber Smithing Stone [6] - Sellia Crystal Tunnel",
+      "lat": -172.851562,
+      "lng": 145.246371,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 7919,
+      "name": "Somber Ancient Dragon Smithing Stone",
+      "lat": -69.257812,
+      "lng": 137.660415,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 7951,
+      "name": "Smithing Stone [6] - 3x Sealed Tunnel",
+      "lat": -104.929687,
+      "lng": 106.387099,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8056,
+      "name": "Somber Smithing Stone [2] - Academy Gate Town",
+      "lat": -141.265625,
+      "lng": 66.722842,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8058,
+      "name": "Smithing Stone [3] - 1x Academy Gate Town",
+      "lat": -142.835937,
+      "lng": 60.301109,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8160,
+      "name": "Smithing Stone [3] - 2x Raya Lucaria Rooftops",
+      "lat": -137.023437,
+      "lng": 54.605926,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8162,
+      "name": "Smithing Stone [4] - 1x Raya Lucaria Rooftop",
+      "lat": -137.523437,
+      "lng": 54.121532,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8164,
+      "name": "Smithing Stone [5] - 1x Yura Questline Reward",
+      "lat": -131.117187,
+      "lng": 55.832416,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8280,
+      "name": "Somber Smithing Stone [2] - Liurnia Highway North",
+      "lat": -151.742187,
+      "lng": 80.724989,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8299,
+      "name": "Somber Ancient Dragon Smithing Stone - 1x Elphael, Brace of the Haligtree",
+      "lat": -36.265625,
+      "lng": 148.499286,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8551,
+      "name": "Smithing Stone [6] A - Castle Sol",
+      "lat": -60.820312,
+      "lng": 157.566826,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8558,
+      "name": "Smithing Stone [2] - 1x Bellum Highway East",
+      "lat": -114.273437,
+      "lng": 74.762171,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8603,
+      "name": "Smithing Stone [8] - Yelough Anix Tunnel",
+      "lat": -78.320312,
+      "lng": 133.215335,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8606,
+      "name": "Somber Smithing Stone [7] - Consecrated Snowfield",
+      "lat": -67.148437,
+      "lng": 144.848015,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8607,
+      "name": "Somber Smithing Stone [9] - West Minor Erdtree (Consecrated Snowfield)",
+      "lat": -66.492187,
+      "lng": 145.316852,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8608,
+      "name": "Somber Smithing Stone [8] (A)- Consecrated Snowfield",
+      "lat": -66,
+      "lng": 144.32448,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8609,
+      "name": "Smithing Stone [7] - 3x West Consecrated Snowfield",
+      "lat": -64.71875,
+      "lng": 127.480068,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8610,
+      "name": "Smithing Stone [8] - West Consecrated Snowfield",
+      "lat": -64.289062,
+      "lng": 127.636347,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8612,
+      "name": "Ancient Dragon Smithing Stone (A) - Crumbling Farum Azula",
+      "lat": -129.734375,
+      "lng": 216.997166,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8613,
+      "name": "Smithing Stone [8] C - Crumbling Farum Azula",
+      "lat": -129.539062,
+      "lng": 215.121819,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8615,
+      "name": "Smithing Stone [6] B - Crumbling Farum Azula",
+      "lat": -128.148437,
+      "lng": 213.684052,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8617,
+      "name": "Smithing Stone [8] F - Crumbling Farum Azula",
+      "lat": -127.132812,
+      "lng": 212.660425,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8618,
+      "name": "Somber Smithing Stone [9] - Western Consecrated Snowfield",
+      "lat": -76.944444,
+      "lng": 142.539968,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8653,
+      "name": "Smithing Stone (5) - North Caelid",
+      "lat": -170.8125,
+      "lng": 142.863667,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8702,
+      "name": "Somber Smithing Stone [9] C - Crumbling Farum Azula",
+      "lat": -124.953125,
+      "lng": 215.129215,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8705,
+      "name": "Smithing Stone [7] C - Crumbling Farum Azula",
+      "lat": -122.96875,
+      "lng": 216.902982,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8710,
+      "name": "Smithing Stone [7] D - Crumbling Farum Azula",
+      "lat": -125.578125,
+      "lng": 212.53527,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8711,
+      "name": "Somber Smithing Stone [8] A - Crumbling Farum Azula",
+      "lat": -126.359375,
+      "lng": 213.184017,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8712,
+      "name": "Smithing Stone [8] I - Crumbling Farum Azula",
+      "lat": -126.476562,
+      "lng": 213.480889,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8713,
+      "name": "Smithing Stone [8] J - Crumbling Farum Azula",
+      "lat": -118.5,
+      "lng": 218.340157,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8719,
+      "name": "Ancient Dragon Smithing Stone (C) - Crumbling Farum Azula",
+      "lat": -123.5625,
+      "lng": 220.286838,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8722,
+      "name": "Smithing Stone [7] E - Crumbling Farum Azula",
+      "lat": -121.820312,
+      "lng": 220.192758,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8725,
+      "name": "Somber Smithing Stone [7] B - Crumbling Farum Azula",
+      "lat": -123.101562,
+      "lng": 218.347965,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8732,
+      "name": "Smithing Stone [8] - Consecrated Snowfields Central Area",
+      "lat": -68.015625,
+      "lng": 141.387668,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8813,
+      "name": "Smithing Stone [2] - 3x Caria Manor Entrance",
+      "lat": -109.015625,
+      "lng": 57.637461,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 8818,
+      "name": "Somber Smithing Stone [3] - Caria Manor",
+      "lat": -110.195312,
+      "lng": 57.386874,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 8820,
+      "name": "Smithing Stone [4] - Caria Manor Upper Level",
+      "lat": -105.734375,
+      "lng": 59.957663,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 9101,
+      "name": "Somber Smithing Stone [7] - Forbidden Lands",
+      "lat": -97.617187,
+      "lng": 142.518811,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 9814,
+      "name": "Somber Smithing Stone [5] - Altus Plateau",
+      "lat": -90.953125,
+      "lng": 87.604032,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 9836,
+      "name": "Smithing Stone [8] - 3x Consecrated Snowfield",
+      "lat": -69.668243,
+      "lng": 148.170332,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 9845,
+      "name": "Somber Smithing Stone [8] - Castle Sol",
+      "lat": -62.75,
+      "lng": 157.582197,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 9846,
+      "name": "Somber Smithing Stone [8] - Consecrated Snowfield",
+      "lat": -74,
+      "lng": 147.6,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 10104,
+      "name": "Smithing Stone [6] - 3x Hermit's Shack",
+      "lat": -94.679687,
+      "lng": 61.063335,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 10201,
+      "name": "Somber Smithing Stone [3] - Carian Study Hall",
+      "lat": -140.6875,
+      "lng": 79.955456,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 10375,
+      "name": "Somber Smithing Stone [4] - Sellia Hideaway",
+      "lat": -172.668427,
+      "lng": 151.594438,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 12359,
+      "name": "Smithing Stone [8] - Miquella's Haligtree",
+      "lat": -49.675949,
+      "lng": 147.867687,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 14301,
+      "name": "Smithing Stone [3] - South Liurnia",
+      "lat": -154.9,
+      "lng": 76.64,
+      "somber": false
+    },
+    {
+      "code": "overworld",
+      "markerId": 14303,
+      "name": "Somber Smithing Stone [1] - Artist's Shack (Limgrave)",
+      "lat": -183.24,
+      "lng": 111.2,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 15451,
+      "name": "Somber Smithing Stone [8] - Church of the Eclipse Castle Sol",
+      "lat": -60.4834,
+      "lng": 157.574364,
+      "somber": true
+    },
+    {
+      "code": "overworld",
+      "markerId": 26852,
+      "name": "Smithing Stone [2]",
+      "lat": -127.6171875,
+      "lng": 55.98690181753793,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1160,
+      "name": "Smithing Stone [4]",
+      "lat": -177.65625,
+      "lng": 134.962098,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1167,
+      "name": "Somber Smithing Stone [2]",
+      "lat": -183.171875,
+      "lng": 132.555497,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 1190,
+      "name": "Smithing Stone [2]",
+      "lat": -185.867187,
+      "lng": 125.87984,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1203,
+      "name": "Smithing Stone [4]",
+      "lat": -183.429687,
+      "lng": 125.9572,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1304,
+      "name": "Somber Smithing Stone [2]",
+      "lat": -180.78125,
+      "lng": 138.789939,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 1312,
+      "name": "Somber Smithing Stone [5]",
+      "lat": -177.484375,
+      "lng": 133.23901,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 1316,
+      "name": "Smithing Stone [2] - 3x Siofra River",
+      "lat": -177.132812,
+      "lng": 139.379436,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1317,
+      "name": "Smithing Stone [2]",
+      "lat": -183.363824,
+      "lng": 134.528671,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1318,
+      "name": "Smithing Stone [3]",
+      "lat": -181.466154,
+      "lng": 139.862965,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1346,
+      "name": "Smithing Stone [4]",
+      "lat": -185.5,
+      "lng": 124.962153,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1369,
+      "name": "Smithing Stone [1] - Ainsel River Sluice Gate",
+      "lat": -131.429687,
+      "lng": 71.238694,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1370,
+      "name": "Smithing Stone [2] - 3x Ainsel River Downstream",
+      "lat": -130.179687,
+      "lng": 66.363336,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1401,
+      "name": "Somber Smithing Stone [3] - Ainsel River Downstream",
+      "lat": -130.828125,
+      "lng": 64.08168,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 1410,
+      "name": "Smithing Stone [3]",
+      "lat": -131.46875,
+      "lng": 74.816715,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1411,
+      "name": "Smithing Stone [4] - Ainsel River Well Sluice Gate",
+      "lat": -131.085937,
+      "lng": 70.988744,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1415,
+      "name": "Smithing Stone [3] - 2x Uhl Palace Ruins",
+      "lat": -128.007812,
+      "lng": 69.980034,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1416,
+      "name": "Smithing Stone [1] - 3x Uhl Palace Ruins",
+      "lat": -128.9375,
+      "lng": 69.918654,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1457,
+      "name": "Smithing Stone [3]",
+      "lat": -130.945312,
+      "lng": 76.449747,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1459,
+      "name": "Smithing Stone [3] - Ainsel River Sluice Gate",
+      "lat": -131.320312,
+      "lng": 72.980974,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1464,
+      "name": "Smithing Stone [3] - 3x Uhl Palace Ruins",
+      "lat": -128.984375,
+      "lng": 67.894856,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1539,
+      "name": "Smithing Stone [5]",
+      "lat": -187.8125,
+      "lng": 120.730826,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1552,
+      "name": "Smithing Stone [3]",
+      "lat": -186.15625,
+      "lng": 122.084986,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1555,
+      "name": "Somber Smithing Stone [4]",
+      "lat": -184.1875,
+      "lng": 123.882194,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 1557,
+      "name": "Smithing Stone [5]",
+      "lat": -187.421875,
+      "lng": 125.585635,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1567,
+      "name": "Somber Smithing Stone [5]",
+      "lat": -186.109375,
+      "lng": 129.551353,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 1577,
+      "name": "Somber Smithing Stone [5]",
+      "lat": -178.476562,
+      "lng": 126.301138,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 1581,
+      "name": "Smithing Stone [5]",
+      "lat": -181.023437,
+      "lng": 132.753839,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1586,
+      "name": "Smithing Stone [5]",
+      "lat": -179.8125,
+      "lng": 137.112211,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1588,
+      "name": "Smithing Stone [2]",
+      "lat": -178.171875,
+      "lng": 133.399348,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1602,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -171.625,
+      "lng": 137.017511,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 1603,
+      "name": "Smithing Stone [5]",
+      "lat": -173.8125,
+      "lng": 136.63397,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1899,
+      "name": "Smithing Stone [3]",
+      "lat": -183.35156,
+      "lng": 129.80091,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 1966,
+      "name": "Smithing Stone [4]",
+      "lat": -124.03125,
+      "lng": 75.481057,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 2714,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -127.351562,
+      "lng": 69.11986,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 2756,
+      "name": "Smithing Stone [6]",
+      "lat": -121.02031,
+      "lng": 64.87769,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 2758,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -119.890625,
+      "lng": 64.221536,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 2759,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -120.195312,
+      "lng": 62.13278,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 2764,
+      "name": "Smithing Stone [6]",
+      "lat": -120.453125,
+      "lng": 63.76782,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 2765,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -122.9375,
+      "lng": 63.27281,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 2772,
+      "name": "Smithing Stone [4]",
+      "lat": -124.65625,
+      "lng": 61.17792,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 2774,
+      "name": "Smithing Stone [5]",
+      "lat": -124.890625,
+      "lng": 60.971416,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 2987,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -129.90625,
+      "lng": 57.42557,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 2989,
+      "name": "Somber Smithing Stone [8]",
+      "lat": -137.14375,
+      "lng": 64.87491,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 2995,
+      "name": "Somber Smithing Stone [8]",
+      "lat": -127.29687,
+      "lng": 60.91638,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 2996,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -129.27344,
+      "lng": 63.42007,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 2999,
+      "name": "Somber Smithing Stone [9]",
+      "lat": -133.8125,
+      "lng": 59.32358,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 3000,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -137.51719,
+      "lng": 60.45958,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 3004,
+      "name": "Smithing Stone [6] - Grand Cloister",
+      "lat": -138.46875,
+      "lng": 57.612721,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 3005,
+      "name": "Smithing Stone [7] - Grand Cloister",
+      "lat": -138.53125,
+      "lng": 57.315808,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 4620,
+      "name": "Smithing Stone [6]",
+      "lat": -178.6625,
+      "lng": 153.962221,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 4625,
+      "name": "Smithing Stone [7]",
+      "lat": -179.448438,
+      "lng": 152.315399,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 4635,
+      "name": "Smithing Stone [7]",
+      "lat": -181.8875,
+      "lng": 149.077754,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 4701,
+      "name": "Somber Ancient Dragon Smithing Stone - Mohgwyn Dynasty Mausoleum",
+      "lat": -183.157813,
+      "lng": 148.916751,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 4805,
+      "name": "Smithing Stone [6]",
+      "lat": -182.80469,
+      "lng": 154.3799,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 4809,
+      "name": "Somber Smithing Stone [9]",
+      "lat": -181.11719,
+      "lng": 154.87916,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 4811,
+      "name": "Smithing Stone [8]",
+      "lat": -180.6875,
+      "lng": 152.7161,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 5109,
+      "name": "Smithing Stone [4]",
+      "lat": -102.609375,
+      "lng": 115.74247,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 5151,
+      "name": "Smithing Stone [6]",
+      "lat": -100.070312,
+      "lng": 114.847957,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 5202,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -96.14,
+      "lng": 115.04,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 5211,
+      "name": "Smithing Stone [4]",
+      "lat": -98,
+      "lng": 110.54,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 5217,
+      "name": "Smithing Stone [6]",
+      "lat": -96.140625,
+      "lng": 112.589827,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 5219,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -94.125,
+      "lng": 110.535549,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 5252,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -90.335937,
+      "lng": 111.754117,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 5254,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -97.734375,
+      "lng": 117.452396,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 5256,
+      "name": "Smithing Stone [5]",
+      "lat": -96.57,
+      "lng": 112.08,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 6396,
+      "name": "Smithing Stone [5] - Grand Cloister",
+      "lat": -140.004688,
+      "lng": 53.911091,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 7913,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -123.91752,
+      "lng": 66.44019,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 9009,
+      "name": "Smithing Stone [6]",
+      "lat": -102.732998,
+      "lng": 122.787373,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 9010,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -99.28993,
+      "lng": 120.673812,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 9013,
+      "name": "Smithing Stone [7]",
+      "lat": -94.83691,
+      "lng": 114.456879,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 9016,
+      "name": "Smithing Stone [5]",
+      "lat": -90.781249,
+      "lng": 109.767535,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 9018,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -93.440972,
+      "lng": 109.681913,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 9019,
+      "name": "Smithing Stone [6]",
+      "lat": -94.082293,
+      "lng": 110.880407,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 9020,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -93.75868,
+      "lng": 108.531013,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 9028,
+      "name": "Somber Smithing Stone [7] - Malformed Star",
+      "lat": -123.045772,
+      "lng": 74.74561,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 9029,
+      "name": "Smithing Stone [6]",
+      "lat": -122.252411,
+      "lng": 67.769274,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 9502,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -96.170151,
+      "lng": 108.069398,
+      "somber": true
+    },
+    {
+      "code": "underground",
+      "markerId": 12452,
+      "name": "Smithing Stone [2] - 3x",
+      "lat": -182.459051,
+      "lng": 139.498601,
+      "somber": false
+    },
+    {
+      "code": "underground",
+      "markerId": 13201,
+      "name": "Smithing Stone [3] - 2x Siofra River",
+      "lat": -179.807304,
+      "lng": 136.630304,
+      "somber": false
+    },
+    {
+      "code": "ashen",
+      "markerId": 7715,
+      "name": "Somber Ancient Dragon Smithing Stone (Ashen Capital)",
+      "lat": -103.914062,
+      "lng": 114.004391,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 654895,
+      "name": "Somber Smithing Stone [3] - Belurat Tower Settlement",
+      "lat": -142.1484375,
+      "lng": 99.52709252635285,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 654901,
+      "name": "Somber Smithing Stone [4] - Belurat Tower Settlement",
+      "lat": -143.15625,
+      "lng": 100.08208230650652,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 654940,
+      "name": "Smithing Stone [2] - Belurat Tower Settlement",
+      "lat": -143.8828125,
+      "lng": 97.15234674075771,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 654952,
+      "name": "Smithing Stone [2] - Belurat Tower Settlement",
+      "lat": -141.3984375,
+      "lng": 100.75422540657215,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 654993,
+      "name": "Somber Ancient Dragon Smithing Stone",
+      "lat": -139.6328125,
+      "lng": 106.14463678102184,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655016,
+      "name": "Smithing Stone [4]",
+      "lat": -156.9296875,
+      "lng": 121.82449863484737,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655037,
+      "name": "Smithing Stone [3] x3",
+      "lat": -150.1953125,
+      "lng": 105.68279265102358,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655044,
+      "name": "Smithing Stone [2] - Ruined Forge of Starfall Past",
+      "lat": -139.94010412693024,
+      "lng": 126.26171875,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655046,
+      "name": "Somber Ancient Dragon Smithing Stone",
+      "lat": -140.1171875,
+      "lng": 128.1370586101718,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655060,
+      "name": "Smithing Stone [5]",
+      "lat": -146.1640625,
+      "lng": 130.5039333816944,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655062,
+      "name": "Smithing Stone [6] x8",
+      "lat": -145.9765625,
+      "lng": 130.40235231790348,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655098,
+      "name": "Smithing Stone [2] - Bonny Gaol",
+      "lat": -142.4375,
+      "lng": 132.8403435443703,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655118,
+      "name": "Somber Smithing Stone [3]",
+      "lat": -137.703125,
+      "lng": 117.90755017935477,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655127,
+      "name": "Somber Smithing Stone [1]",
+      "lat": -135.96875,
+      "lng": 118.64422708942607,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655134,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -137.765625,
+      "lng": 119.74664495179127,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655145,
+      "name": "Somber Smithing Stone [2]",
+      "lat": -139.6796875,
+      "lng": 118.21603183261743,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655148,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -140.2265625,
+      "lng": 120.24622369653628,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655149,
+      "name": "Somber Smithing Stone [5]",
+      "lat": -140.125,
+      "lng": 120.5118972479894,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655152,
+      "name": "Somber Smithing Stone [4]",
+      "lat": -137.640625,
+      "lng": 122.34035639622556,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655156,
+      "name": "Smithing Stone [4] - Ruined Forge Lava Intake",
+      "lat": -148.90625,
+      "lng": 121.05894281414919,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655157,
+      "name": "Smithing Stone [1] - Ruined Forge Lava Intake",
+      "lat": -148.7109375,
+      "lng": 121.1369246850305,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655158,
+      "name": "Smithing Stone [5] - Ruined Forge Lava Intake",
+      "lat": -148.4609375,
+      "lng": 121.07437448302616,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655160,
+      "name": "Smithing Stone [2] - Ruined Forge Lava Intake",
+      "lat": -150.1171875,
+      "lng": 120.08205133080173,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655162,
+      "name": "Smithing Stone [4] - Ruined Forge Lava Intake",
+      "lat": -150.8046875,
+      "lng": 120.79311914238741,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655163,
+      "name": "Smithing Stone [1] - Ruined Forge Lava Intake",
+      "lat": -150.6015625,
+      "lng": 120.86344125553717,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655168,
+      "name": "Smithing Stone [4] - Ruined Forge Lava Intake",
+      "lat": -151.3046875,
+      "lng": 120.50403955234339,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655169,
+      "name": "Smithing Stone [1] - Ruined Forge Lava Intake",
+      "lat": -151.4609375,
+      "lng": 120.5508526009338,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655170,
+      "name": "Smithing Stone [3] - Ruined Forge Lava Intake",
+      "lat": -151.2890625,
+      "lng": 120.68368325910558,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655171,
+      "name": "Smithing Stone [3] - Ruined Forge Lava Intake",
+      "lat": -151.453125,
+      "lng": 120.80088678102184,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655172,
+      "name": "Somber Smithing Stone [2] - Ruined Forge Lava Intake",
+      "lat": -150.9375,
+      "lng": 120.26956414833475,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655173,
+      "name": "Smithing Stone [3] - Ruined Forge Lava Intake",
+      "lat": -150.6328125,
+      "lng": 120.46490335152853,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655174,
+      "name": "Smithing Stone [1] - Ruined Forge Lava Intake",
+      "lat": -150.6640625,
+      "lng": 120.27732644633042,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655176,
+      "name": "Smithing Stone [4] - Ruined Forge Lava Intake",
+      "lat": -151.25,
+      "lng": 120.16793649254191,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655177,
+      "name": "Smithing Stone [4] - Ruined Forge Lava Intake",
+      "lat": -151.8046875,
+      "lng": 120.08198724313664,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655178,
+      "name": "Smithing Stone [3] - Ruined Forge Lava Intake",
+      "lat": -151.859375,
+      "lng": 120.25405450613191,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655180,
+      "name": "Somber Smithing Stone [6] - Ruined Forge Lava Intake",
+      "lat": -151.46875,
+      "lng": 120.26186807425967,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655181,
+      "name": "Smithing Stone [1] - Ruined Forge Lava Intake",
+      "lat": -151.5390625,
+      "lng": 119.79305398659457,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655182,
+      "name": "Smithing Stone [4] - Ruined Forge Lava Intake",
+      "lat": -150.78125,
+      "lng": 119.05076501445818,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655183,
+      "name": "Smithing Stone [7] - Ruined Forge Lava Intake",
+      "lat": -151.6015625,
+      "lng": 120.01964746229936,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655184,
+      "name": "Smithing Stone [1] - Ruined Forge Lava Intake",
+      "lat": -150.890625,
+      "lng": 119.30853906185912,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655186,
+      "name": "Smithing Stone [1] - Ruined Forge Lava Intake",
+      "lat": -150.5390625,
+      "lng": 118.9256742235993,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655187,
+      "name": "Smithing Stone [4] - Ruined Forge Lava Intake",
+      "lat": -150.34375,
+      "lng": 119.02731469692516,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655190,
+      "name": "Ancient Dragon Smithing Stone  - Ruined Forge Lava Intake",
+      "lat": -149.359375,
+      "lng": 121.01977456950179,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655228,
+      "name": "Smithing Stone [4] x4",
+      "lat": -157.390625,
+      "lng": 107.37103663064339,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655270,
+      "name": "Smithing Stone [8]",
+      "lat": -145.109375,
+      "lng": 130.7540149854051,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655300,
+      "name": "Smithing Stone [3] x3",
+      "lat": -133.6953125,
+      "lng": 114.56633199483642,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655336,
+      "name": "Smithing Stone [3]",
+      "lat": -123.4140625,
+      "lng": 124.67575433318066,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655338,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -119.0078125,
+      "lng": 121.8793674675631,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655361,
+      "name": "Ancient Dragon Smithing Stone - Taylew's Ruined Forge",
+      "lat": -116.625,
+      "lng": 121.07390316555474,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655368,
+      "name": "Somber Smithing Stone [3] - Taylew's Ruined Forge",
+      "lat": -115.5625,
+      "lng": 121.98036879112594,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655373,
+      "name": "Somber Smithing Stone [8] - Taylew's Ruined Forge",
+      "lat": -115.6171875,
+      "lng": 121.59743634047706,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655384,
+      "name": "Ancient Dragon Smithing Stone - Taylew's Ruined Forge",
+      "lat": -116.8125,
+      "lng": 121.37120084879363,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655385,
+      "name": "Somber Ancient Dragon Smithing Stone",
+      "lat": -164.421875,
+      "lng": 155.13791682850484,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655412,
+      "name": "Smithing Stone [7] x2",
+      "lat": -126.8359375,
+      "lng": 107.79372700945896,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655427,
+      "name": "Somber Smithing Stone [3]",
+      "lat": -131.1953125,
+      "lng": 107.8167446821879,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655432,
+      "name": "Smithing Stone [7]",
+      "lat": -117.1640625,
+      "lng": 118.35542591048255,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655440,
+      "name": "Somber Smithing Stone (2)",
+      "lat": -134.84375,
+      "lng": 114.99618656895449,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655441,
+      "name": "Smithing Stone [7] x8",
+      "lat": -135.03125,
+      "lng": 116.26976829532992,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655479,
+      "name": "Smithing Stone [4] x4",
+      "lat": -117.50260400772095,
+      "lng": 131.60546875,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655481,
+      "name": "Somber Smithing Stone [5]",
+      "lat": -120.265625,
+      "lng": 129.7302902520106,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655491,
+      "name": "Somber Smithing Stone [5]",
+      "lat": -119.5859375,
+      "lng": 131.55874940024677,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655498,
+      "name": "Somber Smithing Stone [9]",
+      "lat": -116.9921875,
+      "lng": 129.76935989193018,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655506,
+      "name": "Smithing Stone [7] x4",
+      "lat": -117.4765625,
+      "lng": 128.28503772733504,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655508,
+      "name": "Somber Smithing Stone [8]",
+      "lat": -116.109375,
+      "lng": 128.69136198249862,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655530,
+      "name": "Smithing Stone [2] x8",
+      "lat": -119.0390625,
+      "lng": 127.16000773967282,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655533,
+      "name": "Smithing Stone [8] x3",
+      "lat": -120.2109375,
+      "lng": 128.20707408951745,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655551,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -125.40560654927131,
+      "lng": 126.54451306030832,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655552,
+      "name": "Ancient Dragon Smithing Stone - Dragon's Pit",
+      "lat": -155.92549227414582,
+      "lng": 123.44131026913112,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655576,
+      "name": "Smithing Stone [1] x6",
+      "lat": -118.921875,
+      "lng": 124.26133033837507,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655581,
+      "name": "Smithing Stone [8] x2",
+      "lat": -119.6328125,
+      "lng": 124.6288120030616,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655585,
+      "name": "Smithing Stone [1]",
+      "lat": -118.265625,
+      "lng": 124.52718524378541,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655601,
+      "name": "Smithing Stone [6]",
+      "lat": -117.7109375,
+      "lng": 128.667901634756,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655627,
+      "name": "Somber Smithing Stone [9]",
+      "lat": -118.6953125,
+      "lng": 115.17613253404313,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655635,
+      "name": "Somber Smithing Stone [9]",
+      "lat": -118.78125,
+      "lng": 108.89331032375252,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655640,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -119.1328125,
+      "lng": 108.95582174762383,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655670,
+      "name": "Smithing Stone [8]",
+      "lat": -116.8671875,
+      "lng": 128.36343698302616,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655681,
+      "name": "Smithing Stone [5] x3",
+      "lat": -116.9609375,
+      "lng": 128.86346475434772,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655684,
+      "name": "Smithing Stone [8]",
+      "lat": -133.1640625,
+      "lng": 118.80884988703481,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655686,
+      "name": "Smithing Stone [7] x5",
+      "lat": -115.953125,
+      "lng": 129.7932248870348,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655704,
+      "name": "Somber Ancient Dragon Smithing Stone",
+      "lat": -174.49479162693024,
+      "lng": 121.25390625,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655705,
+      "name": "Smithing Stone [3]",
+      "lat": -117.4375,
+      "lng": 122.4920128949356,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655707,
+      "name": "Smithing Stone [4] x2",
+      "lat": -118.05625015497208,
+      "lng": 119.30298255232243,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655712,
+      "name": "Somber Smithing Stone [2]",
+      "lat": -118.32187557220459,
+      "lng": 117.25616802620956,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655784,
+      "name": "Somber Smithing Stone [4]",
+      "lat": -171.67031252384186,
+      "lng": 113.3826030637447,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655803,
+      "name": "Smithing Stone [8]",
+      "lat": -122.33281254768372,
+      "lng": 132.85105765169004,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655812,
+      "name": "Somber Smithing Stone [9] - Enir-Ilim",
+      "lat": -133.0875005722046,
+      "lng": 97.41389738103554,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655819,
+      "name": "Smithing Stone [3] x2",
+      "lat": -136.27031254768372,
+      "lng": 135.87487375449572,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655827,
+      "name": "Somber Smithing Stone [7]",
+      "lat": -130.1015625,
+      "lng": 132.2109920670464,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 655839,
+      "name": "Smithing Stone [1] x6",
+      "lat": -137.828125,
+      "lng": 140.4214974844722,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655844,
+      "name": "Ancient Dragon Smithing Stone",
+      "lat": -167.15885412693024,
+      "lng": 156.00390625,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 655845,
+      "name": "Somber Ancient Dragon Smithing Stone",
+      "lat": -167.33854162693024,
+      "lng": 156.08203125,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 658908,
+      "name": "Smithing Stone [2] x8",
+      "lat": -123.22539067268372,
+      "lng": 98.95721400455857,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 658912,
+      "name": "Ancient Dragon Smithing Stone - Ruined Forge of Starfall Past",
+      "lat": -139.15625,
+      "lng": 125.59015505049351,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 658929,
+      "name": "Somber Smithing Stone [5] - Enir-Ilim",
+      "lat": -135.1796875,
+      "lng": 98.08242731177026,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 658930,
+      "name": "Smithing Stone [8] - Enir-Ilim",
+      "lat": -135.5703125,
+      "lng": 94.13657540725575,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 658934,
+      "name": "Somber Smithing Stone [6] - Enir-Ilim",
+      "lat": -135.234375,
+      "lng": 94.29291192560362,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 658954,
+      "name": "Somber Ancient Dragon Smithing Stone - Enir-Ilim",
+      "lat": -134.1171875,
+      "lng": 95.98849252566924,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 658980,
+      "name": "Ancient Dragon Smithing Stone - Dragon's Pit",
+      "lat": -153.015625,
+      "lng": 124.31661752566924,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 658985,
+      "name": "Smithing Stone (1) - Dragon's Pit",
+      "lat": -155.40104162693024,
+      "lng": 121.48046875,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 658991,
+      "name": "Somber Smithing Stone [1]",
+      "lat": -136.921875,
+      "lng": 116.30017864078779,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 658997,
+      "name": "Smithing Stone (2)",
+      "lat": -156.90885412693024,
+      "lng": 122.60546875,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659002,
+      "name": "Smithing Stone [2] x6",
+      "lat": -174.9296875,
+      "lng": 131.00428735798172,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659012,
+      "name": "Smithing Stone [6] x8",
+      "lat": -146.65625,
+      "lng": 131.70765385098701,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659048,
+      "name": "Smithing Stone [3] - Belurat Tower Settlement",
+      "lat": -144.40885412693024,
+      "lng": 98.30859375,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659051,
+      "name": "Somber Smithing Stone [1] - Belurat Tower Settlement",
+      "lat": -139.45572912693024,
+      "lng": 98.88671875,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659054,
+      "name": "Smithing Stone [4] - Ruined Forge Lava Intake",
+      "lat": -151.28125,
+      "lng": 119.82421161008043,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659079,
+      "name": "Smithing Stone [6] x3",
+      "lat": -166.875,
+      "lng": 115.15265222529463,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659090,
+      "name": "Somber Smithing Stone [6]",
+      "lat": -149.5,
+      "lng": 117.9260309782683,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659091,
+      "name": "Somber Smithing Stone [4]",
+      "lat": -151.1015625,
+      "lng": 117.43377618621996,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659095,
+      "name": "Somber Smithing Stone [4]",
+      "lat": -158.02604162693024,
+      "lng": 103.05078125,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659128,
+      "name": "Smithing Stone [7] x4",
+      "lat": -173.59375,
+      "lng": 120.34015115716687,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659163,
+      "name": "Somber Smithing Stone [8]",
+      "lat": -135.12760412693024,
+      "lng": 137.64453125,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659173,
+      "name": "Smithing Stone [6] x2 - Stone Coffin Fissure",
+      "lat": -184.7734375,
+      "lng": 123.6996404468363,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659182,
+      "name": "Smithing Stone (6) - Belurat Gaol",
+      "lat": -140.7421875,
+      "lng": 103.53528048460062,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659183,
+      "name": "Smithing Stone (3) - Belurat Gaol",
+      "lat": -140.3125,
+      "lng": 103.30086264508317,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659195,
+      "name": "Smithing Stone [7] x2",
+      "lat": -128.8125,
+      "lng": 104.44987543494162,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659204,
+      "name": "Smithing Stone (5) - Dragon's Pit",
+      "lat": -153.18229162693024,
+      "lng": 123.87890625,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659206,
+      "name": "Smithing Stone (4) - Dragon's Pit",
+      "lat": -153.94010412693024,
+      "lng": 123.72265625,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659208,
+      "name": "Somber Smithing Stone [1]",
+      "lat": -120.75,
+      "lng": 100.84779062047113,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659223,
+      "name": "Somber Smithing Stone [8]",
+      "lat": -120.8515625,
+      "lng": 114.85533594749589,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659247,
+      "name": "Ancient Dragon Smithing Stone",
+      "lat": -165.6328125,
+      "lng": 158.80119440181429,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659286,
+      "name": "Smithing Stone [2] - Ruined Forge of Starfall Past",
+      "lat": -139.8203125,
+      "lng": 124.98073578299214,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659287,
+      "name": "Smithing Stone [3] - Ruined Forge of Starfall Past",
+      "lat": -139.3125,
+      "lng": 125.0119914949278,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659288,
+      "name": "Smithing Stone [5] - Ruined Forge of Starfall Past",
+      "lat": -140.0625,
+      "lng": 125.16827005460611,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659289,
+      "name": "Smithing Stone [6] - Ruined Forge of Starfall Past",
+      "lat": -140.21875,
+      "lng": 125.47301324597879,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659291,
+      "name": "Somber Smithing Stone [7] - Ruined Forge of Starfall Past",
+      "lat": -141.36197912693024,
+      "lng": 127.62109375,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659292,
+      "name": "Somber Smithing Stone [8] - Ruined Forge of Starfall Past",
+      "lat": -140.27604162693024,
+      "lng": 126.83984375,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659301,
+      "name": "Smithing Stone [7] x2",
+      "lat": -144.78125,
+      "lng": 136.02418262591945,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659307,
+      "name": "Smithing Stone [5]",
+      "lat": -118.1015625,
+      "lng": 125.49621637106587,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659309,
+      "name": "Somber Smithing Stone [8]",
+      "lat": -118.9375,
+      "lng": 126.77747598421564,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659337,
+      "name": "Smithing Stone [8] x4",
+      "lat": -126.40625,
+      "lng": 112.21491403280605,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659338,
+      "name": "Somber Smithing Stone [9] - Taylew's Ruined Forge",
+      "lat": -115.9296875,
+      "lng": 122.18364694276202,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659343,
+      "name": "Smithing Stone [5] x3",
+      "lat": -142.04166662693024,
+      "lng": 115.26171875,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659347,
+      "name": "Somber Smithing Stone [9]",
+      "lat": -137.20572912693024,
+      "lng": 116.96484375,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659377,
+      "name": "Somber Smithing Stone [8] - Ruined Forge of Starfall Past",
+      "lat": -140.76041662693024,
+      "lng": 124.55859375,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659378,
+      "name": "Somber Smithing Stone [8] - Ruined Forge of Starfall Past",
+      "lat": -138.90104162693024,
+      "lng": 125.48046875,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659379,
+      "name": "Smithing Stone [8] - Ruined Forge of Starfall Past",
+      "lat": -139.97135412693024,
+      "lng": 126.58203125,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659398,
+      "name": "Smithing Stone [8] x2 - Enir-Ilim",
+      "lat": -137.17851567268372,
+      "lng": 96.82438401608059,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659401,
+      "name": "Somber Smithing Stone [5] - Enir-Ilim",
+      "lat": -138.15507817268372,
+      "lng": 96.71503842852084,
+      "somber": true
+    },
+    {
+      "code": "dlc",
+      "markerId": 659418,
+      "name": "Smithing Stone [3] x2",
+      "lat": -131.51041662693024,
+      "lng": 108.88671875,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659420,
+      "name": "Smithing Stone (1) - Taylew's Ruined Forge",
+      "lat": -115.6328125,
+      "lng": 121.15230947838603,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659421,
+      "name": "Smithing Stone (4) - Taylew's Ruined Forge",
+      "lat": -115.90625,
+      "lng": 120.91007771088466,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659423,
+      "name": "Smithing Stone (5) - Taylew's Ruined Forge",
+      "lat": -116.234375,
+      "lng": 120.9651350587187,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659424,
+      "name": "Smithing Stone (6) - Taylew's Ruined Forge",
+      "lat": -116.625,
+      "lng": 120.76197293113691,
+      "somber": false
+    },
+    {
+      "code": "dlc",
+      "markerId": 659425,
+      "name": "Smithing Stone (8) - Taylew's Ruined Forge",
+      "lat": -116.3046875,
+      "lng": 120.5588108035551,
+      "somber": false
+    }
   ]
 }

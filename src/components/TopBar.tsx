@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
-import { items, itemPosition } from '../lib/data'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
+import { items, itemPosition, itemsById } from '../lib/data'
 import { searchItems } from '../lib/search'
 import { CATEGORY_META, type Category } from '../lib/types'
 import { useUi } from '../App'
@@ -9,15 +9,35 @@ const ALL_CATEGORIES = Object.keys(CATEGORY_META) as Category[]
 
 export default function TopBar() {
   const [query, setQuery] = useState('')
-  const { filters, setHideCompleted, setCategories } = useUi()
+  const { filters, setHideCompleted, setCategories, focus, setPendingFocus } = useUi()
   const navigate = useNavigate()
+  const { regionId: currentRegionId } = useParams<{ regionId?: string }>()
   const results = searchItems(items, query)
 
   function jumpTo(itemId: string) {
     const pos = itemPosition.get(itemId)
     setQuery('')
     if (!pos) return
-    navigate(pos.legId ? `/region/${pos.regionId}/${pos.legId}` : `/region/${pos.regionId}`)
+
+    const item = itemsById.get(itemId)
+    const targetUrl = pos.legId ? `/region/${pos.regionId}/${pos.legId}` : `/region/${pos.regionId}`
+
+    // If item has no map coords, fall back to navigate-only.
+    if (!item?.map) {
+      navigate(targetUrl)
+      return
+    }
+
+    if (pos.regionId === currentRegionId) {
+      // Same region — MapView is already mounted; call focus() directly.
+      navigate(targetUrl)
+      focus(item.map, itemId)
+    } else {
+      // Different region — set a pending focus that GuidePage will consume
+      // once the new MapView has mounted and built its pins.
+      setPendingFocus({ itemId, map: item.map })
+      navigate(targetUrl)
+    }
   }
 
   function toggleCategory(cat: Category) {
@@ -28,7 +48,7 @@ export default function TopBar() {
   }
 
   return (
-    <header className="relative z-10 flex items-center gap-3 border-b border-edge bg-panel px-4 py-2">
+    <header className="relative z-[1100] flex items-center gap-3 border-b border-edge bg-panel px-4 py-2">
       <NavLink to="/" className="font-display whitespace-nowrap text-lg text-gold">
         ER 100%
       </NavLink>
@@ -42,7 +62,7 @@ export default function TopBar() {
           className="w-full rounded border border-edge bg-bg px-3 py-1 text-sm outline-none focus:border-gold-dim"
         />
         {results.length > 0 && (
-          <ul className="absolute top-full right-0 left-0 mt-1 max-h-80 overflow-y-auto rounded border border-edge bg-panel2 shadow-xl">
+          <ul className="absolute top-full right-0 left-0 z-[1100] mt-1 max-h-80 overflow-y-auto rounded border border-edge bg-panel2 shadow-xl">
             {results.map((item) => (
               <li key={item.id}>
                 <button

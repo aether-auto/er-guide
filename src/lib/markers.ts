@@ -1,5 +1,8 @@
 import L from 'leaflet'
 import type { Category } from './types'
+import { escapeHtml, smithingStoneHtml } from './markersUtil'
+
+export { escapeHtml, smithingStoneHtml } from './markersUtil'
 
 // ─── Category glyph + ring colour ──────────────────────────────────────────
 // Glyphs chosen for quick recognition at 28px; ring color is the CSS value for
@@ -82,11 +85,6 @@ export function categoryIcon(category: Category, variant: MarkerVariant = 'norma
   })
 }
 
-/** Escape a marker name for safe interpolation into divIcon HTML. */
-function escapeHtml(s: string): string {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
-}
-
 /**
  * Site of Grace marker — soft muted-gold dot with a faint glow. Prominence
  * comes from its pane (above item pins) and its permanent name label, which
@@ -110,6 +108,20 @@ export function graceIcon(name: string): L.DivIcon {
 export function locationIcon(name: string): L.DivIcon {
   return L.divIcon({
     html: `<div class="er-loc"><span class="er-loc-label">${escapeHtml(name)}</span></div>`,
+    className: '',
+    iconSize: [10, 10],
+    iconAnchor: [5, 5],
+  })
+}
+
+/**
+ * Smithing stone marker — a small muted diamond that sits BELOW item pins
+ * (in the 'er-smithing' pane). Somber stones get a purple tint vs the grey
+ * steel of regular stones. Name label appears at zoom ≥5 (same band as graces).
+ */
+export function smithingStoneIcon(name: string, somber: boolean): L.DivIcon {
+  return L.divIcon({
+    html: smithingStoneHtml(name, somber),
     className: '',
     iconSize: [10, 10],
     iconAnchor: [5, 5],

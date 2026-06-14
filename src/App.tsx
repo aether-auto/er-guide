@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useRef, useState } from 'react'
+import { createContext, useCallback, useContext, useMemo, useRef, useState } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import type { Category, MapRef } from './lib/types'
 import type { UiFilters } from './lib/search'
@@ -6,6 +6,13 @@ import { regions } from './lib/data'
 import GuidePage from './pages/GuidePage'
 import ProgressPage from './pages/ProgressPage'
 import CoveragePage from './pages/CoveragePage'
+
+/** A pending cross-region focus: set by TopBar when navigating to a different
+ *  region. Consumed exactly once by GuidePage/MapView after markers are built. */
+export interface PendingFocus {
+  itemId: string
+  map: MapRef
+}
 
 interface UiState {
   filters: UiFilters
@@ -19,6 +26,12 @@ interface UiState {
    * never reach a removed Leaflet map.
    */
   registerFocus: (fn: (ref: MapRef, itemId?: string) => void) => () => void
+  /** Pending cross-region focus — consumed once by GuidePage on mount/change. */
+  pendingFocus: PendingFocus | null
+  /** Set a pending focus to be consumed after the next region navigation. */
+  setPendingFocus: (p: PendingFocus | null) => void
+  /** Consume and clear the pending focus (returns it if present). */
+  consumePendingFocus: () => PendingFocus | null
 }
 
 const UiContext = createContext<UiState | null>(null)
@@ -32,10 +45,20 @@ export function useUi(): UiState {
 export default function App() {
   const [hideCompleted, setHideCompleted] = useState(false)
   const [categories, setCategories] = useState<Set<Category> | null>(null)
+  const [pendingFocus, setPendingFocus] = useState<PendingFocus | null>(null)
 
   // MapView registers its focus handler here on mount; any component (StepRow,
   // RoutePanel) requests a map focus action through ui.focus().
   const focusFnRef = useRef<((ref: MapRef, itemId?: string) => void) | null>(null)
+  // Ref mirror so consumePendingFocus never goes stale inside a useMemo.
+  const pendingFocusRef = useRef<PendingFocus | null>(null)
+  pendingFocusRef.current = pendingFocus
+
+  const consumePendingFocus = useCallback((): PendingFocus | null => {
+    const p = pendingFocusRef.current
+    if (p) setPendingFocus(null)
+    return p
+  }, [])
 
   const ui = useMemo<UiState>(
     () => ({
@@ -49,8 +72,12 @@ export default function App() {
           if (focusFnRef.current === fn) focusFnRef.current = null
         }
       },
+      pendingFocus,
+      setPendingFocus,
+      consumePendingFocus,
     }),
-    [hideCompleted, categories],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [hideCompleted, categories, pendingFocus],
   )
 
   const firstRegion = regions[0]?.id ?? 'limgrave'

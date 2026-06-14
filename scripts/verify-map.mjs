@@ -330,6 +330,132 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   await detailCtx.close()
 }
 
+// 18 ── Smithing-stones layer toggle
+// Default is OFF — toggle it on, assert diamonds appear, toggle off → gone.
+{
+  const smithCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const smithPage = await smithCtx.newPage()
+  await smithPage.goto(`${BASE}#/region/limgrave`)
+  await smithPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await smithPage.waitForTimeout(1500)
+
+  // By default smithing stones should NOT be in the DOM (layer off)
+  const smithBeforeToggle = await smithPage.locator('.er-smith').count()
+  check('Smithing stones layer OFF by default', smithBeforeToggle === 0, `${smithBeforeToggle} markers visible`)
+
+  // Toggle ON
+  await smithPage.locator('#er-smithing-toggle').click()
+  await smithPage.waitForTimeout(500)
+  const smithOn = await smithPage.locator('.er-smith').count()
+  check('Smithing stones appear after toggle ON', smithOn > 0, `${smithOn} markers visible`)
+
+  // Somber stones (purple tint via --somber class) should be present on overworld
+  const somberOn = await smithPage.locator('.er-smith--somber').count()
+  check('Somber smithing stones present (purple tint)', somberOn > 0, `${somberOn} somber markers`)
+
+  // Screenshot with stones layer on
+  await smithPage.screenshot({ path: 'docs/screenshots/06-smithing-stones-layer.png' })
+
+  // Toggle OFF
+  await smithPage.locator('#er-smithing-toggle').click()
+  await smithPage.waitForTimeout(300)
+  const smithOff = await smithPage.locator('.er-smith').count()
+  check('Smithing stones disappear after toggle OFF', smithOff === 0, `${smithOff} markers visible`)
+
+  await smithCtx.close()
+}
+
+// 19 ── Search pans map to item in SAME region
+// Navigate to limgrave, search for a known item, click result → map center
+// moves near the item's coordinates.
+{
+  const searchSameCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const searchSamePage = await searchSameCtx.newPage()
+  await searchSamePage.goto(`${BASE}#/region/limgrave`)
+  await searchSamePage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await searchSamePage.waitForTimeout(2000)
+
+  const centerBefore = await searchSamePage.evaluate(() => {
+    const raw = document.querySelector('.leaflet-container[data-map-center]')?.getAttribute('data-map-center')
+    if (!raw) return null
+    const [lat, lng] = raw.split(',').map(Number)
+    return { lat, lng }
+  })
+
+  // Search for "Twinblade" — a weapon in limgrave with a map pin
+  const searchInput = searchSamePage.locator('input[placeholder="Search items…"]')
+  await searchInput.fill('Twinblade')
+  await searchSamePage.waitForTimeout(300)
+  // Click the first result
+  const firstResult = searchSamePage.locator('ul li button').first()
+  await firstResult.click()
+  await searchSamePage.waitForTimeout(1500) // flyTo settles
+
+  const centerAfter = await searchSamePage.evaluate(() => {
+    const raw = document.querySelector('.leaflet-container[data-map-center]')?.getAttribute('data-map-center')
+    if (!raw) return null
+    const [lat, lng] = raw.split(',').map(Number)
+    return { lat, lng }
+  })
+
+  const moved = centerBefore && centerAfter &&
+    (Math.abs(centerBefore.lat - centerAfter.lat) > 1 || Math.abs(centerBefore.lng - centerAfter.lng) > 1)
+  check('Search same-region: clicking result pans the map',
+    !!moved,
+    centerBefore && centerAfter
+      ? `before=(${centerBefore.lat.toFixed(2)},${centerBefore.lng.toFixed(2)}) after=(${centerAfter.lat.toFixed(2)},${centerAfter.lng.toFixed(2)})`
+      : 'could not read centers')
+
+  await searchSameCtx.close()
+}
+
+// 20 ── Search pans map to item in DIFFERENT region (pending focus handoff)
+// Start in limgrave, search for "Swarm of Flies" (underground/liurnia),
+// click result → navigate + map center should move near its coords.
+{
+  const searchCrossCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const searchCrossPage = await searchCrossCtx.newPage()
+  await searchCrossPage.goto(`${BASE}#/region/limgrave`)
+  await searchCrossPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await searchCrossPage.waitForTimeout(2000)
+
+  // Search for "Swarm of Flies" — in liurnia region
+  const searchInput = searchCrossPage.locator('input[placeholder="Search items…"]')
+  await searchInput.fill('Swarm of Flies')
+  await searchCrossPage.waitForTimeout(300)
+  const firstResult = searchCrossPage.locator('ul li button').first()
+  await firstResult.click()
+  // Wait for navigation + flyTo to settle
+  await searchCrossPage.waitForTimeout(3000)
+
+  // Should now be on a different region URL
+  const url = searchCrossPage.url()
+  const navigated = url.includes('/region/') && !url.includes('/region/limgrave')
+  check('Search cross-region: navigates to target region',
+    navigated,
+    `url=${url.split('#')[1] ?? url}`)
+
+  // Map center should have moved from Limgrave's default
+  const centerAfterCross = await searchCrossPage.evaluate(() => {
+    const raw = document.querySelector('.leaflet-container[data-map-center]')?.getAttribute('data-map-center')
+    if (!raw) return null
+    const [lat, lng] = raw.split(',').map(Number)
+    return { lat, lng }
+  })
+  // Swarm of Flies is in the underground at roughly lat≈-95, lng≈107
+  // Limgrave default center is -128,128 — any significant move is evidence of focus
+  const crossMoved = centerAfterCross && (
+    Math.abs(centerAfterCross.lat - (-128)) > 5 || Math.abs(centerAfterCross.lng - 128) > 5
+  )
+  check('Search cross-region: map pans to item location',
+    !!crossMoved,
+    centerAfterCross
+      ? `center=(${centerAfterCross.lat.toFixed(2)},${centerAfterCross.lng.toFixed(2)})`
+      : 'could not read center')
+
+  await searchCrossCtx.close()
+}
+
 await browser.close()
 
 const failed = results.filter((r) => !r.ok)

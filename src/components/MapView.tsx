@@ -3,14 +3,14 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import type { MapCode, MapRef } from '../lib/types'
 import { CATEGORY_META } from '../lib/types'
-import { categoryIcon, graceIcon, locationIcon, type MarkerVariant } from '../lib/markers'
+import { categoryIcon, graceIcon, locationIcon, smithingStoneIcon, type MarkerVariant } from '../lib/markers'
 import { itemsById, regions, stepNoteByItemId } from '../lib/data'
 import { progressStore } from '../lib/useProgress'
 import { useUi } from '../App'
 import mapExtras from '../../data/map-extras.json'
 import { buildDetailsHtml } from '../lib/itemDetails'
 
-// ── Graces + locations (map-display data; never part of the checklist) ─────
+// ── Graces + locations + smithing stones (map-display data; never part of checklist) ─────
 
 interface GraceEntry {
   code: string
@@ -22,7 +22,19 @@ interface GraceEntry {
 interface LocationEntry extends GraceEntry {
   kind: string
 }
-const { graces, locations } = mapExtras as { graces: GraceEntry[]; locations: LocationEntry[] }
+interface SmithingStoneEntry {
+  code: string
+  markerId: number
+  name: string
+  lat: number
+  lng: number
+  somber: boolean
+}
+const { graces, locations, smithingStones } = mapExtras as {
+  graces: GraceEntry[]
+  locations: LocationEntry[]
+  smithingStones: SmithingStoneEntry[]
+}
 
 // ── Constants ──────────────────────────────────────────────────────────────
 
@@ -58,6 +70,15 @@ function storedLayer(): MapCode | null {
   }
 }
 
+/** Smithing stones are OFF by default (509 markers clutter the map). */
+function storedSmithingToggle(): boolean {
+  try {
+    return sessionStorage.getItem('er-smithing-show') === 'true'
+  } catch {
+    return false
+  }
+}
+
 // ── MapView ────────────────────────────────────────────────────────────────
 
 export interface MapViewProps {
@@ -79,11 +100,13 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
   const tileLayerRef = useRef<L.TileLayer | null>(null)
   const gracesGroupRef = useRef<L.LayerGroup | null>(null)
   const locationsGroupRef = useRef<L.LayerGroup | null>(null)
+  const smithingGroupRef = useRef<L.LayerGroup | null>(null)
   const itemGroupRef = useRef<L.LayerGroup | null>(null)
   const markerMapRef = useRef<Map<string, L.Marker>>(new Map()) // itemId → marker
   const variantMapRef = useRef<Map<string, MarkerVariant>>(new Map()) // itemId → current icon variant
   const showGracesRef = useRef(true)
   const showLocationsRef = useRef(true)
+  const showSmithingRef = useRef(storedSmithingToggle())
   const tabContainerRef = useRef<HTMLDivElement | null>(null)
   // Latest route props, readable from imperative callbacks (switchLayer).
   const routeStateRef = useRef<{ activeLegId: string | null; nextUpId: string | null }>({
@@ -103,7 +126,8 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
     const itemGroup = itemGroupRef.current
     const gracesGroup = gracesGroupRef.current
     const locationsGroup = locationsGroupRef.current
-    if (!map || !itemGroup || !gracesGroup || !locationsGroup) return
+    const smithingGroup = smithingGroupRef.current
+    if (!map || !itemGroup || !gracesGroup || !locationsGroup || !smithingGroup) return
     const code = layerRef.current
     const { nextUpId } = routeStateRef.current
 
@@ -112,6 +136,9 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
 
     locationsGroup.clearLayers()
     renderLocations(locationsGroup, code)
+
+    smithingGroup.clearLayers()
+    renderSmithingStones(smithingGroup, code)
 
     itemGroup.clearLayers()
     markerMapRef.current.clear()
@@ -166,8 +193,10 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
       attribution: '© FromSoftware / Bandai Namco — fan project, tiles via fextralife.com',
     }).addTo(map)
 
-    // Stacking: locations sit UNDER item pins (item pins dominate), graces
-    // sit ABOVE them (markerPane is 600; tooltips 650, popups 700).
+    // Stacking: smithing stones sit deepest (below locations), locations sit
+    // UNDER item pins (item pins dominate), graces sit ABOVE them
+    // (markerPane is 600; tooltips 650, popups 700).
+    map.createPane('er-smithing').style.zIndex = '560'
     map.createPane('er-locations').style.zIndex = '580'
     map.createPane('er-graces').style.zIndex = '620'
 
@@ -184,10 +213,14 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
 
     gracesGroupRef.current = L.layerGroup().addTo(map)
     locationsGroupRef.current = L.layerGroup().addTo(map)
+    // Smithing stones OFF by default — only add to map if persisted toggle is on
+    smithingGroupRef.current = showSmithingRef.current
+      ? L.layerGroup().addTo(map)
+      : L.layerGroup()
     itemGroupRef.current = L.layerGroup().addTo(map)
     redrawOverlays()
 
-    // Layer tabs + graces toggle (top-right)
+    // Layer tabs + graces/locations/smithing toggles (top-right)
     const LayerControl = L.Control.extend({
       onAdd() {
         const div = L.DomUtil.create('div', 'er-layer-controls')
@@ -244,6 +277,30 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
           } else {
             locationsGroup.remove()
             locBtn.classList.remove('active')
+          }
+        })
+
+        // Smithing stones toggle — OFF by default, persisted to sessionStorage.
+        const smithBtn = L.DomUtil.create('button', 'er-layer-tab', div) as HTMLButtonElement
+        smithBtn.id = 'er-smithing-toggle'
+        smithBtn.textContent = '⛏ Smithing Stones'
+        if (showSmithingRef.current) smithBtn.classList.add('active')
+        L.DomEvent.on(smithBtn, 'click', (e) => {
+          L.DomEvent.stopPropagation(e)
+          showSmithingRef.current = !showSmithingRef.current
+          const smithingGroup = smithingGroupRef.current
+          if (!smithingGroup) return
+          if (showSmithingRef.current) {
+            smithingGroup.addTo(map)
+            smithBtn.classList.add('active')
+          } else {
+            smithingGroup.remove()
+            smithBtn.classList.remove('active')
+          }
+          try {
+            sessionStorage.setItem('er-smithing-show', showSmithingRef.current ? 'true' : 'false')
+          } catch {
+            /* private mode */
           }
         })
         return div
@@ -374,6 +431,22 @@ function renderLocations(group: L.LayerGroup, code: MapCode) {
       interactive: false,
       keyboard: false,
     }).addTo(group)
+  }
+}
+
+function renderSmithingStones(group: L.LayerGroup, code: MapCode) {
+  for (const stone of smithingStones) {
+    if (stone.code !== code) continue
+    // Pane 'er-smithing' (z 560) sits BELOW locations and item pins so 509
+    // smithing-stone markers don't clutter the navigation view. Stones are
+    // interactive — clicking opens a tooltip-style popup with the stone name.
+    // Name labels appear at zoom ≥5 via CSS (same band as graces).
+    L.marker([stone.lat, stone.lng], {
+      icon: smithingStoneIcon(stone.name, stone.somber),
+      pane: 'er-smithing',
+    })
+      .bindTooltip(stone.name, { direction: 'top', offset: [0, -8] })
+      .addTo(group)
   }
 }
 

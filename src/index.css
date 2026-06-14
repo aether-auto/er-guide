@@ -422,6 +422,47 @@ body {
   color: #d8d2c4;
 }
 
+/* ── Smithing stone markers — small muted diamonds, below item pins ── */
+/* Regular smithing stone: grey-steel diamond */
+.er-smith {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+.er-smith::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  transform: rotate(45deg);
+  background: #4a5568;
+  border: 1px solid #718096;
+  opacity: 0.8;
+}
+/* Somber smithing stone: tinted purple diamond */
+.er-smith--somber::before {
+  background: #5a4070;
+  border-color: #9b7fd4;
+}
+/* Name label at zoom ≥5 (same zoom band as graces) */
+.er-smith-label {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2px;
+  white-space: nowrap;
+  font-size: 9px;
+  color: #8f8aa0;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.95),
+    0 0 4px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+.er-zoom-ge5 .er-smith-label {
+  display: block;
+}
+
 /* ── Leaflet zoom control ───────────────────────────────── */
 .leaflet-bar a,
 .leaflet-bar a:hover {

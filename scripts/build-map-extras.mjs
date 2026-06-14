@@ -1,6 +1,6 @@
 // Build data/map-extras.json — map-display-only markers (Sites of Grace +
-// landmark Locations) for the in-app Leaflet map (Tasks M1/M3 of
-// docs/superpowers/plans/2026-06-10-map-v2.md).
+// landmark Locations + Smithing Stones) for the in-app Leaflet map (Tasks M1/M3
+// of docs/superpowers/plans/2026-06-10-map-v2.md).
 //
 // Source: the cached Fextralife marker dumps (scripts/cache/map/markers-*.json,
 // fetched by scripts/fetch.mjs). Graces and locations are NOT items — they
@@ -15,9 +15,16 @@
 // stem of its Fextralife icon filename (…/maps-icons/locations/<kind>.png);
 // generic numbered icons (location-NN / location_NN) normalize to "location".
 //
+// Smithing-stone category names differ per layer: mapA/mapB/mapC use
+// "Upgrade Materials", mapD uses "Upgrade Material" (singular) and also has
+// some stones under "Crafting Material". mapA has some stones under "Materials".
+// All are matched by /^upgrade material[s]?$/i and /^materials?$/i combined
+// with a name filter /smithing stone/i. Ancient Dragon stones are included.
+//
 // Output shape: {
-//   graces:    [{ code, markerId, name, lat, lng }],
-//   locations: [{ code, markerId, name, lat, lng, kind }],
+//   graces:        [{ code, markerId, name, lat, lng }],
+//   locations:     [{ code, markerId, name, lat, lng, kind }],
+//   smithingStones:[{ code, markerId, name, lat, lng, somber: boolean }],
 // }, where code is the UI layer code (overworld|underground|ashen|dlc),
 // markerId is the Fextralife `?id=` deep-link param, and lat/lng are Leaflet
 // CRS.Simple coords (marker `x` is the latitude, `y` the longitude — see
@@ -37,6 +44,10 @@ const sources = JSON.parse(await readFile(path.join(HERE, 'sources.json'), 'utf8
 const LAYER_CODE = { mapA: 'overworld', mapB: 'underground', mapC: 'ashen', mapD: 'dlc' }
 const GRACE_CATEGORY = /^sites? of grace$/i
 const LOCATION_CATEGORY = /^locations$/i
+// Smithing stones may appear in "Upgrade Materials", "Upgrade Material", or
+// "Materials" / "Crafting Material" depending on the layer.
+const UPGRADE_CATEGORY = /^(upgrade material[s]?|materials?|crafting material[s]?)$/i
+const SMITHING_STONE_NAME = /smithing stone/i
 
 /** kind from the icon filename stem; numbered generic icons → "location". */
 function locationKind(image) {
@@ -52,6 +63,7 @@ function validate(entry, cacheFile, label) {
 
 const graces = []
 const locations = []
+const smithingStones = []
 for (const frame of sources.map.fextralife.iframes) {
   const code = LAYER_CODE[frame.code]
   const cacheFile = path.join(HERE, 'cache', 'map', `markers-${frame.slug}.json`)
@@ -97,8 +109,39 @@ for (const frame of sources.map.fextralife.iframes) {
   for (const l of layerLocations) validate(l, cacheFile, 'location')
   console.log(`${code}: ${layerLocations.length} locations (category "${locationCat.name}")`)
   locations.push(...layerLocations)
+
+  // Smithing Stones — from upgrade/materials categories, name filtered.
+  // Dedupe by markerId within the layer (some markers may appear in multiple
+  // matching categories).
+  const seenSmithingIds = new Set()
+  const layerSmithing = items
+    .filter((m) => UPGRADE_CATEGORY.test(m.category) && SMITHING_STONE_NAME.test(m.name))
+    .map((m) => ({
+      code,
+      markerId: m.id,
+      name: m.name.trim(),
+      lat: Number(m.x),
+      lng: Number(m.y),
+      somber: /somber/i.test(m.name),
+    }))
+    .filter((s) => {
+      if (seenSmithingIds.has(s.markerId)) return false
+      seenSmithingIds.add(s.markerId)
+      return true
+    })
+    .sort((a, b) => a.markerId - b.markerId)
+
+  for (const s of layerSmithing) {
+    if (!s.name || !Number.isFinite(s.lat) || !Number.isFinite(s.lng) || !Number.isFinite(s.markerId))
+      throw new Error(`bad smithingStone marker in ${cacheFile}: ${JSON.stringify(s)}`)
+  }
+  const somberCount = layerSmithing.filter((s) => s.somber).length
+  console.log(`${code}: ${layerSmithing.length} smithing stones (${somberCount} somber)`)
+  smithingStones.push(...layerSmithing)
 }
 
 const outFile = path.join(ROOT, 'data', 'map-extras.json')
-await writeFile(outFile, JSON.stringify({ graces, locations }, null, 2) + '\n')
-console.log(`wrote ${path.relative(ROOT, outFile)}: ${graces.length} graces, ${locations.length} locations`)
+await writeFile(outFile, JSON.stringify({ graces, locations, smithingStones }, null, 2) + '\n')
+console.log(
+  `wrote ${path.relative(ROOT, outFile)}: ${graces.length} graces, ${locations.length} locations, ${smithingStones.length} smithing stones (${smithingStones.filter((s) => s.somber).length} somber)`,
+)
