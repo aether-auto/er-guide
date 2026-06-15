@@ -124,8 +124,8 @@ export function smithingStoneIcon(name: string, somber: boolean, checked = false
   return L.divIcon({
     html: smithingStoneHtml(name, somber, checked),
     className: '',
-    iconSize: [10, 10],
-    iconAnchor: [5, 5],
-    popupAnchor: [0, -8],
+    iconSize: [14, 14],
+    iconAnchor: [7, 7],
+    popupAnchor: [0, -10],
   })
 }

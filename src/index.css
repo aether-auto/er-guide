@@ -422,43 +422,71 @@ body {
   color: #d8d2c4;
 }
 
-/* ── Smithing stone markers — small muted diamonds, below item pins ── */
-/* Regular smithing stone: grey-steel diamond with subtle glow */
+/* ── Smithing stone markers — bright lit diamonds, below item pins ── */
+/* Regular smithing stone: brighter steel-blue diamond with a clear glow halo.
+   Sized up from 10px and given a strong layered drop-shadow so the cluster is
+   easy to spot against the dark map. */
 .er-smith {
   position: relative;
-  width: 10px;
-  height: 10px;
-  /* subtle outer halo so the cluster reads as a group */
-  filter: drop-shadow(0 0 2px rgba(113, 128, 150, 0.35));
-  transition: filter 0.15s ease;
+  width: 14px;
+  height: 14px;
+  /* layered halo: tight bright core + soft wide bloom */
+  filter:
+    drop-shadow(0 0 3px rgba(160, 200, 255, 0.85))
+    drop-shadow(0 0 7px rgba(120, 160, 220, 0.55));
+  transition: filter 0.15s ease, transform 0.15s ease;
 }
 .er-smith::before {
   content: '';
   position: absolute;
   inset: 1px;
   transform: rotate(45deg);
-  background: #4a5568;
-  border: 1px solid #718096;
-  opacity: 0.85;
+  /* lighter, more saturated steel so the fill itself reads brightly */
+  background: #7a93b8;
+  border: 1.5px solid #aecaf0;
+  opacity: 1;
+  box-shadow: 0 0 4px 1px rgba(174, 202, 240, 0.7) inset;
 }
 .er-smith:hover {
-  filter: drop-shadow(0 0 4px rgba(113, 128, 150, 0.65));
+  transform: scale(1.3);
+  filter:
+    drop-shadow(0 0 5px rgba(190, 220, 255, 1))
+    drop-shadow(0 0 11px rgba(140, 180, 240, 0.8));
 }
-/* Somber smithing stone: cooler purple accent with brighter glow so they
-   stand out from the gold-themed graces and the grey regular stones. */
+/* Somber smithing stone: vivid purple accent with a brighter, pulsing glow so
+   they clearly stand out from gold graces and the steel-blue regular stones. */
 .er-smith--somber {
-  /* noticeably brighter / cooler than regular */
-  filter: drop-shadow(0 0 3px rgba(155, 127, 212, 0.55));
+  filter:
+    drop-shadow(0 0 4px rgba(200, 150, 255, 0.95))
+    drop-shadow(0 0 9px rgba(165, 110, 230, 0.6));
+  animation: er-smith-pulse 2.2s ease-in-out infinite;
 }
 .er-smith--somber::before {
-  background: #5a4070;
-  border-color: #b08ae0;
+  background: #8a5cc0;
+  border-color: #d4adff;
   opacity: 1;
-  /* inner luminance so the diamond reads as lit */
-  box-shadow: 0 0 4px 1px rgba(176, 138, 224, 0.6) inset;
+  box-shadow: 0 0 6px 2px rgba(212, 173, 255, 0.85) inset;
 }
 .er-smith--somber:hover {
-  filter: drop-shadow(0 0 6px rgba(176, 138, 224, 0.9));
+  transform: scale(1.3);
+  filter:
+    drop-shadow(0 0 6px rgba(220, 180, 255, 1))
+    drop-shadow(0 0 13px rgba(190, 140, 250, 0.9));
+}
+
+/* Gentle glow pulse to draw the eye to somber (rarer) stones */
+@keyframes er-smith-pulse {
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 4px rgba(200, 150, 255, 0.9))
+      drop-shadow(0 0 8px rgba(165, 110, 230, 0.5));
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 6px rgba(220, 180, 255, 1))
+      drop-shadow(0 0 14px rgba(190, 140, 250, 0.85));
+  }
 }
 /* Checked smithing stone: dim + green badge (mirrors er-pin--checked behaviour) */
 .er-smith--checked {
