@@ -748,20 +748,20 @@ body {
   line-height: 1;
 }
 
-/* The popover panel */
+/* The popover panel — portalled to document.body, fixed so it escapes
+   Leaflet's overflow:hidden container. JS sets top/right/max-height live. */
 .er-layers-panel {
   display: none;
-  position: absolute;
-  top: calc(100% + 6px);
-  right: 0;
-  width: 280px;
-  max-height: calc(100vh - 120px);
+  position: fixed;
+  /* top / right / max-height set inline by JS positionPanel() */
+  width: 288px;
   overflow-y: auto;
+  overflow-x: hidden;
   background: rgba(14, 12, 9, 0.97);
   border: 1px solid #2c261b;
   border-radius: 8px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 2px 8px rgba(0, 0, 0, 0.6);
-  z-index: 2000;
+  z-index: 9999;
   padding: 6px 0;
   backdrop-filter: blur(6px);
 }
@@ -769,14 +769,25 @@ body {
   display: block;
 }
 
-/* Scrollbar styling for the panel */
-.er-layers-panel::-webkit-scrollbar {
+/* Items section body gets its own capped height so World + Resources
+   sections are always reachable without scrolling the full item list. */
+#items-section .er-layers-section__body {
+  max-height: 38vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling for the panel and its scrollable sub-regions */
+.er-layers-panel::-webkit-scrollbar,
+#items-section .er-layers-section__body::-webkit-scrollbar {
   width: 4px;
 }
-.er-layers-panel::-webkit-scrollbar-track {
+.er-layers-panel::-webkit-scrollbar-track,
+#items-section .er-layers-section__body::-webkit-scrollbar-track {
   background: transparent;
 }
-.er-layers-panel::-webkit-scrollbar-thumb {
+.er-layers-panel::-webkit-scrollbar-thumb,
+#items-section .er-layers-section__body::-webkit-scrollbar-thumb {
   background: #2c261b;
   border-radius: 2px;
 }
@@ -963,4 +974,21 @@ body {
   margin: 8px auto 4px;
   cursor: row-resize;
   flex-shrink: 0;
+}
+
+/* ── Mobile overrides for the Layers panel ──────────────── */
+@media (max-width: 480px) {
+  /* On small screens JS may place it off-screen to the right; override to be
+     near full-width and clamp height to avoid going below the fold. */
+  .er-layers-panel {
+    /* JS sets top via positionPanel(); override width + right for mobile */
+    width: calc(100vw - 16px) !important;
+    right: 8px !important;
+    left: 8px !important;
+    max-height: 70vh !important;
+  }
+  /* Items section inner scroll: smaller cap on mobile */
+  #items-section .er-layers-section__body {
+    max-height: 28vh;
+  }
 }

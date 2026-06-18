@@ -358,6 +358,8 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
     redrawOverlays()
 
     // ── Unified "▤ Layers" control (top-right) ───────────────────────────────
+    // Track the floating panel element so it can be removed from body on unmount.
+    let layersPanelEl: HTMLDivElement | null = null
     const LayersControl = L.Control.extend({
       onAdd() {
         // Outer container — holds the trigger button + floating panel
@@ -391,8 +393,33 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
         labelSpan.textContent = 'Layers'
 
         // ── Floating panel ─────────────────────────────────────────────────
-        const panel = L.DomUtil.create('div', 'er-layers-panel', wrapper) as HTMLDivElement
+        // Panel is appended to document.body so it escapes Leaflet's
+        // overflow:hidden container — no clipping regardless of panel height.
+        const panel = L.DomUtil.create('div', 'er-layers-panel') as HTMLDivElement
         panel.id = 'er-layers-panel'
+        document.body.appendChild(panel)
+        layersPanelEl = panel
+
+        // Clamp the panel into the viewport using fixed positioning anchored
+        // to the trigger button's bounding rect.
+        function positionPanel() {
+          const btnRect = triggerBtn.getBoundingClientRect()
+          const margin = 8
+          const panelWidth = 288 // matches CSS width
+          const top = btnRect.bottom + 6
+          // Right-align to button's right edge, but don't overflow left edge
+          const right = Math.max(margin, window.innerWidth - btnRect.right)
+          const maxHeight = window.innerHeight - top - margin
+          panel.style.position = 'fixed'
+          panel.style.top = `${top}px`
+          panel.style.right = `${right}px`
+          panel.style.left = 'auto'
+          panel.style.width = `${panelWidth}px`
+          panel.style.maxHeight = `${Math.max(200, maxHeight)}px`
+        }
+
+        // Re-clamp on resize while open
+        let resizeHandler: (() => void) | null = null
 
         // Toggle panel open/close
         let panelOpen = false
@@ -400,12 +427,19 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
           panelOpen = true
           panel.classList.add('open')
           triggerBtn.classList.add('open')
+          positionPanel()
           rebuildPanel()
+          resizeHandler = () => { if (panelOpen) positionPanel() }
+          window.addEventListener('resize', resizeHandler)
         }
         function closePanel() {
           panelOpen = false
           panel.classList.remove('open')
           triggerBtn.classList.remove('open')
+          if (resizeHandler) {
+            window.removeEventListener('resize', resizeHandler)
+            resizeHandler = null
+          }
         }
         L.DomEvent.on(triggerBtn, 'click', (e) => {
           L.DomEvent.stopPropagation(e)
@@ -740,6 +774,11 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
       map.off('zoomend', updateZoomClasses)
       unregisterFocus()
       unsubscribe()
+      // Remove the portalled layers panel from document.body on unmount
+      if (layersPanelEl && layersPanelEl.parentNode) {
+        layersPanelEl.parentNode.removeChild(layersPanelEl)
+        layersPanelEl = null
+      }
       map.remove()
       mapRef.current = null
     }

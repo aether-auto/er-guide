@@ -422,6 +422,89 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   await smithCtx.close()
 }
 
+// 18b ── Panel in-viewport: with panel open, the Smithing Stones section +
+// kind control must be present AND have bounding rect fully within the viewport.
+{
+  const vpCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
+  const vpPage = await vpCtx.newPage()
+  await vpPage.goto(`${BASE}#/region/limgrave`)
+  await vpPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await vpPage.waitForTimeout(1500)
+
+  // Open Layers panel + enable smithing so the sub-filter appears
+  await vpPage.locator('.er-layers-btn').click()
+  await vpPage.waitForTimeout(200)
+  await vpPage.evaluate(() => document.getElementById('er-smithing-toggle')?.click())
+  await vpPage.waitForTimeout(400)
+
+  // Check the Resources section header is present (DOM)
+  const resSectionPresent = await vpPage.locator('#resources-section').count() > 0
+  check('Layers panel: Resources section present in DOM', resSectionPresent)
+
+  // Check smithing sub-filter panel is present
+  const smithFilterPresent = await vpPage.locator('#er-smithing-filter').count() > 0
+  check('Layers panel: smithing filter panel present in DOM', smithFilterPresent)
+
+  // Check the kind control buttons are present
+  const kindBtnsCount = await vpPage.locator('#er-smithing-filter .er-smith-filter__kind-btn').count()
+  check('Layers panel: kind segmented control has 3 buttons', kindBtnsCount === 3, `${kindBtnsCount} buttons`)
+
+  // Check that the smithing filter section is WITHIN the viewport (not clipped below fold)
+  const smithFilterInViewport = await vpPage.evaluate(() => {
+    const el = document.getElementById('er-smithing-filter')
+    if (!el) return { ok: false, detail: 'element not found' }
+    const rect = el.getBoundingClientRect()
+    const vh = window.innerHeight
+    const vw = window.innerWidth
+    const inViewport = rect.bottom <= vh && rect.top >= 0 && rect.right <= vw && rect.left >= 0
+    return { ok: inViewport, detail: `rect=[${Math.round(rect.top)},${Math.round(rect.bottom)}]/${vh} left=${Math.round(rect.left)} right=${Math.round(rect.right)}/${vw}` }
+  })
+  check('Layers panel: smithing filter section fully within viewport (not clipped)',
+    smithFilterInViewport.ok, smithFilterInViewport.detail)
+
+  // Also confirm the kind buttons are clickable (not behind overflow:hidden)
+  const somberBtnVisible = await vpPage.locator('#er-smith-kind-somber').isVisible()
+  check('Layers panel: Somber kind button visible/reachable', somberBtnVisible)
+
+  await vpPage.screenshot({ path: 'docs/screenshots/08-layers-panel-smithing-reachable.png' })
+  await vpCtx.close()
+}
+
+// 18c ── Panel in-viewport at 390px mobile width (panel must not overflow screen)
+{
+  const mobCtx = await browser.newContext({ viewport: { width: 390, height: 844 } })
+  const mobPage = await mobCtx.newPage()
+  await mobPage.goto(`${BASE}#/region/limgrave`)
+  await mobPage.waitForSelector('.leaflet-container', { timeout: 10000 })
+  await mobPage.waitForTimeout(1500)
+
+  // Open Layers panel + enable smithing
+  await mobPage.locator('.er-layers-btn').click()
+  await mobPage.waitForTimeout(200)
+  await mobPage.evaluate(() => document.getElementById('er-smithing-toggle')?.click())
+  await mobPage.waitForTimeout(400)
+
+  // Check panel is fully within viewport at mobile width
+  const mobilePanelInView = await mobPage.evaluate(() => {
+    const el = document.getElementById('er-layers-panel')
+    if (!el) return { ok: false, detail: 'panel not found' }
+    const rect = el.getBoundingClientRect()
+    const vh = window.innerHeight
+    const vw = window.innerWidth
+    const inViewport = rect.bottom <= vh + 1 && rect.right <= vw + 1 && rect.left >= -1
+    return { ok: inViewport, detail: `left=${Math.round(rect.left)} right=${Math.round(rect.right)}/${vw} top=${Math.round(rect.top)} bottom=${Math.round(rect.bottom)}/${vh}` }
+  })
+  check('Mobile 390px: layers panel not overflowing viewport',
+    mobilePanelInView.ok, mobilePanelInView.detail)
+
+  // smithing filter should also be reachable on mobile (scroll within panel if needed)
+  const smithFilterMobilePresent = await mobPage.locator('#er-smithing-filter').count() > 0
+  check('Mobile 390px: smithing filter present', smithFilterMobilePresent)
+
+  await mobPage.screenshot({ path: 'docs/screenshots/09-mobile-layers-panel.png' })
+  await mobCtx.close()
+}
+
 // 21 ── Smithing filter: "Somber only" hides regular diamonds, count updates
 {
   const sfKindCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
