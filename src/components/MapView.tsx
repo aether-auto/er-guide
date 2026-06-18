@@ -1,9 +1,17 @@
 import { useEffect, useRef } from 'react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import type { MapCode, MapRef } from '../lib/types'
+import type { Category, MapCode, MapRef } from '../lib/types'
 import { CATEGORY_META } from '../lib/types'
-import { categoryIcon, graceIcon, locationIcon, smithingStoneIcon, type MarkerVariant } from '../lib/markers'
+import {
+  CATEGORY_COLOR,
+  CATEGORY_GLYPH,
+  categoryIcon,
+  graceIcon,
+  locationIcon,
+  smithingStoneIcon,
+  type MarkerVariant,
+} from '../lib/markers'
 import { itemsById, regions, stepNoteByItemId } from '../lib/data'
 import { progressStore } from '../lib/useProgress'
 import { useUi } from '../App'
@@ -50,6 +58,9 @@ const LAYERS: { code: MapCode; label: string }[] = [
   { code: 'dlc', label: 'DLC' },
 ]
 
+// All categories in display order (matches CATEGORY_META)
+const ALL_CATEGORIES = Object.keys(CATEGORY_META) as Category[]
+
 // CRS.Simple pixel-plane: the z0 tile is 256×256 and every z is a full
 // 2^z × 2^z grid (tiles README). The Fextralife marker dataset (lat ≈ -256..0,
 // lng ≈ 0..256) is already in this plane — used as-is, no re-projection.
@@ -81,6 +92,44 @@ function storedSmithingToggle(): boolean {
     return sessionStorage.getItem('er-smithing-show') === 'true'
   } catch {
     return false
+  }
+}
+
+function storedGracesToggle(): boolean {
+  try {
+    const v = sessionStorage.getItem('er-graces-show')
+    return v === null ? true : v === 'true'
+  } catch {
+    return true
+  }
+}
+
+function storedLocationsToggle(): boolean {
+  try {
+    const v = sessionStorage.getItem('er-locations-show')
+    return v === null ? true : v === 'true'
+  } catch {
+    return true
+  }
+}
+
+/** Returns set of hidden categories (stored as JSON array). Default: all visible (empty set). */
+function storedHiddenCategories(): Set<Category> {
+  try {
+    const raw = sessionStorage.getItem('er-hidden-categories')
+    if (!raw) return new Set()
+    const arr = JSON.parse(raw) as Category[]
+    return new Set(arr.filter((c) => ALL_CATEGORIES.includes(c)))
+  } catch {
+    return new Set()
+  }
+}
+
+function saveHiddenCategories(hidden: Set<Category>) {
+  try {
+    sessionStorage.setItem('er-hidden-categories', JSON.stringify([...hidden]))
+  } catch {
+    /* private mode */
   }
 }
 
@@ -160,13 +209,17 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
   const locationsGroupRef = useRef<L.LayerGroup | null>(null)
   const smithingGroupRef = useRef<L.LayerGroup | null>(null)
   const itemGroupRef = useRef<L.LayerGroup | null>(null)
+  // Per-category LayerGroups for independent toggle
+  const categoryGroupsRef = useRef<Map<Category, L.LayerGroup>>(new Map())
   const markerMapRef = useRef<Map<string, L.Marker>>(new Map()) // itemId → marker
   const variantMapRef = useRef<Map<string, MarkerVariant>>(new Map()) // itemId → current icon variant
   const smithingMarkerMapRef = useRef<Map<string, L.Marker>>(new Map()) // stoneId → marker
-  const showGracesRef = useRef(true)
-  const showLocationsRef = useRef(true)
+  const showGracesRef = useRef(storedGracesToggle())
+  const showLocationsRef = useRef(storedLocationsToggle())
   const showSmithingRef = useRef(storedSmithingToggle())
   const smithFilterRef = useRef<SmithFilter>(storedSmithFilter())
+  // Per-category visibility (hidden = not on map)
+  const hiddenCategoriesRef = useRef<Set<Category>>(storedHiddenCategories())
   const smithFilterPanelRef = useRef<HTMLDivElement | null>(null)
   const smithCountEl = useRef<HTMLSpanElement | null>(null)
   const tabContainerRef = useRef<HTMLDivElement | null>(null)
@@ -204,10 +257,18 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
     renderSmithingStones(smithingGroup, smithingMarkerMapRef.current, code, smithFilterRef.current, map)
     updateSmithingCounts(smithCountEl.current, code, smithFilterRef.current, progressStore.getSnapshot())
 
-    itemGroup.clearLayers()
+    // Clear and rebuild per-category groups
+    categoryGroupsRef.current.forEach((group) => group.clearLayers())
     markerMapRef.current.clear()
     variantMapRef.current.clear()
-    renderItems(itemGroup, markerMapRef.current, variantMapRef.current, code, nextUpId, map)
+    renderItems(
+      categoryGroupsRef.current,
+      markerMapRef.current,
+      variantMapRef.current,
+      code,
+      nextUpId,
+      map,
+    )
   }
 
   function switchLayer(code: MapCode) {
@@ -275,27 +336,44 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
     map.on('zoomend', updateZoomClasses)
     updateZoomClasses()
 
-    gracesGroupRef.current = L.layerGroup().addTo(map)
-    locationsGroupRef.current = L.layerGroup().addTo(map)
+    gracesGroupRef.current = showGracesRef.current ? L.layerGroup().addTo(map) : L.layerGroup()
+    locationsGroupRef.current = showLocationsRef.current ? L.layerGroup().addTo(map) : L.layerGroup()
     // Smithing stones OFF by default — only add to map if persisted toggle is on
     smithingGroupRef.current = showSmithingRef.current
       ? L.layerGroup().addTo(map)
       : L.layerGroup()
-    itemGroupRef.current = L.layerGroup().addTo(map)
+
+    // Per-category item groups
+    const catGroups = new Map<Category, L.LayerGroup>()
+    for (const cat of ALL_CATEGORIES) {
+      const hidden = hiddenCategoriesRef.current.has(cat)
+      const group = hidden ? L.layerGroup() : L.layerGroup().addTo(map)
+      catGroups.set(cat, group)
+    }
+    categoryGroupsRef.current = catGroups
+
+    // itemGroupRef kept as an alias for compatibility (not actually used for rendering)
+    itemGroupRef.current = L.layerGroup()
+
     redrawOverlays()
 
-    // Layer tabs + graces/locations/smithing toggles (top-right)
-    const LayerControl = L.Control.extend({
+    // ── Unified "▤ Layers" control (top-right) ───────────────────────────────
+    const LayersControl = L.Control.extend({
       onAdd() {
-        const div = L.DomUtil.create('div', 'er-layer-controls')
-        div.style.cssText =
-          'display:flex;flex-direction:column;gap:4px;padding:4px;background:rgba(14,12,9,0.85);border:1px solid #2c261b;border-radius:6px;'
-        L.DomEvent.disableClickPropagation(div)
-        L.DomEvent.disableScrollPropagation(div)
-        tabContainerRef.current = div
+        // Outer container — holds the trigger button + floating panel
+        const wrapper = L.DomUtil.create('div', 'er-layers-wrapper') as HTMLDivElement
+        wrapper.style.cssText = 'position:relative;'
+        L.DomEvent.disableClickPropagation(wrapper)
+        L.DomEvent.disableScrollPropagation(wrapper)
+
+        // ── Layer tabs column (map code switcher) ──────────────────────────
+        const tabColumn = L.DomUtil.create('div', '', wrapper) as HTMLDivElement
+        tabColumn.style.cssText =
+          'display:flex;flex-direction:column;gap:4px;padding:4px;background:rgba(14,12,9,0.85);border:1px solid #2c261b;border-radius:6px;margin-bottom:4px;'
+        tabContainerRef.current = tabColumn
 
         for (const { code, label } of LAYERS) {
-          const btn = L.DomUtil.create('button', 'er-layer-tab', div) as HTMLButtonElement
+          const btn = L.DomUtil.create('button', 'er-layer-tab', tabColumn) as HTMLButtonElement
           btn.textContent = label
           btn.dataset.code = code
           if (code === layerRef.current) btn.classList.add('active')
@@ -305,116 +383,280 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
           })
         }
 
-        const sep = L.DomUtil.create('div', '', div)
-        sep.style.cssText = 'border-top:1px solid #2c261b;margin:2px 0;'
+        // ── "▤ Layers" toggle button ───────────────────────────────────────
+        const triggerBtn = L.DomUtil.create('button', 'er-layers-btn', wrapper) as HTMLButtonElement
+        const iconSpan = L.DomUtil.create('span', 'er-layers-btn__icon', triggerBtn)
+        iconSpan.textContent = '▤'
+        const labelSpan = L.DomUtil.create('span', '', triggerBtn)
+        labelSpan.textContent = 'Layers'
 
-        const graceBtn = L.DomUtil.create('button', 'er-layer-tab', div) as HTMLButtonElement
-        graceBtn.id = 'er-grace-toggle'
-        graceBtn.textContent = '✦ Graces'
-        graceBtn.classList.add('active')
-        L.DomEvent.on(graceBtn, 'click', (e) => {
-          L.DomEvent.stopPropagation(e)
-          showGracesRef.current = !showGracesRef.current
-          const gracesGroup = gracesGroupRef.current
-          if (!gracesGroup) return
-          if (showGracesRef.current) {
-            gracesGroup.addTo(map)
-            graceBtn.classList.add('active')
-          } else {
-            gracesGroup.remove()
-            graceBtn.classList.remove('active')
-          }
-        })
+        // ── Floating panel ─────────────────────────────────────────────────
+        const panel = L.DomUtil.create('div', 'er-layers-panel', wrapper) as HTMLDivElement
+        panel.id = 'er-layers-panel'
 
-        const locBtn = L.DomUtil.create('button', 'er-layer-tab', div) as HTMLButtonElement
-        locBtn.id = 'er-location-toggle'
-        locBtn.textContent = '◆ Locations'
-        locBtn.classList.add('active')
-        L.DomEvent.on(locBtn, 'click', (e) => {
-          L.DomEvent.stopPropagation(e)
-          showLocationsRef.current = !showLocationsRef.current
-          const locationsGroup = locationsGroupRef.current
-          if (!locationsGroup) return
-          if (showLocationsRef.current) {
-            locationsGroup.addTo(map)
-            locBtn.classList.add('active')
-          } else {
-            locationsGroup.remove()
-            locBtn.classList.remove('active')
-          }
-        })
-
-        // Smithing stones toggle — OFF by default, persisted to sessionStorage.
-        const smithBtn = L.DomUtil.create('button', 'er-layer-tab', div) as HTMLButtonElement
-        smithBtn.id = 'er-smithing-toggle'
-        smithBtn.textContent = '⛏ Smithing Stones'
-        if (showSmithingRef.current) smithBtn.classList.add('active')
-
-        // Filter sub-panel (compact, only visible when layer is ON)
-        const filterPanel = L.DomUtil.create('div', 'er-smith-filter', div) as HTMLDivElement
-        filterPanel.style.display = showSmithingRef.current ? 'flex' : 'none'
-        filterPanel.id = 'er-smithing-filter'
-        smithFilterPanelRef.current = filterPanel
-
-        // Kind segmented control
-        const kindRow = L.DomUtil.create('div', 'er-smith-filter__kind', filterPanel) as HTMLDivElement
-        const kindOptions: { value: SmithKindFilter; label: string }[] = [
-          { value: 'all', label: 'All' },
-          { value: 'somber', label: 'Somber' },
-          { value: 'regular', label: 'Regular' },
-        ]
-        const kindBtns: HTMLButtonElement[] = []
-        for (const { value, label } of kindOptions) {
-          const kb = L.DomUtil.create('button', 'er-smith-filter__kind-btn', kindRow) as HTMLButtonElement
-          kb.dataset.kind = value
-          kb.id = `er-smith-kind-${value}`
-          kb.textContent = label
-          if (value === 'regular') kb.classList.add('regular-active')
-          if (smithFilterRef.current.kind === value) kb.classList.add('active')
-          L.DomEvent.on(kb, 'click', (e) => {
-            L.DomEvent.stopPropagation(e)
-            smithFilterRef.current = { ...smithFilterRef.current, kind: value }
-            saveSmithFilter(smithFilterRef.current)
-            kindBtns.forEach((b) => b.classList.toggle('active', b.dataset.kind === value))
-            rerenderSmithing()
-          })
-          kindBtns.push(kb)
+        // Toggle panel open/close
+        let panelOpen = false
+        function openPanel() {
+          panelOpen = true
+          panel.classList.add('open')
+          triggerBtn.classList.add('open')
+          rebuildPanel()
         }
+        function closePanel() {
+          panelOpen = false
+          panel.classList.remove('open')
+          triggerBtn.classList.remove('open')
+        }
+        L.DomEvent.on(triggerBtn, 'click', (e) => {
+          L.DomEvent.stopPropagation(e)
+          if (panelOpen) closePanel()
+          else openPanel()
+        })
+        // Close panel when clicking on the map canvas itself (not on controls)
+        map.on('click', () => {
+          if (panelOpen) closePanel()
+        })
 
-        // Level checkboxes row (1-9 + Ancient)
-        const levelsRow = L.DomUtil.create('div', 'er-smith-filter__levels', filterPanel) as HTMLDivElement
-        const lvlBtns: HTMLButtonElement[] = []
-        const allLevelEntries: (number | 'ancient')[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'ancient']
-        for (const lvl of allLevelEntries) {
-          const lb = L.DomUtil.create('button', 'er-smith-filter__lvl-btn', levelsRow) as HTMLButtonElement
-          lb.dataset.level = String(lvl)
-          lb.id = `er-smith-lvl-${lvl}`
-          lb.textContent = lvl === 'ancient' ? 'Anc' : `[${lvl}]`
-          if (lvl === 'ancient') lb.classList.add('ancient-btn')
-          if (smithFilterRef.current.levels.has(lvl)) lb.classList.add('active')
-          L.DomEvent.on(lb, 'click', (e) => {
-            L.DomEvent.stopPropagation(e)
-            const newLevels = new Set(smithFilterRef.current.levels)
-            if (newLevels.has(lvl)) {
-              newLevels.delete(lvl)
-            } else {
-              newLevels.add(lvl)
+        // ── Build panel content ────────────────────────────────────────────
+        function rebuildPanel() {
+          panel.innerHTML = ''
+          const code = layerRef.current
+
+          // ── ITEMS section ────────────────────────────────────────────────
+          const itemsSection = buildSection(panel, 'Items', 'items-section')
+
+          // Determine which categories have pins on this map layer
+          const catCounts = new Map<Category, number>()
+          for (const region of regions) {
+            const allSteps = [
+              ...region.legs.flatMap((l) => l.steps),
+              ...region.cleanup.map((id) => ({ type: 'item' as const, itemId: id })),
+            ]
+            const seen = new Set<string>()
+            for (const step of allSteps) {
+              if (step.type !== 'item') continue
+              if (seen.has(step.itemId)) continue
+              seen.add(step.itemId)
+              const item = itemsById.get(step.itemId)
+              if (!item?.map || item.map.code !== code) continue
+              catCounts.set(item.category, (catCounts.get(item.category) ?? 0) + 1)
             }
-            smithFilterRef.current = { ...smithFilterRef.current, levels: newLevels }
-            saveSmithFilter(smithFilterRef.current)
-            lb.classList.toggle('active', newLevels.has(lvl))
-            rerenderSmithing()
+          }
+
+          const presentCats = ALL_CATEGORIES.filter((c) => (catCounts.get(c) ?? 0) > 0)
+
+          if (presentCats.length === 0) {
+            const empty = L.DomUtil.create('div', 'er-layers-empty', itemsSection.body)
+            empty.textContent = 'No item pins on this layer'
+          } else {
+            // All / None quick actions
+            const quickRow = L.DomUtil.create('div', 'er-layers-quick', itemsSection.body)
+            const allBtn = L.DomUtil.create('button', 'er-layers-quick__btn', quickRow) as HTMLButtonElement
+            allBtn.textContent = 'All'
+            allBtn.id = 'er-cat-all-btn'
+            const noneBtn = L.DomUtil.create('button', 'er-layers-quick__btn', quickRow) as HTMLButtonElement
+            noneBtn.textContent = 'None'
+            noneBtn.id = 'er-cat-none-btn'
+
+            L.DomEvent.on(allBtn, 'click', (e) => {
+              L.DomEvent.stopPropagation(e)
+              hiddenCategoriesRef.current = new Set()
+              saveHiddenCategories(hiddenCategoriesRef.current)
+              for (const cat of ALL_CATEGORIES) {
+                const group = categoryGroupsRef.current.get(cat)
+                if (group && !map.hasLayer(group)) group.addTo(map)
+              }
+              // Update row states
+              panel.querySelectorAll<HTMLButtonElement>('.er-layers-row[data-category]').forEach((row) => {
+                row.classList.add('er-layers-row--active')
+                row.classList.remove('er-layers-row--inactive')
+              })
+            })
+            L.DomEvent.on(noneBtn, 'click', (e) => {
+              L.DomEvent.stopPropagation(e)
+              hiddenCategoriesRef.current = new Set(ALL_CATEGORIES)
+              saveHiddenCategories(hiddenCategoriesRef.current)
+              for (const cat of ALL_CATEGORIES) {
+                const group = categoryGroupsRef.current.get(cat)
+                if (group && map.hasLayer(group)) group.remove()
+              }
+              panel.querySelectorAll<HTMLButtonElement>('.er-layers-row[data-category]').forEach((row) => {
+                row.classList.remove('er-layers-row--active')
+                row.classList.add('er-layers-row--inactive')
+              })
+            })
+
+            for (const cat of presentCats) {
+              const count = catCounts.get(cat) ?? 0
+              const isActive = !hiddenCategoriesRef.current.has(cat)
+              const color = CATEGORY_COLOR[cat]
+              const glyph = CATEGORY_GLYPH[cat]
+              const label = CATEGORY_META[cat].label
+
+              const row = L.DomUtil.create('button', 'er-layers-row', itemsSection.body) as HTMLButtonElement
+              row.dataset.category = cat
+              row.classList.add(isActive ? 'er-layers-row--active' : 'er-layers-row--inactive')
+
+              // Color swatch
+              const swatch = L.DomUtil.create('span', 'er-layers-swatch', row)
+              swatch.style.color = color
+              swatch.style.borderColor = color
+              swatch.textContent = glyph
+
+              // Label
+              const labelEl = L.DomUtil.create('span', 'er-layers-row__label', row)
+              labelEl.textContent = label
+
+              // Count
+              const countEl = L.DomUtil.create('span', 'er-layers-row__count', row)
+              countEl.textContent = String(count)
+
+              // Toggle pill
+              L.DomUtil.create('span', 'er-layers-toggle', row)
+
+              L.DomEvent.on(row, 'click', (e) => {
+                L.DomEvent.stopPropagation(e)
+                const hidden = hiddenCategoriesRef.current
+                const group = categoryGroupsRef.current.get(cat)
+                if (hidden.has(cat)) {
+                  // Show it
+                  hidden.delete(cat)
+                  if (group && !map.hasLayer(group)) group.addTo(map)
+                  row.classList.add('er-layers-row--active')
+                  row.classList.remove('er-layers-row--inactive')
+                } else {
+                  // Hide it
+                  hidden.add(cat)
+                  if (group && map.hasLayer(group)) group.remove()
+                  row.classList.remove('er-layers-row--active')
+                  row.classList.add('er-layers-row--inactive')
+                }
+                saveHiddenCategories(hidden)
+              })
+            }
+          }
+
+          // ── WORLD section ────────────────────────────────────────────────
+          const sep1 = L.DomUtil.create('hr', 'er-layers-sep', panel)
+          sep1.setAttribute('aria-hidden', 'true')
+          const worldSection = buildSection(panel, 'World', 'world-section')
+
+          // Graces toggle
+          buildWorldRow(worldSection.body, {
+            id: 'er-grace-toggle',
+            label: '✦ Sites of Grace',
+            active: showGracesRef.current,
+            onToggle: () => {
+              showGracesRef.current = !showGracesRef.current
+              const gracesGroup = gracesGroupRef.current
+              if (!gracesGroup) return
+              if (showGracesRef.current) gracesGroup.addTo(map)
+              else gracesGroup.remove()
+              try { sessionStorage.setItem('er-graces-show', showGracesRef.current ? 'true' : 'false') } catch { /* */ }
+            },
           })
-          lvlBtns.push(lb)
+
+          // Locations toggle
+          buildWorldRow(worldSection.body, {
+            id: 'er-location-toggle',
+            label: '◆ Locations',
+            active: showLocationsRef.current,
+            onToggle: () => {
+              showLocationsRef.current = !showLocationsRef.current
+              const locationsGroup = locationsGroupRef.current
+              if (!locationsGroup) return
+              if (showLocationsRef.current) locationsGroup.addTo(map)
+              else locationsGroup.remove()
+              try { sessionStorage.setItem('er-locations-show', showLocationsRef.current ? 'true' : 'false') } catch { /* */ }
+            },
+          })
+
+          // ── RESOURCES section ────────────────────────────────────────────
+          const sep2 = L.DomUtil.create('hr', 'er-layers-sep', panel)
+          sep2.setAttribute('aria-hidden', 'true')
+          const resSection = buildSection(panel, 'Resources', 'resources-section')
+
+          // Smithing stones toggle + sub-filters
+          buildWorldRow(resSection.body, {
+            id: 'er-smithing-toggle',
+            label: '⛏ Smithing Stones',
+            active: showSmithingRef.current,
+            onToggle: () => {
+              showSmithingRef.current = !showSmithingRef.current
+              const smithingGroup = smithingGroupRef.current
+              if (!smithingGroup) return
+              if (showSmithingRef.current) {
+                smithingGroup.addTo(map)
+                filterPanel.style.display = 'flex'
+              } else {
+                smithingGroup.remove()
+                filterPanel.style.display = 'none'
+              }
+              try { sessionStorage.setItem('er-smithing-show', showSmithingRef.current ? 'true' : 'false') } catch { /* */ }
+            },
+          })
+
+          // Smithing sub-filter panel
+          const filterPanel = L.DomUtil.create('div', 'er-smith-filter er-layers-smithing-sub', resSection.body) as HTMLDivElement
+          filterPanel.style.display = showSmithingRef.current ? 'flex' : 'none'
+          filterPanel.id = 'er-smithing-filter'
+          smithFilterPanelRef.current = filterPanel
+
+          // Kind segmented control
+          const kindRow = L.DomUtil.create('div', 'er-smith-filter__kind', filterPanel) as HTMLDivElement
+          const kindOptions: { value: SmithKindFilter; label: string }[] = [
+            { value: 'all', label: 'All' },
+            { value: 'somber', label: 'Somber' },
+            { value: 'regular', label: 'Regular' },
+          ]
+          const kindBtns: HTMLButtonElement[] = []
+          for (const { value, label } of kindOptions) {
+            const kb = L.DomUtil.create('button', 'er-smith-filter__kind-btn', kindRow) as HTMLButtonElement
+            kb.dataset.kind = value
+            kb.id = `er-smith-kind-${value}`
+            kb.textContent = label
+            if (value === 'regular') kb.classList.add('regular-active')
+            if (smithFilterRef.current.kind === value) kb.classList.add('active')
+            L.DomEvent.on(kb, 'click', (e) => {
+              L.DomEvent.stopPropagation(e)
+              smithFilterRef.current = { ...smithFilterRef.current, kind: value }
+              saveSmithFilter(smithFilterRef.current)
+              kindBtns.forEach((b) => b.classList.toggle('active', b.dataset.kind === value))
+              rerenderSmithing()
+            })
+            kindBtns.push(kb)
+          }
+
+          // Level checkboxes row (1-9 + Ancient)
+          const levelsRow = L.DomUtil.create('div', 'er-smith-filter__levels', filterPanel) as HTMLDivElement
+          const allLevelEntries: (number | 'ancient')[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'ancient']
+          for (const lvl of allLevelEntries) {
+            const lb = L.DomUtil.create('button', 'er-smith-filter__lvl-btn', levelsRow) as HTMLButtonElement
+            lb.dataset.level = String(lvl)
+            lb.id = `er-smith-lvl-${lvl}`
+            lb.textContent = lvl === 'ancient' ? 'Anc' : `[${lvl}]`
+            if (lvl === 'ancient') lb.classList.add('ancient-btn')
+            if (smithFilterRef.current.levels.has(lvl)) lb.classList.add('active')
+            L.DomEvent.on(lb, 'click', (e) => {
+              L.DomEvent.stopPropagation(e)
+              const newLevels = new Set(smithFilterRef.current.levels)
+              if (newLevels.has(lvl)) newLevels.delete(lvl)
+              else newLevels.add(lvl)
+              smithFilterRef.current = { ...smithFilterRef.current, levels: newLevels }
+              saveSmithFilter(smithFilterRef.current)
+              lb.classList.toggle('active', newLevels.has(lvl))
+              rerenderSmithing()
+            })
+          }
+
+          // Live count display
+          const countsSpan = L.DomUtil.create('span', 'er-smith-filter__counts', filterPanel) as HTMLSpanElement
+          countsSpan.id = 'er-smithing-counts'
+          smithCountEl.current = countsSpan
+          updateSmithingCounts(countsSpan, layerRef.current, smithFilterRef.current, progressStore.getSnapshot())
         }
 
-        // Live count display
-        const countsSpan = L.DomUtil.create('span', 'er-smith-filter__counts', filterPanel) as HTMLSpanElement
-        countsSpan.id = 'er-smithing-counts'
-        smithCountEl.current = countsSpan
-        updateSmithingCounts(countsSpan, layerRef.current, smithFilterRef.current, progressStore.getSnapshot())
-
-        // Helper: re-render smithing stones layer with current filter
+        // Helper to re-render smithing stones with current filter
         function rerenderSmithing() {
           const smithingGroup = smithingGroupRef.current
           if (!smithingGroup) return
@@ -424,30 +666,10 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
           updateSmithingCounts(smithCountEl.current, layerRef.current, smithFilterRef.current, progressStore.getSnapshot())
         }
 
-        L.DomEvent.on(smithBtn, 'click', (e) => {
-          L.DomEvent.stopPropagation(e)
-          showSmithingRef.current = !showSmithingRef.current
-          const smithingGroup = smithingGroupRef.current
-          if (!smithingGroup) return
-          if (showSmithingRef.current) {
-            smithingGroup.addTo(map)
-            smithBtn.classList.add('active')
-            filterPanel.style.display = 'flex'
-          } else {
-            smithingGroup.remove()
-            smithBtn.classList.remove('active')
-            filterPanel.style.display = 'none'
-          }
-          try {
-            sessionStorage.setItem('er-smithing-show', showSmithingRef.current ? 'true' : 'false')
-          } catch {
-            /* private mode */
-          }
-        })
-        return div
+        return wrapper
       },
     })
-    new LayerControl({ position: 'topright' }).addTo(map)
+    new LayersControl({ position: 'topright' }).addTo(map)
 
     // focus(): layer switch → flyTo → open popup. Registered with UiContext so
     // RoutePanel locate buttons drive the map; unregistered on unmount.
@@ -558,6 +780,63 @@ export default function MapView({ initialLayer, activeLegId, nextUpId }: MapView
   }, [activeLegId, nextUpId])
 
   return <div ref={containerRef} className="h-full w-full" style={{ background: '#0e0c09' }} />
+}
+
+// ── Section builder helper ─────────────────────────────────────────────────
+
+interface SectionRefs {
+  section: HTMLDivElement
+  body: HTMLDivElement
+}
+
+function buildSection(parent: HTMLElement, title: string, id: string): SectionRefs {
+  const section = L.DomUtil.create('div', 'er-layers-section', parent) as HTMLDivElement
+  section.id = id
+
+  const header = L.DomUtil.create('div', 'er-layers-section__header', section) as HTMLDivElement
+  const titleEl = L.DomUtil.create('span', 'er-layers-section__title', header)
+  titleEl.textContent = title
+  const caret = L.DomUtil.create('span', 'er-layers-section__caret', header)
+  caret.textContent = '▼'
+
+  const body = L.DomUtil.create('div', 'er-layers-section__body', section) as HTMLDivElement
+
+  // Collapse/expand on header click
+  L.DomEvent.on(header, 'click', (e) => {
+    L.DomEvent.stopPropagation(e)
+    section.classList.toggle('collapsed')
+  })
+
+  return { section, body }
+}
+
+interface WorldRowOpts {
+  id: string
+  label: string
+  active: boolean
+  onToggle: () => void
+}
+
+function buildWorldRow(parent: HTMLElement, opts: WorldRowOpts): HTMLButtonElement {
+  const row = L.DomUtil.create('button', 'er-layers-row', parent) as HTMLButtonElement
+  row.id = opts.id
+  row.classList.add(opts.active ? 'er-layers-row--active' : 'er-layers-row--inactive')
+
+  const labelEl = L.DomUtil.create('span', 'er-layers-row__label', row)
+  labelEl.textContent = opts.label
+
+  L.DomUtil.create('span', 'er-layers-toggle', row)
+
+  L.DomEvent.on(row, 'click', (e) => {
+    L.DomEvent.stopPropagation(e)
+    opts.onToggle()
+    // Find the current active state from the ref side (opts.onToggle mutated it)
+    // We rely on the row class being updated by re-checking the DOM state
+    row.classList.toggle('er-layers-row--active')
+    row.classList.toggle('er-layers-row--inactive')
+  })
+
+  return row
 }
 
 // ── Module-level render helpers (no React state) ──────────────────────────
@@ -676,7 +955,7 @@ function updateSmithingCounts(
 }
 
 function renderItems(
-  group: L.LayerGroup,
+  catGroups: Map<Category, L.LayerGroup>,
   markerMap: Map<string, L.Marker>,
   variantMap: Map<string, MarkerVariant>,
   code: MapCode,
@@ -695,6 +974,9 @@ function renderItems(
       if (markerMap.has(step.itemId)) continue // item may appear in several legs
       const item = itemsById.get(step.itemId)
       if (!item?.map || item.map.code !== code) continue
+
+      const group = catGroups.get(item.category)
+      if (!group) continue
 
       const isChecked = snapshot.checked[item.id] != null
       const isIgnored = snapshot.ignored[item.id] != null

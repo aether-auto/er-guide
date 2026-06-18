@@ -196,21 +196,76 @@ const pinsAtMax = await page.locator('.er-pin').count()
 check('Pins still legible at max zoom', pinsAtMax > 0, `${pinsAtMax} pins`)
 await page.screenshot({ path: 'docs/screenshots/04-zoom7-upscale.png' })
 
-// 12 ── Graces + locations toggles
-await page.locator('#er-grace-toggle').click()
+// 12 ── Graces + locations toggles (via Layers panel)
+// Open the Layers panel first — toggles live inside the popover.
+await page.locator('.er-layers-btn').click()
+await page.waitForTimeout(300)
+check('Layers panel opens', await page.locator('.er-layers-panel.open').count() > 0)
+
+await page.evaluate(() => document.getElementById('er-grace-toggle')?.click())
 await page.waitForTimeout(300)
 const gracesHidden = (await page.locator('.er-grace').count()) === 0
-await page.locator('#er-grace-toggle').click()
+await page.evaluate(() => document.getElementById('er-grace-toggle')?.click())
 check('Graces toggle hides/shows graces', gracesHidden)
 
-await page.locator('#er-location-toggle').click()
+await page.evaluate(() => document.getElementById('er-location-toggle')?.click())
 await page.waitForTimeout(300)
 const locsHidden = (await page.locator('.er-loc').count()) === 0
-await page.locator('#er-location-toggle').click()
+await page.evaluate(() => document.getElementById('er-location-toggle')?.click())
 await page.waitForTimeout(300)
 const locsBack = (await page.locator('.er-loc').count()) > 0
 check('Locations toggle hides/shows landmarks', locsHidden && locsBack,
   `hidden=${locsHidden}, restored=${locsBack}`)
+
+// 12b ── Per-category item pin toggles + All/None
+{
+  // Open layers panel if not already open
+  const panelOpen = await page.locator('.er-layers-panel.open').count() > 0
+  if (!panelOpen) await page.locator('.er-layers-btn').click()
+  await page.waitForTimeout(200)
+
+  const pinsBefore = await page.locator('.er-pin').count()
+
+  // Click "None" — all category groups hidden
+  await page.evaluate(() => document.getElementById('er-cat-none-btn')?.click())
+  await page.waitForTimeout(300)
+  const pinsAfterNone = await page.locator('.er-pin').count()
+  check('Layers panel None button hides all item pins', pinsAfterNone === 0,
+    `before=${pinsBefore}, after None=${pinsAfterNone}`)
+
+  // Click "All" — all category groups restored
+  await page.evaluate(() => document.getElementById('er-cat-all-btn')?.click())
+  await page.waitForTimeout(300)
+  const pinsAfterAll = await page.locator('.er-pin').count()
+  check('Layers panel All button restores all item pins', pinsAfterAll === pinsBefore,
+    `before=${pinsBefore}, after All=${pinsAfterAll}`)
+
+  // Toggle a single category (first one with data-category attr)
+  const firstCatRow = page.locator('.er-layers-row[data-category]').first()
+  const catName = await firstCatRow.getAttribute('data-category')
+  await page.evaluate(() => {
+    const row = document.querySelector('.er-layers-row[data-category]')
+    if (row) row.click()
+  })
+  await page.waitForTimeout(300)
+  const pinsAfterOneCatOff = await page.locator('.er-pin').count()
+  check('Toggling a category off reduces pin count', pinsAfterOneCatOff < pinsAfterAll,
+    `cat=${catName}, before=${pinsAfterAll}, after=${pinsAfterOneCatOff}`)
+
+  // Toggle it back on
+  await page.evaluate(() => {
+    const row = document.querySelector('.er-layers-row[data-category]')
+    if (row) row.click()
+  })
+  await page.waitForTimeout(300)
+  const pinsAfterRestore = await page.locator('.er-pin').count()
+  check('Toggling a category back on restores pin count', pinsAfterRestore === pinsAfterAll,
+    `restored=${pinsAfterRestore}`)
+
+  // Close the panel by clicking outside
+  await page.locator('.leaflet-container').click({ position: { x: 800, y: 400 } })
+  await page.waitForTimeout(200)
+}
 
 // 13 ── Mobile bottom sheet at 390px
 await page.setViewportSize({ width: 390, height: 844 })
@@ -330,7 +385,7 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   await detailCtx.close()
 }
 
-// 18 ── Smithing-stones layer toggle
+// 18 ── Smithing-stones layer toggle (via Layers panel)
 // Default is OFF — toggle it on, assert diamonds appear, toggle off → gone.
 {
   const smithCtx = await browser.newContext({ viewport: { width: 1440, height: 900 } })
@@ -343,8 +398,10 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   const smithBeforeToggle = await smithPage.locator('.er-smith').count()
   check('Smithing stones layer OFF by default', smithBeforeToggle === 0, `${smithBeforeToggle} markers visible`)
 
-  // Toggle ON
-  await smithPage.locator('#er-smithing-toggle').click()
+  // Open Layers panel, then toggle smithing ON
+  await smithPage.locator('.er-layers-btn').click()
+  await smithPage.waitForTimeout(200)
+  await smithPage.evaluate(() => document.getElementById('er-smithing-toggle')?.click())
   await smithPage.waitForTimeout(500)
   const smithOn = await smithPage.locator('.er-smith').count()
   check('Smithing stones appear after toggle ON', smithOn > 0, `${smithOn} markers visible`)
@@ -356,8 +413,8 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   // Screenshot with stones layer on (sombers glowing + filter panel visible)
   await smithPage.screenshot({ path: 'docs/screenshots/06-smithing-stones-layer.png' })
 
-  // Toggle OFF
-  await smithPage.locator('#er-smithing-toggle').click()
+  // Toggle OFF (panel still open)
+  await smithPage.evaluate(() => document.getElementById('er-smithing-toggle')?.click())
   await smithPage.waitForTimeout(300)
   const smithOff = await smithPage.locator('.er-smith').count()
   check('Smithing stones disappear after toggle OFF', smithOff === 0, `${smithOff} markers visible`)
@@ -373,8 +430,10 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   await sfKindPage.waitForSelector('.leaflet-container', { timeout: 10000 })
   await sfKindPage.waitForTimeout(1500)
 
-  // Enable the smithing layer
-  await sfKindPage.locator('#er-smithing-toggle').click()
+  // Open Layers panel and enable the smithing layer
+  await sfKindPage.locator('.er-layers-btn').click()
+  await sfKindPage.waitForTimeout(200)
+  await sfKindPage.evaluate(() => document.getElementById('er-smithing-toggle')?.click())
   await sfKindPage.waitForTimeout(500)
 
   // Count totals with "All" filter
@@ -383,7 +442,7 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   const totalAll = await sfKindPage.locator('.er-smith').count()
 
   // Switch to "Somber only"
-  await sfKindPage.locator('#er-smith-kind-somber').click()
+  await sfKindPage.evaluate(() => document.getElementById('er-smith-kind-somber')?.click())
   await sfKindPage.waitForTimeout(300)
   const regularAfterSomberFilter = await sfKindPage.locator('.er-smith:not(.er-smith--somber)').count()
   const somberAfterFilter = await sfKindPage.locator('.er-smith--somber').count()
@@ -402,7 +461,7 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
     `count="${countText?.trim()}", all=${totalAll}`)
 
   // Switch to "Regular only" — verify sombers vanish
-  await sfKindPage.locator('#er-smith-kind-regular').click()
+  await sfKindPage.evaluate(() => document.getElementById('er-smith-kind-regular')?.click())
   await sfKindPage.waitForTimeout(300)
   const somberAfterRegFilter = await sfKindPage.locator('.er-smith--somber').count()
   const regularAfterRegFilter = await sfKindPage.locator('.er-smith:not(.er-smith--somber)').count()
@@ -414,7 +473,7 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
     `${regularAfterRegFilter} regular shown`)
 
   // Reset to All
-  await sfKindPage.locator('#er-smith-kind-all').click()
+  await sfKindPage.evaluate(() => document.getElementById('er-smith-kind-all')?.click())
   await sfKindPage.waitForTimeout(300)
   const totalAfterReset = await sfKindPage.locator('.er-smith').count()
   check('Kind filter reset to All restores all stones',
@@ -432,12 +491,15 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   await sfLvlPage.waitForSelector('.leaflet-container', { timeout: 10000 })
   await sfLvlPage.waitForTimeout(1500)
 
-  await sfLvlPage.locator('#er-smithing-toggle').click()
+  // Open Layers panel and enable smithing layer
+  await sfLvlPage.locator('.er-layers-btn').click()
+  await sfLvlPage.waitForTimeout(200)
+  await sfLvlPage.evaluate(() => document.getElementById('er-smithing-toggle')?.click())
   await sfLvlPage.waitForTimeout(500)
   const totalBeforeLvl = await sfLvlPage.locator('.er-smith').count()
 
   // Deactivate level [1] — should reduce total (level 1 stones exist on overworld)
-  await sfLvlPage.locator('#er-smith-lvl-1').click()
+  await sfLvlPage.evaluate(() => document.getElementById('er-smith-lvl-1')?.click())
   await sfLvlPage.waitForTimeout(300)
   const totalAfterLvl1Off = await sfLvlPage.locator('.er-smith').count()
   check('Level filter: deactivating [1] reduces visible stones',
@@ -445,7 +507,7 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
     `before=${totalBeforeLvl}, after lvl-1 off=${totalAfterLvl1Off}`)
 
   // Re-activate level [1]
-  await sfLvlPage.locator('#er-smith-lvl-1').click()
+  await sfLvlPage.evaluate(() => document.getElementById('er-smith-lvl-1')?.click())
   await sfLvlPage.waitForTimeout(300)
   const totalAfterLvl1On = await sfLvlPage.locator('.er-smith').count()
   check('Level filter: re-activating [1] restores stones',
@@ -453,14 +515,14 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
     `${totalAfterLvl1On} vs ${totalBeforeLvl}`)
 
   // Combine: somber + level 7 only
-  await sfLvlPage.locator('#er-smith-kind-somber').click()
+  await sfLvlPage.evaluate(() => document.getElementById('er-smith-kind-somber')?.click())
   await sfLvlPage.waitForTimeout(200)
   // Deactivate all levels except 7 — click each except 7
   for (const lvl of [1, 2, 3, 4, 5, 6, 8, 9]) {
-    await sfLvlPage.locator(`#er-smith-lvl-${lvl}`).click()
+    await sfLvlPage.evaluate((l) => document.getElementById(`er-smith-lvl-${l}`)?.click(), lvl)
     await sfLvlPage.waitForTimeout(100)
   }
-  await sfLvlPage.locator('#er-smith-lvl-ancient').click()
+  await sfLvlPage.evaluate(() => document.getElementById('er-smith-lvl-ancient')?.click())
   await sfLvlPage.waitForTimeout(200)
   const somberLvl7Count = await sfLvlPage.locator('.er-smith--somber').count()
   const regularLvl7Count = await sfLvlPage.locator('.er-smith:not(.er-smith--somber)').count()
@@ -485,7 +547,10 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   await sfPopPage.waitForTimeout(3000)
 
   // Enable smithing layer AFTER the auto-pan so stones appear at the right location
-  await sfPopPage.locator('#er-smithing-toggle').click()
+  // Open Layers panel first
+  await sfPopPage.locator('.er-layers-btn').click()
+  await sfPopPage.waitForTimeout(200)
+  await sfPopPage.evaluate(() => document.getElementById('er-smithing-toggle')?.click())
   await sfPopPage.waitForTimeout(800)
 
   // Zoom in 1 more level (we're already at z5 from auto-pan)
@@ -551,8 +616,10 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
   await sfDonePage.waitForSelector('.leaflet-container', { timeout: 10000 })
   await sfDonePage.waitForTimeout(3000)
 
-  // Enable smithing layer
-  await sfDonePage.locator('#er-smithing-toggle').click()
+  // Enable smithing layer (via Layers panel)
+  await sfDonePage.locator('.er-layers-btn').click()
+  await sfDonePage.waitForTimeout(200)
+  await sfDonePage.evaluate(() => document.getElementById('er-smithing-toggle')?.click())
   await sfDonePage.waitForTimeout(800)
 
   const doneCountBefore = await sfDonePage.evaluate(() => {
@@ -596,6 +663,12 @@ check('Mobile: sheet expands on handle tap', !!box2 && !!box && box2.height > bo
     `${checkedCount} checked stones (popup=${popupOpened})`)
 
   // Verify done count incremented in the filter panel
+  // Re-open the Layers panel to access the count span (it's inside the popover).
+  const panelAlreadyOpen = await sfDonePage.locator('.er-layers-panel.open').count() > 0
+  if (!panelAlreadyOpen) {
+    await sfDonePage.locator('.er-layers-btn').click()
+    await sfDonePage.waitForTimeout(200)
+  }
   const doneCountAfter = await sfDonePage.evaluate(() => {
     return document.getElementById('er-smithing-counts')?.textContent ?? ''
   })

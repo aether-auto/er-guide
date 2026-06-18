@@ -719,6 +719,241 @@ body {
   border-color: #8a7444;
 }
 
+/* ── Unified Layers Panel ───────────────────────────────── */
+.er-layers-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.02em;
+  border: 1px solid #2c261b;
+  border-radius: 4px;
+  background: rgba(23, 20, 15, 0.9);
+  color: #8f887a;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  user-select: none;
+}
+.er-layers-btn:hover,
+.er-layers-btn.open {
+  background: #17140f;
+  color: #c8a55a;
+  border-color: #8a7444;
+}
+.er-layers-btn__icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* The popover panel */
+.er-layers-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 280px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  background: rgba(14, 12, 9, 0.97);
+  border: 1px solid #2c261b;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  padding: 6px 0;
+  backdrop-filter: blur(6px);
+}
+.er-layers-panel.open {
+  display: block;
+}
+
+/* Scrollbar styling for the panel */
+.er-layers-panel::-webkit-scrollbar {
+  width: 4px;
+}
+.er-layers-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+.er-layers-panel::-webkit-scrollbar-thumb {
+  background: #2c261b;
+  border-radius: 2px;
+}
+
+/* Section headers with collapse toggle */
+.er-layers-section {
+  padding: 0;
+}
+.er-layers-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px 4px;
+  cursor: pointer;
+  user-select: none;
+}
+.er-layers-section__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a7444;
+}
+.er-layers-section__caret {
+  font-size: 9px;
+  color: #8a7444;
+  transition: transform 0.2s;
+}
+.er-layers-section.collapsed .er-layers-section__caret {
+  transform: rotate(-90deg);
+}
+.er-layers-section__body {
+  padding: 0 0 4px;
+}
+.er-layers-section.collapsed .er-layers-section__body {
+  display: none;
+}
+
+/* Separator between sections */
+.er-layers-sep {
+  border: none;
+  border-top: 1px solid #2c261b;
+  margin: 4px 0;
+}
+
+/* A single toggle row */
+.er-layers-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: background 0.1s;
+  border: none;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: inherit;
+}
+.er-layers-row:hover {
+  background: rgba(200, 165, 90, 0.06);
+}
+.er-layers-row.er-layers-row--active .er-layers-toggle {
+  background: rgba(200, 165, 90, 0.2);
+  border-color: #8a7444;
+}
+.er-layers-row.er-layers-row--active .er-layers-toggle::after {
+  opacity: 1;
+  transform: translateX(12px);
+}
+.er-layers-row.er-layers-row--inactive .er-layers-row__label {
+  color: #5a5248;
+}
+.er-layers-row.er-layers-row--inactive .er-layers-row__count {
+  color: #3a3530;
+}
+
+/* Color swatch */
+.er-layers-swatch {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-family: "Segoe UI Symbol", "Noto Sans Symbols", "Apple Symbols", sans-serif;
+  font-variant-emoji: text;
+  line-height: 1;
+}
+
+/* Label */
+.er-layers-row__label {
+  flex: 1;
+  font-size: 11px;
+  color: #d8d2c4;
+  line-height: 1.2;
+}
+
+/* Pin count badge */
+.er-layers-row__count {
+  font-size: 10px;
+  color: #8f887a;
+  font-variant-numeric: tabular-nums;
+  min-width: 20px;
+  text-align: right;
+}
+
+/* Toggle pill */
+.er-layers-toggle {
+  flex-shrink: 0;
+  width: 28px;
+  height: 16px;
+  border-radius: 8px;
+  background: rgba(44, 38, 27, 0.8);
+  border: 1px solid #2c261b;
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+.er-layers-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #5a5248;
+  transition: transform 0.15s, background 0.15s, opacity 0.15s;
+  opacity: 0.7;
+}
+.er-layers-row--active .er-layers-toggle::after {
+  background: #c8a55a;
+  transform: translateX(12px);
+  opacity: 1;
+}
+
+/* All / None quick actions row */
+.er-layers-quick {
+  display: flex;
+  gap: 6px;
+  padding: 2px 12px 6px;
+}
+.er-layers-quick__btn {
+  font-size: 10px;
+  color: #8a7444;
+  background: transparent;
+  border: 1px solid #2c261b;
+  border-radius: 3px;
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: color 0.1s, border-color 0.1s;
+}
+.er-layers-quick__btn:hover {
+  color: #c8a55a;
+  border-color: #8a7444;
+}
+
+/* Smithing sub-filters nested row */
+.er-layers-smithing-sub {
+  padding: 4px 12px 6px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* No-pins notice */
+.er-layers-empty {
+  padding: 4px 12px;
+  font-size: 10px;
+  color: #5a5248;
+  font-style: italic;
+}
+
 /* ── Drag handle (mobile) ───────────────────────────────── */
 .er-drag-handle {
   width: 36px;

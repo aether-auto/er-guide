@@ -79,7 +79,7 @@ export default function TopBar() {
       </div>
       <details className="relative">
         <summary className="cursor-pointer list-none rounded border border-edge px-2 py-1 text-xs text-ink-dim hover:text-ink">
-          Filter{filters.categories ? ` (${filters.categories.size})` : ''}
+          Filter list{filters.categories ? ` (${filters.categories.size})` : ''}
         </summary>
         <div className="absolute right-0 mt-1 grid w-64 grid-cols-2 gap-1 rounded border border-edge bg-panel2 p-2 shadow-xl">
           {ALL_CATEGORIES.map((cat) => (
