@@ -6,6 +6,7 @@ import { regions } from './lib/data'
 import GuidePage from './pages/GuidePage'
 import ProgressPage from './pages/ProgressPage'
 import CoveragePage from './pages/CoveragePage'
+import QuestlinePage from './pages/QuestlinePage'
 
 /** A pending cross-region focus: set by TopBar when navigating to a different
  *  region. Consumed exactly once by GuidePage/MapView after markers are built. */
@@ -90,6 +91,7 @@ export default function App() {
           {/* Optional :legId? keeps ONE route match for region and leg views, so
               GuidePage/MapView survive leg navigation (no Leaflet remount). */}
           <Route path="/region/:regionId/:legId?" element={<GuidePage />} />
+          <Route path="/questlines" element={<QuestlinePage />} />
           <Route path="/progress" element={<ProgressPage />} />
           <Route path="/coverage" element={<CoveragePage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

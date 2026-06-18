@@ -78,3 +78,99 @@ export function firstUncheckedId(
   }
   return null
 }
+
+// ── NPC questlines ──────────────────────────────────────────────────────────
+
+/** One quest step, flattened with its region/leg context for the questline view. */
+export interface QuestStep {
+  id: string
+  questline: string
+  text: string
+  missable: { lockedBy: string; note: string } | null
+  regionId: string
+  regionName: string
+  regionOrder: number
+  legId: string
+  legFrom: string
+  legTo: string
+}
+
+export interface Questline {
+  /** Canonical display name (collapses minor naming variants). */
+  name: string
+  steps: QuestStep[]
+}
+
+/** Some authored `questline` strings are variants of the same NPC arc.
+ *  Map them to one canonical name so the questline tab groups them together. */
+const QUESTLINE_ALIASES: Record<string, string> = {
+  'Varré': 'White-Faced Varré',
+  'Sellen': 'Sorceress Sellen',
+  'Millicent': 'Gowry / Millicent',
+  'Needle Knight Leda': 'Leda',
+  'Needle Knight Leda / Hornsent': 'Leda',
+  'Redmane Freyja': 'Freyja',
+  'Iron Fist Alexander': 'Alexander',
+  'Jerren / Alexander': 'Alexander',
+  'Goldmask / Brother Corhyn': 'Corhyn/Goldmask',
+  'Thiollier / St. Trina': 'Thiollier',
+}
+
+function canonicalQuestline(name: string): string {
+  return QUESTLINE_ALIASES[name] ?? name
+}
+
+/**
+ * All NPC questlines, each a grouped, in-game-order list of its quest steps.
+ * Built once at module load from every region's authored `quest` steps.
+ * Ordered by the region/leg in which each questline first appears, so the
+ * list reads in the order a player naturally encounters NPCs.
+ */
+export const questlines: Questline[] = (() => {
+  const byName = new Map<string, QuestStep[]>()
+  for (const region of regions) {
+    region.legs.forEach((leg, legIndex) => {
+      for (const step of leg.steps) {
+        if (step.type !== 'quest') continue
+        const name = canonicalQuestline(step.questline)
+        const quest: QuestStep = {
+          id: step.id,
+          questline: name,
+          text: step.text,
+          missable: step.missable ?? null,
+          regionId: region.id,
+          regionName: region.name,
+          regionOrder: region.order,
+          legId: leg.id,
+          legFrom: leg.from,
+          legTo: leg.to,
+        }
+        // Stash leg index on the step for stable intra-questline ordering.
+        ;(quest as QuestStep & { _legIndex: number })._legIndex = legIndex
+        const list = byName.get(name) ?? []
+        list.push(quest)
+        byName.set(name, list)
+      }
+    })
+  }
+  // Sort each questline's steps by region order, then leg order.
+  for (const steps of byName.values()) {
+    steps.sort((a, b) => {
+      if (a.regionOrder !== b.regionOrder) return a.regionOrder - b.regionOrder
+      const ai = (a as QuestStep & { _legIndex: number })._legIndex
+      const bi = (b as QuestStep & { _legIndex: number })._legIndex
+      return ai - bi
+    })
+  }
+  // Order questlines by where they first appear in the route.
+  const lines = [...byName.entries()].map(([name, steps]) => ({ name, steps }))
+  lines.sort((a, b) => {
+    const fa = a.steps[0]
+    const fb = b.steps[0]
+    if (fa.regionOrder !== fb.regionOrder) return fa.regionOrder - fb.regionOrder
+    const ai = (fa as QuestStep & { _legIndex: number })._legIndex
+    const bi = (fb as QuestStep & { _legIndex: number })._legIndex
+    return ai - bi
+  })
+  return lines
+})()

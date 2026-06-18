@@ -5,7 +5,9 @@ import {
   countIgnored,
   firstUncheckedId,
   legCheckables,
+  questlines,
   regionCheckables,
+  regions,
 } from './data'
 import type { Leg, Region } from './types'
 
@@ -49,5 +51,47 @@ describe('data helpers', () => {
     expect(firstUncheckedId(leg.steps, {}, { 'talisman-x': 1 })).toBe('boss-y')
     expect(firstUncheckedId(leg.steps, { 'boss-y': 1 }, { 'talisman-x': 1 })).toBe('quest-z')
     expect(firstUncheckedId(leg.steps, {}, { 'talisman-x': 1, 'boss-y': 1, 'quest-z': 1 })).toBe(null)
+  })
+})
+
+describe('questlines (real region data)', () => {
+  it('groups every authored quest step exactly once', () => {
+    let authoredCount = 0
+    for (const region of regions)
+      for (const leg of region.legs)
+        for (const step of leg.steps) if (step.type === 'quest') authoredCount++
+
+    const groupedCount = questlines.reduce((n, q) => n + q.steps.length, 0)
+    expect(groupedCount).toBe(authoredCount)
+    expect(authoredCount).toBeGreaterThan(0)
+  })
+
+  it('collapses naming-variant aliases (no "Varré" or "Sellen" leak through)', () => {
+    const names = questlines.map((q) => q.name)
+    expect(names).not.toContain('Varré')
+    expect(names).not.toContain('Sellen')
+    expect(names).toContain('White-Faced Varré')
+    expect(names).toContain('Sorceress Sellen')
+    // names are unique after canonicalization
+    expect(new Set(names).size).toBe(names.length)
+  })
+
+  it('orders steps within a questline by region order then leg order (non-decreasing)', () => {
+    for (const q of questlines) {
+      for (let i = 1; i < q.steps.length; i++) {
+        expect(q.steps[i].regionOrder).toBeGreaterThanOrEqual(q.steps[i - 1].regionOrder)
+      }
+    }
+  })
+
+  it('every quest step carries region/leg context and a stable id', () => {
+    for (const q of questlines) {
+      for (const step of q.steps) {
+        expect(step.id).toBeTruthy()
+        expect(step.regionId).toBeTruthy()
+        expect(step.legId).toBeTruthy()
+        expect(step.questline).toBe(q.name)
+      }
+    }
   })
 })

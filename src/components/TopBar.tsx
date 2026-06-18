@@ -107,6 +107,9 @@ export default function TopBar() {
         />
         hide done
       </label>
+      <NavLink to="/questlines" className="text-xs text-ink-dim hover:text-gold">
+        Questlines
+      </NavLink>
       <NavLink to="/progress" className="text-xs text-ink-dim hover:text-gold">
         Progress
       </NavLink>

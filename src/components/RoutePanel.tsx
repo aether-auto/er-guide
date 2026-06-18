@@ -286,6 +286,15 @@ function RegionTree({ activeRegionId, onClose }: { activeRegionId: string; onClo
 
 // ── Main RoutePanel ───────────────────────────────────────────────────────
 
+/** Persisted collapsed state for the desktop sidebar. */
+function storedCollapsed(): boolean {
+  try {
+    return sessionStorage.getItem('er-panel-collapsed') === 'true'
+  } catch {
+    return false
+  }
+}
+
 export default function RoutePanel() {
   const { regionId, legId } = useParams()
   const navigate = useNavigate()
@@ -293,6 +302,19 @@ export default function RoutePanel() {
   const { focus } = useUi()
   const [showTree, setShowTree] = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState(false)
+  const [collapsed, setCollapsed] = useState(storedCollapsed)
+
+  function toggleCollapsed() {
+    setCollapsed((v) => {
+      const next = !v
+      try {
+        sessionStorage.setItem('er-panel-collapsed', next ? 'true' : 'false')
+      } catch {
+        /* private mode */
+      }
+      return next
+    })
+  }
 
   const region = regions.find((r) => r.id === regionId)
   if (!region) {
@@ -344,6 +366,23 @@ export default function RoutePanel() {
   const legActiveIds = legIds.filter((id) => snapshot.ignored[id] == null)
   const legDone = currentLeg ? countChecked(legActiveIds, snapshot.checked) : 0
 
+  // Collapsed (desktop): the panel slides off-screen, leaving a slim reopen tab
+  // pinned to the left edge so the map gets the full viewport. Mobile keeps the
+  // bottom-sheet behaviour and ignores collapse entirely.
+  if (collapsed) {
+    return (
+      <button
+        onClick={toggleCollapsed}
+        className="er-route-reopen hidden sm:flex"
+        title="Show route panel"
+        aria-label="Show route panel"
+      >
+        <span className="er-route-reopen__icon">›</span>
+        <span className="er-route-reopen__label">Route</span>
+      </button>
+    )
+  }
+
   return (
     <div className={`er-route-panel ${mobileExpanded ? 'er-route-panel--expanded' : ''}`}>
       {/* Drag handle (mobile bottom sheet) */}
@@ -368,6 +407,15 @@ export default function RoutePanel() {
           {region.dlc && (
             <span className="rounded border border-gold-dim/40 px-1 text-[9px] text-gold-dim">DLC</span>
           )}
+          {/* Collapse the sidebar (desktop only) */}
+          <button
+            onClick={toggleCollapsed}
+            className="hidden rounded border border-edge px-1.5 py-0.5 text-[10px] text-ink-dim hover:text-gold sm:block"
+            title="Hide route panel"
+            aria-label="Hide route panel"
+          >
+            ‹
+          </button>
         </div>
         {region.legs.length > 0 && (
           <div className="mt-1.5 flex items-center gap-1 text-[10px]">

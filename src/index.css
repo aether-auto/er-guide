@@ -648,6 +648,40 @@ body {
   flex-direction: column;
 }
 
+/* ── Collapsed sidebar reopen tab (desktop) ──────────────── */
+.er-route-reopen {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 10px 8px 8px;
+  background: rgba(23, 20, 15, 0.93);
+  backdrop-filter: blur(4px);
+  border: 1px solid #2c261b;
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  color: #8f887a;
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+}
+.er-route-reopen:hover {
+  color: #c8a55a;
+  background: #17140f;
+  border-color: #8a7444;
+}
+.er-route-reopen__icon {
+  font-size: 14px;
+  line-height: 1;
+}
+.er-route-reopen__label {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
 /* ── Mobile bottom sheet ─────────────────────────────────── */
 @media (max-width: 640px) {
   .er-route-panel {
