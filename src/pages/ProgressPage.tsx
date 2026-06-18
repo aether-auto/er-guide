@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useRef, useState } from 'react'
+import { NavLink, useSearchParams } from 'react-router-dom'
 import { items, regions, regionCheckables, countChecked, countIgnored, itemPosition } from '../lib/data'
 import { CATEGORY_META, type Category } from '../lib/types'
 import { useProgress } from '../lib/useProgress'
-import { gistSync, type SyncStatus } from '../lib/gistSync'
+import { decodeSyncCode, encodeSyncCode } from '../lib/syncCode'
 import TopBar from '../components/TopBar'
 
 export default function ProgressPage() {
@@ -11,30 +11,63 @@ export default function ProgressPage() {
   const fileRef = useRef<HTMLInputElement>(null)
   const [importError, setImportError] = useState('')
   const [newProfile, setNewProfile] = useState('')
-  const [syncStatus, setSyncStatus] = useState<SyncStatus>(gistSync.getStatus())
-  const [tokenInput, setTokenInput] = useState('')
 
-  // Keep React state in sync with the gistSync module's status.
-  useEffect(() => gistSync.subscribe(() => setSyncStatus(gistSync.getStatus())), [])
+  // "Move to another device" — sync codes.
+  const [codeInput, setCodeInput] = useState('')
+  const [codeError, setCodeError] = useState('')
+  const [copied, setCopied] = useState(false)
+  const copiedTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
 
-  // While connected: auto-push (debounced 3s) on store changes, and check once
-  // whether the cloud copy is newer than our last sync (never auto-imports).
-  const connected =
-    syncStatus.type === 'idle' ||
-    syncStatus.type === 'syncing' ||
-    syncStatus.type === 'cloud-newer' ||
-    (syncStatus.type === 'error' && syncStatus.gistId != null)
-  useEffect(() => {
-    if (!connected) return
-    const stopAuto = gistSync.startAutoSync(store)
-    void gistSync.checkCloudNewer()
-    return stopAuto
-  }, [connected, store])
+  // A sync code can ride in the URL (#/progress?code=…). Never auto-import — we
+  // surface a confirm banner and strip the param on Load. useSearchParams works
+  // inside HashRouter (it reads the hash's query string).
+  const [searchParams, setSearchParams] = useSearchParams()
+  const sharedCode = searchParams.get('code')
+  const [sharedError, setSharedError] = useState('')
 
-  async function doConnect() {
-    if (!tokenInput.trim()) return
-    const result = await gistSync.connect(tokenInput.trim())
-    if (result.type === 'idle') setTokenInput('')
+  async function doCopyCode() {
+    try {
+      const code = await encodeSyncCode(store.exportJson())
+      await navigator.clipboard.writeText(code)
+      setCopied(true)
+      clearTimeout(copiedTimer.current)
+      copiedTimer.current = setTimeout(() => setCopied(false), 2000)
+    } catch {
+      setCopied(false)
+    }
+  }
+
+  async function doLoadCode() {
+    if (!codeInput.trim()) return
+    try {
+      store.importJson(await decodeSyncCode(codeInput.trim()))
+      setCodeInput('')
+      setCodeError('')
+    } catch (err) {
+      setCodeError(err instanceof Error ? err.message : 'Invalid sync code')
+    }
+  }
+
+  async function doLoadShared() {
+    if (!sharedCode) return
+    try {
+      store.importJson(await decodeSyncCode(sharedCode))
+      setSharedError('')
+      dismissShared()
+    } catch (err) {
+      setSharedError(err instanceof Error ? err.message : 'Invalid sync code')
+    }
+  }
+
+  function dismissShared() {
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev)
+        next.delete('code')
+        return next
+      },
+      { replace: true },
+    )
   }
 
   // Ignored items are excluded from all totals (category, region, missables).
@@ -83,6 +116,27 @@ export default function ProgressPage() {
           </p>
         )}
 
+        {sharedCode && (
+          <div className="mb-4 flex flex-wrap items-center gap-2 rounded border border-gold-dim/60 bg-panel p-3 text-sm">
+            <span className="text-gold">
+              A sync code was shared with this link — load it? This replaces your current progress.
+            </span>
+            <button
+              onClick={() => void doLoadShared()}
+              className="rounded border border-gold-dim px-2 py-0.5 text-gold hover:bg-panel2"
+            >
+              Load
+            </button>
+            <button
+              onClick={dismissShared}
+              className="rounded border border-edge px-2 py-0.5 text-ink-dim hover:bg-panel2"
+            >
+              Dismiss
+            </button>
+            {sharedError && <span className="text-missable">{sharedError}</span>}
+          </div>
+        )}
+
         <section className="mb-6 flex flex-wrap items-center gap-3 rounded border border-edge bg-panel p-3 text-sm">
           <span className="text-ink-dim">Profile:</span>
           <select
@@ -121,81 +175,37 @@ export default function ProgressPage() {
         </section>
 
         <section className="mb-6 rounded border border-edge bg-panel p-3 text-sm">
-          <h2 className="font-display mb-3 text-lg text-gold-dim">Cloud sync (GitHub)</h2>
+          <h2 className="font-display mb-3 text-lg text-gold-dim">Move to another device</h2>
 
-          {syncStatus.type === 'cloud-newer' && (
-            <div className="mb-3 flex flex-wrap items-center gap-2 rounded border border-gold-dim/60 bg-panel2 p-2">
-              <span className="text-gold">Your cloud copy is newer than this browser's data.</span>
-              <button
-                onClick={() => void gistSync.pullNow((json) => store.importJson(json))}
-                className="rounded border border-gold-dim px-2 py-0.5 text-gold hover:bg-panel"
-              >
-                Load cloud copy
-              </button>
-              <button
-                onClick={() => void gistSync.pushNow(store.exportJson())}
-                className="rounded border border-edge px-2 py-0.5 text-ink-dim hover:bg-panel"
-              >
-                Overwrite cloud
-              </button>
-            </div>
-          )}
-
-          {syncStatus.type === 'error' && (
-            <p className="mb-3 text-missable">Sync error: {syncStatus.message}</p>
-          )}
-
-          {!connected ? (
-            <div className="flex flex-wrap items-center gap-2">
-              <input
-                type="password"
-                value={tokenInput}
-                onChange={(e) => setTokenInput(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && void doConnect()}
-                placeholder="GitHub fine-grained token"
-                className="w-72 rounded border border-edge bg-bg px-2 py-1 font-mono text-xs"
-              />
-              <button
-                onClick={() => void doConnect()}
-                disabled={syncStatus.type === 'connecting' || !tokenInput.trim()}
-                className="rounded border border-gold-dim px-2 py-1 text-gold hover:bg-panel2 disabled:opacity-50"
-              >
-                {syncStatus.type === 'connecting' ? 'Connecting…' : 'Connect'}
-              </button>
-            </div>
-          ) : (
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="text-ink-dim">
-                Gist: <code>{(syncStatus.gistId ?? '').slice(0, 8)}…</code>
-              </span>
-              <span className="text-ink-dim">
-                Last synced: {syncStatus.lastSyncedAt ? new Date(syncStatus.lastSyncedAt).toLocaleString() : 'never'}
-              </span>
-              <button
-                onClick={() => void gistSync.pushNow(store.exportJson())}
-                disabled={syncStatus.type === 'syncing'}
-                className="rounded border border-gold-dim px-2 py-1 text-gold hover:bg-panel2 disabled:opacity-50"
-              >
-                {syncStatus.type === 'syncing' ? 'Syncing…' : 'Sync now'}
-              </button>
-              <button
-                onClick={() => void gistSync.pullNow((json) => store.importJson(json))}
-                disabled={syncStatus.type === 'syncing'}
-                className="rounded border border-edge px-2 py-1 hover:bg-panel2 disabled:opacity-50"
-              >
-                Load from cloud
-              </button>
-              <button
-                onClick={() => gistSync.disconnect()}
-                className="rounded border border-edge px-2 py-1 text-ink-dim hover:bg-panel2"
-              >
-                Disconnect
-              </button>
-            </div>
-          )}
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              onClick={() => void doCopyCode()}
+              className="rounded border border-gold-dim px-2 py-1 text-gold hover:bg-panel2"
+            >
+              {copied ? 'Copied!' : 'Copy sync code'}
+            </button>
+            <span className="mx-2 text-edge">|</span>
+            <input
+              value={codeInput}
+              onChange={(e) => setCodeInput(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && void doLoadCode()}
+              placeholder="paste sync code"
+              className="w-72 rounded border border-edge bg-bg px-2 py-1 font-mono text-xs"
+            />
+            <button
+              onClick={() => void doLoadCode()}
+              disabled={!codeInput.trim()}
+              className="rounded border border-edge px-2 py-1 hover:bg-panel2 disabled:opacity-50"
+            >
+              Load from sync code
+            </button>
+            {codeError && <span className="text-missable">{codeError}</span>}
+          </div>
 
           <p className="mt-3 text-xs text-ink-dim">
-            Use a fine-grained token with only the gist permission. The token is stored in your browser.
+            Your progress lives only in this browser. To move it elsewhere, copy the sync code (or export a
+            file above) and load it on the other device. Loading replaces the current progress. Very large
+            saves make long codes — use the file export if a shared link gets too long.
           </p>
         </section>
 
