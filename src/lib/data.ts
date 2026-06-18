@@ -53,17 +53,32 @@ export function countIgnored(ids: string[], ignored: Record<string, number>): nu
   return ids.reduce((n, id) => (ignored[id] != null ? n + 1 : n), 0)
 }
 
+/** Sentinel leg id for the "Region sweep" view (the region's cleanup items).
+ *  Routed as /region/:id/sweep — a selectable pseudo-leg, so unrouted items
+ *  stay checkable in the panel without a "full region" mega-list. */
+export const SWEEP_LEG_ID = 'sweep'
+
+/** The region's cleanup items as item steps (the "Region sweep" view). */
+export function sweepSteps(region: Region): Step[] {
+  return region.cleanup.map((id): Step => ({ type: 'item', itemId: id }))
+}
+
 /**
- * The ordered steps shown for a region view: the selected leg's steps, or —
- * with no leg selected — every leg's steps followed by the cleanup sweep.
+ * Steps shown for the panel: the selected leg's steps, the cleanup sweep
+ * (legId === 'sweep'), or [] when no leg is selected (the panel shows the
+ * region/leg picker instead — there is no "full region" combined list).
  */
 export function displaySteps(region: Region, legId?: string): Step[] {
+  if (legId === SWEEP_LEG_ID) return sweepSteps(region)
   const leg = legId ? region.legs.find((l) => l.id === legId) : undefined
-  if (leg) return leg.steps
-  return [
-    ...region.legs.flatMap((l) => l.steps),
-    ...region.cleanup.map((id): Step => ({ type: 'item', itemId: id })),
-  ]
+  return leg ? leg.steps : []
+}
+
+/** Every checkable step in a region in route order, ending with the cleanup
+ *  sweep — used only to derive the map's region-wide "next up" pin when no
+ *  specific leg is selected. */
+export function allRegionSteps(region: Region): Step[] {
+  return [...region.legs.flatMap((l) => l.steps), ...sweepSteps(region)]
 }
 
 /** First unchecked, non-ignored checkable step's id — the "next up" target. */

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
-import { displaySteps, firstUncheckedId, regions } from '../lib/data'
+import { allRegionSteps, displaySteps, firstUncheckedId, regions } from '../lib/data'
 import type { MapCode } from '../lib/types'
 import { useProgress } from '../lib/useProgress'
 import { useUi } from '../App'
@@ -18,8 +18,14 @@ export default function GuidePage() {
   const initialLayer: MapCode = region?.dlc ? 'dlc' : 'overworld'
   // Route emphasis for the map: highlighted leg + pulsing next-up pin.
   // Ignored items are skipped — they never get the pulsing pin.
+  // Leg/sweep selected → next-up within it; no leg → region-wide next-up so the
+  // map still pulses the right pin while the panel shows the leg picker.
   const nextUpId = region
-    ? firstUncheckedId(displaySteps(region, legId), snapshot.checked, snapshot.ignored)
+    ? firstUncheckedId(
+        legId ? displaySteps(region, legId) : allRegionSteps(region),
+        snapshot.checked,
+        snapshot.ignored,
+      )
     : null
 
   // Consume any pending cross-region focus once per region change.

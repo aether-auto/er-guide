@@ -3,16 +3,20 @@ import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import {
   regions,
   itemsById,
+  itemPosition,
   legCheckables,
   regionCheckables,
   countChecked,
   countIgnored,
   checkableId,
   displaySteps,
+  allRegionSteps,
   firstUncheckedId,
+  sweepSteps,
+  SWEEP_LEG_ID,
 } from '../lib/data'
 import { CATEGORY_META } from '../lib/types'
-import type { Item, Leg, Step } from '../lib/types'
+import type { Item, Leg, Region, Step } from '../lib/types'
 import { useProgress } from '../lib/useProgress'
 import { useUi } from '../App'
 import { buildDetailsPanelHtml } from '../lib/itemDetails'
@@ -43,11 +47,14 @@ function ProgressBar({
   const pct = total === 0 ? 0 : Math.round((done / total) * 100)
   return (
     <div className="flex items-center gap-2">
-      <span className="w-10 text-[10px] whitespace-nowrap text-ink-dim">{label}</span>
-      <span className="h-1.5 flex-1 overflow-hidden rounded bg-edge">
-        <span className="block h-full bg-gold transition-all" style={{ width: `${pct}%` }} />
+      <span className="er-eyebrow w-10 shrink-0 !text-[9px]">{label}</span>
+      <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-edge">
+        <span
+          className="block h-full rounded-full bg-gradient-to-r from-gold-dim to-gold transition-[width] duration-500"
+          style={{ width: `${pct}%` }}
+        />
       </span>
-      <span className="text-[10px] whitespace-nowrap text-ink-dim">
+      <span className="er-num text-[10px] whitespace-nowrap text-ink-dim">
         {done}/{total}
         {ignoredCount > 0 && <span className="ml-1 opacity-60">({ignoredCount} ignored)</span>}
       </span>
@@ -85,8 +92,14 @@ function PanelStepRow({
 
   return (
     <li
-      className={`flex items-start gap-2 rounded px-2 py-1.5 transition-colors hover:bg-panel2 ${
-        checked ? 'opacity-40' : ignored ? 'opacity-30' : isNextUp ? 'border border-edge bg-panel2' : ''
+      className={`group flex items-start gap-2 rounded px-2 py-1.5 transition-colors hover:bg-panel2 ${
+        checked
+          ? 'opacity-40'
+          : ignored
+            ? 'opacity-30'
+            : isNextUp
+              ? 'border border-gold-dim/50 bg-panel2 shadow-[inset_2px_0_0_var(--color-gold)]'
+              : ''
       }`}
     >
       {id != null && (
@@ -152,7 +165,7 @@ function PanelStepRow({
       {item?.map && onLocate && (
         <button
           onClick={onLocate}
-          className="shrink-0 text-sm leading-none text-gold hover:scale-125"
+          className="shrink-0 text-sm leading-none text-gold transition-transform hover:scale-125"
           aria-label={`Locate ${name} on map`}
           title="Locate on map"
         >
@@ -187,11 +200,12 @@ function NextUpCallout({
         : ''
 
   return (
-    <div className="mx-3 my-3 shrink-0 rounded-lg border border-gold/40 bg-panel2 p-3">
-      <div className="mb-1 text-[9px] font-semibold tracking-widest text-gold-dim uppercase">
+    <div className="er-card er-reveal mx-3 my-3 shrink-0 border-gold/30 p-3">
+      <div className="er-eyebrow mb-1 flex items-center gap-1.5">
+        <span className="inline-block size-1 rotate-45 bg-gold" aria-hidden="true" />
         Next up{leg ? ` · ${leg.from} → ${leg.to}` : ''}
       </div>
-      <div className="mb-1 text-sm font-semibold text-gold">{name}</div>
+      <div className="mb-1 font-display text-sm font-semibold tracking-wide text-gold">{name}</div>
       {note && <p className="mb-2 text-xs leading-relaxed text-ink-dim">{note}</p>}
       {item?.missable && (
         <p className="mb-2 text-[10px] font-semibold text-missable">
@@ -200,17 +214,14 @@ function NextUpCallout({
       )}
       <div className="flex gap-2">
         {id != null && (
-          <button
-            onClick={() => onCheck(id)}
-            className="flex-1 rounded border border-gold/60 bg-gold/10 py-1 text-xs font-semibold text-gold transition-colors hover:bg-gold/20"
-          >
-            ✓ Mark done
+          <button onClick={() => onCheck(id)} className="er-btn-gold flex-1 rounded py-1.5 text-xs font-semibold">
+            ✦ Mark done
           </button>
         )}
         {item?.map && onLocate && (
           <button
             onClick={onLocate}
-            className="rounded border border-edge px-3 py-1 text-xs text-ink-dim transition-colors hover:text-gold"
+            className="rounded border border-edge px-3 py-1 text-xs text-ink-dim transition-colors hover:border-gold-dim hover:text-gold"
           >
             ⌖ Locate
           </button>
@@ -220,63 +231,98 @@ function NextUpCallout({
   )
 }
 
-// ── Region tree drawer ────────────────────────────────────────────────────
+// ── Region / leg accordion (the default picker, inline in the panel body) ──
 
-function RegionTree({ activeRegionId, onClose }: { activeRegionId: string; onClose: () => void }) {
+function RegionAccordion({
+  currentRegionId,
+  currentLegId,
+  openId,
+  onToggle,
+  onPick,
+}: {
+  currentRegionId: string
+  currentLegId: string | undefined
+  openId: string
+  onToggle: (regionId: string) => void
+  onPick: () => void
+}) {
   const { snapshot } = useProgress()
+
+  function legRow(label: string, to: string, done: number, total: number, active: boolean, gem = false) {
+    return (
+      <NavLink
+        key={to}
+        to={to}
+        onClick={onPick}
+        className={`flex items-center gap-2 rounded py-1.5 pr-2 pl-3 text-xs transition-colors hover:bg-panel2 ${
+          active
+            ? 'bg-panel2 text-gold shadow-[inset_2px_0_0_var(--color-gold)]'
+            : 'text-ink-dim hover:text-ink'
+        }`}
+      >
+        {gem && <span className="inline-block size-1.5 shrink-0 rotate-45 bg-gold-dim" aria-hidden="true" />}
+        <span className="flex-1 truncate">{label}</span>
+        <span className="er-num text-[9px] text-ink-dim">
+          {done}/{total}
+        </span>
+      </NavLink>
+    )
+  }
+
   return (
-    <div className="absolute inset-0 z-10 flex flex-col overflow-y-auto bg-panel/98 backdrop-blur-sm">
-      <div className="sticky top-0 flex items-center justify-between border-b border-edge bg-panel px-3 py-2">
-        <span className="font-display text-sm text-gold">Regions</span>
-        <button onClick={onClose} className="text-sm text-ink-dim hover:text-ink" aria-label="Close region list">
-          ✕
-        </button>
-      </div>
+    <div className="er-stagger px-2 py-2">
       {regions.map((region) => {
         const ids = regionCheckables(region).filter((id) => snapshot.ignored[id] == null)
         const done = countChecked(ids, snapshot.checked)
         const pct = ids.length === 0 ? 0 : Math.round((done / ids.length) * 100)
+        const expanded = region.id === openId
+        const isCurrent = region.id === currentRegionId
         return (
-          <div key={region.id} className="border-b border-edge/50">
-            <NavLink
-              to={`/region/${region.id}`}
-              onClick={onClose}
-              className={({ isActive }) =>
-                `flex items-center gap-2 px-3 py-2 text-sm hover:bg-panel2 ${isActive ? 'text-gold' : 'text-ink'}`
-              }
+          <div key={region.id} className="mb-0.5">
+            <button
+              onClick={() => onToggle(region.id)}
+              className={`flex w-full items-center gap-2 rounded px-2 py-2 text-left transition-colors hover:bg-panel2 ${
+                isCurrent ? 'text-gold' : 'text-ink'
+              }`}
+              aria-expanded={expanded}
             >
-              <span className="flex-1 font-display">{region.name}</span>
-              <span className="text-[10px] text-ink-dim">
-                {done}/{ids.length}
+              <span
+                className={`text-[9px] text-gold-dim transition-transform duration-200 ${expanded ? '' : '-rotate-90'}`}
+                aria-hidden="true"
+              >
+                ▾
               </span>
-              <span className="h-1 w-8 overflow-hidden rounded bg-edge">
-                <span className="block h-full bg-gold" style={{ width: `${pct}%` }} />
+              <span className="flex-1 truncate font-display text-sm tracking-wide">{region.name}</span>
+              {region.dlc && (
+                <span className="rounded border border-gold-dim/40 px-1 text-[8px] text-gold-dim">DLC</span>
+              )}
+              <span className="er-num text-[10px] text-ink-dim">{pct}%</span>
+              <span className="h-1 w-8 shrink-0 overflow-hidden rounded-full bg-edge">
+                <span className="block h-full rounded-full bg-gold" style={{ width: `${pct}%` }} />
               </span>
-            </NavLink>
-            {region.id === activeRegionId &&
-              region.legs.map((leg) => {
-                const legIds = legCheckables(leg).filter((id) => snapshot.ignored[id] == null)
-                const legDone = countChecked(legIds, snapshot.checked)
-                return (
-                  <NavLink
-                    key={leg.id}
-                    to={`/region/${region.id}/${leg.id}`}
-                    onClick={onClose}
-                    className={({ isActive }) =>
-                      `flex items-center gap-2 py-1.5 pr-3 pl-7 text-xs hover:bg-panel2 ${
-                        isActive ? 'text-gold' : 'text-ink-dim'
-                      }`
-                    }
-                  >
-                    <span className="flex-1 truncate">
-                      {leg.from} → {leg.to}
-                    </span>
-                    <span className="text-[9px] text-ink-dim">
-                      {legDone}/{legIds.length}
-                    </span>
-                  </NavLink>
-                )
-              })}
+            </button>
+            {expanded && (
+              <div className="mb-1 ml-2 border-l border-edge pl-1">
+                {region.legs.map((leg) => {
+                  const legIds = legCheckables(leg).filter((id) => snapshot.ignored[id] == null)
+                  const legDone = countChecked(legIds, snapshot.checked)
+                  const active = isCurrent && leg.id === currentLegId
+                  return legRow(`${leg.from} → ${leg.to}`, `/region/${region.id}/${leg.id}`, legDone, legIds.length, active)
+                })}
+                {region.cleanup.length > 0 &&
+                  (() => {
+                    const sweepIds = sweepSteps(region)
+                      .map(checkableId)
+                      .filter((id): id is string => id != null && snapshot.ignored[id] == null)
+                    const sweepDone = countChecked(sweepIds, snapshot.checked)
+                    const active = isCurrent && currentLegId === SWEEP_LEG_ID
+                    return legRow('Region sweep', `/region/${region.id}/${SWEEP_LEG_ID}`, sweepDone, sweepIds.length, active, true)
+                  })()}
+                {region.legs.length === 0 && region.cleanup.length === 0 && (
+                  <p className="px-3 py-1.5 text-[11px] text-ink-dim italic">No route authored yet.</p>
+                )}
+              </div>
+            )}
           </div>
         )
       })}
@@ -300,9 +346,10 @@ export default function RoutePanel() {
   const navigate = useNavigate()
   const { snapshot, store } = useProgress()
   const { focus } = useUi()
-  const [showTree, setShowTree] = useState(false)
   const [mobileExpanded, setMobileExpanded] = useState(false)
   const [collapsed, setCollapsed] = useState(storedCollapsed)
+  // Which region is expanded in the picker. `undefined` = default to current.
+  const [openRegion, setOpenRegion] = useState<string | null | undefined>(undefined)
 
   function toggleCollapsed() {
     setCollapsed((v) => {
@@ -321,8 +368,10 @@ export default function RoutePanel() {
     return <div className="er-route-panel p-4 text-sm text-ink-dim">Region not found.</div>
   }
 
-  // Leg navigation
-  const currentLeg = legId ? (region.legs.find((l) => l.id === legId) ?? null) : null
+  // View mode: a leg or the sweep is selected → step view; otherwise the picker.
+  const isSweep = legId === SWEEP_LEG_ID
+  const currentLeg = isSweep ? null : legId ? (region.legs.find((l) => l.id === legId) ?? null) : null
+  const showingSteps = isSweep || currentLeg != null
   const currentLegIndex = currentLeg ? region.legs.indexOf(currentLeg) : -1
   const prevLeg = currentLegIndex > 0 ? region.legs[currentLegIndex - 1] : null
   const nextLeg =
@@ -330,11 +379,15 @@ export default function RoutePanel() {
       ? region.legs[currentLegIndex + 1]
       : null
 
-  // Steps + next up (same derivation GuidePage uses for the map props).
-  // Ignored items are skipped — the "Next up" callout never shows one.
-  const steps = displaySteps(region, legId)
+  // Steps + next up. In the picker, the callout uses the region-wide next-up.
+  const steps = showingSteps ? displaySteps(region, legId) : allRegionSteps(region)
   const nextUpId = firstUncheckedId(steps, snapshot.checked, snapshot.ignored)
   const nextUpStep = nextUpId != null ? (steps.find((s) => checkableId(s) === nextUpId) ?? null) : null
+  // The leg label for the picker's region-wide next-up callout.
+  const nextUpLeg =
+    !showingSteps && nextUpId != null
+      ? (region.legs.find((l) => l.id === itemPosition.get(nextUpId)?.legId) ?? null)
+      : currentLeg
 
   // Checking advances to the new next-up and pans the map to it.
   function handleCheck(id: string) {
@@ -361,14 +414,12 @@ export default function RoutePanel() {
   const regionIgnoredCount = countIgnored(regionIds, snapshot.ignored)
   const regionActiveIds = regionIds.filter((id) => snapshot.ignored[id] == null)
   const regionDone = countChecked(regionActiveIds, snapshot.checked)
-  const legIds = currentLeg ? legCheckables(currentLeg) : []
-  const legIgnoredCount = currentLeg ? countIgnored(legIds, snapshot.ignored) : 0
+  const legIds = showingSteps ? steps.map(checkableId).filter((id): id is string => id != null) : []
+  const legIgnoredCount = countIgnored(legIds, snapshot.ignored)
   const legActiveIds = legIds.filter((id) => snapshot.ignored[id] == null)
-  const legDone = currentLeg ? countChecked(legActiveIds, snapshot.checked) : 0
+  const legDone = countChecked(legActiveIds, snapshot.checked)
 
-  // Collapsed (desktop): the panel slides off-screen, leaving a slim reopen tab
-  // pinned to the left edge so the map gets the full viewport. Mobile keeps the
-  // bottom-sheet behaviour and ignores collapse entirely.
+  // Collapsed (desktop): the panel slides off-screen, leaving a slim reopen tab.
   if (collapsed) {
     return (
       <button
@@ -383,6 +434,8 @@ export default function RoutePanel() {
     )
   }
 
+  const stepTitle = isSweep ? 'Region sweep' : currentLeg ? `${currentLeg.from} → ${currentLeg.to}` : ''
+
   return (
     <div className={`er-route-panel ${mobileExpanded ? 'er-route-panel--expanded' : ''}`}>
       {/* Drag handle (mobile bottom sheet) */}
@@ -393,60 +446,68 @@ export default function RoutePanel() {
       />
 
       {/* Header */}
-      <div className="z-[1] shrink-0 border-b border-edge bg-panel px-3 py-2">
+      <div className="z-[1] shrink-0 border-b border-edge bg-panel/80 px-3 py-2.5 backdrop-blur-sm">
         <div className="flex items-center gap-2">
-          <button
-            onClick={() => setShowTree(true)}
-            className="rounded border border-edge px-1.5 py-0.5 text-[10px] text-ink-dim hover:text-gold"
-            title="All regions"
-            aria-label="Open region list"
-          >
-            ≡
-          </button>
-          <h1 className="flex-1 truncate font-display text-sm text-gold">{region.name}</h1>
+          {showingSteps ? (
+            <button
+              onClick={() => navigate(`/region/${region.id}`)}
+              className="rounded border border-edge px-1.5 py-0.5 text-[10px] text-ink-dim transition-colors hover:border-gold-dim hover:text-gold"
+              title="Back to region list"
+              aria-label="Back to region list"
+            >
+              ‹ Regions
+            </button>
+          ) : (
+            <span className="er-eyebrow">Regions</span>
+          )}
+          <h1 className="flex-1 truncate font-display text-sm tracking-wide text-gold">{region.name}</h1>
           {region.dlc && (
             <span className="rounded border border-gold-dim/40 px-1 text-[9px] text-gold-dim">DLC</span>
           )}
           {/* Collapse the sidebar (desktop only) */}
           <button
             onClick={toggleCollapsed}
-            className="hidden rounded border border-edge px-1.5 py-0.5 text-[10px] text-ink-dim hover:text-gold sm:block"
+            className="hidden rounded border border-edge px-1.5 py-0.5 text-[10px] text-ink-dim transition-colors hover:border-gold-dim hover:text-gold sm:block"
             title="Hide route panel"
             aria-label="Hide route panel"
           >
             ‹
           </button>
         </div>
-        {region.legs.length > 0 && (
-          <div className="mt-1.5 flex items-center gap-1 text-[10px]">
+
+        {/* Leg navigator (step view, real legs only) */}
+        {showingSteps && (
+          <div className="mt-2 flex items-center gap-1 text-[10px]">
             <button
               disabled={!prevLeg}
               onClick={() => prevLeg && navigate(`/region/${region.id}/${prevLeg.id}`)}
-              className="rounded border border-edge px-1.5 py-0.5 text-ink-dim hover:text-gold disabled:cursor-not-allowed disabled:opacity-30"
+              className="rounded border border-edge px-1.5 py-0.5 text-ink-dim transition-colors hover:border-gold-dim hover:text-gold disabled:cursor-not-allowed disabled:opacity-30"
               aria-label="Previous leg"
             >
               ‹
             </button>
-            <span className="flex-1 truncate text-center text-ink-dim">
-              {currentLeg ? `${currentLeg.from} → ${currentLeg.to}` : 'Full region route'}
+            <span className="flex-1 truncate text-center font-display tracking-wide text-ink-dim">
+              {stepTitle}
             </span>
             <button
-              disabled={currentLeg ? !nextLeg : region.legs.length === 0}
-              onClick={() =>
-                currentLeg
-                  ? nextLeg && navigate(`/region/${region.id}/${nextLeg.id}`)
-                  : navigate(`/region/${region.id}/${region.legs[0].id}`)
-              }
-              className="rounded border border-edge px-1.5 py-0.5 text-ink-dim hover:text-gold disabled:cursor-not-allowed disabled:opacity-30"
+              disabled={!nextLeg}
+              onClick={() => nextLeg && navigate(`/region/${region.id}/${nextLeg.id}`)}
+              className="rounded border border-edge px-1.5 py-0.5 text-ink-dim transition-colors hover:border-gold-dim hover:text-gold disabled:cursor-not-allowed disabled:opacity-30"
               aria-label="Next leg"
             >
               ›
             </button>
           </div>
         )}
-        <div className="mt-1.5 space-y-0.5">
-          {currentLeg && (
-            <ProgressBar done={legDone} total={legActiveIds.length} label="Leg" ignoredCount={legIgnoredCount} />
+
+        <div className="mt-2 space-y-1">
+          {showingSteps && (
+            <ProgressBar
+              done={legDone}
+              total={legActiveIds.length}
+              label={isSweep ? 'Sweep' : 'Leg'}
+              ignoredCount={legIgnoredCount}
+            />
           )}
           <ProgressBar
             done={regionDone}
@@ -457,46 +518,65 @@ export default function RoutePanel() {
         </div>
       </div>
 
-      {/* Next up callout */}
+      {/* Next up callout (step view, or region-wide in the picker) */}
       {nextUpStep && (
         <NextUpCallout
           step={nextUpStep}
-          leg={currentLeg}
+          leg={nextUpLeg}
           onCheck={handleCheck}
           onLocate={() => locateStep(nextUpStep)}
         />
       )}
 
-      {/* Running list */}
-      <div className="min-h-0 flex-1 overflow-y-auto px-1 pb-4">
-        {currentLeg?.summary && (
-          <p className="border-b border-edge/50 px-3 py-2 text-[11px] leading-relaxed text-ink-dim italic">
-            {currentLeg.summary}
-          </p>
-        )}
-        <ul className="space-y-0.5 py-1">
-          {steps.map((step, i) => {
-            const id = checkableId(step)
-            const item = step.type === 'item' ? itemsById.get(step.itemId) : undefined
-            return (
-              <PanelStepRow
-                key={id ?? `dir-${i}`}
-                step={step}
-                isNextUp={id != null && id === nextUpId}
-                onCheck={handleCheck}
-                onIgnore={handleIgnore}
-                onLocate={item?.map ? () => locateStep(step) : undefined}
-              />
-            )
-          })}
-        </ul>
-        {steps.length === 0 && (
-          <p className="px-3 py-4 text-xs text-ink-dim">No steps authored yet for this region.</p>
-        )}
-      </div>
-
-      {/* Region tree drawer */}
-      {showTree && <RegionTree activeRegionId={region.id} onClose={() => setShowTree(false)} />}
+      {/* Body: either the running step list, or the region/leg picker */}
+      {showingSteps ? (
+        <div className="min-h-0 flex-1 overflow-y-auto px-1 pb-4">
+          {currentLeg?.summary && (
+            <p className="border-b border-edge/50 px-3 py-2 text-[11px] leading-relaxed text-ink-dim italic">
+              {currentLeg.summary}
+            </p>
+          )}
+          {isSweep && (
+            <p className="border-b border-edge/50 px-3 py-2 text-[11px] leading-relaxed text-ink-dim italic">
+              Cleanup items not yet woven into a leg — collect these to finish the region.
+            </p>
+          )}
+          <ul className="space-y-0.5 py-1">
+            {steps.map((step, i) => {
+              const id = checkableId(step)
+              const item = step.type === 'item' ? itemsById.get(step.itemId) : undefined
+              return (
+                <PanelStepRow
+                  key={id ?? `dir-${i}`}
+                  step={step}
+                  isNextUp={id != null && id === nextUpId}
+                  onCheck={handleCheck}
+                  onIgnore={handleIgnore}
+                  onLocate={item?.map ? () => locateStep(step) : undefined}
+                />
+              )
+            })}
+          </ul>
+          {steps.length === 0 && (
+            <p className="px-3 py-4 text-xs text-ink-dim">No steps authored yet here.</p>
+          )}
+        </div>
+      ) : (
+        <div className="min-h-0 flex-1 overflow-y-auto">
+          <RegionAccordion
+            currentRegionId={region.id}
+            currentLegId={legId}
+            openId={openRegion === undefined ? region.id : (openRegion ?? '')}
+            onToggle={(id) =>
+              setOpenRegion((cur) => {
+                const effective = cur === undefined ? region.id : cur
+                return effective === id ? null : id
+              })
+            }
+            onPick={() => setMobileExpanded(false)}
+          />
+        </div>
+      )}
     </div>
   )
 }
