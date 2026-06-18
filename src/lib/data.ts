@@ -128,6 +128,9 @@ function canonicalQuestline(name: string): string {
  */
 export const questlines: Questline[] = (() => {
   const byName = new Map<string, QuestStep[]>()
+  // Leg index per step, kept off the public QuestStep objects so it never leaks
+  // into serialized/spread output.
+  const legIndexOf = new WeakMap<QuestStep, number>()
   for (const region of regions) {
     region.legs.forEach((leg, legIndex) => {
       for (const step of leg.steps) {
@@ -145,8 +148,7 @@ export const questlines: Questline[] = (() => {
           legFrom: leg.from,
           legTo: leg.to,
         }
-        // Stash leg index on the step for stable intra-questline ordering.
-        ;(quest as QuestStep & { _legIndex: number })._legIndex = legIndex
+        legIndexOf.set(quest, legIndex)
         const list = byName.get(name) ?? []
         list.push(quest)
         byName.set(name, list)
@@ -157,9 +159,7 @@ export const questlines: Questline[] = (() => {
   for (const steps of byName.values()) {
     steps.sort((a, b) => {
       if (a.regionOrder !== b.regionOrder) return a.regionOrder - b.regionOrder
-      const ai = (a as QuestStep & { _legIndex: number })._legIndex
-      const bi = (b as QuestStep & { _legIndex: number })._legIndex
-      return ai - bi
+      return (legIndexOf.get(a) ?? 0) - (legIndexOf.get(b) ?? 0)
     })
   }
   // Order questlines by where they first appear in the route.
@@ -168,9 +168,7 @@ export const questlines: Questline[] = (() => {
     const fa = a.steps[0]
     const fb = b.steps[0]
     if (fa.regionOrder !== fb.regionOrder) return fa.regionOrder - fb.regionOrder
-    const ai = (fa as QuestStep & { _legIndex: number })._legIndex
-    const bi = (fb as QuestStep & { _legIndex: number })._legIndex
-    return ai - bi
+    return (legIndexOf.get(fa) ?? 0) - (legIndexOf.get(fb) ?? 0)
   })
   return lines
 })()
