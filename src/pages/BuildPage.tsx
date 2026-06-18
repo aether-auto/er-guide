@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import TopBar from '../components/TopBar'
 import { DiamondRule } from '../components/ui/DiamondRule'
-import { loadWeapons, allDamageTypes, type Weapon, type Attributes, type Attribute } from '../lib/weaponCalc'
+import { ArBars, CompositionBar, DamageLegend, StatRadar, type BarItem } from '../components/ui/Charts'
+import { loadWeapons, allDamageTypes, type Weapon, type Attributes, type Attribute, type AttackPowerType } from '../lib/weaponCalc'
 import {
   rankWeapons,
   rankByDamageType,
@@ -19,8 +20,8 @@ import {
 import { talismans } from '../lib/talismans'
 import { findBuildLink } from '../lib/buildLinks'
 
-// This page is designed to be React.lazy()-loaded so the ~1 MB regulation data
-// and the weapon engine never enter the main bundle. (Default export below.)
+// Lazy-loaded (React.lazy) so the ~1 MB regulation data + engine stay out of the
+// main bundle. Default export at the bottom.
 
 type TabKey = 'weapons' | 'damage' | 'status' | 'sorceries' | 'incantations'
 
@@ -40,17 +41,16 @@ const STAT_FIELDS: { key: Attribute; label: string }[] = [
   { key: 'arc', label: 'ARC' },
 ]
 
-const TOP_N = 15
+const TOP_N = 16
+const CHART_N = 10
 
-function fmt(n: number): string {
-  return Math.round(n).toLocaleString()
-}
+const fmt = (n: number): string => Math.round(n).toLocaleString()
 
 function reqText(requirements: Partial<Record<Attribute, number>>): string {
   const parts = STAT_FIELDS.map(({ key, label }) =>
     requirements[key] ? `${label} ${requirements[key]}` : null,
   ).filter(Boolean)
-  return parts.length ? parts.join(' · ') : 'No requirements'
+  return parts.length ? parts.join(' · ') : 'none'
 }
 
 function spellReqText(req: { int?: number; fai?: number; arc?: number }): string {
@@ -58,10 +58,9 @@ function spellReqText(req: { int?: number; fai?: number; arc?: number }): string
   if (req.int) parts.push(`INT ${req.int}`)
   if (req.fai) parts.push(`FAI ${req.fai}`)
   if (req.arc) parts.push(`ARC ${req.arc}`)
-  return parts.length ? parts.join(' · ') : 'No requirements'
+  return parts.length ? parts.join(' · ') : 'none'
 }
 
-/** A subtle hairline-framed chip for affinity / requirement labels. */
 function Chip({ children }: { children: React.ReactNode }) {
   return (
     <span className="rounded border border-edge bg-panel2/60 px-1.5 py-0.5 text-[10px] tracking-wide text-ink-dim">
@@ -70,95 +69,181 @@ function Chip({ children }: { children: React.ReactNode }) {
   )
 }
 
-/** "Where to find it" link, or nothing if the item isn't in the route data. */
 function WhereToFind({ name }: { name: string }) {
   const link = findBuildLink(name)
   if (!link) return null
   return (
-    <NavLink to={link.path} className="er-link whitespace-nowrap text-xs text-gold">
+    <NavLink to={link.path} className="er-link whitespace-nowrap text-gold">
       where to find →
     </NavLink>
   )
 }
 
-function WeaponRow({ r }: { r: WeaponRanking }) {
+/** Section frame: an eyebrow header + result count, used above every chart/table. */
+function PanelHead({ title, count, children }: { title: string; count?: number; children?: React.ReactNode }) {
   return (
-    <li className="er-card er-card--hover px-4 py-3">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1.5">
-        <span className="font-display text-gold">{r.name}</span>
-        {r.dlc && <Chip>DLC</Chip>}
-        <Chip>{r.affinity}</Chip>
-        <span className="ml-auto flex items-baseline gap-1">
-          <span className="er-num text-xl text-gold-bright">{fmt(r.totalAr)}</span>
-          <span className="text-[10px] uppercase tracking-[0.18em] text-gold-dim">AR</span>
-        </span>
-      </div>
-      <p className="mt-1.5 text-xs leading-relaxed text-ink-dim">
-        {r.breakdown.map((b) => `${b.label} ${fmt(b.value)}`).join('  ·  ')}
-        <span className="text-gold-dim"> — req: </span>
-        {reqText(r.requirements)}
-      </p>
-      <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1">
-        {!r.meetsRequirements && (
-          <span className="text-xs text-missable">⚠ requirements not met (−40% scaling penalty)</span>
-        )}
-        <WhereToFind name={r.weaponName} />
-      </div>
-    </li>
+    <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
+      <h3 className="er-eyebrow">
+        {title}
+        {count != null && <span className="ml-2 er-num text-ink-dim">{count}</span>}
+      </h3>
+      {children}
+    </div>
   )
 }
 
-function StatusRow({ r }: { r: StatusRanking }) {
+// ── Table rows (consistent across every tab) ───────────────────────────────
+
+function weaponBars(list: WeaponRanking[]): BarItem[] {
+  return list.slice(0, CHART_N).map((r) => ({
+    name: r.name,
+    value: r.totalAr,
+    dlc: r.dlc,
+    dim: !r.meetsRequirements,
+    segments: r.breakdown.map((b) => ({ label: b.label, value: b.value })),
+  }))
+}
+
+function WeaponTable({ rows }: { rows: WeaponRanking[] }) {
   return (
-    <li className="er-card er-card--hover px-4 py-3">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1.5">
-        <span className="font-display text-gold">{r.name}</span>
-        {r.dlc && <Chip>DLC</Chip>}
-        <Chip>{r.affinity}</Chip>
-        <span className="ml-auto flex items-baseline gap-1">
-          <span className="er-num text-xl text-gold-bright">{fmt(r.buildup)}</span>
-          <span className="text-[10px] uppercase tracking-[0.18em] text-gold-dim">{r.statusLabel}</span>
-        </span>
-      </div>
-      <p className="mt-1.5 text-xs leading-relaxed text-ink-dim">
-        Weapon AR {fmt(r.totalAr)}
-        <span className="text-gold-dim"> — req: </span>
-        {reqText(r.requirements)}
-      </p>
-      <div className="mt-1.5">
-        <WhereToFind name={r.weaponName} />
-      </div>
-    </li>
+    <div className="er-card overflow-hidden">
+      <ul className="er-stagger">
+        {rows.map((r, i) => (
+          <li
+            key={r.name}
+            className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-x-3 border-b border-edge/30 px-3 py-2.5 transition-colors last:border-0 hover:bg-panel2/50"
+          >
+            <span className="er-num text-right text-[11px] text-ink-dim">{i + 1}</span>
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                <span className="truncate font-display text-sm text-ink">{r.name}</span>
+                <Chip>{r.affinity}</Chip>
+                {r.dlc && <Chip>DLC</Chip>}
+                {!r.meetsRequirements && <span className="text-[10px] text-missable">⚠ can’t wield (−40%)</span>}
+              </div>
+              <div className="mt-1.5 flex items-center gap-2">
+                <CompositionBar segments={r.breakdown} total={r.totalAr} className="w-24 shrink-0 sm:w-32" />
+                <span className="truncate text-[10px] text-ink-dim">
+                  {r.breakdown.map((b) => `${b.label} ${fmt(b.value)}`).join('  ·  ')}
+                </span>
+              </div>
+              <div className="mt-1 flex flex-wrap gap-x-3 text-[10px] text-ink-dim">
+                <span><span className="text-gold-dim">req</span> {reqText(r.requirements)}</span>
+                <WhereToFind name={r.weaponName} />
+              </div>
+            </div>
+            <div className="text-right">
+              <span className="er-num er-fade-in block text-lg text-gold-bright">{fmt(r.totalAr)}</span>
+              <span className="text-[9px] uppercase tracking-[0.18em] text-gold-dim">AR</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
-function SpellRow({ r }: { r: SpellRanking }) {
+function StatusTable({ rows }: { rows: StatusRanking[] }) {
   return (
-    <li className="er-card er-card--hover px-4 py-3">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1.5">
-        <span className="font-display text-gold">{r.name}</span>
-        {r.dlc && <Chip>DLC</Chip>}
-        <Chip>{r.damageLabel}</Chip>
-        <span className="ml-auto flex items-baseline gap-1">
-          <span className="er-num text-xl text-gold-bright">{fmt(r.effectiveAr)}</span>
-          <span className="text-[10px] uppercase tracking-[0.18em] text-gold-dim">AR</span>
-        </span>
-      </div>
-      <p className="mt-1.5 text-xs leading-relaxed text-ink-dim">
-        base {r.spellBaseAR} × {fmt(r.catalystScaling)}% scaling via {r.catalyst} · FP {r.fp} · {r.slots} slot
-        {r.slots !== 1 ? 's' : ''}
-        <span className="text-gold-dim"> — req: </span>
-        {spellReqText(r.requirements)}
-      </p>
-      {r.confidence && r.confidence !== 'high' && (
-        <p className="mt-1 text-[11px] italic text-ink-dim">
-          base-AR estimate ({r.confidence} confidence){r.note ? ` — ${r.note}` : ''}
-        </p>
-      )}
-      <div className="mt-1.5">
-        <WhereToFind name={r.name} />
-      </div>
-    </li>
+    <div className="er-card overflow-hidden">
+      <ul className="er-stagger">
+        {rows.map((r, i) => (
+          <li
+            key={r.name}
+            className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-x-3 border-b border-edge/30 px-3 py-2.5 transition-colors last:border-0 hover:bg-panel2/50"
+          >
+            <span className="er-num text-right text-[11px] text-ink-dim">{i + 1}</span>
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                <span className="truncate font-display text-sm text-ink">{r.name}</span>
+                <Chip>{r.affinity}</Chip>
+                {r.dlc && <Chip>DLC</Chip>}
+              </div>
+              <div className="mt-1 flex flex-wrap gap-x-3 text-[10px] text-ink-dim">
+                <span>weapon AR {fmt(r.totalAr)}</span>
+                <span><span className="text-gold-dim">req</span> {reqText(r.requirements)}</span>
+                <WhereToFind name={r.weaponName} />
+              </div>
+            </div>
+            <div className="text-right">
+              <span className="er-num er-fade-in block text-lg text-gold-bright">{fmt(r.buildup)}</span>
+              <span className="text-[9px] uppercase tracking-[0.16em] text-gold-dim">{r.statusLabel}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function SpellTable({ rows }: { rows: SpellRanking[] }) {
+  return (
+    <div className="er-card overflow-hidden">
+      <ul className="er-stagger">
+        {rows.map((r, i) => (
+          <li
+            key={r.name}
+            className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-x-3 border-b border-edge/30 px-3 py-2.5 transition-colors last:border-0 hover:bg-panel2/50"
+          >
+            <span className="er-num text-right text-[11px] text-ink-dim">{i + 1}</span>
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                <span className="truncate font-display text-sm text-ink">{r.name}</span>
+                <Chip>{r.damageLabel}</Chip>
+                {r.dlc && <Chip>DLC</Chip>}
+                {r.confidence && r.confidence !== 'high' && (
+                  <span className="text-[10px] italic text-ink-dim" title={r.note}>
+                    {r.confidence}-confidence est.
+                  </span>
+                )}
+              </div>
+              <div className="mt-1 flex flex-wrap gap-x-3 text-[10px] text-ink-dim">
+                <span>base {r.spellBaseAR} × {fmt(r.catalystScaling)}% via {r.catalyst}</span>
+                <span>FP {r.fp} · {r.slots} slot{r.slots !== 1 ? 's' : ''}</span>
+                <span><span className="text-gold-dim">req</span> {spellReqText(r.requirements)}</span>
+                <WhereToFind name={r.name} />
+              </div>
+            </div>
+            <div className="text-right">
+              <span className="er-num er-fade-in block text-lg text-gold-bright">{fmt(r.effectiveAr)}</span>
+              <span className="text-[9px] uppercase tracking-[0.18em] text-gold-dim">AR</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+/** Segmented sub-selector (damage type / status) — matches the tab styling. */
+function SubSelect<T extends string | number>({
+  options,
+  value,
+  onChange,
+  label,
+}: {
+  options: { key: T; label: string; disabled?: boolean }[]
+  value: T
+  onChange: (v: T) => void
+  label: (o: { key: T; label: string }) => string
+}) {
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {options.map((o) => (
+        <button
+          key={String(o.key)}
+          disabled={o.disabled}
+          onClick={() => onChange(o.key)}
+          className={`rounded border px-2.5 py-1 text-xs tracking-wide transition-colors disabled:opacity-30 ${
+            value === o.key
+              ? 'border-gold-dim bg-gold/10 text-gold'
+              : 'border-edge text-ink-dim hover:border-gold-dim hover:text-ink'
+          }`}
+        >
+          {label(o)}
+        </button>
+      ))}
+    </div>
   )
 }
 
@@ -166,22 +251,21 @@ export default function BuildPage() {
   const [weapons, setWeapons] = useState<Weapon[] | null>(null)
   const [error, setError] = useState<string | null>(null)
 
-  // Inputs
   const [level, setLevel] = useState(150)
   const [stats, setStats] = useState<Attributes>({ str: 40, dex: 40, int: 9, fai: 9, arc: 9 })
   const [twoHanding, setTwoHanding] = useState(false)
-  const [showAll, setShowAll] = useState(false) // "show items I can't use yet" — off by default
+  const [showAll, setShowAll] = useState(false)
   const [selectedTalismans, setSelectedTalismans] = useState<string[]>([])
   const [tab, setTab] = useState<TabKey>('weapons')
+  const [dmgType, setDmgType] = useState<AttackPowerType>(allDamageTypes[0])
+  const [statusType, setStatusType] = useState<number>(STATUS_TYPES[0])
 
   useEffect(() => {
     let cancelled = false
     loadWeapons()
       .then((w) => !cancelled && setWeapons(w))
       .catch((e) => !cancelled && setError(e instanceof Error ? e.message : 'Failed to load data'))
-    return () => {
-      cancelled = true
-    }
+    return () => { cancelled = true }
   }, [])
 
   const options = useMemo(
@@ -203,7 +287,6 @@ export default function BuildPage() {
   function setStat(attr: Attribute, value: number) {
     setStats((s) => ({ ...s, [attr]: Math.max(1, Math.min(99, value || 1)) }))
   }
-
   function toggleTalisman(id: string) {
     setSelectedTalismans((cur) => (cur.includes(id) ? cur.filter((t) => t !== id) : [...cur, id]))
   }
@@ -212,226 +295,234 @@ export default function BuildPage() {
     'rounded border border-edge bg-bg px-2 py-1.5 text-base text-ink transition-colors focus:border-gold-dim focus:outline-none'
   const toggleCls = 'flex items-center gap-2 text-sm text-ink-dim transition-colors hover:text-ink'
 
+  // ── Per-tab results (chart + table), keyed so animations replay on switch ──
+  function ResultsBody() {
+    if (error) return <p className="text-missable">Couldn’t load weapon data: {error}</p>
+    if (!results) {
+      return (
+        <div className="er-card flex items-center gap-3 p-6 text-sm text-ink-dim">
+          <span className="inline-block size-2 animate-ping rounded-full bg-gold-dim" />
+          Loading weapon data…
+        </div>
+      )
+    }
+
+    if (tab === 'weapons') {
+      const list = results.weapons
+      if (!list.length) return <EmptyState />
+      return (
+        <div key="weapons" className="er-reveal space-y-5">
+          <section className="er-card p-4">
+            <PanelHead title="Top weapons by Attack Rating" count={list.length}>
+              <DamageLegend labels={legendLabels(list)} />
+            </PanelHead>
+            <ArBars items={weaponBars(list)} />
+          </section>
+          <WeaponTable rows={list} />
+        </div>
+      )
+    }
+
+    if (tab === 'damage') {
+      const champions = allDamageTypes
+        .map((dt) => ({ name: DAMAGE_TYPE_LABELS[dt], value: results.damage[dt]?.[0]?.totalAr ?? 0 }))
+        .filter((b) => b.value > 0)
+      const list = (results.damage[dmgType] ?? []).slice(0, TOP_N)
+      return (
+        <div key={`damage-${dmgType}`} className="er-reveal space-y-5">
+          <section className="er-card p-4">
+            <PanelHead title="Best weapon per damage type" />
+            <ArBars items={champions} />
+          </section>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <SubSelect
+              options={allDamageTypes.map((dt) => ({
+                key: dt,
+                label: DAMAGE_TYPE_LABELS[dt],
+                disabled: (results.damage[dt]?.length ?? 0) === 0,
+              }))}
+              value={dmgType}
+              onChange={setDmgType}
+              label={(o) => o.label}
+            />
+          </div>
+          {list.length === 0 ? (
+            <EmptyState />
+          ) : (
+            <>
+              <section className="er-card p-4">
+                <PanelHead title={`${DAMAGE_TYPE_LABELS[dmgType]} damage — top weapons`} count={list.length} />
+                <ArBars items={weaponBars(list)} />
+              </section>
+              <WeaponTable rows={list} />
+            </>
+          )}
+        </div>
+      )
+    }
+
+    if (tab === 'status') {
+      const list = (results.status[statusType] ?? []).slice(0, TOP_N)
+      return (
+        <div key={`status-${statusType}`} className="er-reveal space-y-5">
+          <SubSelect
+            options={STATUS_TYPES.map((st) => ({
+              key: st,
+              label: STATUS_LABELS[st],
+              disabled: (results.status[st]?.length ?? 0) === 0,
+            }))}
+            value={statusType}
+            onChange={setStatusType}
+            label={(o) => o.label}
+          />
+          {list.length === 0 ? (
+            <EmptyState />
+          ) : (
+            <>
+              <section className="er-card p-4">
+                <PanelHead title={`${STATUS_LABELS[statusType]} buildup — top weapons`} count={list.length} />
+                <ArBars items={list.slice(0, CHART_N).map((r) => ({ name: r.name, value: r.buildup, dlc: r.dlc }))} unit={STATUS_LABELS[statusType]} />
+              </section>
+              <StatusTable rows={list} />
+            </>
+          )}
+        </div>
+      )
+    }
+
+    // sorceries / incantations
+    const list = tab === 'sorceries' ? results.sorceries : results.incantations
+    if (!list.length) return <EmptyState />
+    return (
+      <div key={tab} className="er-reveal space-y-5">
+        <section className="er-card p-4">
+          <PanelHead title={`Top ${tab} by Attack Rating`} count={list.length} />
+          <ArBars items={list.slice(0, CHART_N).map((r) => ({ name: r.name, value: r.effectiveAr, dlc: r.dlc }))} />
+        </section>
+        <SpellTable rows={list} />
+      </div>
+    )
+  }
+
   return (
     <div className="flex h-screen flex-col">
       <TopBar />
-      <main className="mx-auto w-full max-w-5xl flex-1 overflow-y-auto px-6 py-8">
-        <header className="er-reveal mb-7">
+      <main className="mx-auto w-full max-w-6xl flex-1 overflow-y-auto px-6 py-8">
+        <header className="er-reveal mb-6">
           <h1 className="font-display text-3xl tracking-[0.08em] text-gold">Build Optimizer</h1>
           <DiamondRule className="mt-3" />
         </header>
 
-        <div className="er-stagger space-y-6">
-          <p className="max-w-3xl text-sm leading-relaxed text-ink-dim">
-            Enter your stats to see the best weapons and spells for your build, ranked by{' '}
-            <span className="text-ink">Attack Rating</span>. Rankings use AR (the standard calculator
-            metric), <span className="text-ink">not</span> per-swing motion values, so a high-AR weapon
-            isn't always the highest damage-per-hit. Weapon data is the MIT-licensed{' '}
-            <a
-              href="https://github.com/ThomasJClark/elden-ring-weapon-calculator"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="er-link text-gold"
-            >
-              Elden Ring weapon calculator
-            </a>{' '}
-            regulation set (patch 1.14, all weapons +25 / somber +10, incl. SotE).
-          </p>
+        <p className="er-reveal mb-6 max-w-4xl text-sm leading-relaxed text-ink-dim">
+          Enter your stats to rank the best gear for your build by <span className="text-ink">Attack Rating</span>{' '}
+          — the standard calculator metric (not per-swing motion values). All figures are{' '}
+          <span className="text-ink">intrinsic AR, before Scadutree Blessing</span>; Scadutree boosts every weapon and
+          spell uniformly in the DLC, so it never changes the ranking. Weapon data: the MIT-licensed{' '}
+          <a
+            href="https://github.com/ThomasJClark/elden-ring-weapon-calculator"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="er-link text-gold"
+          >
+            ER weapon calculator
+          </a>{' '}
+          set (patch 1.14, +25 / somber +10, incl. SotE).
+        </p>
 
-          {/* ── Input form ── */}
-          <section className="er-card p-5">
-            <h2 className="er-eyebrow mb-4">Your build</h2>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+          {/* ── Build panel ── */}
+          <aside className="lg:col-span-4">
+            <section className="er-card er-reveal p-5 lg:sticky lg:top-4">
+              <h2 className="er-eyebrow mb-4">Your build</h2>
 
-            <div className="grid grid-cols-3 gap-x-4 gap-y-3 sm:grid-cols-6">
-              <label className="flex flex-col gap-1 text-[11px] uppercase tracking-[0.14em] text-gold-dim">
-                Level
-                <input
-                  type="number"
-                  value={level}
-                  min={1}
-                  max={713}
-                  onChange={(e) => setLevel(Number(e.target.value))}
-                  className={inputCls}
-                />
-              </label>
-              {STAT_FIELDS.map(({ key, label }) => (
-                <label
-                  key={key}
-                  className="flex flex-col gap-1 text-[11px] uppercase tracking-[0.14em] text-gold-dim"
-                >
-                  {label}
-                  <input
-                    type="number"
-                    value={stats[key]}
-                    min={1}
-                    max={99}
-                    onChange={(e) => setStat(key, Number(e.target.value))}
-                    className={inputCls}
-                  />
-                </label>
-              ))}
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-ink-dim">
-              Only STR / DEX / INT / FAI / ARC affect Attack Rating. VIG / MIND / END don't — Level is
-              collected for reference only.
-            </p>
-
-            <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
-              <label className={toggleCls}>
-                <input
-                  type="checkbox"
-                  checked={twoHanding}
-                  onChange={(e) => setTwoHanding(e.target.checked)}
-                  className="accent-gold"
-                />
-                Two-hand (STR ×1.5)
-              </label>
-              <label className={toggleCls}>
-                <input
-                  type="checkbox"
-                  checked={showAll}
-                  onChange={(e) => setShowAll(e.target.checked)}
-                  className="accent-gold"
-                />
-                Show items I can't use yet
-              </label>
-            </div>
-
-            <details className="mt-4 border-t border-edge/60 pt-4">
-              <summary className="er-eyebrow cursor-pointer text-gold-dim transition-colors hover:text-gold">
-                Talismans{selectedTalismans.length ? ` (${selectedTalismans.length})` : ''}
-              </summary>
-              <div className="mt-3 grid grid-cols-1 gap-x-4 gap-y-1.5 sm:grid-cols-2 lg:grid-cols-3">
-                {talismans.map((t) => (
-                  <label key={t.id} className="flex items-start gap-2 text-xs text-ink-dim">
-                    <input
-                      type="checkbox"
-                      checked={selectedTalismans.includes(t.id)}
-                      onChange={() => toggleTalisman(t.id)}
-                      className="mt-0.5 accent-gold"
-                    />
-                    <span>
-                      <span className="text-ink">{t.name}</span>
-                      {t.condition && <span className="block text-[10px] opacity-70">{t.condition}</span>}
-                    </span>
+              <div className="flex items-start gap-4">
+                <div className="grid flex-1 grid-cols-2 gap-x-3 gap-y-2.5">
+                  <label className="col-span-2 flex flex-col gap-1 text-[10px] uppercase tracking-[0.14em] text-gold-dim">
+                    Level
+                    <input type="number" value={level} min={1} max={713} onChange={(e) => setLevel(Number(e.target.value))} className={inputCls} />
                   </label>
-                ))}
+                  {STAT_FIELDS.map(({ key, label }) => (
+                    <label key={key} className="flex flex-col gap-1 text-[10px] uppercase tracking-[0.14em] text-gold-dim">
+                      {label}
+                      <input type="number" value={stats[key]} min={1} max={99} onChange={(e) => setStat(key, Number(e.target.value))} className={inputCls} />
+                    </label>
+                  ))}
+                </div>
               </div>
-              <p className="mt-2 text-[11px] text-ink-dim">
-                Conditional effects (e.g. "at full HP") are assumed active when selected.
-              </p>
-            </details>
-          </section>
 
-          {/* ── Tabs ── */}
-          <div className="flex flex-wrap gap-x-5 gap-y-1 border-b border-edge">
-            {TABS.map((t) => (
-              <button
-                key={t.key}
-                onClick={() => setTab(t.key)}
-                className={`er-link -mb-px border-b-2 border-transparent pb-2 text-sm transition-colors ${
-                  tab === t.key ? 'active text-gold' : 'text-ink-dim hover:text-ink'
-                }`}
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
+              <div className="mt-4 flex justify-center">
+                <StatRadar stats={STAT_FIELDS.map((f) => ({ label: f.label, value: stats[f.key] }))} />
+              </div>
+
+              <p className="mt-1 text-[11px] leading-relaxed text-ink-dim">
+                Only STR / DEX / INT / FAI / ARC affect AR. VIG / MIND / END don’t — Level is reference only.
+              </p>
+
+              <div className="mt-4 flex flex-col gap-2 border-t border-edge/60 pt-4">
+                <label className={toggleCls}>
+                  <input type="checkbox" checked={twoHanding} onChange={(e) => setTwoHanding(e.target.checked)} className="accent-gold" />
+                  Two-hand (STR ×1.5)
+                </label>
+                <label className={toggleCls}>
+                  <input type="checkbox" checked={showAll} onChange={(e) => setShowAll(e.target.checked)} className="accent-gold" />
+                  Show items I can’t use yet
+                </label>
+              </div>
+
+              <details className="mt-4 border-t border-edge/60 pt-4">
+                <summary className="er-eyebrow cursor-pointer text-gold-dim transition-colors hover:text-gold">
+                  Talismans{selectedTalismans.length ? ` (${selectedTalismans.length})` : ''}
+                </summary>
+                <div className="mt-3 flex flex-col gap-1.5">
+                  {talismans.map((t) => (
+                    <label key={t.id} className="flex items-start gap-2 text-xs text-ink-dim">
+                      <input type="checkbox" checked={selectedTalismans.includes(t.id)} onChange={() => toggleTalisman(t.id)} className="mt-0.5 accent-gold" />
+                      <span>
+                        <span className="text-ink">{t.name}</span>
+                        {t.condition && <span className="block text-[10px] opacity-70">{t.condition}</span>}
+                      </span>
+                    </label>
+                  ))}
+                </div>
+                <p className="mt-2 text-[11px] text-ink-dim">Conditional effects (e.g. “at full HP”) are assumed active.</p>
+              </details>
+            </section>
+          </aside>
 
           {/* ── Results ── */}
-          {error && <p className="text-missable">Couldn't load weapon data: {error}</p>}
-          {!error && !results && <p className="text-ink-dim">Loading weapon data…</p>}
-          {results && (
-            <section>
-              {tab === 'weapons' && (
-                <ul className="space-y-2.5">
-                  {results.weapons.length === 0 && <EmptyState />}
-                  {results.weapons.map((r) => (
-                    <WeaponRow key={r.name} r={r} />
-                  ))}
-                </ul>
-              )}
-
-              {tab === 'damage' && (
-                <div className="space-y-7">
-                  {allDamageTypes.map((dt) => {
-                    const list = results.damage[dt]?.slice(0, 10) ?? []
-                    if (list.length === 0) return null
-                    return (
-                      <div key={dt}>
-                        <h3 className="er-eyebrow mb-2.5">{DAMAGE_TYPE_LABELS[dt]}</h3>
-                        <ul className="space-y-2">
-                          {list.map((r) => (
-                            <li
-                              key={r.name}
-                              className="er-card er-card--hover flex flex-wrap items-baseline gap-x-3 gap-y-1 px-4 py-2.5"
-                            >
-                              <span className="text-ink">{r.name}</span>
-                              <Chip>{r.affinity}</Chip>
-                              <span className="ml-auto flex items-baseline gap-1">
-                                <span className="er-num text-base text-gold-bright">{fmt(r.totalAr)}</span>
-                                <span className="text-[10px] uppercase tracking-[0.18em] text-gold-dim">AR</span>
-                              </span>
-                              <span className="basis-full">
-                                <WhereToFind name={r.weaponName} />
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )
-                  })}
-                </div>
-              )}
-
-              {tab === 'status' && (
-                <div className="space-y-7">
-                  {STATUS_TYPES.map((st) => {
-                    const list = results.status[st]?.slice(0, 10) ?? []
-                    if (list.length === 0) return null
-                    return (
-                      <div key={st}>
-                        <h3 className="er-eyebrow mb-2.5">{STATUS_LABELS[st]}</h3>
-                        <ul className="space-y-2.5">
-                          {list.map((r) => (
-                            <StatusRow key={r.name} r={r} />
-                          ))}
-                        </ul>
-                      </div>
-                    )
-                  })}
-                </div>
-              )}
-
-              {tab === 'sorceries' && (
-                <ul className="space-y-2.5">
-                  {results.sorceries.length === 0 && <EmptyState />}
-                  {results.sorceries.map((r) => (
-                    <SpellRow key={r.name} r={r} />
-                  ))}
-                </ul>
-              )}
-
-              {tab === 'incantations' && (
-                <ul className="space-y-2.5">
-                  {results.incantations.length === 0 && <EmptyState />}
-                  {results.incantations.map((r) => (
-                    <SpellRow key={r.name} r={r} />
-                  ))}
-                </ul>
-              )}
-            </section>
-          )}
+          <div className="lg:col-span-8">
+            <div className="mb-5 flex flex-wrap gap-x-5 gap-y-1 border-b border-edge">
+              {TABS.map((t) => (
+                <button
+                  key={t.key}
+                  onClick={() => setTab(t.key)}
+                  className={`er-link -mb-px border-b-2 border-transparent pb-2 text-sm transition-colors ${
+                    tab === t.key ? 'active text-gold' : 'text-ink-dim hover:text-ink'
+                  }`}
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+            <ResultsBody />
+          </div>
         </div>
       </main>
     </div>
   )
 }
 
+/** Damage-type labels actually present in a weapon list (for the legend). */
+function legendLabels(list: WeaponRanking[]): string[] {
+  const seen = new Set<string>()
+  for (const r of list.slice(0, CHART_N)) for (const b of r.breakdown) if (b.value > 0) seen.add(b.label)
+  return [...seen]
+}
+
 function EmptyState() {
   return (
-    <li className="er-card py-8 text-center text-sm text-ink-dim">
-      Nothing matches this build yet. Try raising stats or enabling "Show items I can't use yet".
-    </li>
+    <div className="er-card py-10 text-center text-sm text-ink-dim">
+      Nothing matches this build yet. Raise your stats, or enable “Show items I can’t use yet”.
+    </div>
   )
 }
