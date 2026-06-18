@@ -191,10 +191,26 @@ export default function HowToPage() {
         {/* § 5 — Build optimizer */}
         <section id="build-optimizer" className="mb-8 scroll-mt-4">
           <h2 className="font-display mb-3 text-xl text-gold">5. Build optimizer</h2>
-          <p className="text-sm text-ink-dim">
-            Coming soon — a tool for planning stat distributions and gear loadouts based on your
-            checked items. Check back after the next update.
-          </p>
+          <div className="space-y-3 text-sm text-ink">
+            <p>
+              The <span className="text-gold">Build</span> page ranks gear by the damage it does
+              for <em>your</em> character. Enter your level and the five damage stats (Strength,
+              Dexterity, Intelligence, Faith, Arcane), toggle two-handing, and optionally pick
+              talismans.
+            </p>
+            <p>
+              It then lists, sorted by computed{' '}
+              <span className="text-gold-dim">Attack Rating</span>: best weapons overall and per
+              damage type, best weapons for each status-effect buildup, and best sorceries and
+              incantations — each shown at the affinity and upgrade level that's strongest for your
+              stats. By default it only shows what you can wield; flip a toggle to see everything.
+              Where a recommendation is on the route, a link takes you straight to it.
+            </p>
+            <p className="text-xs text-ink-dim">
+              Rankings are by Attack Rating (the standard calculator metric), not per-swing motion
+              values.
+            </p>
+          </div>
         </section>
 
         <hr className="mb-8 border-edge" />

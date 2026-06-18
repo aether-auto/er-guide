@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useRef, useState } from 'react'
+import { createContext, lazy, Suspense, useCallback, useContext, useMemo, useRef, useState } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import type { Category, MapRef } from './lib/types'
 import type { UiFilters } from './lib/search'
@@ -7,6 +7,11 @@ import GuidePage from './pages/GuidePage'
 import ProgressPage from './pages/ProgressPage'
 import CoveragePage from './pages/CoveragePage'
 import QuestlinePage from './pages/QuestlinePage'
+import HowToPage from './pages/HowToPage'
+
+// The build optimizer pulls in a ~1 MB regulation dataset + calc engine; lazy
+// so it never weighs down the map experience (loaded only when /build opens).
+const BuildPage = lazy(() => import('./pages/BuildPage'))
 
 /** A pending cross-region focus: set by TopBar when navigating to a different
  *  region. Consumed exactly once by GuidePage/MapView after markers are built. */
@@ -92,6 +97,17 @@ export default function App() {
               GuidePage/MapView survive leg navigation (no Leaflet remount). */}
           <Route path="/region/:regionId/:legId?" element={<GuidePage />} />
           <Route path="/questlines" element={<QuestlinePage />} />
+          <Route
+            path="/build"
+            element={
+              <Suspense
+                fallback={<div className="grid h-screen place-items-center text-sm text-ink-dim">Loading build optimizer…</div>}
+              >
+                <BuildPage />
+              </Suspense>
+            }
+          />
+          <Route path="/how-to" element={<HowToPage />} />
           <Route path="/progress" element={<ProgressPage />} />
           <Route path="/coverage" element={<CoveragePage />} />
           <Route path="*" element={<Navigate to="/" replace />} />

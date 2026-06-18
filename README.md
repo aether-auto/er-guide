@@ -48,22 +48,17 @@ The [/coverage](https://aether-auto.github.io/er-guide/#/coverage) page is the
 to-do list: items missing map markers, items not yet routed into a leg. Edit the
 relevant `data/regions/*.json`, run `npm run validate`, open a PR.
 
-## Cloud sync (optional)
+## Saving & moving progress
 
-Progress can be backed up to a **secret GitHub Gist** and synced across browsers.
-No server involved — your browser talks directly to `api.github.com`.
+Progress is saved locally in your browser (`localStorage`, key
+`er-guide-progress-v1`) — no account, no server, nothing leaves your device by
+default. NG+ profiles track multiple playthroughs.
 
-1. Create a [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new)
-   with **no repository access** and a single account permission: **Gists → Read and write**.
-2. On the Progress page, paste the token into the "Cloud sync (GitHub)" section and Connect.
-   A secret gist (`er-guide-progress.json`) is found or created automatically; changes
-   auto-push a few seconds after you check items, and a banner offers to load the cloud
-   copy if it's newer than the local one (nothing is ever auto-imported).
-
-What's stored where: your progress lives in localStorage (`er-guide-progress-v1`); the
-token + gist id live in localStorage (`er-guide-gist-sync`) and are sent only to
-`api.github.com`; the cloud copy lives in a secret gist in your GitHub account.
-Disconnecting clears the token from your browser but never deletes the gist.
+To move a save between devices, the Progress page offers two token-free options:
+**export/import** a JSON file, or copy a compact **sync code** (a gzipped,
+base64url snapshot of your whole save) — optionally shared as a
+`#/progress?code=…` link. Loading a code or file always asks before it
+overwrites your current progress; there is no background sync.
 
 ## Development
 
@@ -86,5 +81,8 @@ Bandai Namco. Item and location data compiled from:
 - [eldenring.wiki.gg](https://eldenring.wiki.gg/) — item listings
   (CC BY-NC-SA 3.0).
 - [Elden Ring Fan API](https://eldenring.fanapis.com/) — item descriptions (MIT).
+- [Elden Ring Weapon Calculator](https://github.com/ThomasJClark/elden-ring-weapon-calculator)
+  by Thomas Clark (MIT) — the build optimizer's attack-rating engine and bundled
+  regulation data are adapted from this project (see `src/lib/weaponCalc/LICENSE`).
 
 Code in this repository is MIT-licensed (see LICENSE).
