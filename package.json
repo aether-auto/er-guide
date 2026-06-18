@@ -17,6 +17,8 @@
     "validate": "node scripts/validate.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/cinzel": "^5.2.8",
+    "@fontsource/spectral": "^5.2.8",
     "@types/leaflet": "^1.9.21",
     "leaflet": "^1.9.4",
     "react": "^19.1.0",

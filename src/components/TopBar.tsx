@@ -49,7 +49,14 @@ export default function TopBar() {
 
   return (
     <header className="relative z-[1100] flex items-center gap-3 border-b border-edge bg-panel px-4 py-2">
-      <NavLink to="/" className="font-display whitespace-nowrap text-lg text-gold">
+      <NavLink
+        to="/"
+        className="font-display flex items-center gap-2 whitespace-nowrap text-lg tracking-[0.12em] text-gold"
+      >
+        <span
+          className="inline-block size-1.5 rotate-45 bg-gold shadow-[0_0_6px_1px_rgba(200,165,90,0.45)]"
+          aria-hidden="true"
+        />
         ER 100%
       </NavLink>
       <div className="relative max-w-md flex-1">
@@ -59,7 +66,7 @@ export default function TopBar() {
           onBlur={() => setTimeout(() => setQuery(''), 150)}
           onKeyDown={(e) => e.key === 'Escape' && setQuery('')}
           placeholder="Search items…"
-          className="w-full rounded border border-edge bg-bg px-3 py-1 text-sm outline-none focus:border-gold-dim"
+          className="w-full rounded border border-edge bg-bg/60 px-3 py-1.5 text-sm outline-none transition-colors focus:border-gold-dim focus:bg-bg focus:shadow-[0_0_0_3px_rgba(200,165,90,0.07)]"
         />
         {results.length > 0 && (
           <ul className="absolute top-full right-0 left-0 z-[1100] mt-1 max-h-80 overflow-y-auto rounded border border-edge bg-panel2 shadow-xl">
@@ -107,21 +114,25 @@ export default function TopBar() {
         />
         hide done
       </label>
-      <NavLink to="/how-to" className="text-xs text-ink-dim hover:text-gold">
-        How to use
-      </NavLink>
-      <NavLink to="/questlines" className="text-xs text-ink-dim hover:text-gold">
-        Questlines
-      </NavLink>
-      <NavLink to="/build" className="text-xs text-ink-dim hover:text-gold">
-        Build
-      </NavLink>
-      <NavLink to="/progress" className="text-xs text-ink-dim hover:text-gold">
-        Progress
-      </NavLink>
-      <NavLink to="/coverage" className="text-xs text-ink-dim hover:text-gold">
-        Coverage
-      </NavLink>
+      {[
+        { to: '/how-to', label: 'How to use' },
+        { to: '/questlines', label: 'Questlines' },
+        { to: '/build', label: 'Build' },
+        { to: '/progress', label: 'Progress' },
+        { to: '/coverage', label: 'Coverage' },
+      ].map((l) => (
+        <NavLink
+          key={l.to}
+          to={l.to}
+          className={({ isActive }) =>
+            `er-link whitespace-nowrap text-xs tracking-wide transition-colors hover:text-gold ${
+              isActive ? 'text-gold' : 'text-ink-dim'
+            }`
+          }
+        >
+          {l.label}
+        </NavLink>
+      ))}
     </header>
   )
 }

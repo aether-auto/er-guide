@@ -6,16 +6,203 @@
   --color-panel2: #1e1a13;
   --color-edge: #2c261b;
   --color-gold: #c8a55a;
+  --color-gold-bright: #e8c766;
   --color-gold-dim: #8a7444;
   --color-ink: #d8d2c4;
   --color-ink-dim: #8f887a;
   --color-missable: #e0a13c;
   --color-done: #5f7a4e;
-  --font-display: Georgia, "Times New Roman", serif;
+  /* Gilded Codex typography — self-hosted (see main.tsx) */
+  --font-display: "Cinzel Variable", Georgia, serif; /* engraved caps — titles, brand */
+  --font-body: "Spectral", Georgia, "Times New Roman", serif; /* literary serif — body */
 }
 
 body {
   @apply bg-bg text-ink antialiased;
+  font-family: var(--font-body);
+  /* faint warm vignette so the obsidian reads as lit, not flat */
+  background-image:
+    radial-gradient(120% 80% at 50% -10%, rgba(200, 165, 90, 0.05), transparent 60%),
+    radial-gradient(100% 100% at 50% 120%, rgba(0, 0, 0, 0.55), transparent 70%);
+  background-attachment: fixed;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   GILDED CODEX — design foundation (typography, atmosphere, motion)
+   ═══════════════════════════════════════════════════════════ */
+
+/* Fine grain overlay — a barely-there film so flat panels feel like vellum.
+   Fixed, non-interactive, sits above the bg but below all content. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+/* Keep app chrome above the grain. */
+#root { position: relative; z-index: 1; }
+
+/* Display type — engraved caps, gently tracked. */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.04em;
+}
+
+/* Small-caps section eyebrow label (the "ATTACK RATING" style tag). */
+.er-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold-dim);
+}
+
+/* Tabular gold numerals for stats. */
+.er-num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+/* ── Diamond rule — the codex divider motif (echoes landmark diamonds) ── */
+.er-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-gold-dim);
+}
+.er-rule::before,
+.er-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to var(--er-rule-dir, right),
+    transparent,
+    rgba(138, 116, 68, 0.5)
+  );
+}
+.er-rule::after { --er-rule-dir: left; }
+.er-rule__gem {
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background: var(--color-gold);
+  box-shadow: 0 0 6px 1px rgba(200, 165, 90, 0.4);
+  flex-shrink: 0;
+}
+
+/* ── Codex card — hairline-gold framed surface with a faint inner glow ── */
+.er-card {
+  background:
+    linear-gradient(rgba(200, 165, 90, 0.015), rgba(200, 165, 90, 0.015)),
+    var(--color-panel);
+  border: 1px solid var(--color-edge);
+  border-radius: 8px;
+  box-shadow:
+    inset 0 1px 0 rgba(200, 165, 90, 0.04),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* A card that lifts on hover (interactive list rows / result cards). */
+.er-card--hover {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.er-card--hover:hover {
+  border-color: var(--color-gold-dim);
+  box-shadow:
+    inset 0 1px 0 rgba(200, 165, 90, 0.06),
+    0 4px 16px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(200, 165, 90, 0.08);
+  transform: translateY(-1px);
+}
+
+/* ── Nav / text link — gold underline that sweeps in from the left ── */
+.er-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+.er-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.er-link:hover::after,
+.er-link[aria-current="page"]::after,
+.er-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ── Gilded button — subtle gold sheen sweep on hover ── */
+.er-btn-gold {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(200, 165, 90, 0.55);
+  background: rgba(200, 165, 90, 0.08);
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.er-btn-gold:hover {
+  background: rgba(200, 165, 90, 0.16);
+  border-color: var(--color-gold);
+  color: var(--color-gold-bright);
+}
+.er-btn-gold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(232, 199, 102, 0.25) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+}
+.er-btn-gold:hover::before { transform: translateX(120%); }
+
+/* ── Motion: staggered reveal on mount ───────────────────────── */
+@keyframes er-reveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.er-reveal { animation: er-reveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+/* Stagger direct children: each fires slightly after the last. */
+.er-stagger > * { animation: er-reveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.er-stagger > *:nth-child(1) { animation-delay: 0.04s; }
+.er-stagger > *:nth-child(2) { animation-delay: 0.10s; }
+.er-stagger > *:nth-child(3) { animation-delay: 0.16s; }
+.er-stagger > *:nth-child(4) { animation-delay: 0.22s; }
+.er-stagger > *:nth-child(5) { animation-delay: 0.28s; }
+.er-stagger > *:nth-child(6) { animation-delay: 0.34s; }
+.er-stagger > *:nth-child(7) { animation-delay: 0.40s; }
+.er-stagger > *:nth-child(8) { animation-delay: 0.46s; }
+
+/* Respect reduced-motion: kill all reveal/sweep motion, keep final state. */
+@media (prefers-reduced-motion: reduce) {
+  .er-reveal,
+  .er-stagger > * { animation: none !important; }
+  .er-btn-gold::before { display: none; }
+  * { scroll-behavior: auto !important; }
+}
+
+/* ── Refined global scrollbars (content surfaces) ─────────────── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-edge) transparent;
+}
+::selection {
+  background: rgba(200, 165, 90, 0.25);
+  color: var(--color-gold-bright);
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -225,7 +412,7 @@ body {
   color: #d8d2c4;
 }
 .er-popup-card__name {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: 15px;
   color: #c8a55a;
@@ -677,7 +864,7 @@ body {
   line-height: 1;
 }
 .er-route-reopen__label {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-display);
   font-size: 11px;
   letter-spacing: 0.04em;
 }
@@ -726,7 +913,7 @@ body {
   gap: 5px;
   padding: 4px 10px;
   font-size: 12px;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-display);
   letter-spacing: 0.02em;
   border: 1px solid #2c261b;
   border-radius: 4px;
@@ -805,7 +992,7 @@ body {
   user-select: none;
 }
 .er-layers-section__title {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--font-display);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;

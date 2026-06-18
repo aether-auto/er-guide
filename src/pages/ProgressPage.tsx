@@ -5,6 +5,10 @@ import { CATEGORY_META, type Category } from '../lib/types'
 import { useProgress } from '../lib/useProgress'
 import { decodeSyncCode, encodeSyncCode } from '../lib/syncCode'
 import TopBar from '../components/TopBar'
+import { DiamondRule } from '../components/ui/DiamondRule'
+
+const btnGhost =
+  'rounded border border-edge px-3 py-1.5 text-xs text-ink-dim transition-colors hover:border-gold-dim hover:text-gold disabled:opacity-50 disabled:hover:border-edge disabled:hover:text-ink-dim'
 
 export default function ProgressPage() {
   const { snapshot, store } = useProgress()
@@ -84,6 +88,15 @@ export default function ProgressPage() {
     (i) => i.missable && snapshot.checked[i.id] == null && snapshot.ignored[i.id] == null,
   )
 
+  // Grand total for the completion hero (ignored items excluded).
+  let totalDone = 0
+  let totalItems = 0
+  for (const { total, done } of byCategory.values()) {
+    totalItems += total
+    totalDone += done
+  }
+  const totalPct = totalItems === 0 ? 0 : Math.round((totalDone / totalItems) * 100)
+
   function doExport() {
     const blob = new Blob([store.exportJson()], { type: 'application/json' })
     const a = document.createElement('a')
@@ -106,181 +119,216 @@ export default function ProgressPage() {
   return (
     <div className="flex h-screen flex-col">
       <TopBar />
-      <main className="mx-auto w-full max-w-4xl flex-1 overflow-y-auto px-6 py-6">
-        <h1 className="font-display mb-4 text-3xl text-gold">Progress</h1>
+      <main className="mx-auto w-full max-w-4xl flex-1 overflow-y-auto px-6 py-8">
+        <header className="er-reveal mb-7">
+          <h1 className="font-display text-3xl tracking-[0.08em] text-gold">Progress</h1>
+          <DiamondRule className="mt-3" />
+        </header>
 
-        {snapshot.hasBackup && (
-          <p className="mb-4 rounded border border-missable/50 bg-panel p-3 text-sm text-missable">
-            A previous save could not be read and was backed up. Export it from your browser's localStorage key
-            <code className="mx-1">er-guide-progress-backup</code> if you need it.
-          </p>
-        )}
-
-        {sharedCode && (
-          <div className="mb-4 flex flex-wrap items-center gap-2 rounded border border-gold-dim/60 bg-panel p-3 text-sm">
-            <span className="text-gold">
-              A sync code was shared with this link — load it? This replaces your current progress.
-            </span>
-            <button
-              onClick={() => void doLoadShared()}
-              className="rounded border border-gold-dim px-2 py-0.5 text-gold hover:bg-panel2"
-            >
-              Load
-            </button>
-            <button
-              onClick={dismissShared}
-              className="rounded border border-edge px-2 py-0.5 text-ink-dim hover:bg-panel2"
-            >
-              Dismiss
-            </button>
-            {sharedError && <span className="text-missable">{sharedError}</span>}
-          </div>
-        )}
-
-        <section className="mb-6 flex flex-wrap items-center gap-3 rounded border border-edge bg-panel p-3 text-sm">
-          <span className="text-ink-dim">Profile:</span>
-          <select
-            value={snapshot.activeProfile}
-            onChange={(e) => store.switchProfile(e.target.value)}
-            className="rounded border border-edge bg-bg px-2 py-1"
-          >
-            {snapshot.profiles.map((p) => (
-              <option key={p}>{p}</option>
-            ))}
-          </select>
-          <input
-            value={newProfile}
-            onChange={(e) => setNewProfile(e.target.value)}
-            placeholder="new profile (e.g. ng-plus)"
-            className="rounded border border-edge bg-bg px-2 py-1"
-          />
-          <button
-            onClick={() => { if (newProfile.trim()) { store.switchProfile(newProfile.trim()); setNewProfile('') } }}
-            className="rounded border border-gold-dim px-2 py-1 text-gold hover:bg-panel2"
-          >
-            create
-          </button>
-          <span className="mx-2 text-edge">|</span>
-          <button onClick={doExport} className="rounded border border-gold-dim px-2 py-1 text-gold hover:bg-panel2">
-            export save
-          </button>
-          <button onClick={() => fileRef.current?.click()} className="rounded border border-edge px-2 py-1 hover:bg-panel2">
-            import save
-          </button>
-          <input
-            ref={fileRef} type="file" accept="application/json" className="hidden"
-            onChange={(e) => e.target.files?.[0] && doImport(e.target.files[0])}
-          />
-          {importError && <span className="text-missable">{importError}</span>}
-        </section>
-
-        <section className="mb-6 rounded border border-edge bg-panel p-3 text-sm">
-          <h2 className="font-display mb-3 text-lg text-gold-dim">Move to another device</h2>
-
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              onClick={() => void doCopyCode()}
-              className="rounded border border-gold-dim px-2 py-1 text-gold hover:bg-panel2"
-            >
-              {copied ? 'Copied!' : 'Copy sync code'}
-            </button>
-            <span className="mx-2 text-edge">|</span>
-            <input
-              value={codeInput}
-              onChange={(e) => setCodeInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && void doLoadCode()}
-              placeholder="paste sync code"
-              className="w-72 rounded border border-edge bg-bg px-2 py-1 font-mono text-xs"
-            />
-            <button
-              onClick={() => void doLoadCode()}
-              disabled={!codeInput.trim()}
-              className="rounded border border-edge px-2 py-1 hover:bg-panel2 disabled:opacity-50"
-            >
-              Load from sync code
-            </button>
-            {codeError && <span className="text-missable">{codeError}</span>}
-          </div>
-
-          <p className="mt-3 text-xs text-ink-dim">
-            Your progress lives only in this browser. To move it elsewhere, copy the sync code (or export a
-            file above) and load it on the other device. Loading replaces the current progress. Very large
-            saves make long codes — use the file export if a shared link gets too long.
-          </p>
-        </section>
-
-        {missablesPending.length > 0 && (
-          <section className="mb-6 rounded border border-missable/40 bg-panel p-3">
-            <h2 className="font-display text-lg text-missable">⚠ Unchecked missables ({missablesPending.length})</h2>
-            <ul className="mt-2 space-y-1 text-sm">
-              {missablesPending.map((item) => {
-                const pos = itemPosition.get(item.id)
-                return (
-                  <li key={item.id}>
-                    <NavLink
-                      className="text-gold hover:underline"
-                      to={pos ? (pos.legId ? `/region/${pos.regionId}/${pos.legId}` : `/region/${pos.regionId}`) : '/'}
-                    >
-                      {item.name}
-                    </NavLink>
-                    <span className="text-ink-dim"> — {item.missable!.lockedBy}: {item.missable!.note}</span>
-                  </li>
-                )
-              })}
-            </ul>
+        <div className="er-stagger space-y-6">
+          {/* Completion hero */}
+          <section className="er-card flex items-center gap-5 p-5">
+            <div className="flex flex-col">
+              <span className="er-num font-display text-4xl leading-none text-gold-bright">{totalPct}%</span>
+              <span className="er-eyebrow mt-1.5">Complete</span>
+            </div>
+            <div className="flex-1">
+              <div className="mb-1.5 flex items-baseline justify-between text-xs text-ink-dim">
+                <span>Tarnished, your journey</span>
+                <span className="er-num text-ink">
+                  {totalDone}
+                  <span className="text-ink-dim"> / {totalItems}</span>
+                </span>
+              </div>
+              <span className="block h-2 overflow-hidden rounded-full bg-edge">
+                <span
+                  className="block h-full rounded-full bg-gradient-to-r from-gold-dim to-gold-bright transition-[width] duration-700"
+                  style={{ width: `${totalPct}%` }}
+                />
+              </span>
+            </div>
           </section>
-        )}
 
-        <section className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div>
-            <h2 className="font-display mb-2 text-lg text-gold-dim">By category</h2>
-            <table className="w-full text-sm">
-              <thead className="sr-only"><tr><th scope="col">Category</th><th scope="col">Progress</th></tr></thead>
-              <tbody>
-                {[...byCategory.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([cat, row]) => (
-                  <tr key={cat} className="border-b border-edge/50">
-                    <td className="py-1">{CATEGORY_META[cat].plural}</td>
-                    <td className={`py-1 text-right ${row.done === row.total ? 'text-done' : 'text-ink-dim'}`}>
-                      {row.done}/{row.total}
-                    </td>
-                  </tr>
+          {snapshot.hasBackup && (
+            <p className="er-card border-missable/50 p-4 text-sm text-missable">
+              A previous save could not be read and was backed up. Export it from your browser's localStorage key
+              <code className="mx-1 text-missable">er-guide-progress-backup</code> if you need it.
+            </p>
+          )}
+
+          {sharedCode && (
+            <div className="er-card flex flex-wrap items-center gap-3 border-gold-dim/60 p-4 text-sm">
+              <span className="text-gold">
+                A sync code was shared with this link — load it? This replaces your current progress.
+              </span>
+              <button onClick={() => void doLoadShared()} className="er-btn-gold rounded px-3 py-1 text-xs">
+                Load
+              </button>
+              <button onClick={dismissShared} className={btnGhost}>
+                Dismiss
+              </button>
+              {sharedError && <span className="text-missable">{sharedError}</span>}
+            </div>
+          )}
+
+          {/* Profiles + save file */}
+          <section className="er-card p-5">
+            <h2 className="er-eyebrow mb-3">Profiles &amp; save file</h2>
+            <div className="flex flex-wrap items-center gap-3 text-sm">
+              <span className="text-ink-dim">Profile</span>
+              <select
+                value={snapshot.activeProfile}
+                onChange={(e) => store.switchProfile(e.target.value)}
+                className="rounded border border-edge bg-bg px-2 py-1.5 text-sm transition-colors focus:border-gold-dim focus:outline-none"
+              >
+                {snapshot.profiles.map((p) => (
+                  <option key={p}>{p}</option>
                 ))}
-              </tbody>
-            </table>
-          </div>
-          <div>
-            <h2 className="font-display mb-2 text-lg text-gold-dim">By region</h2>
-            <table className="w-full text-sm">
-              <thead className="sr-only"><tr><th scope="col">Region</th><th scope="col">Progress</th></tr></thead>
-              <tbody>
-                {regions.map((region) => {
-                  const allIds = regionCheckables(region)
-                  const ids = allIds.filter((id) => snapshot.ignored[id] == null)
-                  const done = countChecked(ids, snapshot.checked)
-                  const ignoredCount = countIgnored(allIds, snapshot.ignored)
+              </select>
+              <input
+                value={newProfile}
+                onChange={(e) => setNewProfile(e.target.value)}
+                placeholder="new profile (e.g. ng-plus)"
+                className="rounded border border-edge bg-bg px-2 py-1.5 text-sm transition-colors focus:border-gold-dim focus:outline-none"
+              />
+              <button
+                onClick={() => { if (newProfile.trim()) { store.switchProfile(newProfile.trim()); setNewProfile('') } }}
+                className={btnGhost}
+              >
+                Create
+              </button>
+              <span className="h-5 w-px bg-edge" />
+              <button onClick={doExport} className="er-btn-gold rounded px-3 py-1.5 text-xs">
+                Export save
+              </button>
+              <button onClick={() => fileRef.current?.click()} className={btnGhost}>
+                Import save
+              </button>
+              <input
+                ref={fileRef} type="file" accept="application/json" className="hidden"
+                onChange={(e) => e.target.files?.[0] && doImport(e.target.files[0])}
+              />
+              {importError && <span className="text-missable">{importError}</span>}
+            </div>
+          </section>
+
+          {/* Sync code */}
+          <section className="er-card p-5">
+            <h2 className="er-eyebrow mb-3">Move to another device</h2>
+            <div className="flex flex-wrap items-center gap-3 text-sm">
+              <button onClick={() => void doCopyCode()} className="er-btn-gold rounded px-3 py-1.5 text-xs">
+                {copied ? '✓ Copied' : 'Copy sync code'}
+              </button>
+              <span className="h-5 w-px bg-edge" />
+              <input
+                value={codeInput}
+                onChange={(e) => setCodeInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && void doLoadCode()}
+                placeholder="paste sync code"
+                className="w-72 rounded border border-edge bg-bg px-2 py-1.5 font-mono text-xs transition-colors focus:border-gold-dim focus:outline-none"
+              />
+              <button onClick={() => void doLoadCode()} disabled={!codeInput.trim()} className={btnGhost}>
+                Load from sync code
+              </button>
+              {codeError && <span className="text-missable">{codeError}</span>}
+            </div>
+            <p className="mt-3 text-xs leading-relaxed text-ink-dim">
+              Your progress lives only in this browser. To move it elsewhere, copy the sync code (or export a
+              file above) and load it on the other device. Loading replaces the current progress. Very large
+              saves make long codes — use the file export if a shared link gets too long.
+            </p>
+          </section>
+
+          {missablesPending.length > 0 && (
+            <section className="er-card border-missable/40 p-5">
+              <h2 className="font-display text-lg text-missable">
+                ⚠ Unchecked missables <span className="er-num text-base text-missable/80">({missablesPending.length})</span>
+              </h2>
+              <ul className="mt-3 space-y-1.5 text-sm">
+                {missablesPending.map((item) => {
+                  const pos = itemPosition.get(item.id)
                   return (
-                    <tr key={region.id} className="border-b border-edge/50">
-                      <td className="py-1">
-                        <NavLink to={`/region/${region.id}`} className="hover:text-gold">{region.name}</NavLink>
-                      </td>
-                      <td className={`py-1 text-right ${done === ids.length && ids.length > 0 ? 'text-done' : 'text-ink-dim'}`}>
-                        {done}/{ids.length}
-                        {ignoredCount > 0 && <span className="ml-1 text-[10px] opacity-60">({ignoredCount}⊘)</span>}
-                      </td>
-                    </tr>
+                    <li key={item.id} className="leading-relaxed">
+                      <NavLink
+                        className="er-link text-gold"
+                        to={pos ? (pos.legId ? `/region/${pos.regionId}/${pos.legId}` : `/region/${pos.regionId}`) : '/'}
+                      >
+                        {item.name}
+                      </NavLink>
+                      <span className="text-ink-dim"> — {item.missable!.lockedBy}: {item.missable!.note}</span>
+                    </li>
                   )
                 })}
-              </tbody>
-            </table>
-          </div>
-        </section>
+              </ul>
+            </section>
+          )}
 
-        {totalIgnored > 0 && (
-          <p className="mb-6 text-xs text-ink-dim">
-            ⊘ {totalIgnored} item{totalIgnored !== 1 ? 's' : ''} ignored — excluded from all totals.
-            Restore them from the route panel or map popups.
-          </p>
-        )}
+          {/* Breakdowns */}
+          <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="er-card p-5">
+              <h2 className="er-eyebrow mb-3">By category</h2>
+              <table className="w-full text-sm">
+                <thead className="sr-only"><tr><th scope="col">Category</th><th scope="col">Progress</th></tr></thead>
+                <tbody>
+                  {[...byCategory.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([cat, row]) => {
+                    const pct = row.total === 0 ? 0 : Math.round((row.done / row.total) * 100)
+                    return (
+                      <tr key={cat} className="border-b border-edge/40 last:border-0">
+                        <td className="py-1.5">{CATEGORY_META[cat].plural}</td>
+                        <td className="w-20 py-1.5">
+                          <span className="block h-1 overflow-hidden rounded-full bg-edge">
+                            <span className="block h-full rounded-full bg-gold" style={{ width: `${pct}%` }} />
+                          </span>
+                        </td>
+                        <td className={`er-num py-1.5 pl-3 text-right ${row.done === row.total ? 'text-done' : 'text-ink-dim'}`}>
+                          {row.done}/{row.total}
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <div className="er-card p-5">
+              <h2 className="er-eyebrow mb-3">By region</h2>
+              <table className="w-full text-sm">
+                <thead className="sr-only"><tr><th scope="col">Region</th><th scope="col">Progress</th></tr></thead>
+                <tbody>
+                  {regions.map((region) => {
+                    const allIds = regionCheckables(region)
+                    const ids = allIds.filter((id) => snapshot.ignored[id] == null)
+                    const done = countChecked(ids, snapshot.checked)
+                    const ignoredCount = countIgnored(allIds, snapshot.ignored)
+                    const pct = ids.length === 0 ? 0 : Math.round((done / ids.length) * 100)
+                    return (
+                      <tr key={region.id} className="border-b border-edge/40 last:border-0">
+                        <td className="py-1.5">
+                          <NavLink to={`/region/${region.id}`} className="transition-colors hover:text-gold">{region.name}</NavLink>
+                        </td>
+                        <td className="w-20 py-1.5">
+                          <span className="block h-1 overflow-hidden rounded-full bg-edge">
+                            <span className="block h-full rounded-full bg-gold" style={{ width: `${pct}%` }} />
+                          </span>
+                        </td>
+                        <td className={`er-num py-1.5 pl-3 text-right ${done === ids.length && ids.length > 0 ? 'text-done' : 'text-ink-dim'}`}>
+                          {done}/{ids.length}
+                          {ignoredCount > 0 && <span className="ml-1 text-[10px] opacity-60">({ignoredCount}⊘)</span>}
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {totalIgnored > 0 && (
+            <p className="text-xs text-ink-dim">
+              ⊘ {totalIgnored} item{totalIgnored !== 1 ? 's' : ''} ignored — excluded from all totals.
+              Restore them from the route panel or map popups.
+            </p>
+          )}
+        </div>
       </main>
     </div>
   )
