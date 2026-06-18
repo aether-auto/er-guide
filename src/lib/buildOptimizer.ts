@@ -11,6 +11,7 @@ import {
 } from './weaponCalc'
 import { talismansById } from './talismans'
 import { damageSorceries, damageIncantations, type Spell } from './spellData'
+import { ashesOfWar, type AshOfWar } from './ashesOfWar'
 
 /**
  * Ranking layer over the ported weapon engine. Given a character's stats, it
@@ -464,4 +465,54 @@ export function rankIncantations(
   options: OptimizerOptions = {},
 ): SpellRanking[] {
   return rankSpells(damageIncantations, weapons, attributes, options, 'incantation')
+}
+
+// ── Ashes of War (weapon arts) ──────────────────────────────────────────────
+
+export interface AowRanking extends AshOfWar {
+  /** Approx weapon-art damage for the main hit: bestWeaponAr × motionValue/100.
+   *  Only set for scaling:'weapon-ar' skills that have a motion value. */
+  artDamage?: number
+}
+
+export interface AowResult {
+  /** The build's strongest usable weapon — the basis for art-damage estimates. */
+  bestWeaponName: string | null
+  bestWeaponAr: number
+  list: AowRanking[]
+}
+
+/**
+ * Rank/classify Ashes of War for a build. A skill's weapon-art damage scales
+ * with the AR of whatever weapon it's applied to, so we use the build's best
+ * usable weapon AR as the basis: artDamage ≈ bestWeaponAr × (motionValue/100)
+ * for AR-scaling skills with a known motion value. Flat (spell-like) skills and
+ * pure buffs get no artDamage. Sorted: estimable damaging skills first by
+ * damage, then other damaging skills, then utility.
+ */
+export function rankAshesOfWar(
+  weapons: Weapon[],
+  attributes: Attributes,
+  options: OptimizerOptions = {},
+): AowResult {
+  const top = rankWeapons(weapons, attributes, options)[0]
+  const bestWeaponAr = top?.totalAr ?? 0
+
+  const list: AowRanking[] = ashesOfWar.map((a) => ({
+    ...a,
+    artDamage:
+      a.scaling === 'weapon-ar' && a.motionValue != null
+        ? Math.round(bestWeaponAr * (a.motionValue / 100))
+        : undefined,
+  }))
+
+  list.sort((x, y) => {
+    const dx = x.artDamage ?? -1
+    const dy = y.artDamage ?? -1
+    if (dx !== dy) return dy - dx
+    if (x.dealsDamage !== y.dealsDamage) return x.dealsDamage ? -1 : 1
+    return x.skill.localeCompare(y.skill)
+  })
+
+  return { bestWeaponName: top?.name ?? null, bestWeaponAr, list }
 }

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import TopBar from '../components/TopBar'
 import { DiamondRule } from '../components/ui/DiamondRule'
-import { ArBars, CompositionBar, DamageLegend, StatRadar, type BarItem } from '../components/ui/Charts'
+import { ArBars, CompositionBar, DamageLegend, StatRadar, damageColor, type BarItem } from '../components/ui/Charts'
 import { loadWeapons, allDamageTypes, type Weapon, type Attributes, type Attribute, type AttackPowerType } from '../lib/weaponCalc'
 import {
   rankWeapons,
@@ -10,12 +10,14 @@ import {
   rankByStatus,
   rankSorceries,
   rankIncantations,
+  rankAshesOfWar,
   DAMAGE_TYPE_LABELS,
   STATUS_TYPES,
   STATUS_LABELS,
   type WeaponRanking,
   type StatusRanking,
   type SpellRanking,
+  type AowRanking,
 } from '../lib/buildOptimizer'
 import { talismans } from '../lib/talismans'
 import { findBuildLink } from '../lib/buildLinks'
@@ -23,15 +25,24 @@ import { findBuildLink } from '../lib/buildLinks'
 // Lazy-loaded (React.lazy) so the ~1 MB regulation data + engine stay out of the
 // main bundle. Default export at the bottom.
 
-type TabKey = 'weapons' | 'damage' | 'status' | 'sorceries' | 'incantations'
+type TabKey = 'weapons' | 'damage' | 'status' | 'ashes' | 'sorceries' | 'incantations'
 
 const TABS: { key: TabKey; label: string }[] = [
   { key: 'weapons', label: 'Weapons' },
   { key: 'damage', label: 'By damage type' },
   { key: 'status', label: 'By status' },
+  { key: 'ashes', label: 'Ashes of War' },
   { key: 'sorceries', label: 'Sorceries' },
   { key: 'incantations', label: 'Incantations' },
 ]
+
+const AOW_CATS = [
+  'All', 'Projectile', 'AoE', 'Melee/Burst', 'Charge', 'Dash/Evasion', 'Stance/Counter', 'Buff/Utility',
+] as const
+
+const ELEM_LABEL: Record<string, string> = {
+  physical: 'Physical', magic: 'Magic', fire: 'Fire', lightning: 'Lightning', holy: 'Holy', mixed: 'Mixed', none: '',
+}
 
 const STAT_FIELDS: { key: Attribute; label: string }[] = [
   { key: 'str', label: 'STR' },
@@ -215,6 +226,59 @@ function SpellTable({ rows }: { rows: SpellRanking[] }) {
   )
 }
 
+function AowTable({ rows }: { rows: AowRanking[] }) {
+  return (
+    <div className="er-card overflow-hidden">
+      <ul className="er-stagger">
+        {rows.map((a, i) => {
+          const elem = ELEM_LABEL[a.element]
+          return (
+            <li
+              key={a.skill}
+              className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-x-3 border-b border-edge/30 px-3 py-2.5 transition-colors last:border-0 hover:bg-panel2/50"
+            >
+              <span className="er-num text-right text-[11px] text-ink-dim">{i + 1}</span>
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <span className="truncate font-display text-sm text-ink">{a.skill}</span>
+                  {elem && (
+                    <span className="flex items-center gap-1 text-[10px] text-ink-dim">
+                      <span className="inline-block size-2 rounded-[1px]" style={{ background: damageColor(elem) }} />
+                      {elem}
+                    </span>
+                  )}
+                  <Chip>{a.category}</Chip>
+                  {a.dlc && <Chip>DLC</Chip>}
+                  {!a.transferable && <span className="text-[10px] text-ink-dim" title="Locked to specific weapon(s)">weapon-locked</span>}
+                </div>
+                <div className="mt-1 flex flex-wrap gap-x-3 text-[10px] text-ink-dim">
+                  <span>FP {a.fp}</span>
+                  {a.motionValue != null && <span>MV {a.motionValue}%</span>}
+                  {a.status && <span className="text-gold-dim">{a.status}</span>}
+                  {a.affinity && <span>{a.affinity}</span>}
+                  {a.itemName && <WhereToFind name={a.itemName} />}
+                </div>
+              </div>
+              <div className="text-right">
+                {a.artDamage != null ? (
+                  <>
+                    <span className="er-num er-fade-in block text-lg text-gold-bright">{fmt(a.artDamage)}</span>
+                    <span className="text-[9px] uppercase tracking-[0.16em] text-gold-dim">art dmg</span>
+                  </>
+                ) : (
+                  <span className="text-[10px] text-ink-dim">
+                    {a.scaling === 'flat' ? 'flat dmg' : !a.dealsDamage ? 'buff' : '—'}
+                  </span>
+                )}
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
+}
+
 /** Segmented sub-selector (damage type / status) — matches the tab styling. */
 function SubSelect<T extends string | number>({
   options,
@@ -259,6 +323,7 @@ export default function BuildPage() {
   const [tab, setTab] = useState<TabKey>('weapons')
   const [dmgType, setDmgType] = useState<AttackPowerType>(allDamageTypes[0])
   const [statusType, setStatusType] = useState<number>(STATUS_TYPES[0])
+  const [aowCat, setAowCat] = useState<string>('All')
 
   useEffect(() => {
     let cancelled = false
@@ -281,6 +346,7 @@ export default function BuildPage() {
       status: rankByStatus(weapons, stats, options),
       sorceries: rankSorceries(weapons, stats, options).slice(0, TOP_N),
       incantations: rankIncantations(weapons, stats, options).slice(0, TOP_N),
+      ashes: rankAshesOfWar(weapons, stats, options),
     }
   }, [weapons, stats, options])
 
@@ -386,6 +452,39 @@ export default function BuildPage() {
               <StatusTable rows={list} />
             </>
           )}
+        </div>
+      )
+    }
+
+    if (tab === 'ashes') {
+      const r = results.ashes
+      const filtered = aowCat === 'All' ? r.list : r.list.filter((a) => a.category === aowCat)
+      const chartItems = filtered
+        .filter((a) => a.artDamage != null)
+        .slice(0, CHART_N)
+        .map((a) => ({ name: a.skill, value: a.artDamage as number, dlc: a.dlc }))
+      return (
+        <div key={`ashes-${aowCat}`} className="er-reveal space-y-5">
+          <p className="text-xs leading-relaxed text-ink-dim">
+            Weapon-art damage ≈ your best usable weapon
+            {r.bestWeaponName ? ` (${r.bestWeaponName}, AR ${fmt(r.bestWeaponAr)})` : ''} × the skill’s main-hit
+            motion value. <span className="text-ink">Flat</span> skills (spell-like, e.g. Carian Greatsword)
+            don’t scale from weapon AR; <span className="text-ink">buffs</span> deal no direct damage. Motion
+            values are datamined main-hit figures — many skills hit several times.
+          </p>
+          <SubSelect
+            options={AOW_CATS.map((c) => ({ key: c as string, label: c }))}
+            value={aowCat}
+            onChange={setAowCat}
+            label={(o) => o.label}
+          />
+          {chartItems.length > 0 && (
+            <section className="er-card p-4">
+              <PanelHead title="Top weapon arts by estimated damage" count={chartItems.length} />
+              <ArBars items={chartItems} unit="DMG" />
+            </section>
+          )}
+          {filtered.length === 0 ? <EmptyState /> : <AowTable rows={filtered} />}
         </div>
       )
     }
