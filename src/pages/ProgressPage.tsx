@@ -20,7 +20,11 @@ export default function ProgressPage() {
   const [codeInput, setCodeInput] = useState('')
   const [codeError, setCodeError] = useState('')
   const [copied, setCopied] = useState(false)
+  const [shownCode, setShownCode] = useState('') // always revealed so it works even if clipboard is blocked
   const copiedTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
+  const shareLink = shownCode
+    ? `${location.origin}${location.pathname}#/progress?code=${encodeURIComponent(shownCode)}`
+    : ''
 
   // A sync code can ride in the URL (#/progress?code=…). Never auto-import — we
   // surface a confirm banner and strip the param on Load. useSearchParams works
@@ -30,8 +34,18 @@ export default function ProgressPage() {
   const [sharedError, setSharedError] = useState('')
 
   async function doCopyCode() {
+    let code: string
     try {
-      const code = await encodeSyncCode(store.exportJson())
+      code = await encodeSyncCode(store.exportJson())
+    } catch (err) {
+      setCodeError(err instanceof Error ? err.message : 'Could not generate sync code')
+      return
+    }
+    // Always reveal the code so the feature works even where the clipboard API is
+    // unavailable (non-secure origins like a LAN IP). Clipboard is a bonus.
+    setShownCode(code)
+    setCodeError('')
+    try {
       await navigator.clipboard.writeText(code)
       setCopied(true)
       clearTimeout(copiedTimer.current)
@@ -232,10 +246,39 @@ export default function ProgressPage() {
               </button>
               {codeError && <span className="text-missable">{codeError}</span>}
             </div>
+
+            {shownCode && (
+              <div className="mt-3">
+                <p className="mb-1.5 text-[11px] text-ink-dim">
+                  {copied ? '✓ Copied to clipboard. ' : 'Select all and copy this code. '}
+                  Paste it into “Load from sync code” on your other device:
+                </p>
+                <textarea
+                  readOnly
+                  value={shownCode}
+                  rows={2}
+                  onFocus={(e) => e.currentTarget.select()}
+                  className="w-full resize-none rounded border border-edge bg-bg px-2 py-1.5 font-mono text-[11px] break-all text-ink-dim transition-colors focus:border-gold-dim focus:outline-none"
+                />
+                {shareLink && (
+                  <details className="mt-2">
+                    <summary className="cursor-pointer text-[11px] text-gold-dim hover:text-gold">…or copy a shareable link</summary>
+                    <textarea
+                      readOnly
+                      value={shareLink}
+                      rows={2}
+                      onFocus={(e) => e.currentTarget.select()}
+                      className="mt-1.5 w-full resize-none rounded border border-edge bg-bg px-2 py-1.5 font-mono text-[11px] break-all text-ink-dim transition-colors focus:border-gold-dim focus:outline-none"
+                    />
+                  </details>
+                )}
+              </div>
+            )}
+
             <p className="mt-3 text-xs leading-relaxed text-ink-dim">
-              Your progress lives only in this browser. To move it elsewhere, copy the sync code (or export a
-              file above) and load it on the other device. Loading replaces the current progress. Very large
-              saves make long codes — use the file export if a shared link gets too long.
+              Your progress lives only in this browser. To move it elsewhere, generate the sync code above (it’s
+              shown so you can copy it even if your browser blocks clipboard access on a non-secure connection),
+              or export a file. Loading replaces the current progress.
             </p>
           </section>
 
