@@ -55,7 +55,7 @@ await page.screenshot({ path: 'docs/screenshots/01-desktop-limgrave.png' })
 
 // 3 ── "Next up" check advances + map gains pulsing pin
 const calloutName = await page.locator('.er-route-panel .text-gold.font-semibold').first().textContent()
-await page.getByRole('button', { name: '✓ Mark done' }).click()
+await page.getByRole('button', { name: '✦ Mark done' }).click()
 await page.waitForTimeout(1200) // flyTo + redraw
 const calloutName2 = await page.locator('.er-route-panel .text-gold.font-semibold').first().textContent()
 check('"Next up" advances on check', calloutName !== calloutName2,
@@ -98,8 +98,10 @@ check('Popup check updates pin style live', checkedAfter > checkedBefore,
 const struck = await page.locator('.er-route-panel li .line-through').count()
 check('Popup check updates panel list (strikethrough)', struck > 0, `${struck} struck rows`)
 
-// 7 ── Locate on an underground item switches layer + opens popup
-await page.goto(`${BASE}#/region/liurnia`)
+// 7 ── Locate on an underground item switches layer + opens popup.
+// Swarm of Flies (underground) lives in leg liurnia-10 — open that leg so its
+// step row + Locate button are in the panel (the no-leg view is now the picker).
+await page.goto(`${BASE}#/region/liurnia/liurnia-10`)
 await page.waitForTimeout(1500)
 const ugLocate = page.locator('[aria-label="Locate Swarm of Flies on map"]')
 await ugLocate.scrollIntoViewIfNeeded()
@@ -167,7 +169,9 @@ check('DLC tiles loaded', dlcTiles > 0, `${dlcTiles} tiles`)
   await navPage.evaluate(() => {
     document.querySelector('.leaflet-container').__erIdentityTag = 'original-node'
   })
-  await navPage.getByRole('button', { name: 'Next leg' }).click() // region view → first leg
+  // Picker view: click the first leg in the (default-expanded) accordion to enter
+  // the leg — same optional-param route, so the map must NOT remount.
+  await navPage.locator('.er-route-panel a[href$="/region/limgrave/limgrave-01"]').first().click()
   await navPage.waitForTimeout(1500)
   const survived = await navPage.evaluate(() => ({
     tag: document.querySelector('.leaflet-container')?.__erIdentityTag ?? null,
