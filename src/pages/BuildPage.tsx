@@ -17,7 +17,8 @@ import {
   type WeaponRanking,
   type StatusRanking,
   type SpellRanking,
-  type AowRanking,
+  type WeaponSkillRec,
+  type SkillRec,
 } from '../lib/buildOptimizer'
 import { talismans } from '../lib/talismans'
 import { findBuildLink } from '../lib/buildLinks'
@@ -37,7 +38,7 @@ const TABS: { key: TabKey; label: string }[] = [
 ]
 
 const AOW_CATS = [
-  'All', 'Projectile', 'AoE', 'Melee/Burst', 'Charge', 'Dash/Evasion', 'Stance/Counter', 'Buff/Utility',
+  'All', 'Projectile', 'AoE', 'Melee/Burst', 'Charge', 'Dash/Evasion', 'Stance/Counter',
 ] as const
 
 const ELEM_LABEL: Record<string, string> = {
@@ -226,50 +227,56 @@ function SpellTable({ rows }: { rows: SpellRanking[] }) {
   )
 }
 
-function AowTable({ rows }: { rows: AowRanking[] }) {
+function bestArt(w: WeaponSkillRec, cat: string): SkillRec | undefined {
+  return cat === 'All' ? w.skills[0] : w.skills.find((s) => s.category === cat)
+}
+
+/** Best weapon art per weapon for the build (host-correct, build-aware). */
+function WeaponArtsTable({ weapons, cat }: { weapons: WeaponSkillRec[]; cat: string }) {
+  const rows = weapons
+    .map((w) => ({ w, best: bestArt(w, cat) }))
+    .filter((r): r is { w: WeaponSkillRec; best: SkillRec } => r.best != null)
+  if (rows.length === 0) return <EmptyState />
   return (
     <div className="er-card overflow-hidden">
       <ul className="er-stagger">
-        {rows.map((a, i) => {
-          const elem = ELEM_LABEL[a.element]
+        {rows.map(({ w, best }, i) => {
+          const elem = ELEM_LABEL[best.element]
+          const alts = w.skills.filter((s) => s.skill !== best.skill).slice(0, 3)
           return (
             <li
-              key={a.skill}
+              key={w.name}
               className="grid grid-cols-[1.5rem_minmax(0,1fr)_auto] items-center gap-x-3 border-b border-edge/30 px-3 py-2.5 transition-colors last:border-0 hover:bg-panel2/50"
             >
               <span className="er-num text-right text-[11px] text-ink-dim">{i + 1}</span>
               <div className="min-w-0">
                 <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                  <span className="truncate font-display text-sm text-ink">{a.skill}</span>
+                  <span className="truncate font-display text-sm text-ink">{w.weaponName}</span>
+                  <Chip>{w.affinity}</Chip>
+                  <Chip>{w.typeLabel}</Chip>
+                  {w.dlc && <Chip>DLC</Chip>}
+                  {!w.meetsRequirements && <span className="text-[10px] text-missable">⚠ can’t wield</span>}
+                  <span className="er-num text-[10px] text-ink-dim">AR {fmt(w.totalAr)}</span>
+                </div>
+                <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs">
+                  <span className="text-gold-dim">→</span>
+                  <span className="font-display text-gold">{best.skill}</span>
                   {elem && (
-                    <span className="flex items-center gap-1 text-[10px] text-ink-dim">
-                      <span className="inline-block size-2 rounded-[1px]" style={{ background: damageColor(elem) }} />
-                      {elem}
-                    </span>
+                    <span className="inline-block size-2 rounded-[1px]" style={{ background: damageColor(elem) }} title={elem} />
                   )}
-                  <Chip>{a.category}</Chip>
-                  {a.dlc && <Chip>DLC</Chip>}
-                  {!a.transferable && <span className="text-[10px] text-ink-dim" title="Locked to specific weapon(s)">weapon-locked</span>}
+                  <Chip>{best.category}</Chip>
+                  <span className="text-[10px] text-ink-dim">MV {best.motionValue}%</span>
+                  {best.status && <span className="text-[10px] text-gold-dim">{best.status}</span>}
+                  {best.dlc && <span className="text-[9px] text-gold-dim">DLC</span>}
                 </div>
                 <div className="mt-1 flex flex-wrap gap-x-3 text-[10px] text-ink-dim">
-                  <span>FP {a.fp}</span>
-                  {a.motionValue != null && <span>MV {a.motionValue}%</span>}
-                  {a.status && <span className="text-gold-dim">{a.status}</span>}
-                  {a.affinity && <span>{a.affinity}</span>}
-                  {a.itemName && <WhereToFind name={a.itemName} />}
+                  {alts.length > 0 && <span>also: {alts.map((s) => `${s.skill} ${fmt(s.artDamage)}`).join('  ·  ')}</span>}
+                  {best.itemName && <WhereToFind name={best.itemName} />}
                 </div>
               </div>
               <div className="text-right">
-                {a.artDamage != null ? (
-                  <>
-                    <span className="er-num er-fade-in block text-lg text-gold-bright">{fmt(a.artDamage)}</span>
-                    <span className="text-[9px] uppercase tracking-[0.16em] text-gold-dim">art dmg</span>
-                  </>
-                ) : (
-                  <span className="text-[10px] text-ink-dim">
-                    {a.scaling === 'flat' ? 'flat dmg' : !a.dealsDamage ? 'buff' : '—'}
-                  </span>
-                )}
+                <span className="er-num er-fade-in block text-lg text-gold-bright">{fmt(best.artDamage)}</span>
+                <span className="text-[9px] uppercase tracking-[0.16em] text-gold-dim">art dmg</span>
               </div>
             </li>
           )
@@ -457,20 +464,19 @@ export default function BuildPage() {
     }
 
     if (tab === 'ashes') {
-      const r = results.ashes
-      const filtered = aowCat === 'All' ? r.list : r.list.filter((a) => a.category === aowCat)
-      const chartItems = filtered
-        .filter((a) => a.artDamage != null)
+      const rows = results.ashes.weapons
+        .map((w) => ({ w, best: bestArt(w, aowCat) }))
+        .filter((x) => x.best)
+      const chartItems = rows
         .slice(0, CHART_N)
-        .map((a) => ({ name: a.skill, value: a.artDamage as number, dlc: a.dlc }))
+        .map(({ w, best }) => ({ name: w.weaponName, value: best!.artDamage, dlc: w.dlc }))
       return (
         <div key={`ashes-${aowCat}`} className="er-reveal space-y-5">
           <p className="text-xs leading-relaxed text-ink-dim">
-            Weapon-art damage ≈ your best usable weapon
-            {r.bestWeaponName ? ` (${r.bestWeaponName}, AR ${fmt(r.bestWeaponAr)})` : ''} × the skill’s main-hit
-            motion value. <span className="text-ink">Flat</span> skills (spell-like, e.g. Carian Greatsword)
-            don’t scale from weapon AR; <span className="text-ink">buffs</span> deal no direct damage. Motion
-            values are datamined main-hit figures — many skills hit several times.
+            For each of your top weapons, the best weapon art you can put on it — ranked by art damage
+            (<span className="text-ink">this weapon’s AR × the art’s motion value</span>). This reorders with
+            your build, since both your best weapons and the arts each can host change. Flat / spell-like arts
+            and pure buffs are excluded (they don’t scale from weapon AR). Pre-Scadutree, main-hit motion value.
           </p>
           <SubSelect
             options={AOW_CATS.map((c) => ({ key: c as string, label: c }))}
@@ -480,11 +486,11 @@ export default function BuildPage() {
           />
           {chartItems.length > 0 && (
             <section className="er-card p-4">
-              <PanelHead title="Top weapon arts by estimated damage" count={chartItems.length} />
+              <PanelHead title="Top weapons by best weapon-art damage" count={chartItems.length} />
               <ArBars items={chartItems} unit="DMG" />
             </section>
           )}
-          {filtered.length === 0 ? <EmptyState /> : <AowTable rows={filtered} />}
+          <WeaponArtsTable weapons={results.ashes.weapons} cat={aowCat} />
         </div>
       )
     }

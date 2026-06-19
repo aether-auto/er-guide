@@ -5,13 +5,14 @@ import {
   WeaponType,
   nonWeaponTypes,
   catalystTypes,
+  weaponTypeLabels,
   type Weapon,
   type Attributes,
   type Attribute,
 } from './weaponCalc'
 import { talismansById } from './talismans'
 import { damageSorceries, damageIncantations, type Spell } from './spellData'
-import { ashesOfWar, type AshOfWar } from './ashesOfWar'
+import { ashesOfWar, type AowCategory, type AowElement } from './ashesOfWar'
 
 /**
  * Ranking layer over the ported weapon engine. Given a character's stats, it
@@ -469,50 +470,92 @@ export function rankIncantations(
 
 // ── Ashes of War (weapon arts) ──────────────────────────────────────────────
 
-export interface AowRanking extends AshOfWar {
-  /** Approx weapon-art damage for the main hit: bestWeaponAr × motionValue/100.
-   *  Only set for scaling:'weapon-ar' skills that have a motion value. */
-  artDamage?: number
+/** A weapon art that can be applied to a given weapon, with its damage on it. */
+export interface SkillRec {
+  skill: string
+  category: AowCategory
+  element: AowElement
+  motionValue: number
+  /** Weapon-art damage of the main hit on THIS weapon: weaponAr × motionValue/100. */
+  artDamage: number
+  dlc: boolean
+  status?: string
+  itemName?: string
+  note?: string
+}
+
+/** A build weapon plus the best damaging arts you can put on it. */
+export interface WeaponSkillRec {
+  weaponName: string
+  name: string
+  affinity: string
+  weaponType: number
+  typeLabel: string
+  totalAr: number
+  dlc: boolean
+  requirements: Partial<Record<Attribute, number>>
+  meetsRequirements: boolean
+  /** Compatible AR-scaling arts, highest art damage first (capped). */
+  skills: SkillRec[]
 }
 
 export interface AowResult {
-  /** The build's strongest usable weapon — the basis for art-damage estimates. */
-  bestWeaponName: string | null
-  bestWeaponAr: number
-  list: AowRanking[]
+  weapons: WeaponSkillRec[]
 }
 
+// Damaging, AR-scaling arts that have a motion value AND a known weapon-type set.
+// (Flat/spell-like skills, pure buffs, and unique non-applicable arts are excluded —
+//  a weapon art's damage scales with the host weapon's AR via its motion value.)
+const applicableArts = ashesOfWar.filter(
+  (a) => a.scaling === 'weapon-ar' && a.motionValue != null && a.weaponTypes && a.weaponTypes.length > 0,
+)
+
 /**
- * Rank/classify Ashes of War for a build. A skill's weapon-art damage scales
- * with the AR of whatever weapon it's applied to, so we use the build's best
- * usable weapon AR as the basis: artDamage ≈ bestWeaponAr × (motionValue/100)
- * for AR-scaling skills with a known motion value. Flat (spell-like) skills and
- * pure buffs get no artDamage. Sorted: estimable damaging skills first by
- * damage, then other damaging skills, then utility.
+ * "Best skill per weapon." For each of the build's top weapons, find the arts you
+ * can actually apply to it (by weapon type) and rank them by weapon-art damage
+ * = this weapon's AR × the art's motion value. Because the top weapons reorder by
+ * build and each weapon admits a different set of arts, the recommendations are
+ * genuinely build-aware — unlike a single global list, which would just be motion
+ * value order for every build.
  */
 export function rankAshesOfWar(
   weapons: Weapon[],
   attributes: Attributes,
   options: OptimizerOptions = {},
+  topWeapons = 24,
 ): AowResult {
-  const top = rankWeapons(weapons, attributes, options)[0]
-  const bestWeaponAr = top?.totalAr ?? 0
+  const ranked = rankWeapons(weapons, attributes, options).slice(0, topWeapons)
 
-  const list: AowRanking[] = ashesOfWar.map((a) => ({
-    ...a,
-    artDamage:
-      a.scaling === 'weapon-ar' && a.motionValue != null
-        ? Math.round(bestWeaponAr * (a.motionValue / 100))
-        : undefined,
-  }))
+  const result: WeaponSkillRec[] = ranked.map((w) => {
+    const skills: SkillRec[] = applicableArts
+      .filter((a) => a.weaponTypes!.includes(w.weaponType))
+      .map((a) => ({
+        skill: a.skill,
+        category: a.category,
+        element: a.element,
+        motionValue: a.motionValue!,
+        artDamage: Math.round(w.totalAr * (a.motionValue! / 100)),
+        dlc: a.dlc,
+        status: a.status,
+        itemName: a.itemName,
+        note: a.note,
+      }))
+      .sort((x, y) => y.artDamage - x.artDamage)
+      .slice(0, 6)
 
-  list.sort((x, y) => {
-    const dx = x.artDamage ?? -1
-    const dy = y.artDamage ?? -1
-    if (dx !== dy) return dy - dx
-    if (x.dealsDamage !== y.dealsDamage) return x.dealsDamage ? -1 : 1
-    return x.skill.localeCompare(y.skill)
+    return {
+      weaponName: w.weaponName,
+      name: w.name,
+      affinity: w.affinity,
+      weaponType: w.weaponType,
+      typeLabel: weaponTypeLabels.get(w.weaponType) ?? 'Weapon',
+      totalAr: w.totalAr,
+      dlc: w.dlc,
+      requirements: w.requirements,
+      meetsRequirements: w.meetsRequirements,
+      skills,
+    }
   })
 
-  return { bestWeaponName: top?.name ?? null, bestWeaponAr, list }
+  return { weapons: result }
 }
