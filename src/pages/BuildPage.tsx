@@ -45,6 +45,39 @@ const ELEM_LABEL: Record<string, string> = {
   physical: 'Physical', magic: 'Magic', fire: 'Fire', lightning: 'Lightning', holy: 'Holy', mixed: 'Mixed', none: '',
 }
 
+// ── Persisted build inputs (survive reload / leaving the page) ──────────────
+const BUILD_KEY = 'er-build-inputs-v1'
+interface BuildInputs {
+  level: number
+  stats: Attributes
+  twoHanding: boolean
+  showAll: boolean
+  talismans: string[]
+}
+const DEFAULT_INPUTS: BuildInputs = {
+  level: 150,
+  stats: { str: 40, dex: 40, int: 9, fai: 9, arc: 9 },
+  twoHanding: false,
+  showAll: false,
+  talismans: [],
+}
+function loadInputs(): BuildInputs {
+  try {
+    const raw = localStorage.getItem(BUILD_KEY)
+    if (!raw) return DEFAULT_INPUTS
+    const p = JSON.parse(raw) as Partial<BuildInputs>
+    return {
+      level: typeof p.level === 'number' ? p.level : DEFAULT_INPUTS.level,
+      stats: { ...DEFAULT_INPUTS.stats, ...(p.stats ?? {}) },
+      twoHanding: !!p.twoHanding,
+      showAll: !!p.showAll,
+      talismans: Array.isArray(p.talismans) ? p.talismans : [],
+    }
+  } catch {
+    return DEFAULT_INPUTS
+  }
+}
+
 const STAT_FIELDS: { key: Attribute; label: string }[] = [
   { key: 'str', label: 'STR' },
   { key: 'dex', label: 'DEX' },
@@ -322,11 +355,12 @@ export default function BuildPage() {
   const [weapons, setWeapons] = useState<Weapon[] | null>(null)
   const [error, setError] = useState<string | null>(null)
 
-  const [level, setLevel] = useState(150)
-  const [stats, setStats] = useState<Attributes>({ str: 40, dex: 40, int: 9, fai: 9, arc: 9 })
-  const [twoHanding, setTwoHanding] = useState(false)
-  const [showAll, setShowAll] = useState(false)
-  const [selectedTalismans, setSelectedTalismans] = useState<string[]>([])
+  const init = useMemo(loadInputs, [])
+  const [level, setLevel] = useState(init.level)
+  const [stats, setStats] = useState<Attributes>(init.stats)
+  const [twoHanding, setTwoHanding] = useState(init.twoHanding)
+  const [showAll, setShowAll] = useState(init.showAll)
+  const [selectedTalismans, setSelectedTalismans] = useState<string[]>(init.talismans)
   const [tab, setTab] = useState<TabKey>('weapons')
   const [dmgType, setDmgType] = useState<AttackPowerType>(allDamageTypes[0])
   const [statusType, setStatusType] = useState<number>(STATUS_TYPES[0])
@@ -339,6 +373,18 @@ export default function BuildPage() {
       .catch((e) => !cancelled && setError(e instanceof Error ? e.message : 'Failed to load data'))
     return () => { cancelled = true }
   }, [])
+
+  // Persist build inputs so they survive reloads and leaving the page.
+  useEffect(() => {
+    try {
+      localStorage.setItem(
+        BUILD_KEY,
+        JSON.stringify({ level, stats, twoHanding, showAll, talismans: selectedTalismans }),
+      )
+    } catch {
+      /* private mode / quota — fine to skip */
+    }
+  }, [level, stats, twoHanding, showAll, selectedTalismans])
 
   const options = useMemo(
     () => ({ twoHanding, talismans: selectedTalismans, metRequirementsOnly: !showAll }),
