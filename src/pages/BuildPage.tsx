@@ -22,17 +22,19 @@ import {
 } from '../lib/buildOptimizer'
 import { talismans } from '../lib/talismans'
 import { findBuildLink } from '../lib/buildLinks'
+import { armorBuffs, ARMOR_CATEGORIES, type ArmorBuff } from '../lib/specialArmor'
 
 // Lazy-loaded (React.lazy) so the ~1 MB regulation data + engine stay out of the
 // main bundle. Default export at the bottom.
 
-type TabKey = 'weapons' | 'damage' | 'status' | 'ashes' | 'sorceries' | 'incantations'
+type TabKey = 'weapons' | 'damage' | 'status' | 'ashes' | 'armor' | 'sorceries' | 'incantations'
 
 const TABS: { key: TabKey; label: string }[] = [
   { key: 'weapons', label: 'Weapons' },
   { key: 'damage', label: 'By damage type' },
   { key: 'status', label: 'By status' },
   { key: 'ashes', label: 'Ashes of War' },
+  { key: 'armor', label: 'Armor buffs' },
   { key: 'sorceries', label: 'Sorceries' },
   { key: 'incantations', label: 'Incantations' },
 ]
@@ -319,6 +321,58 @@ function WeaponArtsTable({ weapons, cat }: { weapons: WeaponSkillRec[]; cat: str
   )
 }
 
+function ArmorGroupRow({ pieces }: { pieces: ArmorBuff[] }) {
+  const isSet = pieces.length > 1 && !!pieces[0].set
+  const lead = pieces.find((p) => /full set|total|stacks/i.test(p.effect)) ?? pieces[0]
+  const loc = pieces.find((p) => p.hasMap && p.itemName)
+  return (
+    <li className="py-2.5">
+      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+        <span className="truncate font-display text-sm text-gold">{isSet ? pieces[0].set : lead.name}</span>
+        <Chip>{isSet ? `${pieces.length} pieces` : lead.slot}</Chip>
+        {lead.dlc && <Chip>DLC</Chip>}
+        {lead.magnitude && <span className="er-num text-[11px] text-gold-bright">{lead.magnitude}</span>}
+      </div>
+      <p className="mt-1 text-xs leading-relaxed text-ink">{lead.effect}</p>
+      {lead.downside && <p className="mt-0.5 text-[11px] text-missable">⚠ {lead.downside}</p>}
+      <div className="mt-1 flex flex-wrap items-center gap-x-3 text-[10px] text-ink-dim">
+        {isSet && <span>{pieces.map((p) => p.slot).join(' · ')}</span>}
+        {loc ? <WhereToFind name={loc.itemName as string} /> : <span className="italic">no map marker</span>}
+      </div>
+    </li>
+  )
+}
+
+/** Special-effect armor grouped by buff, with sets clubbed. */
+function ArmorBuffsView({ cats }: { cats: string[] }) {
+  const sections = cats
+    .map((cat) => ({ cat, items: armorBuffs.filter((a) => a.category === cat) }))
+    .filter((s) => s.items.length > 0)
+  if (sections.length === 0) return <EmptyState />
+  return (
+    <div className="space-y-5">
+      {sections.map(({ cat, items }) => {
+        const groups: ArmorBuff[][] = []
+        for (const a of items) {
+          const last = groups[groups.length - 1]
+          if (last && a.set && last[0].set === a.set) last.push(a)
+          else groups.push([a])
+        }
+        return (
+          <section key={cat} className="er-card p-4">
+            <PanelHead title={cat} count={items.length} />
+            <ul className="er-stagger divide-y divide-edge/30">
+              {groups.map((g, i) => (
+                <ArmorGroupRow key={(g[0].set ?? g[0].name) + i} pieces={g} />
+              ))}
+            </ul>
+          </section>
+        )
+      })}
+    </div>
+  )
+}
+
 /** Segmented sub-selector (damage type / status) — matches the tab styling. */
 function SubSelect<T extends string | number>({
   options,
@@ -365,6 +419,7 @@ export default function BuildPage() {
   const [dmgType, setDmgType] = useState<AttackPowerType>(allDamageTypes[0])
   const [statusType, setStatusType] = useState<number>(STATUS_TYPES[0])
   const [aowCat, setAowCat] = useState<string>('All')
+  const [armorCat, setArmorCat] = useState<string>('All')
 
   useEffect(() => {
     let cancelled = false
@@ -416,6 +471,25 @@ export default function BuildPage() {
 
   // ── Per-tab results (chart + table), keyed so animations replay on switch ──
   function ResultsBody() {
+    if (tab === 'armor') {
+      const cats = armorCat === 'All' ? ARMOR_CATEGORIES : [armorCat]
+      return (
+        <div key={`armor-${armorCat}`} className="er-reveal space-y-5">
+          <p className="text-xs leading-relaxed text-ink-dim">
+            Armor with a <span className="text-ink">unique buff</span> (not plain defense), grouped by what it
+            boosts — find one that helps your build, then locate it on the map. Set pieces that share a buff are
+            clubbed. A static reference (not affected by your stats); PvE values.
+          </p>
+          <SubSelect
+            options={['All', ...ARMOR_CATEGORIES].map((c) => ({ key: c, label: c }))}
+            value={armorCat}
+            onChange={setArmorCat}
+            label={(o) => o.label}
+          />
+          <ArmorBuffsView cats={cats} />
+        </div>
+      )
+    }
     if (error) return <p className="text-missable">Couldn’t load weapon data: {error}</p>
     if (!results) {
       return (
