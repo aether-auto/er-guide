@@ -23,11 +23,12 @@ import {
 import { talismans } from '../lib/talismans'
 import { findBuildLink } from '../lib/buildLinks'
 import { armorBuffs, ARMOR_CATEGORIES, type ArmorBuff } from '../lib/specialArmor'
+import { weaponCatalog, WEAPON_CLASSES, type CatalogWeapon } from '../lib/weaponCatalog'
 
 // Lazy-loaded (React.lazy) so the ~1 MB regulation data + engine stay out of the
 // main bundle. Default export at the bottom.
 
-type TabKey = 'weapons' | 'damage' | 'status' | 'ashes' | 'armor' | 'sorceries' | 'incantations'
+type TabKey = 'weapons' | 'damage' | 'status' | 'ashes' | 'armor' | 'weaponlist' | 'sorceries' | 'incantations'
 
 const TABS: { key: TabKey; label: string }[] = [
   { key: 'weapons', label: 'Weapons' },
@@ -35,9 +36,14 @@ const TABS: { key: TabKey; label: string }[] = [
   { key: 'status', label: 'By status' },
   { key: 'ashes', label: 'Ashes of War' },
   { key: 'armor', label: 'Armor buffs' },
+  { key: 'weaponlist', label: 'Weapon list' },
   { key: 'sorceries', label: 'Sorceries' },
   { key: 'incantations', label: 'Incantations' },
 ]
+
+const GRADE_CLASS: Record<string, string> = {
+  S: 'er-scaling-s', A: 'er-scaling-a', B: 'er-scaling-b', C: 'er-scaling-c', D: 'er-scaling-d', E: 'er-scaling-e',
+}
 
 const AOW_CATS = [
   'All', 'Projectile', 'AoE', 'Melee/Burst', 'Charge', 'Dash/Evasion', 'Stance/Counter',
@@ -373,6 +379,64 @@ function ArmorBuffsView({ cats }: { cats: string[] }) {
   )
 }
 
+function WeaponRowC({ w }: { w: CatalogWeapon }) {
+  const req = STAT_FIELDS.map(({ key, label }) => (w.req?.[key] ? `${label} ${w.req[key]}` : null)).filter(Boolean).join(' · ')
+  const scaling = STAT_FIELDS.map(({ key, label }) => (w.scaling?.[key] ? { label, grade: w.scaling[key] as string } : null)).filter(Boolean) as { label: string; grade: string }[]
+  return (
+    <li className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 border-b border-edge/30 px-3 py-2 transition-colors last:border-0 hover:bg-panel2/50">
+      <div className="min-w-0">
+        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+          <span className="truncate font-display text-sm text-ink">{w.name}</span>
+          {w.dlc && <Chip>DLC</Chip>}
+          {w.damage && w.damage.length > 0 && (
+            <span className="flex items-center gap-1">
+              {w.damage.map((d) => (
+                <span key={d} className="inline-block size-1.5 rounded-[1px]" style={{ background: damageColor(d === 'Phys' ? 'Physical' : d) }} title={d} />
+              ))}
+            </span>
+          )}
+        </div>
+        <div className="mt-0.5 flex flex-wrap gap-x-3 text-[10px] text-ink-dim">
+          {req && <span><span className="text-gold-dim">req</span> {req}</span>}
+          {scaling.length > 0 && (
+            <span>
+              <span className="text-gold-dim">scaling</span>{' '}
+              {scaling.map((s, i) => (
+                <span key={s.label}>
+                  {i > 0 && ' · '}
+                  {s.label} <span className={`${GRADE_CLASS[s.grade] ?? ''} font-semibold`}>{s.grade}</span>
+                </span>
+              ))}
+            </span>
+          )}
+          {w.hasMap && <WhereToFind name={w.name} />}
+        </div>
+      </div>
+      {w.weight != null && (
+        <span className="er-num text-[10px] text-ink-dim">{w.weight}<span className="text-[8px]"> wt</span></span>
+      )}
+    </li>
+  )
+}
+
+/** Browsable weapon catalog grouped by class. */
+function WeaponListView({ classes }: { classes: { type: number; label: string }[] }) {
+  return (
+    <div className="space-y-5">
+      {classes.map((c) => {
+        const ws = weaponCatalog.filter((w) => w.weaponType === c.type)
+        if (!ws.length) return null
+        return (
+          <section key={c.type} className="er-card p-4">
+            <PanelHead title={c.label} count={ws.length} />
+            <ul className="er-stagger">{ws.map((w) => <WeaponRowC key={w.name} w={w} />)}</ul>
+          </section>
+        )
+      })}
+    </div>
+  )
+}
+
 /** Segmented sub-selector (damage type / status) — matches the tab styling. */
 function SubSelect<T extends string | number>({
   options,
@@ -420,6 +484,7 @@ export default function BuildPage() {
   const [statusType, setStatusType] = useState<number>(STATUS_TYPES[0])
   const [aowCat, setAowCat] = useState<string>('All')
   const [armorCat, setArmorCat] = useState<string>('All')
+  const [weaponClass, setWeaponClass] = useState<number | 'all'>('all')
 
   useEffect(() => {
     let cancelled = false
@@ -471,6 +536,28 @@ export default function BuildPage() {
 
   // ── Per-tab results (chart + table), keyed so animations replay on switch ──
   function ResultsBody() {
+    if (tab === 'weaponlist') {
+      const classes = weaponClass === 'all' ? WEAPON_CLASSES : WEAPON_CLASSES.filter((c) => c.type === weaponClass)
+      return (
+        <div key={`wl-${weaponClass}`} className="er-reveal space-y-5">
+          <p className="text-xs leading-relaxed text-ink-dim">
+            Every weapon in the guide, grouped by class — requirements, scaling grades, weight and damage types,
+            with a locate-on-map link. Filter to a class below. A static reference (not affected by your stats).
+          </p>
+          <select
+            value={weaponClass}
+            onChange={(e) => setWeaponClass(e.target.value === 'all' ? 'all' : Number(e.target.value))}
+            className="rounded border border-edge bg-bg px-2 py-1.5 text-sm text-ink transition-colors focus:border-gold-dim focus:outline-none"
+          >
+            <option value="all">All classes</option>
+            {WEAPON_CLASSES.map((c) => (
+              <option key={c.type} value={c.type}>{c.label}</option>
+            ))}
+          </select>
+          <WeaponListView classes={classes} />
+        </div>
+      )
+    }
     if (tab === 'armor') {
       const cats = armorCat === 'All' ? ARMOR_CATEGORIES : [armorCat]
       return (
